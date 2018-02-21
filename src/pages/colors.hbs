@@ -1,0 +1,19 @@
+---
+title: Color
+notes: |
+  These are the brand colors.
+---
+
+<h1>{{ title }}</h1>
+<p>Here we'll display our color palette along with some guidelines on usage.</p>
+
+{{#each (data "colors")}}
+  <h2>{{@key}}</h2>
+  <ul class="mds-swatch-gallery">
+    {{#each this}}
+      <li class="mds-swatch">
+        {{> drizzle.swatch }}
+      </li>
+    {{/each}}
+  </ul>
+{{/each}}

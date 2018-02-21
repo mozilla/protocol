@@ -1,0 +1,16 @@
+---
+name: Misc Elements
+sourceless: true
+notes: |
+  These are some misc elements.
+hidden: true
+---
+
+{{#with (data "specimens")}}
+  {{this.punctuation}}<br>
+  {{this.characters}}<br>
+  {{this.math}}<br>
+  {{this.currencies}}<br>
+  {{this.arrows}}<br>
+  {{this.units}}
+{{/with}}

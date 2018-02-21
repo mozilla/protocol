@@ -1,0 +1,34 @@
+- label: Option 1
+  country: United States
+  language: English (US)
+  lang-code: en-US
+  month: January
+  day: Monday
+
+- label: Option 2
+  country: Germany
+  language: Deutsch
+  lang-code: de
+  month: February
+  day: Tuesday
+
+- label: Option 3
+  country: France
+  language: Français
+  lang-code: fr
+  month: March
+  day: Wednesday
+
+- label: Option 4
+  country: Spain
+  language: Español
+  lang-code: es-ES
+  month: April
+  day: Thursday
+
+- label: Option 5
+  country: Japan
+  language: 日本語
+  lang-code: ja
+  month: May
+  day: Friday

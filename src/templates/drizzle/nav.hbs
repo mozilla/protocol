@@ -1,0 +1,56 @@
+{{!-- Nav item partial --}}
+{{#*inline "nav-item"}}
+  <a class="mds-nav-link" href="{{@root.baseurl}}/{{url}}">
+    {{label}}
+  </a>
+{{/inline}}
+
+<nav class="mds-nav" id="nav">
+  <header class="mds-nav-head">
+    <a href="https://www.mozilla.org">
+      <img class="mds-nav-mozlogo" src="{{@root.baseurl}}/static/img/mozilla-wordmark-white.svg" width="100" alt="Mozilla">
+    </a>
+    <a class="nav-toggle" href="#nav">Menu</a>
+  </header>
+
+  <div class="mds-nav-menu" id="nav-menu">
+    {{!-- Top-level pages --}}
+    <ul>
+      {{#each (pages sortby="order")}}
+        <li class="mds-nav-item">
+          {{> nav-item label=data.title}}
+        </li>
+      {{/each}}
+    </ul>
+
+    {{!-- Element Patterns --}}
+    <h5>Elements</h5>
+    <ul>
+      {{#each (collections "elements" sortby="order")}}
+        <li class="mds-nav-item">
+          {{> nav-item label=name}}
+        </li>
+      {{/each}}
+    </ul>
+
+    {{!-- Component Patterns --}}
+    <h5>Components</h5>
+    <ul>
+      {{#each (collections "components" sortby="order")}}
+        <li class="mds-nav-item">
+          {{> nav-item label=name}}
+        </li>
+      {{/each}}
+    </ul>
+
+    {{!-- Other pages --}}
+    <h5>Other Stuff</h5>
+    <ul>
+      <li class="mds-nav-item">
+        {{#with (page "docs/index")}}
+          {{> nav-item label=data.title}}
+        {{/with}}
+      </li>
+    </ul>
+  </div>
+</nav>

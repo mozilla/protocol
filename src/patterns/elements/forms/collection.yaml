@@ -1,0 +1,4 @@
+notes: |
+  Use meaningful markup like lists and paragraphs to give forms a logical structure. A form control should almost always be paired with a useful label.
+labels:
+  - inprogress

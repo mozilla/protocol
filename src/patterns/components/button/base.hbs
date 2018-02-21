@@ -1,0 +1,16 @@
+---
+notes: This is the base button pattern.
+hidden: true
+---
+
+<button type="button" class="button{{#if class}} {{class}}{{/if}}">
+{{#block "content"}}
+  Button
+{{/block}}
+</button>
+
+<a href="#" class="button{{#if class}} {{class}}{{/if}}">
+{{#block "content"}}
+  Button
+{{/block}}
+</a>

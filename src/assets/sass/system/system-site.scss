@@ -1,0 +1,273 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../pebbles/includes/lib';
+
+
+.mds-main {
+    padding: 20px 4vw;
+
+    @media #{$mq-tablet} {
+        padding-left: 24vw;
+    }
+}
+
+// Nav sidebar
+.mds-nav {
+    background: #000;
+    color: #fff;
+    display: none;
+
+    :link,
+    :visited {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: #eee;
+            text-decoration: underline;
+        }
+    }
+
+    @media #{$mq-tablet} {
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+        display: block;
+        height: 100%;
+        left: 0;
+        min-width: 160px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        width: 20vw;
+        z-index: 1;
+    }
+}
+
+.mds-nav-mozlogo {
+    margin-bottom: 40px;
+}
+
+.mds-nav-item {
+    margin: 0 0 .25em;
+}
+
+
+// Color swatches
+.mds-swatch-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    .mds-swatch {
+        margin: 0 20px 2em;
+        min-width: 200px;
+        text-align: center;
+    }
+
+    .mds-swatch-image {
+        height: 150px;
+        margin: 0 auto 1em;
+        width: 150px;
+    }
+}
+
+.mds-specimen {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    padding: 10px 20px;
+    margin: 0 0 1.5em;
+    overflow-x: auto;
+}
+
+.mds-specimen-preview {
+    padding: 20px 0;
+
+    & + .mds-specimen-code {
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        margin: 20px -20px -10px;
+    }
+}
+
+.mds-specimen-code {
+    background: #f8f8f8;
+    padding: 10px 20px;
+    margin: -10px -20px;
+}
+
+.mds-specimen-font {
+    @include font-size-level3;
+}
+
+#specimen-open-sans {
+    @include open-sans;
+}
+
+.mds-section {
+    margin: 0 auto 3em;
+}
+
+// Type scale demo
+.mds-typescale {
+    .huge {
+        @include font-size-huge;
+
+        &:after {
+            content: ' 48px';
+            font-weight: normal;
+
+            @media #{$mq-tablet} {
+                content: ' 60px';
+            }
+
+            @media #{$mq-desktop} {
+                content: ' 72px';
+            }
+        }
+    }
+
+    .l1 {
+        @include font-size-level1;
+
+        &:after {
+            content: ' 36px';
+            font-weight: normal;
+
+            @media #{$mq-tablet} {
+                content: ' 48px';
+            }
+
+            @media #{$mq-desktop} {
+                content: ' 60px';
+            }
+        }
+    }
+
+    .l2 {
+        @include font-size-level2;
+
+        &:after {
+            content: ' 24px';
+            font-weight: normal;
+
+            @media #{$mq-tablet} {
+                content: ' 36px';
+            }
+
+            @media #{$mq-desktop} {
+                content: ' 48px';
+            }
+        }
+    }
+
+    .l3 {
+        @include font-size-level3;
+
+        &:after {
+            content: ' 18px';
+            font-weight: normal;
+
+            @media #{$mq-tablet} {
+                content: ' 24px';
+            }
+
+            @media #{$mq-desktop} {
+                content: ' 36px';
+            }
+        }
+    }
+
+    .l4 {
+        @include font-size-level4;
+
+        &:after {
+            content: ' 16px';
+            font-weight: normal;
+
+            @media #{$mq-tablet} {
+                content: ' 18px';
+            }
+
+            @media #{$mq-desktop} {
+                content: ' 24px';
+            }
+        }
+    }
+
+    .l5 {
+        @include font-size-level5;
+
+        &:after {
+            content: ' 14px';
+            font-weight: normal;
+
+            @media #{$mq-tablet} {
+                content: ' 16px';
+            }
+
+            @media #{$mq-desktop} {
+                content: ' 18px';
+            }
+        }
+    }
+
+    .l6 {
+        @include font-size-level6;
+
+        &:after {
+            content: ' 14px';
+            font-weight: normal;
+
+            @media #{$mq-tablet} {
+                content: ' 16px';
+            }
+        }
+    }
+
+    .small {
+        @include font-size-small;
+
+        &:after {
+            content: ' 12px';
+            font-weight: normal;
+
+            @media #{$mq-tablet} {
+                content: ' 14px';
+            }
+        }
+    }
+
+    .x-small {
+        @include font-size-extra-small;
+
+        &:after {
+            content: ' 12px';
+            font-weight: normal;
+        }
+    }
+}
+
+// Items
+.mds-item-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.mds-item-links-link {
+    @include font-size-small;
+
+    svg {
+        fill: currentColor;
+        height: 1em;
+        margin-top: -0.375em;
+        position: relative;
+        vertical-align: middle;
+        width: 1.5em;
+    }
+}
+
+

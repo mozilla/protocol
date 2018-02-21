@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="{{htmlclass}}">
+  <head>
+    {{#block "head"}}
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="{{@root.baseurl}}/static/favicon.ico">
+      {{#if title}}
+        <title>{{title}} - {{data "project.title"}}</title>
+      {{else if name}}
+        <title>{{name}} - {{data "project.title"}}</title>
+      {{else}}
+        <title>{{data "project.title"}}</title>
+      {{/if}}
+<!--       {{#each styles}}
+        <link rel="stylesheet" href="{{@root.baseurl}}/assets/toolkit/styles/{{this}}.css">
+      {{/each}} -->
+    {{/block}}
+  </head>
+  <body class="{{bodyclass}}">
+    <div class="mds-page">
+    {{#block "body"}}
+      {{#block "main"}}{{/block}}
+    {{/block}}
+
+    {{#block "foot"}}{{/block}}
+    </div>
+  </body>
+</html>

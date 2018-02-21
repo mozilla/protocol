@@ -1,0 +1,13 @@
+<figure>
+  <svg class="mds-swatch-image" viewBox="0 0 105 105">
+    <circle fill="{{ hex }}" stroke="#000" stroke-opacity=".1" stroke-width="2" cx="52" cy="52" r="50"/>
+  </svg>
+  <figcaption>
+    <h4>{{color}}</h4>
+    <ul>
+      <li><code>{{hex}}</code></li>
+      <li><code>{{rgb}}</code></li>
+      {{#if variable}}<li><code>{{variable}}</code></li>{{/if}}
+    </ul>
+  </figcaption>
+</figure>

@@ -1,0 +1,18 @@
+{{#extend "blank" htmlclass="" bodyclass=""}}
+  {{#content "head" mode="append"}}
+    <link rel="stylesheet" href="{{@root.baseurl}}/assets/css/pebbles/global.css">
+    <link rel="stylesheet" href="{{@root.baseurl}}/assets/css/system/system-site.css">
+  {{/content}}
+  {{#content "body"}}
+    {{> drizzle.nav}}
+    <main role="main" class="mds-main">
+        {{#block "main"}}
+
+        {{/block}}
+    </main>
+  {{/content}}
+
+  {{#content "foot"}}
+
+  {{/content}}
+{{/extend}}
