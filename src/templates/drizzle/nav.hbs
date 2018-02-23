@@ -6,10 +6,11 @@
 {{/inline}}
 
 <nav class="mds-nav" id="nav">
-  <header class="mds-nav-head">
+  <header class="mds-nav-header">
     <a href="https://www.mozilla.org">
       <img class="mds-nav-mozlogo" src="{{@root.baseurl}}/static/img/mozilla-wordmark-white.svg" width="100" alt="Mozilla">
     </a>
+
     <a class="nav-toggle" href="#nav">Menu</a>
   </header>
 
@@ -24,7 +25,7 @@
     </ul>
 
     {{!-- Element Patterns --}}
-    <h5>Elements</h5>
+    <h4>Elements</h4>
     <ul>
       {{#each (collections "elements" sortby="order")}}
         <li class="mds-nav-item">
@@ -34,7 +35,7 @@
     </ul>
 
     {{!-- Component Patterns --}}
-    <h5>Components</h5>
+    <h4>Components</h4>
     <ul>
       {{#each (collections "components" sortby="order")}}
         <li class="mds-nav-item">
@@ -44,7 +45,7 @@
     </ul>
 
     {{!-- Other pages --}}
-    <h5>Other Stuff</h5>
+    <h4>Other Stuff</h4>
     <ul>
       <li class="mds-nav-item">
         {{#with (page "docs/index")}}

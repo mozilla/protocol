@@ -1,9 +1,9 @@
-@font-face { font-family: 'Zilla Slab'; font-weight: normal; font-style: normal; src: url("../../../static/fonts/ZillaSlab-Regular.woff2") format("woff2"), url("../../../static/fonts/ZillaSlab-Regular.woff") format("woff"); }
-@font-face { font-family: 'Zilla Slab'; font-weight: bold; font-style: normal; src: url("../../../static/fonts/ZillaSlab-Bold.woff2") format("woff2"), url("../../../static/fonts/ZillaSlab-Bold.woff") format("woff"); }
-@font-face { font-family: 'Zilla Slab'; font-weight: normal; font-style: italic; src: url("../../../static/fonts/ZillaSlab-RegularItalic.woff2") format("woff2"), url("../../../static/fonts/ZillaSlab-RegularItalic.woff") format("woff"); }
-@font-face { font-family: 'Zilla Slab'; font-weight: bold; font-style: italic; src: url("../../../static/fonts/ZillaSlab-BoldItalic.woff2") format("woff2"), url("../../../static/fonts/ZillaSlab-BoldItalic.woff") format("woff"); }
-@font-face { font-family: 'Open Sans'; font-weight: normal; font-style: normal; src: url("../../../static/fonts/opensans-regular.woff2") format("woff2"), url("../../../static/fonts/opensans-regular.woff") format("woff"); }
-@font-face { font-family: 'Open Sans'; font-weight: bold; font-style: normal; src: url("../../../static/fonts/opensans-bold.woff2") format("woff2"), url("../../../static/fonts/opensans-bold.woff") format("woff"); }
+@font-face { font-family: 'Zilla Slab'; font-weight: normal; font-style: normal; src: url("../../../../static/fonts/ZillaSlab-Regular.woff2") format("woff2"), url("../../../../static/fonts/ZillaSlab-Regular.woff") format("woff"); }
+@font-face { font-family: 'Zilla Slab'; font-weight: bold; font-style: normal; src: url("../../../../static/fonts/ZillaSlab-Bold.woff2") format("woff2"), url("../../../../static/fonts/ZillaSlab-Bold.woff") format("woff"); }
+@font-face { font-family: 'Zilla Slab'; font-weight: normal; font-style: italic; src: url("../../../../static/fonts/ZillaSlab-RegularItalic.woff2") format("woff2"), url("../../../../static/fonts/ZillaSlab-RegularItalic.woff") format("woff"); }
+@font-face { font-family: 'Zilla Slab'; font-weight: bold; font-style: italic; src: url("../../../../static/fonts/ZillaSlab-BoldItalic.woff2") format("woff2"), url("../../../../static/fonts/ZillaSlab-BoldItalic.woff") format("woff"); }
+@font-face { font-family: 'Open Sans'; font-weight: normal; font-style: normal; src: url("../../../../static/fonts/opensans-regular.woff2") format("woff2"), url("../../../../static/fonts/opensans-regular.woff") format("woff"); }
+@font-face { font-family: 'Open Sans'; font-weight: bold; font-style: normal; src: url("../../../../static/fonts/opensans-bold.woff2") format("woff2"), url("../../../../static/fonts/opensans-bold.woff") format("woff"); }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
 audio, video, canvas { display: inline-block; }
@@ -126,4 +126,4 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 
 #newsletter-form .form-button { width: 100%; }
 
-/*# sourceMappingURL=global.css.map */
+/*# sourceMappingURL=pebbles.css.map */

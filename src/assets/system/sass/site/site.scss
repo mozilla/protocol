@@ -17,7 +17,7 @@
 .mds-nav {
     background: #000;
     color: #fff;
-    display: none;
+    padding: 10px;
 
     :link,
     :visited {
@@ -46,14 +46,50 @@
         width: 20vw;
         z-index: 1;
     }
+
+    .nav-toggle {
+        @include image-replaced;
+        background: #000 url('../../../../static/img/icon-menu-white.svg') center center no-repeat;
+        @include background-size(30px auto);
+        cursor: pointer;
+        display: block;
+        height: 2.2em;
+        overflow: hidden;
+        position: relative;
+        width: 2.2em;
+
+        @media #{$mq-tablet} {
+            display: none;
+        }
+    }
+}
+
+.mds-nav-header {
+    margin: 0 0 20px;
 }
 
 .mds-nav-mozlogo {
-    margin-bottom: 40px;
+    float: right;
+
+    @media #{$mq-tablet} {
+        float: none;
+    }
 }
 
 .mds-nav-item {
     margin: 0 0 .25em;
+}
+
+.js .mds-nav-menu {
+    display: none;
+
+    @media #{$mq-tablet} {
+        display: block;
+    }
+}
+
+.js .mds-nav.is-active .mds-nav-menu {
+    display: block;
 }
 
 
@@ -269,5 +305,8 @@
         width: 1.5em;
     }
 }
+
+
+
 
 

@@ -2,23 +2,16 @@
 
 module.exports = {
   'css:pebbles': {
-    src: './src/assets/css/pebbles/*.css',
-    dest: './dist/assets/css/pebbles',
+    src: './src/assets/system/css/pebbles/*.css',
+    dest: './dist/assets/system/css/pebbles',
     name: 'css:pebbles'
   },
 
-  'css:system': {
-    src: './src/assets/css/system/*.css',
-    dest: './dist/assets/css/system',
-    name: 'css:system'
+  'css:site': {
+    src: './src/assets/system/css/site/*.css',
+    dest: './dist/assets/system/css/site',
+    name: 'css:site'
   },
-
-  // 'css:drizzle': {
-  //   src: './src/assets/**/drizzle.css',
-  //   dest: './dist/assets',
-  //   prefix: 'drizzle-',
-  //   name: 'css:drizzle'
-  // },
 
   copy: {
     src: './src/static/**/*',
@@ -29,12 +22,9 @@ module.exports = {
     plugins: {
       webpack: {
         entry: {
-          // Drizzle UI scripts
-          // 'drizzle/scripts/drizzle':
-          //   './src/assets/drizzle/scripts/drizzle.js',
-          // Common toolkit scripts
-          // 'toolkit/scripts/toolkit':
-          //   './src/assets/toolkit/scripts/toolkit.js'
+          // Global script
+          'system/js/global':
+            './src/assets/system/js/global.js'
         },
         output: {
           path: './dist/assets',

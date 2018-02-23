@@ -21,10 +21,9 @@ Object.assign(config.drizzle, { helpers });
 ].forEach(name => tasks[name](gulp, config[name]));
 
 // Register special CSS tasks
-tasks.css(gulp, config['css:system']);
+tasks.css(gulp, config['css:site']);
 tasks.css(gulp, config['css:pebbles']);
-// tasks.css(gulp, config['css:drizzle']);
-gulp.task('css', ['css:pebbles', 'css:system']);
+gulp.task('css', ['css:pebbles', 'css:site']);
 
 // Register Drizzle builder task
 gulp.task('drizzle', () => {
