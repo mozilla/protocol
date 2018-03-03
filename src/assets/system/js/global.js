@@ -6,7 +6,7 @@ var $doc = document.documentElement;
 $doc.className = $doc.className.replace(/\bno-js\b/, 'js');
 
 var nav = document.getElementById('nav');
-var navToggle = document.querySelector('.mds-nav-head .nav-toggle');
+var navToggle = document.querySelector('.mds-nav-header .nav-toggle');
 
 navToggle.addEventListener('click', event => {
   event.preventDefault();

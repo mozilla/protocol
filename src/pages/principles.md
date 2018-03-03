@@ -1,11 +1,9 @@
 ---
 title: Design Principles
-notes: |
-  Guiding principles for this design system.
 order: 1
+labels:
+  - approved
 ---
-
-# {{title}}
 
 These are the guiding principles that inform our design decisions.
 

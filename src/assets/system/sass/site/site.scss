@@ -147,6 +147,36 @@
     margin: 0 auto 3em;
 }
 
+
+// Labels
+.mds-label {
+  @include font-size-small;
+  background-color: gray;
+  border-radius: .25em;
+  display: inline-block;
+  line-height: 1;
+  padding: .25em 8px;
+  vertical-align: inherit;
+  border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.mds-label--inprogress {
+  background-color: yellow;
+  color: #000;
+}
+
+.mds-label--deprecated {
+  background-color: firebrick;
+  color: #fff;
+}
+
+.mds-label--approved {
+  background-color: green;
+  color: #fff;
+}
+
+
+
 // Type scale demo
 .mds-typescale {
     .huge {

@@ -1,5 +1,8 @@
 # Override the default folder-based name ("Typographic")
 name: Text
+title: Text
+labels:
+    - inprogress
 
 # Make this appear before its sibling collections in listings
 order: 1

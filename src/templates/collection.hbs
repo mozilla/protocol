@@ -1,7 +1,5 @@
 {{#extend "default"}}
   {{#content "main"}}
-    <h1>{{name}}</h1>
-    {{#if notes}}{{notes}}{{/if}}
     {{#each patterns}}
       {{> drizzle.item}}
     {{/each}}

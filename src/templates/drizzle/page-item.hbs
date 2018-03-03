@@ -1,21 +1,27 @@
-<div class="drizzle-Item">
-  <div class="drizzle-Grid drizzle-Grid--withGutter">
-    <div class="drizzle-Grid-cell drizzle-u-marginBottom drizzle-u-md-size1of3">
+<div>
+  <div>
+    <div>
       <div class="drizzle-FrameThumb"
        data-drizzle-append-iframe="{{@root.baseurl}}/{{url}}"
        aria-hidden="true">
         <a href="{{@root.baseurl}}/{{url}}"></a>
       </div>
     </div>
-    <div class="drizzle-Grid-cell drizzle-u-md-size2of3">
+    <div>
+      {{#> drizzle.labelheader tag="h2" id=(toSlug name) labels=data.labels}}
+        {{name}}
+      {{/drizzle.labelheader}}
+
       {{#> drizzle.labelheader tag="h4" labels=data.labels}}
         <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
       {{/drizzle.labelheader}}
+
       {{#if data.notes}}
         <div class="drizzle-Item-notes">
           {{{data.notes}}}
         </div>
       {{/if}}
+
     </div>
   </div>
 </div>

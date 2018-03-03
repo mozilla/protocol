@@ -39,6 +39,15 @@
 
 .mds-section { margin: 0 auto 3em; }
 
+.mds-label { font-size: 12px; font-size: 0.6666666667rem; background-color: gray; border-radius: .25em; display: inline-block; line-height: 1; padding: .25em 8px; vertical-align: inherit; border: 1px solid rgba(0, 0, 0, 0.05); }
+@media screen and (min-width: 760px) { .mds-label { font-size: 14px; font-size: 0.7777777778rem; } }
+
+.mds-label--inprogress { background-color: yellow; color: #000; }
+
+.mds-label--deprecated { background-color: firebrick; color: #fff; }
+
+.mds-label--approved { background-color: green; color: #fff; }
+
 .mds-typescale .huge { font-size: 48px; font-size: 2.6666666667rem; }
 @media screen and (min-width: 760px) { .mds-typescale .huge { font-size: 60px; font-size: 3.3333333333rem; } }
 @media screen and (min-width: 1000px) { .mds-typescale .huge { font-size: 72px; font-size: 4rem; } }
