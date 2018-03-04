@@ -7,6 +7,7 @@ const helpers = require('@cloudfour/hbs-helpers');
 const tasks = require('@cloudfour/gulp-tasks');
 const env = require('gulp-util').env;
 const config = require('./config');
+const sass = require('gulp-sass');
 
 // Append config
 Object.assign(config.drizzle, { helpers });
@@ -20,10 +21,6 @@ Object.assign(config.drizzle, { helpers });
   'watch'
 ].forEach(name => tasks[name](gulp, config[name]));
 
-// Register special CSS tasks
-tasks.css(gulp, config['css:site']);
-tasks.css(gulp, config['css:pebbles']);
-gulp.task('css', ['css:pebbles', 'css:site']);
 
 // Register Drizzle builder task
 gulp.task('drizzle', () => {
@@ -31,11 +28,18 @@ gulp.task('drizzle', () => {
   return result;
 });
 
+// Register Sass preprocessor
+gulp.task('sass', () => {
+  return gulp.src('./src/assets/system/sass/**/*.scss')
+    .pipe(sass({ style: 'compact' }))
+    .pipe(gulp.dest('./dist/assets/system/css'));
+});
+
 // Register frontend composite task
 gulp.task('frontend', [
   'drizzle',
   'copy',
-  'css',
+  'sass',
   'js'
 ]);
 

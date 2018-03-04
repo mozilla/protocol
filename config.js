@@ -1,18 +1,6 @@
 'use strict';
 
 module.exports = {
-  'css:pebbles': {
-    src: './src/assets/system/css/pebbles/*.css',
-    dest: './dist/assets/system/css/pebbles',
-    name: 'css:pebbles'
-  },
-
-  'css:site': {
-    src: './src/assets/system/css/site/*.css',
-    dest: './dist/assets/system/css/site',
-    name: 'css:site'
-  },
-
   copy: {
     src: './src/static/**/*',
     dest: './dist/static'
@@ -61,8 +49,8 @@ module.exports = {
         tasks: ['copy']
       },
       {
-        match: ['./src/assets/**/*.css'],
-        tasks: ['css']
+        match: ['./src/assets/**/*.scss'],
+        tasks: ['sass']
       },
       {
         match: ['./src/assets/**/*.js'],

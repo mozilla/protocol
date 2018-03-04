@@ -41,13 +41,8 @@
     "gulp-cli": "^2.0.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-util": "^3.0.7",
-    "postcss-cssnext": "^2.5.2",
     "prismjs": "^1.4.1",
-    "suitcss-base": "^2.0.0",
-    "suitcss-components-arrange": "^1.1.1",
-    "suitcss-components-button": "^5.0.0",
-    "suitcss-components-grid": "^3.0.2",
-    "suitcss-utils": "^1.0.0"
+    "gulp-sass": "3.1.0"
   },
   "scripts": {
     "prestart": "npm install",
