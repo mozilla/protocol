@@ -139,6 +139,10 @@
     @include font-size-level3;
 }
 
+#specimen-zilla-slab {
+    @include zilla-slab;
+}
+
 #specimen-open-sans {
     @include open-sans;
 }
@@ -150,174 +154,55 @@
 
 // Labels
 .mds-label {
-  @include font-size-small;
-  background-color: gray;
-  border-radius: .25em;
-  display: inline-block;
-  line-height: 1;
-  padding: .25em 8px;
-  vertical-align: inherit;
-  border: 1px solid rgba(0, 0, 0, .05);
+    @include font-size-small;
+    background-color: gray;
+    border-radius: .25em;
+    display: inline-block;
+    line-height: 1;
+    padding: .25em 8px;
+    vertical-align: inherit;
+    border: 1px solid rgba(0, 0, 0, .05);
 }
 
 .mds-label--inprogress {
-  background-color: yellow;
-  color: #000;
+    background-color: yellow;
+    color: #000;
 }
 
 .mds-label--deprecated {
-  background-color: firebrick;
-  color: #fff;
+    background-color: firebrick;
+    color: #fff;
 }
 
 .mds-label--approved {
-  background-color: green;
-  color: #fff;
+    background-color: green;
+    color: #fff;
 }
 
-
-
-// Type scale demo
-.mds-typescale {
-    .huge {
-        @include font-size-huge;
-
-        &:after {
-            content: ' 48px';
-            font-weight: normal;
-
-            @media #{$mq-tablet} {
-                content: ' 60px';
-            }
-
-            @media #{$mq-desktop} {
-                content: ' 72px';
-            }
-        }
-    }
-
-    .l1 {
-        @include font-size-level1;
-
-        &:after {
-            content: ' 36px';
-            font-weight: normal;
-
-            @media #{$mq-tablet} {
-                content: ' 48px';
-            }
-
-            @media #{$mq-desktop} {
-                content: ' 60px';
-            }
-        }
-    }
-
-    .l2 {
-        @include font-size-level2;
-
-        &:after {
-            content: ' 24px';
-            font-weight: normal;
-
-            @media #{$mq-tablet} {
-                content: ' 36px';
-            }
-
-            @media #{$mq-desktop} {
-                content: ' 48px';
-            }
-        }
-    }
-
-    .l3 {
-        @include font-size-level3;
-
-        &:after {
-            content: ' 18px';
-            font-weight: normal;
-
-            @media #{$mq-tablet} {
-                content: ' 24px';
-            }
-
-            @media #{$mq-desktop} {
-                content: ' 36px';
-            }
-        }
-    }
-
-    .l4 {
-        @include font-size-level4;
-
-        &:after {
-            content: ' 16px';
-            font-weight: normal;
-
-            @media #{$mq-tablet} {
-                content: ' 18px';
-            }
-
-            @media #{$mq-desktop} {
-                content: ' 24px';
-            }
-        }
-    }
-
-    .l5 {
-        @include font-size-level5;
-
-        &:after {
-            content: ' 14px';
-            font-weight: normal;
-
-            @media #{$mq-tablet} {
-                content: ' 16px';
-            }
-
-            @media #{$mq-desktop} {
-                content: ' 18px';
-            }
-        }
-    }
-
-    .l6 {
-        @include font-size-level6;
-
-        &:after {
-            content: ' 14px';
-            font-weight: normal;
-
-            @media #{$mq-tablet} {
-                content: ' 16px';
-            }
-        }
-    }
-
-    .small {
-        @include font-size-small;
-
-        &:after {
-            content: ' 12px';
-            font-weight: normal;
-
-            @media #{$mq-tablet} {
-                content: ' 14px';
-            }
-        }
-    }
-
-    .x-small {
-        @include font-size-extra-small;
-
-        &:after {
-            content: ' 12px';
-            font-weight: normal;
-        }
-    }
+.mds-label--prototype {
+    background-color: rebeccapurple;
+    color: #fff;
 }
 
 // Items
+.mds-item-link {
+    color: $color-text-primary;
+    text-decoration: none;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+        color: $color-text-primary;
+        text-decoration: none;
+
+        &:after {
+            content: '#';
+            color: $color-link;
+            cursor: pointer;
+        }
+    }
+}
+
 .mds-item-links li {
     display: inline;
     margin-right: 20px;

@@ -1,9 +1,6 @@
-<{{tag}} {{#if id}}id="{{id}}"{{/if}} class="
-  drizzle-u-inlineBlock
-  drizzle-u-alignMiddle
-  drizzle-u-padRight">
+<{{tag}} {{#if id}}id="{{id}}"{{/if}} class="mds-item">
   {{#if id}}
-    <a href="#{{id}}" class="drizzle-u-linkHidden">{{> @partial-block }}</a>
+    <a href="#{{id}}" class="mds-item-link">{{> @partial-block }}</a>
   {{else}}
     {{> @partial-block }}
   {{/if}}

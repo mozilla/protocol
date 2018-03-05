@@ -1,0 +1,16 @@
+---
+title: Demos
+notes: |
+  A collection of mockups, demonstrations, proofs-of-concept or
+  anything else that might not be production-ready.
+---
+
+<p>These are some demos.</p>
+
+<ul>
+  {{#each (pages "demos" ignore="index")}}
+    <li>
+      <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
+    </li>
+  {{/each}}
+</ul>

@@ -12,7 +12,7 @@ module.exports = {
         entry: {
           // Global script
           'system/js/global':
-            './src/assets/system/js/global.js'
+            './src/assets/js/global.js'
         },
         output: {
           path: './dist/assets',

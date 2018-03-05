@@ -30,9 +30,9 @@ gulp.task('drizzle', () => {
 
 // Register Sass preprocessor
 gulp.task('sass', () => {
-  return gulp.src('./src/assets/system/sass/**/*.scss')
+  return gulp.src('./src/assets/sass/**/*.scss')
     .pipe(sass({ style: 'compact' }))
-    .pipe(gulp.dest('./dist/assets/system/css'));
+    .pipe(gulp.dest('./dist/assets/css'));
 });
 
 // Register frontend composite task

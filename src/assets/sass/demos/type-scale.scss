@@ -1,0 +1,146 @@
+// Type scale demo
+
+@import '../pebbles/includes/lib';
+@import '../pebbles/pebbles';
+
+body {
+    background: repeating-linear-gradient(transparent, transparent 3px, rgba(0, 255, 255, .2) 4px, transparent 4px, transparent 7px, rgba(0, 255, 255, .4) 8px);
+}
+
+.huge {
+    @include font-size-huge;
+
+    &:after {
+        content: ' 48px';
+        font-weight: normal;
+
+        @media #{$mq-tablet} {
+            content: ' 60px';
+        }
+
+        @media #{$mq-desktop} {
+            content: ' 72px';
+        }
+    }
+}
+
+.l1 {
+    @include font-size-level1;
+
+    &:after {
+        content: ' 36px';
+        font-weight: normal;
+
+        @media #{$mq-tablet} {
+            content: ' 48px';
+        }
+
+        @media #{$mq-desktop} {
+            content: ' 60px';
+        }
+    }
+}
+
+.l2 {
+    @include font-size-level2;
+
+    &:after {
+        content: ' 24px';
+        font-weight: normal;
+
+        @media #{$mq-tablet} {
+            content: ' 36px';
+        }
+
+        @media #{$mq-desktop} {
+            content: ' 48px';
+        }
+    }
+}
+
+.l3 {
+    @include font-size-level3;
+
+    &:after {
+        content: ' 18px';
+        font-weight: normal;
+
+        @media #{$mq-tablet} {
+            content: ' 24px';
+        }
+
+        @media #{$mq-desktop} {
+            content: ' 36px';
+        }
+    }
+}
+
+.l4 {
+    @include font-size-level4;
+
+    &:after {
+        content: ' 16px';
+        font-weight: normal;
+
+        @media #{$mq-tablet} {
+            content: ' 18px';
+        }
+
+        @media #{$mq-desktop} {
+            content: ' 24px';
+        }
+    }
+}
+
+.l5 {
+    @include font-size-level5;
+
+    &:after {
+        content: ' 14px';
+        font-weight: normal;
+
+        @media #{$mq-tablet} {
+            content: ' 16px';
+        }
+
+        @media #{$mq-desktop} {
+            content: ' 18px';
+        }
+    }
+}
+
+.l6 {
+    @include font-size-level6;
+
+    &:after {
+        content: ' 14px';
+        font-weight: normal;
+
+        @media #{$mq-tablet} {
+            content: ' 16px';
+        }
+    }
+}
+
+.small {
+    @include font-size-small;
+
+    &:after {
+        content: ' 12px';
+        font-weight: normal;
+
+        @media #{$mq-tablet} {
+            content: ' 14px';
+        }
+    }
+}
+
+.x-small {
+    @include font-size-extra-small;
+
+    &:after {
+        content: ' 12px';
+        font-weight: normal;
+    }
+}
+
