@@ -19,7 +19,17 @@
     <ul>
       {{#each (pages sortby="order")}}
         <li class="mds-nav-item">
-          {{> nav-item label=data.title}}
+          {{> nav-item label=data.name}}
+        </li>
+      {{/each}}
+    </ul>
+
+    {{!-- General Styles --}}
+    <h4>Styles</h4>
+    <ul>
+      {{#each (pages "styles" sortby="order")}}
+        <li class="mds-nav-item">
+          {{> nav-item label=data.name}}
         </li>
       {{/each}}
     </ul>

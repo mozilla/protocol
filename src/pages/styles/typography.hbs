@@ -1,5 +1,6 @@
 ---
 title: Typography
+name: Typography
 order: 2
 labels:
   - inprogress
@@ -27,8 +28,8 @@ labels:
     </div>
 
     <p>
-        <a class="button button-hollow" href="https://github.com/mozilla/zilla-slab/releases/">Download from Github</a>
-        <a class="button button-hollow" href="https://fonts.google.com/specimen/Zilla+Slab">Use on Google Fonts</a>
+        <a href="https://github.com/mozilla/zilla-slab/releases/">Download from Github</a>
+        <a href="https://fonts.google.com/specimen/Zilla+Slab">Use on Google Fonts</a>
     </p>
 
     <h3>Open Sans</h3>
@@ -45,4 +46,29 @@ labels:
     {{/with}}
     </div>
 
+    <p>
+        <a href="http://opensans.com">Download from OpenSans.com</a>
+        <a href="https://fonts.google.com/specimen/Open+Sans">Use on Google Fonts</a>
+    </p>
+
+</section>
+
+<section class="mds-section">
+    <h2>Type Scale</h2>
+
+    <p>We define a limited set of proportional font sizes: 12px, 14px, 16px, 18px, 24px, 36px, 48px, 60px, and 72px.</p>
+    <p>We use Sass mixins to declare these font sizes, and those mixins include media queries to adjust the sizes at key breakpoints. Text gets bigger as the viewport gets bigger.</p>
+    <p><a href="{{@root.baseurl}}/demos/type-scale.html">See a demo</a></p>
+
+    <div class="mds-specimen">
+    <pre class="mds-specimen-code"><code>@include font-size-huge;
+@include font-size-level1;
+@include font-size-level2;
+@include font-size-level3;
+@include font-size-level4;
+@include font-size-level5;
+@include font-size-level6;
+@include font-size-small;
+@include font-size-extra-small;</code></pre>
+    </div>
 </section>
