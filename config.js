@@ -59,7 +59,9 @@ module.exports = {
       {
         match: [
           './src/**/*.hbs',
-          './src/data/**/*'
+          './src/data/**/*',
+          './src/**/*.yaml',
+          './src/**/*.md'
         ],
         tasks: ['drizzle']
       }
@@ -95,7 +97,9 @@ module.exports = {
       patterns: './dist/patterns'
     },
     fieldParsers: {
-      notes: 'markdown'
+      notes: 'markdown',
+      tips: 'markdown',
+      nonos: 'markdown'
     }
   }
 };

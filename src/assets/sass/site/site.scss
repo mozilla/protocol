@@ -111,7 +111,7 @@
     }
 }
 
-.mds-specimen {
+.mds-pattern-embed {
     border-radius: 3px;
     border: 1px solid rgba(0, 0, 0, .2);
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
@@ -120,7 +120,7 @@
     overflow-x: auto;
 }
 
-.mds-specimen-preview {
+.mds-pattern-preview {
     padding: 20px 0;
 
     & + .mds-specimen-code {
@@ -129,10 +129,19 @@
     }
 }
 
-.mds-specimen-code {
+.mds-pattern-code {
     background: #f8f8f8;
     padding: 10px 20px;
     margin: -10px -20px;
+}
+
+.mds-specimen {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    padding: 10px 20px;
+    margin: 0 0 1.5em;
+    overflow-x: auto;
 }
 
 .mds-specimen-font {
@@ -184,8 +193,28 @@
     color: #fff;
 }
 
-// Items
-.mds-item-link {
+// Patterns
+.mds-pattern {
+    margin-bottom: 40px;
+}
+
+.mds-pattern-tips,
+.mds-pattern-nonos {
+    h3 {
+        @include font-size-level4;
+    }
+
+    ul {
+        list-style: disc;
+        margin-left: 30px;
+    }
+    ol {
+        list-style: decimal;
+        margin-left: 30px;
+    }
+}
+
+.mds-pattern-anchor {
     color: $color-text-primary;
     text-decoration: none;
     cursor: default;
@@ -203,12 +232,12 @@
     }
 }
 
-.mds-item-links li {
+.mds-pattern-links li {
     display: inline;
     margin-right: 20px;
 }
 
-.mds-item-links-link {
+.mds-pattern-links-link {
     @include font-size-small;
 
     svg {

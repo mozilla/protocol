@@ -1,12 +1,12 @@
-<{{tag}} {{#if id}}id="{{id}}"{{/if}} class="mds-item">
+<{{tag}} {{#if id}}id="{{id}}"{{/if}} class="mds-pattern-title">
   {{#if id}}
-    <a href="#{{id}}" class="mds-item-link">{{> @partial-block }}</a>
+    <a href="#{{id}}" class="mds-pattern-anchor">{{> @partial-block }}</a>
   {{else}}
     {{> @partial-block }}
   {{/if}}
 </{{tag}}>
 {{#if labels}}
-  <ul class="mds-item-labels">
+  <ul class="mds-pattern-labels">
     {{#each labels as |label|}}
       <li class="mds-label mds-label--{{label}}">
         {{label}}

@@ -7,7 +7,6 @@
     {{> drizzle.nav}}
     <main class="mds-main">
     {{#block "header"}}
-
       {{!-- Header, labels --}}
       <header class="mds-page-header">
         <h1 class="mds-page-title">
@@ -19,7 +18,7 @@
         </h1>
 
         {{#if labels}}
-          <ul class="mds-item-labels">
+          <ul class="mds-page-labels">
             {{#each labels as |label|}}
               <li class="mds-label mds-label--{{label}}">
                 {{label}}
