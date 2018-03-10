@@ -34,20 +34,30 @@
       {{/each}}
     </ul>
 
-    {{!-- Element Patterns --}}
-    <h4>Elements</h4>
+    {{!-- Atom Patterns --}}
+    <h4>Atoms</h4>
     <ul>
-      {{#each (collections "elements" sortby="order")}}
+      {{#each (collections "atoms" sortby="order")}}
         <li class="mds-nav-item">
           {{> nav-item label=name}}
         </li>
       {{/each}}
     </ul>
 
-    {{!-- Component Patterns --}}
-    <h4>Components</h4>
+    {{!-- Molecule Patterns --}}
+    <h4>Molecules</h4>
     <ul>
-      {{#each (collections "components" sortby="order")}}
+      {{#each (collections "molecules" sortby="order")}}
+        <li class="mds-nav-item">
+          {{> nav-item label=name}}
+        </li>
+      {{/each}}
+    </ul>
+
+    {{!-- Organism Patterns --}}
+    <h4>Organisms</h4>
+    <ul>
+      {{#each (collections "organisms" sortby="order")}}
         <li class="mds-nav-item">
           {{> nav-item label=name}}
         </li>
