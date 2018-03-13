@@ -7,30 +7,32 @@
     font-family: 'Zilla Slab';
     font-weight: normal;
     font-style: normal;
-    src: url('../../../../static/fonts/ZillaSlab-Regular.woff2') format('woff2'),
-         url('../../../../static/fonts/ZillaSlab-Regular.woff') format('woff');
+    src: url('/static/fonts/ZillaSlab-Regular.woff2') format('woff2'),
+         url('/static/fonts/ZillaSlab-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Zilla Slab';
     font-weight: bold;
     font-style: normal;
-    src: url('../../../../static/fonts/ZillaSlab-Bold.woff2') format('woff2'),
-         url('../../../../static/fonts/ZillaSlab-Bold.woff') format('woff');
+    src: url('/static/fonts/ZillaSlab-Bold.woff2') format('woff2'),
+         url('/static/fonts/ZillaSlab-Bold.woff') format('woff');
 }
 
+/*
 @font-face {
     font-family: 'Zilla Slab';
     font-weight: normal;
     font-style: italic;
-    src: url('../../../../static/fonts/ZillaSlab-RegularItalic.woff2') format('woff2'),
-         url('../../../../static/fonts/ZillaSlab-RegularItalic.woff') format('woff');
+    src: url('/static/fonts/ZillaSlab-RegularItalic.woff2') format('woff2'),
+         url('/static/fonts/ZillaSlab-RegularItalic.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Zilla Slab';
     font-weight: bold;
     font-style: italic;
-    src: url('../../../../static/fonts/ZillaSlab-BoldItalic.woff2') format('woff2'),
-         url('../../../../static/fonts/ZillaSlab-BoldItalic.woff') format('woff');
+    src: url('/static/fonts/ZillaSlab-BoldItalic.woff2') format('woff2'),
+         url('/static/fonts/ZillaSlab-BoldItalic.woff') format('woff');
 }
+*/

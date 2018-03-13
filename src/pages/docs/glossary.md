@@ -42,10 +42,12 @@ A small assemblage of atoms that, combined, form a basic functional piece of an 
 
 A complete and distinct chunk of the interface that should be able to stand on its own and function independently in any template. These are the reusable building blocks of a web page. Examples:
 
-* A page intro with headline, subheading, hero image, and call to action link.
-* A signup form with headline, several form fields with labels, and a submit button.
-* A brand masthead with logo, tagline, and navigation.
-* A footer with navigation links, copyright info, and a language selector.
+<ul class="prose">
+    <li>A page intro with headline, subheading, hero image, and call to action link.</li>
+    <li>A signup form with headline, several form fields with labels, and a submit button.</li>
+    <li>A brand masthead with logo, tagline, and navigation.</li>
+    <li>A footer with navigation links, copyright info, and a language selector.</li>
+</ul>
 
 ### Template
 
