@@ -1,0 +1,123 @@
+---
+title: Typography
+name: Typography
+order: 1
+labels:
+  - inprogress
+styles:
+  - type-scale
+---
+
+<p>[Todo: Some kind of introduction about our approach to typography in general, maybe some basic principles.]</p>
+
+<h2 id="typefaces">Typefaces</h2>
+<p>Zilla Slab and Open Sans are the standard typefaces on Mozilla branded websites. As a general rule, type set in Zilla Slab should stand out. Avoid stacking 2 sizes of Zilla one on top of the other. Pair headings in Zilla Slab with subheadings in Open Sans.</p>
+
+<h3 id="typeface-zilla-slab">Zilla Slab</h3>
+<p>Zilla Slab is our custom typeface for the Mozilla brand. We use it for our wordmark and as a display font for headlines. It’s a contemporary slab serif based on Typotheque’s Tesla. Zilla Slab is a free, open source font available for download.</p>
+
+<ul>
+    <li><a href="https://github.com/mozilla/zilla-slab/releases/latest" rel="external">Download from Github</a></li>
+    <li><a href="https://fonts.google.com/specimen/Zilla+Slab" rel="external">Use on Google Fonts</a></li>
+</ul>
+
+<figure id="specimen-zilla-slab" class="mds-specimen mds-specimen-font">
+{{#with (data "specimens")}}
+    {{this.alphabet}}
+    {{this.characters}}
+    {{this.digits}}
+    {{this.punctuation}}
+    {{this.special}}
+    {{this.currencies}}
+{{/with}}
+</figure>
+
+<h3 id="typeface-open-sans">Open Sans</h3>
+<p>Open Sans is our standard typeface for body copy, labels, captions, links, navigation, etc. because it’s more legible at smaller sizes than Zilla Slab, which is primarily a display font. Open Sans is also used as a heading/display font when the Firefox brand needs to be expressed more than the Mozilla brand. This open source font was designed by Steve Matteson.</p>
+
+<ul>
+    <li><a href="http://opensans.com">Download from OpenSans.com</a></li>
+    <li><a href="https://fonts.google.com/specimen/Open+Sans">Use on Google Fonts</a></li>
+</ul>
+
+<figure id="specimen-open-sans" class="mds-specimen mds-specimen-font">
+{{#with (data "specimens")}}
+    {{this.alphabet}}
+    {{this.characters}}
+    {{this.digits}}
+    {{this.punctuation}}
+    {{this.special}}
+    {{this.currencies}}
+{{/with}}
+</figure>
+
+<h2 id="styles">Styles</h2>
+
+<p>We limit the number of type styles to a set that works well across the website and fits our layout grid. This scale is based on a root size of 16 pixels and a 4 pixel baseline grid to determine line height.</p>
+
+<div id="specimen-type-scale" class="mds-specimen">
+  <h1 class="scale-sample scale-sample-huge">Display Huge</h1>
+  <h1 class="scale-sample scale-sample-l1">Display Level One</h1>
+  <h2 class="scale-sample scale-sample-l2">Display Level Two</h2>
+  <h3 class="scale-sample scale-sample-l3">Display Level Three</h3>
+  <h4 class="scale-sample scale-sample-l4">Display Level Four</h4>
+  <p class="scale-sample scale-sample-l5">Body Level One</p>
+  <p class="scale-sample scale-sample-l6">Body Level Two</p>
+  <p class="scale-sample scale-sample-small">Size Small</p>
+  <p class="scale-sample scale-sample-x-small">Size X-Small</p>
+</div>
+
+<p>Our type scale includes five display styles, used to make a bold statement like a headline or title. Use Zilla Slab bold for display text when expressing the Mozilla brand and Open Sans bold for display text when expressing the Firefox brand.</p>
+
+<p>The display sizes are Levels 1 through 4, which are used for common titles and headings, as well as ”Huge,” which is used very sparingly.</p>
+
+<p>We use two sizes of body copy: Body 1 (bigger) and Body 2 (smaller). Use Body 2 for normal, default body text and Body 1 when you need slightly larger text to stand out, like a tagline or the introduction to an article.</p>
+
+<p>There are also two sizes of small text: Small and Extra-Small. These are used sparingly for supporting text like footnotes or disclaimers, never for main body copy.</p>
+
+<p>[Todo: something about highlight style]</p>
+
+<p><a href="{{@root.baseurl}}/demos/type-scale.html">See a demo</a></p>
+
+<h2 id="code">Code</h2>
+
+<p>We use Sass mixins to declare these font sizes:</p>
+
+<div class="mds-specimen">
+<pre class="mds-specimen-code"><code>@include text-display-huge;
+@include text-display-level1;
+@include text-display-level2;
+@include text-display-level3;
+@include text-display-level4;
+@include text-body-level1;
+@include text-body-level2;
+@include text-small;
+@include text-extra-small;</code></pre>
+</div>
+
+<p>Those mixins include media queries to adjust the sizes at key breakpoints. Text gets bigger as the viewport gets bigger. You can resize your window to see this in action on the sample above or on the <a href="{{@root.baseurl}}/demos/type-scale.html">demo page</a>.</p>
+
+<p>For example, here’s the display level one mixin:</p>
+
+<div class="mds-specimen">
+<pre class="mds-specimen-code"><code>@mixin text-display-level1 {
+    @include font-size(36px);
+    line-height: 1.1111;
+
+    @media #{$mq-tablet} {
+        @include font-size(48px);
+        line-height: 1.0833;
+    }
+
+    @media #{$mq-desktop} {
+        @include font-size(60px);
+        line-height: 1.0666;
+    }
+}</code></pre>
+</div>
+
+<p>The funky line-heights are calculated to fit the 4-pixel baseline grid, give or take a pixel with rounding. Also note that these mixins only declare the size and line-height, not the font-family or weight.</p>
+
+<p>The sizing mixins in turn use another Sass mixin to convert a pixel size to <code>rem</code> for output, assuming a 16px root size (the default in graphical browsers). Because we use <code>rem</code> for font sizing all of our declared sizes are really just suggestions and the end user can resize as they see fit. Text sizes are flexible so design accordingly.</p>
+
+</section>

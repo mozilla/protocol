@@ -16,6 +16,10 @@ ul.prose {
     list-style: disc;
     margin-left: 30px;
 
+    li {
+        margin-bottom: .25em;
+    }
+
     ul {
         list-style: circle;
         margin-left: 20px;
@@ -32,6 +36,10 @@ ul.prose {
 ol.prose {
     list-style: decimal;
     margin-left: 30px;
+
+    li {
+        margin-bottom: .25em;
+    }
 
     ol {
         list-style: lower-alpha;

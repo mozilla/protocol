@@ -37,97 +37,108 @@
 // set of predefined sizes. Sizes adapt at common breakpoints, and
 // there's some redundancy at smaller sizes because we don't want things
 // getting too tiny.
-// Usage:
-//  .foo { @include font-size-level1; }
+// Example usage:
+//  .title { @include text-display-level1; }
+//  .subtitle { @include text-display-level3; }
+//  .intro { @include text-body-level1; }
 
-@mixin font-size-huge { // For especially huge titles
+@mixin text-display-huge { // For especially huge titles
     @include font-size(48px);
+    line-height: 1.0833;
 
     @media #{$mq-tablet} {
         @include font-size(60px);
+        line-height: 1.0666;
     }
 
     @media #{$mq-desktop} {
         @include font-size(72px);
+        line-height: 1;
     }
 }
 
-@mixin font-size-level1 {
+@mixin text-display-level1 {
     @include font-size(36px);
+    line-height: 1.1111;
 
     @media #{$mq-tablet} {
         @include font-size(48px);
+        line-height: 1.0833;
     }
 
     @media #{$mq-desktop} {
         @include font-size(60px);
+        line-height: 1.0666;
     }
 }
 
-@mixin font-size-level2 {
+@mixin text-display-level2 {
     @include font-size(24px);
+    line-height: 1.1666;
 
     @media #{$mq-tablet} {
         @include font-size(36px);
+        line-height: 1.1111;
     }
 
     @media #{$mq-desktop} {
         @include font-size(48px);
+        line-height: 1.0833;
     }
 }
 
-@mixin font-size-level3 {
+@mixin text-display-level3 {
     @include font-size(18px);
+    line-height: 1.3333;
 
     @media #{$mq-tablet} {
         @include font-size(24px);
+        line-height: 1.1666;
     }
 
     @media #{$mq-desktop} {
         @include font-size(36px);
+        line-height: 1.1111;
     }
 }
 
-@mixin font-size-level4 {
+@mixin text-display-level4 {
     @include font-size(16px);
 
     @media #{$mq-tablet} {
         @include font-size(18px);
+        line-height: 1.3333;
     }
 
     @media #{$mq-desktop} {
         @include font-size(24px);
+        line-height: 1.1666;
     }
 }
 
-@mixin font-size-level5 {
-    @include font-size(14px);
+@mixin text-body-level1 {
+    @include font-size(16px);
 
     @media #{$mq-tablet} {
-        @include font-size(16px);
-    }
-
-    @media #{$mq-desktop} {
         @include font-size(18px);
+        line-height: 1.3333;
     }
 }
 
-@mixin font-size-level6 {
-    @include font-size(14px);
-
-    @media #{$mq-tablet} {
-        @include font-size(16px);
-    }
+@mixin text-body-level2 {
+    @include font-size(16px);
 }
 
-@mixin font-size-small {
+@mixin text-small {
     @include font-size(12px);
 
     @media #{$mq-tablet} {
         @include font-size(14px);
+        line-height: 1.1428;
     }
 }
 
-@mixin font-size-extra-small {
+@mixin text-extra-small {
     @include font-size(12px);
+    line-height: 1.3333;
 }

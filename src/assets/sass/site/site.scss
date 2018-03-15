@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../pebbles/includes/lib';
+@import '../protocol/includes/lib';
 
 
 .mds-main {
@@ -123,9 +123,9 @@
 .mds-pattern-preview {
     padding: 20px 0;
 
-    & + .mds-specimen-code {
+    & + .mds-pattern-code {
         border-top: 1px solid rgba(0, 0, 0, .2);
-        margin: 20px -20px -10px;
+        margin: 30px -20px -10px;
     }
 }
 
@@ -145,7 +145,7 @@
 }
 
 .mds-specimen-font {
-    @include font-size-level3;
+    @include text-display-level3;
 }
 
 #specimen-zilla-slab {
@@ -163,7 +163,7 @@
 
 // Labels
 .mds-label {
-    @include font-size-small;
+    @include text-small;
     background-color: gray;
     border-radius: .25em;
     display: inline-block;
@@ -196,18 +196,24 @@
 // Patterns
 .mds-pattern {
     margin-bottom: 40px;
+
+    @media #{$mq-desktop} {
+        margin-bottom: 60px;
+    }
 }
 
+.mds-pattern-notes,
 .mds-pattern-tips,
 .mds-pattern-nonos {
     h3 {
-        @include font-size-level4;
+        @include text-display-level4;
     }
 
     ul {
         list-style: disc;
         margin-left: 30px;
     }
+
     ol {
         list-style: decimal;
         margin-left: 30px;
@@ -238,7 +244,7 @@
 }
 
 .mds-pattern-links-link {
-    @include font-size-small;
+    @include text-small;
 
     svg {
         fill: currentColor;

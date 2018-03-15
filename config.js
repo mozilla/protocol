@@ -97,6 +97,7 @@ module.exports = {
       patterns: './dist/patterns'
     },
     fieldParsers: {
+      description: 'markdown',
       notes: 'markdown',
       tips: 'markdown',
       nonos: 'markdown'

@@ -6,7 +6,7 @@
 
 // The basis for all buttons on mozilla.org
 %base-button {
-    @include font-size-level6;
+    @include text-body-level2;
     @include open-sans;
     background: none;
     border-radius: 100px;
@@ -15,6 +15,7 @@
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
+    line-height: 1;
     padding: .9em 40px;
     position: relative;
     text-align: center;

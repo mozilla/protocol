@@ -1,0 +1,14 @@
+Interface colors:
+  - color: "Link blue"
+    hex: "#00a7e0"
+    rgb: "rgb(0, 167, 224)"
+    variable: "$color-link-blue"
+  - color: "Link blue, hover"
+    hex: "#0081ad"
+    rgb: "rgb(0, 129, 173)"
+    variable: "darken($color-link-blue, 10%)"
+  - color: "Off-black"
+    hex: "#323232"
+    rgb: "rgb(50, 50, 50)"
+    variable: "$color-off-black"
+

@@ -44,7 +44,7 @@ $color-link-blue-dark: #175a77;
     }
 
     .card-title {
-        @include font-size-level4;
+        @include text-display-level4;
         color: $color-text-primary;
         text-decoration: none;
     }
@@ -76,7 +76,7 @@ $color-link-blue-dark: #175a77;
 
 // CTA link
 a.cta-link {
-    @include font-size-level6;
+    @include text-body-level2;
     border-bottom: 2px solid $color-link-blue;
     color: $color-link-blue;
     display: inline-block;

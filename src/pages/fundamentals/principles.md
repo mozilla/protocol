@@ -1,8 +1,6 @@
 ---
 title: Design Principles
 order: 1
-labels:
-  - approved
 ---
 
 These are the guiding principles that inform our design decisions.
@@ -10,7 +8,7 @@ These are the guiding principles that inform our design decisions.
 The components, pages, and websites we create should be:
 
 
-<img src="{{@root.baseurl}}/static/img/skinner.png" alt="" title="Not that kind of principle" style="float: left; margin: 0 20px 1em;">
+<img src="{{@root.baseurl}}/static/img/skinner.png" alt="" title="Not that kind of principle" style="float: right; margin: 0 20px 1em;">
 
 ### Meaningful
 

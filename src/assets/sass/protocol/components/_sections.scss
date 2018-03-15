@@ -19,14 +19,14 @@
     min-width: $width-phone;
 
     @media #{$mq-tablet} {
-        width: $width-tablet;
+        padding: 20px 60px;
     }
 
     @media #{$mq-desktop} {
-        width: $width-desktop;
+        padding: 20px 85px;
     }
 
     @media #{$mq-desktop-wide} {
-        width: $width-desktop-wide;
+        max-width: $width-max-content;
     }
 }

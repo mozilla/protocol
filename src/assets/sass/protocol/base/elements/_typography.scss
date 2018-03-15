@@ -6,31 +6,33 @@
 
 
 h1, h2, h3, h4, h5, h6, legend {
-    @include zilla-slab;
     font-weight: bold;
-    line-height: 1.1;
     margin: 0 0 .25em;
+}
+
+h1, h2, h3, h4 {
+    @include zilla-slab;
 }
 
 // Type scale defined in includes/mixins/_typography.scss
 h1 {
-    @include font-size-level1;
+    @include text-display-level1;
 }
 
 h2 {
-    @include font-size-level2;
+    @include text-display-level2;
 }
 
 h3 {
-    @include font-size-level3;
+    @include text-display-level3;
 }
 
 h4 {
-    @include font-size-level4;
+    @include text-display-level4;
 }
 
 h5, h6 {
-    @include font-size-level5;
+    @include text-body-level1;
 }
 
 p,
@@ -38,9 +40,9 @@ ul,
 ol,
 dl,
 table {
-    margin: .5em 0 1em;
+    margin: 0 0 1.25em;
 }
 
 code {
-    @include font-size-small;
+    @include text-small;
 }

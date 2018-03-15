@@ -7,7 +7,7 @@
 
 // privacy policy link that accompany most download buttons
 .fx-privacy-link {
-    @include font-size-extra-small;
+    @include text-extra-small;
     @include open-sans;
     display: block;
     text-align: center;

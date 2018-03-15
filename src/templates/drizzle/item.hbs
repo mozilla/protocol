@@ -5,10 +5,10 @@
       {{name}}
     {{/drizzle.labelheader}}
   </header>
-  {{!-- Notes --}}
-  {{#if data.notes}}
-    <div class="mds-pattern-notes">
-      {{{data.notes}}}
+  {{!-- Description --}}
+  {{#if data.description}}
+    <div class="mds-pattern-desc">
+      {{{data.description}}}
     </div>
   {{/if}}
   {{!-- Links --}}
@@ -42,6 +42,14 @@
         <pre class="mds-pattern-code"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
       {{/unless}}
     </div>
+
+    {{!-- Notes --}}
+    {{#if data.notes}}
+      <div class="mds-pattern-notes">
+        <h3>Notes</h3>
+        {{{data.notes}}}
+      </div>
+    {{/if}}
 
     {{#if data.tips}}
     <section class="mds-pattern-tips">

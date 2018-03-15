@@ -1,7 +1,7 @@
 // Type scale demo
 
-@import '../pebbles/includes/lib';
-@import '../pebbles/pebbles';
+@import '../protocol/includes/lib';
+@import '../protocol/protocol';
 
 body {
     background: repeating-linear-gradient(transparent, transparent 3px, rgba(0, 255, 255, .2) 4px, transparent 4px, transparent 7px, rgba(0, 255, 255, .4) 8px);
@@ -9,126 +9,142 @@ body {
 
 hr {
     margin: 40px auto;
+    max-width: $width-max-content - (160px);
 }
 
-.huge { @include font-size-huge; }
-.l1 { @include font-size-level1; }
-.l2 { @include font-size-level2; }
-.l3 { @include font-size-level3; }
-.l4 { @include font-size-level4; }
-.l5 { @include open-sans; @include font-size-level5; }
-.l6 { @include open-sans; @include font-size-level6; }
-.small { @include font-size-small; }
-.x-small { @include font-size-extra-small; }
+.scale-sample-huge { @include text-display-huge; }
+.scale-sample-l1 { @include text-display-level1; }
+.scale-sample-l2 { @include text-display-level2; }
+.scale-sample-l3 { @include text-display-level3; }
+.scale-sample-l4 { @include text-display-level4; }
+.scale-sample-l5 { @include text-body-level1; }
+.scale-sample-l6 { @include text-body-level2; }
+.scale-sample-small { @include text-small; }
+.scale-sample-x-small { @include text-extra-small; }
 
-.intro {
-    @include font-size-level4;
-}
-
-.note {
-    @include font-size-small;
+.label {
+    @include text-small;
     color: $color-text-secondary;
+    margin: 1em 0 .5em;
 }
 
-.specimen {
-    .huge:after {
-        content: ' 48px';
+#specimen-type-scale {
+    .scale-sample {
+        margin: 0;
+    }
+
+    .scale-sample:after {
+        @include open-sans;
+        @include text-small;
+        color: $color-text-tertiary;
         font-weight: normal;
+        margin-left: 10px;
+    }
+
+    .scale-sample-huge:after {
+        content: '(48px/52px)';
 
         @media #{$mq-tablet} {
-            content: ' 60px';
+            content: '(60px/64px)';
         }
 
         @media #{$mq-desktop} {
-            content: ' 72px';
+            content: '(72px/72px)';
         }
     }
 
-    .l1:after {
-        content: ' 36px';
-        font-weight: normal;
+    .scale-sample-l1:after {
+        content: '(36px/40px)';
 
         @media #{$mq-tablet} {
-            content: ' 48px';
+            content: '(48px/52px)';
         }
 
         @media #{$mq-desktop} {
-            content: ' 60px';
+            content: '(60px/64px)';
         }
     }
 
-    .l2:after {
-        content: ' 24px';
-        font-weight: normal;
+    .scale-sample-l2:after {
+        content: '(24px/28px)';
 
         @media #{$mq-tablet} {
-            content: ' 36px';
+            content: '(36px/40px)';
         }
 
         @media #{$mq-desktop} {
-            content: ' 48px';
+            content: '(48px/52px)';
         }
     }
 
-    .l3:after {
-        content: ' 18px';
-        font-weight: normal;
+    .scale-sample-l3:after {
+        content: '(18px/24px)';
 
         @media #{$mq-tablet} {
-            content: ' 24px';
+            content: '(24px/28px)';
         }
 
         @media #{$mq-desktop} {
-            content: ' 36px';
+            content: '(36px/40px)';
         }
     }
 
-    .l4:after {
-        content: ' 16px';
-        font-weight: normal;
+    .scale-sample-l4:after {
+        content: '(16px/24px)';
 
         @media #{$mq-tablet} {
-            content: ' 18px';
+            content: '(18px/24px)';
         }
 
         @media #{$mq-desktop} {
-            content: ' 24px';
+            content: '(24px/28px)';
         }
     }
 
-    .l5:after {
-        content: ' 14px';
-        font-weight: normal;
+    .scale-sample-l5:after {
+        content: '(14px/16px)';
 
         @media #{$mq-tablet} {
-            content: ' 16px';
+            content: '(16px/24px)';
         }
 
         @media #{$mq-desktop} {
-            content: ' 18px';
+            content: '(18px/24px)';
         }
     }
 
-    .l6:after {
-        content: ' 14px';
-        font-weight: normal;
+    .scale-sample-l6:after {
+        content: '(14px/16px)';
 
         @media #{$mq-tablet} {
-            content: ' 16px';
+            content: '(16px/24px)';
         }
     }
 
-    .small:after {
-        content: ' 12px';
-        font-weight: normal;
+    .scale-sample-small:after {
+        content: '(12px/16px)';
 
         @media #{$mq-tablet} {
-            content: ' 14px';
+            content: '(14px/18px)';
         }
     }
 
-    .x-small:after {
-        content: ' 12px';
-        font-weight: normal;
+    .scale-sample-x-small:after {
+        content: '(12px/16px)';
     }
+}
+
+.moz-manifesto {
+    .intro {
+        @include text-body-level1;
+    }
+
+    h2 {
+        @include text-display-level3;
+    }
+
+    h3 {
+        @include text-display-level4;
+    }
+
 }
