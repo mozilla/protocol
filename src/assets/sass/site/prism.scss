@@ -1,5 +1,5 @@
 /* PrismJS 1.12.2
-http://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript */
+http://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+scss */
 /**
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
@@ -49,7 +49,7 @@ pre[class*="language-"]>code {
 code[class*="language"] {
 	max-height: inherit;
 	height: inherit;
-	padding: 20px 1em;
+	padding: 1em;
 	display: block;
 	overflow: auto;
 }

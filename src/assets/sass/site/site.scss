@@ -118,6 +118,11 @@
     padding: 10px 20px;
     margin: 0 0 1.5em;
     overflow-x: auto;
+
+    .mds-pattern-code {
+        border-radius: 3px;
+        margin: -10px -20px;
+    }
 }
 
 .mds-pattern-preview {
