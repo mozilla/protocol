@@ -49,7 +49,7 @@
 
     .nav-toggle {
         @include image-replaced;
-        background: #000 url('../../../../static/img/icon-menu-white.svg') center center no-repeat;
+        background: #000 url('/static/img/icon-menu-white.svg') center center no-repeat;
         @include background-size(30px auto);
         cursor: pointer;
         display: block;

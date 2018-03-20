@@ -6,31 +6,6 @@ module.exports = {
     dest: './dist/static'
   },
 
-  js: {
-    plugins: {
-      webpack: {
-        entry: {
-          // Global script
-          'system/js/global':
-            './src/assets/js/global.js'
-        },
-        output: {
-          path: './dist/assets',
-          filename: '[name].js'
-        },
-        module: {
-          loaders: [
-            {
-              test: /\.js$/,
-              loaders: ['babel-loader']
-            }
-          ]
-        },
-        externals: {}
-      }
-    }
-  },
-
   serve: {
     plugins: {
       browserSync: {

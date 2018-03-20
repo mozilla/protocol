@@ -2,6 +2,7 @@
   {{#content "head" mode="append"}}
     <link rel="stylesheet" href="{{@root.baseurl}}/assets/css/protocol/protocol.css">
     <link rel="stylesheet" href="{{@root.baseurl}}/assets/css/site/site.css">
+    <link rel="stylesheet" href="{{@root.baseurl}}/assets/css/site/prism.css">
   {{/content}}
   {{#content "body"}}
     {{> drizzle.nav}}
@@ -37,5 +38,6 @@
 
   {{#content "foot"}}
     <script src="{{@root.baseurl}}/assets/js/global.js"></script>
+    <script src="{{@root.baseurl}}/assets/js/prism.js"></script>
   {{/content}}
 {{/extend}}
