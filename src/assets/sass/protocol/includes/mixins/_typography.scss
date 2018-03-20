@@ -103,12 +103,8 @@
 }
 
 @mixin text-display-level4 {
-    @include font-size(16px);
-
-    @media #{$mq-tablet} {
-        @include font-size(18px);
-        line-height: 1.3333;
-    }
+    @include font-size(18px);
+    line-height: 1.3333;
 
     @media #{$mq-desktop} {
         @include font-size(24px);
@@ -117,12 +113,8 @@
 }
 
 @mixin text-body-level1 {
-    @include font-size(16px);
-
-    @media #{$mq-tablet} {
-        @include font-size(18px);
-        line-height: 1.3333;
-    }
+    @include font-size(18px);
+    line-height: 1.3333;
 }
 
 @mixin text-body-level2 {
@@ -130,12 +122,8 @@
 }
 
 @mixin text-small {
-    @include font-size(12px);
-
-    @media #{$mq-tablet} {
-        @include font-size(14px);
-        line-height: 1.1428;
-    }
+    @include font-size(14px);
+    line-height: 1.1428;
 }
 
 @mixin text-extra-small {

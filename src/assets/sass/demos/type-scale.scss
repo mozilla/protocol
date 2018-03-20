@@ -90,11 +90,7 @@ hr {
     }
 
     .scale-sample-l4:after {
-        content: '(16px/24px)';
-
-        @media #{$mq-tablet} {
-            content: '(18px/24px)';
-        }
+        content: '(18px/24px)';
 
         @media #{$mq-desktop} {
             content: '(24px/28px)';
@@ -102,31 +98,15 @@ hr {
     }
 
     .scale-sample-l5:after {
-        content: '(14px/16px)';
-
-        @media #{$mq-tablet} {
-            content: '(16px/24px)';
-        }
-
-        @media #{$mq-desktop} {
-            content: '(18px/24px)';
-        }
+        content: '(18px/24px)';
     }
 
     .scale-sample-l6:after {
-        content: '(14px/16px)';
-
-        @media #{$mq-tablet} {
-            content: '(16px/24px)';
-        }
+        content: '(16px/24px)';
     }
 
     .scale-sample-small:after {
-        content: '(12px/16px)';
-
-        @media #{$mq-tablet} {
-            content: '(14px/18px)';
-        }
+        content: '(14px/18px)';
     }
 
     .scale-sample-x-small:after {
