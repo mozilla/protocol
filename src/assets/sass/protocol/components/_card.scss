@@ -7,7 +7,7 @@
 $color-link-blue: #0e9ad8;
 $color-link-blue-dark: #175a77;
 
-.card {
+.mzp-c-card {
     max-width: 390px;
     padding: 20px 0;
 
@@ -43,7 +43,7 @@ $color-link-blue-dark: #175a77;
         }
     }
 
-    .card-title {
+    .mzp-c-card-title {
         @include text-display-level4;
         color: $color-text-primary;
         text-decoration: none;
@@ -53,7 +53,7 @@ $color-link-blue-dark: #175a77;
     a:visited {
         text-decoration: none;
 
-        .card-title {
+        .mzp-c-card-title {
             color: $color-text-primary;
         }
 
@@ -62,20 +62,20 @@ $color-link-blue-dark: #175a77;
         &:active {
             color: $color-link-blue-dark;
 
-            .card-title {
+            .mzp-c-card-title {
                 color: $color-link-blue-dark;
             }
         }
     }
 
-    .card-cta {
+    .mzp-c-card-cta {
         margin-top: 20px;
     }
 }
 
 
 // CTA link
-a.cta-link {
+.mzp-c-cta-link {
     @include text-body-level2;
     border-bottom: 2px solid $color-link-blue;
     color: $color-link-blue;

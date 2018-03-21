@@ -10,9 +10,9 @@ labels:
 
 {{#each (data "colors")}}
   <h3>{{ @key }}</h3>
-  <ul class="mds-swatch-gallery">
+  <ul class="protosite-swatch-gallery">
     {{#each this}}
-      <li class="mds-swatch">
+      <li class="protosite-swatch">
         {{> drizzle.swatch }}
       </li>
     {{/each}}

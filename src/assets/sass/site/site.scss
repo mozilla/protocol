@@ -5,7 +5,7 @@
 @import '../protocol/includes/lib';
 
 
-.mds-main {
+.protosite-main {
     padding: 20px 4vw;
 
     @media #{$mq-tablet} {
@@ -14,7 +14,7 @@
 }
 
 // Nav sidebar
-.mds-nav {
+.protosite-nav-main {
     background: #000;
     color: #fff;
     padding: 10px;
@@ -47,7 +47,7 @@
         z-index: 1;
     }
 
-    .nav-toggle {
+    .protosite-js-nav-toggle {
         @include image-replaced;
         background: #000 url('/static/img/icon-menu-white.svg') center center no-repeat;
         @include background-size(30px auto);
@@ -64,11 +64,11 @@
     }
 }
 
-.mds-nav-header {
+.protosite-nav-main-head {
     margin: 0 0 20px;
 }
 
-.mds-nav-mozlogo {
+.protosite-nav-main-mozlogo {
     float: right;
 
     @media #{$mq-tablet} {
@@ -76,11 +76,11 @@
     }
 }
 
-.mds-nav-item {
+.protosite-nav-main-item {
     margin: 0 0 .25em;
 }
 
-.js .mds-nav-menu {
+.js .protosite-nav-main-menu {
     display: none;
 
     @media #{$mq-tablet} {
@@ -88,39 +88,40 @@
     }
 }
 
-.js .mds-nav.is-active .mds-nav-menu {
+.js .protosite-nav-main.mzp-is-active .protosite-nav-main-menu {
     display: block;
 }
 
 
 // Color swatches
-.mds-swatch-gallery {
+.protosite-swatch-gallery {
     margin: 0 0 40px;
 
-    .mds-swatch {
+    .protosite-swatch {
         margin: 0 0 1.5em;
         min-height: 100px;
         overflow: hidden;
         padding-left: 120px;
         position: relative;
 
-        ul {
+        .protosite-swatch-values {
+            list-style: none;
             margin: 0;
-        }
 
-        li {
-            margin: 0 0 .25em;
+            li {
+                margin: 0 0 .25em;
+            }
         }
     }
 
-    .mds-swatch-image {
+    .protosite-swatch-image {
         height: auto;
         left: 0;
         position: absolute;
         width: 100px;
     }
 
-    .mds-swatch-name {
+    .protosite-swatch-name {
         @include open-sans;
         @include text-body-level2;
     }
@@ -131,7 +132,7 @@
     }
 }
 
-.mds-pattern-embed {
+.protosite-pattern-embed {
     border-radius: 3px;
     border: 1px solid rgba(0, 0, 0, .2);
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
@@ -139,28 +140,28 @@
     margin: 0 0 1.5em;
     overflow-x: auto;
 
-    .mds-pattern-code {
+    .protosite-pattern-code {
         border-radius: 3px;
         margin: -10px -20px;
     }
 }
 
-.mds-pattern-preview {
+.protosite-pattern-preview {
     padding: 20px 0;
 
-    & + .mds-pattern-code {
+    & + .protosite-pattern-code {
         border-top: 1px solid rgba(0, 0, 0, .2);
         margin: 30px -20px -10px;
     }
 }
 
-.mds-pattern-code {
+.protosite-pattern-code {
     background: #f8f8f8;
     padding: 10px 20px;
     margin: -10px -20px;
 }
 
-.mds-specimen {
+.protosite-specimen {
     border-radius: 3px;
     border: 1px solid rgba(0, 0, 0, .2);
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
@@ -169,7 +170,7 @@
     overflow-x: auto;
 }
 
-.mds-specimen-font {
+.protosite-specimen-font {
     @include text-display-level3;
 }
 
@@ -181,13 +182,13 @@
     @include open-sans;
 }
 
-.mds-section {
+.protosite-section {
     margin: 0 auto 3em;
 }
 
 
 // Labels
-.mds-label {
+.protosite-label {
     @include text-small;
     background-color: gray;
     border-radius: .25em;
@@ -198,54 +199,51 @@
     border: 1px solid rgba(0, 0, 0, .05);
 }
 
-.mds-label--inprogress {
+.protosite-label-inprogress {
     background-color: yellow;
     color: #000;
 }
 
-.mds-label--deprecated {
+.protosite-label-deprecated {
     background-color: firebrick;
     color: #fff;
 }
 
-.mds-label--approved {
+.protosite-label-approved {
     background-color: green;
     color: #fff;
 }
 
-.mds-label--prototype {
+.protosite-label-prototype {
     background-color: rebeccapurple;
     color: #fff;
 }
 
+
 // Patterns
-.mds-pattern {
+.protosite-pattern {
     margin-bottom: 40px;
 
     @media #{$mq-desktop} {
         margin-bottom: 60px;
     }
-}
 
-.mds-pattern-notes,
-.mds-pattern-tips,
-.mds-pattern-nonos {
-    h3 {
-        @include text-display-level4;
-    }
+    .protosite-pattern-links {
+        margin: 0 0 1.5em;
+        list-style: none;
 
-    ul {
-        list-style: disc;
-        margin-left: 30px;
-    }
-
-    ol {
-        list-style: decimal;
-        margin-left: 30px;
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
     }
 }
 
-.mds-pattern-anchor {
+.protosite-pattern-extra h3 {
+    @include text-display-level4;
+}
+
+.protosite-pattern-anchor {
     color: $color-text-primary;
     text-decoration: none;
     cursor: default;
@@ -263,12 +261,8 @@
     }
 }
 
-.mds-pattern-links li {
-    display: inline;
-    margin-right: 20px;
-}
 
-.mds-pattern-links-link {
+.protosite-pattern-links-link {
     @include text-small;
 
     svg {

@@ -1,6 +1,6 @@
 ---
 name: Basic card
-description: A card with image, headline, description, and link. This is really just an example of a pattern, don't read too much into it.
+description: A card with image, headline, description, and link. This is really just an example of a pattern, don’t read too much into it.
 labels:
     - prototype
 notes: |
@@ -9,18 +9,18 @@ tips: |
     - A handy dandy tip.
     - And another.
 nonos: |
-    - Don't do the bad thing.
+    - Don’t do the bad thing.
 ---
 
-<div class="card">
-  <a class="card-image" href="#">
-    <img src="{{@root.baseurl}}/static/img/card-image.jpg" alt="">
-    <h3 class="card-title">Card Title</h3>
+<div class="mzp-c-card">
+  <a href="#">
+    <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card-image.jpg" alt="">
+    <h3 class="mzp-c-card-title">Card Title</h3>
   </a>
 
-  <div class="card-desc">
-    <p class="card-copy">Lorem ipsum dolor sit amet, pri illum munere mollis at, amet senserit te vix, sint porro mei eu.</p>
+  <div class="mzp-c-card-desc">
+    <p>Lorem ipsum dolor sit amet, pri illum munere mollis at, amet senserit te vix, sint porro mei eu.</p>
   </div>
 
-  <p class="card-cta"><a class="cta-link" href="#">Learn more</a></p>
+  <p class="mzp-c-card-cta"><a class="mzp-c-cta-link" href="#">Learn more</a></p>
 </div>
