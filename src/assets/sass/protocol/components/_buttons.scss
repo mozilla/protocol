@@ -75,13 +75,13 @@ a.button:visited {
     }
 
     &.button-red {
-        background-color: $color-mozred;
-        border-color: $color-mozred;
+        background-color: $color-button-red;
+        border-color: $color-button-red;
         color: $color-button-light;
 
         &:hover {
-            background-color: saturate(lighten($color-mozred, 5%), 10%);
-            border-color: saturate(lighten($color-mozred, 5%), 10%);
+            background-color: saturate(lighten($color-button-red, 5%), 10%);
+            border-color: saturate(lighten($color-button-red, 5%), 10%);
         }
     }
 
@@ -143,14 +143,14 @@ input[type='button'].form-button {
     }
 
     &.button-red {
-        color: $color-mozred;
-        border-color: $color-mozred;
+        color: $color-button-red;
+        border-color: $color-button-red;
 
         &:hover,
         &:focus {
-            background-color: transparentize($color-mozred, .95);
-            border-color: saturate(lighten($color-mozred, 5%), 10%);
-            color: saturate(lighten($color-mozred, 5%), 10%);
+            background-color: transparentize($color-button-red, .95);
+            border-color: saturate(lighten($color-button-red, 5%), 10%);
+            color: saturate(lighten($color-button-red, 5%), 10%);
         }
     }
 }

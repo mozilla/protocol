@@ -95,19 +95,39 @@
 
 // Color swatches
 .mds-swatch-gallery {
-    display: flex;
-    flex-wrap: wrap;
+    margin: 0 0 40px;
 
     .mds-swatch {
-        margin: 0 20px 2em;
-        min-width: 200px;
-        text-align: center;
+        margin: 0 0 1.5em;
+        min-height: 100px;
+        overflow: hidden;
+        padding-left: 120px;
+        position: relative;
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            margin: 0 0 .25em;
+        }
     }
 
     .mds-swatch-image {
-        height: 150px;
-        margin: 0 auto 1em;
-        width: 150px;
+        height: auto;
+        left: 0;
+        position: absolute;
+        width: 100px;
+    }
+
+    .mds-swatch-name {
+        @include open-sans;
+        @include text-body-level2;
+    }
+
+    @media #{$mq-tablet} {
+        columns: 2 auto;
+        column-gap: 30px;
     }
 }
 

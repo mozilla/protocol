@@ -6,39 +6,10 @@ labels:
   - inprogress
 ---
 
-<p>Some guidelines about color and how we use it. Meanwhile, have some swatches.</p>
+<p>Todo: Some guidelines about color and how we use it. Meanwhile, have some swatches.</p>
 
-<h2>Brand Colors</h2>
-<p>Color palette for Mozilla branding.</p>
-
-<h3>Primary</h3>
-{{#each (data "colors.brand-primary")}}
-  <ul class="mds-swatch-gallery">
-    {{#each this}}
-      <li class="mds-swatch">
-        {{> drizzle.swatch }}
-      </li>
-    {{/each}}
-  </ul>
-{{/each}}
-
-<h3>Secondary</h3>
-<p>Limited use colors to support the primary colors.</p>
-
-{{#each (data "colors.brand-secondary")}}
-  <ul class="mds-swatch-gallery">
-    {{#each this}}
-      <li class="mds-swatch">
-        {{> drizzle.swatch }}
-      </li>
-    {{/each}}
-  </ul>
-{{/each}}
-
-<h2>Interface Colors</h2>
-<p>Common palette for Mozilla websites.</p>
-
-{{#each (data "colors.interface")}}
+{{#each (data "colors")}}
+  <h3>{{ @key }}</h3>
   <ul class="mds-swatch-gallery">
     {{#each this}}
       <li class="mds-swatch">

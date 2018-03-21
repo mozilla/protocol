@@ -1,0 +1,90 @@
+{
+    "Primary brand colors": [
+        {
+            "color": "Black",
+            "hex": "#000",
+            "rgb": "rgb(0, 0, 0)"
+        },
+        {
+            "color": "White",
+            "hex": "#fff",
+            "rgb": "rgb(255, 255, 255)"
+        },
+        {
+            "color": "Neon Blue",
+            "hex": "#0ff",
+            "rgb": "rgb(0, 255, 255)",
+            "token": "$color-brand-neonblue"
+        },
+        {
+            "color": "Lemon Yellow",
+            "hex": "#fff44f",
+            "rgb": "rgb(255, 244, 79)",
+            "token": "$color-brand-lemonyellow"
+        },
+        {
+            "color": "Warm Red",
+            "hex": "#ff4f5e",
+            "rgb": "rgb(255, 79, 94)",
+            "token": "$color-brand-warmred"
+        },
+        {
+            "color": "Neon Green",
+            "hex": "#54ffbd",
+            "rgb": "rgb(84, 255, 189)",
+            "token": "$color-brand-neongreen"
+        },
+        {
+            "color": "Dark Purple",
+            "hex": "#6e008b",
+            "rgb": "rgb(110, 0, 139)",
+            "token": "$color-brand-darkpurple"
+        }
+    ],
+    "Secondary brand colors": [
+        {
+            "color": "Dark Green",
+            "hex": "#005e5e",
+            "rgb": "rgb(0, 94, 84)",
+            "token": "$color-brand-darkgreen"
+        },
+        {
+            "color": "Dark Blue",
+            "hex": "#00458b",
+            "rgb": "rgb(0, 69, 139)",
+            "token": "$color-brand-darkblue"
+        },
+        {
+            "color": "Dark Gray",
+            "hex": "#959595",
+            "rgb": "rgb(149, 149, 149)",
+            "token": "$color-brand-darkgray"
+        },
+        {
+            "color": "Light Gray",
+            "hex": "#e7e5e2",
+            "rgb": "rgb(231, 229, 226)",
+            "token": "$color-brand-lightgray"
+        }
+    ],
+    "Interface colors": [
+        {
+            "color": "Link blue",
+            "hex": "#00a7e0",
+            "rgb": "rgb(0, 167, 224)",
+            "token": "$color-link-blue"
+        },
+        {
+            "color": "Link blue, hover",
+            "hex": "#0081ad",
+            "rgb": "rgb(0, 129, 173)",
+            "token": "darken($color-link-blue, 10%)"
+        },
+        {
+            "color": "Off-black",
+            "hex": "#333333",
+            "rgb": "rgb(51, 51, 51)",
+            "token": "$color-offblack"
+        }
+    ]
+}
