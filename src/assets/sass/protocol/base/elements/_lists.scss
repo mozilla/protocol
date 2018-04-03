@@ -68,6 +68,8 @@ ol.prose {
     }
 }
 
+/* !important required for print stylesheet overrides */
+/* stylelint-disable declaration-no-important  */
 .mzp-u-unstyled {
     list-style: none !important;
     margin-left: 0 !important;

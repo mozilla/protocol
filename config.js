@@ -24,6 +24,10 @@ module.exports = {
         tasks: ['copy']
       },
       {
+        match: ['src/assets/sass/**/*.scss'],
+        tasks: ['css:lint']
+      },
+      {
         match: ['./src/assets/**/*.scss'],
         tasks: ['sass']
       },
