@@ -4,13 +4,15 @@
     <link rel="stylesheet" href="{{@root.baseurl}}/assets/css/site/site.css">
     <link rel="stylesheet" href="{{@root.baseurl}}/assets/css/site/prism.css">
   {{/content}}
+
   {{#content "body"}}
     {{> drizzle.nav}}
-    <main class="mds-main">
+
+    <main class="protosite-main">
     {{#block "header"}}
       {{!-- Header, labels --}}
-      <header class="mds-page-header">
-        <h1 class="mds-page-title">
+      <header class="protosite-page-head">
+        <h1 class="protosite-page-title">
         {{#if title}}
           {{ title }}
         {{else}}
@@ -19,9 +21,9 @@
         </h1>
 
         {{#if labels}}
-          <ul class="mds-page-labels">
+          <ul class="protosite-page-labels">
             {{#each labels as |label|}}
-              <li class="mds-label mds-label--{{label}}">
+              <li class="protosite-label protosite-label-{{label}}">
                 {{label}}
               </li>
             {{/each}}
@@ -30,9 +32,7 @@
       </header>
     {{/block}}
 
-    {{#block "main"}}
-
-    {{/block}}
+    {{#block "main"}}{{/block}}
     </main>
   {{/content}}
 

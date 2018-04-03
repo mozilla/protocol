@@ -21,7 +21,7 @@ styles:
     <li><a href="https://fonts.google.com/specimen/Zilla+Slab" rel="external">Use on Google Fonts</a></li>
 </ul>
 
-<figure id="specimen-zilla-slab" class="mds-specimen mds-specimen-font">
+<figure id="specimen-zilla-slab" class="protosite-specimen protosite-specimen-font">
 {{#with (data "specimens")}}
     {{this.alphabet}}
     {{this.characters}}
@@ -40,7 +40,7 @@ styles:
     <li><a href="https://fonts.google.com/specimen/Open+Sans">Use on Google Fonts</a></li>
 </ul>
 
-<figure id="specimen-open-sans" class="mds-specimen mds-specimen-font">
+<figure id="specimen-open-sans" class="protosite-specimen protosite-specimen-font">
 {{#with (data "specimens")}}
     {{this.alphabet}}
     {{this.characters}}
@@ -55,7 +55,7 @@ styles:
 
 <p>We limit the number of type styles to a set that works well across the website and fits our layout grid. This scale is based on a root size of 16 pixels and a 4 pixel baseline grid to determine line height.</p>
 
-<div id="specimen-type-scale" class="mds-specimen">
+<div id="specimen-type-scale" class="protosite-specimen">
   <h1 class="scale-sample scale-sample-huge">Display Huge</h1>
   <h1 class="scale-sample scale-sample-l1">Display Level One</h1>
   <h2 class="scale-sample scale-sample-l2">Display Level Two</h2>
@@ -75,16 +75,14 @@ styles:
 
 <p>There are also two sizes of small text: Small and Extra-Small. These are used sparingly for supporting text like footnotes or disclaimers, never for main body copy.</p>
 
-<p>[Todo: something about highlight style]</p>
-
 <p><a href="{{@root.baseurl}}/demos/type-scale.html">See a demo</a></p>
 
 <h2 id="code">Code</h2>
 
 <p>We use Sass mixins to declare these font sizes:</p>
 
-<div class="mds-pattern-embed">
-<pre class="mds-pattern-code language-scss"><code>@include text-display-huge;
+<div class="protosite-pattern-embed">
+<pre class="protosite-pattern-code language-scss"><code>@include text-display-huge;
 @include text-display-level1;
 @include text-display-level2;
 @include text-display-level3;
@@ -99,8 +97,8 @@ styles:
 
 <p>For example, here’s the display level one mixin:</p>
 
-<div class="mds-pattern-embed">
-<pre class="mds-pattern-code language-scss"><code>@mixin text-display-level1 {
+<div class="protosite-pattern-embed">
+<pre class="protosite-pattern-code language-scss"><code>@mixin text-display-level1 {
     @include font-size(36px);
     line-height: 1.1111;
 

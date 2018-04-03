@@ -1,6 +1,8 @@
-# Mozilla Design System
+# Protocol
 
 A modular design system for Mozilla websites.
+
+https://moz-web-design-system.netlify.com/
 
 ## Quick Start
 

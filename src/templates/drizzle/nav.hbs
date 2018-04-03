@@ -1,22 +1,22 @@
 {{!-- Nav item partial --}}
 {{#*inline "nav-item"}}
-  <a class="mds-nav-link" href="{{@root.baseurl}}/{{url}}">
+  <a class="protosite-nav-main-link" href="{{@root.baseurl}}/{{url}}">
     {{label}}
   </a>
 {{/inline}}
 
-<nav class="mds-nav" id="nav">
-  <header class="mds-nav-header">
+<nav class="protosite-nav-main" id="protosite-nav-main">
+  <header class="protosite-nav-main-head">
     <a href="https://www.mozilla.org">
-      <img class="mds-nav-mozlogo" src="{{@root.baseurl}}/static/img/mozilla-wordmark-white.svg" width="100" alt="Mozilla">
+      <img class="protosite-nav-main-mozlogo" src="{{@root.baseurl}}/static/img/mozilla-wordmark-white.svg" width="100" alt="Mozilla">
     </a>
 
-    <a class="nav-toggle" href="#nav">Menu</a>
+    <a class="protosite-js-nav-toggle" href="#nav">Menu</a>
   </header>
 
-  <div class="mds-nav-menu" id="nav-menu">
+  <div class="protosite-nav-main-menu" id="protosite-nav-main-menu">
     <ul>
-      <li class="mds-nav-item">
+      <li class="protosite-nav-main-item">
         <a href="{{@root.baseurl}}">Home</a>
       </li>
     </ul>
@@ -25,7 +25,7 @@
     <h4>Fundamentals</h4>
     <ul>
       {{#each (pages "fundamentals" sortby="order" ignore="index")}}
-        <li class="mds-nav-item">
+        <li class="protosite-nav-main-item">
           {{> nav-item label=data.title}}
         </li>
       {{/each}}
@@ -35,7 +35,7 @@
     <h4>Atoms</h4>
     <ul>
       {{#each (collections "atoms" sortby="order")}}
-        <li class="mds-nav-item">
+        <li class="protosite-nav-main-item">
           {{> nav-item label=name}}
         </li>
       {{/each}}
@@ -45,7 +45,7 @@
     <h4>Molecules</h4>
     <ul>
       {{#each (collections "molecules" sortby="order")}}
-        <li class="mds-nav-item">
+        <li class="protosite-nav-main-item">
           {{> nav-item label=name}}
         </li>
       {{/each}}
@@ -55,7 +55,7 @@
     <h4>Organisms</h4>
     <ul>
       {{#each (collections "organisms" sortby="order")}}
-        <li class="mds-nav-item">
+        <li class="protosite-nav-main-item">
           {{> nav-item label=name}}
         </li>
       {{/each}}
@@ -64,12 +64,12 @@
     {{!-- Other pages --}}
     <h4>Other Stuff</h4>
     <ul>
-      <li class="mds-nav-item">
+      <li class="protosite-nav-main-item">
         {{#with (page "docs/index")}}
           {{> nav-item label=data.title}}
         {{/with}}
       </li>
-      <li class="mds-nav-item">
+      <li class="protosite-nav-main-item">
         {{#with (page "demos/index")}}
           {{> nav-item label=data.title}}
         {{/with}}
