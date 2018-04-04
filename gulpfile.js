@@ -8,6 +8,12 @@ const tasks = require('@cloudfour/gulp-tasks');
 const env = require('gulp-util').env;
 const config = require('./config');
 const sass = require('gulp-sass');
+const gulpStylelint = require('gulp-stylelint');
+
+const lintPathsCSS = [
+    'src/assets/sass/**/*.scss',
+    'src/assets/sass/**/*.css'
+];
 
 // Append config
 Object.assign(config.drizzle, { helpers });
@@ -35,7 +41,19 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./dist/assets/css'));
 });
 
-// Register Sass preprocessor
+// Lint CSS
+gulp.task('css:lint', () => {
+    return gulp.src(lintPathsCSS)
+        .pipe(gulpStylelint({
+            failAfterError: false,
+            reporters: [{
+                formatter: 'string',
+                console: true
+            }]
+        }));
+});
+
+// Copy JavaScripts
 gulp.task('js', () => {
   return gulp.src('./src/assets/js/**/*.js')
     .pipe(gulp.dest('./dist/assets/js'));
@@ -46,6 +64,7 @@ gulp.task('frontend', [
   'drizzle',
   'copy',
   'sass',
+  'css:lint',
   'js'
 ]);
 

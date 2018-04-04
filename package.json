@@ -1,26 +1,14 @@
 {
-  "name": "drizzle",
+  "name": "protocol",
   "version": "0.0.1-alpha",
   "private": true,
-  "author": "Cloud Four",
-  "description": "A pattern library authoring environment",
-  "homepage": "https://github.com/cloudfour/drizzle",
+  "author": "Mozilla",
+  "description": "A design system for Mozilla websites",
+  "homepage": "https://github.com/mozilla/protocol",
   "license": "MIT",
-  "keywords": [
-    "pattern",
-    "styleguide",
-    "component",
-    "framework",
-    "boilerplate",
-    "html",
-    "ui",
-    "css",
-    "bem",
-    "typography"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cloudfour/drizzle.git"
+    "url": "https://github.com/mozilla/protocol.git"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -42,7 +30,8 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-util": "^3.0.7",
     "prismjs": "^1.4.1",
-    "gulp-sass": "3.1.0"
+    "gulp-sass": "3.1.0",
+    "gulp-stylelint": "^3.9.0"
   },
   "scripts": {
     "prestart": "npm install",
