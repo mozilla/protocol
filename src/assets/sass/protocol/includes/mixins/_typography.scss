@@ -46,12 +46,12 @@
     @include font-size(48px);
     line-height: 1.0833;
 
-    @media #{$mq-tablet} {
+    @media #{$media-md} {
         @include font-size(60px);
         line-height: 1.0666;
     }
 
-    @media #{$mq-desktop} {
+    @media #{$media-lg} {
         @include font-size(72px);
         line-height: 1;
     }
@@ -61,12 +61,12 @@
     @include font-size(36px);
     line-height: 1.1111;
 
-    @media #{$mq-tablet} {
+    @media #{$media-md} {
         @include font-size(48px);
         line-height: 1.0833;
     }
 
-    @media #{$mq-desktop} {
+    @media #{$media-lg} {
         @include font-size(60px);
         line-height: 1.0666;
     }
@@ -76,12 +76,12 @@
     @include font-size(24px);
     line-height: 1.1666;
 
-    @media #{$mq-tablet} {
+    @media #{$media-md} {
         @include font-size(36px);
         line-height: 1.1111;
     }
 
-    @media #{$mq-desktop} {
+    @media #{$media-lg} {
         @include font-size(48px);
         line-height: 1.0833;
     }
@@ -91,12 +91,12 @@
     @include font-size(18px);
     line-height: 1.3333;
 
-    @media #{$mq-tablet} {
+    @media #{$media-md} {
         @include font-size(24px);
         line-height: 1.1666;
     }
 
-    @media #{$mq-desktop} {
+    @media #{$media-lg} {
         @include font-size(36px);
         line-height: 1.1111;
     }
@@ -106,7 +106,7 @@
     @include font-size(18px);
     line-height: 1.3333;
 
-    @media #{$mq-desktop} {
+    @media #{$media-lg} {
         @include font-size(24px);
         line-height: 1.1666;
     }

@@ -7,78 +7,65 @@
 
 // We most frequently use lists for semantic structure and don't actually
 // want to display them as lists. It's simpler to reset lists globally
-// and only display them as lists in text when needed with the .prose class.
-ul, ol {
+// and only display them as lists in text when needed with the .mzp-u-list-styled class.
+ul,
+ol {
     list-style: none;
 }
 
-ul.prose {
+ul.mzp-u-list-styled {
+    @include bidi(((margin-left, $layout-sm, margin-right, 0),));
     list-style: disc;
-    margin-left: 30px;
 
     li {
         margin-bottom: .25em;
     }
 
     ul {
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         list-style: circle;
-        margin-left: 20px;
         margin-bottom: 0;
     }
 
     ol {
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         list-style: decimal;
-        margin-left: 20px;
         margin-bottom: 0;
     }
 }
 
-ol.prose {
+ol.mzp-u-list-styled {
+    @include bidi(((margin-left, $layout-sm, margin-right, 0),));
     list-style: decimal;
-    margin-left: 30px;
 
     li {
         margin-bottom: .25em;
     }
 
     ol {
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         list-style: lower-alpha;
-        margin-left: 20px;
         margin-bottom: 0;
     }
 
     ul {
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         list-style: disc;
-        margin-left: 20px;
         margin-bottom: 0;
     }
 }
 
-[dir='rtl'] {
-    ul.prose,
-    ol.prose {
-        margin-left: 0;
-        margin-right: 30px;
 
-        ul,
-        ol {
-            margin-left: 0;
-            margin-right: 20px;
-        }
-    }
-}
-
-/* !important required for print stylesheet overrides */
-/* stylelint-disable declaration-no-important  */
-.mzp-u-unstyled {
-    list-style: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+/* !important required to trump specificity and print stylesheet overrides */
+.mzp-u-list-unstyled {
+    list-style: none !important; /* stylelint-disable-line declaration-no-important */
+    margin-left: 0 !important; /* stylelint-disable-line declaration-no-important */
+    margin-right: 0 !important; /* stylelint-disable-line declaration-no-important */
 
     ul,
     ol {
-        list-style: none !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        list-style: none !important; /* stylelint-disable-line declaration-no-important */
+        margin-left: 0 !important; /* stylelint-disable-line declaration-no-important */
+        margin-right: 0 !important; /* stylelint-disable-line declaration-no-important */
     }
 }

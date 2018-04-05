@@ -1,0 +1,36 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+$spacing-base: $spacing-md;
+
+$padding-xs: $spacing-xs;
+$padding-sm: $spacing-sm;
+$padding-md: $spacing-md;
+$padding-lg: $spacing-lg;
+$padding-xl: $spacing-xl;
+$padding-xxl: $spacing-xxl;
+$padding-base: $spacing-base;
+
+$margin-xs: $spacing-xs;
+$margin-sm: $spacing-sm;
+$margin-md: $spacing-md;
+$margin-lg: $spacing-lg;
+$margin-xl: $spacing-xl;
+$margin-xxl: $spacing-xxl;
+$margin-base: $spacing-base;
+
+$layout-xxs: 16px;
+$layout-xs: 24px;
+$layout-sm: 32px;
+$layout-md: 48px;
+$layout-lg: 64px;
+$layout-xl: 96px;
+$layout-xxl: 160px;
+$layout-base: $layout-md;

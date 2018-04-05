@@ -41,6 +41,42 @@
       {{/each}}
     </ul>
 
+    {{!-- Molecule Patterns --}}
+    {{#if (collections "molecules")}}
+    <h4>Molecules</h4>
+    <ul>
+      {{#each (collections "molecules" sortby="order")}}
+        <li class="protosite-nav-main-item">
+          {{> nav-item label=name}}
+        </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+
+    {{!-- Organism Patterns --}}
+    {{#if (collections "organisms")}}
+    <h4>Organisms</h4>
+    <ul>
+      {{#each (collections "organisms" sortby="order")}}
+        <li class="protosite-nav-main-item">
+          {{> nav-item label=name}}
+        </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+
+    {{!-- Template Patterns --}}
+    {{#if (collections "templates")}}
+    <h4>Templates</h4>
+    <ul>
+      {{#each (collections "templates" sortby="order")}}
+        <li class="protosite-nav-main-item">
+          {{> nav-item label=name}}
+        </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+
     {{!-- Other pages --}}
     <h4>Other Stuff</h4>
     <ul>

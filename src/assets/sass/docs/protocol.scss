@@ -6,3 +6,9 @@ $font-path:  '/assets/protocol/protocol/fonts';
 $image-path: '/assets/protocol/protocol/img';
 
 @import '../protocol/protocol.scss';
+
+// Import all the templates and components.
+// We need the full monolith for the doc site; you wouldn't import everything here in practice.
+@import '../protocol/templates/main-with-sidebar';
+@import '../protocol/components/article';
+@import '../protocol/components/sidebar-menu';

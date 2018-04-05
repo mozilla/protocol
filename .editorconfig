@@ -34,6 +34,9 @@ indent_size = 4
 [*.html]
 indent_size = 2
 
+[*.hbs]
+indent_size = 2
+
 [*.svg]
 indent_size = 2
 

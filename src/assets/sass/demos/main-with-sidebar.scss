@@ -1,0 +1,14 @@
+// Protocol core
+@import '../protocol/includes/lib';
+@import '../protocol/protocol';
+
+// Protocol components
+@import '../protocol/templates/main-with-sidebar';
+
+
+.mzp-l-main,
+.mzp-l-sidebar {
+    min-height: 100px;
+    background: rgba(0, 0, 0, .1);
+    outline: 1px solid rgba(0, 0, 0, .2);
+}

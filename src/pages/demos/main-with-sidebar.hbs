@@ -1,0 +1,53 @@
+---
+title: Main column with sidebar
+notes: Demonstrating a few alternative layouts for a main section with sidebar.
+layout: blank
+labels:
+  - inprogress
+  - prototype
+styles:
+  - main-with-sidebar
+---
+
+<div class="mzp-l-content mzp-has-sidebar mzp-l-sidebar-left">
+  <main class="mzp-l-main">
+    <p>Main content right, sidebar left. The sidebar comes after the main section in the source order.</p>
+  </main>
+
+  <aside class="mzp-l-sidebar">
+    <p>Sidebar left</p>
+  </aside>
+</div>
+
+
+<div class="mzp-l-content mzp-has-sidebar mzp-l-sidebar-right">
+  <main class="mzp-l-main">
+    <p>Main content left, sidebar right. The sidebar comes after the main section in the source order.</p>
+  </main>
+
+  <aside class="mzp-l-sidebar">
+    <p>Sidebar right</p>
+  </aside>
+</div>
+
+
+<div class="mzp-l-content mzp-has-sidebar mzp-l-sidebar-left">
+  <aside class="mzp-l-sidebar">
+    <p>Sidebar left</p>
+  </aside>
+
+  <main class="mzp-l-main">
+    <p>Main content right, sidebar left. The sidebar comes <em>before</em> the main section in the source order. Use this order when the sidebar contains a menu so the menu can appear at the top of the page when it's collapsed in small viewports.</p>
+  </main>
+</div>
+
+
+<div class="mzp-l-content mzp-has-sidebar mzp-l-sidebar-right">
+  <aside class="mzp-l-sidebar">
+    <p>Sidebar right</p>
+  </aside>
+
+  <main class="mzp-l-main">
+    <p>Main content left, sidebar right. The sidebar comes <em>before</em> the main section in the source order. Use this order when the sidebar contains a menu so the menu can appear at the top of the page when it's collapsed in small viewports.</p>
+  </main>
+</div>

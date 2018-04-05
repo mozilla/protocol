@@ -11,7 +11,7 @@ After that, we follow a [SMACSS](https://smacss.com/book/categorizing)-based
 naming convention with a set of prefixes to put rules into a few different
 categories:
 
-<ul class="prose">
+<ul class="mzp-u-list-styled">
     <li>`c-` for component names. Expect a lot of this one, e.g. `.mzp-c-card`, `.mzp-c-btn`.</li>
     <li>`t-` for theme styles, when a component has one or more alternative styles, e.g. `.mzp-t-dark`, `.mzp-t-firefox`.</li>
     <li>`l-` for layout-related styles, e.g. `.mzp-l-grid-half`, `.mzp-l-grid-third`. These are presentational so should be rare. Prefer mixins.</li>

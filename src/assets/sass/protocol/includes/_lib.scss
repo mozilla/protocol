@@ -2,8 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import
-    'variables',
-    './node_modules/@mozilla-protocol/colors/protocol-colors.scss',
-    'functions',
-    'mixins';
+// Import all the things!
+@import './node_modules/@mozilla-protocol/colors/protocol-colors.scss';
+@import 'tokens/spacing';
+@import 'tokens/sizing';
+@import 'tokens/media-queries';
+@import 'variables';
+@import 'functions';
+@import 'mixins';
