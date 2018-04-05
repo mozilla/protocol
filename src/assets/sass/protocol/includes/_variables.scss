@@ -9,36 +9,7 @@
 $font-open-sans: 'Open Sans', X-LocaleSpecific, sans-serif;
 $font-zilla-slab: 'Zilla Slab', 'Open Sans', X-LocaleSpecific, sans-serif;
 
-
 $base-font-stack: $font-open-sans;
 $base-font-size: 100%;
 $base-line-height: 1.5;
 
-// Content widths
-$width-phone:           300px;
-$width-phone-wide:      460px;
-$width-tablet:          740px;
-$width-desktop:         980px;
-$width-desktop-wide:    1380px;
-
-
-// for fluid width hub pages bug 1363708.
-$width-max-content: 1420px; // 85px left padding + 1250px content + 85px right padding
-
-
-// Media queries
-$mq-phone:          'screen and (max-width: 480px)';
-$mq-phone-wide:     'screen and (min-width: 480px)';
-$mq-tablet:         'screen and (min-width: 760px)';
-$mq-desktop:        'screen and (min-width: 1000px)';
-$mq-desktop-wide:   'screen and (min-width: 1400px)';
-
-$mq-high-res:       'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)';
-
-$mq-short:          '(max-height: 600px)';
-$mq-tall:           '(min-height: 600px)';
-
-
-// Grid columns
-$column-width:  8.333%; // 100% / 12 columns
-$gutter-width:  20px;

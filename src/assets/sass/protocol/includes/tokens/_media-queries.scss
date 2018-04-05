@@ -1,0 +1,16 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+// Media Queries
+// See tokens/sizes
+$media-xs: 'screen and' + '(max-width:' + $screen-sm + ')'; // less  than 480px, Phone
+$media-sm: 'screen and' + '(min-width:' + $screen-sm + ')'; // 480px, Phone landscape
+$media-md: 'screen and' + '(min-width:' + $screen-md + ')'; // 760px, Tablet
+$media-lg: 'screen and' + '(min-width:' + $screen-lg + ')'; // 1000px, Desktop
+$media-xl: 'screen and' + '(min-width:' + $screen-xl + ')'; // 1400px, Wide desktop
+
+$media-short: '(max-height: 600px)';
+$media-tall: '(min-height: 600px)';
+
+$media-high-res: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)';

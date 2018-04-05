@@ -1,0 +1,160 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+// Sidebar menu
+
+.mzp-c-sidemenu {
+    @include text-small;
+    background-color: $color-gray-lighter;
+    padding: $spacing-sm $spacing-lg;
+    margin: 0 -#{$spacing-lg} $layout-sm;
+}
+
+.mzp-c-sidemenu-summary {
+    display: none;
+
+    ul {
+        margin: 0;
+    }
+
+    li {
+        @include bidi((
+            (margin-right, $spacing-xs, 0),
+            (margin-left, 0, $spacing-xs),
+        ));
+        color: $color-gray-dark;
+        display: inline;
+
+        &:after {
+            @include bidi((
+                (margin-left, $spacing-xs, 0),
+                (margin-right, 0, $spacing-xs),
+                (transform, none, rotate(180deg)),
+            ));
+            content: '\25B8'; // right pointing triangle
+        }
+
+        &:last-child:after {
+            content: '';
+            margin: 0;
+        }
+
+        &.mzp-is-current {
+            color: $color-primary;
+        }
+    }
+}
+
+.mzp-c-sidemenu-main {
+    ul {
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: .25em;
+    }
+
+    a {
+        border-radius: 3px;
+        display: block;
+        padding: .35em $spacing-lg;
+        text-decoration: none;
+        transition: background-color 100ms ease-in;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: rgba(0, 0, 0, .05);
+            text-decoration: underline;
+        }
+    }
+
+    .mzp-is-current a {
+        font-weight: bold;
+        background-color: $color-gray-light;
+    }
+}
+
+.mzp-c-sidemenu-label {
+    @include open-sans;
+    @include text-small;
+}
+
+.mzp-c-sidemenu-title {
+    @include open-sans;
+    @include text-body-level2;
+    line-height: 1.5;
+    margin-bottom: .25em;
+
+    a {
+        padding: .35em $spacing-md;
+    }
+}
+
+.js {
+    .mzp-c-sidemenu-summary {
+        display: block;
+        padding: $spacing-sm $spacing-lg;
+        margin: -#{$spacing-sm} -#{$spacing-lg};
+    }
+
+    .mzp-c-sidemenu-main {
+        display: none;
+    }
+
+    .mzp-c-sidemenu-label {
+        @include bidi((
+            (padding-right, $spacing-lg, 0),
+            (padding-left, 0, $spacing-lg),
+        ));
+        position: relative;
+
+        &:after {
+            content: '\25B8'; // right pointing triangle
+            transform: rotate(90deg);
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.5em;
+            color: $color-gray-dark;
+        }
+    }
+
+    .mzp-is-active {
+        .mzp-c-sidemenu-label:after {
+            transform: rotate(-90deg);
+        }
+
+        .mzp-c-sidemenu-main {
+            @include text-body-level2;
+            display: block;
+            margin: $spacing-md -#{$spacing-md} 0;
+        }
+    }
+}
+
+@media #{$media-md} {
+    .js {
+        .mzp-c-sidemenu-summary {
+            display: none;
+        }
+
+        .mzp-c-sidemenu-main {
+            display: block;
+        }
+
+        .mzp-is-active .mzp-c-sidemenu-main {
+            margin: 0;
+        }
+
+        .mzp-c-sidemenu {
+            @include text-body-level2;
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}

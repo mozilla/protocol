@@ -9,7 +9,7 @@ body {
 
 hr {
     margin: 40px auto;
-    max-width: $width-max-content - (160px);
+    max-width: $width-content-max - (160px);
 }
 
 .scale-sample-huge { @include text-display-huge; }
@@ -44,11 +44,11 @@ hr {
     .scale-sample-huge:after {
         content: '(48px/52px)';
 
-        @media #{$mq-tablet} {
+        @media #{$media-md} {
             content: '(60px/64px)';
         }
 
-        @media #{$mq-desktop} {
+        @media #{$media-lg} {
             content: '(72px/72px)';
         }
     }
@@ -56,11 +56,11 @@ hr {
     .scale-sample-l1:after {
         content: '(36px/40px)';
 
-        @media #{$mq-tablet} {
+        @media #{$media-md} {
             content: '(48px/52px)';
         }
 
-        @media #{$mq-desktop} {
+        @media #{$media-lg} {
             content: '(60px/64px)';
         }
     }
@@ -68,11 +68,11 @@ hr {
     .scale-sample-l2:after {
         content: '(24px/28px)';
 
-        @media #{$mq-tablet} {
+        @media #{$media-md} {
             content: '(36px/40px)';
         }
 
-        @media #{$mq-desktop} {
+        @media #{$media-lg} {
             content: '(48px/52px)';
         }
     }
@@ -80,11 +80,11 @@ hr {
     .scale-sample-l3:after {
         content: '(18px/24px)';
 
-        @media #{$mq-tablet} {
+        @media #{$media-md} {
             content: '(24px/28px)';
         }
 
-        @media #{$mq-desktop} {
+        @media #{$media-lg} {
             content: '(36px/40px)';
         }
     }
@@ -92,7 +92,7 @@ hr {
     .scale-sample-l4:after {
         content: '(18px/24px)';
 
-        @media #{$mq-desktop} {
+        @media #{$media-lg} {
             content: '(24px/28px)';
         }
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="{{htmlclass}}">
+<html lang="en" dir="ltr" class="no-js {{htmlclass}}">
   <head>
     {{#block "head"}}
       <meta charset="utf-8">
@@ -15,6 +15,7 @@
       {{#each styles}}
         <link rel="stylesheet" href="{{@root.baseurl}}/assets/docs/css/{{this}}.css">
       {{/each}}
+      <script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-base.js"></script>
     {{/block}}
   </head>
   <body class="{{bodyclass}}">
