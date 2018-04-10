@@ -1,0 +1,29 @@
+{
+  "name": "protocol",
+  "version": "1.0.0",
+  "description": "A design system for Mozilla's websites.",
+  "homepage": "https://github.com/ngpvan/progress",
+  "license": "MPL-2.0",
+  "authors": [
+    "Craig Cook <ccook@mozilla.com>",
+    "Michael McCombie <mmccombie@mozilla.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "dist",
+    "docs",
+    "gulp",
+    "node_modules",
+    "config.js",
+    "gulpfile.js",
+    "netlify.toml",
+    "package-lock.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.7",
+    "normalize.css": "~3.0.3",
+    "neat": "~1.7.4"
+  }
+}

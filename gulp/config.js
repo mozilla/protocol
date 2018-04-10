@@ -1,11 +1,66 @@
-'use strict';
+var dest = "./dist/assets/";
+var src = "./src/assets";
+var version = "/1.0.0";
 
 module.exports = {
+  concatJS: {
+    documentation: {
+      src: [
+        src + '/js/site/global.js',
+        src + '/js/site/prism.js'
+      ],
+      dest: dest + '/js'
+    },
+    protocol: {
+      src: [
+        src + '/js/protocol/protocol-accordion.js',
+        src + '/js/protocol/protocol-modal.js'
+      ],
+      dest: dest + '/js'
+    }
+  },
+  lintCss: {
+    src: [
+      dest + "/sass/protocol/protocol.css",
+      dest + "/sass/site/site.css"
+    ]
+  },
+  cleanCss: {
+    src: [
+      dest + '/css/protocol.css',
+      dest + '/css/site.css',
+      dest + '/css/prism.css'
+    ],
+    dest: dest + '/css',
+    rename: { suffix: '.min' }
+  },
+  replace: {
+    src: src + '/sass/protocol/protocol.scss',
+    dest: dest + '/css',
+    base: "../../../../",
+    replacement: "../../../bower_components/"
+  },
+  sass: {
+    src: [
+      src + '/sass/protocol/protocol.scss',
+      src + '/sass/site/site.scss',
+      src + '/sass/site/prism.scss'
+    ],
+    dest: dest + '/css/'
+  },
+  uglify: {
+    src: src + '/protocol/protocol.js',
+    dest: src + '/scripts',
+    settings: {
+      errLogToConsole: true,
+      sourceComments: true
+    }
+  },
+
   copy: {
     src: './src/static/**/*',
     dest: './dist/static'
   },
-
   serve: {
     plugins: {
       browserSync: {
@@ -16,24 +71,11 @@ module.exports = {
       }
     }
   },
-
   watch: {
     watchers: [
       {
         match: ['./src/static/**/*'],
         tasks: ['copy']
-      },
-      {
-        match: ['src/assets/sass/**/*.scss'],
-        tasks: ['css:lint']
-      },
-      {
-        match: ['./src/assets/**/*.scss'],
-        tasks: ['sass']
-      },
-      {
-        match: ['./src/assets/**/*.js'],
-        tasks: ['js']
       },
       {
         match: [
@@ -46,7 +88,6 @@ module.exports = {
       }
     ]
   },
-
   drizzle: {
     beautifier: {
       /* eslint-disable camelcase */
@@ -81,5 +122,6 @@ module.exports = {
       tips: 'markdown',
       nonos: 'markdown'
     }
-  }
-};
+  },
+  version: version
+}

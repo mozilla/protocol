@@ -6,11 +6,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="shortcut icon" href="{{@root.baseurl}}/static/favicon.ico">
       {{#if title}}
-        <title>{{title}} - {{data "project.title"}}</title>
+      <title>{{title}} - {{data "project.title"}}</title>
       {{else if name}}
-        <title>{{name}} - {{data "project.title"}}</title>
+      <title>{{name}} - {{data "project.title"}}</title>
       {{else}}
-        <title>{{data "project.title"}}</title>
+      <title>{{data "project.title"}}</title>
       {{/if}}
       {{#each styles}}
         <link rel="stylesheet" href="{{@root.baseurl}}/assets/css/demos/{{this}}.css">
