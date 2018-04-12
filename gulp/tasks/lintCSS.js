@@ -5,7 +5,7 @@ var postcss = require('gulp-postcss');
 var reporter = require('postcss-reporter');
 var stylelint = require('stylelint');
 
-gulp.task('lintCss', function() {
+gulp.task('css:lint', function() {
 
   var styleLintConfig =
   {

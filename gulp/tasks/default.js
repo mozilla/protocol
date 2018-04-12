@@ -38,4 +38,4 @@ gulp.task('default', ['frontend'], done => {
   done();
 });
 
-gulp.task('lint', ['lintCss']);
+gulp.task('lint', ['css:lint']);
