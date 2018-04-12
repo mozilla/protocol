@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var config = require('../config').lintCss;
-var handleErrors = require('../utils/handleErrors');
-var postcss = require('gulp-postcss');
-var reporter = require('postcss-reporter');
-var stylelint = require('stylelint');
+const gulp = require('gulp');
+const config = require('../config').lintCss;
+const handleErrors = require('../utils/handleErrors');
+const postcss = require('gulp-postcss');
+const reporter = require('postcss-reporter');
+const stylelint = require('stylelint');
 
 gulp.task('css:lint', function() {
 

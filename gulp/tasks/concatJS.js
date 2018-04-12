@@ -1,8 +1,8 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var plumber = require('gulp-plumber');
-var handleErrors = require('../utils/handleErrors');
-var config = require('../config').concatJS;
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const plumber = require('gulp-plumber');
+const handleErrors = require('../utils/handleErrors');
+const config = require('../config').concatJS;
 
 gulp.task('concatJS', ['cleanCss'], function() {
   // loop over the groups of files within the concatJs config object

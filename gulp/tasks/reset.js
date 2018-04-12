@@ -1,8 +1,8 @@
-var gulp = require('gulp');
-var config = require('../config').replace;
-var handleErrors = require('../utils/handleErrors');
-var plumber = require('gulp-plumber');
-var replace = require('gulp-replace');
+const gulp = require('gulp');
+const config = require('../config').replace;
+const handleErrors = require('../utils/handleErrors');
+const plumber = require('gulp-plumber');
+const replace = require('gulp-replace');
 
 gulp.task('reset', ['sass'], function() {
   return gulp.src(config.src)

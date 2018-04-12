@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var config = require('../config').sass;
-var handleErrors = require('../utils/handleErrors');
-var autoprefixer = require('gulp-autoprefixer');
-var plumber = require('gulp-plumber');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const config = require('../config').sass;
+const handleErrors = require('../utils/handleErrors');
+const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
 
 gulp.task('sass', ['replace'],function () {
   return gulp.src(config.src)
