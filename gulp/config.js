@@ -6,8 +6,7 @@ module.exports = {
   concatJS: {
     documentation: {
       src: [
-        src + '/js/site/global.js',
-        src + '/js/site/prism.js'
+        src + '/js/site/*.js'
       ],
       dest: dest + '/js'
     },
@@ -20,15 +19,12 @@ module.exports = {
   },
   lintCss: {
     src: [
-      dest + "/sass/protocol/protocol.css",
-      dest + "/sass/site/site.css"
+      src + '/sass/**/*.scss'
     ]
   },
   cleanCss: {
     src: [
-      dest + '/css/protocol.css',
-      dest + '/css/site.css',
-      dest + '/css/prism.css'
+      dest + '/css/**/*.css'
     ],
     dest: dest + '/css',
     rename: { suffix: '.min' }
@@ -43,7 +39,8 @@ module.exports = {
     src: [
       src + '/sass/protocol/protocol.scss',
       src + '/sass/site/site.scss',
-      src + '/sass/site/prism.scss'
+      src + '/sass/site/prism.scss',
+      src + '/sass/demos/type-scale.scss'
     ],
     dest: dest + '/css/'
   },

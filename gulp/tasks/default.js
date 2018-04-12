@@ -14,6 +14,7 @@ const env = require('gulp-util').env;
 
 // Register frontend composite task
 gulp.task('frontend', [
+  'copy',
   'drizzle',
   'replace',
   'sass',
