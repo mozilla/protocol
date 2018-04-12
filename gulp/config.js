@@ -77,6 +77,14 @@ module.exports = {
         tasks: ['copy']
       },
       {
+        match: ['./src/assets/**/*.scss'],
+        tasks: ['css:lint']
+      },
+      {
+        match: ['./src/assets/**/*.scss'],
+        tasks: ['sass']
+      },
+      {
         match: [
           './src/**/*.hbs',
           './src/data/**/*',
