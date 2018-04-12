@@ -1,6 +1,7 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
 const tasks = require('@cloudfour/gulp-tasks');
-var config = require('../config');
+const config = require('../config');
+const env = require('gulp-util').env;
 
 // Register core tasks
 [
