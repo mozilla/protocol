@@ -13,8 +13,7 @@ module.exports = {
     },
     protocol: {
       src: [
-        src + '/js/protocol/protocol-accordion.js',
-        src + '/js/protocol/protocol-modal.js'
+        src + '/js/protocol/*.js'
       ],
       dest: dest + '/js'
     }
