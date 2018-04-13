@@ -1,11 +1,62 @@
-'use strict';
+var dest = "./dist/assets/";
+var src = "./src/assets";
+var version = "/1.0.0";
 
 module.exports = {
+  concatJS: {
+    documentation: {
+      src: [
+        src + '/js/site/*.js'
+      ],
+      dest: dest + '/js'
+    },
+    protocol: {
+      src: [
+        src + '/js/protocol/*.js'
+      ],
+      dest: dest + '/js'
+    }
+  },
+  lintCss: {
+    src: [
+      src + '/sass/**/*.scss'
+    ]
+  },
+  cleanCss: {
+    src: [
+      dest + '/css/**/*.css'
+    ],
+    dest: dest + '/css',
+    rename: { suffix: '.min' }
+  },
+  replace: {
+    src: src + '/sass/protocol/protocol.scss',
+    dest: dest + '/css',
+    base: "../../../../",
+    replacement: "../../../bower_components/"
+  },
+  sass: {
+    src: [
+      src + '/sass/protocol/protocol.scss',
+      src + '/sass/site/site.scss',
+      src + '/sass/site/prism.scss',
+      src + '/sass/demos/type-scale.scss'
+    ],
+    dest: dest + '/css/'
+  },
+  uglify: {
+    src: src + '/protocol/protocol.js',
+    dest: src + '/scripts',
+    settings: {
+      errLogToConsole: true,
+      sourceComments: true
+    }
+  },
+
   copy: {
     src: './src/static/**/*',
     dest: './dist/static'
   },
-
   serve: {
     plugins: {
       browserSync: {
@@ -16,7 +67,6 @@ module.exports = {
       }
     }
   },
-
   watch: {
     watchers: [
       {
@@ -24,16 +74,12 @@ module.exports = {
         tasks: ['copy']
       },
       {
-        match: ['src/assets/sass/**/*.scss'],
+        match: ['./src/assets/**/*.scss'],
         tasks: ['css:lint']
       },
       {
         match: ['./src/assets/**/*.scss'],
         tasks: ['sass']
-      },
-      {
-        match: ['./src/assets/**/*.js'],
-        tasks: ['js']
       },
       {
         match: [
@@ -46,7 +92,6 @@ module.exports = {
       }
     ]
   },
-
   drizzle: {
     beautifier: {
       /* eslint-disable camelcase */
@@ -81,5 +126,6 @@ module.exports = {
       tips: 'markdown',
       nonos: 'markdown'
     }
-  }
-};
+  },
+  version: version
+}
