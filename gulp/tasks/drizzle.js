@@ -8,6 +8,5 @@ Object.assign(config.drizzle, { helpers });
 
 // Register Drizzle builder task
 gulp.task('drizzle', () => {
-  const result = drizzle(config.drizzle);
-  return result;
+    return drizzle(config.drizzle);
 });

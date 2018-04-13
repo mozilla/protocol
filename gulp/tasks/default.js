@@ -5,38 +5,40 @@ const env = require('gulp-util').env;
 
 // Register core tasks
 [
-  'clean',
-  'copy',
-  'js',
-  'serve',
-  'watch'
+    'clean',
+    'copy',
+    'js',
+    'serve',
+    'watch'
 ].forEach(name => tasks[name](gulp, config[name]));
 
 // Register frontend composite task
 gulp.task('frontend', [
-  'copy',
-  'drizzle',
-  'replace',
-  'sass',
-  'reset',
-  'cleanCss',
-  'concatJS',
-  'uglify'
+    'js:lint',
+    'css:lint',
+    'copy',
+    'drizzle',
+    'replace',
+    'sass:compile',
+    'reset',
+    'css:clean',
+    'js:concat',
+    'js:uglify'
 ]);
 
 // Register build task (for continuous deployment via Netlify)
 gulp.task('build', ['clean'], done => {
-  gulp.start('frontend');
-  done();
+    gulp.start('frontend');
+    done();
 });
 
 // Register default task
 gulp.task('default', ['frontend'], done => {
-  gulp.start('serve');
-  if (env.dev) {
-    gulp.start('watch');
-  }
-  done();
-});
+    gulp.start('serve');
 
-gulp.task('lint', ['css:lint']);
+    if (env.dev) {
+        gulp.start('watch');
+    }
+
+    done();
+});

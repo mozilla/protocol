@@ -2,3 +2,4 @@ node_modules
 dist
 .netlify
 bower_components/
+.DS_Store

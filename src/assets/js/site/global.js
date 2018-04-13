@@ -10,7 +10,7 @@
     var navToggle = document.querySelector('.protosite-nav-main-head .protosite-js-nav-toggle');
 
     navToggle.addEventListener('click', event => {
-      event.preventDefault();
-      nav.classList.toggle('mzp-is-active');
+        event.preventDefault();
+        nav.classList.toggle('mzp-is-active');
     });
 })();

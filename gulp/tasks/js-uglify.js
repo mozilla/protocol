@@ -4,9 +4,9 @@ const plumber = require('gulp-plumber');
 const handleErrors = require('../utils/handleErrors');
 const config = require('../config').uglify;
 
-gulp.task('uglify', ['concatJS'],function() {
-  return gulp.src(config.src)
-    .pipe(plumber({ errorHandler: handleErrors }))
-    .pipe(uglify())
-    .pipe(gulp.dest(config.dest));
+gulp.task('js:uglify', ['js:concat'], () => {
+    return gulp.src(config.src)
+        .pipe(plumber({ errorHandler: handleErrors }))
+        .pipe(uglify())
+        .pipe(gulp.dest(config.dest));
 });
