@@ -2,7 +2,7 @@
 
 A modular design system for Mozilla websites.
 
-https://moz-web-design-system.netlify.com/
+https://mozilla-protocol.netlify.com/
 
 ## Quick Start
 
