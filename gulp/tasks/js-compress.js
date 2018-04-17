@@ -1,19 +1,21 @@
 const gulp = require('gulp');
-const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 const plumber = require('gulp-plumber');
+const rename = require('gulp-rename');
 const handleErrors = require('../utils/handleErrors');
-const config = require('../config').concatJS;
+const config = require('../config').compressJS;
 const merge = require('merge-stream');
 
-// Concatenate main Protocol & docs JS files.
-gulp.task('js:concat', () => {
+// Create minified versions of all JS assets.
+gulp.task('js:compress', () => {
     let tasks = [];
 
-    Object.keys(config).forEach((key) => {
-        let val = config[key];
+    Object.keys(config.tasks).forEach((key) => {
+        let val = config.tasks[key];
         tasks.push(gulp.src(val.src)
             .pipe(plumber({ errorHandler: handleErrors }))
-            .pipe(concat(key + '.js'))
+            .pipe(uglify())
+            .pipe(rename(config.rename))
             .pipe(gulp.dest(val.dest)));
     });
 

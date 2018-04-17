@@ -1,60 +1,122 @@
-const dest = './dist/assets/';
+const dest = './dist/assets';
 const src = './src/assets';
-const version = '/1.0.0';
+const version = require('../package.json').version;
 
 module.exports = {
-    concatJS: {
-        documentation: {
-            src: [
-                src + '/js/site/**/*.js'
-            ],
-            dest: dest + '/js'
-        },
-        protocol: {
-            src: [
-                src + '/js/protocol/*.js'
-            ],
-            dest: dest + '/js'
-        }
-    },
     lintCss: {
-        src: src + '/sass/**/*.scss'
+        src: `${src}/sass/**/*.scss`
     },
-    cleanCss: {
-        src: [
-            src + '/css/**/*.css'
-        ],
-        dest: dest + '/css',
+    lintJS: {
+        src: ['**/*.js', '!dist/**', '!src/assets/js/docs/vendor/**', '!node_modules/**']
+    },
+    compressCss: {
+        tasks: {
+            protocol: {
+                src: [
+                    `${dest}/protocol/protocol/css/*.css`,
+                    `!${dest}/protocol/protocol/css/*.min.css`
+                ],
+                dest: `${dest}/protocol/protocol/css/`,
+            },
+            docs: {
+                src: [
+                    `${dest}/docs/css/*.css`,
+                    `!${dest}/docs/css/*.min.css`
+                ],
+                dest: `${dest}/docs/css/`,
+            }
+        },
         rename: {
             suffix: '.min'
         }
     },
-    replace: {
-        src: src + '/sass/protocol/protocol.scss',
-        dest: dest + '/css',
-        base: '../../../../',
-        replacement: '../../../bower_components/'
-    },
-    sass: {
-        src: [
-            src + '/sass/protocol/protocol.scss',
-            src + '/sass/site/site.scss',
-            src + '/sass/site/prism.scss',
-            src + '/sass/demos/type-scale.scss'
-        ],
-        dest: dest + '/css/'
-    },
-    uglify: {
-        src: src + '/protocol/protocol.js',
-        dest: src + '/scripts',
+    compressJS: {
+        tasks: {
+            protocol: {
+                src: [
+                    `${dest}/protocol/protocol/js/**/*.js`,
+                    `!${dest}/protocol/protocol/js/*.min.js`
+                ],
+                dest: `${dest}/protocol/protocol/js/`,
+            },
+            docs: {
+                src: [
+                    `${dest}/docs/js/**/*.js`,
+                    `${dest}/docs/js/*.min.js`,
+                ],
+                dest: `${dest}/docs/js/`,
+            }
+        },
+        rename: {
+            suffix: '.min'
+        },
         settings: {
             errLogToConsole: true,
             sourceComments: true
         }
     },
-    copy: {
-        src: './src/static/**/*',
-        dest: './dist/static'
+    concatJS: {
+        protocol: {
+            src: [
+                `${src}/js/protocol/*.js`
+            ],
+            dest: `${dest}/protocol/protocol/js/`
+        },
+        docs: {
+            src: [
+                `${src}/js/docs/**/*.js`
+            ],
+            dest: `${dest}/docs/js/`
+        },
+    },
+    sassCompile: {
+        protocol: {
+            src: `${src}/sass/protocol/protocol.scss`,
+            dest: `${dest}/protocol/protocol/css/`
+        },
+        docs: {
+            src: [
+                `${src}/sass/docs/**/*.scss`,
+                `${src}/sass/demos/**/*.scss`
+            ],
+            dest: `${dest}/docs/css/`
+        }
+    },
+    sassCopy: {
+        protocol: {
+            src: `${src}/sass/protocol/**/*.scss`,
+            dest: `${dest}/protocol/protocol/css/`
+        },
+        docs: {
+            src: [
+                `${src}/sass/docs/**/*.scss`,
+                `${src}/sass/demos/**/*.scss`
+            ],
+            dest: `${dest}/docs/css/`
+        }
+    },
+    jsCopy: {
+        protocol: {
+            src: `${src}/js/protocol/**/*.js`,
+            dest: `${dest}/protocol/protocol/js/`
+        },
+        docs: {
+            src: [
+                `${src}/js/docs/**/*.js`,
+                `${src}/js/demos/**/*.js`
+            ],
+            dest: `${dest}/docs/js/`
+        }
+    },
+    staticCopy: {
+        protocol: {
+            src: `${src}/package/*`,
+            dest: `${dest}/protocol`
+        },
+        docs: {
+            src: './src/static/**/*',
+            dest: './dist/static'
+        }
     },
     serve: {
         plugins: {
@@ -71,16 +133,19 @@ module.exports = {
     watch: {
         watchers: [
             {
-                match: ['./src/static/**/*'],
-                tasks: ['copy']
+                match: [
+                    './src/static/**/*',
+                    `${src}/package/*`
+                ],
+                tasks: ['static:copy']
             },
             {
-                match: ['./src/assets/**/*.scss'],
-                tasks: ['css:lint']
+                match: `${src}/js/**/*.js`,
+                tasks: ['js:lint', 'js:concat']
             },
             {
-                match: ['./src/assets/**/*.scss'],
-                tasks: ['sass:compile']
+                match: `${src}/sass/**/*.scss`,
+                tasks: ['css:lint', 'sass:compile']
             },
             {
                 match: [

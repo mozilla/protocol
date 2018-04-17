@@ -1,39 +1,31 @@
 const gulp = require('gulp');
+const runSequence = require('run-sequence');
 const tasks = require('@cloudfour/gulp-tasks');
 const config = require('../config');
 const env = require('gulp-util').env;
 
 // Register core tasks
-[
-    'clean',
-    'copy',
-    'js',
-    'serve',
-    'watch'
-].forEach(name => tasks[name](gulp, config[name]));
+const core = ['clean', 'js', 'serve', 'watch'];
+core.forEach(name => tasks[name](gulp, config[name]));
 
 // Register frontend composite task
-gulp.task('frontend', [
-    'js:lint',
-    'css:lint',
-    'copy',
-    'drizzle',
-    'replace',
-    'sass:compile',
-    'reset',
-    'css:clean',
-    'js:concat',
-    'js:uglify'
-]);
+gulp.task('frontend', done => {
+    runSequence(
+        ['css:lint', 'js:lint'],
+        ['static:copy', 'drizzle'],
+        ['sass:compile', 'sass:copy', 'js:copy', 'js:concat'],
+        ['css:compress', 'js:compress'],
+        done
+    );
+});
 
 // Register build task (for continuous deployment via Netlify)
-gulp.task('build', ['clean'], done => {
-    gulp.start('frontend');
-    done();
+gulp.task('build', done => {
+    runSequence('clean', 'frontend', done);
 });
 
 // Register default task
-gulp.task('default', ['frontend'], done => {
+gulp.task('default', ['build'], done => {
     gulp.start('serve');
 
     if (env.dev) {
