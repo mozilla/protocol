@@ -1,9 +1,5 @@
 # 0.1.0
 
-### Bug Fixes
-
-* **opacity:** Opacity wasn't being exported to the SCSS file
-
 ### Features
 
 * **gulp:** Refactored gulp to process assets for publishing to NPM.
