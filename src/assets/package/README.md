@@ -6,7 +6,7 @@ A modular design system for Mozilla websites.
 
 Install package with NPM and add it to your dependencies:
 
-`npm install --save mozilla-protocol`
+`npm install --save @mozilla-protocol/core`
 
 ## Information
 

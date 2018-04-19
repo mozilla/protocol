@@ -1,5 +1,5 @@
 {
-  "name": "protocol",
+  "name": "@mozilla-protocol/core",
   "version": "0.1.0",
   "description": "A design system for Mozilla's websites.",
   "repository": {
