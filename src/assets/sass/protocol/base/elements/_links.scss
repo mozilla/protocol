@@ -4,22 +4,23 @@
 
 @import '../../includes/lib';
 
-
-a {
+:link {
     color: $color-link;
     text-decoration: underline;
 
-    &:hover,
-    &:focus,
-    &:active,
-    &:visited:hover,
-    &:visited:focus,
-    &:visited:active {
-        color: darken($color-link, 10%);
-        text-decoration: underline;
+    &:hover {
+        color: $color-link-hover;
     }
 
-    &:visited {
-        color: lighten(desaturate($color-link, 50%), 20%);
+    &:active {
+        background-color: rgba(0, 0, 0, .05);
+    }
+}
+
+:visited {
+    color: $color-link-visited;
+
+    &:hover {
+        color: $color-link-visited-hover;
     }
 }

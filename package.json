@@ -23,7 +23,7 @@
   "devDependencies": {
     "@cloudfour/gulp-tasks": "^2.0.1",
     "@cloudfour/hbs-helpers": "^0.9.0",
-    "@mozilla-protocol/colors": "^2.0.4",
+    "@mozilla-protocol/colors": "^2.1.0",
     "bower": "^1.8.4",
     "doctoc": "^1.1.1",
     "drizzle-builder": "0.0.10",

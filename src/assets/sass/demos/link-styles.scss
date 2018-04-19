@@ -1,0 +1,59 @@
+// Link styles demo
+
+@import '../protocol/includes/lib';
+@import '../protocol/protocol';
+
+
+span[class^='link'],
+span[class^='visited'] {
+    cursor: pointer;
+}
+
+.link {
+    color: $color-link;
+    text-decoration: underline;
+
+    &:hover {
+        color: $color-link-hover;
+    }
+
+    &:active {
+        background-color: $color-gray-lighter;
+    }
+}
+
+.visited {
+    color: $color-link-visited;
+    text-decoration: underline;
+
+    &:hover {
+        color: $color-link-visited-hover;
+    }
+}
+
+.link-hover {
+    color: $color-link-hover;
+    text-decoration: underline;
+}
+
+.link-active {
+    color: $color-link;
+    background-color: rgba(0, 0, 0, .05);
+    text-decoration: underline;
+}
+
+.visited {
+    color: $color-link-visited;
+    text-decoration: underline;
+}
+
+.visited-hover {
+    color: $color-link-visited-hover;
+    text-decoration: underline;
+}
+
+.visited-active {
+    background-color: rgba(0, 0, 0, .05);
+    color: $color-link-visited;
+    text-decoration: underline;
+}
