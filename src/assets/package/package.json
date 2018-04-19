@@ -1,5 +1,5 @@
 {
-  "name": "protocol",
+  "name": "@mozilla-protocol/core",
   "version": "0.1.0",
   "description": "A design system for Mozilla's websites.",
   "repository": {
@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/mozilla/protocol/issues"
   },
-  "homepage": "https://github.com/mozilla/protocol"
+  "homepage": "https://github.com/mozilla/protocol",
+  "main": "protocol/css/protocol.min.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
