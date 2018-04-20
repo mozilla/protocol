@@ -109,9 +109,13 @@ module.exports = {
         }
     },
     staticCopy: {
-        protocol: {
+        build: {
             src: `${src}/package/*`,
             dest: `${dest}/protocol`
+        },
+        protocol: {
+            src: `${src}/img/**/*`,
+            dest: `${dest}/protocol/protocol/img/`
         },
         docs: {
             src: './src/static/**/*',
