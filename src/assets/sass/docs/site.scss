@@ -244,13 +244,13 @@
 }
 
 .protosite-pattern-anchor {
-    color: $color-text-primary;
+    color: $color-primary;
     text-decoration: none;
     cursor: default;
 
     &:hover,
     &:focus {
-        color: $color-text-primary;
+        color: $color-primary;
         text-decoration: none;
 
         &:after {
