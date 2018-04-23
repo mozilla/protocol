@@ -90,7 +90,7 @@ $color-link-blue-dark: #175a77;
     width: 80%;
 
     &:after {
-        background: url('/static/img/cta-arrow.svg') 0 0 no-repeat;
+        background: url('#{$image-path}/cta-arrow.svg') 0 0 no-repeat;
         @include background-size(14px, 24px);
         content: '';
         display: block;
