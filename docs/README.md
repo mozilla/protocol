@@ -4,12 +4,13 @@
 [gulp]: http://gulpjs.com
 [handlebars]: http://handlebarsjs.com
 [handlebars-layouts]: https://github.com/shannonmoeller/handlebars-layouts
-[fabricator]: https://fbrctr.github.io
-[solid]: http://solid.buzzfeed.com
-[pattern-lab]: http://patternlab.io
+[drizzle]: https://github.com/cloudfour/drizzle
 [front-matter]: https://github.com/jxson/front-matter
 [marked]: https://github.com/chjj/marked
-[download]: https://github.com/cloudfour/drizzle/archive/master.zip
+[npm]: https://www.npmjs.com/
+[releases]: https://github.com/mozilla/protocol/releases/latest
+[git-tag]: https://git-scm.com/book/en/v2/Git-Basics-Tagging
+[semver]: https://semver.org/
 [demo-default]: https://cloudfour.github.io/drizzle
 [demo-collection]: https://cloudfour.github.io/drizzle/patterns/components/button.html
 [demo-blank]: https://cloudfour.github.io/drizzle/demos/demo-example-1.html
@@ -20,6 +21,7 @@
 
 - [Getting Started](#getting-started)
   - [Installation](#installation)
+  - [Building from source](#building-from-source)
   - [Tasks](#tasks)
 - [Project Structure](#project-structure)
   - [Patterns](#patterns)
@@ -35,20 +37,38 @@
   - [Appearance](#appearance)
 - [Advanced](#advanced)
 - [Browsers](#browsers)
+- [Publishing](#publishing)
 - [Acknowledgements](#acknowledgements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # Getting Started
 
-Drizzle is built on the [Node.js][node] platform, so be sure to have it installed before proceeding.
+Protocol is built on the [Node.js][node] platform and published to [NPM][npm], so be sure to have both installed before proceeding.
 
 ## Installation
 
-1. [Download][download] and extract a copy of the source.
-2. Run `npm start` in the resulting directory.
+To use Protocol in your website you can install the core package directly from NPM:
 
-This will install dependencies, build your toolkit, and start the development server at <http://localhost:3000>.
+```
+npm install @mozilla-protocol/core --save
+```
+
+Once installed, the relevant CSS and JS files will be available in your project under `./mode_modules/@mozilla-protocol/core/`
+
+Alternatively, you can also [download the latest release][releases] from GitHub.
+
+## Building from source
+
+To build Protocol from source including the documentatiion site, you can clone the repo from GitHub:
+
+```
+$ git clone https://github.com/mozilla/protocol.git
+$ cd protocol
+$ npm start
+```
+
+Running `npm start` will install dependencies, build your toolkit, and start the development server at <http://localhost:3000>.
 
 ## Tasks
 
@@ -484,10 +504,19 @@ src/assets/toolkit/scripts
 
 - [ ] **TODO**: Which are supported?
 
+
+# Publishing
+
+Protocol is published to NPM under the `@mozilla-protocol/core` namespace/package name. To publish a release to NPM, use the following steps:
+
+1. Update the `version` number in `./src/assets/package/package.json` (use [Semantic Versioning][semver] to determine what the new version number should be).
+2. Make sure the version number is commited to `master` in Git.
+3. Tag a new release. You can do this either using [Git tag][git-tag], or directly on the [GitHub website][releases].
+4. Run `gulp build` to create the NPM package. The package contents will be located in `./dist/assets/protocol/`.
+5. Publish to NPM using `npm publish ./dist/assets/protocol/`.
+
 # Acknowledgements
 
-The following projects were inspiration for the design and development of Drizzle:
+Protocol started out life as a fork of Drizzle, by Cloud Four:
 
-- [Fabricator][fabricator]
-- [Pattern Lab][pattern-lab]
-- [Solid][solid]
+- [Drizzle][drizzle]
