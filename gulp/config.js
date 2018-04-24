@@ -71,7 +71,10 @@ module.exports = {
     },
     sassCompile: {
         protocol: {
-            src: `${src}/sass/protocol/protocol.scss`,
+            src: [
+                `${src}/sass/protocol/protocol.scss`,
+                `./node_modules/@mozilla-protocol/**/*.scss`
+            ],
             dest: `${dest}/protocol/protocol/css/`
         },
         docs: {

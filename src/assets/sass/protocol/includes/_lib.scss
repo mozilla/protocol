@@ -5,6 +5,6 @@
 @import
     'variables',
     'colors',
-    '@mozilla-protocol/colors',
+    './node_modules/@mozilla-protocol/colors/protocol-colors.scss',
     'functions',
     'mixins';

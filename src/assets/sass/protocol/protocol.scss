@@ -15,7 +15,7 @@
     'base/elements',
 
     // Design variables
-    '@mozilla-protocol/colors',
+    './node_modules/@mozilla-protocol/colors/protocol-colors.scss',
 
     // Components - specific purpose blocks with sub-elements and modifiers
     'components/sections',
