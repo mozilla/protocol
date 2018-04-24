@@ -48,7 +48,6 @@
     "prismjs": "^1.4.1",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.2.1",
-    "sass-module-importer": "^1.4.0",
     "stylelint": "^9.2.0"
   }
 }
