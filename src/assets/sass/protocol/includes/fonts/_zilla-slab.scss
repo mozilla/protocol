@@ -7,14 +7,14 @@
     font-family: 'Zilla Slab';
     font-weight: normal;
     font-style: normal;
-    src: url('/static/fonts/ZillaSlab-Regular.woff2') format('woff2'),
-         url('/static/fonts/ZillaSlab-Regular.woff') format('woff');
+    src: url('#{$font-path}/ZillaSlab-Regular.woff2') format('woff2'),
+         url('#{$font-path}/ZillaSlab-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Zilla Slab';
     font-weight: bold;
     font-style: normal;
-    src: url('/static/fonts/ZillaSlab-Bold.woff2') format('woff2'),
-         url('/static/fonts/ZillaSlab-Bold.woff') format('woff');
+    src: url('#{$font-path}/ZillaSlab-Bold.woff2') format('woff2'),
+         url('#{$font-path}/ZillaSlab-Bold.woff') format('woff');
 }

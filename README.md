@@ -6,20 +6,31 @@ https://mozilla-protocol.netlify.com/
 
 ## Quick Start
 
-This pattern library is based on [Drizzle](https://github.com/cloudfour/drizzle/), which is itself based on [Fabricator](https://fbrctr.github.io/). It's essentially a Node-based static site generator, and uses [Gulp](https://gulpjs.com/) as a task runner for local development.
+To use Protocol in your website you can install the core package directly from NPM:
 
-0. Ensure you have [Node.js](https://nodejs.org/) installed.
-1. Clone this repository.
-2. Run `npm start` in the resulting directory.
+```
+npm install @mozilla-protocol/core --save
+```
 
-This will install dependencies, build the site, and start the development server at <http://localhost:3000>.
+Alternatively, you can also [download the latest release](https://github.com/mozilla/protocol/releases/latest) from GitHub.
 
-See the docs for more.
+### Building from source
+
+To build Protocol from source including the documentatiion site, you can clone the repo from GitHub:
+
+```
+$ git clone https://github.com/mozilla/protocol.git
+$ cd protocol
+$ npm start
+```
+
+For a more info, read the [installation docs](docs#installation).
 
 ## Documentation
 
 - [Getting Started](docs#getting-started)
 - [Project Structure](docs#project-structure)
 - [Gulp Tasks](docs#tasks)
+- [Publishing](docs#publishing)
 
 
