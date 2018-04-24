@@ -4,8 +4,8 @@
 
 
 // Default media paths can be overwritten globally.
-$font-path: '/node_modules/@mozilla-protocol/core/protocol/fonts' !default;
-$image-path: '/node_modules/@mozilla-protocol/core/protocol/img' !default;
+$font-path: '../fonts' !default;
+$image-path: '../img' !default;
 
 
 // These are general styles for elements/components that occur on every page.
