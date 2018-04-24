@@ -86,7 +86,7 @@ module.exports = {
         protocol: {
             src: [
                 `${src}/sass/protocol/**/*.scss`,
-                `./node_modules/@mozilla-protocol/**/*.scss`
+                `./node_modules/@mozilla-protocol/*/*.scss`
             ],
             dest: `${dest}/protocol/protocol/css/`
         },
