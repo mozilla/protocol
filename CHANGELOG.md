@@ -1,3 +1,9 @@
+# 0.1.2
+
+## Bug Fixes
+
+* **css:** Use relative paths in pre-compiled CSS.
+
 # 0.1.1
 
 ## Bug Fixes
