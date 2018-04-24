@@ -19,9 +19,6 @@ $image-path: '../img' !default;
     // Base elements - general HTML elements
     'base/elements',
 
-    // Design variables
-    './node_modules/@mozilla-protocol/colors/protocol-colors.scss',
-
     // Components - specific purpose blocks with sub-elements and modifiers
     'components/sections',
     'components/highlight',
