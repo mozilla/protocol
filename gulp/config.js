@@ -93,6 +93,10 @@ module.exports = {
                 `${src}/sass/demos/**/*.scss`
             ],
             dest: `${dest}/docs/css/`
+        },
+        includes: {
+            src: `./node_modules/@mozilla-protocol/*/*.scss`,
+            dest: `${dest}/protocol/protocol/css/includes`
         }
     },
     jsCopy: {

@@ -4,8 +4,8 @@
 
 @import '../includes/lib';
 
-$color-link-blue: #0e9ad8;
-$color-link-blue-dark: #175a77;
+$color-link: #0e9ad8;
+$color-link-dark: #175a77;
 
 .mzp-c-card {
     max-width: 390px;
@@ -45,7 +45,7 @@ $color-link-blue-dark: #175a77;
 
     .mzp-c-card-title {
         @include text-display-level4;
-        color: $color-text-primary;
+        color: $color-primary;
         text-decoration: none;
     }
 
@@ -54,16 +54,16 @@ $color-link-blue-dark: #175a77;
         text-decoration: none;
 
         .mzp-c-card-title {
-            color: $color-text-primary;
+            color: $color-primary;
         }
 
         &:hover,
         &:focus,
         &:active {
-            color: $color-link-blue-dark;
+            color: $color-link-dark;
 
             .mzp-c-card-title {
-                color: $color-link-blue-dark;
+                color: $color-link-dark;
             }
         }
     }
@@ -77,8 +77,8 @@ $color-link-blue-dark: #175a77;
 // CTA link
 .mzp-c-cta-link {
     @include text-body-level2;
-    border-bottom: 2px solid $color-link-blue;
-    color: $color-link-blue;
+    border-bottom: 2px solid $color-link;
+    color: $color-link;
     display: inline-block;
     font-family: $font-open-sans;
     font-weight: bold;
@@ -105,8 +105,8 @@ $color-link-blue-dark: #175a77;
     &:hover,
     &:focus,
     &:active {
-        border-color: $color-link-blue-dark;
-        color: $color-link-blue-dark;
+        border-color: $color-link-dark;
+        color: $color-link-dark;
         text-decoration: none;
 
         &:after {

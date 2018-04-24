@@ -14,31 +14,31 @@
             "color": "Neon Blue",
             "hex": "#0ff",
             "rgb": "rgb(0, 255, 255)",
-            "token": "$color-brand-neonblue"
+            "token": "$color-cyan"
         },
         {
             "color": "Lemon Yellow",
             "hex": "#fff44f",
             "rgb": "rgb(255, 244, 79)",
-            "token": "$color-brand-lemonyellow"
+            "token": "$color-yellow"
         },
         {
             "color": "Warm Red",
             "hex": "#ff4f5e",
             "rgb": "rgb(255, 79, 94)",
-            "token": "$color-brand-warmred"
+            "token": "$color-red"
         },
         {
             "color": "Neon Green",
             "hex": "#54ffbd",
             "rgb": "rgb(84, 255, 189)",
-            "token": "$color-brand-neongreen"
+            "token": "$color-green"
         },
         {
             "color": "Dark Purple",
             "hex": "#6e008b",
             "rgb": "rgb(110, 0, 139)",
-            "token": "$color-brand-darkpurple"
+            "token": "$color-purple-dark"
         }
     ],
     "Secondary brand colors": [
@@ -46,25 +46,25 @@
             "color": "Dark Green",
             "hex": "#005e5e",
             "rgb": "rgb(0, 94, 84)",
-            "token": "$color-brand-darkgreen"
+            "token": "$color-teal-dark"
         },
         {
             "color": "Dark Blue",
             "hex": "#00458b",
             "rgb": "rgb(0, 69, 139)",
-            "token": "$color-brand-darkblue"
+            "token": "$color-blue-dark"
         },
         {
             "color": "Dark Gray",
             "hex": "#959595",
             "rgb": "rgb(149, 149, 149)",
-            "token": "$color-brand-darkgray"
+            "token": "$color-gray-dark"
         },
         {
             "color": "Light Gray",
             "hex": "#e7e5e2",
             "rgb": "rgb(231, 229, 226)",
-            "token": "$color-brand-lightgray"
+            "token": "$color-gray-light"
         }
     ],
     "Interface colors": [
@@ -72,13 +72,13 @@
             "color": "Link blue",
             "hex": "#00a7e0",
             "rgb": "rgb(0, 167, 224)",
-            "token": "$color-link-blue"
+            "token": "$color-link"
         },
         {
             "color": "Link blue, hover",
             "hex": "#0081ad",
             "rgb": "rgb(0, 129, 173)",
-            "token": "darken($color-link-blue, 10%)"
+            "token": "darken($color-link, 10%)"
         },
         {
             "color": "Off-black",

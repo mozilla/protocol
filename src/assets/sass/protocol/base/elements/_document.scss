@@ -13,7 +13,7 @@ html {
 body {
     @include font-size(16px);
     background: #fff;
-    color: $color-text-primary;
+    color: $color-primary;
     font-family: $base-font-stack;
     line-height: $base-line-height;
 }

@@ -1,3 +1,10 @@
+# 0.1.3
+
+## Bug Fixes
+
+* **css:** Import the Color design tokens npm package
+* **css:** Add design tokens scss files to the protocol package
+
 # 0.1.2
 
 ## Bug Fixes
