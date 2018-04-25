@@ -29,6 +29,10 @@
             color: #eee;
             text-decoration: underline;
         }
+
+        &:active {
+            background-color: transparent;
+        }
     }
 
     @media #{$mq-tablet} {
@@ -243,9 +247,19 @@
     @include text-display-level4;
 }
 
+.protosite-pattern-extra ul {
+    list-style: disc;
+    margin-left: 32px;
+
+    li {
+        margin-bottom: .5em;
+    }
+}
+
 .protosite-pattern-anchor {
     color: $color-primary;
     text-decoration: none;
+    border: 0;
     cursor: default;
 
     &:hover,

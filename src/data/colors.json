@@ -69,16 +69,28 @@
     ],
     "Interface colors": [
         {
-            "color": "Link blue",
-            "hex": "#00a7e0",
-            "rgb": "rgb(0, 167, 224)",
+            "color": "Link",
+            "hex": "#0060df",
+            "rgb": "rgb(0, 96, 223)",
             "token": "$color-link"
         },
         {
-            "color": "Link blue, hover",
-            "hex": "#0081ad",
-            "rgb": "rgb(0, 129, 173)",
-            "token": "darken($color-link, 10%)"
+            "color": "Link hover",
+            "hex": "#003eaa",
+            "rgb": "rgb(0, 62, 170)",
+            "token": "$color-link-hover"
+        },
+        {
+            "color": "Visited link",
+            "hex": "#8000d7",
+            "rgb": "rgb(128, 0, 215)",
+            "token": "$color-link-visited"
+        },
+        {
+            "color": "Visited link hover",
+            "hex": "#6200a4",
+            "rgb": "rgb(98, 0, 164)",
+            "token": "$color-link-visited-hover"
         },
         {
             "color": "Off-black",
