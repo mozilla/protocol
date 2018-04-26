@@ -18,11 +18,6 @@ body {
     line-height: $base-line-height;
 }
 
-// An arbitrary container for translatable strings to use in scripts
-#strings {
-    display: none;
-}
-
 // A few places use a class to hide elements. We should try to avoid that.
 .hidden {
     @include hidden;

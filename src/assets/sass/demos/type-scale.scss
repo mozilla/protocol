@@ -24,7 +24,7 @@ hr {
 
 .label {
     @include text-small;
-    color: $color-text-secondary;
+    color: $color-gray-dark;
     margin: 1em 0 .5em;
 }
 
@@ -36,7 +36,7 @@ hr {
     .scale-sample:after {
         @include open-sans;
         @include text-small;
-        color: $color-text-tertiary;
+        color: $color-gray-dark;
         font-weight: normal;
         margin-left: 10px;
     }

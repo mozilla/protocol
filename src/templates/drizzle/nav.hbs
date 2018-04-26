@@ -41,26 +41,6 @@
       {{/each}}
     </ul>
 
-    {{!-- Molecule Patterns --}}
-    <h4>Molecules</h4>
-    <ul>
-      {{#each (collections "molecules" sortby="order")}}
-        <li class="protosite-nav-main-item">
-          {{> nav-item label=name}}
-        </li>
-      {{/each}}
-    </ul>
-
-    {{!-- Organism Patterns --}}
-    <h4>Organisms</h4>
-    <ul>
-      {{#each (collections "organisms" sortby="order")}}
-        <li class="protosite-nav-main-item">
-          {{> nav-item label=name}}
-        </li>
-      {{/each}}
-    </ul>
-
     {{!-- Other pages --}}
     <h4>Other Stuff</h4>
     <ul>

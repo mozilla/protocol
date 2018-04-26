@@ -91,12 +91,6 @@
             "hex": "#6200a4",
             "rgb": "rgb(98, 0, 164)",
             "token": "$color-link-visited-hover"
-        },
-        {
-            "color": "Off-black",
-            "hex": "#333333",
-            "rgb": "rgb(51, 51, 51)",
-            "token": "$color-offblack"
         }
     ]
 }
