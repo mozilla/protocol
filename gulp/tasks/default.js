@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const runSequence = require('run-sequence');
 const tasks = require('@cloudfour/gulp-tasks');
 const config = require('../config');
-const env = require('gulp-util').env;
+const argv = require('yargs').argv;
 
 // Register core tasks
 const core = ['clean', 'js', 'serve', 'watch'];
@@ -28,7 +28,7 @@ gulp.task('build', done => {
 gulp.task('default', ['build'], done => {
     gulp.start('serve');
 
-    if (env.dev) {
+    if (argv.dev) {
         gulp.start('watch');
     }
 
