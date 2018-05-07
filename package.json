@@ -21,16 +21,15 @@
     "prepublishOnly": "gulp build"
   },
   "devDependencies": {
-    "@cloudfour/gulp-tasks": "^2.0.1",
     "@cloudfour/hbs-helpers": "^0.9.0",
     "@mozilla-protocol/colors": "^2.1.0",
-    "bower": "^1.8.4",
+    "browser-sync": "^2.24.4",
     "doctoc": "^1.1.1",
     "drizzle-builder": "0.0.10",
     "eslint": "^4.19.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.9.3",
+    "gulp-clean-css": "^3.9.4",
     "gulp-cli": "^2.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^4.0.2",
@@ -43,10 +42,12 @@
     "gulp-stylelint": "^7.0.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.7",
+    "gulp-watch": "^5.0.0",
     "merge-stream": "^1.0.1",
     "prismjs": "^1.4.1",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.2.1",
-    "stylelint": "^9.2.0"
+    "stylelint": "^9.2.0",
+    "yargs": "^11.1.0"
   }
 }
