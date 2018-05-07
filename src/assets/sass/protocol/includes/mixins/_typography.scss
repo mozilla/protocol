@@ -38,63 +38,43 @@
 // there's some redundancy at smaller sizes because we don't want things
 // getting too tiny.
 // Example usage:
-//  .title { @include text-display-level1; }
-//  .subtitle { @include text-display-level3; }
-//  .intro { @include text-body-level1; }
+//  .title { @include text-display-xl; }
+//  .subtitle { @include text-display-lg; }
+//  .intro { @include text-body-lg; }
 
-@mixin text-display-huge { // For especially huge titles
+@mixin text-display-xxl { // Use this one sparingly.
     @include font-size(48px);
-    line-height: 1.0833;
+    line-height: 1.083;
 
     @media #{$media-md} {
-        @include font-size(60px);
-        line-height: 1.0666;
-    }
-
-    @media #{$media-lg} {
         @include font-size(72px);
         line-height: 1;
     }
 }
 
-@mixin text-display-level1 {
-    @include font-size(36px);
-    line-height: 1.1111;
+@mixin text-display-xl {
+    @include font-size(40px);
+    line-height: 1.111;
 
     @media #{$media-md} {
-        @include font-size(48px);
-        line-height: 1.0833;
-    }
-
-    @media #{$media-lg} {
         @include font-size(60px);
-        line-height: 1.0666;
+        line-height: 1.066;
     }
 }
 
-@mixin text-display-level2 {
-    @include font-size(24px);
-    line-height: 1.1666;
+@mixin text-display-lg {
+    @include font-size(32px);
+    line-height: 1.125;
 
     @media #{$media-md} {
-        @include font-size(36px);
-        line-height: 1.1111;
-    }
-
-    @media #{$media-lg} {
         @include font-size(48px);
-        line-height: 1.0833;
+        line-height: 1.083;
     }
 }
 
-@mixin text-display-level3 {
-    @include font-size(18px);
-    line-height: 1.3333;
-
-    @media #{$media-md} {
-        @include font-size(24px);
-        line-height: 1.1666;
-    }
+@mixin text-display-md {
+    @include font-size(24px);
+    line-height: 1.166;
 
     @media #{$media-lg} {
         @include font-size(36px);
@@ -102,31 +82,47 @@
     }
 }
 
-@mixin text-display-level4 {
-    @include font-size(18px);
-    line-height: 1.3333;
+@mixin text-display-sm {
+    @include font-size(21px);
+    line-height: 1.143;
 
-    @media #{$media-lg} {
+    @media #{$media-md} {
         @include font-size(24px);
-        line-height: 1.1666;
+        line-height: 1.166;
     }
 }
 
-@mixin text-body-level1 {
+@mixin text-display-xs {
     @include font-size(18px);
-    line-height: 1.3333;
+    line-height: 1.333;
 }
 
-@mixin text-body-level2 {
-    @include font-size(16px);
-}
-
-@mixin text-small {
+@mixin text-display-xxs {
     @include font-size(14px);
-    line-height: 1.1428;
+    line-height: 1.285;
 }
 
-@mixin text-extra-small {
+@mixin text-body-lg {
+    @include font-size(18px);
+    line-height: 1.5;
+}
+
+@mixin text-body-md {
+    @include font-size(16px);
+    line-height: 1.5;
+}
+
+@mixin text-body-sm {
+    @include font-size(14px);
+    line-height: 1.285;
+}
+
+@mixin text-body-xs {
     @include font-size(12px);
-    line-height: 1.3333;
+    line-height: 1.333;
+}
+
+@mixin text-cta {
+    @include font-size(16px);
+    line-height: 1.125;
 }

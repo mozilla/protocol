@@ -16,25 +16,25 @@ h1, h2, h3, h4 {
 
 // Type scale defined in includes/mixins/_typography.scss
 h1 {
-    @include text-display-level1;
+    @include text-display-xxl;
     margin-bottom: .25em;
 }
 
 h2 {
-    @include text-display-level2;
+    @include text-display-xl;
     margin-bottom: .45em;
 }
 
 h3 {
-    @include text-display-level3;
+    @include text-display-lg;
 }
 
 h4 {
-    @include text-display-level4;
+    @include text-display-md;
 }
 
 h5, h6 {
-    @include text-body-level1;
+    @include text-display-sm;
 }
 
 p,

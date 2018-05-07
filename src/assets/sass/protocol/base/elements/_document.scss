@@ -11,11 +11,10 @@ html {
 }
 
 body {
-    @include font-size(16px);
+    @include text-body-md;
     background: #fff;
     color: $color-primary;
     font-family: $base-font-stack;
-    line-height: $base-line-height;
 }
 
 // A few places use a class to hide elements. We should try to avoid that.
