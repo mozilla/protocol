@@ -1,0 +1,25 @@
+---
+name: Small Card
+description: A small card with image, headline, description, and link.
+order: 3
+labels:
+    - inprogress
+notes: |
+    - Small sized cards can contain images with 16:9, 3:2 or 1:1 aspect ratios.
+    - The card in this example displays an icon next to the card tag name, to indicate the media type that may be played on click.
+    - Recommended image width is 410px.
+    - Headlines should be a maximum of 40 characters, and descriptions a maximum of 140 characters.
+---
+
+<section class="mzp-c-card mzp-has-aspect-1-1 mzp-has-audio">
+  <a class="mzp-c-card-block-link" href="#">
+    <div class="mzp-c-card-media-wrapper">
+      <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
+    </div>
+    <div class="mzp-c-card-content">
+      <div class="mzp-c-card-tag">Card tag</div>
+      <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
+      <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
+    </div>
+  </a>
+</section>

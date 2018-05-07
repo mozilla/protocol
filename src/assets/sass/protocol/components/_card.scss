@@ -1,0 +1,176 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+/* -------------------------------------------------------------------------- */
+// Base card class
+
+.mzp-c-card {
+    @include border-box;
+    background: $color-secondary;
+    margin-bottom: $margin-lg;
+
+    // Preserve aspect ratio of images and avoid content jump when loading.
+    &.mzp-has-aspect-1-1 .mzp-c-card-media-wrapper {
+         @include aspect-ratio(1, 1);
+    }
+
+    &.mzp-has-aspect-16-9 .mzp-c-card-media-wrapper {
+        @include aspect-ratio(16, 9);
+    }
+
+    &.mzp-has-aspect-3-2 .mzp-c-card-media-wrapper {
+        @include aspect-ratio(3, 2);
+    }
+
+    .mzp-c-card-media-wrapper {
+        background-color: $color-gray-lighter;
+        border-radius: 2px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .mzp-c-card-image,
+    .mzp-c-card-video {
+        display: block;
+        max-width: none;
+        width: 100%;
+    }
+
+    .mzp-c-card-content {
+        @include border-box;
+        padding: $padding-sm;
+    }
+
+    .mzp-c-card-tag {
+        @include open-sans;
+        @include text-body-sm;
+        color: $color-gray-dark;
+        font-weight: normal;
+        margin-bottom: $margin-xs;
+    }
+
+    &.mzp-has-video .mzp-c-card-tag,
+    &.mzp-has-audio .mzp-c-card-tag {
+        line-height: 1.8;
+        min-height: 25px;
+        padding-left: $padding-xl;
+    }
+
+    &.mzp-has-video .mzp-c-card-tag {
+        background: url('#{$image-path}/card/card-tag-video.svg') center left no-repeat;
+    }
+
+    &.mzp-has-audio .mzp-c-card-tag {
+        background: url('#{$image-path}/card/card-tag-audio.svg') center left no-repeat;
+    }
+
+    .mzp-c-card-title {
+        @include text-display-sm;
+        display: inline;
+        border-bottom: 1px solid transparent;
+    }
+
+    .mzp-c-card-desc {
+        margin: $margin-xs 0 0;
+    }
+
+    .mzp-c-card-small-cta {
+        display: block;
+        font-weight: bold;
+        margin-top: $margin-lg 0 0;
+        border-bottom: 1px solid transparent;
+    }
+
+    .mzp-c-card-block-link {
+        border-radius: 2px;
+        display: block;
+
+        &:link,
+        &:visited {
+            color: $color-primary;
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            @include transition(box-shadow .1s ease-in-out);
+            box-shadow: 0 0 0 4px darken($color-gray-light, 10%);
+
+            .mzp-c-card-title,
+            .mzp-c-card-small-cta {
+                @include transition(border-bottom .1s ease-in-out);
+                border-bottom: 1px solid $color-primary;
+            }
+
+        }
+    }
+
+    .mzp-c-card-meta {
+        @include text-body-xs;
+        color: $color-gray-dark;
+        margin: $margin-lg 0 0;
+    }
+
+    @media #{$media-sm} {
+        max-width: 410px;
+    }
+
+    @media #{$media-md} {
+        margin-bottom: $margin-xl;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Medium sized card
+
+.mzp-c-card.mzp-c-card-medium {
+    @media #{$media-sm} {
+        max-width: 610px;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Card with larger title
+
+.mzp-c-card.mzp-c-card-large {
+
+    .mzp-c-card-title {
+        @include text-display-md;
+    }
+
+    .mzp-c-card-desc {
+        @include text-body-lg;
+    }
+
+    @media #{$media-sm} {
+        max-width: 825px;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Card with a white background & border for placement on colored backgrounds.
+
+.mzp-c-card.mzp-c-card-extra-small {
+
+    .mzp-c-card-tag {
+        @include text-body-xs;
+    }
+
+    .mzp-c-card-title {
+        @include text-display-xs;
+    }
+
+    .mzp-c-card-block-link {
+        border-radius: 2px;
+        height: 100%;
+    }
+
+    @media #{$media-lg} {
+        max-width: 300px;
+    }
+}
+

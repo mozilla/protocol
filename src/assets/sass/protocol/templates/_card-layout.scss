@@ -1,0 +1,204 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+/* -------------------------------------------------------------------------- */
+// Card grid layout classes.
+
+/* -------------------------------------------------------------------------- */
+// 5 card hero
+// On small screens cards stack vertically and span full container width.
+// On medium sized screens the 1st card spans full width, and the remaining 4 cards span half widths.
+// On large screens the 1st card spans 2 thirds, and the remaining cards span 1 third.
+.mzp-l-card-hero {
+    @media #{$media-sm} {
+        @include clearfix;
+
+        .mzp-c-card {
+            @include bidi((
+                (float, left, right),
+                (margin-left, 0, $margin-xl),
+                (margin-right, $margin-xl, 0),
+            ));
+            width: calc(50% - (#{$margin-xl} / 2));
+
+            &:nth-child(odd) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            &.mzp-c-card-large {
+                width: 100%;
+            }
+        }
+    }
+
+    @media #{$media-lg} {
+        .mzp-c-card {
+            width: calc(33.3% - (#{$margin-xl} - (#{$margin-xl} / 3)));
+
+            &:nth-child(odd) {
+                @include bidi((
+                    (margin-left, 0, $margin-xl),
+                    (margin-right, $margin-xl, 0),
+                ));
+            }
+
+            &:nth-child(2),
+            &:last-child {
+                margin-right: 0;
+
+                [dir="rtl"] & {
+                    margin-left: 0;
+                }
+            }
+
+            &:nth-child(3n) {
+                @include bidi(((clear, left, right),));
+            }
+        }
+
+        .mzp-c-card.mzp-c-card-large {
+            width: calc(66.6% - (#{$margin-xl} / 3));
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// 4 card layout
+// On small screens cards stack vertically and span full container width.
+// On medium sized screens cards span half width.
+// On large screens cards span quater widths.
+.mzp-l-card-quater {
+    @media #{$media-sm} {
+        @include clearfix;
+
+        .mzp-c-card {
+            @include bidi((
+                (float, left, right),
+                (margin-left, 0, $margin-xl),
+                (margin-right, $margin-xl, 0),
+            ));
+            width: calc(50% - (#{$margin-xl} / 2));
+
+            &:nth-child(even) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media #{$media-lg} {
+        .mzp-c-card {
+            @include bidi((
+                (margin-left, 0, $margin-xl),
+                (margin-right, $margin-xl, 0),
+            ));
+            width: calc(25% - (#{$margin-xl} - (#{$margin-xl} / 4)));
+
+            &:nth-child(even) {
+                @include bidi((
+                    (margin-left, 0, $margin-xl),
+                    (margin-right, $margin-xl, 0),
+                ));
+            }
+
+            &:nth-child(4n) {
+                margin-right: 0;
+
+                [dir="rtl"] & {
+                    margin-left: 0;
+                }
+            }
+
+            &:nth-child(4n+1) {
+                @include bidi(((clear, left, right),));
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// 3 card layout
+// On small screens cards stack vertically and span full container width.
+// On medium sized screens cards span half width.
+// On large screens cards span 1 third width.
+.mzp-l-card-third {
+    @media #{$media-sm} {
+        @include clearfix;
+
+        .mzp-c-card {
+            width: calc(50% - (#{$margin-xl} / 2));
+            @include bidi((
+                (float, left, right),
+                (margin-left, 0, $margin-xl),
+                (margin-right, $margin-xl, 0),
+            ));
+
+            &:nth-child(even) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media #{$media-lg} {
+        .mzp-c-card {
+            width: calc(33.3% - (#{$margin-xl} - (#{$margin-xl} / 3)));
+
+            &:nth-child(even) {
+                @include bidi((
+                    (margin-left, 0, $margin-xl),
+                    (margin-right, $margin-xl, 0),
+                ));
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
+
+                [dir="rtl"] & {
+                    margin-left: 0;
+                }
+            }
+
+            &:nth-child(3n+1) {
+                @include bidi(((clear, left, right),));
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// 2 card layout
+// On small screens cards stack vertically and span full container width.
+// On medium to large sized screens cards span half width.
+@media #{$media-sm} {
+    .mzp-l-card-half {
+        @include clearfix;
+
+        .mzp-c-card {
+            @include bidi((
+                (float, left, right),
+                (margin-left, 0, $margin-xl),
+                (margin-right, $margin-xl, 0),
+            ));
+
+            &:nth-child(2n) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            &:nth-child(2n+1) {
+                @include bidi(((clear, left, right),));
+            }
+        }
+    }
+
+    .mzp-l-card-half .mzp-c-card {
+        width: calc(50% - (#{$margin-xl} - (#{$margin-xl} / 2)));
+    }
+}
+
+
