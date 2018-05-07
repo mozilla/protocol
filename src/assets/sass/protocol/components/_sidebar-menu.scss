@@ -7,7 +7,7 @@
 // Sidebar menu
 
 .mzp-c-sidemenu {
-    @include text-small;
+    @include text-body-md;
     background-color: $color-gray-lighter;
     padding: $spacing-sm $spacing-lg;
     margin: 0 -#{$spacing-lg} $layout-sm;
@@ -80,12 +80,12 @@
 
 .mzp-c-sidemenu-label {
     @include open-sans;
-    @include text-small;
+    @include text-body-sm;
 }
 
 .mzp-c-sidemenu-title {
     @include open-sans;
-    @include text-body-level2;
+    @include text-body-lg;
     line-height: 1.5;
     margin-bottom: .25em;
 
@@ -129,7 +129,7 @@
         }
 
         .mzp-c-sidemenu-main {
-            @include text-body-level2;
+            @include text-body-md;
             display: block;
             margin: $spacing-md -#{$spacing-md} 0;
         }
@@ -151,7 +151,7 @@
         }
 
         .mzp-c-sidemenu {
-            @include text-body-level2;
+            @include text-body-md;
             background-color: transparent;
             padding: 0;
             margin: 0;

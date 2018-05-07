@@ -56,24 +56,25 @@ styles:
 <p>We limit the number of type styles to a set that works well across the website and fits our layout grid. This scale is based on a root size of 16 pixels and a 4 pixel baseline grid to determine line height.</p>
 
 <div id="specimen-type-scale" class="protosite-specimen">
-  <h1 class="scale-sample scale-sample-huge">Display Huge</h1>
-  <h1 class="scale-sample scale-sample-l1">Display Level One</h1>
-  <h2 class="scale-sample scale-sample-l2">Display Level Two</h2>
-  <h3 class="scale-sample scale-sample-l3">Display Level Three</h3>
-  <h4 class="scale-sample scale-sample-l4">Display Level Four</h4>
-  <p class="scale-sample scale-sample-l5">Body Level One</p>
-  <p class="scale-sample scale-sample-l6">Body Level Two</p>
-  <p class="scale-sample scale-sample-small">Size Small</p>
-  <p class="scale-sample scale-sample-x-small">Size X-Small</p>
+  <h1 class="scale-sample scale-sample-display-xxl">Display XXL</h1>
+  <h1 class="scale-sample scale-sample-display-xl">Display XL</h1>
+  <h2 class="scale-sample scale-sample-display-lg">Display LG</h2>
+  <h3 class="scale-sample scale-sample-display-md">Display MD</h3>
+  <h4 class="scale-sample scale-sample-display-sm">Display SM</h4>
+  <h5 class="scale-sample scale-sample-display-xs">Display XS</h5>
+  <h6 class="scale-sample scale-sample-display-xxs">Display XXS</h6>
+  <p class="scale-sample scale-sample-body-lg">Body LG</p>
+  <p class="scale-sample scale-sample-body-md">Body MD</p>
+  <p class="scale-sample scale-sample-body-sm">Body SM</p>
+  <p class="scale-sample scale-sample-body-xs">Body XS</p>
+  <p class="scale-sample scale-sample-cta">CTA</p>
 </div>
 
-<p>Our type scale includes five display styles, used to make a bold statement like a headline or title. Use Zilla Slab bold for display text when expressing the Mozilla brand and Open Sans bold for display text when expressing the Firefox brand.</p>
+<p>The display sizes are XXS through XXL. Of these, the most commonly used are SM, MD, LG, and XL. Use the XS and XXS display sizes sparingly for labels and UI elements, and the XXL display size sparingly to make an especially bold statement.</p>
 
-<p>The display sizes are Levels 1 through 4, which are used for common titles and headings, as well as ”Huge,” which is used very sparingly.</p>
+<p>We use two sizes of regular body copy: MD and LG. Use MD for normal, default body text and LG when you need slightly larger text to stand out, like a tagline or the introduction to an article. There are two sizes of smaller body text: SM and XS, used sparingly for supporting text like footnotes or disclaimers, never for main body copy.</p>
 
-<p>We use two sizes of body copy: Body 1 (bigger) and Body 2 (smaller). Use Body 2 for normal, default body text and Body 1 when you need slightly larger text to stand out, like a tagline or the introduction to an article.</p>
-
-<p>There are also two sizes of small text: Small and Extra-Small. These are used sparingly for supporting text like footnotes or disclaimers, never for main body copy.</p>
+<p>We also have a special CTA style used in buttons and navigation. It's a medium font-size size but with a tigher line-height than ordinary body text.</p>
 
 <p><a href="{{@root.baseurl}}/demos/type-scale.html">See a demo</a></p>
 
@@ -82,34 +83,32 @@ styles:
 <p>We use Sass mixins to declare these font sizes:</p>
 
 <div class="protosite-pattern-embed">
-<pre class="protosite-pattern-code language-scss"><code>@include text-display-huge;
-@include text-display-level1;
-@include text-display-level2;
-@include text-display-level3;
-@include text-display-level4;
-@include text-body-level1;
-@include text-body-level2;
-@include text-small;
-@include text-extra-small;</code></pre>
+<pre class="protosite-pattern-code language-scss"><code>@include text-display-xxl;
+@include text-display-xl;
+@include text-display-lg;
+@include text-display-md;
+@include text-display-sm;
+@include text-display-xs;
+@include text-display-xxs;
+@include text-body-lg;
+@include text-body-md;
+@include text-body-sm;
+@include text-body-xs;
+@include text-cta;</code></pre>
 </div>
 
 <p>Those mixins include media queries to adjust the sizes at key breakpoints. Text gets bigger as the viewport gets bigger. You can resize your window to see this in action on the sample above or on the <a href="{{@root.baseurl}}/demos/type-scale.html">demo page</a>.</p>
 
-<p>For example, here’s the display level one mixin:</p>
+<p>For example, here’s the 4XL mixin:</p>
 
 <div class="protosite-pattern-embed">
-<pre class="protosite-pattern-code language-scss"><code>@mixin text-display-level1 {
-    @include font-size(36px);
-    line-height: 1.1111;
+<pre class="protosite-pattern-code language-scss"><code>@mixin text-display-xl {
+    @include font-size(40px);
+    line-height: 1.111;
 
-    @media #{$mq-tablet} {
-        @include font-size(48px);
-        line-height: 1.0833;
-    }
-
-    @media #{$mq-desktop} {
+    @media #{$media-md} {
         @include font-size(60px);
-        line-height: 1.0666;
+        line-height: 1.066;
     }
 }</code></pre>
 </div>

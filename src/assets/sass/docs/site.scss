@@ -80,6 +80,10 @@
     }
 }
 
+.protosite-nav-menu-title {
+    @include text-display-sm;
+}
+
 .protosite-nav-main-item {
     margin: 0 0 .25em;
 }
@@ -127,7 +131,7 @@
 
     .protosite-swatch-name {
         @include open-sans;
-        @include text-body-level2;
+        @include text-display-sm;
     }
 
     @media #{$media-md} {
@@ -175,7 +179,7 @@
 }
 
 .protosite-specimen-font {
-    @include text-display-level3;
+    @include text-display-md;
 }
 
 #specimen-zilla-slab {
@@ -193,7 +197,7 @@
 
 // Labels
 .protosite-label {
-    @include text-small;
+    @include text-body-sm;
     background-color: gray;
     border-radius: .25em;
     display: inline-block;
@@ -244,7 +248,7 @@
 }
 
 .protosite-pattern-extra h3 {
-    @include text-display-level4;
+    @include text-display-sm;
 }
 
 .protosite-pattern-extra ul {
@@ -277,7 +281,7 @@
 
 
 .protosite-pattern-links-link {
-    @include text-small;
+    @include text-body-sm;
 
     svg {
         fill: currentColor;

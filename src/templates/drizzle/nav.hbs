@@ -22,7 +22,7 @@
     </ul>
 
     {{!-- Fundamentals --}}
-    <h4>Fundamentals</h4>
+    <h4 class="protosite-nav-menu-title">Fundamentals</h4>
     <ul>
       {{#each (pages "fundamentals" sortby="order" ignore="index")}}
         <li class="protosite-nav-main-item">
@@ -32,7 +32,7 @@
     </ul>
 
     {{!-- Atom Patterns --}}
-    <h4>Atoms</h4>
+    <h4 class="protosite-nav-menu-title">Atoms</h4>
     <ul>
       {{#each (collections "atoms" sortby="order")}}
         <li class="protosite-nav-main-item">
@@ -43,7 +43,7 @@
 
     {{!-- Molecule Patterns --}}
     {{#if (collections "molecules")}}
-    <h4>Molecules</h4>
+    <h4 class="protosite-nav-menu-title">Molecules</h4>
     <ul>
       {{#each (collections "molecules" sortby="order")}}
         <li class="protosite-nav-main-item">
@@ -55,7 +55,7 @@
 
     {{!-- Organism Patterns --}}
     {{#if (collections "organisms")}}
-    <h4>Organisms</h4>
+    <h4 class="protosite-nav-menu-title">Organisms</h4>
     <ul>
       {{#each (collections "organisms" sortby="order")}}
         <li class="protosite-nav-main-item">
@@ -67,7 +67,7 @@
 
     {{!-- Template Patterns --}}
     {{#if (collections "templates")}}
-    <h4>Templates</h4>
+    <h4 class="protosite-nav-menu-title">Templates</h4>
     <ul>
       {{#each (collections "templates" sortby="order")}}
         <li class="protosite-nav-main-item">
@@ -78,7 +78,7 @@
     {{/if}}
 
     {{!-- Other pages --}}
-    <h4>Other Stuff</h4>
+    <h4 class="protosite-nav-menu-title">Other Stuff</h4>
     <ul>
       <li class="protosite-nav-main-item">
         {{#with (page "docs/index")}}
