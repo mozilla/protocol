@@ -1,0 +1,13 @@
+---
+name: Required field
+description: Inputs that are required to submit the form should carry both the `required` and `aria-required` attributes and their labels should include a readable note.
+links:
+  WAI aria-required: https://www.w3.org/TR/wai-aria/#aria-required
+order: 9
+---
+
+<label for="email">
+  E-mail
+  <em class="mzp-c-fieldnote">Required</em>
+</label>
+<input type="email" name="email" id="email" placeholder="you@example.com">
