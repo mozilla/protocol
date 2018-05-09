@@ -24,3 +24,22 @@
         color: $color-link-visited-hover;
     }
 }
+
+.mzp-c-cta-link {
+    font-weight: bold;
+
+    &:link,
+    &:visited {
+        border-bottom: 1px solid transparent;
+        color: $color-primary;
+        text-decoration: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        @include transition(border-bottom .1s ease-in-out);
+        border-bottom: 1px solid $color-primary;
+        color: $color-primary;
+    }
+}
