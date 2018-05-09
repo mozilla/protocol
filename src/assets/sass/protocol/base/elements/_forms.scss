@@ -1,0 +1,133 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 .25em;
+
+    &.mzp-u-inline {
+        @include bidi(((padding, 0 $spacing-sm 0 0, 0 0 0 $spacing-sm),));
+        display: inline;
+        font-weight: normal;
+    }
+}
+
+button,
+input,
+select,
+textarea {
+    @include open-sans;
+    @include text-body-md;
+}
+
+textarea {
+    height: auto;
+    max-width: 100%;
+}
+
+textarea,
+input[type='email'],
+input[type='url'],
+input[type='tel'],
+input[type='password'],
+input[type='search'],
+input[type='text'],
+input[type='number'],
+input[type='date'],
+input[type='time'] {
+    @include border-box;
+    background: $color-secondary;
+    border-radius: .25em;
+    border: 1px solid $color-gray-dark;
+    display: inline-block;
+    line-height: 1.25;
+    padding: .25em $spacing-sm;
+
+    &:hover {
+        border-color: $color-primary;
+    }
+
+    &:focus {
+        border-color: $color-primary;
+        box-shadow: 0 0 0 2px $color-blue-light;
+    }
+
+    &:disabled {
+        background: $color-gray-lighter;
+
+        &:hover,
+        &:focus {
+            border-color: $color-gray-dark;
+        }
+    }
+}
+
+select:focus {
+    box-shadow: 0 0 0 2px $color-blue-light;
+}
+
+legend {
+    @include text-display-sm;
+}
+
+fieldset li {
+    margin-bottom: .5em;
+}
+
+.mzp-c-fieldnote {
+    @include text-body-sm;
+    color: $color-gray-dark;
+    display: block;
+    font-weight: normal;
+}
+
+.mzp-c-form-errors {
+    background: $color-yellow-light;
+    border: 2px solid $color-yellow-dark;
+    margin: 0 0 1em;
+    padding: $spacing-sm $spacing-md;
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    li {
+        margin: 0 0 .5em;
+    }
+}
+
+.mzp-is-error {
+    color: $color-red-dark;
+
+    .mzp-c-fieldnote {
+        color: $color-red-dark;
+    }
+
+    textarea,
+    input[type='email'],
+    input[type='url'],
+    input[type='tel'],
+    input[type='password'],
+    input[type='search'],
+    input[type='text'],
+    input[type='number'],
+    input[type='date'],
+    input[type='time'] {
+        border-color: $color-red-dark;
+
+        &:focus {
+            box-shadow: 0 0 0 2px $color-red-light;
+        }
+    }
+
+    select,
+    input[type='checkbox'],
+    input[type='radio'] {
+        box-shadow: 0 0 0 2px $color-red-light;
+    }
+
+}

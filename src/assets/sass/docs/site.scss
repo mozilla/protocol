@@ -247,6 +247,10 @@
     }
 }
 
+.protosite-pattern-title {
+    @include text-display-md;
+}
+
 .protosite-pattern-extra h3 {
     @include text-display-sm;
 }

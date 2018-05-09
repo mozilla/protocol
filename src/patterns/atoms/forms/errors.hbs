@@ -1,0 +1,63 @@
+---
+name: Errors
+description: Display a summary list of form errors at the top of the form. Indicate individual field errors with the `mzp-is-error` class on the field’s parent element.
+notes: |
+  - These colors are temporary; we'll update when we expand the palette in the very near future.
+tips: |
+  - Error messages should be short and simple. They should indicate what the user needs to do to resolve the error, not simply state that an error occurred. Bad example: “Invalid e-mail.” Good example: “Provide a complete e-mail address, like ‘yourname@example.com’.”
+order: 10
+labels:
+  - inprogress
+---
+
+<div class="mzp-c-form-errors">
+  <ul class="mzp-u-list-styled">
+    <li>You must provide an e-mail address.</li>
+    <li>You must select a language.</li>
+    <li>Your username must be at least six characters.</li>
+    <li>You must accept the terms and conditions.</li>
+  </ul>
+</div>
+
+<fieldset>
+  <p class="mzp-is-error">
+    <label for="email">
+      E-mail <em class="mzp-c-fieldnote">Required</em>
+    </label>
+    <input type="email" name="email" id="email" placeholder="you@example.com">
+  </p>
+
+  <p class="mzp-is-error">
+    <label for="language">Language</label>
+    <select name="language" id="language" required aria-required="true">
+      <option value="">- select -</option>
+    {{#each (data "items")}}
+      <option value="{{lang-code}}">{{language}}</option>
+    {{/each}}
+    </select>
+  </p>
+
+  <ul>
+    <li class="mzp-is-error">
+      <label for="username">
+        Username
+        <span class="mzp-c-fieldnote">Must be at least 6 characters.</span>
+      </label>
+      <input type="text" id="username" name="username" value="bub">
+    </li>
+    <li>
+      <label for="password">
+        Password
+        <span class="mzp-c-fieldnote">Must be at least 8 characters and contain at least one numeral. Passwords are case sensitive. This is an example of a pretty lengthy note.</span>
+      </label>
+      <input type="password" id="password" name="password">
+    </li>
+  </ul>
+
+  <p class="mzp-is-error">
+    <label for="accept" class="mzp-u-inline">
+      <input type="checkbox" id="accept" name="accept" required aria-required="true">
+      I accept the terms and conditions.
+    </label>
+  </p>
+</fieldset>

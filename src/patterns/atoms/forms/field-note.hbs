@@ -1,0 +1,25 @@
+---
+name: Field notes
+description: A note to provide added context or instructions to supplement the field label. It should be inside the `label` element, after the label text.
+order: 8
+---
+
+<fieldset>
+  <legend>Log into your account</legend>
+  <ul>
+    <li>
+      <label for="username">
+        Username
+        <span class="mzp-c-fieldnote">Must be at least 6 characters.</span>
+      </label>
+      <input type="text" id="username" name="username">
+    </li>
+    <li>
+      <label for="password">
+        Password
+        <span class="mzp-c-fieldnote">Must be at least 8 characters and contain at least one numeral. Passwords are case sensitive. This is an example of a pretty lengthy note.</span>
+      </label>
+      <input type="password" id="password" name="password">
+    </li>
+  </ul>
+</fieldset>
