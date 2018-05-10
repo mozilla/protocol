@@ -4,6 +4,9 @@
 
 @import '../includes/lib';
 
+$billboard-content-width-md: 300px + $spacing-sm; // content width + spacing small.
+$billboard-content-width-lg: 374px + $spacing-md; // content width + spacing medium.
+
 .mzp-c-billboard {
     background: $color-gray-lighter;
     margin: $layout-xxl 0;
@@ -56,13 +59,13 @@
         &.mzp-l-billboard-left {
             .mzp-c-billboard-content {
                 left: 0;
-                margin-left: calc(50% - 308px);
+                margin-left: calc(50% - #{$billboard-content-width-md});
                 width: 50%;
             }
 
             .mzp-c-billboard-media-link {
                 float: right;
-                margin-right: calc(50% - 308px);
+                margin-right: calc(50% - #{$billboard-content-width-md});
                 width: 50%;
             }
         }
@@ -70,13 +73,13 @@
         &.mzp-l-billboard-right {
             .mzp-c-billboard-content {
                 right: 0;
-                margin-right: calc(50% - 308px);
+                margin-right: calc(50% - #{$billboard-content-width-md});
                 width: 50%;
             }
 
             .mzp-c-billboard-media-link {
                 float: left;
-                margin-left: calc(50% - 308px);
+                margin-left: calc(50% - #{$billboard-content-width-md});
                 width: 50%;
             }
         }
@@ -101,21 +104,21 @@
 
         &.mzp-l-billboard-left {
             .mzp-c-billboard-content {
-                margin-left: calc(50% - 390px);
+                margin-left: calc(50% - #{$billboard-content-width-lg});
             }
 
             .mzp-c-billboard-media-link {
-                margin-right: calc(50% - 390px);
+                margin-right: calc(50% - #{$billboard-content-width-lg});
             }
         }
 
         &.mzp-l-billboard-right {
             .mzp-c-billboard-content {
-                margin-right: calc(50% - 390px);
+                margin-right: calc(50% - #{$billboard-content-width-lg});
             }
 
             .mzp-c-billboard-media-link {
-                margin-left: calc(50% - 390px);
+                margin-left: calc(50% - #{$billboard-content-width-lg});
             }
         }
     }
