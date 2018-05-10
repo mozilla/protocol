@@ -38,7 +38,7 @@
     &:hover,
     &:active,
     &:focus {
-        @include transition(border-bottom .1s ease-in-out);
+        @include transition(border-bottom-color 100ms ease-in-out);
         border-bottom: 1px solid $color-primary;
         color: $color-primary;
     }
