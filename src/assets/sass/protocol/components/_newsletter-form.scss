@@ -1,0 +1,116 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+.mzp-c-newsletter {
+    margin: 0 auto $margin-lg;
+    max-width: $width-content-sm;
+    padding: $padding-lg 0;
+
+    input[type='email'],
+    select {
+        width: 100%;
+    }
+
+    .mzp-c-form-submit {
+        text-align: center;
+    }
+
+    .mzp-c-button {
+        background-color: $color-primary;
+        margin-bottom: $margin-sm;
+        width: 100%;
+
+        &:hover,
+        &:focus {
+            background-color: lighten($color-primary, 20%);
+        }
+    }
+
+    // Hide errors and thank you message
+    .mzp-c-form-errors,
+    .mzp-c-newsletter-thanks {
+        @include hidden;
+    }
+
+    @media #{$media-md} {
+        @include clearfix;
+        padding: $padding-lg;
+        max-width: none;
+    }
+
+    @media #{$media-lg} {
+        padding: $layout-md $layout-xl;
+    }
+
+    @media #{$media-xl} {
+        padding: $layout-md $layout-xxl;
+    }
+}
+
+.mzp-c-newsletter-title {
+    @include text-display-md;
+    margin-bottom: .25em;
+}
+
+.mzp-c-newsletter-image {
+    margin-bottom: $margin-lg;
+    text-align: center;
+}
+
+@media #{$media-md} {
+    .mzp-c-newsletter-image {
+        @include grid-half;
+        float: left;
+    }
+
+    .mzp-c-newsletter-form,
+    .mzp-c-newsletter-thanks {
+        @include grid-half;
+        float: right;
+        padding-top: $layout-md;
+    }
+
+    @supports (display: grid) {
+        .mzp-c-newsletter {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: $spacing-xl;
+
+            &:after { // Remove the clearfix
+                display: none;
+            }
+        }
+
+        .mzp-c-newsletter-image,
+        .mzp-c-newsletter-form,
+        .mzp-c-newsletter-thanks {
+            width: auto;
+            float: none;
+        }
+
+        .mzp-c-newsletter-image {
+            grid-column: 1;
+        }
+
+        .mzp-c-newsletter-form,
+        .mzp-c-newsletter-thanks {
+            grid-column: 2;
+        }
+    }
+}
+
+@media #{$media-lg} {
+    .mzp-c-newsletter-form,
+    .mzp-c-newsletter-thanks {
+        padding-top: $layout-lg;
+    }
+}
+
+// hide details for JS users
+// (displayed when email field is focused)
+.js .mzp-c-newsletter-details {
+    @include hidden;
+}

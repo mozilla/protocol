@@ -41,7 +41,7 @@ input[type='date'],
 input[type='time'] {
     @include border-box;
     background: $color-secondary;
-    border-radius: .25em;
+    border-radius: 3px;
     border: 1px solid $color-gray-dark;
     display: inline-block;
     line-height: 1.25;
@@ -72,6 +72,10 @@ select:focus {
 
 legend {
     @include text-display-sm;
+
+    .mzp-u-inline & {
+        @include text-body-md;
+    }
 }
 
 fieldset li {
@@ -96,7 +100,7 @@ fieldset li {
     }
 
     li {
-        margin: 0 0 .5em;
+        margin-bottom: .5em;
     }
 }
 

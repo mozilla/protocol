@@ -1,0 +1,20 @@
+// Protocol core
+@import '../protocol/includes/lib';
+@import '../docs/protocol';
+
+.mzp-qa-newsletter-errors {
+    .mzp-c-form-errors,
+    .mzp-c-newsletter-details {
+        display: block;
+    }
+}
+
+.mzp-qa-newsletter-success {
+    .mzp-c-newsletter-form {
+        display: none;
+    }
+
+    .mzp-c-newsletter-thanks {
+        display: block;
+    }
+}
