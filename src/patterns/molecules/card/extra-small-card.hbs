@@ -1,0 +1,26 @@
+---
+name: Extra Small Card
+description: An extra small card with image, headline, description, and link.
+order: 4
+labels:
+    - inprogress
+notes: |
+    - The card in this example has a slightly longer title and no description.
+    - Optional card meta data is also displayed to show the time an article was published.
+    - Extra small sized cards should contain images with either 16:9, 3:2 aspect ratios.
+    - Recommended image width is 410px.
+    - Headlines should be a maximum of 40 characters, and descriptions a maximum of 140 characters.
+---
+
+<section class="mzp-c-card mzp-c-card-extra-small has-aspect-3-2">
+  <a class="mzp-c-card-block-link" href="#">
+    <div class="mzp-c-card-media-wrapper">
+      <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
+    </div>
+    <div class="mzp-c-card-content">
+      <div class="mzp-c-card-tag">Card tag</div>
+      <h2 class="mzp-c-card-title">Headline that goes onto a second or third line</h2>
+      <p class="mzp-c-card-meta">6 hours ago</p>
+    </div>
+  </a>
+</section>
