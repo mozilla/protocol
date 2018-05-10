@@ -1,0 +1,125 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+$billboard-content-width-md: 300px + $spacing-sm; // content width + spacing small.
+$billboard-content-width-lg: 374px + $spacing-md; // content width + spacing medium.
+
+.mzp-c-billboard {
+    background: $color-gray-lighter;
+    margin: $layout-xxl 0;
+    position: relative;
+
+    .mzp-c-billboard-content {
+        @include border-box;
+        margin: 0 auto;
+        max-width: 346px;
+        padding: $spacing-lg $spacing-sm;
+        text-align: center;
+    }
+
+    .mzp-c-billboard-title {
+        @include text-display-md;
+    }
+
+    .mzp-c-billboard-media-link {
+        display: block;
+        text-align: center;
+    }
+
+    .mzp-c-billboard-image {
+        margin-top: -125px;
+        max-width: 250px;
+    }
+
+    @media #{$media-md} {
+        @include clearfix;
+        margin: $margin-xl 0;
+
+        .mzp-c-billboard-content {
+            max-width: 300px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+
+        .mzp-c-billboard-media-link {
+            margin: $margin-lg 0;
+            max-width: 300px;
+        }
+
+        .mzp-c-billboard-image {
+            margin-top: 0;
+        }
+
+        &.mzp-l-billboard-left {
+            .mzp-c-billboard-content {
+                left: 0;
+                margin-left: calc(50% - #{$billboard-content-width-md});
+                width: 50%;
+            }
+
+            .mzp-c-billboard-media-link {
+                float: right;
+                margin-right: calc(50% - #{$billboard-content-width-md});
+                width: 50%;
+            }
+        }
+
+        &.mzp-l-billboard-right {
+            .mzp-c-billboard-content {
+                right: 0;
+                margin-right: calc(50% - #{$billboard-content-width-md});
+                width: 50%;
+            }
+
+            .mzp-c-billboard-media-link {
+                float: left;
+                margin-left: calc(50% - #{$billboard-content-width-md});
+                width: 50%;
+            }
+        }
+    }
+
+    @media #{$media-lg} {
+        margin: $layout-xxl 0;
+
+        .mzp-c-billboard-content {
+            @include border-box;
+            max-width: 374px;
+        }
+
+        .mzp-c-billboard-media-link {
+            margin: -42px 0;
+            max-width: 374px;
+        }
+
+        .mzp-c-billboard-image {
+            max-width: none;
+        }
+
+        &.mzp-l-billboard-left {
+            .mzp-c-billboard-content {
+                margin-left: calc(50% - #{$billboard-content-width-lg});
+            }
+
+            .mzp-c-billboard-media-link {
+                margin-right: calc(50% - #{$billboard-content-width-lg});
+            }
+        }
+
+        &.mzp-l-billboard-right {
+            .mzp-c-billboard-content {
+                margin-right: calc(50% - #{$billboard-content-width-lg});
+            }
+
+            .mzp-c-billboard-media-link {
+                margin-left: calc(50% - #{$billboard-content-width-lg});
+            }
+        }
+    }
+}

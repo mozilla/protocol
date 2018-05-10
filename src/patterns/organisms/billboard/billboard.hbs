@@ -1,0 +1,46 @@
+---
+name: Billboard
+description: |
+  A billboard style call-out with image, text and link.
+
+  The image and copy stack vertically on small screens, and run full width horizontally on larger screens.
+
+  The example below is **better viewed in isolation** on the [billboard demo page](/demos/billboard.html), where it can be viewed full screen.
+tips: |
+  - Use the layout classes `mzp-l-billboard-left` or `mzp-l-billboard-right` to indicate the layout.
+  - The layout is **not** reversed in right to left (RTL) languages, since text is already centered and images may prefer a particular orientation.
+  - Image should be 346px in width and 346px in height.
+  - Headlines should be a maximum of 35 characters, and description should be a maximum of 100 characters.
+labels:
+    - prototype
+    - inprogress
+---
+
+<div class="mzp-c-billboard mzp-l-billboard-right">
+  <a href="#" class="mzp-c-billboard-media-link">
+    <img class="mzp-c-billboard-image" src="{{@root.baseurl}}/static/img/billboard/billboard-image.png" alt="">
+  </a>
+  <div class="mzp-c-billboard-content">
+    <div class="mzp-c-billboard-content-inner">
+      <h2 class="mzp-c-billboard-title">Example headline with 35 characters</h2>
+      <p class="mzp-c-billboard-desc">A description with a maximum of 100 characters. That usually means only one or two sentences.</p>
+      <a class="mzp-c-cta-link" href="#">Learn more about us</a>
+    </div>
+  </div>
+</div>
+
+<div class="mzp-c-billboard mzp-l-billboard-left">
+  <a href="#" class="mzp-c-billboard-media-link">
+    <img class="mzp-c-billboard-image" src="{{@root.baseurl}}/static/img/billboard/billboard-image.png" alt="">
+  </a>
+  <div class="mzp-c-billboard-content">
+    <div class="mzp-c-billboard-content-inner">
+      <h2 class="mzp-c-billboard-title">A short headline</h2>
+      <p class="mzp-c-billboard-desc">A short description with a single sentence.</p>
+      <a class="mzp-c-cta-link" href="#">Learn more about us</a>
+    </div>
+  </div>
+</div>
+
+
+
