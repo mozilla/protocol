@@ -7,9 +7,6 @@ These are the guiding principles that inform our design decisions.
 
 The components, pages, and websites we create should be:
 
-
-<img src="{{@root.baseurl}}/static/img/skinner.png" alt="" title="Not that kind of principle" style="float: right; margin: 0 20px 1em;">
-
 ### Meaningful
 
 Design should reinforce the meaning of content, not distract from it. We prioritize worthwhile communication over decoration. If an aspect of the design doesn’t enhance the content, we should remove it.

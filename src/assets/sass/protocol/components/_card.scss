@@ -60,11 +60,11 @@
     }
 
     &.mzp-has-video .mzp-c-card-tag {
-        background: url('#{$image-path}/card/card-tag-video.svg') center left no-repeat;
+        background: url('#{$image-path}/icons/ui/video.svg') center left no-repeat;
     }
 
     &.mzp-has-audio .mzp-c-card-tag {
-        background: url('#{$image-path}/card/card-tag-audio.svg') center left no-repeat;
+        background: url('#{$image-path}/icons/ui/audio.svg') center left no-repeat;
     }
 
     .mzp-c-card-title {

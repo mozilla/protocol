@@ -225,8 +225,6 @@ dist
 
 By default, Pages will include the surrounding Drizzle UI elements in their layout:
 
-![](./drizzle_default_layout.png)
-
 To use a different [layout template](#layouts), you can assign one in the Page [front-matter](#front-matter):
 
 ```yaml
