@@ -120,7 +120,7 @@ module.exports = {
         img: {
             src: [
                 `${src}/img/**/*`,
-                `./node_modules/@mozilla-protocol/assets/**/*`
+                `./node_modules/@mozilla-protocol/assets/**/*.svg`
             ],
             dest: `${dest}/protocol/protocol/img/`
         },
