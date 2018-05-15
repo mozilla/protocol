@@ -118,7 +118,10 @@ module.exports = {
             dest: `${dest}/protocol`
         },
         img: {
-            src: `${src}/img/**/*`,
+            src: [
+                `${src}/img/**/*`,
+                `./node_modules/@mozilla-protocol/assets/**/*`
+            ],
             dest: `${dest}/protocol/protocol/img/`
         },
         fonts: {
