@@ -27,10 +27,10 @@ node {
     stage ('Prepare') {
       checkout scm
     }
-    if ( env.BRANCH_NAME == 'jenkins-s3' ) { // TODO: switch to master branch after test
+    if ( env.BRANCH_NAME == 'master' ) {
       buildSite('stage')
       syncS3('mozilla-protocol-stage')
-    } else if ( env.BRANCH_NAME == 'prod' ) {
+    } else if ( env.BRANCH_NAME == 'jenkins-s3' ) { // TODO: switch to prod branch after test
       buildSite('prod')
       syncS3('mozilla-protocol')
     }
