@@ -1,12 +1,6 @@
 const gulp = require('gulp');
 const runSequence = require('run-sequence');
-const tasks = require('@cloudfour/gulp-tasks');
-const config = require('../config');
-const env = require('gulp-util').env;
-
-// Register core tasks
-const core = ['clean', 'js', 'serve', 'watch'];
-core.forEach(name => tasks[name](gulp, config[name]));
+const argv = require('yargs').argv;
 
 // Register frontend composite task
 gulp.task('frontend', done => {
@@ -28,7 +22,7 @@ gulp.task('build', done => {
 gulp.task('default', ['build'], done => {
     gulp.start('serve');
 
-    if (env.dev) {
+    if (argv.dev) {
         gulp.start('watch');
     }
 

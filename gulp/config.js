@@ -3,6 +3,9 @@ const src = './src/assets';
 const version = require('../package.json').version;
 
 module.exports = {
+    clean: {
+        dest: './dist/'
+    },
     lintCss: {
         src: `${src}/sass/**/*.scss`
     },
