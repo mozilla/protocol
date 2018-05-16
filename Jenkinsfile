@@ -30,7 +30,7 @@ node {
     if ( env.BRANCH_NAME == 'master' ) {
       buildSite('stage')
       syncS3('mozilla-protocol-stage')
-    } else if ( env.BRANCH_NAME == 'jenkins-s3' ) { // TODO: switch to prod branch after test
+    } else if ( env.BRANCH_NAME == 'prod' ) {
       buildSite('prod')
       syncS3('mozilla-protocol')
     }
