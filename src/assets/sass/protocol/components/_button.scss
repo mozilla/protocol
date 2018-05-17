@@ -1,0 +1,25 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+.mzp-c-button {
+    @include border-box;
+    @include text-cta;
+    @include transition(background-color 100ms);
+    background-color: $color-blue;
+    border-radius: 3px;
+    border: 0;
+    color: $color-secondary;
+    display: inline-block;
+    font-weight: bold;
+    padding: $padding-sm $padding-lg;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        background-color: $color-blue-dark;
+        color: $color-secondary;
+    }
+}
