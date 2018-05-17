@@ -59,12 +59,6 @@ module.exports = {
         }
     },
     concatJS: {
-        protocol: {
-            src: [
-                `${src}/js/protocol/*.js`
-            ],
-            dest: `${dest}/protocol/protocol/js/`
-        },
         docs: {
             src: [
                 `${src}/js/docs/**/*.js`
