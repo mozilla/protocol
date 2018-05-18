@@ -1,0 +1,125 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+@import '../includes/animations';
+
+html.mzp-is-noscroll {
+    overflow: hidden;
+    height: 100%;
+
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .mzp-c-modal {
+        position: absolute;
+    }
+
+    @media #{$media-md} {
+        height: auto;
+
+        body {
+            height: auto;
+        }
+
+        .mzp-c-modal {
+            position: fixed;
+        }
+    }
+}
+
+.mzp-c-modal {
+    @include animation(mzp-a-fade-in 300ms ease-in 0ms 1 normal both);
+    background: $color-primary;
+    background: rgba(0, 0, 0, .85);
+    bottom: 0;
+    height: 101%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+}
+
+.mzp-c-modal-window {
+    padding: $padding-lg;
+}
+
+.mzp-c-modal-inner {
+    @include clearfix;
+    background: rgba(0, 0, 0, .9);
+    max-width: 1200px;
+    padding: $padding-xl;
+    position: relative;
+
+    &> header {
+        @include bidi(((padding-right, $padding-xl * 2, padding-left, 0),));
+
+        h2 {
+            @include text-display-sm;
+            @include open-sans;
+            color: #fff;
+        }
+    }
+
+    @media #{$media-lg} {
+        margin: $margin-lg auto ($margin-xl * 2);
+    }
+}
+
+.mzp-c-modal-close {
+    @include bidi(((right, $spacing-sm, left, auto),));
+    cursor: pointer;
+    position: absolute;
+    top: 9px;
+    z-index: 99;
+
+    .mzp-c-modal-button-close {
+        @include image-replaced;
+        background: transparent url('#{$image-path}/icons/ui/close.svg') center center no-repeat;
+        @include background-size(30px 30px);
+        border: none;
+        height: 42px;
+        min-width: 0;
+        padding: 0;
+        width: 42px;
+
+        &:hover,
+        &:focus {
+            @include transition(transform .1s ease-in-out);
+            @include transform(scale(1.1));
+        }
+
+        &:focus {
+            outline: 1px dotted $color-secondary;
+        }
+    }
+}
+
+.mzp-c-modal-overlay-contents {
+    @include text-body-lg;
+    @include light-links;
+    background: transparent;
+    margin: 0 auto;
+    padding-top: $padding-lg;
+    color: $color-secondary;
+
+    img, video {
+        max-width: 100%;
+        margin-bottom: $margin-xl;
+    }
+}
+
+// Utility class for hiding content that is to be used in the modal.
+.js .mzp-u-modal-content {
+    display: none;
+}
+
+.js .mzp-c-modal-inner .mzp-u-modal-content {
+    display: block;
+}
