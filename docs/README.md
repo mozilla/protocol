@@ -1,29 +1,19 @@
-[autoprefixer]: https://github.com/postcss/autoprefixer
-[browserslist]: https://github.com/ai/browserslist
-[node]: http://nodejs.org
 [gulp]: http://gulpjs.com
 [handlebars]: http://handlebarsjs.com
 [handlebars-layouts]: https://github.com/shannonmoeller/handlebars-layouts
 [drizzle]: https://github.com/cloudfour/drizzle
 [front-matter]: https://github.com/jxson/front-matter
 [marked]: https://github.com/chjj/marked
-[npm]: https://www.npmjs.com/
-[releases]: https://github.com/mozilla/protocol/releases/latest
 [git-tag]: https://git-scm.com/book/en/v2/Git-Basics-Tagging
 [semver]: https://semver.org/
-[demo-default]: https://cloudfour.github.io/drizzle
-[demo-collection]: https://cloudfour.github.io/drizzle/patterns/components/button.html
-[demo-blank]: https://cloudfour.github.io/drizzle/demos/demo-example-1.html
+[demo-default]: https://mozilla-protocol.netlify.com/patterns/organisms/article.html
+[demo-collection]: https://mozilla-protocol.netlify.com/patterns/atoms/typographic.html
+[demo-blank]: https://mozilla-protocol.netlify.com/demos/type-scale.html
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ### Contents
 
-- [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Building from source](#building-from-source)
-  - [Tasks](#tasks)
 - [Project Structure](#project-structure)
   - [Patterns](#patterns)
   - [Pages](#pages)
@@ -33,74 +23,24 @@
   - [Helpers](#helpers)
   - [Stylesheets](#stylesheets)
   - [JavaScript](#javascript)
-- [Customization](#customization)
-  - [Branding](#branding)
-  - [Appearance](#appearance)
-- [Advanced](#advanced)
-- [Browsers](#browsers)
+- [Build Process](#build-process)
 - [Publishing](#publishing)
 - [Acknowledgements](#acknowledgements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Getting Started
-
-Protocol is built on the [Node.js][node] platform and published to [NPM][npm], so be sure to have both installed before proceeding.
-
-## Installation
-
-To use Protocol in your website you can install the core package directly from NPM:
-
-```
-npm install @mozilla-protocol/core --save
-```
-
-Alternatively, you can also [download the latest release][releases] from GitHub.
-
-## Usage
-
-Once installed, the relevant CSS and JS files will be available in your project under `./mode_modules/@mozilla-protocol/core/`
-
-The core CSS is bundled as `protocol.css`. This contains styling for things such as basic elements and typography. Component and layout CSS is bundled as `protocol-extra.scss` for convenience.
-
-**Note**: The original source (scss) files are also included in the published package. You may want to consider compiling your own CSS to include only what you need for each page of your website, in order to further optimize for performance.
-
-## Building from source
-
-To build Protocol from source including the documentatiion site, you can clone the repo from GitHub:
-
-```
-$ git clone https://github.com/mozilla/protocol.git
-$ cd protocol
-$ npm start
-```
-
-Running `npm start` will install dependencies, build your toolkit, and start the development server at <http://localhost:3000>.
-
-## Tasks
-
-The build sequence consists of a small set of [Gulp][gulp] tasks. While you'll probably only need `gulp` and `gulp --dev` most of the time, the other tasks can be called independently to process only a subset of your source files:
-
-| Task           | Description
-| ---            | ---
-| `gulp`         | Build everything and start the development server.
-| `gulp --dev`   | Do everything `gulp` does, but with file watching.
-| `gulp clean`   | Empty the destination directory.
-| `gulp copy`    | Copy static assets into the destination directory.
-| `gulp css`     | Process CSS for the toolkit and Drizzle UI.
-| `gulp js`      | Process JavaScript for the toolkit and Drizzle UI.
-| `gulp drizzle` | Compile all data, pages, and patterns into HTML files.
-| `gulp serve`   | Start the development server.
-| `gulp watch`   | Run tasks automatically when file changes occur.
-
-
 # Project Structure
 
-New Drizzle projects contain some boilerplate files to help you get started. The default directory structure looks something like this:
+The default Protocol directory structure looks something like this:
 
 ```
-my-drizzle-toolkit
+protocol
 ├── dist
+├── docs
+├── gulp
+│   ├── tasks
+│   ├── utils
+│   ├── config.js
 ├── src
 │   ├── assets
 │   ├── data
@@ -108,43 +48,35 @@ my-drizzle-toolkit
 │   ├── patterns
 │   ├── static
 │   └── templates
-├── browserslist
-├── config.js
 └── gulpfile.js
 ```
 
 | File | Description
 | ---  | ---
-| **dist** | Where toolkit builds are output
-| **src/assets/toolkit** | Where toolkit CSS and JavaScript files live
+| **dist** | Where Protocol builds are output
+| **src/assets** | Where Protocol source files live
 | **src/data** | Where shared [template data](#data) files live
 | **src/pages** | Where [Page](#pages) content and templates live
-| **src/patterns** | Where [Pattern](#pages) templates live
+| **src/patterns** | Where [Pattern](#patterns) templates live
 | **src/static** | Where generic root assets live
-| **src/templates** | Where [Page Layout](#layouts) and Drizzle UI templates live
-| **browserslist** | The [Browserslist][browserslist] configuration for [Autoprefixer][autoprefixer]
-| **config.js** | The [Gulp task](#tasks) configuration module
-| **gulpfile.js** | The [Gulp task](#tasks) initialization script
+| **src/templates** | Where [Page Layout](#layouts) and Protocol UI templates live
+| **gulp/config.js** | The [Gulp task](#build-process) configuration module
+| **gulp/tasks** | Individual Gulp task files
+| **gulp/utils** | Common Gulp task utility files and helpers
+| **gulpfile.js** | The Gulp task initialization script
 
 ## Patterns
 
-A Pattern is a grouping of markup templates representing a distinct interface element. They are intended to be the most substantial and relevant part of your toolkit content.
+A Pattern is a grouping of markup templates representing a distinct interface element. Patterns are probably the most substantial and relevant part of the Protocol design system.
 
-The default project structure shows how you might classify patterns as **components** and **elements**:
-
-```
-src/patterns
-├── components
-└── elements
-```
-
-But you can use any naming convention that makes sense for your project:
+The default project structure is as follows:
 
 ```
 src/patterns
 ├── atoms
 ├── molecules
-└── organisms
+├── organisms
+└── templates
 ```
 
 ### Collections
@@ -154,21 +86,19 @@ A Pattern _Collection_ is any folder within **src/patterns** that is the parent 
 Example input:
 
 ```
-src/patterns/components
-├── button
-│   ├── base.hbs
-│   └── primary.hbs
-└── grid
-    ├── default.hbs
-    └── responsive.hbs
+src/patterns/molecules
+├── card
+    ├── extra-small-card.hbs
+    ├── large-card.hbs
+    ├── medium-card.hbs
+    └── small-card.hbs
 ```
 
 Example output:
 
 ```
-dist/patterns/components
-├── button.html
-└── grid.html
+dist/patterns/molecules
+└── card.html
 ```
 
 ### Variations
@@ -176,27 +106,25 @@ dist/patterns/components
 It's common for patterns to consist of multiple variations of the same general piece of markup. For example, the pattern collection for a button component could be structured as:
 
 ```
-src/patterns/components/button
-├── base.hbs
-└── primary.hbs
+src/patterns/atoms/buttons
+├── basic.hbs
+|── primary.hbs
+└── secondary.hbs
 ```
 
 These pattern variations are accessible from other templates as partials:
 
 ```hbs
-{{> patterns.components.button.base}}
+{{> patterns.components.button.basic}}
 ```
 
 And for more complex cases, the **{{#extend}}** and **{{#embed}}** helpers can be used:
 
 ```hbs
-{{#embed "patterns.components.button.base"}}
+{{#embed "patterns.components.button.basic"}}
   ...
 {{/embed}}
 ```
-
-_Refer to the [Recipes](#recipes) section for examples of extending and embedding patterns._
-
 
 ## Pages
 
@@ -207,12 +135,14 @@ Example input:
 ```
 src/pages
 ├── demos
-│   ├── example.hbs
+│   ├── article.hbs
+│   ├── card-layout.hbs
 │   └── index.hbs
 ├── docs
-│   ├── example.md
 │   └── index.hbs
-├── colors.hbs
+├── fundamentals
+│   ├── color.hbs
+│   └── typography.hbs
 └── index.hbs
 ```
 
@@ -221,16 +151,18 @@ Example output:
 ```
 dist
 ├── demos
-│   ├── example.html
+│   ├── article.html
+│   ├── card-layout.html
 │   └── index.html
 ├── docs
-│   ├── example.html
 │   └── index.html
-├── colors.html
+├── fundamentals
+│   ├── color.html
+│   └── typography.html
 └── index.html
 ```
 
-By default, Pages will include the surrounding Drizzle UI elements in their layout:
+By default, Pages will include the surrounding Protocol UI elements in their layout:
 
 To use a different [layout template](#layouts), you can assign one in the Page [front-matter](#front-matter):
 
@@ -245,14 +177,14 @@ _Refer to the [Layouts](#layouts) section for more information on the default la
 
 To share common data across all [Page](#pages) and [Pattern](#patterns) templates, you can define data files in JSON or YAML format.
 
-Some default files are included:
+Common data files are include:
 
 ```
 src/data
 ├── articles.yaml
 ├── colors.yaml
+├── items.yaml
 ├── project.yaml
-├── radfaces.json
 └── specimens.yaml
 ```
 
@@ -294,7 +226,7 @@ name: Basic Button
 notes: This is _just_ a **basic** button.
 ---
 
-<button class="Button">
+<button class="mzp-c-button">
   {{name}}
 </button>
 ```
@@ -310,10 +242,10 @@ These values can be accessed directly within their own template (e.g. `{{name}}`
 Front-matter can also be applied to [Pattern Collections](#collections) by using a **collection.yaml** file at the root of the directory:
 
 ```
-src/patterns/components/button
+src/patterns/atoms/buttons
 ├── collection.yaml
-├── base.hbs
-└── primary.hbs
+├── basic.hbs
+└── download.hbs
 ```
 
 ### Special Properties
@@ -332,7 +264,7 @@ While any arbitrary data can be added and referenced, there are some special pro
 
 ## Templates
 
-Templates in the **src/templates** directory are intended for the surrounding Drizzle UI.
+Templates in the **src/templates** directory are intended for the surrounding Protocol docs UI.
 
 ```
 src/templates
@@ -354,21 +286,19 @@ Files at the top-level of the templates directory are assumed to be layout templ
 
 | Layout             | Description
 | ---                | ---
-| **default.hbs**    | This is for standard pages that do require the presence of the Drizzle UI. [Example][demo-default]
-| **blank.hbs**      | This is used for special standalone pages that don't require the presence of the Drizzle UI. [Example][demo-blank]
-| **collection.hbs** | This is used for concatenating Pattern collections  into a single page. [Example][demo-collection]
+| **default.hbs**    | This is for standard pages that do require the presence of the Protocol docs UI. [Example][demo-default]
+| **blank.hbs**      | This is used for special standalone pages that don't require the presence of the Protocol docs UI. [Example][demo-blank]
+| **collection.hbs** | This is used for concatenating Pattern collections into a single page. [Example][demo-collection]
 
 ### Partials
 
-Files deeper than the top-level of the templates directory are intended to be used as partials for the Drizzle UI:
+Files deeper than the top-level of the templates directory are intended to be used as partials for the Protcol docs UI:
 
 ```
 src/templates/drizzle
 ├── item.hbs
 ├── labelheader.hbs
-├── logo.hbs
 ├── nav.hbs
-├── page-item.hbs
 └── swatch.hbs
 ```
 
@@ -443,7 +373,7 @@ Pattern templates can also benefit from these helpers:
 
 ```hbs
 {{! src/patterns/components/button/base.hbs }}
-<button class="Button {{class}}">
+<button class="mzp-c-button {{class}}">
   {{#block "content"}}
     Base Button
   {{/block}}
@@ -452,7 +382,7 @@ Pattern templates can also benefit from these helpers:
 
 ```hbs
 {{! src/patterns/components/button/primary.hbs }}
-{{#embed "components.button.base" class="Button--primary"}}
+{{#embed "components.button.base" class="mzp-c-button-primary"}}
   {{#content "content"}}
     Primary Button
   {{/content}}
@@ -460,55 +390,103 @@ Pattern templates can also benefit from these helpers:
 ```
 
 ```html
-<button class="Button Button--primary">
+<button class="mzp-c-button mzp-c-button-primary">
   Primary Button
 </button>
 ```
 
 ## Stylesheets
 
+Protocol CSS files are compiled from Sass source files. Both source files and compiled CSS files are included in the output `dist` directory for convenience.
+
+Example input:
+
 ```
-assets/toolkit/styles
-└── toolkit.css
+assets/sass
+├── demos
+│   ├── article.scss
+│   ├── card.scss
+│   └── newsletter.scss
+├── docs
+│   └── site.scss
+├── protocol
+│   ├── base
+│   ├── components
+│   ├── includes
+│   ├── templates
+│   └── protocol.scss
 ```
 
-- [ ] **TODO**: Explain place in build process.
+Example output:
+
+```
+dist/assets
+├── docs
+|   |── css
+|      |── article.css
+|      |── article.scss
+|      |── card.css
+|      |── card.scss
+|      |── newsletter.css
+|      |── newsletter.scss
+|      |── site.css
+|      └── site.scss
+├── protocol
+|   |── protocol
+|      |── css
+│         ├── base
+│         ├── components
+│         ├── includes
+│         ├── templates
+│         ├── protocol.css
+│         └── protocol.scss
+```
+
+**Note:** that both `demos` and `docs` source files are copied to the same directory for use in the docs site.
 
 ## JavaScript
 
+JavaScript files are also processed using a similar structure.
+
+Example input:
+
 ```
-src/assets/toolkit/scripts
-└── toolkit.js
+src/assets/js
+├── docs
+│   ├── vendor
+│   └── global.js
+├── protocol
+│   ├── protocol-base.js
+│   └── protocol-sidemenu.js
 ```
 
-- [ ] **TODO**: Explain place in build process.
+Example output:
 
-# Customization
+```
+dist/assets
+├── docs
+|   |── js
+|      |── vendor
+|      └── global.js
+├── protocol
+|   |── protocol
+|      |── js
+│         ├── protocol-base.js
+│         └── protocol-sidemenu.js
+```
 
-## Branding
+# Build Process
 
-- [ ] **TODO**: Explain logo partial
-- [ ] **TODO**: Explain colors page and data
+The build sequence consists of a small set of [Gulp][gulp] tasks. While you'll probably only need `gulp` and `gulp --dev` most of the time, the other tasks can be called independently to process only a subset of your source files:
 
-## Appearance
-
-- [ ] **TODO**: Explain class namespaces
-- [ ] **TODO**: Changing how the Drizzle UI looks
-- [ ] **TODO**: Code highlighting with Prism
-
-
-# Advanced
-
-- [ ] **TODO**: Overriding CSS and JS for a specific page
-- [ ] **TODO**: Extending Patterns using layout helpers
-- [ ] **TODO**: Adding PostCSS plugins (`postcss-use`)
-- [ ] **TODO**: browserslist/autoprefixer implications
-
-
-# Browsers
-
-- [ ] **TODO**: Which are supported?
-
+| Task            | Description
+| ---             | ---
+| `gulp`          | Build everything and start the development server.
+| `gulp --dev`    | Do everything `gulp` does, but with file watching.
+| `gulp clean`    | Empty the destination directory.
+| `gulp frontend` | Run the frontend composite task, which lints, compiles and builds all the source files.
+| `gulp serve`    | Start the development server.
+| `gulp watch`    | Run tasks automatically when file changes occur.
 
 # Publishing
 
