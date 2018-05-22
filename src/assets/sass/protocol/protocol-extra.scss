@@ -1,0 +1,18 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+// Default media paths can be overwritten globally.
+$font-path: '../fonts' !default;
+$image-path: '../img' !default;
+
+@import '../protocol/templates/card-layout';
+@import '../protocol/templates/main-with-sidebar';
+@import '../protocol/components/article';
+@import '../protocol/components/billboard';
+@import '../protocol/components/sidebar-menu';
+@import '../protocol/components/card';
+@import '../protocol/components/button';
+@import '../protocol/components/newsletter-form';
+@import '../protocol/components/modal';

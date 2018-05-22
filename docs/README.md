@@ -21,6 +21,7 @@
 
 - [Getting Started](#getting-started)
   - [Installation](#installation)
+  - [Usage](#usage)
   - [Building from source](#building-from-source)
   - [Tasks](#tasks)
 - [Project Structure](#project-structure)
@@ -54,9 +55,15 @@ To use Protocol in your website you can install the core package directly from N
 npm install @mozilla-protocol/core --save
 ```
 
+Alternatively, you can also [download the latest release][releases] from GitHub.
+
+## Usage
+
 Once installed, the relevant CSS and JS files will be available in your project under `./mode_modules/@mozilla-protocol/core/`
 
-Alternatively, you can also [download the latest release][releases] from GitHub.
+The core CSS is bundled as `protocol.css`. This contains styling for things such as basic elements and typography. Component and layout CSS is bundled as `protocol-extra.scss` for convenience.
+
+**Note**: The original source (scss) files are also included in the published package. You may want to consider compiling your own CSS to include only what you need for each page of your website, in order to further optimize for performance.
 
 ## Building from source
 
