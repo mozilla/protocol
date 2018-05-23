@@ -20,6 +20,7 @@ categories:
     <li>`is-` to indicate a current state, e.g. `.mzp-is-active`, `.mzp-is-collapsed` (typically assigned by JS and not hard-coded).</li>
     <li>`has-` to indicate that a component contains some other component, when the parent gets some styling to accommodate the child, e.g. `.mzp-has-submenu`, `.mzp-has-image`.</li>
     <li>`js-` used as a behavior hook for JavaScript, e.g. `.mzp-js-sticky`, `.mzp-js-collapsible`, `.mzp-js-toggle`. Indicates potential for a change of state and usually shouldn’t have any styling.</li>
+    <li>`a-` for a CSS animation names, e.g. `mzp-a-fade-in`, `mzp-a-fade-out`.</li>
 </ul>
 
 Our names are all lowercase and hyphen-separated or “kebab-case,” e.g.

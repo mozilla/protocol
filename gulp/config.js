@@ -153,7 +153,7 @@ module.exports = {
             },
             {
                 match: `${src}/js/**/*.js`,
-                tasks: ['js:lint', 'js:concat']
+                tasks: ['js:lint', 'js:concat', 'js:copy']
             },
             {
                 match: `${src}/sass/**/*.scss`,

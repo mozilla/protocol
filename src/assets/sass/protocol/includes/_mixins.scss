@@ -224,3 +224,17 @@
       top: 0;
     }
 }
+
+// Light color links for dark backgrounds.
+@mixin light-links {
+    a:link,
+    a:visited {
+        color: $color-secondary;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        color: darken($color-secondary, 10%);
+    }
+}
