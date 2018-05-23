@@ -2,8 +2,6 @@
 name: Large Card
 description: A large card with image, headline, description, and link.
 order: 1
-labels:
-    - inprogress
 notes: |
     - Large sized cards display larger text to other card types, as well as larger images.
     - Large sized cards should contain images with 16:9 or 3:2 aspect ratios only.
@@ -11,15 +9,4 @@ notes: |
     - Headlines should be a maximum of 40 characters, and descriptions a maximum of 140 characters.
 ---
 
-<section class="mzp-c-card mzp-c-card-large mzp-has-aspect-16-9">
-  <a class="mzp-c-card-block-link" href="#">
-    <div class="mzp-c-card-media-wrapper">
-      <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-    </div>
-    <div class="mzp-c-card-content">
-      <div class="mzp-c-card-tag">Card tag</div>
-      <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-      <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-    </div>
-  </a>
-</section>
+{{#embed "patterns.molecules.card.small-card" class="mzp-c-card-large mzp-has-aspect-16-9"}}{{/embed}}
