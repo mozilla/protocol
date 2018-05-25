@@ -68,7 +68,10 @@ module.exports = {
     },
     sassCompile: {
         protocol: {
-            src: `${src}/sass/protocol/protocol.scss`,
+            src: [
+                `${src}/sass/protocol/protocol.scss`,
+                `${src}/sass/protocol/protocol-extra.scss`
+            ],
             dest: `${dest}/protocol/protocol/css/`
         },
         docs: {
