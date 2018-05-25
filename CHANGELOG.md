@@ -1,4 +1,4 @@
-# HEAD
+# 1.0.0
 
 ## Features
 * **css:** Compile protocol-extra.css bundle (#120)
