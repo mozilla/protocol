@@ -24,70 +24,11 @@ styles:
   </header>
 
   <div class="mzp-l-card-hero">
-    <section class="mzp-c-card mzp-c-card-large mzp-has-aspect-16-9">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-has-aspect-1-1">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
+    {{#embed "patterns.molecules.card.large-card"}}{{/embed}}
+    {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-1-1"}}{{/embed}}
+    {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
+    {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
+    {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
   </div>
 </div>
 
@@ -102,57 +43,10 @@ styles:
   </header>
 
   <div class="mzp-l-card-quarter">
-    <section class="mzp-c-card mzp-c-card-extra-small has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">Headline that goes onto a second or third line</h2>
-          <p class="mzp-c-card-meta">6 hours ago</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-c-card-extra-small has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">Headline that goes onto a second or third line</h2>
-          <p class="mzp-c-card-meta">6 hours ago</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-c-card-extra-small has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">Headline that goes onto a second or third line</h2>
-          <p class="mzp-c-card-meta">6 hours ago</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-c-card-extra-small has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">Headline that goes onto a second or third line</h2>
-          <p class="mzp-c-card-meta">6 hours ago</p>
-        </div>
-      </a>
-    </section>
+    {{#embed "patterns.molecules.card.extra-small-card"}}{{/embed}}
+    {{#embed "patterns.molecules.card.extra-small-card"}}{{/embed}}
+    {{#embed "patterns.molecules.card.extra-small-card"}}{{/embed}}
+    {{#embed "patterns.molecules.card.extra-small-card"}}{{/embed}}
   </div>
 </div>
 
@@ -167,83 +61,12 @@ styles:
   </header>
 
   <div class="mzp-l-card-third">
-    <section class="mzp-c-card mzp-has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-has-aspect-1-1">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
+    {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
+    {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-1-1"}}{{/embed}}
+    {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
+    {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
+    {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
+    {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
   </div>
 </div>
 
@@ -257,32 +80,8 @@ styles:
   </header>
 
   <div class="mzp-l-card-half">
-    <section class="mzp-c-card mzp-c-card-medium mzp-has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
-    <section class="mzp-c-card mzp-c-card-medium mzp-has-aspect-3-2">
-      <a class="mzp-c-card-block-link" href="#">
-        <div class="mzp-c-card-media-wrapper">
-          <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
-        </div>
-        <div class="mzp-c-card-content">
-          <div class="mzp-c-card-tag">Tag</div>
-          <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
-          <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
-        </div>
-      </a>
-    </section>
-
+    {{#embed "patterns.molecules.card.medium-card"}}{{/embed}}
+    {{#embed "patterns.molecules.card.medium-card"}}{{/embed}}
   </div>
 </div>
 
