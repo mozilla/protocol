@@ -16,7 +16,7 @@ To use Protocol in your website you can install the core package directly from N
 npm install @mozilla-protocol/core --save
 ```
 
-Alternatively, you can also [download the latest release]( https://github.com/mozilla/protocol/releases/latest) from GitHub.
+Alternatively, you can also [download the latest release](https://github.com/mozilla/protocol/releases/latest) from GitHub.
 
 ## Usage
 

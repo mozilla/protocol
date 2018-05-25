@@ -9,6 +9,10 @@
 [demo-default]: https://mozilla-protocol.netlify.com/patterns/organisms/article.html
 [demo-collection]: https://mozilla-protocol.netlify.com/patterns/atoms/typographic.html
 [demo-blank]: https://mozilla-protocol.netlify.com/demos/type-scale.html
+[package.json]: https://github.com/mozilla/protocol/blob/master/src/assets/package/package.json
+[releases]: https://github.com/mozilla/protocol/releases/latest
+[readme]: https://github.com/mozilla/protocol/blob/master/src/assets/package/README.md
+[changelog]: https://github.com/mozilla/protocol/blob/master/CHANGELOG.md
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -492,11 +496,13 @@ The build sequence consists of a small set of [Gulp][gulp] tasks. While you'll p
 
 Protocol is published to NPM under the `@mozilla-protocol/core` namespace/package name. To publish a release to NPM, use the following steps:
 
-1. Update the `version` number in `./src/assets/package/package.json` (use [Semantic Versioning][semver] to determine what the new version number should be).
-2. Make sure the version number is commited to `master` in Git.
-3. Tag a new release. You can do this either using [Git tag][git-tag], or directly on the [GitHub website][releases].
-4. Run `gulp build` to create the NPM package. The package contents will be located in `./dist/assets/protocol/`.
-5. Publish to NPM using `npm publish ./dist/assets/protocol/`.
+1. Update the `version` number in [package.json][package.json] (use [Semantic Versioning][semver] to determine what the new version number should be).
+2. Update the accompanying [README.md][readme].
+3. Make sure [CHANGELOG.md][changelog] is also up to date.
+4. Commit the changes to the `master` branch.
+5. Tag a new release. You can do this either using [Git tag][git-tag], or directly on the [GitHub website][releases].
+6. Run `gulp build` to create the NPM package. The package contents will be located in `./dist/assets/protocol/`.
+7. Publish to NPM using `npm publish ./dist/assets/protocol/`.
 
 # Acknowledgements
 
