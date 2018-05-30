@@ -2,7 +2,7 @@
 
 A modular design system for Mozilla websites.
 
-https://mozilla-protocol.netlify.com/
+https://protocol.mozilla.org/
 
 ## Getting Started
 

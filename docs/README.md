@@ -6,9 +6,9 @@
 [marked]: https://github.com/chjj/marked
 [git-tag]: https://git-scm.com/book/en/v2/Git-Basics-Tagging
 [semver]: https://semver.org/
-[demo-default]: https://mozilla-protocol.netlify.com/patterns/organisms/article.html
-[demo-collection]: https://mozilla-protocol.netlify.com/patterns/atoms/typographic.html
-[demo-blank]: https://mozilla-protocol.netlify.com/demos/type-scale.html
+[demo-default]: https://protocol.mozilla.org/patterns/organisms/article.html
+[demo-collection]: https://protocol.mozilla.org/patterns/atoms/typographic.html
+[demo-blank]: https://protocol.mozilla.org/demos/type-scale.html
 [package.json]: https://github.com/mozilla/protocol/blob/master/src/assets/package/package.json
 [releases]: https://github.com/mozilla/protocol/releases/latest
 [readme]: https://github.com/mozilla/protocol/blob/master/src/assets/package/README.md
