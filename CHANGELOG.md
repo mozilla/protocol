@@ -2,6 +2,7 @@
 
 ## Bug Fixes
 
+* **css:** Media content should occupy 100% modal width (#132)
 * **css:** Remove redundant .mzp-c-card-small-cta styles (#136)
 * **css:** Adjust default margins for billboard components (#138)
 
