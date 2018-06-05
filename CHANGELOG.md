@@ -2,6 +2,7 @@
 
 ## Bug Fixes
 
+* **css:** Remove redundant .mzp-c-card-small-cta styles (#136)
 * **css:** Adjust default margins for billboard components (#138)
 
 # 1.0.0
