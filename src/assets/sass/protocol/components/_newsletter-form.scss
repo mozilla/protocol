@@ -6,7 +6,7 @@
 
 .mzp-c-newsletter {
     margin: 0 auto $margin-lg;
-    max-width: $width-content-sm;
+    max-width: $content-sm;
     padding: $padding-lg 0;
 
     input[type='email'],
@@ -19,13 +19,13 @@
     }
 
     .mzp-c-button {
-        background-color: $color-primary;
+        background-color: $color-black;
         margin-bottom: $margin-sm;
         width: 100%;
 
         &:hover,
         &:focus {
-            background-color: lighten($color-primary, 20%);
+            background-color: lighten($color-black, 20%);
         }
     }
 
@@ -35,18 +35,18 @@
         @include hidden;
     }
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         @include clearfix;
         padding: $padding-lg;
         max-width: none;
     }
 
-    @media #{$media-lg} {
+    @media #{$mq-lg} {
         padding: $layout-md $layout-xl;
     }
 
-    @media #{$media-xl} {
-        padding: $layout-md $layout-xxl;
+    @media #{$mq-xl} {
+        padding: $layout-md $layout-2xl;
     }
 }
 
@@ -60,7 +60,7 @@
     text-align: center;
 }
 
-@media #{$media-md} {
+@media #{$mq-md} {
     .mzp-c-newsletter-image {
         @include grid-half;
         float: left;
@@ -102,7 +102,7 @@
     }
 }
 
-@media #{$media-lg} {
+@media #{$mq-lg} {
     .mzp-c-newsletter-form,
     .mzp-c-newsletter-thanks {
         padding-top: $layout-lg;

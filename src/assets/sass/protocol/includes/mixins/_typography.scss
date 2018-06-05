@@ -46,7 +46,7 @@
     @include font-size(48px);
     line-height: 1.083;
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         @include font-size(72px);
         line-height: 1;
     }
@@ -56,7 +56,7 @@
     @include font-size(40px);
     line-height: 1.111;
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         @include font-size(60px);
         line-height: 1.066;
     }
@@ -66,7 +66,7 @@
     @include font-size(32px);
     line-height: 1.125;
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         @include font-size(48px);
         line-height: 1.083;
     }
@@ -76,7 +76,7 @@
     @include font-size(24px);
     line-height: 1.166;
 
-    @media #{$media-lg} {
+    @media #{$mq-lg} {
         @include font-size(36px);
         line-height: 1.1111;
     }
@@ -86,7 +86,7 @@
     @include font-size(21px);
     line-height: 1.143;
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         @include font-size(24px);
         line-height: 1.166;
     }

@@ -3,10 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 // Import all the things!
-@import './node_modules/@mozilla-protocol/colors/protocol-colors.scss';
-@import 'tokens/spacing';
-@import 'tokens/sizing';
-@import 'tokens/media-queries';
+@import './node_modules/@mozilla-protocol/tokens/dist/index.scss';
 @import 'variables';
 @import 'functions';
 @import 'mixins';

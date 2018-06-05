@@ -31,7 +31,7 @@
     &:link,
     &:visited {
         border-bottom: 1px solid transparent;
-        color: $color-primary;
+        color: $color-black;
         text-decoration: none;
     }
 
@@ -39,7 +39,7 @@
     &:active,
     &:focus {
         @include transition(border-bottom-color 100ms ease-in-out);
-        border-bottom: 1px solid $color-primary;
-        color: $color-primary;
+        border-bottom: 2px solid $color-black;
+        color: $color-black;
     }
 }
