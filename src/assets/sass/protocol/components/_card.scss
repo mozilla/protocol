@@ -77,13 +77,6 @@
         margin: $margin-xs 0 0;
     }
 
-    .mzp-c-card-small-cta {
-        display: block;
-        font-weight: bold;
-        margin-top: $margin-lg 0 0;
-        border-bottom: 1px solid transparent;
-    }
-
     .mzp-c-card-block-link {
         border-radius: 2px;
         display: block;
@@ -100,8 +93,7 @@
             @include transition(box-shadow .1s ease-in-out);
             box-shadow: 0 0 0 4px darken($color-gray-light, 10%);
 
-            .mzp-c-card-title,
-            .mzp-c-card-small-cta {
+            .mzp-c-card-title {
                 @include transition(border-bottom .1s ease-in-out);
                 border-bottom: 1px solid $color-primary;
             }
