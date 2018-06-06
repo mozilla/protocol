@@ -9,7 +9,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
 
 .mzp-c-billboard {
     background: $color-gray-lighter;
-    margin: $layout-xxl 0;
+    margin: $layout-xxl 0 $layout-sm;
     position: relative;
 
     .mzp-c-billboard-content {
@@ -86,7 +86,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
     }
 
     @media #{$media-lg} {
-        margin: $layout-xxl 0;
+        margin: $layout-xl 0;
 
         .mzp-c-billboard-content {
             @include border-box;

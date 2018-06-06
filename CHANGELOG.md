@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **css:** Adjust default margins for billboard components (#138)
+
 # 1.0.0
 
 ## Features
