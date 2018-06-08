@@ -19,10 +19,11 @@ Mozilla.Modal = (function(w) {
     origin: element that triggered the modal
     content: content to display in the modal
     options: object of optional params:
-        title: title to display at the top of the modal
-        onCreate: function to fire after modal has been created
-        onDestroy: function to fire after modal has been closed
-        allowScroll: boolean - allow/restrict page scrolling when modal is open
+        title: title to display at the top of the modal.
+        className: optional CSS class name to apply to the modal window.
+        onCreate: function to fire after modal has been created.
+        onDestroy: function to fire after modal has been closed.
+        allowScroll: boolean - allow/restrict page scrolling when modal is open.
         closeText: string to use for close button a11y.
     */
     var _createModal = function(origin, content, opts) {
@@ -37,10 +38,11 @@ Mozilla.Modal = (function(w) {
 
         // Create new modal
         var title = (options && options.title) ? options.title : '';
+        var className = (options && options.className) ? options.className : '';
         var closeText = (options && options.closeText) ? options.closeText : '';
 
         var modalFragment =
-            '<div class="mzp-c-modal" role="dialog" aria-labelledby="' + origin.getAttribute('id') + '" tabindex="-1">' +
+            '<div class="mzp-c-modal ' + className + '" role="dialog" aria-labelledby="' + origin.getAttribute('id') + '" tabindex="-1">' +
             '  <div class="mzp-c-modal-window">' +
             '    <div class="mzp-c-modal-inner">' +
             '      <header><h2>' + title + '</h2></header>' +
