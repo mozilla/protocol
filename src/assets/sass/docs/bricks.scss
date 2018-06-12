@@ -1,0 +1,419 @@
+#protosite-bricks {
+  animation: protosite-bricks .1s;
+  animation-delay: .1s;
+}
+@keyframes protosite-bricks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.protosite-brick {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-delay: .2s;
+  width: 44px;
+  position: absolute;
+}
+
+#protosite-brick1 {
+  animation-name: protosite-brick1;
+}
+
+@keyframes protosite-brick1 {
+  from {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  4.76%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick2 {
+  animation-name: protosite-brick2;
+}
+
+@keyframes protosite-brick2 {
+  from, 4.76% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  9.52%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick3 {
+  animation-name: protosite-brick3;
+}
+
+@keyframes protosite-brick3 {
+  from, 9.52% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  14.28%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick4 {
+  animation-name: protosite-brick4;
+}
+
+@keyframes protosite-brick4 {
+  from, 14.28% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  19.04%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick5 {
+  animation-name: protosite-brick5;
+}
+
+@keyframes protosite-brick5 {
+  from, 19.04% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  23.8%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick6 {
+  animation-name: protosite-brick6;
+}
+
+@keyframes protosite-brick6 {
+  from, 23.8% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  28.56%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick7 {
+  animation-name: protosite-brick7;
+}
+
+@keyframes protosite-brick7 {
+  from, 28.56% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  33.32%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick8 {
+  animation-name: protosite-brick8;
+}
+
+@keyframes protosite-brick8 {
+  from, 33.32% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  38.08%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick9 {
+  animation-name: protosite-brick9;
+}
+
+@keyframes protosite-brick9 {
+  from, 38.08% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  42.84%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick10 {
+  animation-name: protosite-brick10;
+}
+
+@keyframes protosite-brick10 {
+  from, 42.84% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  47.6%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick11 {
+  animation-name: protosite-brick11;
+}
+
+@keyframes protosite-brick11 {
+  from, 47.6% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  52.36%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick12 {
+  animation-name: protosite-brick12;
+}
+
+@keyframes protosite-brick12 {
+  from, 52.36% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  57.12%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick13 {
+  animation-name: protosite-brick13;
+}
+
+@keyframes protosite-brick13 {
+  from, 57.12% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  61.88%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick14 {
+  animation-name: protosite-brick14;
+}
+
+@keyframes protosite-brick14 {
+  from, 61.88% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  66.64%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick15 {
+  animation-name: protosite-brick15;
+}
+
+@keyframes protosite-brick15 {
+  from, 66.64% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  71.4%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#protosite-brick16 {
+  animation-name: protosite-brick16;
+}
+
+@keyframes protosite-brick16 {
+  from, 71.4% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  76.16%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick17 {
+  animation-name: protosite-brick17;
+}
+
+@keyframes protosite-brick17 {
+  from, 76.16% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  80.92%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick18 {
+  animation-name: protosite-brick18;
+}
+
+@keyframes protosite-brick18 {
+  from, 80.92% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  85.68%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick19 {
+  animation-name: protosite-brick19;
+}
+
+@keyframes protosite-brick19 {
+  from, 85.68% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  90.44%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick20 {
+  animation-name: protosite-brick20;
+}
+
+@keyframes protosite-brick20 {
+  from, 90.44% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  95.2%, to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick21 {
+  animation-name: protosite-brick21;
+}
+
+@keyframes protosite-brick21 {
+  from, 95.2% {
+    opacity: 0;
+    transform: translateY(-380px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#protosite-brick1 svg {
+  transform: translate(82px, 82px);
+}
+
+#protosite-brick2 svg {
+  transform: translate(82px, 28px);
+}
+
+#protosite-brick3 svg {
+  transform: translate(61px, 42px);
+}
+
+#protosite-brick4 svg {
+  transform: translate(41px, 56px);
+}
+
+#protosite-brick5 svg {
+  transform: translate(0, 56px);
+}
+
+#protosite-brick6 svg {
+  transform: translate(20px, 70px);
+}
+
+#protosite-brick7 svg {
+  transform: translate(41px, 84px);
+}
+
+#protosite-brick8 svg {
+  transform: translate(124px, 28px);
+}
+
+#protosite-brick9 svg {
+  transform: translate(144px, 42px);
+}
+
+#protosite-brick10 svg {
+  transform: translate(144px, 71px);
+}
+
+#protosite-brick11 svg {
+  transform: translate(124px, 85px);
+}
+
+#protosite-brick12 svg {
+  transform: translate(103px, 99px);
+}
+
+#protosite-brick13 svg {
+  transform: translate(83px, 113px);
+}
+
+#protosite-brick14 svg {
+  transform: translate(103px, 127px);
+}
+
+#protosite-brick15 svg {
+  transform: translate(186px, 71px);
+}
+
+#protosite-brick16 svg {
+  transform: translate(207px, 85px);
+}
+
+#protosite-brick17 svg {
+  transform: translate(207px, 113px);
+}
+
+#protosite-brick18 svg {
+  transform: translate(186px, 127px);
+}
+
+#protosite-brick19 svg {
+  transform: translate(166px, 141px);
+}
+
+#protosite-brick20 svg {
+  transform: translate(145px, 155px);
+}
+
+#protosite-brick21 svg {
+  transform:translate(166px, 169px);
+}

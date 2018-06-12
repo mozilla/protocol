@@ -18,8 +18,11 @@
       <script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-base.js"></script>
     {{/block}}
   </head>
-  <body class="{{bodyclass}}">
+  <body class="{{pageid}}">
     <div class="protosite-page">
+
+    {{#block "header"}}{{/block}}
+
     {{#block "body"}}
       {{#block "main"}}{{/block}}
     {{/block}}

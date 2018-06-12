@@ -3,14 +3,73 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @import '../protocol/includes/lib';
+@import './bricks.scss';
 
+.protosite-page {
+  @media #{$media-md} {
+        .mzp-l-content {
+            padding: 64px 96px;
+        }
+    }
+}
 
 .protosite-main {
     padding: 20px 4vw;
-
     @media #{$media-md} {
         padding-left: 24vw;
     }
+}
+
+// Global Header
+.protosite-header {
+  background: black;
+  .mzp-l-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    > *,
+    > * > * {
+      vertical-align: middle;
+    }
+  }
+  nav {
+    float: right;
+    ul {
+      display: flex;
+      line-height: 32px;
+      margin: 0;
+      li {
+        margin-left: 24px;
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: rgba(255,255,255,.75);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Hero Section
+.protosite-hero {
+  background: black;
+  color: white;
+  padding: 96px 0;
+  .mzp-l-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .protosite-hero-one {
+      grid-column: 1 / 1;
+      grid-row: 1;
+      align-self: center;
+    }
+    .protosite-hero-two {
+      grid-column: 2 / 4;
+      grid-row: 1;
+      align-self: center;
+    }
+  }
 }
 
 // Nav sidebar
@@ -44,7 +103,7 @@
         min-width: 160px;
         overflow-x: hidden;
         overflow-y: auto;
-        padding: 20px;
+        padding: 16px;
         position: fixed;
         top: 0;
         width: 20vw;
@@ -62,7 +121,7 @@
 }
 
 .protosite-nav-main-head {
-    margin: 0 0 20px;
+    margin: 0 0 16px;
 }
 
 .protosite-nav-main-mozlogo {
@@ -137,13 +196,13 @@
     border-radius: 3px;
     border: 1px solid rgba(0, 0, 0, .2);
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-    padding: 10px 20px;
+    padding: 8px 16px;
     margin: 0 0 1.5em;
     overflow-x: auto;
 
     .protosite-pattern-code {
         border-radius: 3px;
-        margin: -10px -20px;
+        margin: -8px -16px;
     }
 }
 
@@ -152,21 +211,21 @@
 
     & + .protosite-pattern-code {
         border-top: 1px solid rgba(0, 0, 0, .2);
-        margin: 30px -20px -10px;
+        margin: 30px -16px -8px;
     }
 }
 
 .protosite-pattern-code {
     background: #f8f8f8;
-    padding: 10px 20px;
-    margin: -10px -20px;
+    padding: 8px 16px;
+    margin: -8px -16px;
 }
 
 .protosite-specimen {
     border-radius: 3px;
     border: 1px solid rgba(0, 0, 0, .2);
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-    padding: 10px 20px;
+    padding: 8px 16px;
     margin: 0 0 1.5em;
     overflow-x: auto;
 }
@@ -288,4 +347,81 @@
         vertical-align: middle;
         width: 1.5em;
     }
+}
+
+.protosite-pattern-table {
+  width: 100%;
+  tr {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    &:first-child {
+      border-bottom: 2px solid rgba(0,0,0,0.2);
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  th, td {
+    text-align: left;
+    padding: 16px;
+    input, select {
+      width: 100%;
+    }
+  }
+  .protosite-toggle {
+      display: flex;
+      position: relative;
+      .protosite-toggle-option {
+          flex: 1 50%;
+          position: relative;
+      }
+      input {
+          margin: 0;
+          text-align: left;
+          width: auto;
+      }
+      label {
+          margin: 0;
+          position: absolute;
+          flex: 1 50%;
+          top: 0;
+          width: 100%;
+          font-weight: 400;
+          padding: 2px 1.5rem;
+          box-sizing: border-box;
+      }
+  }
+}
+
+.protosite-alert {
+  background: #fff3d4;
+  border-left: 8px solid #f6b73c;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  &:before {
+    content: '⚠️';
+  }
+}
+
+// Grid
+@media #{$media-lg} {
+    .grid-lg-12 {
+        width: 1216px;
+    }
+    .grid-lg-6 {
+        width: 608px;
+    }
+    .grid-lg-4 {
+        width: calc(1216px / 3);
+    }
+    .grid-lg-3 {
+        width: 304px;
+    }
+    .grid-lg-2 {
+        width: calc(1216px / 6);
+    }
+}
+
+// Prism
+pre[class*="language-"] > code {
+  border-left: none;
 }

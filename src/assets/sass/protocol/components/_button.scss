@@ -4,22 +4,174 @@
 
 @import '../includes/lib';
 
-.mzp-c-button {
-    @include border-box;
-    @include text-cta;
-    @include transition(background-color 100ms);
-    background-color: $color-blue;
-    border-radius: 3px;
-    border: 0;
-    color: $color-secondary;
-    display: inline-block;
-    font-weight: bold;
-    padding: $padding-sm $padding-lg;
-    text-decoration: none;
+//.mzp-c-button {
+//    @include border-box;
+//    @include text-cta;
+//    @include transition(background-color 100ms);
+//    background-color: $color-blue;
+//    border-radius: 3px;
+//    border: 0;
+//    color: $color-secondary;
+//    display: inline-block;
+//    font-weight: bold;
+//    padding: $padding-sm $padding-lg;
+//    text-decoration: none;
+//
+//    &:hover,
+//    &:focus {
+//        background-color: $color-blue-dark;
+//        color: $color-secondary;
+//    }
+//}
 
-    &:hover,
-    &:focus {
-        background-color: $color-blue-dark;
-        color: $color-secondary;
+// Vince Button Work
+
+.mzp-c-button {
+  border: 0;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 16px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+  background: transparent;
+  border: 2px solid black;
+  top: 0;
+  left: 0;
+}
+a.mzp-c-button {
+  text-decoration: none;
+  &:hover {
+    color: black;
+    background: white;
+    box-shadow: 4px 4px 0 0 black;
+    transition: box-shadow .2s;
+  }
+  &:focus {
+    box-shadow: 0 0 0 4px rgba(0, 96, 223, .2);
+    border: 2px solid #0060df;
+  }
+  &:active {
+    box-shadow: 2px 2px 0 0 black;
+    transition: box-shadow 0s;
+  }
+}
+
+.mzp-c-button-light {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.mzp-c-button-small {
+    padding: 4px 16px;
+}
+
+.mzp-c-button-medium {
+    padding: 8px 16px;
+}
+
+.mzp-c-button-large {
+    padding: 12px 24px;
+    border-radius: 4px;
+}
+
+.mzp-c-button-primary {
+  background: black;
+  color: white;
+  border: 2px solid black;
+}
+
+.mzp-c-button-secondary {
+  background: transparent;
+  border: 2px solid black;
+}
+
+
+// Default
+
+
+
+// Shift
+.mzp-c-button-shift:hover {
+  box-shadow: 4px 4px 0 0 #FE448D, -4px -4px 0 0 #61CCDD;
+  transition:box-shadow .2s;
+}
+
+.mzp-c-button-shift:active {
+  box-shadow: 2px 2px 0 0 #FE448D, -2px -2px 0 0 #61CCDD;
+  transition:box-shadow 0s;
+}
+
+// Download
+
+.mzp-c-button-download {
+  background: #0060df;
+  color: white;
+  border: 2px solid #0060df;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+    z-index: -1;
+  }
+  &:hover {
+    background: #003EAA;
+    border: 2px solid #003EAA;
+    transition: .1s;
+    &:after{
+      top: 4px;
+      left: 4px;
+      right: -6px;
+      bottom: -6px;
+      background: linear-gradient(to top right, #CA0B69, #FF780A, #FFEF31);
+      transition: .1s;
     }
+  }
+  &.mzp-c-button-beta {
+    &:hover {
+      &:after {
+        background: linear-gradient(to top right, #00F9F0, #13EF44);
+      }
+    }
+  }
+  &.mzp-c-button-nightly {
+    &:hover {
+      &:after {
+        background: linear-gradient(to top right, #C45AF2, #00E7FF, #00D6C3);
+      }
+    }
+  }
+  &.mzp-c-button-devedition {
+    &:hover {
+      &:after {
+        background: linear-gradient(to top right, #007CE6, #00EEFF);
+      }
+    }
+  }
+  &.mzp-c-button-focus {
+    &:hover {
+      &:after {
+        background: linear-gradient(to top right, #9A2192, #DA1793);
+      }
+    }
+  }
+  &:active {
+    &:after {
+      content: '';
+      top: 2px;
+      left: 2px;
+      right: -4px;
+      bottom: -4px;
+      transition:0s;
+    }
+  }
 }

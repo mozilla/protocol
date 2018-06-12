@@ -1,16 +1,21 @@
 <article class="protosite-pattern">
+
   {{!-- Header, labels --}}
-  <header class="protosite-pattern-head">
-    {{#> drizzle.labelheader tag="h2" id=(toSlug name) labels=data.labels}}
-      {{name}}
-    {{/drizzle.labelheader}}
-  </header>
+  {{#if data.name}}
+    <header class="protosite-pattern-head">
+      {{#> drizzle.labelheader tag="h2" id=(toSlug name) labels=data.labels}}
+        {{name}}
+      {{/drizzle.labelheader}}
+    </header>
+  {{/if}}
+
   {{!-- Description --}}
   {{#if data.description}}
-    <div class="protosite-pattern-desc">
+    <div class="protosite-pattern-desc  grid-lg-6">
       {{{data.description}}}
     </div>
   {{/if}}
+
   {{!-- Links --}}
   {{#if data.links}}
     <ul class="protosite-pattern-links">
@@ -32,34 +37,49 @@
   {{#if data.doclayout}}
     {{{pattern id @root}}}
   {{else}}
+
+    {{!-- Table --}}
+    {{#if data.table}}
+      <table class="protosite-pattern-table">
+        <tr>
+          <th>Attribute</th>
+          <th>Description</th>
+          <th/>
+        </tr>
+        {{{data.table}}}
+      </table>
+      <div id="alert"></div>
+    {{/if}}
+
     {{!-- Preview --}}
     <div class="protosite-pattern-embed">
       <div class="protosite-pattern-preview {{data.previewClass}}">
         {{{pattern id @root}}}
       </div>
+
       {{!-- Code sample --}}
       {{#unless data.sourceless}}
-        <pre class="protosite-pattern-code"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
+        <pre class="protosite-pattern-code"><code id="{{data.id}}" class="language-markup">{{{patternSource id @root}}}</code></pre>
       {{/unless}}
     </div>
 
     {{!-- Notes --}}
     {{#if data.notes}}
-      <div class="protosite-pattern-extra protosite-pattern-extra-notes">
+      <div class="protosite-pattern-extra protosite-pattern-extra-notes grid-lg-6">
         <h3>Notes</h3>
         {{{data.notes}}}
       </div>
     {{/if}}
 
     {{#if data.tips}}
-    <section class="protosite-pattern-extra protosite-pattern-extra-tips">
+    <section class="protosite-pattern-extra protosite-pattern-extra-tips grid-lg-6">
       <h3>Tips</h3>
       {{{data.tips}}}
     </section>
     {{/if}}
 
     {{#if data.nonos}}
-    <section class="protosite-pattern-extra protosite-pattern-extra-nonos">
+    <section class="protosite-pattern-extra protosite-pattern-extra-nonos grid-lg-6">
       <h3>No-nos</h3>
       {{{data.nonos}}}
     </section>

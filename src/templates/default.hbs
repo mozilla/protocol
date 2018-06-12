@@ -1,42 +1,61 @@
-{{#extend "blank" htmlclass="no-js" bodyclass=""}}
+{{#extend "blank" htmlclass="js" bodyclass=""}}
   {{#content "head" mode="append"}}
       <link rel="stylesheet" href="{{@root.baseurl}}/assets/docs/css/protocol.css">
       <link rel="stylesheet" href="{{@root.baseurl}}/assets/docs/css/site.css">
       <link rel="stylesheet" href="{{@root.baseurl}}/assets/docs/css/prism.css">
   {{/content}}
 
+  {{#content "header"}}
+    <div>
+      {{> drizzle.header}}
+    </div>
+  {{/content}}
+
   {{#content "body"}}
-    {{> drizzle.nav}}
 
-    <main class="protosite-main">
-    {{#block "header"}}
-      {{!-- Header, labels --}}
-      <header class="protosite-page-head">
-        <h1 class="protosite-page-title">
-        {{#if title}}
-          {{ title }}
-        {{else}}
-          {{ name }}
-        {{/if}}
-        </h1>
+    {{#if pageid}}
+      {{> drizzle.hero}}
+    {{else}}
+    {{/if}}
 
-        {{#if labels}}
-          <ul class="protosite-page-labels">
-            {{#each labels as |label|}}
-              <li class="protosite-label protosite-label-{{label}}">
-                {{label}}
-              </li>
-            {{/each}}
-          </ul>
-        {{/if}}
-      </header>
-    {{/block}}
+    <main class="mzp-l-content mzp-has-sidebar mzp-l-sidebar-left">
+
+    {{#if pageid}}
+    {{else}}
+      {{> drizzle.nav}}
+    {{/if}}
+
+      <article class="mzp-l-main">
+        <script src="{{@root.baseurl}}/assets/docs/js/docs.js"></script>
+       {{#block "pageheader"}}
+         {{!-- Header, labels --}}
+         <header class="protosite-page-head">
+           <h1 class="mzp-c-article-title">
+           {{#if title}}
+             {{ title }}
+           {{else}}
+             {{ name }}
+           {{/if}}
+           </h1>
+
+           {{#if labels}}
+             <ul class="protosite-page-labels">
+               {{#each labels as |label|}}
+                 <li class="protosite-label protosite-label-{{label}}">
+                   {{label}}
+                 </li>
+               {{/each}}
+             </ul>
+           {{/if}}
+         </header>
+       {{/block}}
 
     {{#block "main"}}{{/block}}
+      </article>
     </main>
   {{/content}}
 
   {{#content "foot"}}
-    <script src="{{@root.baseurl}}/assets/docs/js/docs.js"></script>
+
   {{/content}}
 {{/extend}}

@@ -1,0 +1,121 @@
+---
+id: language-markup
+description: Cards display content about a single subject, often highlighting information that can be read on a further page.
+order: 1
+notes: |
+    - Large sized cards display larger text to other card types, as well as larger images.
+    - Large sized cards should contain images with 16:9 or 3:2 aspect ratios only.
+    - Recommended image width is 825px.
+    - Headlines should be a maximum of 40 characters, and descriptions a maximum of 140 characters.
+table: |
+
+  <tr>
+    <td>Size</td>
+    <td>The size of the card</td>
+    <td>
+      <select id="card-size" autocomplete="off">
+        <option value="mzp-c-card-extra-small">Extra Small</option>
+        <option value="mzp-c-card-small" selected>Small</option>
+        <option value="mzp-c-card-medium">Medium</option>
+        <option value="mzp-c-card-large">Large</option>
+      </select>
+      <script>addClass('card-size','mzp-c-card');</script>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Tag</td>
+    <td>Keyword used for categorizing cards</td>
+    <td>
+      <input id="card-tag" type="text" data-maxlength="20" value="Card tag" autocomplete="off"/>
+      <script>replaceText('card-tag','mzp-c-card-tag');</script>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Title</td>
+    <td>The card's headline</td>
+    <td>
+      <input id="card-title" type="text" data-maxlength="40" value="This example headline has 40 characters" autocomplete="off"/>
+      <script>replaceText('card-title','mzp-c-card-title');</script>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Description</td>
+    <td>The card's description</td>
+    <td>
+      <input id="card-description" type="text" data-maxlength="140" value="A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like." autocomplete="off"/>
+      <script>replaceText('card-description','mzp-c-card-desc');</script>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Meta Data</td>
+    <td>Additional information displayed in the card footer</td>
+    <td>
+      <input id="card-meta" type="text" data-maxlength="20" value="6 hours ago" autocomplete="off"/>
+      <script>replaceText('card-meta','mzp-c-card-meta');</script>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Link URL</td>
+    <td>Clicking the card will send you to this destination</td>
+    <td>
+      <input id="card-link" type="text" value="#" autocomplete="off"/>
+      <script>addAttribute('card-link', 'mzp-c-card-block-link', 'href');</script>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Media</td>
+    <td>The type of media the card contains</td>
+    <td>
+      <select id="card-media" autocomplete="off">
+        <option value="">Image Only</option>
+        <option value="mzp-has-video">Video</option>
+        <option value="mzp-has-audio">Audio</option>
+      </select>
+      <script>addClass('card-media','mzp-c-card');</script>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Image URL</td>
+    <td>The image's url</td>
+    <td>
+      <input id="card-url" type="text" value="{{@root.baseurl}}/static/img/card/card-image.png" autocomplete="off"/>
+      <script>addAttribute('card-url','mzp-c-card-image', 'src');</script>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Image Ratio</td>
+    <td>The image's aspect ratio</td>
+    <td>
+      <select id="card-ratio" autocomplete="off">
+        <option value="mzp-has-aspect-1-1">1:1</option>
+        <option value="mzp-has-aspect-3-2" selected>3:2</option>
+        <option value="mzp-has-aspect-16-9">16:9</option>
+      </select>
+      <script>addClass('card-ratio','mzp-c-card');</script>
+    </td>
+  </tr>
+
+
+---
+
+<section class="mzp-c-card mzp-c-card-small mzp-has-aspect-3-2">
+  <a class="mzp-c-card-block-link" href="#">
+    <div class="mzp-c-card-media-wrapper">
+      <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
+    </div>
+    <div class="mzp-c-card-content">
+      <div class="mzp-c-card-tag">Card tag</div>
+      <h2 class="mzp-c-card-title">This example headline has 40 characters</h2>
+      <p class="mzp-c-card-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
+      <p class="mzp-c-card-meta">6 hours ago</p>
+    </div>
+  </a>
+</section>
