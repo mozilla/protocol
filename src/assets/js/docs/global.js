@@ -10,8 +10,8 @@
 //     }, false);
 // })();
 
-var requireString = null; //maybe remove null?
-var testit = null; //maybe remove null?
+var requireString = null;
+var testit = null;
 var selectedString = null;
 var selectedTest = null;
 
@@ -363,7 +363,7 @@ function addAttribute(inputID, componentID, attribute) { // eslint-disable-line 
             if(document.getElementById(inputID + '_replace-attribute')) {
                 document.getElementById(inputID + '_replace-attribute').outerHTML = '';
             } else if (getCodeSample.includes(attributeMarkup)) {
-                updateCodeSample = getCodeSample.replace('<span class="token attr-name">' + attribute + '</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>' + '#' + '<span class="token punctuation">"</span></span>', '');
+                updateCodeSample = getCodeSample.replace('<span class="token attr-name">' + attribute + '</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>' + initialInput + '<span class="token punctuation">"</span></span>', '');
                 document.getElementById('language-markup').innerHTML = updateCodeSample;
             }
             getComponent.removeAttribute(attribute);
