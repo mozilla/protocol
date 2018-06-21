@@ -26,6 +26,7 @@
 
 .mzp-c-button {
     border: 0;
+    cursor: pointer;
     font-family: "Open Sans";
     font-weight: 700;
     font-size: 16px;
@@ -37,15 +38,15 @@
     outline: none;
     position: relative;
     background: transparent;
-    border: 2px solid black;
+    border: 2px solid $color-primary;
     top: 0;
     left: 0;
 
     // States
     &:hover {
-        color: black;
-        background: white;
-        box-shadow: 4px 4px 0 0 black;
+        color: $color-primary;
+        background: $color-secondary;
+        box-shadow: 4px 4px 0 0 $color-primary;
         transition: box-shadow .2s;
     }
     &:focus {
@@ -53,7 +54,7 @@
         border: 2px solid #0060df;
     }
     &:active {
-        box-shadow: 2px 2px 0 0 black;
+        box-shadow: 2px 2px 0 0 $color-primary;
         transition: box-shadow 0s;
     }
 
@@ -71,17 +72,17 @@
 
     // Type
     &.mzp-c-button-primary {
-        background: black;
-        color: white;
-        border: 2px solid black;
+        background: $color-primary;
+        color: $color-secondary;
+        border: 2px solid $color-primary;
         &:hover {
             background: transparent;
-            color: black;
+            color: $color-primary;
         }
     }
     &.mzp-c-button-secondary {
         background: transparent;
-        border: 2px solid black;
+        border: 2px solid $color-primary;
     }
 
     // Brand
@@ -98,8 +99,8 @@
     // Background
     &.mzp-c-button-light {
       background: transparent;
-      border: 2px solid white;
-      color: white;
+      border: 2px solid $color-secondary;
+      color: $color-secondary;
       &:hover {
         background: rgba(255, 255, 255, .2);
         box-shadow: 4px 4px 0 0 rgba(255, 255, 255, .2);
@@ -114,7 +115,7 @@
 // Download
 .mzp-c-button-download {
     background: #0060df;
-    color: white;
+    color: $color-secondary;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
     border: none;
     z-index: 1;
@@ -143,7 +144,7 @@
     // States
     &:hover {
         background: #003EAA;
-        color: white;
+        color: $color-secondary;
         box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
         &:before {
           background: #003EAA;

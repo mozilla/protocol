@@ -10,7 +10,7 @@
     <section class="mzp-c-sidemenu-main" id="sidebar-menu" aria-expanded="false">
     {{!-- Components Patterns --}}
     {{#if (collections "components")}}
-      <h4 class="mzp-c-sidemenu-title"><a href="#">Components</a></h4>
+      <h4 class="mzp-c-sidemenu-title">Components</h4>
       <ul>
         {{#each (collections "components" sortby="order")}}
           <li>
@@ -22,7 +22,7 @@
 
     {{!-- Molecule Patterns --}}
     {{#if (collections "molecules")}}
-      <h4 class="mzp-c-sidemenu-title"><a href="#">Molecules</a></h4>
+      <h4 class="mzp-c-sidemenu-title">Molecules</h4>
       <ul>
         {{#each (collections "molecules" sortby="order")}}
           <li>
@@ -34,7 +34,7 @@
 
     {{!-- Organism Patterns --}}
     {{#if (collections "organisms")}}
-      <h4 class="mzp-c-sidemenu-title"><a href="#">Organism</a></h4>
+      <h4 class="mzp-c-sidemenu-title">Organism</h4>
       <ul>
         {{#each (collections "organisms" sortby="order")}}
           <li>
@@ -46,7 +46,7 @@
 
     {{!-- Template Patterns --}}
     {{#if (collections "templates")}}
-      <h4 class="mzp-c-sidemenu-title"><a href="#">Templates</a></h4>
+      <h4 class="mzp-c-sidemenu-title">Templates</h4>
       <ul>
         {{#each (collections "templates" sortby="order")}}
           <li>
@@ -57,7 +57,7 @@
     {{/if}}
 
     {{!-- Other Pages --}}
-      <h4 class="mzp-c-sidemenu-title"><a href="#">Other Stuff</a></h4>
+      <h4 class="mzp-c-sidemenu-title">Other Stuff</h4>
       <ul>
         <li>
           {{#with (page "docs/index")}}
