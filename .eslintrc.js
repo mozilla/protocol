@@ -3,7 +3,8 @@ module.exports = {
         "browser": true,
         "commonjs": true,
         "node": true,
-        "es6": true
+        "es6": true,
+        "jasmine": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -29,5 +30,8 @@ module.exports = {
             "error",
             "always"
         ]
+    },
+    "globals": {
+        "Mozilla": true,
     }
 };

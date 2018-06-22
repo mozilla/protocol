@@ -1,3 +1,4 @@
+const path = require('path');
 const dest = './dist/assets';
 const src = './src/assets';
 const version = require('../package.json').version;
@@ -136,6 +137,10 @@ module.exports = {
             src: `./node_modules/@mozilla-protocol/tokens/dist/colors/colors.json`,
             dest: `./src/data`
         }
+    },
+    testJS: {
+        fileName: path.join(__dirname, '..', 'tests', 'karma.conf.js'),
+        singleRun: true
     },
     serve: {
         plugins: {

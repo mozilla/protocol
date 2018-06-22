@@ -1,6 +1,14 @@
 (function() {
     'use strict';
 
+    /**
+     * This script is used to determine that JS is enabled in the browser,
+     * and provides `.js` and `.no-js` styling hooks used in component CSS.
+     * In order to avoid content flashing and repaints on page load, it is
+     * recommended that this script should be run in the <head>, before
+     * page CSS is parsed.
+     */
+
     var doc = document.documentElement;
 
     // Add class to reflect javascript availability for CSS

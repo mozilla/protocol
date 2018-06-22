@@ -1,4 +1,3 @@
-// Protocol Modal - Hello World
 // create namespace
 if (typeof Mozilla === 'undefined') {
     var Mozilla = {};

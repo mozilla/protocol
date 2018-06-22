@@ -1,0 +1,175 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+/* -------------------------------------------------------------------------- */
+// Footer section styles
+
+.mzp-c-footer {
+    @include open-sans;
+    background: $color-black;
+    clear: both;
+    color: $color-white;
+    line-height: 1.3;
+    margin: 0;
+    padding: $padding-xl 0;
+    width: 100%;
+
+    a:link,
+    a:visited {
+        color: $color-white;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        color: $color-white;
+        text-decoration: underline;
+    }
+
+    h5 {
+        @include text-display-xs;
+        color: $color-white;
+        margin-bottom: $margin-lg;
+
+        a:link,
+        a:visited {
+            font-weight: bold;
+        }
+    }
+
+    li {
+        list-style-type: none;
+        margin: 0 0 $margin-md;
+    }
+
+    nav {
+        @include border-box;
+        @include clearfix;
+        margin: 0 auto;
+        min-width: $content-xs;
+    }
+
+    .mzp-c-footer-section {
+        margin-bottom: $margin-xl;
+    }
+
+    .mzp-c-footer-primary {
+        @include text-body-md;
+    }
+
+    .mzp-c-footer-secondary {
+        @include text-body-xs;
+    }
+
+    @media #{$mq-md} {
+        .mzp-c-footer-primary .mzp-c-footer-section {
+            @include colspan(4);
+            @include bidi((
+                (float, left, right),
+                (padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),
+            ));
+        }
+
+        .mzp-c-footer-secondary {
+            padding-top: $padding-lg;
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Footer Mozilla logo
+
+.mzp-c-footer-primary-logo {
+    margin-bottom: $margin-xl;
+
+    a {
+        background: url('#{$image-path}/logos/mozilla/white.svg') no-repeat;
+        @include background-size(100px, 32px);
+        @include image-replaced;
+        display: inline-block;
+        height: 32px;
+        width: 100px;
+    }
+
+    @media #{$mq-md} {
+        @include colspan(4);
+        @include bidi((
+            (float, left, right),
+            (padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),
+        ));
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Footer social icon links
+
+.mzp-c-footer-links-social {
+    @include bidi(((margin, $margin-lg 0 0, 0 0 0 $margin-md),));
+
+    li {
+        display: inline-block;
+        margin-right: $margin-md;
+
+        a {
+            @include image-replaced;
+            display: block;
+            height: 16px;
+            width: 16px;
+
+            &.twitter {
+                background-image: url('#{$image-path}/icons/social/twitter/white.svg');
+            }
+
+            &.instagram {
+                background-image: url('#{$image-path}/icons/social/instagram/white.svg');
+            }
+
+            &.youtube {
+                background-image: url('#{$image-path}/icons/social/youtube/white.svg');
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Footer small links
+
+.mzp-c-footer-links-small {
+    li {
+        @include bidi(((padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),));
+        display: inline;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    @media #{$mq-md} {
+        @include colspan(8);
+        @include bidi((
+            (float, left, right),
+            (padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),
+        ));
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Footer license
+
+.mzp-c-footer-license {
+    margin-bottom: $margin-xl;
+
+    a:link,
+    a:visited {
+        color: $color-gray-40;
+    }
+
+    @media #{$mq-md} {
+        margin-bottom: 0;
+    }
+}

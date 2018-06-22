@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Add page footer organism and language switcher component (#149)
 * **css:** Add Picto Card component (#154, #155)
 * **css:** Add Call Out component (#153)
 * **css:** Update button styles (#167)

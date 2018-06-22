@@ -1,0 +1,39 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+.mzp-c-language-switcher {
+    color: inherit;
+    font-weight: bold;
+
+    label {
+        @include bidi(((margin, 0 $margin-lg $margin-sm 0, 0 0 $margin-sm $margin-lg),));
+        display: inline-block;
+    }
+
+    select {
+        @include text-body-xs;
+        border: none;
+        background: $color-gray-20;
+    }
+
+    button {
+        @include text-body-sm;
+        margin-top: $margin-sm;
+    }
+
+    // form submit button is shown when JS is not enabled.
+    .js & button {
+        display: none;
+    }
+
+    @media #{$mq-md} {
+        @include colspan(4);
+        @include bidi((
+            (float, left, right),
+            (padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),
+        ));
+    }
+}

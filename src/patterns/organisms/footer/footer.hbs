@@ -1,0 +1,66 @@
+---
+name: Footer
+description: |
+  A page footer organism, containing common links to compliment primary navigation and an (optional) page language switcher.
+notes: |
+  - The example above shows an embedded Language Switcher component inside the Footer organism.
+  - Inline JavaScript in this example is for demo purposes only. Use external files in production code.
+---
+
+<footer class="mzp-c-footer mzp-has-lang-switcher">
+  <div class="mzp-l-content">
+    <nav class="mzp-c-footer-primary">
+      <div class="mzp-c-footer-primary-logo"><a href="https://www.mozilla.org/">Mozilla</a></div>
+      <section class="mzp-c-footer-section">
+        <h5>
+          <a href="https://www.mozilla.org/">Mozilla</a>
+        </h5>
+        <ul class="mzp-c-footer-links-mozilla">
+          <li><a href="https://www.mozilla.org/about/">About</a></li>
+          <li><a href="https://blog.mozilla.org/">Blog</a></li>
+          <li><a href="https://www.mozilla.org/contact/">Contact Us</a></li>
+          <li><a href="https://donate.mozilla.org/">Donate</a></li>
+          <li>
+            <ul class="mzp-c-footer-links-social">
+              <li><a class="twitter" href="https://twitter.com/mozilla">Twitter<span> (@mozilla)</span></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/mozilla/">Instagram<span> (@mozilla)</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="mzp-c-footer-section">
+        <h5>
+          <a href="https://www.mozilla.org/firefox/">Firefox</a>
+        </h5>
+        <ul class="mzp-c-footer-links-firefox">
+          <li><a href="https://www.mozilla.org/firefox/new/">Download Firefox</a></li>
+          <li><a href="https://www.mozilla.org/firefox/">Desktop</a></li>
+          <li><a href="https://www.mozilla.org/firefox/mobile/">Mobile</a></li>
+          <li><a href="https://www.mozilla.org/firefox/features/">Features</a></li>
+          <li><a href="https://www.mozilla.org/firefox/channel/desktop/">Beta, Nightly, Developer Edition</a></li>
+          <li>
+            <ul class="mzp-c-footer-links-social">
+              <li><a class="twitter" href="https://twitter.com/firefox">Twitter<span> (@firefox)</span></a></li>
+              <li><a class="youtube" href="https://www.youtube.com/firefoxchannel">YouTube<span> (firefoxchannel)</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
+
+    <nav class="mzp-c-footer-secondary">
+      <div class="mzp-c-footer-links-small">
+        <ul>
+          <li><a rel="nofollow" href="https://www.mozilla.org/privacy/websites/">Website Privacy Notice</a></li>
+          <li><a rel="nofollow" href="https://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+          <li><a rel="nofollow" href="https://www.mozilla.org/about/legal/">Legal</a></li>
+        </ul>
+        <p class="mzp-c-footer-license">
+          Portions of this content are ©1998–2018 by individual mozilla.org contributors.
+          Content available under a <a rel="license" href="https://www.mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>.
+        </p>
+      </div>
+      {{#embed "patterns.molecules.language-switcher.language-switcher"}}{{/embed}}
+    </nav>
+  </div>
+</footer>
