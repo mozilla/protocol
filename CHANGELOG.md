@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **css:** Improve web font loading using font-display descriptor (#147)
+
 # 1.0.1
 
 ## Bug Fixes

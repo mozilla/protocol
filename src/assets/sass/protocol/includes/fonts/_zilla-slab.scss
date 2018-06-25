@@ -4,17 +4,19 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'Zilla Slab';
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
     src: url('#{$font-path}/ZillaSlab-Regular.woff2') format('woff2'),
          url('#{$font-path}/ZillaSlab-Regular.woff') format('woff');
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Zilla Slab';
-    font-weight: bold;
     font-style: normal;
+    font-weight: bold;
     src: url('#{$font-path}/ZillaSlab-Bold.woff2') format('woff2'),
          url('#{$font-path}/ZillaSlab-Bold.woff') format('woff');
 }

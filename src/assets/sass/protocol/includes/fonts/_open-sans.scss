@@ -4,33 +4,37 @@
 
 
 @font-face {
+    font-display: swap;
     font-family: 'Open Sans';
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
     src: url('#{$font-path}/opensans-regular.woff2') format('woff2'),
          url('#{$font-path}/opensans-regular.woff') format('woff');
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Open Sans';
-    font-weight: bold;
     font-style: normal;
+    font-weight: bold;
     src: url('#{$font-path}/opensans-bold.woff2') format('woff2'),
          url('#{$font-path}/opensans-bold.woff') format('woff');
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Open Sans';
-    font-weight: normal;
     font-style: italic;
+    font-weight: normal;
     src: url('#{$font-path}/opensans-italic.woff2') format('woff2'),
          url('#{$font-path}/opensans-italic.woff') format('woff');
 }
 
 @font-face {
+    font-display: swap;
     font-family: 'Open Sans';
-    font-weight: bold;
     font-style: italic;
+    font-weight: bold;
     src: url('#{$font-path}/opensans-bolditalic.woff2') format('woff2'),
          url('#{$font-path}/opensans-bolditalic.woff') format('woff');
 }
