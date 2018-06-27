@@ -1,4 +1,5 @@
 node_modules
 dist
+src/data/colors.json
 .netlify
 .DS_Store
