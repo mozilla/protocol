@@ -13,7 +13,7 @@
 // On medium sized screens the 1st card spans full width, and the remaining 4 cards span half widths.
 // On large screens the 1st card spans 2 thirds, and the remaining cards span 1 third.
 .mzp-l-card-hero {
-    @media #{$media-sm} {
+    @media #{$mq-sm} {
         @include clearfix;
 
         .mzp-c-card {
@@ -35,7 +35,7 @@
         }
     }
 
-    @media #{$media-lg} {
+    @media #{$mq-lg} {
         .mzp-c-card {
             width: calc(33.3% - (#{$margin-xl} - (#{$margin-xl} / 3)));
 
@@ -68,7 +68,7 @@
 // On medium sized screens cards span half width.
 // On large screens cards span quarter widths.
 .mzp-l-card-quarter {
-    @media #{$media-sm} {
+    @media #{$mq-sm} {
         @include clearfix;
 
         .mzp-c-card {
@@ -86,7 +86,7 @@
         }
     }
 
-    @media #{$media-lg} {
+    @media #{$mq-lg} {
         .mzp-c-card {
             @include bidi((
                 (margin-left, 0, $margin-xl),
@@ -118,7 +118,7 @@
 // On medium sized screens cards span half width.
 // On large screens cards span 1 third width.
 .mzp-l-card-third {
-    @media #{$media-sm} {
+    @media #{$mq-sm} {
         @include clearfix;
 
         .mzp-c-card {
@@ -136,7 +136,7 @@
         }
     }
 
-    @media #{$media-lg} {
+    @media #{$mq-lg} {
         .mzp-c-card {
             width: calc(33.3% - (#{$margin-xl} - (#{$margin-xl} / 3)));
 
@@ -162,7 +162,7 @@
 // 2 card layout
 // On small screens cards stack vertically and span full container width.
 // On medium to large sized screens cards span half width.
-@media #{$media-sm} {
+@media #{$mq-sm} {
     .mzp-l-card-half {
         @include clearfix;
 

@@ -229,12 +229,12 @@
 @mixin light-links {
     a:link,
     a:visited {
-        color: $color-secondary;
+        color: $color-white;
     }
 
     a:hover,
     a:focus,
     a:active {
-        color: darken($color-secondary, 10%);
+        color: darken($color-white, 10%);
     }
 }

@@ -5,7 +5,7 @@
 @import '../includes/lib';
 
 .mzp-c-article {
-    max-width: $width-content-md;
+    max-width: $content-md;
 
     // Step down the heading levels
     h2 {
@@ -20,7 +20,7 @@
         @include text-display-sm;
     }
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         // Float left when sidebar is on the left
         .mzp-l-sidebar-left .mzp-l-main & {
             @include bidi(((float, left, right),));

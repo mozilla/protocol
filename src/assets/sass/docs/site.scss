@@ -8,7 +8,7 @@
 .protosite-main {
     padding: 20px 4vw;
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         padding-left: 24vw;
     }
 }
@@ -35,7 +35,7 @@
         }
     }
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         -webkit-overflow-scrolling: touch;
         box-sizing: border-box;
         display: block;
@@ -55,7 +55,7 @@
         cursor: pointer;
         display: block;
 
-        @media #{$media-md} {
+        @media #{$mq-md} {
             display: none;
         }
     }
@@ -68,7 +68,7 @@
 .protosite-nav-main-mozlogo {
     float: right;
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         float: none;
     }
 }
@@ -84,7 +84,7 @@
 .js .protosite-nav-main-menu {
     display: none;
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         display: block;
     }
 }
@@ -127,7 +127,7 @@
         @include text-display-sm;
     }
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         columns: 2 auto;
         column-gap: 30px;
     }
@@ -225,7 +225,7 @@
 .protosite-pattern {
     margin-bottom: 40px;
 
-    @media #{$media-lg} {
+    @media #{$mq-lg} {
         margin-bottom: 60px;
     }
 
@@ -258,14 +258,14 @@
 }
 
 .protosite-pattern-anchor {
-    color: $color-primary;
+    color: $color-black;
     text-decoration: none;
     border: 0;
     cursor: default;
 
     &:hover,
     &:focus {
-        color: $color-primary;
+        color: $color-black;
         text-decoration: none;
 
         &:after {

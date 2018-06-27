@@ -5,7 +5,7 @@
 @import '../includes/lib';
 
 // Template - main content with sidebar
-@media #{$media-md} {
+@media #{$mq-md} {
     .mzp-has-sidebar {
         .mzp-l-main {
             @include grid-two-thirds;
@@ -53,7 +53,7 @@
     }
 }
 
-@media #{$media-lg} {
+@media #{$mq-lg} {
     .mzp-has-sidebar {
         .mzp-l-main {
             @include grid-three-quarters;

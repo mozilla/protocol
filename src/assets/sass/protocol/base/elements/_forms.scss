@@ -40,34 +40,34 @@ input[type='number'],
 input[type='date'],
 input[type='time'] {
     @include border-box;
-    background: $color-secondary;
+    background: $color-white;
     border-radius: 3px;
-    border: 1px solid $color-gray-dark;
+    border: 1px solid $color-gray-90;
     display: inline-block;
     line-height: 1.25;
     padding: .25em $spacing-sm;
 
     &:hover {
-        border-color: $color-primary;
+        border-color: $color-black;
     }
 
     &:focus {
-        border-color: $color-primary;
-        box-shadow: 0 0 0 2px $color-blue-light;
+        border-color: $color-black;
+        box-shadow: 0 0 0 2px $color-blue-40;
     }
 
     &:disabled {
-        background: $color-gray-lighter;
+        background: $color-gray-30;
 
         &:hover,
         &:focus {
-            border-color: $color-gray-dark;
+            border-color: $color-gray-90;
         }
     }
 }
 
 select:focus {
-    box-shadow: 0 0 0 2px $color-blue-light;
+    box-shadow: 0 0 0 2px $color-blue-40;
 }
 
 legend {
@@ -84,14 +84,14 @@ fieldset li {
 
 .mzp-c-fieldnote {
     @include text-body-sm;
-    color: $color-gray-dark;
+    color: $color-gray-90;
     display: block;
     font-weight: normal;
 }
 
 .mzp-c-form-errors {
-    background: $color-yellow-light;
-    border: 2px solid $color-yellow-dark;
+    background: $color-yellow-50;
+    border: 2px solid $color-yellow-60;
     margin: 0 0 1em;
     padding: $spacing-sm $spacing-md;
 
@@ -105,10 +105,10 @@ fieldset li {
 }
 
 .mzp-is-error {
-    color: $color-red-dark;
+    color: $color-red-60;
 
     .mzp-c-fieldnote {
-        color: $color-red-dark;
+        color: $color-red-60;
     }
 
     textarea,
@@ -121,17 +121,17 @@ fieldset li {
     input[type='number'],
     input[type='date'],
     input[type='time'] {
-        border-color: $color-red-dark;
+        border-color: $color-red-60;
 
         &:focus {
-            box-shadow: 0 0 0 2px $color-red-light;
+            box-shadow: 0 0 0 2px $color-red-50;
         }
     }
 
     select,
     input[type='checkbox'],
     input[type='radio'] {
-        box-shadow: 0 0 0 2px $color-red-light;
+        box-shadow: 0 0 0 2px $color-red-50;
     }
 
 }

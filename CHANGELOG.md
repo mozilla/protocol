@@ -1,20 +1,25 @@
 # HEAD
 
+## Features
+
+* **scss:** Consume @mozilla-protocol/tokens package (#109)
+
 ## Bug Fixes
 
 * **css:** Improve web font loading using font-display descriptor (#147)
+* **css:** Media content should occupy 100% modal width (#132)
 
 # 1.0.1
 
 ## Bug Fixes
 
-* **css:** Media content should occupy 100% modal width (#132)
 * **css:** Remove redundant .mzp-c-card-small-cta styles (#136)
 * **css:** Adjust default margins for billboard components (#138)
 
 # 1.0.0
 
 ## Features
+
 * **css:** Compile protocol-extra.css bundle (#120)
 * **css:** Add modal organism (#118)
 * **css:** Add newsletter form and basic button (#112)

@@ -8,8 +8,8 @@ $billboard-content-width-md: 300px + $spacing-sm; // content width + spacing sma
 $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing medium.
 
 .mzp-c-billboard {
-    background: $color-gray-lighter;
-    margin: $layout-xxl 0 $layout-sm;
+    background: $color-gray-20;
+    margin: $layout-2xl 0 $layout-sm;
     position: relative;
 
     .mzp-c-billboard-content {
@@ -34,7 +34,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         max-width: 250px;
     }
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         @include clearfix;
         margin: $margin-xl 0;
 
@@ -85,7 +85,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         }
     }
 
-    @media #{$media-lg} {
+    @media #{$mq-lg} {
         margin: $layout-xl 0;
 
         .mzp-c-billboard-content {

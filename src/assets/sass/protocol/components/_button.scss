@@ -8,10 +8,10 @@
     @include border-box;
     @include text-cta;
     @include transition(background-color 100ms);
-    background-color: $color-blue;
+    background-color: $color-blue-50;
     border-radius: 3px;
     border: 0;
-    color: $color-secondary;
+    color: $color-white;
     display: inline-block;
     font-weight: bold;
     padding: $padding-sm $padding-lg;
@@ -19,7 +19,7 @@
 
     &:hover,
     &:focus {
-        background-color: $color-blue-dark;
-        color: $color-secondary;
+        background-color: $color-blue-60;
+        color: $color-white;
     }
 }

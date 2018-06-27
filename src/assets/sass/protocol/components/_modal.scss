@@ -18,7 +18,7 @@ html.mzp-is-noscroll {
         position: absolute;
     }
 
-    @media #{$media-md} {
+    @media #{$mq-md} {
         height: auto;
 
         body {
@@ -33,7 +33,7 @@ html.mzp-is-noscroll {
 
 .mzp-c-modal {
     @include animation(mzp-a-fade-in 300ms ease-in 0ms 1 normal both);
-    background: $color-primary;
+    background: $color-black;
     background: rgba(0, 0, 0, .85);
     bottom: 0;
     height: 101%;
@@ -67,7 +67,7 @@ html.mzp-is-noscroll {
         }
     }
 
-    @media #{$media-lg} {
+    @media #{$mq-lg} {
         margin: $margin-lg auto ($margin-xl * 2);
     }
 }
@@ -96,7 +96,7 @@ html.mzp-is-noscroll {
         }
 
         &:focus {
-            outline: 1px dotted $color-secondary;
+            outline: 1px dotted $color-white;
         }
     }
 }
@@ -107,7 +107,7 @@ html.mzp-is-noscroll {
     background: transparent;
     margin: 0 auto;
     padding-top: $padding-lg;
-    color: $color-secondary;
+    color: $color-white;
 }
 
 // Modifier for showing full content width media, such as images or video.
