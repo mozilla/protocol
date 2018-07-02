@@ -17,3 +17,7 @@ $image-path: '../img' !default;
 
 // Base elements - general HTML elements
 @import 'base/elements';
+
+// Common utility classes
+@import 'includes/colors';
+@import 'includes/animations';

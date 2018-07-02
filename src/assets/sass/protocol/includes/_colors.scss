@@ -1,0 +1,275 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+// Utitity class mixins for background colors. These are largely presentational
+// classes but can be applied to components for quick and flexible theming.
+
+
+// Light & dark background utility classes for text contrast.
+.mzp-u-bg-light {
+    color: $color-black;
+}
+
+.mzp-u-bg-dark {
+    color: $color-white;
+}
+
+// Mozilla brand background colors
+.mzp-u-bg-brand-primary {
+    background-color: $brand-primary;
+}
+
+.mzp-u-bg-brand-secondary {
+    background-color: $brand-secondary;
+}
+
+.mzp-u-bg-brand-neon-blue {
+    background-color: $brand-neon-blue;
+}
+
+.mzp-u-bg-brand-lemon-yellow {
+    background-color: $brand-lemon-yellow;
+}
+
+.mzp-u-bg-brand-warm-red {
+    background-color: $brand-warm-red;
+}
+
+.mzp-u-bg-brand-neon-green {
+    background-color: $brand-neon-green;
+}
+
+.mzp-u-bg-brand-dark-purple {
+    background-color: $brand-dark-purple;
+}
+
+.mzp-u-bg-brand-dark-purple {
+    background-color: $brand-dark-purple;
+}
+
+.mzp-u-bg-brand-dark-green {
+    background-color: $brand-dark-green;
+}
+
+.mzp-u-bg-brand-dark-blue {
+    background-color: $brand-dark-blue;
+}
+
+// Magenta background colors
+.mzp-u-bg-color-magenta-50 {
+    background-color: $color-magenta-50;
+}
+
+.mzp-u-bg-color-magenta-60 {
+    background-color: $color-magenta-60;
+}
+
+.mzp-u-bg-color-magenta-70 {
+    background-color: $color-magenta-70;
+}
+
+.mzp-u-bg-color-magenta-80 {
+    background-color: $color-magenta-80;
+}
+
+.mzp-u-bg-color-magenta-90 {
+    background-color: $color-magenta-90;
+}
+
+// Purple background colors
+.mzp-u-bg-color-purple-30 {
+    background-color: $color-purple-30;
+}
+
+.mzp-u-bg-color-purple-40 {
+    background-color: $color-purple-40;
+}
+
+.mzp-u-bg-color-purple-50 {
+    background-color: $color-purple-50;
+}
+
+.mzp-u-bg-color-purple-60 {
+    background-color: $color-purple-60;
+}
+
+.mzp-u-bg-color-purple-70 {
+    background-color: $color-purple-70;
+}
+
+.mzp-u-bg-color-purple-80 {
+    background-color: $color-purple-80;
+}
+
+.mzp-u-bg-color-purple-90 {
+    background-color: $color-purple-90;
+}
+
+// Blue background colors
+.mzp-u-bg-color-blue-40 {
+    background-color: $color-blue-40;
+}
+
+.mzp-u-bg-color-blue-50 {
+    background-color: $color-blue-50;
+}
+
+.mzp-u-bg-color-blue-60 {
+    background-color: $color-blue-60;
+}
+
+.mzp-u-bg-color-blue-70 {
+    background-color: $color-blue-70;
+}
+
+.mzp-u-bg-color-blue-80 {
+    background-color: $color-blue-80;
+}
+
+.mzp-u-bg-color-blue-90 {
+    background-color: $color-blue-90;
+}
+
+// Teal background colors
+.mzp-u-bg-color-teal-50 {
+    background-color: $color-teal-50;
+}
+
+.mzp-u-bg-color-teal-60 {
+    background-color: $color-teal-60;
+}
+
+.mzp-u-bg-color-teal-70 {
+    background-color: $color-teal-70;
+}
+
+.mzp-u-bg-color-teal-80 {
+    background-color: $color-teal-80;
+}
+
+.mzp-u-bg-color-teal-90 {
+    background-color: $color-teal-90;
+}
+
+// Green background colors
+.mzp-u-bg-color-green-50 {
+    background-color: $color-green-50;
+}
+
+.mzp-u-bg-color-green-60 {
+    background-color: $color-green-60;
+}
+
+.mzp-u-bg-color-green-70 {
+    background-color: $color-green-70;
+}
+
+.mzp-u-bg-color-green-80 {
+    background-color: $color-green-80;
+}
+
+.mzp-u-bg-color-green-90 {
+    background-color: $color-green-90;
+}
+
+// Yellow background colors
+.mzp-u-bg-color-yellow-50 {
+    background-color: $color-yellow-50;
+}
+
+.mzp-u-bg-color-yellow-60 {
+    background-color: $color-yellow-60;
+}
+
+.mzp-u-bg-color-yellow-70 {
+    background-color: $color-yellow-70;
+}
+
+.mzp-u-bg-color-yellow-80 {
+    background-color: $color-yellow-80;
+}
+
+.mzp-u-bg-color-yellow-90 {
+    background-color: $color-yellow-90;
+}
+
+// Red background colors
+.mzp-u-bg-color-red-50 {
+    background-color: $color-red-50;
+}
+
+.mzp-u-bg-color-red-60 {
+    background-color: $color-red-60;
+}
+
+.mzp-u-bg-color-red-70 {
+    background-color: $color-red-70;
+}
+
+.mzp-u-bg-color-red-80 {
+    background-color: $color-red-80;
+}
+
+.mzp-u-bg-color-red-90 {
+    background-color: $color-red-90;
+}
+
+// Orange background colors
+.mzp-u-bg-color-orange-50 {
+    background-color: $color-orange-50;
+}
+
+.mzp-u-bg-color-orange-60 {
+    background-color: $color-orange-60;
+}
+
+.mzp-u-bg-color-orange-70 {
+    background-color: $color-orange-70;
+}
+
+.mzp-u-bg-color-orange-80 {
+    background-color: $color-orange-80;
+}
+
+.mzp-u-bg-color-orange-90 {
+    background-color: $color-orange-90;
+}
+
+// Gray background colors
+.mpz-u-bg-color-gray-10 {
+    background-color: $color-gray-10;
+}
+
+.mpz-u-bg-color-gray-20 {
+    background-color: $color-gray-20;
+}
+
+.mpz-u-bg-color-gray-30 {
+    background-color: $color-gray-30;
+}
+
+.mpz-u-bg-color-gray-40 {
+    background-color: $color-gray-40;
+}
+
+.mpz-u-bg-color-gray-50 {
+    background-color: $color-gray-50;
+}
+
+.mpz-u-bg-color-gray-60 {
+    background-color: $color-gray-60;
+}
+
+.mpz-u-bg-color-gray-70 {
+    background-color: $color-gray-70;
+}
+
+.mpz-u-bg-color-gray-80 {
+    background-color: $color-gray-80;
+}
+
+.mpz-u-bg-color-gray-90 {
+    background-color: $color-gray-90;
+}
+
