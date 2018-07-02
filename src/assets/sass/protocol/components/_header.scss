@@ -1,0 +1,28 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+/* -------------------------------------------------------------------------- */
+// Base header class
+
+.mzp-c-header {
+    text-align: center;
+    background-color: $color-gray-20;
+
+    .mzp-c-header-content {
+        max-width: 608px;
+        margin: 0 auto;
+        padding: $padding-2xl $padding-lg;
+    }
+
+    .mzp-c-header-title {
+        @include text-display-md;
+    }
+
+    .mzp-c-header-desc {
+        @include text-body-lg;
+        margin-bottom: 0;
+    }
+}
