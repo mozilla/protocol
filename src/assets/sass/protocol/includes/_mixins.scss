@@ -238,3 +238,20 @@
         color: darken($color-white, 10%);
     }
 }
+
+// Mixins for CSS grid legacy prefixed properties
+// https://bugzilla.mozilla.org/show_bug.cgi?id=1398482
+@mixin grid-gap($value: inherit) {
+    grid-gap: $value;
+    gap: $value;
+}
+
+@mixin grid-row-gap($value: inherit) {
+    grid-row-gap: $value;
+    row-gap: $value;
+}
+
+@mixin grid-column-gap($value: inherit) {
+    grid-column-gap: $value;
+    column-gap: $value;
+}

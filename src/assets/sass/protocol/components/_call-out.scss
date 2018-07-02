@@ -1,0 +1,219 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+/* -------------------------------------------------------------------------- */
+// Call Out component
+
+.mzp-c-call-out {
+    background-color: $color-gray-20;
+    text-align: center;
+
+    &.mzp-t-dark {
+        background-color: $color-gray-90;
+        color: $color-white;
+
+        .mzp-c-call-out-desc {
+            color: $color-gray-30;
+        }
+    }
+
+    .mzp-c-call-out-title {
+        @include text-display-md;
+    }
+
+    .mzp-c-call-out-desc {
+        @include text-body-lg;
+        margin-bottom: 0;
+    }
+
+    .mzp-c-button-download {
+        margin: $margin-lg 0 0;
+    }
+
+    &.mzp-t-product-firefox ,
+    &.mzp-t-product-beta,
+    &.mzp-t-product-developer,
+    &.mzp-t-product-nightly,
+    &.mzp-t-product-focus {
+        .mzp-c-call-out-title {
+            @include background-size(64px 64px);
+            background-position: top center;
+            background-repeat: no-repeat;
+            padding: (64px + $padding-lg) 0 0 0;
+        }
+    }
+
+    &.mzp-t-product-firefox .mzp-c-call-out-title {
+        @include at2x('#{$image-path}/logos/firefox/firefox.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-beta .mzp-c-call-out-title {
+        @include at2x('#{$image-path}/logos/firefox/beta.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-developer .mzp-c-call-out-title {
+        @include at2x('#{$image-path}/logos/firefox/developer.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-nightly .mzp-c-call-out-title {
+        @include at2x('#{$image-path}/logos/firefox/nightly.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-focus .mzp-c-call-out-title {
+        @include at2x('#{$image-path}/logos/firefox/focus.png', 64px, 64px);
+    }
+
+    @media #{$mq-md} {
+        .mzp-l-content {
+            margin: 0 auto;
+            max-width: 800px;
+            padding-bottom: $padding-2xl;
+            padding-top: $padding-2xl;
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Compact Call Out component
+
+.mzp-c-call-out-compact {
+    background-color: $color-gray-20;
+
+    &.mzp-t-dark {
+        background-color: $color-gray-90;
+        color: $color-white;
+
+        .mzp-c-call-out-desc {
+            color: $color-gray-30;
+        }
+    }
+
+    .mzp-c-call-out-title {
+        @include text-display-sm;
+    }
+
+    .mzp-c-call-out-desc {
+        @include text-body-md;
+    }
+
+    .mzp-c-call-out-cta {
+        margin: $margin-sm 0 0;
+    }
+
+    .mzp-c-button-download {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    &.mzp-t-product-firefox ,
+    &.mzp-t-product-beta,
+    &.mzp-t-product-developer,
+    &.mzp-t-product-nightly,
+    &.mzp-t-product-focus {
+        .mzp-c-call-out-content {
+            @include border-box;
+            @include background-size(64px 64px);
+            @include bidi(((background-position, left top, right top),));
+            background-repeat: no-repeat;
+            padding: (64px + $padding-lg) 0 0 0;
+        }
+    }
+
+    &.mzp-t-product-firefox .mzp-c-call-out-content {
+        @include at2x('#{$image-path}/logos/firefox/firefox.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-beta .mzp-c-call-out-content {
+        @include at2x('#{$image-path}/logos/firefox/beta.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-developer .mzp-c-call-out-content {
+        @include at2x('#{$image-path}/logos/firefox/developer.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-nightly .mzp-c-call-out-content {
+        @include at2x('#{$image-path}/logos/firefox/nightly.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-focus .mzp-c-call-out-content {
+        @include at2x('#{$image-path}/logos/firefox/focus.png', 64px, 64px);
+    }
+
+    @media #{$mq-md} {
+        @include clearfix;
+
+        .mzp-l-content {
+            margin: 0 auto;
+            max-width: 1056px;
+            padding-bottom: $padding-2xl;
+            padding-top: $padding-2xl;
+        }
+
+        &.mzp-t-product-firefox,
+        &.mzp-t-product-beta,
+        &.mzp-t-product-developer,
+        &.mzp-t-product-nightly,
+        &.mzp-t-product-focus {
+            .mzp-c-call-out-content {
+                @include bidi((
+                    (background-position, left center, right center),
+                    (padding, 0 0 0 (64px + $padding-xl), 0 (64px + $padding-xl) 0 0),
+                ));
+                min-height: 64px + ($padding-lg * 2);
+            }
+        }
+
+        .mzp-c-call-out-title,
+        .mzp-c-call-out-desc {
+            margin-bottom: 0;
+        }
+
+        .mzp-c-call-out-title + .mzp-c-call-out-desc {
+            margin-top: $margin-sm;
+        }
+
+        .mzp-c-call-out-content {
+            @include bidi(((float, left, right),));
+            max-width: 624px;
+            width: calc(66.6% - #{$margin-lg});
+        }
+
+        .mzp-c-call-out-cta {
+            @include bidi(((float, right, left),));
+            margin: 0;
+            position: relative;
+            width: calc(33.3% - #{$margin-lg});
+        }
+
+        .mzp-c-button-download {
+            @include bidi(((float, right, left),));
+        }
+    }
+
+    @supports(display: grid) {
+        @media #{$mq-md} {
+
+            .mzp-l-content {
+                @include grid-column-gap($margin-xl);
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .mzp-c-call-out-content {
+                width: auto;
+                align-items: center;
+                display: flex;
+            }
+
+            .mzp-c-call-out-cta {
+                align-items: center;
+                display: flex;
+                justify-content: flex-end;
+                width: auto;
+            }
+        }
+    }
+}

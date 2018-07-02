@@ -13,3 +13,6 @@ $base-font-stack: $font-open-sans;
 $base-font-size: 100%;
 $base-line-height: 1.5;
 
+
+// TODO this should be in our tokens https://github.com/mozilla/protocol-tokens/issues/22
+$mq-high-res: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)';
