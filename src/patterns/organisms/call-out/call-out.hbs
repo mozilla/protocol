@@ -1,0 +1,27 @@
+---
+name: Call Out
+order: 1
+description: A vertical call out section containing a logo, headline, description and a call-to-action button.
+notes: |
+    - Product icons can be displayed using an additional theme classes.
+      - `mzp-t-product-firefox`.
+      - `mzp-t-product-beta`.
+      - `mzp-t-product-developer`.
+      - `mzp-t-product-nightly`.
+      - `mzp-t-product-focus`.
+    - Adding a theme class of `mzp-t-firefox` will render the title font using Open Sans.
+    - A dark theme is also available using the theme class `mzp-t-dark`.
+links:
+    Call Out Demo: /demos/call-out.html
+---
+
+<section class="mzp-c-call-out {{#if class}}{{class}}{{else}}mzp-t-product-firefox mzp-t-firefox{{/if}}">
+  <div class="mzp-l-content">
+  {{#block "content"}}
+    <h2 class="mzp-c-call-out-title">A headline with 30 characters</h2>
+    <p class="mzp-c-call-out-desc">A description with a maximum of 140 characters. That means we usually only have room for one or two sentences. Here is what that looks like.</p>
+    {{#embed "patterns.molecules.download-button.download-button"}}{{/embed}}
+  {{/block}}
+  </div>
+</section>
+

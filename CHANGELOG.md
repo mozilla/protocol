@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Add Call Out component (#153)
 * **css:** Update button styles (#167)
 * **css:** Add custom .mzp-t-firefox global theme class (#169)
 * **docs:** Update colors page to consume token data (#161)
