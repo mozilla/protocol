@@ -131,6 +131,10 @@ module.exports = {
         docs: {
             src: './src/static/**/*',
             dest: './dist/static'
+        },
+        colorData: {
+            src: `./node_modules/@mozilla-protocol/tokens/dist/colors/colors.json`,
+            dest: `./src/data`
         }
     },
     serve: {

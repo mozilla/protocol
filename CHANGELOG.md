@@ -2,6 +2,7 @@
 
 ## Features
 
+* **docs:** Update colors page to consume token data (#161)
 * **scss:** Consume @mozilla-protocol/tokens package (#109)
 
 ## Bug Fixes

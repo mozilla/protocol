@@ -6,15 +6,16 @@ labels:
   - inprogress
 ---
 
-<p>Todo: Some guidelines about color and how we use it. Meanwhile, have some swatches.</p>
+<p>Todo:</p>
+<ul class="mzp-u-list-styled">
+  <li>Some guidelines about color and how we use it.</li>
+  <li>Swatches need better grouping e.g. "Primary/Secondary brand colors", "Interface colors".</li>
+</ul>
 
-{{#each (data "colors")}}
-  <h3>{{ @key }}</h3>
-  <ul class="protosite-swatch-gallery">
-    {{#each this}}
-      <li class="protosite-swatch">
-        {{> drizzle.swatch }}
-      </li>
-    {{/each}}
-  </ul>
-{{/each}}
+<ul class="protosite-swatch-gallery">
+  {{#each (data "colors")}}
+    <li class="protosite-swatch">
+      {{> drizzle.swatch }}
+    </li>
+  {{/each}}
+</ul>

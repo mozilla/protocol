@@ -6,7 +6,8 @@ const argv = require('yargs').argv;
 gulp.task('frontend', done => {
     runSequence(
         ['css:lint', 'js:lint'],
-        ['static:copy', 'drizzle'],
+        'static:copy',
+        'drizzle',
         ['sass:compile', 'sass:copy', 'js:copy', 'js:concat'],
         ['css:compress', 'js:compress'],
         done
