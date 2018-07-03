@@ -19,14 +19,8 @@
     }
 
     .mzp-c-button {
-        background-color: $color-black;
         margin-bottom: $margin-sm;
         width: 100%;
-
-        &:hover,
-        &:focus {
-            background-color: lighten($color-black, 20%);
-        }
     }
 
     // Hide errors and thank you message

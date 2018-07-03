@@ -7,19 +7,35 @@
 .mzp-c-button {
     @include border-box;
     @include text-cta;
-    @include transition(background-color 100ms);
-    background-color: $color-blue-50;
-    border-radius: 3px;
-    border: 0;
+    transition: background-color 100ms, border-color 100ms, color 100ms;
+    background-color: $color-black;
+    border-radius: 2px;
+    border: 2px solid $color-black;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
     color: $color-white;
+    cursor: pointer;
     display: inline-block;
     font-weight: bold;
-    padding: $padding-sm $padding-lg;
+    padding: $padding-md $padding-lg;
     text-decoration: none;
 
     &:hover,
     &:focus {
-        background-color: $color-blue-60;
+        background-color: $color-white;
+        color: $color-black;
+    }
+}
+
+.mzp-c-button.mzp-t-download {
+    @include gradient-vertical($start-color: $color-green-50, $end-color: $color-green-70);
+    background-color: $color-green-70;
+    border: none;
+    padding: ($padding-md + 2px) ($padding-lg + 2px); //2px extra padding to compensate for no border.
+
+    &:hover,
+    &:focus {
+        @include gradient-vertical($start-color: $color-green-60, $end-color: $color-green-80);
+        background-color: $color-green-80;
         color: $color-white;
     }
 }
