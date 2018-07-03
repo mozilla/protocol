@@ -24,7 +24,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         @include text-display-md;
     }
 
-    .mzp-c-billboard-media-link {
+    .mzp-c-billboard-image-container {
         display: block;
         text-align: center;
     }
@@ -47,7 +47,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
             bottom: 0;
         }
 
-        .mzp-c-billboard-media-link {
+        .mzp-c-billboard-image-container {
             margin: $margin-lg 0;
             max-width: 300px;
         }
@@ -63,7 +63,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
                 width: 50%;
             }
 
-            .mzp-c-billboard-media-link {
+            .mzp-c-billboard-image-container {
                 float: right;
                 margin-right: calc(50% - #{$billboard-content-width-md});
                 width: 50%;
@@ -77,7 +77,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
                 width: 50%;
             }
 
-            .mzp-c-billboard-media-link {
+            .mzp-c-billboard-image-container {
                 float: left;
                 margin-left: calc(50% - #{$billboard-content-width-md});
                 width: 50%;
@@ -93,7 +93,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
             max-width: 374px;
         }
 
-        .mzp-c-billboard-media-link {
+        .mzp-c-billboard-image-container {
             margin: -42px 0;
             max-width: 374px;
         }
@@ -107,7 +107,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
                 margin-left: calc(50% - #{$billboard-content-width-lg});
             }
 
-            .mzp-c-billboard-media-link {
+            .mzp-c-billboard-image-container {
                 margin-right: calc(50% - #{$billboard-content-width-lg});
             }
         }
@@ -117,7 +117,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
                 margin-right: calc(50% - #{$billboard-content-width-lg});
             }
 
-            .mzp-c-billboard-media-link {
+            .mzp-c-billboard-image-container {
                 margin-left: calc(50% - #{$billboard-content-width-lg});
             }
         }

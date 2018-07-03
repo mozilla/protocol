@@ -9,6 +9,7 @@
 
 ## Bug Fixes
 
+* **html:** Remove image link from the billboard molecule (#143)
 * **css:** Improve web font loading using font-display descriptor (#147)
 * **css:** Media content should occupy 100% modal width (#132)
 
