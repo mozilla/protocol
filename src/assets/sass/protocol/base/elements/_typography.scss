@@ -14,6 +14,13 @@ h1, h2, h3, h4 {
     @include zilla-slab;
 }
 
+// Firefox theme class for headlines using Open Sans.
+.mzp-t-firefox {
+    h1, h2, h3, h4 {
+        @include open-sans;
+    }
+}
+
 // Type scale defined in includes/mixins/_typography.scss
 h1 {
     @include text-display-xxl;

@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Add custom .mzp-t-firefox global theme class (#169)
 * **docs:** Update colors page to consume token data (#161)
 * **scss:** Consume @mozilla-protocol/tokens package (#109)
 
