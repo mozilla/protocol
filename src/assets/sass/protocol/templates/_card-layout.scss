@@ -159,6 +159,23 @@
 }
 
 /* -------------------------------------------------------------------------- */
+// 3 picto card layout
+// On small screens cards stack vertically and span full container width.
+// On medium screens cards span 1 third width.
+.mzp-l-card-third {
+    @media #{$mq-md} {
+        @include clearfix;
+
+        .mzp-c-card-picto {
+            width: 33.3%;
+            @include bidi((
+                (float, left, right),
+            ));
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
 // 2 card layout
 // On small screens cards stack vertically and span full container width.
 // On medium to large sized screens cards span half width.
@@ -186,6 +203,23 @@
 
     .mzp-l-card-half .mzp-c-card {
         width: calc(50% - (#{$margin-xl} - (#{$margin-xl} / 2)));
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// 2 picto card layout
+// On small screens cards stack vertically and span full container width.
+// On medium screens cards span 1 third width.
+.mzp-l-card-half {
+    @media #{$mq-md} {
+        @include clearfix;
+
+        .mzp-c-card-picto {
+            width: 50%;
+            @include bidi((
+                (float, left, right),
+            ));
+        }
     }
 }
 
