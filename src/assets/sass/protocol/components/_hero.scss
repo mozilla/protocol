@@ -1,0 +1,259 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+// Page hero section - should usually appear at the top of a page
+
+// - The content is centered by default without a hero image.
+// - Add the 'mzp-has-image' class to adjust the layout for a hero image (body left, image right).
+// - Add the 'mzp-l-reverse' class to reverse the layout (image left, body right).
+// - With an image, content is still centered in small viewports, with the image below the body.
+// - Add the 'mzp-t-firefox' class for Firefox branding (changing font to Open Sans).
+// - Add the 'mzp-t-dark' class to invert text colors for dark backgrounds.
+
+.mzp-c-hero {
+    padding-bottom: $spacing-lg;
+    position: relative;
+    text-align: center;
+
+    // Product logos
+    &.mzp-t-product-firefox,
+    &.mzp-t-product-beta,
+    &.mzp-t-product-developer,
+    &.mzp-t-product-nightly,
+    &.mzp-t-product-focus {
+        .mzp-c-hero-title {
+            @include background-size(80px 80px);
+            background-position: top center;
+            background-repeat: no-repeat;
+            padding: (80px + $padding-lg) 0 0 0;
+        }
+    }
+
+    // Dark theme
+    &.mzp-t-dark,
+    .mzp-t-dark & {
+        background-color: $color-gray-80;
+        color: $color-white;
+
+        .mzp-c-hero-desc {
+            color: $color-white;
+        }
+    }
+}
+
+.mzp-c-hero-body {
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+.mzp-c-hero-title {
+    @include text-display-lg;
+    margin-bottom: $spacing-md;
+
+    // Product logos
+    .mzp-t-product-firefox & {
+        @include at2x('#{$image-path}/logos/firefox/firefox.png', 80px, 80px);
+    }
+
+    .mzp-t-product-beta & {
+        @include at2x('#{$image-path}/logos/firefox/beta.png', 80px, 80px);
+    }
+
+    .mzp-t-product-developer & {
+        @include at2x('#{$image-path}/logos/firefox/developer.png', 80px, 80px);
+    }
+
+    .mzp-t-product-nightly & {
+        @include at2x('#{$image-path}/logos/firefox/nightly.png', 80px, 80px);
+    }
+
+    .mzp-t-product-focus & {
+        @include at2x('#{$image-path}/logos/firefox/focus.png', 80px, 80px);
+    }
+}
+
+.mzp-c-hero-desc {
+    @include text-body-lg;
+    color: $color-gray-70;
+    margin-bottom: $spacing-md;
+}
+
+.mzp-c-hero-tagline {
+    @include text-display-sm;
+}
+
+.mzp-c-hero-image {
+    padding: 0 $spacing-lg;
+    position: relative;
+    z-index: 2;
+}
+
+@media #{$mq-md} {
+    .mzp-c-hero {
+        // Change the layout when the hero section features an image
+        // Body on the left, image on the right
+        &.mzp-has-image {
+            @include bidi(((text-align, left, right),));
+            min-height: 300px;
+
+            .mzp-c-hero-body {
+                @include bidi((
+                    (margin-right, calc(50% + #{$spacing-xl}), 0),
+                    (margin-left, 0, calc(50% + #{$spacing-xl}))
+                ));
+                width: calc(50% - #{$spacing-xl});
+            }
+
+            .mzp-c-hero-cta {
+                @include bidi(((float, left, right),));
+                clear: both;
+            }
+
+            &.mzp-t-product-firefox,
+            &.mzp-t-product-beta,
+            &.mzp-t-product-developer,
+            &.mzp-t-product-nightly,
+            &.mzp-t-product-focus {
+                .mzp-c-hero-title {
+                    @include bidi(((background-position, left top, right top),));
+                    padding-top: (80px + $spacing-2xl);
+                }
+            }
+
+            // Reverse layout (copy right, image left)
+            &.mzp-l-reverse {
+                .mzp-c-hero-body {
+                    @include bidi((
+                        (margin-right, 0, calc(50% + #{$spacing-xl})),
+                        (margin-left, calc(50% + #{$spacing-xl}), 0)
+                    ));
+                }
+
+                .mzp-c-hero-image {
+                    @include bidi((
+                        (right, 50%, auto),
+                        (left, auto, 50%)
+                    ));
+
+                    img {
+                        @include bidi((
+                            (left, auto, 0),
+                            (right, 0, auto)
+                        ));
+                    }
+                }
+            }
+        }
+    }
+
+    .mzp-c-hero-image {
+        @include bidi((
+            (left, 50%, auto),
+            (right, auto, 50%)
+        ));
+        height: calc(100% - #{$layout-lg});
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        top: $spacing-xl;
+        width: 50%;
+        z-index: 2;
+
+        img {
+            @include bidi((
+                (left, 0, auto),
+                (right, auto, 0)
+            ));
+            bottom: 0;
+            max-height: 100%;
+            max-width: none;
+            position: absolute;
+            width: auto;
+        }
+    }
+}
+
+@media #{$mq-lg} {
+    .mzp-c-hero {
+        padding: $spacing-2xl 0;
+
+        &.mzp-has-image {
+            .mzp-c-hero-body {
+                @include bidi((
+                    (margin-right, calc(50% + #{$spacing-2xl}), 0),
+                    (margin-left, 0, calc(50% + #{$spacing-2xl}))
+                ));
+                width: calc(50% - #{$spacing-2xl});
+            }
+
+            &.mzp-l-reverse {
+                .mzp-c-hero-body {
+                    @include bidi((
+                        (margin-right, 0, calc(50% + #{$spacing-2xl})),
+                        (margin-left, calc(50% + #{$spacing-2xl}), 0)
+                    ));
+                }
+            }
+        }
+    }
+
+    .mzp-c-hero-body {
+        max-width: 580px;
+    }
+
+    .mzp-c-hero-title {
+        margin-bottom: $spacing-xl;
+    }
+
+    .mzp-c-hero-desc {
+        margin-bottom: $spacing-2xl;
+    }
+
+    .mzp-c-hero-image {
+        height: calc(100% - #{$layout-xl});
+        top: $spacing-2xl;
+    }
+}
+
+
+@supports (mask-image: url('mask.svg')) {
+    .mzp-c-hero.mzp-t-firefox {
+        &:after {
+            background-color: $color-gray-20;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 25%;
+            mask: url('#{$image-path}/backgrounds/masks/hero/hero-curve.svg') center bottom no-repeat;
+            mask-size: 100% 100%;
+            max-height: 160px;
+            min-height: 75px;
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+
+            @media #{$mq-lg} {
+                min-height: 140px;
+            }
+        }
+
+        &.mzp-t-dark:after,
+        .mzp-t-dark &:after {
+            background-color: $color-gray-60;
+        }
+
+        // Utility class to remove the bottom curve.
+        // It's better to do this in the CSS for your page rather than the HTML.
+        &.mzp-u-no-shape:after {
+            display: none;
+        }
+
+        .mzp-c-hero-body {
+            position: relative;
+            z-index: 2;
+        }
+    }
+}

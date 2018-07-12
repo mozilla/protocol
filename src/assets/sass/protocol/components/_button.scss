@@ -26,10 +26,23 @@
     }
 }
 
+.mzp-t-dark .mzp-c-button {
+    background-color: $color-white;
+    border-color: $color-white;
+    color: $color-black;
+
+    &:hover,
+    &:focus {
+        background-color: $color-gray-80;
+        color: $color-white;
+    }
+}
+
 .mzp-c-button.mzp-t-download {
     @include gradient-vertical($start-color: $color-green-50, $end-color: $color-green-70);
     background-color: $color-green-70;
     border: none;
+    color: $color-white;
     padding: ($padding-md + 2px) ($padding-lg + 2px); //2px extra padding to compensate for no border.
 
     &:hover,
