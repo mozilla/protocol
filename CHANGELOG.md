@@ -3,6 +3,7 @@
 ## Features
 
 * **css:** Add feature card component (#159)
+* **css:** Add a page hero component (#157, #158)
 
 # 2.0.1
 
