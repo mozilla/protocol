@@ -43,19 +43,24 @@ if (typeof Mozilla === 'undefined') {
      * @param {function} Custom callback for analytics.
      */
     LangSwitcher.init = function(callback) {
-        var language = document.getElementById('mzp-c-language-switcher-select');
-        var previousLanguage = language.value;
+        var language = document.querySelectorAll('.mzp-c-language-switcher-select');
 
-        language.addEventListener('change', function(e) {
-            var newLanguage = e.target.value;
+        for (var i = 0; i < language.length; i++) {
+            language[i].setAttribute('data-previous-language', language[i].value);
 
-            // support custom callback for page analytics.
-            if (typeof callback === 'function') {
-                callback(previousLanguage, newLanguage);
-            }
+            language[i].addEventListener('change', function(e) {
+                var newLanguage = e.target.value;
+                var previousLanguage = e.target.getAttribute('data-previous-language');
 
-            LangSwitcher.doRedirect(LangSwitcher.switchPath(window.location, newLanguage));
-        }, false);
+                // support custom callback for page analytics.
+                if (typeof callback === 'function') {
+                    callback(previousLanguage, newLanguage);
+                }
+
+                LangSwitcher.doRedirect(LangSwitcher.switchPath(window.location, newLanguage));
+            }, false);
+        }
+
     };
 
     window.Mozilla.LangSwitcher = LangSwitcher;

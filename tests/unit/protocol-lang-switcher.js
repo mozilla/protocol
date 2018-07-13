@@ -43,9 +43,9 @@ describe('mozilla-utils.js', function() {
     describe('init', function() {
 
         beforeEach(function () {
-            var langSelect = '<form class="mzp-c-language-switcher" id="mzp-c-language-switcher" method="get" action="#">' +
+            var langSelect = '<form class="mzp-c-language-switcher" method="get" action="#">' +
                                 '<label for="mzp-c-language-switcher-select">Language</label>' +
-                                '<select id="mzp-c-language-switcher-select" name="lang">' +
+                                '<select id="mzp-c-language-switcher-select" class="mzp-c-language-switcher-select" name="lang">' +
                                     '<option value="en-US" selected>English (US)</option>' +
                                     '<option value="de">Deutsch</option>' +
                                     '<option value="fr">Français</option>' +
@@ -58,14 +58,14 @@ describe('mozilla-utils.js', function() {
         });
 
         afterEach(function(){
-            var node = document.getElementById('mzp-c-language-switcher');
+            var node = document.querySelector('.mzp-c-language-switcher');
             if (node.parentNode) {
                 node.parentNode.removeChild(node);
             }
         });
 
         function fireChangeEvent(index) {
-            var select = document.getElementById('mzp-c-language-switcher-select');
+            var select = document.querySelector('.mzp-c-language-switcher-select');
             var evt = document.createEvent('HTMLEvents');
             evt.initEvent('change', false, true);
             select.selectedIndex = index;

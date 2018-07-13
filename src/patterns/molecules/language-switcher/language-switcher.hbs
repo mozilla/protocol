@@ -7,9 +7,9 @@ notes: |
   - Inline JavaScript in this example is for demo purposes only. Use external files in production code.
 ---
 
-<form class="mzp-c-language-switcher" id="mzp-c-language-switcher" method="get" action="#">
+<form class="mzp-c-language-switcher" method="get" action="#">
   <label for="mzp-c-language-switcher-select">Language</label>
-  <select id="mzp-c-language-switcher-select" name="lang">
+  <select id="mzp-c-language-switcher-select" class="mzp-c-language-switcher-select" name="lang">
     {{#each (data "items")}}
       <option value="{{lang-code}}">{{language}}</option>
     {{/each}}

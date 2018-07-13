@@ -137,9 +137,9 @@
 }
 
 /* -------------------------------------------------------------------------- */
-// Footer small links
+// Footer legal links
 
-.mzp-c-footer-links-small {
+.mzp-c-footer-legal {
     li {
         @include bidi(((padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),));
         display: inline;
