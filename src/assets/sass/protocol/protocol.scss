@@ -17,3 +17,7 @@ $image-path: '../img' !default;
 
 // Base elements - general HTML elements
 @import 'base/elements';
+
+// Global components
+@import 'components/footer';
+@import 'components/language-switcher';

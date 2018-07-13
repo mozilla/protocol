@@ -28,6 +28,7 @@
   - [Stylesheets](#stylesheets)
   - [JavaScript](#javascript)
 - [Build Process](#build-process)
+- [Running tests](#running-tests)
 - [Publishing](#publishing)
 - [Acknowledgements](#acknowledgements)
 
@@ -492,6 +493,14 @@ The build sequence consists of a small set of [Gulp][gulp] tasks. While you'll p
 | `gulp serve`    | Start the development server.
 | `gulp watch`    | Run tasks automatically when file changes occur.
 
+# Running tests
+
+To start the build process and then run front-end JS tests against the processed files:
+
+```
+npm test
+```
+
 # Publishing
 
 Protocol is published to NPM under the `@mozilla-protocol/core` namespace/package name. To publish a release to NPM, use the following steps:
@@ -501,8 +510,8 @@ Protocol is published to NPM under the `@mozilla-protocol/core` namespace/packag
 3. Make sure [CHANGELOG.md][changelog] is also up to date.
 4. Commit the changes to the `master` branch.
 5. Tag a new release. You can do this either using [Git tag][git-tag], or directly on the [GitHub website][releases].
-6. Run `gulp build` to create the NPM package. The package contents will be located in `./dist/assets/protocol/`.
-7. Publish to NPM using `npm publish ./dist/assets/protocol/`.
+6. Run `npm test` to run the build script and front-end tests. The package contents will be located in `./dist/assets/protocol/`.
+7. If the build is successful and all tests pass, publish to NPM using `npm publish ./dist/assets/protocol/`.
 
 # Acknowledgements
 
