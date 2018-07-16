@@ -1,3 +1,9 @@
+# 2.0.1
+
+## Bug Fixes
+
+* **scss:** Include @mozilla-protocol/tokens source files in build (#172)
+
 # 2.0.0
 
 ## Features
