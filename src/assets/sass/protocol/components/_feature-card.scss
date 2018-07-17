@@ -1,0 +1,214 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+/* -------------------------------------------------------------------------- */
+// A single large feature card with media, headline & description.
+
+.mzp-c-card-feature {
+    margin: 0 auto $margin-xl;
+    text-align: center;
+
+    // Preserve aspect ratio of images and avoid content jump when loading.
+    &.mzp-has-aspect-16-9 .mzp-c-card-feature-media {
+        @include aspect-ratio(16, 9);
+    }
+
+    &.mzp-has-aspect-3-2 .mzp-c-card-feature-media {
+        @include aspect-ratio(3, 2);
+    }
+
+    .mzp-c-card-feature-media {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .mzp-c-card-feature-media {
+        img,
+        video {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .mzp-c-card-feature-content {
+        @include bidi(((text-align, left, right),));
+        margin-top: $margin-md;
+    }
+
+    .mzp-c-card-feature-title {
+        @include text-display-sm;
+    }
+
+    .mzp-c-card-feature-desc {
+        @include text-body-md;
+        color: $color-gray-70;
+        margin: $margin-xs 0;
+    }
+
+    .mzp-c-card-feature-list li {
+        margin-bottom: $margin-xl;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // dark theme color styling
+    .mzp-t-dark & {
+        color: $color-white;
+
+        .mzp-c-card-feature-desc {
+            color: $color-gray-30;
+        }
+    }
+
+    @media #{$mq-md} {
+        margin-bottom: $layout-2xl;
+        max-width: 800px;
+
+        .mzp-c-card-feature-list li {
+            margin-bottom: $margin-2xl;
+        }
+
+        &.mzp-l-card-feature-left-half,
+        &.mzp-l-card-feature-right-half,
+        &.mzp-l-card-feature-left-third,
+        &.mzp-l-card-feature-right-third {
+            @include clearfix;
+            margin-bottom: $layout-xl;
+            max-width: none;
+            position: relative;
+
+            .mzp-c-card-feature-content,
+            .mzp-c-card-feature-media-wrapper {
+                margin-top: 0;
+            }
+        }
+
+        &.mzp-l-card-feature-left-half,
+        &.mzp-l-card-feature-right-half {
+            .mzp-c-card-feature-content,
+            .mzp-c-card-feature-media-wrapper {
+                width: calc(50% - (#{$margin-xl} / 2));
+            }
+        }
+
+        &.mzp-l-card-feature-left-third,
+        &.mzp-l-card-feature-right-third {
+            .mzp-c-card-feature-content {
+                width: calc(41% - #{$margin-2xl});
+            }
+
+            .mzp-c-card-feature-media-wrapper {
+                width: 59%;
+            }
+        }
+
+        &.mzp-l-card-feature-left-half,
+        &.mzp-l-card-feature-left-third {
+            .mzp-c-card-feature-content {
+                @include bidi((
+                    (float, left, right),
+                    (left, 0, right, auto),
+                ));
+            }
+
+            .mzp-c-card-feature-media-wrapper {
+                @include bidi((
+                    (float, right, left),
+                ));
+            }
+        }
+
+        &.mzp-l-card-feature-right-half,
+        &.mzp-l-card-feature-right-third {
+            .mzp-c-card-feature-content {
+                @include bidi((
+                    (float, right, left),
+                    (right, 0, left, auto),
+                ));
+            }
+
+            .mzp-c-card-feature-media-wrapper {
+                @include bidi((
+                    (float, left, right),
+                ));
+            }
+        }
+    }
+
+    @supports(display: grid) {
+        @media #{$mq-md} {
+            &.mzp-l-card-feature-left-half,
+            &.mzp-l-card-feature-right-half,
+            &.mzp-l-card-feature-left-third,
+            &.mzp-l-card-feature-right-third {
+                @include grid-column-gap($spacing-xl);
+                display: grid;
+
+                .mzp-c-card-feature-content {
+                   align-items: center;
+                   display: flex;
+                }
+            }
+
+            &.mzp-l-card-feature-left-half,
+            &.mzp-l-card-feature-left-third {
+                .mzp-c-card-feature-content {
+                    grid-column: 1;
+                    grid-row: 1;
+                    width: auto;
+                }
+
+                .mzp-c-card-feature-media-wrapper {
+                    grid-column: 2;
+                    grid-row: 1;
+                    width: auto;
+                }
+            }
+
+            &.mzp-l-card-feature-left-half {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            &.mzp-l-card-feature-left-third {
+                grid-template-columns: 1fr 2fr;
+            }
+
+            &.mzp-l-card-feature-right-half,
+            &.mzp-l-card-feature-right-third {
+                .mzp-c-card-feature-content {
+                    grid-column: 2;
+                    grid-row: 1;
+                    width: auto;
+                }
+
+                .mzp-c-card-feature-media-wrapper {
+                    grid-column: 1;
+                    grid-row: 1;
+                    width: auto;
+                }
+            }
+
+            &.mzp-l-card-feature-right-half {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            &.mzp-l-card-feature-right-third {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        @media #{$mq-lg} {
+            &.mzp-l-card-feature-left-half,
+            &.mzp-l-card-feature-right-half,
+            &.mzp-l-card-feature-left-third,
+            &.mzp-l-card-feature-right-third {
+                @include grid-column-gap($margin-2xl);
+            }
+        }
+    }
+}

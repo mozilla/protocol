@@ -1,0 +1,83 @@
+---
+title: Feature Card
+layout: blank
+styles:
+  - card
+---
+
+<header class="mzp-l-content">
+  <h1>Feature Card</h1>
+  <p>Content variations using the Feature Card component.</p>
+</header>
+
+<div class="mzp-t-firefox">
+  <div class="mzp-l-content">
+    {{#embed "patterns.molecules.feature-card.feature-card"}}{{/embed}}
+    {{#embed "patterns.molecules.feature-card.feature-card" class="mzp-l-card-feature-left-half"}}
+      {{#content "content"}}
+        <h2 class="mzp-c-card-feature-title">A headline with 30 characters</h2>
+        <p class="mzp-c-card-feature-desc">
+          A longer description for more detailed copy. Here we have room for several sentences,
+          but try not to make a paragraph too long as this will take up more space on smaller screens.
+          Copy will also be on average 1/3 longer than English when translated to different languages,
+          so try to keep sentences short and concise.
+        </p>
+      {{/content}}
+    {{/embed}}
+    {{#embed "patterns.molecules.feature-card.feature-card" class="mzp-l-card-feature-right-third"}}
+      {{#content "content"}}
+        <ul class="mzp-c-card-feature-list">
+          <li>
+            <h2 class="mzp-c-card-feature-title">A headline with 30 characters</h2>
+            <p class="mzp-c-card-feature-desc">A short description with a maximum of about 60 characters.</p>
+          </li>
+          <li>
+            <h2 class="mzp-c-card-feature-title">A headline with 30 characters</h2>
+            <p class="mzp-c-card-feature-desc">A short description with a maximum of about 60 characters.</p>
+          </li>
+          <li>
+            <h2 class="mzp-c-card-feature-title">A headline with 30 characters</h2>
+            <p class="mzp-c-card-feature-desc">A short description with a maximum of about 60 characters.</p>
+          </li>
+        </ul>
+      {{/content}}
+    {{/embed}}
+    {{#embed "patterns.molecules.feature-card.feature-card" class="mzp-l-card-feature-left-third"}}{{/embed}}
+  </div>
+
+  <div class="mzp-t-dark">
+    <div class="mzp-l-content">
+      {{#embed "patterns.molecules.feature-card.feature-card"}}{{/embed}}
+      {{#embed "patterns.molecules.feature-card.feature-card" class="mzp-l-card-feature-left-third"}}
+        {{#content "content"}}
+          <ul class="mzp-c-card-feature-list">
+            <li>
+              <h2 class="mzp-c-card-feature-title">A headline with 30 characters</h2>
+              <p class="mzp-c-card-feature-desc">A short description with a maximum of about 60 characters.</p>
+            </li>
+            <li>
+              <h2 class="mzp-c-card-feature-title">A headline with 30 characters</h2>
+              <p class="mzp-c-card-feature-desc">A short description with a maximum of about 60 characters.</p>
+            </li>
+            <li>
+              <h2 class="mzp-c-card-feature-title">A headline with 30 characters</h2>
+              <p class="mzp-c-card-feature-desc">A short description with a maximum of about 60 characters.</p>
+            </li>
+          </ul>
+        {{/content}}
+      {{/embed}}
+      {{#embed "patterns.molecules.feature-card.feature-card" class="mzp-l-card-feature-right-half"}}
+        {{#content "content"}}
+          <h2 class="mzp-c-card-feature-title">A headline with 30 characters</h2>
+          <p class="mzp-c-card-feature-desc">
+            A longer description for more detailed copy. Here we have room for several sentences,
+            but try not to make a paragraph too long as this will take up more space on smaller screens.
+            Copy will also be on average 1/3 longer than English when translated to different languages,
+            so try to keep sentences short and concise.
+          </p>
+        {{/content}}
+      {{/embed}}
+      {{#embed "patterns.molecules.feature-card.feature-card" class="mzp-l-card-feature-left-third"}}{{/embed}}
+    </div>
+  </div>
+</div>

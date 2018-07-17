@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **css:** Add feature card component (#159)
+
 # 2.0.1
 
 ## Bug Fixes

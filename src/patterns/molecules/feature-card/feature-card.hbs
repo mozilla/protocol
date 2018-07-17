@@ -1,0 +1,32 @@
+---
+name: Feature Card
+description: A single large feature card with media, headline, description & link.
+order: 7
+notes: |
+    - Feature cards have a range of different layout options, including horizontal layout classes.
+      - `mzp-l-card-feature-left-half`
+      - `mzp-l-card-feature-right-half`
+      - `mzp-l-card-feature-left-third`
+      - `mzp-l-card-feature-right-third`
+    - For dark color backgrounds, a `.mzp-t-dark` theme color is supported.
+    - See the [demo page](/demos/feature-card.html) for a full list of examples.
+links:
+    Feature Card Demo: /demos/feature-card.html
+---
+
+<section class="mzp-c-card-feature mzp-has-aspect-3-2 {{#if class}}{{class}}{{/if}}">
+  <div class="mzp-c-card-feature-media-wrapper">
+    <div class="mzp-c-card-feature-media">
+      <img src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
+    </div>
+  </div>
+  <div class="mzp-c-card-feature-content">
+    <div class="mzp-c-card-feature-content-container">
+    {{#block "content"}}
+      <h2 class="mzp-c-card-feature-title">A headline with 30 characters</h2>
+      <p class="mzp-c-card-feature-desc">A description with a maximum of 100 characters. That usually means only one or two sentences.</p>
+      <a class="mzp-c-cta-link" href="#">A link for more information</a>
+    {{/block}}
+    </div>
+  </div>
+</section>
