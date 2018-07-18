@@ -4,6 +4,10 @@
 
 * **css:** Add feature card component (#159)
 
+## Bug Fixes
+
+* **css:** Billboard text overflows container with long strings (#180)
+
 # 2.0.1
 
 ## Bug Fixes
