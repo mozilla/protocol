@@ -1,0 +1,37 @@
+---
+name: Navigation
+description: |
+  Main site Navigation organism, with logo, [Menu](/patterns/molecules/menu.html) and [Download Button](/patterns/molecules/download-button.html) molecules.
+hidepreview: true
+notes: |
+  - On wide viewports, navigation content is displayed inline.
+  - On small viewports, navigation content is hidden by default and toggled via a menu icon.
+  - The Mozilla logo is always visible.
+  - Navigation can be initialized using `Mozilla.Navigation.init(options)`, where `options` is an Object with the following properties.
+      - `onNavOpen` [Function] A callback when the small screen navigation icon is clicked to open (optional).
+      - `onNavClose` [Function] A callback when the small screen navigation icon is clicked to close (optional).
+links:
+    Navigation Demo: /demos/navigation.html
+---
+
+<div class="mzp-c-navigation">
+  <div class="mzp-c-navigation-l-content">
+    <div class="mzp-c-navigation-container">
+      <button class="mzp-c-navigation-menu-button" type="button" aria-controls="map-c-navigation-items">Menu</button>
+      <div class="mzp-c-navigation-logo"><a href="https://www.mozilla.org/">Mozilla</a></div>
+      <div class="mzp-c-navigation-items" id="mzp-c-navigation-items">
+        <div class="mzp-c-navigation-download">
+          {{#embed "patterns.molecules.download-button.download-button" class="mzp-t-download-secondary"}}
+            {{#content "privacy-link"}}{{/content}}
+          {{/embed}}
+        </div>
+        <div class="mzp-c-navigation-menu">
+          {{#block "menu"}}
+            {{#embed "patterns.molecules.menu.menu"}}{{/embed}}
+          {{/block}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

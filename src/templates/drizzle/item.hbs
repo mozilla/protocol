@@ -33,14 +33,18 @@
     {{{pattern id @root}}}
   {{else}}
     {{!-- Bidi controls --}}
+    {{#unless data.hidepreview}}
     {{#> drizzle.bidi id=(toSlug name)}}
       {{name}}
     {{/drizzle.bidi}}
+    {{/unless}}
     {{!-- Preview --}}
     <div class="protosite-pattern-embed">
+      {{#unless data.hidepreview}}
       <div class="protosite-pattern-preview {{data.previewClass}}" id="protosite-{{toSlug name}}-preview" dir="ltr">
         {{{pattern id @root}}}
       </div>
+      {{/unless}}
       {{!-- Code sample --}}
       {{#unless data.sourceless}}
         <pre class="protosite-pattern-code"><code class="language-markup">{{{patternSource id @root}}}</code></pre>

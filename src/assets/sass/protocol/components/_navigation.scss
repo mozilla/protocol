@@ -1,0 +1,189 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+/* -------------------------------------------------------------------------- */
+// Navigation styles
+
+.mzp-c-navigation {
+    background: $color-white;
+    color: $color-black;
+
+    .mzp-c-navigation-l-content {
+        @include clearfix;
+        padding: $layout-xs;
+        position: relative;
+
+        @media #{$mq-md} {
+            padding: 0 $layout-lg;
+        }
+
+        @media #{$mq-lg} {
+            padding: 0 $layout-xl;
+        }
+    }
+
+    .mzp-c-navigation-container {
+        margin: 0 auto;
+        max-width: $content-max - ($layout-xs * 2);
+
+        @media #{$mq-md} {
+            @include clearfix;
+            max-width: $content-max - ($layout-lg * 2);
+        }
+
+        @media #{$mq-lg} {
+            max-width: $content-max - ($layout-xl * 2);
+        }
+    }
+}
+
+.mzp-c-navigation-items {
+    clear: both;
+    padding-top: $spacing-sm;
+
+    @media #{$mq-md} {
+        clear: none;
+        padding-top: 0;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Mozilla Logo
+
+.mzp-c-navigation-logo {
+    @include bidi(((float, left, right),));
+
+    a {
+        @include background-size(84px, 24px);
+        @include image-replaced;
+        background-image: url('#{$image-path}/logos/mozilla/black.svg');
+        background-repeat: no-repeat;
+        display: block;
+        height: 24px;
+        margin: 0 auto;
+        width: 84px;
+    }
+
+    @media #{$mq-md} {
+        @include bidi(((margin, $spacing-lg ($spacing-sm * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-sm * 2)),));
+
+        a {
+            margin-top: $spacing-sm;
+        }
+    }
+
+    @media #{$mq-lg} {
+        @include bidi(((margin, $spacing-lg ($spacing-md * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-md * 2)),));
+
+        a {
+            @include background-size(112px, 32px);
+            height: 32px;
+            margin-top: $spacing-xs;
+            width: 112px;
+        }
+    }
+
+    @media #{$mq-xl} {
+        @include bidi(((margin, $spacing-lg ($spacing-lg * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-lg * 2)),));
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Menu molecule
+
+.mzp-c-navigation-menu {
+    @media #{$mq-md} {
+        @include bidi(((margin-left, -$spacing-sm, margin-right, 0),));
+        display: inline-block;
+        width: auto;
+    }
+
+    @media #{$mq-lg} {
+        @include bidi(((margin-left, -$spacing-md, margin-right, 0),));
+    }
+
+    @media #{$mq-xl} {
+        @include bidi(((margin-left, -$spacing-lg, margin-right, 0),));
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Download button
+
+.mzp-c-navigation-download {
+    margin: $spacing-xl 0 $spacing-lg;
+
+    .mzp-c-button-download {
+        margin-bottom: 0;
+    }
+
+    @media #{$mq-md} {
+        @include bidi((
+            (float, right, left),
+            (margin, $spacing-lg 0 $spacing-lg $spacing-sm, $spacing-lg $spacing-sm $spacing-lg 0)
+        ));
+        display: block;
+        margin: $spacing-lg 0;
+    }
+
+    @media #{$mq-lg} {
+        @include bidi(((margin, $spacing-lg 0 $spacing-lg $spacing-md, $spacing-lg $spacing-md $spacing-lg 0),));
+    }
+
+    @media #{$mq-xl} {
+        @include bidi(((margin, $spacing-lg 0 $spacing-lg $spacing-lg, $spacing-lg $spacing-lg $spacing-lg 0),));
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Mobile Navigation Icon
+
+.mzp-c-navigation-menu-button {
+    @include bidi(((float, right, left),));
+    @include image-replaced;
+    background: transparent url('#{$image-path}/icons/ui/menu-black.svg') center center no-repeat;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    display: none;
+    height: 32px;
+    padding: 0;
+    width: 32px;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.is-active  {
+        background-color: $color-gray-20;
+    }
+}
+
+.js .mzp-c-navigation-menu-button {
+    display: block;
+    margin: -4px 0;
+
+    @media #{$mq-md} {
+        display: none;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Mobile Navigation drawer
+
+.js .mzp-c-navigation-l-content {
+
+    .mzp-c-navigation-items {
+        display: none;
+
+        &.is-open {
+            display: block;
+        }
+
+        @media #{$mq-md} {
+            display: block;
+        }
+    }
+}

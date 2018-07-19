@@ -1,9 +1,10 @@
 ---
 name: Download button
 description: |
-  A product download button theme.
+  A product download button theme, with additional secondary variation.
 tips: |
-  - Use this theme for Firefox downloads CTA's.
+  - Use this theme style for Firefox download buttons.
+  - The `mzp-t-download-secondary` variation allows a secondary download CTA to be placed high-up in a page, whilst not visually competing with a primary CTA. An example of this can be seen in the [Navigation](/patterns/organisms/navigation.html) organism.
 ---
 
 <button class="mzp-c-button mzp-t-download">
@@ -13,6 +14,18 @@ tips: |
 </button>
 
 <a href="#" class="mzp-c-button mzp-t-download">
+{{#block "content"}}
+  Call to Action
+{{/block}}
+</a>
+
+<button class="mzp-c-button mzp-t-download-secondary">
+{{#block "content"}}
+  Call to Action
+{{/block}}
+</button>
+
+<a href="#" class="mzp-c-button mzp-t-download-secondary">
 {{#block "content"}}
   Call to Action
 {{/block}}

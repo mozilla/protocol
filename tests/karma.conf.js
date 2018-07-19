@@ -16,6 +16,10 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             '../dist/assets/protocol/protocol/js/protocol-lang-switcher.js',
+            '../dist/assets/protocol/protocol/js/protocol-menu.js',
+            '../dist/assets/protocol/protocol/js/protocol-navigation.js',
+            'unit/protocol-menu.js',
+            'unit/protocol-navigation.js',
             'unit/protocol-lang-switcher.js'
         ],
 
