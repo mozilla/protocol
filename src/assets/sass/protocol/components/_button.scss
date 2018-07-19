@@ -24,6 +24,10 @@
         background-color: $color-white;
         color: $color-black;
     }
+
+    &.mzp-c-button-compact {
+        padding: $padding-sm $padding-md;
+    }
 }
 
 .mzp-t-dark .mzp-c-button {
@@ -50,5 +54,9 @@
         @include gradient-vertical($start-color: $color-green-60, $end-color: $color-green-80);
         background-color: $color-green-80;
         color: $color-white;
+    }
+
+    &.mzp-c-button-compact {
+        padding: ($padding-sm + 2px) ($padding-md + 2px);
     }
 }

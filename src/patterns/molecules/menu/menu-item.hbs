@@ -1,0 +1,40 @@
+---
+name: Menu Item
+description: A menu item with title, description, icon and sub-links.
+order: 2
+notes: |
+  - Each title should have a link destination.
+  - Adding a class of `mzp-has-icon` will allow for a 24px x 24px icon to be displayed beside a menu item.
+  - Product icons can be displayed using an additional theme class.
+    - `mzp-t-product-firefox`.
+    - `mzp-t-product-beta`.
+    - `mzp-t-product-developer`.
+    - `mzp-t-product-nightly`.
+    - `mzp-t-product-focus`.
+  - Icon, description and sub-links are all optional.
+---
+
+<div class="mzp-c-menu-item {{#if icon}}mzp-has-icon{{/if}} {{#if class}}{{class}}{{/if}}">
+  <div class="mzp-c-menu-item-content">
+    <h4 class="mzp-c-menu-item-title">
+      <a class="mzp-c-cta-link" href="{{#block "link"}}#{{/block}}">
+        {{#block "title"}}A headline with 30 characters{{/block}}
+      </a>
+    </h4>
+    {{#block "desc"}}
+    <p class="mzp-c-menu-item-desc">
+      This is a short description with only a single sentence and no more.
+    </p>
+    {{/block}}
+    {{#block "list"}}
+    <ul class="mzp-c-menu-item-list">
+      <li><a href="#">Sub menu link</a></li>
+      <li><a href="#">Sub menu link</a></li>
+      <li><a href="#">Sub menu link</a></li>
+      <li><a href="#">Sub menu link</a></li>
+      <li><a href="#">Sub menu link</a></li>
+      <li><a href="#">Sub menu link</a></li>
+    </ul>
+    {{/block}}
+  </div>
+</div>

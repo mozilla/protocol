@@ -1,0 +1,56 @@
+---
+name: Menu
+description: An expandable menu used for navigation.
+hidepreview: true
+order: 1
+notes: |
+  - On wide screens a drop down menu is displayed when hovering or focusing on a title.
+  - On small screens a drop down menu is expanded/collapsed when clicking on a title.
+  - A drop down menu should consist of two lists of one or more [Menu Items](/patterns/molecules/menu.html#menu-item).
+  - An Extra Small Card can optionally be shown within a drop down menu on wide screens using the `mzp-has-card` class.
+links:
+    Navigation Demo: /demos/navigation.html
+---
+
+<nav class="mzp-c-menu">
+  <ul class="mzp-c-menu-category-list">
+    {{#block "content"}}
+      <li class="mzp-c-menu-category mzp-has-drop-down">
+        <a class="mzp-c-menu-title" href="#">Firefox</a>
+        <div class="mzp-c-menu-panel mzp-has-card">
+          <div class="mzp-c-menu-panel-content">
+            <ul>
+              <li>
+                {{#embed "patterns.molecules.menu.menu-item" icon="true"}}{{/embed}}
+              </li>
+              <li>
+                {{#embed "patterns.molecules.menu.menu-item" icon="true"}}{{/embed}}
+              </li>
+            </ul>
+            <ul>
+              <li>
+                {{#embed "patterns.molecules.menu.menu-item"}}
+                  {{#content "list"}}{{/content}}
+                {{/embed}}
+              </li>
+              <li>
+                {{#embed "patterns.molecules.menu.menu-item"}}
+                  {{#content "list"}}{{/content}}
+                {{/embed}}
+              </li>
+              <li>
+                {{#embed "patterns.molecules.menu.menu-item"}}
+                  {{#content "list"}}{{/content}}
+                {{/embed}}
+              </li>
+            </ul>
+          </div>
+          <div class="mzp-c-menu-panel-card">
+            {{#embed "patterns.molecules.card.extra-small-card"}}{{/embed}}
+          </div>
+        </div>
+      </li>
+    {{/block}}
+  </ul>
+</nav>
+

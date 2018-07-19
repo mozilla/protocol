@@ -1,0 +1,142 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+/* -------------------------------------------------------------------------- */
+// Navigation styles
+
+.mzp-c-navigation {
+    background: $color-white;
+    color: $color-black;
+
+    .mzp-l-content {
+        @include border-box;
+        @include clearfix;
+        margin: 0 auto;
+        max-width: $content-max;
+        min-width: $content-xs;
+        padding: $layout-xs;
+        position: relative;
+
+        @media #{$mq-md} {
+            padding: 0 $layout-lg;
+        }
+
+        @media #{$mq-lg} {
+            padding: 0 $layout-xl;
+        }
+    }
+
+    .mzp-c-navigation-content {
+        position: relative;
+    }
+}
+
+.mzp-c-navigation-menu-button {
+    display: none;
+}
+
+.js .mzp-c-navigation-menu-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media #{$mq-md} {
+        display: none;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Footer Mozilla logo
+
+.mzp-c-navigation-logo {
+    a {
+        @include background-size(112px, 32px);
+        @include image-replaced;
+        background-image: url('#{$image-path}/logos/mozilla/black.svg');
+        background-repeat: no-repeat;
+        display: block;
+        height: 32px;
+        margin: 0 auto;
+        width: 112px;
+    }
+
+    @media #{$mq-md} {
+        margin: $margin-lg 0;
+
+        a {
+            margin-top: $margin-xs;
+        }
+
+        @include bidi((
+            (float, left, right),
+        ));
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Footer items (including dl button)
+
+.mzp-c-navigation-items {
+    @include clearfix;
+
+    .mzp-c-button-download {
+        margin-bottom: 0;
+    }
+
+    @media #{$mq-md} {
+        @include bidi((
+            (float, left, right),
+            (margin-left, $margin-sm, margin-right, 0),
+        ));
+        width: calc(100% - (112px + #{$margin-sm}));
+
+        .mzp-c-menu {
+            @include bidi(((float, left, right),));
+            width: calc(100% - (180px + #{$margin-sm}));
+        }
+
+        .mzp-c-navigation-download {
+            @include bidi(((float, right, left),));
+            margin: $margin-lg 0;
+            max-width: 180px;
+        }
+    }
+
+    @media #{$mq-lg} {
+        @include bidi((
+            (margin-left, $margin-md, margin-right, 0),
+        ));
+        width: calc(100% - (112px + #{$margin-md}));
+
+        .mzp-c-menu {
+            width: calc(100% - (180px + #{$margin-md}));
+        }
+    }
+
+    @media #{$mq-xl} {
+        @include bidi((
+            (margin-left, $margin-lg, margin-right, 0),
+        ));
+        width: calc(100% - (112px + #{$margin-lg}));
+
+        .mzp-c-menu {
+            width: calc(100% - (180px + #{$margin-lg}));
+        }
+    }
+}
+
+.js .mzp-c-navigation-items {
+    display: none;
+
+    &.open {
+        display: block;
+    }
+
+    @media #{$mq-md} {
+        display: block;
+    }
+}

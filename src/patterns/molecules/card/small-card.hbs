@@ -13,9 +13,9 @@ links:
 ---
 
 <section class="mzp-c-card {{#if class}}{{class}}{{else}}mzp-has-aspect-1-1 mzp-has-audio{{/if}}">
-  <a class="mzp-c-card-block-link" href="#">
+  <a class="mzp-c-card-block-link" href="{{#if link}}{{link}}{{else}}#{{/if}}">
     <div class="mzp-c-card-media-wrapper">
-      <img class="mzp-c-card-image" src="{{@root.baseurl}}/static/img/card/card-image.png" alt="">
+      <img class="mzp-c-card-image" src="{{@root.baseurl}}{{#if image}}{{image}}{{else}}/static/img/card/card-image.png{{/if}}" alt="">
     </div>
     <div class="mzp-c-card-content">
     {{#block "content"}}

@@ -1,0 +1,330 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+@mixin menu-arrow {
+    // menu panel arrow.
+    &:after {
+        @include animation(mzp-a-fade-in 70ms ease-in 150ms 1 normal both);
+        background: transparent url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMTkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI0ZGRiIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTYgMS40MTRMMi40MTQgMTVoMjcuMTcyTDE2IDEuNDE0eiIgc3Ryb2tlPSIjQ0VDRUNFIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMTYgM2wxNiAxNkgweiIvPjwvZz48L3N2Zz4=') center center no-repeat;
+        bottom: -20px;
+        content: '';
+        height: 19px;
+        left: 50%;
+        margin-left: -16px;
+        position: absolute;
+        width: 32px;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Menu top navigation
+
+.mzp-c-menu {
+
+    h1, h2, h3, h4, h5, h6 {
+        @include open-sans;
+    }
+
+    @media #{$mq-md} {
+        z-index: 0;
+    }
+}
+
+.mzp-c-menu-category-list {
+    margin-bottom: 0;
+
+    @media #{$mq-md} {
+        @include clearfix;
+    }
+}
+
+.mzp-c-menu-category {
+
+    .mzp-c-menu-title {
+        @include open-sans;
+        @include text-body-md;
+        color: $color-black;
+        cursor: default;
+        display: block;
+        font-weight: normal;
+        margin-bottom: 0;
+        min-height: 40px;
+        padding: $padding-sm 0;
+        position: relative;
+        text-decoration: none;
+    }
+
+    @supports(display: flex) {
+        .mzp-c-menu-title {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    @media #{$mq-md} {
+        display: inline-block;
+        float: left;
+
+        .mzp-c-menu-title {
+            padding: $padding-lg $padding-sm;
+        }
+    }
+
+    @media #{$mq-lg} {
+        .mzp-c-menu-title {
+            padding: $padding-lg $padding-md;
+        }
+    }
+
+    @media #{$mq-xl} {
+        .mzp-c-menu-title {
+            padding: $padding-lg;
+        }
+    }
+}
+
+.no-js .mzp-c-menu-category,
+.mzp-c-menu-basic .mzp-c-menu-category {
+    @media #{$mq-md} {
+        &:hover,
+        &:focus {
+            .mzp-c-menu-title {
+                @include menu-arrow;
+                z-index: 101;
+            }
+
+            .mzp-c-menu-panel {
+                display: block;
+                z-index: 100;
+            }
+        }
+
+        &:focus-within {
+            .mzp-c-menu-title {
+                @include menu-arrow;
+                z-index: 101;
+            }
+
+            .mzp-c-menu-panel {
+                display: block;
+                z-index: 100;
+            }
+        }
+    }
+}
+
+.mzp-c-menu-category {
+    &.selected {
+        .mzp-c-menu-panel {
+            display: block;
+        }
+    }
+
+    @media #{$mq-md} {
+        &.selected {
+            .mzp-c-menu-title {
+                @include menu-arrow;
+                z-index: 101;
+            }
+
+            .mzp-c-menu-panel {
+                display: block;
+                z-index: 100;
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Menu panel
+
+.mzp-c-menu-panel {
+    @include animation(mzp-a-fade-in 70ms ease-in 150ms 1 normal both);
+    @include border-box;
+    @include clearfix;
+    background: $color-white;
+    padding: $padding-md;
+    display: none;
+    width: 100%;
+
+    //cards are hidden by defaul on small screens.
+    &.mzp-has-card .mzp-c-menu-panel-card {
+        display: none;
+        width: 300px;
+    }
+
+    @media #{$mq-md} {
+        border-radius: 8px;
+        border: 2px solid $color-gray-30;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+        left: 0;
+        margin-top: $margin-md;
+        padding: $padding-lg;
+        position: absolute;
+
+        /**
+         * Pseudo element overlayed across the small gap between
+         * the menu and panel prevents menu closing when changing
+         * hover position.
+         */
+        &:before {
+            top: -20px;
+            content: '';
+            height: 20px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    @media #{$mq-md} {
+        .mzp-c-menu-panel-content {
+            @include clearfix;
+            position: relative;
+
+            &> ul {
+                width: calc(50% - (#{$margin-lg} / 2));
+                float: left;
+
+                &:first-child {
+                    margin-right: $margin-lg / 2;
+                }
+
+                &:last-child {
+                    margin-left: $margin-lg / 2;
+                }
+            }
+        }
+    }
+
+    @media #{$mq-xl} {
+        &.mzp-has-card {
+            .mzp-c-menu-panel-content {
+                float: left;
+                width: calc(100% - (300px + #{$margin-lg}));
+            }
+
+            .mzp-c-menu-panel-card {
+                float: right;
+                display: block;
+            }
+        }
+    }
+}
+
+.no-js .mzp-c-menu-panel,
+.mzp-c-menu-basic .mzp-c-menu-panel {
+    display: block;
+
+    @media #{$mq-md} {
+        display: none;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Menu items
+
+.mzp-c-menu-item {
+
+    &.mzp-has-icon .mzp-c-menu-item-content {
+        position: relative;
+        padding-left: 24px + $padding-md;
+
+        &:before {
+            background-color: $color-gray-20;
+            background-repeat: no-repeat;
+            content: '';
+            height: 24px;
+            left: 0;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            width: 24px;
+        }
+    }
+
+    &.mzp-has-icon.mzp-t-product-firefox ,
+    &.mzp-has-icon.mzp-t-product-beta,
+    &.mzp-has-icon.mzp-t-product-developer,
+    &.mzp-has-icon.mzp-t-product-nightly,
+    &.mzp-has-icon.mzp-t-product-focus,
+    &.mzp-has-icon.mzp-t-product-pocket {
+        .mzp-c-menu-item-content:before {
+            background-color: transparent;
+        }
+    }
+
+    &.mzp-has-icon.mzp-t-product-firefox .mzp-c-menu-item-content:before {
+        @include background-size(24px, 24px);
+        background-image: url('#{$image-path}/logos/firefox/firefox.png');
+    }
+
+    &.mzp-has-icon.mzp-t-product-beta .mzp-c-menu-item-content:before {
+        @include background-size(24px, 24px);
+        background-image: url('#{$image-path}/logos/firefox/beta.png');
+    }
+
+    &.mzp-has-icon.mzp-t-product-developer .mzp-c-menu-item-content:before {
+        @include background-size(24px, 24px);
+        background-image: url('#{$image-path}/logos/firefox/developer.png');
+    }
+
+    &.mzp-has-icon.mzp-t-product-nightly .mzp-c-menu-item-content:before {
+        @include background-size(24px, 24px);
+        background-image: url('#{$image-path}/logos/firefox/nightly.png');
+    }
+
+    &.mzp-has-icon.mzp-t-product-focus .mzp-c-menu-item-content:before {
+        @include background-size(24px, 24px);
+        background-image: url('#{$image-path}/logos/firefox/focus.png');
+    }
+
+    &.mzp-has-icon.mzp-t-product-pocket .mzp-c-menu-item-content:before {
+        @include background-size(24px, 22px);
+        background-image: url('#{$image-path}/logos/pocket/pocket.svg');
+    }
+
+    @media #{$mq-md} {
+        &.mzp-has-icon .mzp-c-menu-item-content {
+            padding-left: 24px + $padding-lg;
+        }
+    }
+
+    .mzp-c-menu-item-title {
+        @include text-display-xs;
+        margin-bottom: $margin-md;
+    }
+
+    .mzp-c-menu-item-desc {
+        @include text-body-sm;
+        margin-bottom: $margin-md;
+    }
+
+    .mzp-c-menu-item-list {
+        @include text-body-sm;
+
+        li {
+            margin-bottom: $margin-md;
+        }
+
+        a:link,
+        a:visited {
+            color: $color-black;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:active,
+        a:focus {
+            color: $color-black;
+            text-decoration: underline;
+        }
+
+        @media #{$mq-sm} {
+            @include multi-column($count: 2, $gap: $margin-md);
+        }
+    }
+}
