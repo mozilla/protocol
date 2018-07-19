@@ -1,5 +1,9 @@
 # HEAD
 
+## Features
+
+* **css:** Add Navigation organism and Menu molecule (#182)
+
 ## Bug Fixes
 
 * **npm:** Ensure `npm test` always updates dependencies before running `gulp build`.

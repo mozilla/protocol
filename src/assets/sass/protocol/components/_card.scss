@@ -167,6 +167,10 @@
         @include text-display-xs;
     }
 
+    .mzp-c-card-desc {
+        @include text-body-sm;
+    }
+
     .mzp-c-card-block-link {
         border-radius: 2px;
         height: 100%;

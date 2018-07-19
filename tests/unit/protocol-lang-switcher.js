@@ -1,6 +1,6 @@
 /* global describe, beforeEach, afterEach, it, expect, spyOn */
 
-describe('mozilla-utils.js', function() {
+describe('protocol-lang-switcher.js', function() {
 
     'use strict';
 
