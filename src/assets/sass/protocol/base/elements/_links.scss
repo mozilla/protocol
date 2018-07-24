@@ -42,4 +42,18 @@
         border-bottom: 2px solid $color-black;
         color: $color-black;
     }
+
+    .mzp-t-dark & {
+        &:link,
+        &:visited {
+            color: $color-white;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            border-color: $color-white;
+            color: $color-white;
+        }
+    }
 }
