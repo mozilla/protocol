@@ -5,6 +5,10 @@
 * **css:** Add feature card component (#159)
 * **css:** Add a page hero component (#157, #158)
 
+## Bug Fixes
+
+* **css:** Billboard text overflows container with long strings (#180)
+
 # 2.0.1
 
 ## Bug Fixes

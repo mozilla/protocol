@@ -39,12 +39,10 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         margin: $margin-xl 0;
 
         .mzp-c-billboard-content {
-            max-width: 300px;
-            display: flex;
             align-items: center;
-            position: absolute;
-            top: 0;
-            bottom: 0;
+            display: flex;
+            max-width: 300px;
+            min-height: 268px;
         }
 
         .mzp-c-billboard-image-container {
