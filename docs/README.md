@@ -29,7 +29,10 @@
   - [JavaScript](#javascript)
 - [Build Process](#build-process)
 - [Running tests](#running-tests)
-- [Publishing](#publishing)
+- [Publishing to NPM](#publishing-to-npm)
+- [Deployment](#deployment)
+  - [Pushing to production](#pushing-to-production)
+  - [Pushing to demo](#pushing-to-demo)
 - [Acknowledgements](#acknowledgements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -501,7 +504,7 @@ To start the build process and then run front-end JS tests against the processed
 npm test
 ```
 
-# Publishing
+# Publishing to NPM
 
 Protocol is published to NPM under the `@mozilla-protocol/core` namespace/package name. To publish a release to NPM, use the following steps:
 
@@ -512,6 +515,31 @@ Protocol is published to NPM under the `@mozilla-protocol/core` namespace/packag
 5. Tag a new release. You can do this either using [Git tag][git-tag], or directly on the [GitHub website][releases].
 6. Run `npm test` to run the build script and front-end tests. The package contents will be located in `./dist/assets/protocol/`.
 7. If the build is successful and all tests pass, publish to NPM using `npm publish ./dist/assets/protocol/`.
+
+# Deployment
+
+Note: the following instructions assume the mozilla reporitory is the remote called `origin`.
+
+## Pushing to production
+
+Each time an updated package is published to NPM, https://protocol.mozilla.org/ should also be updated so the documentation site matches the NPM package features.
+
+1. Verify all is good on the [staging site](https://mozilla-protocol.netlify.com/).
+2. Make sure your local `master` branch is up to date
+3. Push the `master` branch to the `prod` branch: `git push origin master:prod`.
+
+A notice will be posted in #www-notify on Slack when the push has completed.
+
+## Pushing to demo
+
+For previewing new components before they are merged to `master`, two demo instances are available.
+
+1. Push your branch to the `demo1` or `demo2` branches e.g. `git push -f origin my-branch-name:demo1`
+2. Your branch will be published:
+  - https://demo1--mozilla-protocol.netlify.com/
+  - https://demo2--mozilla-protocol.netlify.com/
+
+A notice will be posted in #www-notify on Slack when the push has completed.
 
 # Acknowledgements
 
