@@ -219,7 +219,7 @@
 }
 
 
-@supports (mask-image: url('mask.svg')) {
+@supports (mask-size: auto) {
     .mzp-c-hero.mzp-t-firefox {
         &:after {
             background-color: $color-gray-20;
