@@ -1,3 +1,9 @@
+# 2.1.1
+
+## Bug Fixes
+
+* **css:** Avoid referencing URLs in feature queries
+
 # 2.1.0
 
 ## Features
