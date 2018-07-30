@@ -15,26 +15,26 @@ notes: |
 ---
 
 <div class="mzp-c-menu-item {{#if icon}}mzp-has-icon{{/if}} {{#if class}}{{class}}{{/if}}">
-  <div class="mzp-c-menu-item-content">
-    <h4 class="mzp-c-menu-item-title">
-      <a class="mzp-c-cta-link" href="{{#block "link"}}#{{/block}}">
+  <a class="mzp-c-cta-link" href="{{#block "link"}}#{{/block}}">
+    <div class="mzp-c-menu-item-content">
+      <h4 class="mzp-c-menu-item-title">
         {{#block "title"}}A headline with 30 characters{{/block}}
-      </a>
-    </h4>
-    {{#block "desc"}}
-    <p class="mzp-c-menu-item-desc">
-      This is a short description with only a single sentence and no more.
-    </p>
-    {{/block}}
-    {{#block "list"}}
-    <ul class="mzp-c-menu-item-list">
-      <li><a href="#">Sub menu link</a></li>
-      <li><a href="#">Sub menu link</a></li>
-      <li><a href="#">Sub menu link</a></li>
-      <li><a href="#">Sub menu link</a></li>
-      <li><a href="#">Sub menu link</a></li>
-      <li><a href="#">Sub menu link</a></li>
-    </ul>
-    {{/block}}
-  </div>
+      </h4>
+      {{#block "desc"}}
+      <p class="mzp-c-menu-item-desc">
+        This is a short description with only a single sentence and no more.
+      </p>
+      {{/block}}
+    </div>
+  </a>
+  {{#block "list"}}
+  <ul class="mzp-c-menu-item-list">
+    <li><a href="#">Sub menu link</a></li>
+    <li><a href="#">Sub menu link</a></li>
+    <li><a href="#">Sub menu link</a></li>
+    <li><a href="#">Sub menu link</a></li>
+    <li><a href="#">Sub menu link</a></li>
+    <li><a href="#">Sub menu link</a></li>
+  </ul>
+  {{/block}}
 </div>
