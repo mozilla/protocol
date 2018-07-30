@@ -146,7 +146,7 @@
     @include border-box;
     @include clearfix;
     background: $color-white;
-    padding: $padding-md;
+    padding: $padding-xl;
     display: none;
     width: 100%;
 
@@ -154,6 +154,10 @@
     &.mzp-has-card .mzp-c-menu-panel-card {
         display: none;
         width: 300px;
+
+        .mzp-c-card-desc {
+            @include text-body-sm;
+        }
     }
 
     @media #{$mq-md} {
@@ -162,7 +166,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
         left: 0;
         margin-top: $margin-md;
-        padding: $padding-lg;
+        padding: $padding-xl;
         position: absolute;
 
         /**
@@ -188,6 +192,7 @@
             &> ul {
                 width: calc(50% - (#{$margin-lg} / 2));
                 float: left;
+                margin-bottom: 0;
 
                 &:first-child {
                     margin-right: $margin-lg / 2;
@@ -195,6 +200,32 @@
 
                 &:last-child {
                     margin-left: $margin-lg / 2;
+                }
+
+                > li {
+                    margin-bottom: 16px;
+
+                    > div &:hover {
+                        box-shadow: rgb(237, 237, 240) 0 0 0 4px;
+                        transition: box-shadow 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+                    }
+
+                    > div > a {
+                        padding: 12px 16px 8px 16px;
+                        border-radius: 2px;
+                        display: block;
+                        font-weight: normal;
+                        border-bottom: none;
+                    }
+
+                    > div > a:hover .mzp-c-menu-item-title {
+                        border-bottom: 2px solid #000000;
+                        transition: border-bottom 0.1s ease-in-out;
+                    }
+
+                    > div > a:last-child {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
@@ -231,18 +262,18 @@
 
     &.mzp-has-icon .mzp-c-menu-item-content {
         position: relative;
-        padding-left: 24px + $padding-md;
+        padding-left: 64px + $padding-sm;
 
         &:before {
             background-color: $color-gray-20;
             background-repeat: no-repeat;
             content: '';
-            height: 24px;
+            height: 64px;
             left: 0;
             margin: 0;
             position: absolute;
             top: 0;
-            width: 24px;
+            width: 64px;
         }
     }
 
@@ -258,44 +289,78 @@
     }
 
     &.mzp-has-icon.mzp-t-product-firefox .mzp-c-menu-item-content:before {
-        @include background-size(24px, 24px);
+        @include background-size(64px, 64px);
         background-image: url('#{$image-path}/logos/firefox/firefox.png');
     }
 
     &.mzp-has-icon.mzp-t-product-beta .mzp-c-menu-item-content:before {
-        @include background-size(24px, 24px);
+        @include background-size(64px, 64px);
         background-image: url('#{$image-path}/logos/firefox/beta.png');
     }
 
     &.mzp-has-icon.mzp-t-product-developer .mzp-c-menu-item-content:before {
-        @include background-size(24px, 24px);
+        @include background-size(64px, 64px);
         background-image: url('#{$image-path}/logos/firefox/developer.png');
     }
 
     &.mzp-has-icon.mzp-t-product-nightly .mzp-c-menu-item-content:before {
-        @include background-size(24px, 24px);
+        @include background-size(64px, 64px);
         background-image: url('#{$image-path}/logos/firefox/nightly.png');
     }
 
     &.mzp-has-icon.mzp-t-product-focus .mzp-c-menu-item-content:before {
-        @include background-size(24px, 24px);
+        @include background-size(64px, 64px);
         background-image: url('#{$image-path}/logos/firefox/focus.png');
     }
 
     &.mzp-has-icon.mzp-t-product-pocket .mzp-c-menu-item-content:before {
-        @include background-size(24px, 22px);
+        @include background-size(64px, 64px);
         background-image: url('#{$image-path}/logos/pocket/pocket.svg');
+    }
+
+    // Spot Illustrations
+
+    &.mzp-has-icon.mzp-t-illustration-accounts .mzp-c-menu-item-content:before {
+        @include background-size(64px, 64px);
+        background-image: url('/static/img/navigation/illustration-accounts.svg');
+    }
+
+    &.mzp-has-icon.mzp-t-illustration-desktop .mzp-c-menu-item-content:before {
+        @include background-size(64px, 64px);
+        background-image: url('/static/img/navigation/illustration-desktop.svg');
+    }
+
+    &.mzp-has-icon.mzp-t-illustration-enterprise .mzp-c-menu-item-content:before {
+        @include background-size(64px, 64px);
+        background-image: url('/static/img/navigation/illustration-enterprise.svg');
+    }
+
+    &.mzp-has-icon.mzp-t-illustration-mobile .mzp-c-menu-item-content:before {
+        @include background-size(64px, 64px);
+        background-image: url('/static/img/navigation/illustration-mobile.svg');
+    }
+
+    &.mzp-has-icon.mzp-t-illustration-pocket .mzp-c-menu-item-content:before {
+        @include background-size(64px, 64px);
+        background-image: url('/static/img/navigation/illustration-pocket.svg');
+    }
+
+    &.mzp-has-icon.mzp-t-illustration-tv .mzp-c-menu-item-content:before {
+        @include background-size(64px, 64px);
+        background-image: url('/static/img/navigation/illustration-tv.svg');
     }
 
     @media #{$mq-md} {
         &.mzp-has-icon .mzp-c-menu-item-content {
-            padding-left: 24px + $padding-lg;
+            padding-left: 64px + $padding-md;
         }
     }
 
     .mzp-c-menu-item-title {
         @include text-display-xs;
-        margin-bottom: $margin-md;
+        margin-bottom: $margin-sm;
+        border-bottom: 2px solid transparent;
+        width: fit-content;
     }
 
     .mzp-c-menu-item-desc {
@@ -305,6 +370,7 @@
 
     .mzp-c-menu-item-list {
         @include text-body-sm;
+        padding: 0 16px 16px 16px;
 
         li {
             margin-bottom: $margin-md;
@@ -326,5 +392,11 @@
         @media #{$mq-sm} {
             @include multi-column($count: 2, $gap: $margin-md);
         }
+    }
+
+    &.mzp-has-icon .mzp-c-menu-item-list {
+        padding-left: 88px + $padding-sm;
+        padding-right: 16px;
+        padding-bottom: 16px;
     }
 }
