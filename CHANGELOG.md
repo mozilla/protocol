@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **npm:** Ensure `npm test` always updates dependencies before running `gulp build`.
+
 # 2.2.0
 
 ## Bug Fixes
