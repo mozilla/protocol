@@ -205,28 +205,26 @@
                 > li {
                     margin-bottom: 16px;
 
-                    > div {
-                        &:hover {
-                            box-shadow: rgb(237, 237, 240) 0px 0px 0px 4px;
-                            transition: box-shadow 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
-                        }
+                    > div &:hover {
+                        box-shadow: rgb(237, 237, 240) 0 0 0 4px;
+                        transition: box-shadow 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+                    }
 
-                        > a {
-                            padding: 12px 16px 8px 16px;
-                            border-radius: 2px;
-                            display: block;
-                            font-weight: normal;
-                            border-bottom: none;
+                    > div > a {
+                        padding: 12px 16px 8px 16px;
+                        border-radius: 2px;
+                        display: block;
+                        font-weight: normal;
+                        border-bottom: none;
+                    }
 
-                            &:hover .mzp-c-menu-item-title {
-                                border-bottom: 2px solid #000000;
-                                transition: border-bottom 0.1s ease-in-out;
-                            }
+                    > div > a:hover .mzp-c-menu-item-title {
+                        border-bottom: 2px solid #000000;
+                        transition: border-bottom 0.1s ease-in-out;
+                    }
 
-                            &:last-child {
-                                margin-bottom: 0;
-                            }
-                        }
+                    > div > a:last-child {
+                        margin-bottom: 0;
                     }
                 }
             }
