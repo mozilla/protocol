@@ -70,10 +70,19 @@
     .mzp-c-card-title {
         @include text-display-sm;
         display: inline;
-        border-bottom: 1px solid transparent;
+    }
+
+    .mzp-c-card-title,
+    .mzp-c-card-cta-text {
+        border-bottom: 2px solid transparent;
     }
 
     .mzp-c-card-desc {
+        margin: $margin-xs 0 0;
+    }
+
+    .mzp-c-card-cta {
+        font-weight: bold;
         margin: $margin-xs 0 0;
     }
 
@@ -93,8 +102,9 @@
             @include transition(box-shadow .1s ease-in-out);
             box-shadow: 0 0 0 4px $color-gray-20;
 
-            .mzp-c-card-title {
-                @include transition(border-bottom .1s ease-in-out);
+            .mzp-c-card-title,
+            .mzp-c-card-cta-text {
+                @include transition(border-bottom-color 100ms ease-in-out);
                 border-bottom: 2px solid $color-black;
             }
 
@@ -144,11 +154,12 @@
 }
 
 /* -------------------------------------------------------------------------- */
-// Card with a white background & border for placement on colored backgrounds.
+// Card with extra small title and text
 
 .mzp-c-card.mzp-c-card-extra-small {
 
-    .mzp-c-card-tag {
+    .mzp-c-card-tag,
+    .mzp-c-card-cta {
         @include text-body-xs;
     }
 
