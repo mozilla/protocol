@@ -289,3 +289,23 @@
         width: 1.5em;
     }
 }
+
+// bidi controls
+.protosite-bidi-controls {
+    @include text-body-sm;
+
+    label {
+        font-weight: normal;
+        display: inline-block;
+    }
+
+    @media #{$mq-lg} {
+        float: right;
+        display: inline-block;
+        text-align: right;
+    }
+}
+
+.protosite-bidi-controls + .protosite-pattern-embed {
+    clear: right;
+}

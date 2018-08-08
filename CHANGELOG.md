@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **docs:** Add bidi control to component previews (#150)
+
 # 2.1.1
 
 ## Bug Fixes
