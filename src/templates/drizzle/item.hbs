@@ -32,9 +32,13 @@
   {{#if data.doclayout}}
     {{{pattern id @root}}}
   {{else}}
+    {{!-- Bidi controls --}}
+    {{#> drizzle.bidi id=(toSlug name)}}
+      {{name}}
+    {{/drizzle.bidi}}
     {{!-- Preview --}}
     <div class="protosite-pattern-embed">
-      <div class="protosite-pattern-preview {{data.previewClass}}">
+      <div class="protosite-pattern-preview {{data.previewClass}}" id="protosite-{{toSlug name}}-preview" dir="ltr">
         {{{pattern id @root}}}
       </div>
       {{!-- Code sample --}}
