@@ -1,6 +1,6 @@
-## Features
+# 2.1.2
 
-# HEAD
+## Features
 
 * **docs:** Add inline CTA to card (#197)
 * **docs:** Add bidi control to component previews (#150)
