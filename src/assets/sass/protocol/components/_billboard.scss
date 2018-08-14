@@ -16,8 +16,12 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         @include border-box;
         margin: 0 auto;
         max-width: 346px;
-        padding: $spacing-lg $spacing-sm;
         text-align: center;
+    }
+
+    .mzp-c-billboard-content-container {
+        padding: $spacing-lg $spacing-sm;
+        min-height: 220px;
     }
 
     .mzp-c-billboard-title {
@@ -39,10 +43,13 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         margin: $margin-xl 0;
 
         .mzp-c-billboard-content {
-            align-items: center;
-            display: flex;
             max-width: 300px;
-            min-height: 268px;
+        }
+
+        .mzp-c-billboard-content-container {
+            @include align-items(center);
+            @include flexbox;
+            @include justify-content(center);
         }
 
         .mzp-c-billboard-image-container {

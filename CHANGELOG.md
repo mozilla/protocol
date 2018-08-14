@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **css:**  Billboard alignment broken in Safari (#207)
+
 # 2.1.2
 
 ## Features
