@@ -1,4 +1,4 @@
-# HEAD
+# 2.2.0
 
 ## Bug Fixes
 
