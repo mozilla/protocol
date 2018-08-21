@@ -154,6 +154,11 @@
         border-top: 1px solid rgba(0, 0, 0, .2);
         margin: 30px -20px -10px;
     }
+
+    .mzp-t-dark {
+        background-color: $color-gray-60;
+        padding: $spacing-lg;
+    }
 }
 
 .protosite-pattern-code {
