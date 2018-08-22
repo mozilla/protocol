@@ -47,7 +47,7 @@
     .mzp-c-card-tag {
         @include open-sans;
         @include text-body-sm;
-        color: $color-gray-90;
+        color: $color-gray-60;
         font-weight: normal;
         margin-bottom: $margin-xs;
     }
@@ -113,7 +113,7 @@
 
     .mzp-c-card-meta {
         @include text-body-xs;
-        color: $color-gray-90;
+        color: $color-gray-60;
         margin: $margin-lg 0 0;
     }
 

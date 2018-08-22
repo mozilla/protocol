@@ -33,7 +33,7 @@ hr {
 
 .label {
     @include text-body-sm;
-    color: $color-gray-90;
+    color: $color-gray-60;
     margin: 1em 0 .5em;
 }
 
@@ -46,7 +46,7 @@ hr {
     .scale-sample:after {
         @include open-sans;
         @include text-body-sm;
-        color: $color-gray-90;
+        color: $color-gray-60;
         font-weight: normal;
         margin-left: 10px;
     }
