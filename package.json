@@ -18,7 +18,7 @@
     "start": "gulp --dev",
     "build": "npm run prestart && gulp build",
     "test": "gulp js:test",
-    "pretest": "gulp build",
+    "pretest": "npm run build",
     "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
     "prepublishOnly": "gulp build"
   },
