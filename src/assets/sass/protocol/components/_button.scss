@@ -7,22 +7,28 @@
 .mzp-c-button {
     @include border-box;
     @include text-cta;
-    transition: background-color 100ms, border-color 100ms, color 100ms;
     background-color: $color-black;
-    border-radius: 2px;
+    border-radius: 3px;
     border: 2px solid $color-black;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
     color: $color-white;
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
     padding: $padding-md $padding-lg;
     text-decoration: none;
+    transition: background-color 100ms, border-color 100ms, color 100ms;
 
     &:hover,
     &:focus {
         background-color: $color-white;
+        box-shadow: 4px 4px 0 0 $color-black;
         color: $color-black;
+        transition: box-shadow 100ms;
+    }
+
+    &:active {
+        box-shadow: 2px 2px 0 0 $color-black;
+        transition: box-shadow 0ms;
     }
 }
 
@@ -33,8 +39,8 @@
 
     &:hover,
     &:focus {
-        background-color: $color-gray-80;
-        color: $color-white;
+        background: $color-white;
+        color: $color-black;
     }
 }
 

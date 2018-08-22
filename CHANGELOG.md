@@ -1,4 +1,8 @@
-# HEAD
+# 2.2.1
+
+## Features
+
+* **css:** Update base button style, add dark theme (#198)
 
 ## Bug Fixes
 
