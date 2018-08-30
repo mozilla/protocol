@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **docs:** Add page that lists all tokens and their values (#177)
+
 # 2.3.1
 
 ## Bug Fixes
