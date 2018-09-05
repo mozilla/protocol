@@ -23,6 +23,7 @@
 
 ## Bug Fixes
 
+* **css:** Remove autoprefixer to ensure consistency using pre-compiled CSS (#119).
 * **js:** Update JS namespace from Mozilla to Mzp (#253)
 * **js:** Rename '.mzp-c-language-switcher-select' class (#242)
 

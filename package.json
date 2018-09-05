@@ -29,7 +29,6 @@
     "drizzle-builder": "0.0.10",
     "eslint": "^5.3.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-cli": "^2.0.1",
     "gulp-concat": "^2.6.1",
