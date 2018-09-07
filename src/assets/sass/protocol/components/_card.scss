@@ -54,17 +54,21 @@
 
     &.mzp-has-video .mzp-c-card-tag,
     &.mzp-has-audio .mzp-c-card-tag {
+        @include bidi((
+            (background-position, center left, center right),
+            (padding-left, $spacing-xl, padding-right, 0),
+        ));
+        background-repeat: no-repeat;
         line-height: 1.8;
         min-height: 25px;
-        padding-left: $padding-xl;
     }
 
     &.mzp-has-video .mzp-c-card-tag {
-        background: url('#{$image-path}/icons/ui/video.svg') center left no-repeat;
+        background-image: url('#{$image-path}/icons/ui/video.svg');
     }
 
     &.mzp-has-audio .mzp-c-card-tag {
-        background: url('#{$image-path}/icons/ui/audio.svg') center left no-repeat;
+        background-image: url('#{$image-path}/icons/ui/audio.svg');
     }
 
     .mzp-c-card-title {
