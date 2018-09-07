@@ -22,19 +22,18 @@
 
     li {
         @include bidi((
-            (margin-right, $spacing-xs, 0),
-            (margin-left, 0, $spacing-xs),
+            (margin-right, $spacing-xs, margin-left, 0),
         ));
         color: $color-gray-60;
-        display: inline;
+        display: inline-block;
 
         &:after {
             @include bidi((
-                (margin-left, $spacing-xs, 0),
-                (margin-right, 0, $spacing-xs),
-                (transform, none, rotate(180deg)),
+                (margin-left, $spacing-xs, margin-right, 0),
+                (transform, none, translateY(3px) rotate(180deg)),
             ));
             content: '\25B8'; // right pointing triangle
+            display: inline-block;
         }
 
         &:last-child:after {
@@ -81,6 +80,22 @@
 .mzp-c-sidemenu-label {
     @include open-sans;
     @include text-body-sm;
+    @include bidi((
+        (padding-right, $spacing-lg, padding-left, 0),
+    ));
+    position: relative;
+
+    &:after {
+        @include bidi((
+            (right, 0, left, auto),
+        ));
+        @include transform(rotate(90deg));
+        color: $color-gray-60;
+        content: none;
+        font-size: 1.5em;
+        position: absolute;
+        top: 0;
+    }
 }
 
 .mzp-c-sidemenu-title {
@@ -105,22 +120,8 @@
         display: none;
     }
 
-    .mzp-c-sidemenu-label {
-        @include bidi((
-            (padding-right, $spacing-lg, 0),
-            (padding-left, 0, $spacing-lg),
-        ));
-        position: relative;
-
-        &:after {
-            content: '\25B8'; // right pointing triangle
-            transform: rotate(90deg);
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 1.5em;
-            color: $color-gray-60;
-        }
+    .mzp-c-sidemenu-label:after {
+        content: '\25B8'; // right pointing triangle
     }
 
     .mzp-is-active {

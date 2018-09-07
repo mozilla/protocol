@@ -6,6 +6,7 @@
 
 ## Bug Fixes
 
+* **css:** Fix Side Menu RTL styles (#204).
 * **css:** Fix card molecule icon alignment for RTL (#203)
 * **css:** Remove autoprefixer to ensure consistency using pre-compiled CSS (#119).
 * **css:** Fix download button positioning in call out component (#268)
