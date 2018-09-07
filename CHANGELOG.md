@@ -6,6 +6,8 @@
 
 ## Bug Fixes
 
+* **css:** Fix card molecule icon alignment for RTL (#203)
+* **css:** Remove autoprefixer to ensure consistency using pre-compiled CSS (#119).
 * **css:** Fix download button positioning in call out component (#268)
 
 # 3.0.1
@@ -23,7 +25,6 @@
 
 ## Bug Fixes
 
-* **css:** Remove autoprefixer to ensure consistency using pre-compiled CSS (#119).
 * **js:** Update JS namespace from Mozilla to Mzp (#253)
 * **js:** Rename '.mzp-c-language-switcher-select' class (#242)
 
