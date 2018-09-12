@@ -36,7 +36,7 @@
 }
 
 .mzp-c-button.mzp-t-small {
-    padding: calc(#{$padding-md} - 2px) calc(#{$padding-xl} - 2px);
+    padding: calc(#{$padding-sm} - 2px) calc(#{$padding-md} - 2px);
 }
 
 .mzp-t-dark .mzp-c-button {
@@ -126,6 +126,6 @@
     }
 }
 
-.mzp-c-button.mzp-t-small {
+.mzp-c-button.mzp-t-download.mzp-t-small {
     padding: calc(#{$padding-sm}) calc(#{$padding-md});
 }
