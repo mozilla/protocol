@@ -18,6 +18,7 @@
 
 ## Bug Fixes
 
+* **css:** Add font-smoothing properties for macOS devices
 * **npm:** Ensure `npm test` always updates dependencies before running `gulp build`.
 
 # 2.2.0
