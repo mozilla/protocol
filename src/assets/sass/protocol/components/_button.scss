@@ -4,26 +4,39 @@
 
 @import '../includes/lib';
 
+/* -------------------------------------------------------------------------- */
+// Primary Button
+
 .mzp-c-button {
     @include border-box;
     @include text-cta;
-    transition: background-color 100ms, border-color 100ms, color 100ms;
+    transition: all 200ms;
     background-color: $color-black;
     border-radius: 2px;
     border: 2px solid $color-black;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
     color: $color-white;
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
-    padding: $padding-md $padding-lg;
+    padding: calc(#{$padding-md} - 2px) calc(#{$padding-xl} - 2px); //2px extra padding removed to compensate for 2px border.
     text-decoration: none;
 
-    &:hover,
-    &:focus {
-        background-color: $color-white;
+    &:hover {
+        background-color: transparent;
         color: $color-black;
+        box-shadow: 4px 4px 0px 0px $color-black;
+        transform: translate(-2px, -2px);
     }
+
+    &:disabled {
+        background-color: $color-gray-30;
+        border-color: $color-gray-30;
+        pointer-events: none;
+    }
+}
+
+.mzp-c-button.mzp-t-small {
+    padding: calc(#{$padding-md} - 2px) calc(#{$padding-xl} - 2px);
 }
 
 .mzp-t-dark .mzp-c-button {
@@ -31,24 +44,88 @@
     border-color: $color-white;
     color: $color-black;
 
-    &:hover,
-    &:focus {
-        background-color: $color-gray-80;
+    &:hover {
+        background-color: transparent;
         color: $color-white;
+        box-shadow: 4px 4px 0px 0px $color-white;
+    }
+
+    &:disabled {
+        background-color: $color-gray-60;
+        border-color: $color-gray-60;
+        color: $color-black;
+        pointer-events: none;
     }
 }
 
+/* -------------------------------------------------------------------------- */
+// Secondary Buttons
+
+.mzp-c-button.mzp-t-secondary {
+    background-color: transparent;
+    color: $color-black;
+
+    &:disabled {
+        background-color: transparent;
+        border-color: $color-gray-30;
+        color: $color-gray-30;
+    }
+}
+
+.mzp-c-button.mzp-t-download-secondary {
+    background-color: transparent;
+    border-color: $color-green-60;
+    color: $color-green-60;
+
+    &:hover {
+        background-color: $color-green-70;
+        border-color: $color-green-70;
+        color: $color-white;
+        box-shadow: none;
+        transform: none;
+    }
+
+    &:disabled {
+        background-color: transparent;
+        border-color: $color-gray-30;
+        color: $color-gray-30;
+    }
+}
+
+.mzp-t-dark .mzp-c-button.mzp-t-secondary {
+    background-color: transparent;
+    color: $color-white;
+
+    &:disabled {
+        background-color: transparent;
+        border-color: $color-gray-60;
+        color: $color-gray-60;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Download Buttons
+
 .mzp-c-button.mzp-t-download {
-    @include gradient-vertical($start-color: $color-green-50, $end-color: $color-green-70);
-    background-color: $color-green-70;
+    background-color: $color-green-60;
     border: none;
     color: $color-white;
-    padding: ($padding-md + 2px) ($padding-lg + 2px); //2px extra padding to compensate for no border.
+    padding: calc(#{$padding-md}) calc(#{$padding-xl});
 
-    &:hover,
-    &:focus {
-        @include gradient-vertical($start-color: $color-green-60, $end-color: $color-green-80);
-        background-color: $color-green-80;
+    &:hover {
+        background-color: $color-green-70;
         color: $color-white;
+        box-shadow: none;
+        transform: none;
     }
+
+    &:disabled {
+        background-color: $color-gray-30;
+        border-color: $color-gray-30;
+        pointer-events: none;
+    }
+}
+
+.mzp-c-button.mzp-t-small {
+    padding: calc(#{$padding-sm}) calc(#{$padding-md});
 }
