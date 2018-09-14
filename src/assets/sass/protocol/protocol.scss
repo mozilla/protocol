@@ -18,6 +18,13 @@ $image-path: '../img' !default;
 // Base elements - general HTML elements
 @import 'base/elements';
 
+// Base includes - animations
+@import 'base/includes';
+
 // Global components
+@import 'components/card';
 @import 'components/footer';
 @import 'components/language-switcher';
+@import 'components/menu';
+@import 'components/menu-item';
+@import 'components/navigation';
