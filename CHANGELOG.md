@@ -1,9 +1,19 @@
-# HEAD
-
 ## Features
 
 * **css:** Add button variants (#224)
 * **css:** Revise button states (#224)
+
+# 2.3.1
+
+## Bug Fixes
+
+* **css:** Include Navigation in core bundle and not extras (#182)
+
+# 2.3.0
+
+## Features
+
+* **css:** Add Navigation organism and Menu molecule (#182)
 
 ## Bug Fixes
 

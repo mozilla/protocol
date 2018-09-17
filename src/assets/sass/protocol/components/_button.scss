@@ -110,7 +110,7 @@
     background-color: $color-green-60;
     border: none;
     color: $color-white;
-    padding: calc(#{$padding-md}) calc(#{$padding-xl});
+    padding: $padding-md $padding-xl;
 
     &:hover {
         background-color: $color-green-70;
@@ -127,5 +127,28 @@
 }
 
 .mzp-c-button.mzp-t-download.mzp-t-small {
-    padding: calc(#{$padding-sm}) calc(#{$padding-md});
+    padding: $padding-sm $padding-md;
+}
+
+.mzp-c-button-download {
+    margin-bottom: $margin-lg;
+    text-align: center;
+}
+
+.mzp-c-button-download-privacy-link {
+    @include text-body-xs;
+    display: block;
+    margin-top: $margin-md;
+
+    a:link,
+    a:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+        text-decoration: underline;
+    }
 }

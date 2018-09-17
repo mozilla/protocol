@@ -1,0 +1,327 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+@mixin highlighted {
+    &:after {
+        background: $color-black;
+        bottom: -1px;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Menu top navigation
+
+.mzp-c-menu {
+
+    h1, h2, h3, h4, h5, h6 {
+        @include open-sans;
+    }
+
+    @media #{$mq-md} {
+        z-index: 0;
+    }
+}
+
+.mzp-c-menu-category-list {
+    margin-bottom: $spacing-lg;
+
+    @media #{$mq-md} {
+        @include clearfix;
+        margin-bottom: 0;
+        padding-top: $spacing-lg;
+    }
+}
+
+.mzp-c-menu-category {
+
+    .mzp-c-menu-title {
+        @include open-sans;
+        @include text-body-md;
+        border-bottom: 1px solid $color-gray-30;
+        color: $color-black;
+        display: block;
+        font-weight: normal;
+        margin-bottom: 0;
+        min-height: 40px;
+        padding: $spacing-sm 0;
+        position: relative;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:link:active {
+            background: none;
+        }
+    }
+
+    &.mzp-has-drop-down .mzp-c-menu-title {
+        text-decoration: none;
+
+        &:before {
+            // base64 encoding of https://github.com/mozilla/protocol-assets/blob/master/icons/ui/expand-black.svg
+            background:  url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcgN1YxYTEgMSAwIDEgMSAyIDB2Nmg2YTEgMSAwIDEgMSAwIDJIOXY2YTEgMSAwIDEgMS0yIDBWOUgxYTEgMSAwIDEgMSAwLTJoNnoiIGZpbGw9IiMwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPgo=') top left no-repeat;
+            @include background-size(16px, 16px);
+            @include bidi(((right, 8px, left, auto),));
+            @include transition(transform 100ms ease-in-out);
+            content: '';
+            height: 16px;
+            margin-top: -8px;
+            position: absolute;
+            top: 50%;
+            width: 16px;
+        }
+    }
+
+    @supports(display: flex) {
+        .mzp-c-menu-title {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    @media #{$mq-md} {
+        @include bidi(((float, left, right),));
+        display: inline-block;
+
+        .mzp-c-menu-title {
+            border-bottom: none;
+            cursor: default;
+            padding: 0 $spacing-sm $spacing-lg;
+        }
+
+        &.mzp-has-drop-down .mzp-c-menu-title:before {
+            display: none;
+        }
+    }
+
+    @media #{$mq-lg} {
+        .mzp-c-menu-title {
+            padding: 0 $spacing-md $spacing-lg;
+        }
+    }
+
+    @media #{$mq-xl} {
+        .mzp-c-menu-title {
+            padding: 0 $spacing-lg $spacing-lg;
+        }
+    }
+}
+
+// Basic hover interactions with JavaScript disabled or not supported..
+.no-js .mzp-c-menu-category,
+.mzp-c-menu-basic .mzp-c-menu-category {
+
+    .mzp-c-menu-title:before {
+        display: none;
+    }
+
+    @media #{$mq-md} {
+        .mzp-c-menu-title:before {
+            display: none;
+        }
+
+        &:hover,
+        &:focus {
+            .mzp-c-menu-title {
+                @include highlighted;
+                z-index: 1001;
+            }
+
+            .mzp-c-menu-panel {
+                display: block;
+                z-index: 1000;
+            }
+        }
+
+        &:focus-within {
+            .mzp-c-menu-title {
+                @include highlighted;
+                z-index: 1001;
+            }
+
+            .mzp-c-menu-panel {
+                display: block;
+                z-index: 1000;
+            }
+        }
+    }
+}
+
+// Enhanced hover interactions with JavaScript enabled.
+.js .mzp-c-menu-category {
+    &.is-selected {
+        .mzp-c-menu-title:before {
+            transform: rotate(45deg);
+        }
+        .mzp-c-menu-panel {
+            display: block;
+            overflow: hidden;
+        }
+    }
+
+    @media #{$mq-md} {
+        &.is-animated {
+            .mzp-c-menu-panel,
+            .mzp-c-menu-title:after {
+                @include animation(mzp-a-fade-in 80ms ease-in 0ms 1 normal both);
+            }
+        }
+        &.is-selected {
+            .mzp-c-menu-title {
+                @include highlighted;
+                z-index: 101;
+            }
+
+            .mzp-c-menu-panel {
+                display: block;
+                overflow: visible;
+                z-index: 100;
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Menu panel
+
+.mzp-c-menu-panel {
+    @include border-box;
+    background: $color-white;
+    display: none;
+    padding-top: $spacing-lg;
+    width: 100%;
+
+    // Close button is only visible for large screens.
+    .mzp-c-menu-button-close {
+        @include image-replaced;
+        @include transition(transform 100ms ease-in-out);
+        background: transparent url('#{$image-path}/icons/ui/close-black.svg') center center no-repeat;
+        border: none;
+        cursor: pointer;
+        display: none;
+        height: 16px;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: -$spacing-sm;
+        width: 16px;
+
+        &:hover,
+        &:focus {
+            @include transform(scale(1.2));
+        }
+
+        @media #{$mq-md} {
+            @include bidi(((right, $layout-lg, left, auto),));
+        }
+
+        @media #{$mq-lg} {
+            @include bidi(((right, $layout-xl, left, auto),));
+        }
+    }
+
+    // Cards are hidden by default on small screens.
+    &.mzp-has-card .mzp-c-menu-panel-card {
+        display: none;
+        width: 300px;
+
+        .mzp-c-card {
+            margin-bottom: 0;
+        }
+    }
+
+    .mzp-c-menu-panel-container {
+        @include border-box;
+        margin: 0 auto;
+        max-width: $content-max;
+        padding: 0;
+        position: relative;
+
+        @media #{$mq-md} {
+            padding: $spacing-md $layout-lg 0;
+        }
+
+        @media #{$mq-lg} {
+            padding: $spacing-md $layout-xl 0;
+        }
+    }
+
+    @media #{$mq-md} {
+        border-top: 1px solid $color-gray-20;
+        box-shadow: 0 16px 16px -16px rgba(0, 0, 0, 0.3);
+        left: 0;
+        padding: $spacing-xl $spacing-xs;
+        position: absolute;
+
+        .mzp-c-menu-panel-container {
+            @include clearfix;
+        }
+
+        .mzp-c-menu-button-close {
+            display: block;
+            top: -$spacing-md;
+        }
+
+        .mzp-c-menu-panel-content {
+            @include clearfix;
+            position: relative;
+
+            &> ul {
+                @include bidi(((float, left, right),));
+                margin-bottom: 0;
+                width: calc(50% - (#{$spacing-lg} / 2));
+
+                &:first-child {
+                    @include bidi(((margin-right, $spacing-lg / 2, margin-left, 0),));
+                }
+
+                &:last-child {
+                    @include bidi(((margin-left, $spacing-lg / 2, margin-right, 0),));
+                }
+
+                &> li:last-child .mzp-c-menu-item {
+                    margin-bottom: $spacing-md;
+                }
+            }
+        }
+    }
+
+    @media #{$mq-lg} {
+        &.mzp-has-card {
+            .mzp-c-menu-panel-content {
+                @include bidi(((float, left, right),));
+                width: calc(100% - (300px + #{$spacing-lg}));
+            }
+
+            .mzp-c-menu-panel-card {
+                @include bidi(((float, right, left),));
+                display: block;
+            }
+        }
+    }
+}
+
+.no-js .mzp-c-menu-panel,
+.mzp-c-menu-basic .mzp-c-menu-panel {
+    display: block;
+
+    @media #{$mq-md} {
+        display: none;
+
+        .mzp-c-menu-button-close {
+            display: none;
+        }
+    }
+}
