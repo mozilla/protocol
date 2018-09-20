@@ -71,8 +71,7 @@
         text-decoration: none;
 
         &:before {
-            // base64 encoding of https://github.com/mozilla/protocol-assets/blob/master/icons/ui/expand-black.svg
-            background:  url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcgN1YxYTEgMSAwIDEgMSAyIDB2Nmg2YTEgMSAwIDEgMSAwIDJIOXY2YTEgMSAwIDEgMS0yIDBWOUgxYTEgMSAwIDEgMSAwLTJoNnoiIGZpbGw9IiMwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPgo=') top left no-repeat;
+            background:  $url-image-expand-black top left no-repeat;
             @include background-size(16px, 16px);
             @include bidi(((right, 8px, left, auto),));
             @include transition(transform 100ms ease-in-out);
@@ -164,7 +163,7 @@
 .js .mzp-c-menu-category {
     &.is-selected {
         .mzp-c-menu-title:before {
-            transform: rotate(45deg);
+            @include transform(rotate(45deg));
         }
         .mzp-c-menu-panel {
             display: block;
