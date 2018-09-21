@@ -4,6 +4,11 @@
 
 * **docs:** Add page that lists all tokens and their values (#177)
 
+## Bug Fixes
+
+* **css:** Fix card layout issues at medium viewport sizes (#227)
+* **css:** Add font-smoothing properties for macOS devices
+
 # 2.3.1
 
 ## Bug Fixes
@@ -18,8 +23,7 @@
 
 ## Bug Fixes
 
-* **css:** Add font-smoothing properties for macOS devices
-* **npm:** Ensure `npm test` always updates dependencies before running `gulp build`.
+* **npm:** Ensure `npm test` always updates dependencies before running `gulp build` (#191)
 
 # 2.2.0
 
