@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **css:** Add blockquote component (#234)
+
 # 2.3.2
 
 ## Features
