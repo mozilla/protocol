@@ -6,6 +6,7 @@
 
 ## Bug Fixes
 
+* **css:** Navigation & Menu style fixes (#182)
 * **css:** Fix card layout issues at medium viewport sizes (#227)
 * **css:** Add font-smoothing properties for macOS devices
 
