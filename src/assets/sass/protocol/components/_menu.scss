@@ -58,6 +58,7 @@
         &:hover,
         &:active,
         &:focus {
+            color: inherit;
             text-decoration: underline;
         }
 
