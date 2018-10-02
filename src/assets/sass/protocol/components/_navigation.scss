@@ -95,6 +95,8 @@
 // Menu molecule
 
 .mzp-c-navigation-menu {
+    vertical-align: bottom;
+
     @media #{$mq-md} {
         @include bidi(((margin-left, -$spacing-sm, margin-right, 0),));
         display: inline-block;
@@ -115,9 +117,15 @@
 
 .mzp-c-navigation-download {
     margin: $spacing-xl 0 $spacing-lg;
+    text-align: center;
 
     .mzp-c-button-download {
         margin-bottom: 0;
+
+        // hide privacy link
+        .mzp-c-button-download-privacy-link {
+            display: none;
+        }
     }
 
     @media #{$mq-md} {

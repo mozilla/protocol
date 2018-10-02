@@ -3,6 +3,19 @@
 * **css:** Add button variants (#224)
 * **css:** Revise button states (#224)
 
+# 2.3.2
+
+## Features
+
+* **docs:** Add page that lists all tokens and their values (#177)
+
+## Bug Fixes
+
+* **js:** Workaround for IE9 navigation bug in bedrock's classList polyfill (#182)
+* **css:** Navigation & Menu style fixes (#182)
+* **css:** Fix card layout issues at medium viewport sizes (#227)
+* **css:** Add font-smoothing properties for macOS devices
+
 # 2.3.1
 
 ## Bug Fixes
@@ -17,7 +30,7 @@
 
 ## Bug Fixes
 
-* **npm:** Ensure `npm test` always updates dependencies before running `gulp build`.
+* **npm:** Ensure `npm test` always updates dependencies before running `gulp build` (#191)
 
 # 2.2.0
 

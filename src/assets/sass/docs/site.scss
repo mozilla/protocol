@@ -313,3 +313,23 @@
 .protosite-bidi-controls + .protosite-pattern-embed {
     clear: right;
 }
+
+// token list
+.protosite-token-list {
+    margin: 40px 0 20px;
+
+    td {
+        padding: 20px 20px 20px 0;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    @media #{$mq-lg} {
+
+        td {
+            max-width: 40em;
+        }
+    }
+}
