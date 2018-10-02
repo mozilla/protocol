@@ -1,0 +1,19 @@
+---
+name: Two Column Grid - Overflow
+order: 6
+---
+
+{{#if overflow}}
+{{else}}
+<div class="mzp-u-overflow-hidden">
+{{/if}}
+
+  <div class="mzp-l-grid">
+    <div class="mzp-l-grid-1-2">1</div>
+    <div>2</div>
+  </div>
+
+{{#if overflow}}
+{{else}}
+</div>
+{{/if}}

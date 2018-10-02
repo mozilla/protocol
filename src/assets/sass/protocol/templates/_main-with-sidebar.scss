@@ -6,61 +6,21 @@
 
 // Template - main content with sidebar
 @media #{$mq-md} {
-    .mzp-has-sidebar {
-        .mzp-l-main {
-            @include grid-two-thirds;
-        }
+    .mzp-l-main {
+        @include grid(2/3);
+    }
 
-        .mzp-l-sidebar {
-            @include grid-third;
-        }
-
-        &.mzp-l-sidebar-left {
-            .mzp-l-main {
-                @include bidi((
-                    (float, right, left),
-                    (padding-left, $spacing-md, 0),
-                    (padding-right, 0, $spacing-md)
-                ));
-            }
-
-            .mzp-l-sidebar {
-                @include bidi((
-                    (float, left, right),
-                    (padding-right, $spacing-md, 0),
-                    (padding-left, 0, $spacing-md)
-                ));
-            }
-        }
-
-        &.mzp-l-sidebar-right {
-            .mzp-l-main {
-                @include bidi((
-                    (float, left, right),
-                    (padding-right, $spacing-md, 0),
-                    (padding-left, 0, $spacing-md)
-                ));
-            }
-
-            .mzp-l-sidebar {
-                @include bidi((
-                    (float, right, left),
-                    (padding-left, $spacing-md, 0),
-                    (padding-right, 0, $spacing-md)
-                ));
-            }
-        }
+    .mzp-l-sidebar {
+        @include grid(1/3);
     }
 }
 
 @media #{$mq-lg} {
-    .mzp-has-sidebar {
-        .mzp-l-main {
-            @include grid-three-quarters;
-        }
+    .mzp-l-main {
+        @include grid(1/2);
+    }
 
-        .mzp-l-sidebar {
-            @include grid-quarter;
-        }
+    .mzp-l-sidebar {
+        @include grid(1/4);
     }
 }
