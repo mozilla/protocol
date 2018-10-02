@@ -1,3 +1,7 @@
+## Features
+
+* **css:** Add grid system classes and mixins (#233)
+
 # 2.3.2
 
 ## Features
