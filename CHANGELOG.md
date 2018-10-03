@@ -1,6 +1,4 @@
-# HEAD
-
-## Features
+# 2.4.2
 
 * **css:** Add blockquote component (#234)
 
