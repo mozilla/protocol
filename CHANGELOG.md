@@ -2,6 +2,7 @@
 
 * **css:** Add button variants (#224)
 * **css:** Revise button states (#224)
+* **css:** Add blockquote component (#234)
 
 # 2.3.2
 
