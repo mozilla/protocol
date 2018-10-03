@@ -13,36 +13,36 @@
     position: relative;
 
     @for $i from 1 through 8 {
+        @if $i != 5 and $i != 7 {
+            // Grid
+            > div:nth-child(1):nth-last-child(#{$i}),
+            > div:nth-child(1):nth-last-child(#{$i}) ~ div {
+                @include grid(1 / $i);
+            }
 
-        // Grid
-        > div:nth-child(1):nth-last-child(#{$i}),
-        > div:nth-child(1):nth-last-child(#{$i}) ~ div {
-            @include grid(1 / $i);
+            @for $j from 1 through 6 {
+                @if $j < $i and $j != 5 {
+
+                    // Grid Overrides
+                    > div:nth-child(1).mzp-l-grid-#{$j}-#{$i},
+                    > div:nth-child(1) ~ div.mzp-l-grid-#{$j}-#{$i} {
+                        @include grid($j / $i);
+                    }
+
+                    // Grid Overflow
+                    > div:nth-child(1):nth-last-child(#{$i}).mzp-l-grid-#{$j}-#{$i} {
+                        @include overflow(($j / $i) / -2);
+                    }
+                    > div:nth-child(1):nth-last-child(#{$i}) ~ div.mzp-l-grid-#{$j}-#{$i} {
+                        @include overflow(1 - (($j / $i) / 2));
+                    }
+                    > div:nth-child(1):nth-last-child(#{$i}).mzp-l-grid-#{$j}-#{$i} + div {
+                        @include overflow-sibling(($j / $i) / 2);
+                    }
+
+                }
+            }
         }
-
-        @for $j from 1 through 8 {
-          @if $j < $i {
-
-            // Grid Overrides
-            > div:nth-child(1).mzp-l-grid-#{$j}-#{$i},
-            > div:nth-child(1) ~ div.mzp-l-grid-#{$j}-#{$i} {
-                @include grid($j / $i);
-            }
-
-            // Grid Overflow
-            > div:nth-child(1):nth-last-child(#{$i}).mzp-l-grid-#{$j}-#{$i} {
-                @include overflow(($j / $i) / -2);
-            }
-            > div:nth-child(1):nth-last-child(#{$i}) ~ div.mzp-l-grid-#{$j}-#{$i} {
-                @include overflow(1 - (($j / $i) / 2));
-            }
-            > div:nth-child(1):nth-last-child(#{$i}).mzp-l-grid-#{$j}-#{$i} + div {
-                @include overflow-sibling(($j / $i) / 2);
-            }
-
-          }
-        }
-
     }
 
     // Grid - Positioning
