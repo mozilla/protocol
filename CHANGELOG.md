@@ -1,6 +1,9 @@
+# HEAD
+
 ## Features
 
 * **css:** Add grid system classes and mixins (#233)
+* **css:** Add blockquote component (#234)
 
 # 2.3.2
 
