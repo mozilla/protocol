@@ -74,12 +74,12 @@
 
 .mzp-c-button.mzp-t-download-secondary {
     background-color: transparent;
-    border-color: $color-green-60;
-    color: $color-green-60;
+    border-color: $color-blue-60;
+    color: $color-blue-60;
 
     &:hover {
-        background-color: $color-green-70;
-        border-color: $color-green-70;
+        background-color: $color-blue-70;
+        border-color: $color-blue-70;
         color: $color-white;
         box-shadow: none;
         transform: none;
@@ -107,13 +107,13 @@
 // Download Buttons
 
 .mzp-c-button.mzp-t-download {
-    background-color: $color-green-60;
+    background-color: $color-blue-60;
     border: none;
     color: $color-white;
     padding: $padding-md $padding-xl;
 
     &:hover {
-        background-color: $color-green-70;
+        background-color: $color-blue-70;
         color: $color-white;
         box-shadow: none;
         transform: none;
