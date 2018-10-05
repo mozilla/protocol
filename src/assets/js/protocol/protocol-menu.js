@@ -155,7 +155,8 @@ if (typeof Mozilla === 'undefined') {
          * re-queues the JavaScript to run at the end of the current excecution.
          */
         setTimeout(function() {
-            if (!self.contains(document.activeElement)) {
+            // If the menu is open and the newly focused element is not a child, then call close().
+            if (!self.contains(document.activeElement) && self.classList.contains('is-selected')) {
                 Menu.close();
             }
         }, 0);
