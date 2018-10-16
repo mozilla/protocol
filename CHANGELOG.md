@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **docs:** Document deployment process (#171)
+
 # 2.4.2
 
 * **css:** Add blockquote component (#234)
