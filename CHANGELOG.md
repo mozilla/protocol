@@ -3,6 +3,10 @@
 ## Features
 
 * **css:** Add grid system classes and mixins (#233)
+* **docs:** Document deployment process (#171)
+
+# 2.4.2
+
 * **css:** Add blockquote component (#234)
 
 # 2.3.2
