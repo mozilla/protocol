@@ -22,12 +22,6 @@
         visibility: hidden;
     }
 }
-// Float center
-@mixin float-center {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
 // Mixins for CSS3 properties that still need prefixes in some browsers.
