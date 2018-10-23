@@ -9,7 +9,7 @@
     position: relative;
 
     > div {
-      @include grid(1/1)
+      @include grid(1/1);
     }
 
     // Create grids with up to 8 columns (don't include 5 and 7 column grids)
