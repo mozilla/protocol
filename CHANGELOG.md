@@ -5,6 +5,16 @@
 * **css:** Add button variants (#224)
 * **css:** Revise button states (#224)
 
+# 2.4.3
+
+## Features
+
+* **docs:** Document deployment process (#171)
+
+## Bug Fixes
+
+* **js:** Fixed menu component focusout bug (#247)
+
 # 2.4.2
 
 * **css:** Add blockquote component (#234)
