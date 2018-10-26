@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **js:** Rename '.mzp-c-language-switcher-select' class (#242)
+
 # 2.4.3
 
 ## Features

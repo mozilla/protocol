@@ -45,7 +45,7 @@ describe('protocol-lang-switcher.js', function() {
         beforeEach(function () {
             var langSelect = '<form class="mzp-c-language-switcher" method="get" action="#">' +
                                 '<label for="mzp-c-language-switcher-select">Language</label>' +
-                                '<select id="mzp-c-language-switcher-select" class="mzp-c-language-switcher-select" name="lang">' +
+                                '<select id="mzp-c-language-switcher-select" class="mzp-js-language-switcher-select" name="lang">' +
                                     '<option value="en-US" selected>English (US)</option>' +
                                     '<option value="de">Deutsch</option>' +
                                     '<option value="fr">Français</option>' +
@@ -65,7 +65,7 @@ describe('protocol-lang-switcher.js', function() {
         });
 
         function fireChangeEvent(index) {
-            var select = document.querySelector('.mzp-c-language-switcher-select');
+            var select = document.querySelector('.mzp-js-language-switcher-select');
             var evt = document.createEvent('HTMLEvents');
             evt.initEvent('change', false, true);
             select.selectedIndex = index;
