@@ -3,8 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // create namespace
-if (typeof Mozilla === 'undefined') {
-    var Mozilla = {};
+if (typeof Mzp === 'undefined') {
+    var Mzp = {};
 }
 
 (function() {
@@ -67,6 +67,6 @@ if (typeof Mozilla === 'undefined') {
 
     };
 
-    window.Mozilla.LangSwitcher = LangSwitcher;
+    window.Mzp.LangSwitcher = LangSwitcher;
 
 })();

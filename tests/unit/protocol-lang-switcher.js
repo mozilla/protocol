@@ -10,33 +10,33 @@ describe('protocol-lang-switcher.js', function() {
             var location = {};
             location.pathname = '/en-US/firefox/new/';
             location.search = '';
-            expect(Mozilla.LangSwitcher.switchPath(location, 'de')).toEqual('/de/firefox/new/');
+            expect(Mzp.LangSwitcher.switchPath(location, 'de')).toEqual('/de/firefox/new/');
 
             location.pathname = '/fr/firefox/';
-            expect(Mozilla.LangSwitcher.switchPath(location, 'zh-TW')).toEqual('/zh-TW/firefox/');
+            expect(Mzp.LangSwitcher.switchPath(location, 'zh-TW')).toEqual('/zh-TW/firefox/');
 
             location.pathname = '/de/';
-            expect(Mozilla.LangSwitcher.switchPath(location, 'fr')).toEqual('/fr/');
+            expect(Mzp.LangSwitcher.switchPath(location, 'fr')).toEqual('/fr/');
 
             location.pathname = '/kab/about/';
-            expect(Mozilla.LangSwitcher.switchPath(location, 'it')).toEqual('/it/about/');
+            expect(Mzp.LangSwitcher.switchPath(location, 'it')).toEqual('/it/about/');
 
             location.pathname = '/en-US/firefox/new/';
             location.search = '?dude=abide';
-            expect(Mozilla.LangSwitcher.switchPath(location, 'de')).toEqual('/de/firefox/new/?dude=abide');
+            expect(Mzp.LangSwitcher.switchPath(location, 'de')).toEqual('/de/firefox/new/?dude=abide');
         });
 
         it('should return false for an invalid lang code', function () {
             var location = {};
             location.pathname = '/abcd/firefox/new/';
             location.search = '';
-            expect(Mozilla.LangSwitcher.switchPath(location, 'de')).toBeFalsy();
+            expect(Mzp.LangSwitcher.switchPath(location, 'de')).toBeFalsy();
 
             location.pathname = '/a/firefox/';
-            expect(Mozilla.LangSwitcher.switchPath(location, 'zh-TW')).toBeFalsy();
+            expect(Mzp.LangSwitcher.switchPath(location, 'zh-TW')).toBeFalsy();
 
             location.pathname = '/en-abc/';
-            expect(Mozilla.LangSwitcher.switchPath(location, 'fr')).toBeFalsy();
+            expect(Mzp.LangSwitcher.switchPath(location, 'fr')).toBeFalsy();
         });
     });
 
@@ -73,10 +73,10 @@ describe('protocol-lang-switcher.js', function() {
         }
 
         it('should redirect the page when a change occurs', function () {
-            spyOn(Mozilla.LangSwitcher, 'doRedirect');
-            Mozilla.LangSwitcher.init();
+            spyOn(Mzp.LangSwitcher, 'doRedirect');
+            Mzp.LangSwitcher.init();
             fireChangeEvent(1);
-            expect(Mozilla.LangSwitcher.doRedirect).toHaveBeenCalled();
+            expect(Mzp.LangSwitcher.doRedirect).toHaveBeenCalled();
         });
 
         it('should fire a callback when supplied', function () {
@@ -85,7 +85,7 @@ describe('protocol-lang-switcher.js', function() {
             };
 
             spyOn(result, 'callback');
-            Mozilla.LangSwitcher.init(result.callback);
+            Mzp.LangSwitcher.init(result.callback);
             fireChangeEvent(2);
             expect(result.callback).toHaveBeenCalledWith('en-US', 'fr');
         });
