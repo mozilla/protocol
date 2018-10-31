@@ -8,9 +8,16 @@
     color: inherit;
     font-weight: bold;
 
-    label {
+    label,
+    .mzp-c-cta-link {
         @include bidi(((margin, 0 $margin-lg $margin-sm 0, 0 0 $margin-sm $margin-lg),));
+        @include text-body-sm;
         display: inline-block;
+    }
+
+    // hide the <label> visually should a language link be shown instead.
+    .mzp-c-cta-link + label {
+        @include visually-hidden;
     }
 
     select {

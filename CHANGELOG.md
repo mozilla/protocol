@@ -1,5 +1,9 @@
 # HEAD
 
+## Features
+
+* **css:** Update Language Selector to include optional link to language selection page (#259)
+
 ## Bug Fixes
 
 * **css:** Fix download button positioning in call out component (#268)
