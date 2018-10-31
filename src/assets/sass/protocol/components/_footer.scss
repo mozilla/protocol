@@ -17,18 +17,21 @@
     padding: $padding-xl 0;
     width: 100%;
 
-    a:link,
-    a:visited {
-        color: $color-white;
-        font-weight: normal;
-        text-decoration: none;
-    }
+    .mzp-c-footer-primary,
+    .mzp-c-footer-legal {
+        a:link,
+        a:visited {
+            color: $color-white;
+            font-weight: normal;
+            text-decoration: none;
+        }
 
-    a:hover,
-    a:focus,
-    a:active {
-        color: $color-white;
-        text-decoration: underline;
+        a:hover,
+        a:focus,
+        a:active {
+            color: $color-white;
+            text-decoration: underline;
+        }
     }
 
     h5 {

@@ -1,5 +1,9 @@
 # HEAD
 
+## Features
+
+* **css:** Update Language Selector to include optional link to language selection page (#259)
+
 ## Bug Fixes
 
 * **js:** Update JS namespace from Mozilla to Mzp (#253)
