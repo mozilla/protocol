@@ -1,4 +1,4 @@
-{{#extend "blank" bodyclass=""}}
+{{#extend "blank" htmlclass="js" bodyclass=""}}
   {{#content "head" mode="append"}}
       <link rel="stylesheet" href="{{@root.baseurl}}/assets/docs/css/protocol.css">
       <link rel="stylesheet" href="{{@root.baseurl}}/assets/docs/css/protocol-extra.css">
@@ -6,38 +6,24 @@
       <link rel="stylesheet" href="{{@root.baseurl}}/assets/docs/css/prism.css">
   {{/content}}
 
-  {{#content "body"}}
-    {{> drizzle.nav}}
+  {{#content "header"}}
+      <div>
+        {{> drizzle.nav}}
+      </div>
+    {{/content}}
 
-    <main id="{{ name }}" class="protosite-main">
-    {{#block "header"}}
-      {{!-- Header, labels --}}
-      <header class="protosite-page-head">
-        <h1 class="protosite-page-title">
-        {{#if title}}
-          {{ title }}
-        {{else}}
-          {{ name }}
-        {{/if}}
-        </h1>
+    {{#content "body"}}
+      <div class="mzp-l-content">
+        <main class="protosite-main">
 
-        {{#if labels}}
-          <ul class="protosite-page-labels">
-            {{#each labels as |label|}}
-              <li class="protosite-label protosite-label-{{label}}">
-                {{label}}
-              </li>
-            {{/each}}
-          </ul>
-        {{/if}}
-      </header>
-    {{/block}}
+            <script src="{{@root.baseurl}}/assets/docs/js/docs.js"></script>
 
-    {{#block "main"}}{{/block}}
-    </main>
-  {{/content}}
+        {{#block "main"}}{{/block}}
+        </main>
+      </div>
+    {{/content}}
 
-  {{#content "foot"}}
-    <script src="{{@root.baseurl}}/assets/docs/js/docs.js"></script>
-  {{/content}}
-{{/extend}}
+    {{#content "foot"}}
+      {{> drizzle.footer}}
+    {{/content}}
+  {{/extend}}

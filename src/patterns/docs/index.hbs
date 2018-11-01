@@ -1,0 +1,16 @@
+---
+name: Docs
+order: 0
+doclayout: true
+description: |
+  Docs will go here. Stuff like an installation/contribution guide, coding standards, etc.
+resources: true;
+---
+
+<ul class="mzp-u-list-styled">
+  {{#each (collections "docs" sortby="order")}}
+    <li>
+      <a href="{{@root.baseurl}}/{{url}}">{{name}}</a>
+    </li>
+  {{/each}}
+</ul>

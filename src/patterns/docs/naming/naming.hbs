@@ -1,0 +1,107 @@
+---
+name: Naming Conventions
+doclayout: true
+order: 1
+resources: true;
+description: |
+  For ease of integration and to avoid conflicts with other sites, frameworks,
+  and libraries, most classes in Protocol are prefixed with our global namespace
+  `.mzp-` for “Mozilla Protocol”.
+
+  After that, we follow a <a href="https://smacss.com/book/categorizing">SMACSS</a>-based
+  naming convention with a set of prefixes to put rules into a few different
+  categories:
+---
+
+<table class="protosite-pattern-table">
+  <tr>
+    <th scope="col">Prefix</th>
+    <th scope="col">Notes</th>
+  </tr>
+  <tr>
+    <td>c-</td>
+    <td>for component names. Expect a lot of this one, e.g. `.mzp-c-card`, `.mzp-c-btn`.</td>
+  </tr>
+  <tr>
+    <td>t-</td>
+    <td>for theme styles, when a component has one or more alternative styles, e.g. `.mzp-t-dark`, `.mzp-t-firefox`.</td>
+  </tr>
+  <tr>
+    <td>l-</td>
+    <td>for layout-related styles, e.g. `.mzp-l-grid-half`, `.mzp-l-grid-third`. These are presentational so should be rare. Prefer mixins.</td>
+  </tr>
+  <tr>
+    <td>u-</td>
+    <td>for utility styles, which have a broad scope and can be powerful overrides, e.g. `.mzp-u-inline`, `.mzp-u-no-margin`. These are presentational so should be rare. Prefer mixins.</td>
+  </tr>
+  <tr>
+    <td>qa-</td>
+    <td>used as selector hooks for tests (unit tests, integration tests, etc.). These classes are not meant as styling hooks; no CSS should be applied to any `qa-` classes!</td>
+  </tr>
+  <tr>
+    <td>is-</td>
+    <td>to indicate a current state, e.g. `.mzp-is-active`, `.mzp-is-collapsed` (typically assigned by JS and not hard-coded).</td>
+  </tr>
+  <tr>
+    <td>has-</td>
+    <td>to indicate that a component contains some other component, when the parent gets some styling to accommodate the child, e.g. `.mzp-has-submenu`, `.mzp-has-image`.</td>
+  </tr>
+  <tr>
+    <td>js-</td>
+    <td>used as a behavior hook for JavaScript, e.g. `.mzp-js-sticky`, `.mzp-js-collapsible`, `.mzp-js-toggle`. Indicates potential for a change of state and usually shouldn’t have any styling.</td>
+  </tr>
+  <tr>
+    <td>a-</td>
+    <td>for a CSS animation names, e.g. `mzp-a-fade-in`, `mzp-a-fade-out`.</td>
+  </tr>
+</table>
+
+<p>Our names are all lowercase and hyphen-separated or “kebab-case,” e.g.
+`.mzp-c-card`, `.mzp-c-card-title`. This brings with it the potential for
+long kebabs of multipart, hyphenated names. Names should be as short as
+possible and as long as necessary. Clarity is key. If we find our names
+getting obscenely long and confusing we may need to revise our convention
+but we’re trying it this way first.</p>
+
+<p>Example:</p>
+<pre class="protosite-pattern-code language-markup">
+  <code id="language-markup" class=" language-markup">
+    &#60;div class="mzp-c-card mzp-has-image"&#62;
+      &#60;img class="mzp-c-card-image" src="/static/img/card-image.jpg" alt=""&#62;
+      &#60;h3 class="mzp-c-card-title"&#62;Card Title&#60;/h3&#62;
+
+      &#60;div class="mzp-c-card-desc"&#62;
+        &#60;p&#62;Lorem ipsum dolor sit amet, pri illum munere mollis at, amet senserit te vix, sint porro mei eu.&#60;/p&#62;
+      &#60;/div&#62;
+
+      &#60;p class="mzp-c-card-cta"&#62;&#60;a class="mzp-c-cta-link" href="#"&#62;Learn more&#60;/a&#62;&#60;/p&#62;
+    &#60;/div&#62;
+  </code>
+</pre>
+
+<p>Names should be semantically meaningful, descriptive of the element's content,
+purpose, or function, not its presentation.</p>
+
+<pre class="protosite-pattern-code  language-scss">
+  <code id="language-scss" class="  language-scss">
+    // NO - Presentational
+    .mzp-c-card-large { ... }
+    .mzp-c-btn-blue { ... }
+
+    // YES - Meaningful
+    .mzp-c-card-featured { ... }
+    .mzp-c-btn-primary { ... }
+  </code>
+</pre>
+
+<p>Notable exceptions are the handful of layout and utility classes (prefixed
+by `l-` and `u-`) which you should only use when necessary and practical.
+In most cases there will be an equivalent SCSS mixin that may be preferable to
+adding presentational classes in your markup.</p>
+
+<h3>Resources</h3>
+
+<ul>
+  <li><a href="https://smacss.com/book/">Scalable and Modular Architechture for CSS (SMACSS) - Jonathan Snook</li>
+  <li><a href="http://bradfrost.com/blog/post/css-architecture-for-design-systems/">CSS Architecture for Design Systems - Brad Frost</li>
+</ul>

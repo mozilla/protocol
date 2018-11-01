@@ -2,15 +2,141 @@
 name: Hero
 order: 1
 description: |
-  A large promotional section, usually at the very top of the page, featuring at minimum a headline and a call to action. A brief description is recommended but optional.
+  A large promotional section, usually at the very top of the page.
+  
+  Heros feature at minimum a headline and a call to action. A brief description is recommended but optional.
 notes: |
   - The content is centered by default without a hero image.
   - The description can feature a larger tagline with the `mzp-c-hero-tagline` class.
   - Add the `mzp-t-firefox` class for Firefox branding (changing font to Open Sans).
   - Add the `mzp-t-dark` class to invert text colors for dark backgrounds.
   - [See the demo page](/demos/hero.html) for more examples in a full window context.
-links:
-    More examples: /demos/hero.html
+table: |
+  <tr>
+    <td>Alignment</td>
+    <td>How is the content positioned?</td>
+    <td>
+      <select id="hero-alignment" autocomplete="off">
+        <option value="mzp-c-button-primary" data-display="tr-button-hover">Center</option>
+        <option value="" data-display="tr-button-hover" selected>Left</option>
+        <option value="mzp-c-button-download" data-display="tr-button-brand">Right</option>
+      </select>
+      <script>addClass('hero-alignment','mzp-c-button');</script>
+    </td>
+  </tr>
+  <tr>
+    <td>Image</td>
+    <td>Does this section have an image?</td>
+    <td>
+      <div id="button-link" class="protosite-toggle">
+        <div class="protosite-toggle-option">
+          <input id="button-link-on" type="radio" name="button-link" value="on" autocomplete="off" data-display="tr-button-url"/>
+          <label for="button-link-on">Yes</label>
+        </div>
+        <div class="protosite-toggle-option">
+          <input id="button-link-off" type="radio" name="button-link" value="off" checked autocomplete="off"/>
+          <label for="button-link-off">No</label>
+        </div>
+      </div>
+      <script>attributeReplace('button-link')</script>
+    </td>
+  </tr>
+  <tr id="tr-button-url" style="display: none">
+    <td>Image Ratio</td>
+    <td>What aspect ratio is the image?</td>
+    <td>
+      <div id="button-link" class="protosite-toggle">
+        <div class="protosite-toggle-option">
+          <input id="button-link-on" type="radio" name="button-link" value="on" autocomplete="off" data-display="tr-button-url"/>
+          <label for="button-link-on">1:1</label>
+        </div>
+        <div class="protosite-toggle-option">
+          <input id="button-link-off" type="radio" name="button-link" value="off" checked autocomplete="off"/>
+          <label for="button-link-off">3:2</label>
+        </div>
+        <div class="protosite-toggle-option">
+          <input id="button-link-off" type="radio" name="button-link" value="off" checked autocomplete="off"/>
+          <label for="button-link-off">16:9</label>
+        </div>
+      </div>
+      <script>addAttribute('button-url', 'mzp-c-button', 'href');</script>
+    </td>
+  </tr>
+  <tr id="tr-button-url" style="display: none">
+    <td>Image Bleed</td>
+    <td>Does the image bleed off the page?</td>
+    <td>
+      <div id="button-link" class="protosite-toggle">
+        <div class="protosite-toggle-option">
+          <input id="button-link-on" type="radio" name="button-link" value="on" autocomplete="off" data-display="tr-button-url"/>
+          <label for="button-link-on">1:1</label>
+        </div>
+        <div class="protosite-toggle-option">
+          <input id="button-link-off" type="radio" name="button-link" value="off" checked autocomplete="off"/>
+          <label for="button-link-off">3:2</label>
+        </div>
+        <div class="protosite-toggle-option">
+          <input id="button-link-off" type="radio" name="button-link" value="off" checked autocomplete="off"/>
+          <label for="button-link-off">16:9</label>
+        </div>
+      </div>
+      <script>addAttribute('button-url', 'mzp-c-button', 'href');</script>
+    </td>
+  </tr>
+  <tr id="tr-button-brand" style="display: none">
+    <td>Brand</td>
+    <td>Is this a branded button?</td>
+    <td>
+      <select id="button-brand" autocomplete="off">
+        <option value="" data-require="Download" selected>Default</option>
+        <option value="mzp-c-button-firefox" data-require="Download Firefox">Firefox</option>
+        <option value="mzp-c-button-beta" data-require="Download Beta">Beta</option>
+        <option value="mzp-c-button-nightly" data-require="Download Nightly">Nightly</option>
+        <option value="mzp-c-button-devedition" data-require="Download Dev Edition">Dev Edition</option>
+        <option value="mzp-c-button-focus" data-require="Download Focus">Focus</option>
+      </select>
+      <script>addClass('button-brand','mzp-c-button');</script>
+    </td>
+  </tr>
+  <tr id="tr-button-hover">
+    <td>Brand</td>
+    <td>Is this a branded button?</td>
+    <td>
+      <select id="button-hover" autocomplete="off">
+        <option value="" selected>Default</option>
+        <option value="mzp-c-button-shift">Mozilla</option>
+      </select>
+      <script>addClass('button-hover','mzp-c-button');</script>
+    </td>
+  </tr>
+  <tr>
+    <td>Size</td>
+    <td>What size is the button?</td>
+    <td>
+      <select id="button-size" autocomplete="off">
+        <option value="mzp-c-button-small">Small</option>
+        <option value="" selected>Medium</option>
+        <option value="mzp-c-button-large">Large</option>
+      </select>
+      <script>addClass('button-size','mzp-c-button');</script>
+    </td>
+  </tr>
+  <tr>
+    <td>Text</td>
+    <td>What should the button say?</td>
+    <td>
+      <input id="button-text" type="text" data-maxlength="20" value="Button" autocomplete="off"/>
+      <script>replaceText('button-text','mzp-c-button');</script>
+    </td>
+  </tr>
+  <tr>
+    <td>Id</td>
+    <td>A unique identifier for the button</td>
+    <td>
+      <input id="button-id" type="text" value="" autocomplete="off"/>
+      <script>addAttribute('button-id','mzp-c-button', 'id');</script>
+    </td>
+  </tr>
 ---
 
 <section class="mzp-c-hero {{#if image}}mzp-has-image{{/if}} {{#if class}}{{class}}{{/if}}">

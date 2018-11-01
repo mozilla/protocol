@@ -45,6 +45,7 @@ $gutter-width:  $spacing-lg;
 
     @media #{$mq-xl} {
         @include columns($number, 1/8, 1/8);
+        @include columns($number, 5/8, 5/8);
     }
 }
 
