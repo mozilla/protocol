@@ -2,11 +2,41 @@
 
 ## Features
 
+* **css:** Add grid system classes and mixins (#233)
+* **docs:** Document deployment process (#171)
+
+# 2.4.2
+
+* **css:** Add blockquote component (#234)
+
+# 2.3.2
+
+## Features
+
+* **docs:** Add page that lists all tokens and their values (#177)
+
+## Bug Fixes
+
+* **js:** Workaround for IE9 navigation bug in bedrock's classList polyfill (#182)
+* **css:** Navigation & Menu style fixes (#182)
+* **css:** Fix card layout issues at medium viewport sizes (#227)
+* **css:** Add font-smoothing properties for macOS devices
+
+# 2.3.1
+
+## Bug Fixes
+
+* **css:** Include Navigation in core bundle and not extras (#182)
+
+# 2.3.0
+
+## Features
+
 * **css:** Add Navigation organism and Menu molecule (#182)
 
 ## Bug Fixes
 
-* **npm:** Ensure `npm test` always updates dependencies before running `gulp build`.
+* **npm:** Ensure `npm test` always updates dependencies before running `gulp build` (#191)
 
 # 2.2.0
 

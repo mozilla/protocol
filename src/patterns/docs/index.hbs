@@ -1,0 +1,16 @@
+---
+name: Docs
+order: 0
+doclayout: true
+description: |
+  Here are some useful resources (installation/contribution guide, coding standards, etc.) for working with Protocol.
+resources: true;
+---
+
+<ul class="mzp-u-list-styled">
+  {{#each (collections "docs" sortby="order")}}
+    <li>
+      <a href="{{@root.baseurl}}/{{url}}">{{name}}</a>
+    </li>
+  {{/each}}
+</ul>

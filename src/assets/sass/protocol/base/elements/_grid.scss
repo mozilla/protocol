@@ -1,0 +1,36 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+.mzp-l-grid {
+    @include clearfix;
+    position: relative;
+
+    > div {
+      @include grid(1/1);
+    }
+
+    // Create grids with up to 8 columns (don't include 5 and 7 column grids)
+    @for $column-span from 1 through 6 {
+      @for $column-max from 2 through 8 {
+        @if $column-span < $column-max and $column-span != 5 {
+          .mzp-l-grid-#{$column-span}-#{$column-max} {
+            @include grid($column-span / $column-max);
+          }
+        }
+      }
+    }
+
+    // Grid - Positioning
+    > div:nth-child(n):nth-last-child(1).mzp-u-right {
+        @include bidi(((float, right, left),));
+    }
+    > div:nth-child(n):nth-last-child(1).mzp-u-center {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}

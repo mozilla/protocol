@@ -1,0 +1,607 @@
+[
+  {
+    "name": "mq-xs",
+    "value": "screen and (min-width: 320px)",
+    "token": "$mq-xs"
+  },
+  {
+    "name": "mq-sm",
+    "value": "screen and (min-width: 480px)",
+    "token": "$mq-sm"
+  },
+  {
+    "name": "mq-md",
+    "value": "screen and (min-width: 768px)",
+    "token": "$mq-md"
+  },
+  {
+    "name": "mq-lg",
+    "value": "screen and (min-width: 1056px)",
+    "token": "$mq-lg"
+  },
+  {
+    "name": "mq-xl",
+    "value": "screen and (min-width: 1312px)",
+    "token": "$mq-xl"
+  },
+  {
+    "name": "mq-short",
+    "value": "(max-height: 600px)",
+    "token": "$mq-short"
+  },
+  {
+    "name": "mq-tall",
+    "value": "(min-height: 600px)",
+    "token": "$mq-tall"
+  },
+  {
+    "name": "mq-high-res",
+    "value": "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)",
+    "token": "$mq-high-res"
+  },
+  {
+    "name": "content-xs",
+    "value": "304px",
+    "token": "$content-xs"
+  },
+  {
+    "name": "content-sm",
+    "value": "464px",
+    "token": "$content-sm"
+  },
+  {
+    "name": "content-md",
+    "value": "736px",
+    "token": "$content-md"
+  },
+  {
+    "name": "content-lg",
+    "value": "992px",
+    "token": "$content-lg"
+  },
+  {
+    "name": "content-xl",
+    "value": "1248px",
+    "token": "$content-xl"
+  },
+  {
+    "name": "content-max",
+    "value": "1420px",
+    "token": "$content-max"
+  },
+  {
+    "name": "screen-xs",
+    "value": "304px",
+    "token": "$screen-xs"
+  },
+  {
+    "name": "screen-sm",
+    "value": "464px",
+    "token": "$screen-sm"
+  },
+  {
+    "name": "screen-md",
+    "value": "736px",
+    "token": "$screen-md"
+  },
+  {
+    "name": "screen-lg",
+    "value": "992px",
+    "token": "$screen-lg"
+  },
+  {
+    "name": "screen-xl",
+    "value": "1248px",
+    "token": "$screen-xl"
+  },
+  {
+    "name": "Black",
+    "value": "#000000",
+    "token": "$brand-primary"
+  },
+  {
+    "name": "White",
+    "value": "#ffffff",
+    "token": "$brand-secondary"
+  },
+  {
+    "name": "Neon Blue",
+    "value": "#00ffff",
+    "token": "$brand-neon-blue"
+  },
+  {
+    "name": "Lemon Yellow",
+    "value": "#fff44f",
+    "token": "$brand-lemon-yellow"
+  },
+  {
+    "name": "Warm Red",
+    "value": "#ff4f5e",
+    "token": "$brand-warm-red"
+  },
+  {
+    "name": "Neon Green",
+    "value": "#54ffbd",
+    "token": "$brand-neon-green"
+  },
+  {
+    "name": "Dark Purple",
+    "value": "#6e008b",
+    "token": "$brand-dark-purple"
+  },
+  {
+    "name": "Dark Green",
+    "value": "#005e5e",
+    "token": "$brand-dark-green"
+  },
+  {
+    "name": "Dark Blue",
+    "value": "#00458b",
+    "token": "$brand-dark-blue"
+  },
+  {
+    "name": "Black",
+    "value": "#000000",
+    "token": "$color-black"
+  },
+  {
+    "name": "White",
+    "value": "#ffffff",
+    "token": "$color-white"
+  },
+  {
+    "name": "Magenta 50",
+    "value": "#ff1ad9",
+    "token": "$color-magenta-50"
+  },
+  {
+    "name": "Magenta 60",
+    "value": "#ed00b5",
+    "token": "$color-magenta-60"
+  },
+  {
+    "name": "Magenta 70",
+    "value": "#b5007f",
+    "token": "$color-magenta-70"
+  },
+  {
+    "name": "Magenta 80",
+    "value": "#7d004f",
+    "token": "$color-magenta-80"
+  },
+  {
+    "name": "Magenta 90",
+    "value": "#440027",
+    "token": "$color-magenta-90"
+  },
+  {
+    "name": "Purple 30",
+    "value": "#c069ff",
+    "token": "$color-purple-30"
+  },
+  {
+    "name": "Purple 40",
+    "value": "#ad3bff",
+    "token": "$color-purple-40"
+  },
+  {
+    "name": "Purple 50",
+    "value": "#9400ff",
+    "token": "$color-purple-50"
+  },
+  {
+    "name": "Purple 60",
+    "value": "#8000d7",
+    "token": "$color-purple-60"
+  },
+  {
+    "name": "Purple 70",
+    "value": "#6200a4",
+    "token": "$color-purple-70"
+  },
+  {
+    "name": "Purple 80",
+    "value": "#440071",
+    "token": "$color-purple-80"
+  },
+  {
+    "name": "Purple 90",
+    "value": "#25003e",
+    "token": "$color-purple-90"
+  },
+  {
+    "name": "Blue 40",
+    "value": "#45a1ff",
+    "token": "$color-blue-40"
+  },
+  {
+    "name": "Blue 50",
+    "value": "#0a84ff",
+    "token": "$color-blue-50"
+  },
+  {
+    "name": "Blue 60",
+    "value": "#0060df",
+    "token": "$color-blue-60"
+  },
+  {
+    "name": "Blue 70",
+    "value": "#003eaa",
+    "token": "$color-blue-70"
+  },
+  {
+    "name": "Blue 80",
+    "value": "#002275",
+    "token": "$color-blue-80"
+  },
+  {
+    "name": "Blue 90",
+    "value": "#000f40",
+    "token": "$color-blue-90"
+  },
+  {
+    "name": "Teal 50",
+    "value": "#00feff",
+    "token": "$color-teal-50"
+  },
+  {
+    "name": "Teal 60",
+    "value": "#00c8d7",
+    "token": "$color-teal-60"
+  },
+  {
+    "name": "Teal 70",
+    "value": "#008ea4",
+    "token": "$color-teal-70"
+  },
+  {
+    "name": "Teal 80",
+    "value": "#005a71",
+    "token": "$color-teal-80"
+  },
+  {
+    "name": "Teal 90",
+    "value": "#002d3e",
+    "token": "$color-teal-90"
+  },
+  {
+    "name": "Green 50",
+    "value": "#30e60b",
+    "token": "$color-green-50"
+  },
+  {
+    "name": "Green 60",
+    "value": "#12bc00",
+    "token": "$color-green-60"
+  },
+  {
+    "name": "Green 70",
+    "value": "#058b00",
+    "token": "$color-green-70"
+  },
+  {
+    "name": "Green 80",
+    "value": "#006504",
+    "token": "$color-green-80"
+  },
+  {
+    "name": "Green 90",
+    "value": "#003706",
+    "token": "$color-green-90"
+  },
+  {
+    "name": "Yellow 50",
+    "value": "#ffe900",
+    "token": "$color-yellow-50"
+  },
+  {
+    "name": "Yellow 60",
+    "value": "#d7b600",
+    "token": "$color-yellow-60"
+  },
+  {
+    "name": "Yellow 70",
+    "value": "#a47f00",
+    "token": "$color-yellow-70"
+  },
+  {
+    "name": "Yellow 80",
+    "value": "#715100",
+    "token": "$color-yellow-80"
+  },
+  {
+    "name": "Yellow 90",
+    "value": "#3e2800",
+    "token": "$color-yellow-90"
+  },
+  {
+    "name": "Red 50",
+    "value": "#ff0039",
+    "token": "$color-red-50"
+  },
+  {
+    "name": "Red 60",
+    "value": "#d70022",
+    "token": "$color-red-60"
+  },
+  {
+    "name": "Red 70",
+    "value": "#a4000f",
+    "token": "$color-red-70"
+  },
+  {
+    "name": "Red 80",
+    "value": "#5a0002",
+    "token": "$color-red-80"
+  },
+  {
+    "name": "Red 90",
+    "value": "#3e0200",
+    "token": "$color-red-90"
+  },
+  {
+    "name": "Orange 50",
+    "value": "#ff9400",
+    "token": "$color-orange-50"
+  },
+  {
+    "name": "Orange 60",
+    "value": "#d76e00",
+    "token": "$color-orange-60"
+  },
+  {
+    "name": "Orange 70",
+    "value": "#a44900",
+    "token": "$color-orange-70"
+  },
+  {
+    "name": "Orange 80",
+    "value": "#712b00",
+    "token": "$color-orange-80"
+  },
+  {
+    "name": "Orange 90",
+    "value": "#3e1300",
+    "token": "$color-orange-90"
+  },
+  {
+    "name": "Gray 10",
+    "value": "#f9f9fa",
+    "token": "$color-gray-10"
+  },
+  {
+    "name": "Gray 20",
+    "value": "#ededf0",
+    "token": "$color-gray-20"
+  },
+  {
+    "name": "Gray 30",
+    "value": "#d7d7db",
+    "token": "$color-gray-30"
+  },
+  {
+    "name": "Gray 40",
+    "value": "#b1b1b3",
+    "token": "$color-gray-40"
+  },
+  {
+    "name": "Gray 50",
+    "value": "#737373",
+    "token": "$color-gray-50"
+  },
+  {
+    "name": "Gray 60",
+    "value": "#4a4a4f",
+    "token": "$color-gray-60"
+  },
+  {
+    "name": "Gray 70",
+    "value": "#38383d",
+    "token": "$color-gray-70"
+  },
+  {
+    "name": "Gray 80",
+    "value": "#2a2a2e",
+    "token": "$color-gray-80"
+  },
+  {
+    "name": "Gray 90",
+    "value": "#0c0c0d",
+    "token": "$color-gray-90"
+  },
+  {
+    "name": "Link",
+    "value": "#0060df",
+    "token": "$color-link"
+  },
+  {
+    "name": "Link:Hover",
+    "value": "#003eaa",
+    "token": "$color-link-hover"
+  },
+  {
+    "name": "Link:Visited",
+    "value": "#8000d7",
+    "token": "$color-link-visited"
+  },
+  {
+    "name": "Link:Visited:Hover",
+    "value": "#6200a4",
+    "token": "$color-link-visited-hover"
+  },
+  {
+    "name": "font-stack-sans",
+    "value": "&#x27;Open Sans&#x27;, X-LocaleSpecific, sans-serif",
+    "token": "$font-stack-sans"
+  },
+  {
+    "name": "font-stack-serif",
+    "value": "&#x27;Zilla Slab&#x27;, &#x27;Open Sans&#x27;, X-LocaleSpecific, serif",
+    "token": "$font-stack-serif"
+  },
+  {
+    "name": "font-stack-mono",
+    "value": "Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace",
+    "token": "$font-stack-mono"
+  },
+  {
+    "name": "Greyscale Gradient",
+    "value": "linear-gradient(90deg, #000000, #ffffff)",
+    "token": "$gradient-greyscale"
+  },
+  {
+    "name": "Firefox Focus Gradient",
+    "value": "linear-gradient(45deg, #4A1475, #671878, #C42482, #FF271D)",
+    "token": "$gradient-focus"
+  },
+  {
+    "name": "Hello World Gradient",
+    "value": "radial-gradient(33deg, #4A1475, #671878, #C42482, #FF271D)",
+    "token": "$gradient-helloworld"
+  },
+  {
+    "name": "spacing-xs",
+    "value": "4px",
+    "token": "$spacing-xs"
+  },
+  {
+    "name": "spacing-sm",
+    "value": "8px",
+    "token": "$spacing-sm"
+  },
+  {
+    "name": "spacing-md",
+    "value": "16px",
+    "token": "$spacing-md"
+  },
+  {
+    "name": "spacing-lg",
+    "value": "24px",
+    "token": "$spacing-lg"
+  },
+  {
+    "name": "spacing-xl",
+    "value": "32px",
+    "token": "$spacing-xl"
+  },
+  {
+    "name": "spacing-2xl",
+    "value": "48px",
+    "token": "$spacing-2xl"
+  },
+  {
+    "name": "spacing-base",
+    "value": "16px",
+    "token": "$spacing-base"
+  },
+  {
+    "name": "padding-xs",
+    "value": "4px",
+    "token": "$padding-xs"
+  },
+  {
+    "name": "padding-sm",
+    "value": "8px",
+    "token": "$padding-sm"
+  },
+  {
+    "name": "padding-md",
+    "value": "16px",
+    "token": "$padding-md"
+  },
+  {
+    "name": "padding-lg",
+    "value": "24px",
+    "token": "$padding-lg"
+  },
+  {
+    "name": "padding-xl",
+    "value": "32px",
+    "token": "$padding-xl"
+  },
+  {
+    "name": "padding-2xl",
+    "value": "48px",
+    "token": "$padding-2xl"
+  },
+  {
+    "name": "padding-base",
+    "value": "16px",
+    "token": "$padding-base"
+  },
+  {
+    "name": "margin-xs",
+    "value": "4px",
+    "token": "$margin-xs"
+  },
+  {
+    "name": "margin-sm",
+    "value": "8px",
+    "token": "$margin-sm"
+  },
+  {
+    "name": "margin-md",
+    "value": "16px",
+    "token": "$margin-md"
+  },
+  {
+    "name": "margin-lg",
+    "value": "24px",
+    "token": "$margin-lg"
+  },
+  {
+    "name": "margin-xl",
+    "value": "32px",
+    "token": "$margin-xl"
+  },
+  {
+    "name": "margin-2xl",
+    "value": "48px",
+    "token": "$margin-2xl"
+  },
+  {
+    "name": "margin-base",
+    "value": "16px",
+    "token": "$margin-base"
+  },
+  {
+    "name": "layout-2xs",
+    "value": "16px",
+    "token": "$layout-2xs"
+  },
+  {
+    "name": "layout-xs",
+    "value": "24px",
+    "token": "$layout-xs"
+  },
+  {
+    "name": "layout-sm",
+    "value": "32px",
+    "token": "$layout-sm"
+  },
+  {
+    "name": "layout-md",
+    "value": "48px",
+    "token": "$layout-md"
+  },
+  {
+    "name": "layout-lg",
+    "value": "64px",
+    "token": "$layout-lg"
+  },
+  {
+    "name": "layout-xl",
+    "value": "96px",
+    "token": "$layout-xl"
+  },
+  {
+    "name": "layout-2xl",
+    "value": "160px",
+    "token": "$layout-2xl"
+  },
+  {
+    "name": "layout-base",
+    "value": "48px",
+    "token": "$layout-base"
+  }
+]

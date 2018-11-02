@@ -56,13 +56,13 @@
 
 @media #{$mq-md} {
     .mzp-c-newsletter-image {
-        @include grid-half;
+        @include grid(1/2);
         float: left;
     }
 
     .mzp-c-newsletter-form,
     .mzp-c-newsletter-thanks {
-        @include grid-half;
+        @include grid(1/2);
         float: right;
         padding-top: $layout-md;
     }

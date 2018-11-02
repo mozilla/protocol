@@ -1,16 +1,21 @@
 <article class="protosite-pattern">
+
   {{!-- Header, labels --}}
   <header class="protosite-pattern-head">
-    {{#> drizzle.labelheader tag="h2" id=(toSlug name) labels=data.labels}}
-      {{name}}
-    {{/drizzle.labelheader}}
+    {{#if data.name}}
+      {{#> drizzle.labelheader tag="h1" id=(toSlug name) labels=data.labels}}
+        {{name}}
+      {{/drizzle.labelheader}}
+    {{/if}}
+
+    {{!-- Description --}}
+    {{#if data.description}}
+      <div class="protosite-pattern-desc">
+        {{{data.description}}}
+      </div>
+    {{/if}}
   </header>
-  {{!-- Description --}}
-  {{#if data.description}}
-    <div class="protosite-pattern-desc">
-      {{{data.description}}}
-    </div>
-  {{/if}}
+
   {{!-- Links --}}
   {{#if data.links}}
     <ul class="protosite-pattern-links">
@@ -28,49 +33,81 @@
     </ul>
   {{/if}}
 
-  {{!-- Layouts --}}
-  {{#if data.doclayout}}
-    {{{pattern id @root}}}
-  {{else}}
-    {{!-- Bidi controls --}}
-    {{#unless data.hidepreview}}
-    {{#> drizzle.bidi id=(toSlug name)}}
-      {{name}}
-    {{/drizzle.bidi}}
-    {{/unless}}
-    {{!-- Preview --}}
-    <div class="protosite-pattern-embed">
+  {{!-- Component Editor --}}
+  <div class="protosite-pattern-editor">
+
+    {{!-- Layouts --}}
+    {{#if data.doclayout}}
+      {{{pattern id @root}}}
+    {{else}}
+      {{!-- Bidi controls
       {{#unless data.hidepreview}}
-      <div class="protosite-pattern-preview {{data.previewClass}}" id="protosite-{{toSlug name}}-preview" dir="ltr">
-        {{{pattern id @root}}}
+      {{#> drizzle.bidi id=(toSlug name)}}
+        {{name}}
+      {{/drizzle.bidi}}
+      {{/unless}}  --}}
+
+      {{!-- Table --}}
+      {{#if data.table}}
+        <table class="protosite-pattern-table">
+          <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+            <th/>
+          </tr>
+          {{{data.table}}}
+        </table>
+        <div id="alert"></div>
+      {{/if}}
+
+      {{!-- Preview --}}
+      <div class="protosite-pattern-embed">
+        {{#unless data.hidepreview}}
+        <div class="protosite-pattern-preview {{data.previewClass}}" id="protosite-{{toSlug name}}-preview" dir="ltr">
+          {{{pattern id @root}}}
+        </div>
+        {{/unless}}
+        {{!-- Code sample --}}
+        {{#unless data.sourceless}}
+          <pre class="protosite-pattern-code"><code id="{{data.id}}" class="language-markup">{{{patternSource id @root}}}</code></pre>
+        {{/unless}}
       </div>
-      {{/unless}}
-      {{!-- Code sample --}}
-      {{#unless data.sourceless}}
-        <pre class="protosite-pattern-code"><code class="language-markup">{{{patternSource id @root}}}</code></pre>
-      {{/unless}}
-    </div>
 
-    {{!-- Notes --}}
-    {{#if data.notes}}
-      <div class="protosite-pattern-extra protosite-pattern-extra-notes">
-        <h3>Notes</h3>
-        {{{data.notes}}}
-      </div>
-    {{/if}}
+      {{!-- Notes
+      {{#if data.notes}}
+        <div class="protosite-pattern-extra protosite-pattern-extra-notes">
+          <h3>Notes</h3>
+          {{{data.notes}}}
+        </div>
+      {{/if}}
 
-    {{#if data.tips}}
-    <section class="protosite-pattern-extra protosite-pattern-extra-tips">
-      <h3>Tips</h3>
-      {{{data.tips}}}
-    </section>
-    {{/if}}
+      {{#if data.tips}}
+      <section class="protosite-pattern-extra protosite-pattern-extra-tips">
+        <h3>Tips</h3>
+        {{{data.tips}}}
+      </section>
+      {{/if}}
 
-    {{#if data.nonos}}
-    <section class="protosite-pattern-extra protosite-pattern-extra-nonos">
-      <h3>No-nos</h3>
-      {{{data.nonos}}}
-    </section>
+      {{#if data.nonos}}
+      <section class="protosite-pattern-extra protosite-pattern-extra-nonos">
+        <h3>No-nos</h3>
+        {{{data.nonos}}}
+      </section>
+      {{/if}}
+      --}}
+
     {{/if}}
-  {{/if}}
+  </div>
+  <div class="protosite-pattern-illustration">
+    {{#if data.foundation}}
+      <img src="{{@root.baseurl}}/static/img/protosite/foundations@2x.png" width="300" height="300" alt="">
+    {{else if data.resources}}
+      <img src="{{@root.baseurl}}/static/img/protosite/resources@2x.png" width="300" height="300" alt="">
+    {{else if data.templates}}
+      <img src="{{@root.baseurl}}/static/img/protosite/templates@2x.png" width="300" height="300" alt="">
+    {{ else }}
+      <img src="{{@root.baseurl}}/static/img/protosite/components@2x.png" width="300" height="300" alt="">
+    {{/if}}
+  </div>
+
 </article>

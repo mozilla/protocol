@@ -9,16 +9,8 @@
     @include border-box;
     @include clearfix;
     margin: 0 auto;
-    max-width: $content-max;
+    max-width: $content-xl;
     min-width: $content-xs;
-    padding: $layout-xs;
+    padding: $spacing-lg;
     position: relative;
-
-    @media #{$mq-md} {
-        padding: $layout-xs $layout-lg;
-    }
-
-    @media #{$mq-lg} {
-        padding: $layout-xs $layout-xl;
-    }
 }

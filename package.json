@@ -1,15 +1,11 @@
 {
   "name": "protocol",
-  "version": "2.2.0",
+  "version": "2.4.2",
   "private": true,
   "author": "Mozilla",
   "description": "A design system for Mozilla's websites.",
   "homepage": "https://github.com/mozilla/protocol",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mozilla/protocol.git"
-  },
   "engines": {
     "node": ">=6.0.0"
   },
@@ -51,7 +47,7 @@
     "yargs": "^12.0.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.5",
+    "browser-sync": "^2.26.3",
     "doctoc": "^1.1.1",
     "gulp-watch": "^5.0.0",
     "jasmine-core": "^3.2.0",

@@ -4,7 +4,6 @@
     {{#block "head"}}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="shortcut icon" href="{{@root.baseurl}}/static/img/favicon.png">
       {{#if title}}
       <title>{{title}} - {{data "project.title"}}</title>
       {{else if name}}
@@ -20,11 +19,14 @@
   </head>
   <body class="{{bodyclass}}">
     <div class="protosite-page">
-    {{#block "body"}}
-      {{#block "main"}}{{/block}}
-    {{/block}}
 
-    {{#block "foot"}}{{/block}}
+      {{#block "header"}}{{/block}}
+
+      {{#block "body"}}
+        {{#block "main"}}{{/block}}
+      {{/block}}
+
+      {{#block "foot"}}{{/block}}
     </div>
   </body>
 </html>

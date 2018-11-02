@@ -136,6 +136,10 @@ module.exports = {
         colorData: {
             src: `./node_modules/@mozilla-protocol/tokens/dist/colors/colors.json`,
             dest: `./src/data`
+        },
+        tokenData: {
+            src: `./node_modules/@mozilla-protocol/tokens/dist/index.json`,
+            dest: `./src/data`
         }
     },
     testJS: {

@@ -1,95 +1,330 @@
-{{!-- Nav item partial --}}
 {{#*inline "nav-item"}}
-  <a class="protosite-nav-main-link" href="{{@root.baseurl}}/{{url}}">
+  <a href="{{@root.baseurl}}/{{url}}">
     {{label}}
   </a>
 {{/inline}}
 
-<nav class="protosite-nav-main" id="protosite-nav-main">
-  <header class="protosite-nav-main-head">
-    <a href="https://www.mozilla.org">
-      <img class="protosite-nav-main-mozlogo" src="{{@root.baseurl}}/assets/protocol/protocol/img/logos/mozilla/white.svg" width="100" alt="Mozilla">
-    </a>
-
-    <a class="protosite-js-nav-toggle" href="#nav">Menu</a>
-  </header>
-
-  <div class="protosite-nav-main-menu" id="protosite-nav-main-menu">
-    <ul>
-      <li class="protosite-nav-main-item">
-        <a href="{{@root.baseurl}}">Home</a>
-      </li>
-    </ul>
-
-    {{!-- Fundamentals --}}
-    <h4 class="protosite-nav-menu-title">Fundamentals</h4>
-    <ul>
-      {{#each (pages "fundamentals" sortby="order" ignore="index")}}
-        <li class="protosite-nav-main-item">
-          {{> nav-item label=data.title}}
-        </li>
-      {{/each}}
-    </ul>
-
-    {{!-- Atom Patterns --}}
-    <h4 class="protosite-nav-menu-title">Atoms</h4>
-    <ul>
-      {{#each (collections "atoms" sortby="order")}}
-        <li class="protosite-nav-main-item">
-          {{> nav-item label=name}}
-        </li>
-      {{/each}}
-    </ul>
-
-    {{!-- Molecule Patterns --}}
-    {{#if (collections "molecules")}}
-    <h4 class="protosite-nav-menu-title">Molecules</h4>
-    <ul>
-      {{#each (collections "molecules" sortby="order")}}
-        <li class="protosite-nav-main-item">
-          {{> nav-item label=name}}
-        </li>
-      {{/each}}
-    </ul>
-    {{/if}}
-
-    {{!-- Organism Patterns --}}
-    {{#if (collections "organisms")}}
-    <h4 class="protosite-nav-menu-title">Organisms</h4>
-    <ul>
-      {{#each (collections "organisms" sortby="order")}}
-        <li class="protosite-nav-main-item">
-          {{> nav-item label=name}}
-        </li>
-      {{/each}}
-    </ul>
-    {{/if}}
-
-    {{!-- Template Patterns --}}
-    {{#if (collections "templates")}}
-    <h4 class="protosite-nav-menu-title">Templates</h4>
-    <ul>
-      {{#each (collections "templates" sortby="order")}}
-        <li class="protosite-nav-main-item">
-          {{> nav-item label=name}}
-        </li>
-      {{/each}}
-    </ul>
-    {{/if}}
-
-    {{!-- Other pages --}}
-    <h4 class="protosite-nav-menu-title">Other Stuff</h4>
-    <ul>
-      <li class="protosite-nav-main-item">
-        {{#with (page "docs/index")}}
-          {{> nav-item label=data.title}}
-        {{/with}}
-      </li>
-      <li class="protosite-nav-main-item">
-        {{#with (page "demos/index")}}
-          {{> nav-item label=data.title}}
-        {{/with}}
-      </li>
-    </ul>
+<div id="protosite-nav" class="mzp-c-navigation">
+  <div class="mzp-c-navigation-l-content">
+    <div class="mzp-c-navigation-container">
+      <button class="mzp-c-navigation-menu-button" type="button" aria-controls="map-c-navigation-items">Menu</button>
+      <div class="mzp-c-navigation-logo"><a href="{{@root.baseurl}}">Mozilla</a></div>
+      <div class="mzp-c-navigation-items" id="mzp-c-navigation-items">
+        <div class="mzp-c-navigation-menu">
+            {{#embed "patterns.molecules.menu.menu"}}
+              {{#content "content"}}
+                <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
+                  <a class="mzp-c-menu-title" href="" aria-haspopup="true" aria-controls="mzp-c-menu-panel-fundamentals">Foundations</a>
+                  <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-fundamentals">
+                    <div class="mzp-c-menu-panel-container">
+                      <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-fundamentals">Close Fundamentals menu</button>
+                      <div class="mzp-c-menu-panel-content">
+                        <ul>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Design Principles{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/fundamentals/principles.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">The guiding principles that inform our design decisions.</p>
+                              {{/content}}
+                              {{#content "list"}}{{/content}}
+                            {{/embed}}
+                          </li>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Typography{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/fundamentals/typography.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}{{/content}}
+                            {{/embed}}
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Color{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/fundamentals/color.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}{{/content}}
+                            {{/embed}}
+                          </li>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Tokens{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/fundamentals/tokens.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 12 21 16 17"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"></path></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}{{/content}}
+                            {{/embed}}
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mzp-c-menu-panel-card">
+                        {{#embed "patterns.molecules.card.small-card" class="mzp-c-card-extra-small has-aspect-3-2" image="/static/img/protosite/foundations-inverted@2x.png" link="/patterns/fundamentals/tokens.html"}}
+                          {{#content "content"}}
+                            <h2 class="mzp-c-card-title">Tokens</h2>
+                            <p class="mzp-c-card-desc">This is a short description with only a single sentence and no more.</p>
+                          {{/content}}
+                        {{/embed}}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
+                  <a class="mzp-c-menu-title" href="/" aria-haspopup="true" aria-controls="mzp-c-menu-panel-components">Components</a>
+                  <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-components">
+                    <div class="mzp-c-menu-panel-container">
+                      <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-components">Close Components menu</button>
+                      <div class="mzp-c-menu-panel-content">
+                        <ul>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Atoms{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/atoms.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}
+                                <ul class="mzp-c-menu-item-list">
+                                  {{#each (collections "atoms" sortby="order")}}
+                                    <li>
+                                      {{> nav-item label=name}}
+                                    </li>
+                                  {{/each}}
+                                </ul>
+                              {{/content}}
+                            {{/embed}}
+                          </li>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Molecules{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/molecules.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}
+                                <ul class="mzp-c-menu-item-list">
+                                  {{#each (collections "molecules" sortby="order")}}
+                                    <li>
+                                      {{> nav-item label=name}}
+                                    </li>
+                                  {{/each}}
+                                </ul>
+                              {{/content}}
+                            {{/embed}}
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Organisms{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/organisms.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}
+                                <ul class="mzp-c-menu-item-list">
+                                  {{#each (collections "organisms" sortby="order")}}
+                                    <li>
+                                      {{> nav-item label=name}}
+                                    </li>
+                                  {{/each}}
+                                </ul>
+                              {{/content}}
+                            {{/embed}}
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mzp-c-menu-panel-card">
+                        {{#embed "patterns.molecules.card.small-card" class="mzp-c-card-extra-small has-aspect-3-2" image="/static/img/protosite/components-inverted@2x.png" link="/"}}
+                          {{#content "content"}}
+                            <h2 class="mzp-c-card-title">Buttons</h2>
+                            <p class="mzp-c-card-desc">This is a short description with only a single sentence and no more.</p>
+                          {{/content}}
+                        {{/embed}}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
+                  <a class="mzp-c-menu-title" href="/" aria-haspopup="true" aria-controls="mzp-c-menu-panel-templates">Templates</a>
+                  <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-templates">
+                    <div class="mzp-c-menu-panel-container">
+                      <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-templates">Close Templates menu</button>
+                      <div class="mzp-c-menu-panel-content">
+                        <ul>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Card Layout{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/templates/card-layout.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}{{/content}}
+                            {{/embed}}
+                          </li>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Main with Sidebar{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/templates/main-with-sidebar.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}{{/content}}
+                            {{/embed}}
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Grid System{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/templates/grid.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}{{/content}}
+                            {{/embed}}
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mzp-c-menu-panel-card">
+                        {{#embed "patterns.molecules.card.small-card" class="mzp-c-card-extra-small has-aspect-3-2" image="/static/img/protosite/templates-inverted@2x.png" link="/"}}
+                          {{#content "content"}}
+                            <h2 class="mzp-c-card-title">Grid System</h2>
+                            <p class="mzp-c-card-desc">This is a short description with only a single sentence and no more.</p>
+                          {{/content}}
+                        {{/embed}}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
+                  <a class="mzp-c-menu-title" href="/" aria-haspopup="true" aria-controls="mzp-c-menu-panel-resources">Resources</a>
+                  <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-about">
+                    <div class="mzp-c-menu-panel-container">
+                      <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-resources">Close Resources menu</button>
+                      <div class="mzp-c-menu-panel-content">
+                        <ul>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Github{{/content}}
+                              {{#content "link"}}https://github.com/mozilla/protocol{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}
+                                <ul class="mzp-c-menu-item-list">
+                                  <li><a href="https://www.mozilla.org/about/">Protocol</a></li>
+                                  <li><a href="https://www.mozilla.org/about/leadership/">Protocol Tokens</a></li>
+                                  <li><a href="https://www.mozilla.org/foundation/">Protocol Assets</a></li>
+                                  <li><a href="https://blog.mozilla.org/press/">Sketch Plugin</a></li>
+                                </ul>
+                              {{/content}}
+                            {{/embed}}
+                          </li>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Documentation{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/patterns/docs.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}
+                                <ul class="mzp-c-menu-item-list">
+                                  {{#each (collections "docs" sortby="order")}}
+                                    <li>
+                                      {{> nav-item label=name}}
+                                    </li>
+                                  {{/each}}
+                                </ul>
+                              {{/content}}
+                            {{/embed}}
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                              {{#content "title"}}Demos{{/content}}
+                              {{#content "link"}}{{@root.baseurl}}/demos/index.html{{/content}}
+                              {{#content "icon"}}<svg class="mzp-c-menu-item-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>{{/content}}
+                              {{#content "desc"}}
+                                <p class="mzp-c-menu-item-desc">This is a short description with only a single sentence and no more.</p>
+                              {{/content}}
+                              {{#content "list"}}
+                                <ul class="mzp-c-menu-item-list">
+                                  {{#each (pages "demos" ignore="index")}}
+                                    <li>
+                                      <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
+                                    </li>
+                                  {{/each}}
+                                </ul>
+                              {{/content}}
+                            {{/embed}}
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mzp-c-menu-panel-card">
+                        {{#embed "patterns.molecules.card.small-card" class="mzp-c-card-extra-small has-aspect-3-2" image="/static/img/protosite/resources-inverted@2x.png" link="/"}}
+                          {{#content "content"}}
+                            <h2 class="mzp-c-card-title">Github</h2>
+                            <p class="mzp-c-card-desc">This is a short description with only a single sentence and no more.</p>
+                          {{/content}}
+                        {{/embed}}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              {{/content}}
+            {{/embed}}
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
+</div>
+
+<script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-menu.js"></script>
+<script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-navigation.js"></script>
+
+<script>
+(function() {
+    'use strict';
+
+    Mozilla.Navigation.init({
+        onNavOpen: function() {
+            console.log('Navigation opened');
+        },
+        onNavClose: function() {
+            console.log('Navigation closed');
+        }
+    });
+
+    Mozilla.Menu.init({
+        onMenuOpen: function() {
+            console.log('Menu opened');
+        },
+        onMenuClose: function() {
+            console.log('Menu closed');
+        },
+        onMenuButtonClose: function() {
+            console.log('Menu close button clicked');
+        }
+    });
+})();
+</script>

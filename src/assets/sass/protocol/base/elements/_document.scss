@@ -15,6 +15,8 @@ body {
     background: #fff;
     color: $color-black;
     font-family: $base-font-stack;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 // A few places use a class to hide elements. We should try to avoid that.

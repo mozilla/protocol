@@ -52,8 +52,12 @@ if (typeof Mozilla === 'undefined') {
         var current = document.querySelectorAll('.mzp-c-menu-category.is-selected');
 
         for (var i = 0; i < current.length; i++) {
-            current[i].classList.remove('is-animated');
+            // The following classes must be removed in the correct order
+            // to work around a bug in bedrock's classList polyfill for IE9.
+            // https://github.com/mozilla/bedrock/issues/6221 :/
             current[i].classList.remove('is-selected');
+            current[i].classList.remove('is-animated');
+
             current[i].querySelector('.mzp-c-menu-title').setAttribute('aria-expanded', false);
         }
 
@@ -96,8 +100,11 @@ if (typeof Mozilla === 'undefined') {
         if (!state) {
             Menu.open(el);
         } else {
-            el.classList.remove('is-animated');
+            // The following classes must be removed in the correct order
+            // to work around a bug in bedrock's classList polyfill for IE9.
+            // https://github.com/mozilla/bedrock/issues/6221 :/
             el.classList.remove('is-selected');
+            el.classList.remove('is-animated');
             el.querySelector('.mzp-c-menu-title').setAttribute('aria-expanded', false);
 
             if (typeof _options.onMenuClose === 'function') {

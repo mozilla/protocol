@@ -1,0 +1,23 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+
+blockquote {
+    @include bidi((
+        (border-left, 5px solid $color-gray-20, border-right, 0),
+        ));
+    @include text-display-md;
+    @include zilla-slab;
+    margin: $spacing-md auto;
+    padding: $spacing-sm $spacing-lg;
+    font-weight: bold;
+
+    & > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+

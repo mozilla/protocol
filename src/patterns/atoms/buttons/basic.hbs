@@ -1,20 +1,91 @@
 ---
-name: Basic button
+name: Buttons
+id: language-markup
 description: |
-  Just a common button, nothing too fancy. This can be a `button` element, an `input type="button"` in a form or a link.
+  Buttons let an individual know that they can perform an action on the page.
+  Differences in size and color help indicate what a button can be used for. Different states indicate that an action has occured.
 tips: |
   - Avoid using button styling for ordinary links that simply lead to another page. Buttons should typically trigger some specific action. Buttons do things; links go places.
   - That said, sometimes the action **is** to visit another page. A strong call to action might be a link styled as a button. Use them wisely.
+  - Use this theme style for Firefox download buttons.
+  - The `mzp-t-download-secondary` variation allows a secondary download CTA to be placed high-up in a page, whilst not visually competing with a primary CTA. An example of this can be seen in the [Navigation](/patterns/organisms/navigation.html) organism.
+table: |
+  <tr>
+    <td>Type</td>
+    <td>What type of button is this?</td>
+    <td>
+      <select id="button-type" autocomplete="off">
+        <option value="" selected>Default</option>
+        <option value="mzp-t-download" data-require="Download">Download</option>
+      </select>
+      <script>addClass('button-type','mzp-c-button');</script>
+    </td>
+  </tr>
+  <tr>
+    <td>Order</td>
+    <td>How important is this button?</td>
+    <td>
+      <select id="button-order" autocomplete="off">
+        <option value="" selected>Primary</option>
+        <option value="mzp-t-secondary">Secondary</option>
+      </select>
+      <script>addClass('button-order','mzp-c-button');</script>
+    </td>
+  </tr>
+  <tr>
+    <td>Size</td>
+    <td>What size is the button?</td>
+    <td>
+      <select id="button-size" autocomplete="off">
+        <option value="mzp-t-small">Small</option>
+        <option value="" selected>Large</option>
+      </select>
+      <script>addClass('button-size','mzp-c-button');</script>
+    </td>
+  </tr>
+  <tr>
+    <td>Text</td>
+    <td>What should the button say?</td>
+    <td>
+      <input id="button-text" type="text" data-maxlength="20" value="Button" autocomplete="off"/>
+      <script>replaceText('button-text','mzp-c-button');</script>
+    </td>
+  </tr>
+  <tr>
+    <td>Id</td>
+    <td>A unique identifier for the button</td>
+    <td>
+      <input id="button-id" type="text" value="" autocomplete="off"/>
+      <script>addAttribute('button-id','mzp-c-button', 'id');</script>
+    </td>
+  </tr>
+  <tr>
+    <td>Link</td>
+    <td>Is this button a link to a new page?</td>
+    <td>
+      <div id="button-link" class="protosite-toggle">
+        <div class="protosite-toggle-option">
+          <input id="button-link-on" type="radio" name="button-link" value="on" autocomplete="off" data-display="tr-button-url"/>
+          <label for="button-link-on">True</label>
+        </div>
+        <div class="protosite-toggle-option">
+          <input id="button-link-off" type="radio" name="button-link" value="off" checked autocomplete="off"/>
+          <label for="button-link-off">False</label>
+        </div>
+      </div>
+      <script>attributeReplace('button-link')</script>
+    </td>
+  </tr>
+  <tr id="tr-button-url" style="display: none">
+    <td>Link URL</td>
+    <td>Clicking the card will send you to this destination</td>
+    <td>
+      <input id="button-url" type="text" value="/" autocomplete="off"/>
+      <script>addAttribute('button-url', 'mzp-c-button', 'href');</script>
+    </td>
+  </tr>
 ---
 
-<button class="mzp-c-button {{class}}">
-{{#block "content"}}
-  Call to Action
-{{/block}}
+<button class="mzp-c-button">
+  Button
 </button>
-
-<a href="#" class="mzp-c-button {{class}}">
-{{#block "content"}}
-  Call to Action
-{{/block}}
-</a>
