@@ -32,6 +32,6 @@ module.exports = {
         ]
     },
     "globals": {
-        "Mozilla": true,
+        "Mzp": true,
     }
 };

@@ -5,6 +5,11 @@
 * **css:** Add button variants (#224)
 * **css:** Revise button states (#224)
 
+## Bug Fixes
+
+* **js:** Update JS namespace from Mozilla to Mzp (#253)
+* **js:** Rename '.mzp-c-language-switcher-select' class (#242)
+
 # 2.4.3
 
 ## Features

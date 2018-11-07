@@ -3,11 +3,11 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // create namespace
-if (typeof Mozilla === 'undefined') {
-    var Mozilla = {};
+if (typeof Mzp === 'undefined') {
+    var Mzp = {};
 }
 
-Mozilla.Modal = (function(w) {
+Mzp.Modal = (function(w) {
     'use strict';
 
     var open = false;

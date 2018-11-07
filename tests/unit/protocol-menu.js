@@ -32,21 +32,21 @@ describe('protocol-menu.js', function() {
     describe('init', function () {
 
         it('should use JavaScript events when supported', function() {
-            spyOn(Mozilla.Menu, 'isSupported').and.returnValue(true);
-            spyOn(Mozilla.Menu, 'handleState');
+            spyOn(Mzp.Menu, 'isSupported').and.returnValue(true);
+            spyOn(Mzp.Menu, 'handleState');
 
-            Mozilla.Menu.init();
+            Mzp.Menu.init();
 
-            expect(Mozilla.Menu.handleState).toHaveBeenCalled();
+            expect(Mzp.Menu.handleState).toHaveBeenCalled();
         });
 
         it('should fallback to basic CSS when not supported', function() {
-            spyOn(Mozilla.Menu, 'isSupported').and.returnValue(false);
-            spyOn(Mozilla.Menu, 'cssFallback').and.callThrough();
+            spyOn(Mzp.Menu, 'isSupported').and.returnValue(false);
+            spyOn(Mzp.Menu, 'cssFallback').and.callThrough();
 
-            Mozilla.Menu.init();
+            Mzp.Menu.init();
 
-            expect(Mozilla.Menu.cssFallback).toHaveBeenCalled();
+            expect(Mzp.Menu.cssFallback).toHaveBeenCalled();
             expect(document.querySelector('.mzp-c-menu').classList.contains('mzp-c-menu-basic')).toBeTruthy();
         });
     });
@@ -75,10 +75,10 @@ describe('protocol-menu.js', function() {
             var mockEnterEvent = document.createEvent('HTMLEvents');
             var mockLeaveEvent = document.createEvent('HTMLEvents');
 
-            spyOn(Mozilla.Menu, 'isSupported').and.returnValue(true);
-            spyOn(Mozilla.Menu, 'isWideViewport').and.returnValue(true);
+            spyOn(Mzp.Menu, 'isSupported').and.returnValue(true);
+            spyOn(Mzp.Menu, 'isWideViewport').and.returnValue(true);
 
-            Mozilla.Menu.init({
+            Mzp.Menu.init({
                 onMenuOpen: options.open,
                 onMenuClose: options.close
             });
@@ -102,10 +102,10 @@ describe('protocol-menu.js', function() {
             var item = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down');
             var title = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down .mzp-c-menu-title');
 
-            spyOn(Mozilla.Menu, 'isSupported').and.returnValue(true);
-            spyOn(Mozilla.Menu, 'isWideViewport').and.returnValue(true);
+            spyOn(Mzp.Menu, 'isSupported').and.returnValue(true);
+            spyOn(Mzp.Menu, 'isWideViewport').and.returnValue(true);
 
-            Mozilla.Menu.init({
+            Mzp.Menu.init({
                 onMenuOpen: options.open,
                 onMenuClose: options.close
             });
@@ -120,10 +120,10 @@ describe('protocol-menu.js', function() {
             var item = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down');
             var mockEnterEvent = document.createEvent('HTMLEvents');
 
-            spyOn(Mozilla.Menu, 'isSupported').and.returnValue(true);
-            spyOn(Mozilla.Menu, 'isWideViewport').and.returnValue(true);
+            spyOn(Mzp.Menu, 'isSupported').and.returnValue(true);
+            spyOn(Mzp.Menu, 'isWideViewport').and.returnValue(true);
 
-            Mozilla.Menu.init({
+            Mzp.Menu.init({
                 onMenuOpen: options.open,
                 onMenuClose: options.close,
                 onMenuButtonClose: options.buttonClose
@@ -162,10 +162,10 @@ describe('protocol-menu.js', function() {
             var item = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down');
             var title = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down .mzp-c-menu-title');
 
-            spyOn(Mozilla.Menu, 'isSupported').and.returnValue(true);
-            spyOn(Mozilla.Menu, 'isWideViewport').and.returnValue(false);
+            spyOn(Mzp.Menu, 'isSupported').and.returnValue(true);
+            spyOn(Mzp.Menu, 'isWideViewport').and.returnValue(false);
 
-            Mozilla.Menu.init({
+            Mzp.Menu.init({
                 onMenuOpen: options.open,
                 onMenuClose: options.close
             });

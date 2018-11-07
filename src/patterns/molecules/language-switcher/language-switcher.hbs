@@ -9,7 +9,7 @@ notes: |
 
 <form class="mzp-c-language-switcher" method="get" action="#">
   <label for="mzp-c-language-switcher-select">Language</label>
-  <select id="mzp-c-language-switcher-select" class="mzp-c-language-switcher-select" name="lang">
+  <select id="mzp-c-language-switcher-select" class="mzp-js-language-switcher-select" name="lang">
     {{#each (data "items")}}
       <option value="{{lang-code}}">{{language}}</option>
     {{/each}}
@@ -25,7 +25,7 @@ notes: |
     'use strict';
 
     // a custom callback can be passed to the lang switcher for analytics purposes.
-    Mozilla.LangSwitcher.init(function(previousLanguage, newLanguage) {
+    Mzp.LangSwitcher.init(function(previousLanguage, newLanguage) {
         console.log('Previous language: ', previousLanguage);
         console.log('New language: ', newLanguage);
     })
