@@ -10,7 +10,7 @@
 .mzp-c-button {
     @include border-box;
     @include text-cta;
-    transition: background-color 100ms, box-shadow 100ms, color 100ms, transform 100ms;
+    @include transition(background-color 100ms, box-shadow 100ms, color 100ms, transform 100ms);
     background-color: $color-black;
     border-radius: 2px;
     border: 2px solid $color-black;
@@ -23,10 +23,10 @@
 
     &:focus,
     &:hover {
+        @include transform(translate(-2px, -2px));
         background-color: transparent;
         box-shadow: 4px 4px 0 0 $color-black;
         color: $color-black;
-        @include transform(translate(-2px, -2px));
     }
 
     &:disabled {
@@ -48,8 +48,8 @@
     &:focus,
     &:hover {
         background-color: transparent;
-        color: $color-white;
         box-shadow: 4px 4px 0 0 $color-white;
+        color: $color-white;
     }
 
     &:disabled {
@@ -95,10 +95,10 @@
 
     &:focus,
     &:hover {
-        background-color: $color-blue-70;
-        color: $color-white;
-        box-shadow: none;
         @include transform(none);
+        background-color: $color-blue-70;
+        box-shadow: none;
+        color: $color-white;
     }
 
     &:disabled {
@@ -119,11 +119,11 @@
 
     &:focus,
     &:hover {
+        @include transform(none);
         background-color: $color-blue-70;
         border-color: transparent;
         box-shadow: none;
         color: $color-white;
-        @include transform(none);
     }
 
     &:disabled {
@@ -133,14 +133,18 @@
     }
 }
 
-/* -------------------------------------------------------------------------- */
+// Download Button Container
+.mzp-c-button-download-container {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
 // Download Button Privacy Link
 
 .mzp-c-button-download-privacy-link {
     @include text-body-xs;
     display: block;
     margin-top: $margin-md;
-    text-align: center;
 
     a:link,
     a:visited {

@@ -4,9 +4,9 @@ description: Download button component with privacy policy link.
 order: 1
 ---
 
-<div class="mzp-c-button-download">
+<div class="mzp-c-button-download-container">
   {{#block "content"}}
-  <a href="#" class="mzp-c-button mzp-t-download">
+  <a href="#" class="mzp-c-button mzp-t-download {{#if class}}{{class}}{{/if}}">
     Download Firefox
   </a>
   {{/block}}
