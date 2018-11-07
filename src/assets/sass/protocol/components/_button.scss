@@ -21,6 +21,7 @@
     padding: ($padding-md - 2px) ($padding-xl - 2px); //2px extra padding removed to compensate for 2px border.
     text-decoration: none;
 
+    &:focus,
     &:hover {
         background-color: transparent;
         box-shadow: 4px 4px 0 0 $color-black;
@@ -39,11 +40,12 @@
     padding: ($padding-sm - 2px) ($padding-md - 2px);
 }
 
-.mzp-t-dark .mzp-c-button {
+.mzp-c-button.mzp-t-dark  {
     background-color: $color-white;
     border-color: $color-white;
     color: $color-black;
 
+    &:focus,
     &:hover {
         background-color: transparent;
         color: $color-white;
@@ -72,27 +74,7 @@
     }
 }
 
-.mzp-c-button.mzp-t-download-secondary {
-    background-color: transparent;
-    border-color: $color-blue-60;
-    color: $color-blue-60;
-
-    &:hover {
-        background-color: $color-blue-70;
-        border-color: $color-blue-70;
-        color: $color-white;
-        box-shadow: none;
-        @include transform(none);
-    }
-
-    &:disabled {
-        background-color: transparent;
-        border-color: $color-gray-30;
-        color: $color-gray-30;
-    }
-}
-
-.mzp-t-dark .mzp-c-button.mzp-t-secondary {
+.mzp-c-button.mzp-t-secondary.mzp-t-dark {
     background-color: transparent;
     color: $color-white;
 
@@ -108,10 +90,10 @@
 
 .mzp-c-button.mzp-t-download {
     background-color: $color-blue-60;
-    border: none;
+    border-color: transparent;
     color: $color-white;
-    padding: $padding-md $padding-xl;
 
+    &:focus,
     &:hover {
         background-color: $color-blue-70;
         color: $color-white;
@@ -130,15 +112,35 @@
     padding: $padding-sm $padding-md;
 }
 
-.mzp-c-button-download {
-    margin-bottom: $margin-lg;
-    text-align: center;
+.mzp-c-button.mzp-t-download.mzp-t-secondary {
+    background-color: transparent;
+    border-color: $color-blue-60;
+    color: $color-blue-60;
+
+    &:focus,
+    &:hover {
+        background-color: $color-blue-70;
+        border-color: transparent;
+        box-shadow: none;
+        color: $color-white;
+        @include transform(none);
+    }
+
+    &:disabled {
+        background-color: transparent;
+        border-color: $color-gray-60;
+        color: $color-gray-60;
+    }
 }
+
+/* -------------------------------------------------------------------------- */
+// Download Button Privacy Link
 
 .mzp-c-button-download-privacy-link {
     @include text-body-xs;
     display: block;
     margin-top: $margin-md;
+    text-align: center;
 
     a:link,
     a:visited {
