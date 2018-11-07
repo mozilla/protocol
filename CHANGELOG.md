@@ -1,5 +1,10 @@
 # HEAD
 
+## Features
+
+* **css:** Add button variants (#224)
+* **css:** Revise button states (#224)
+
 ## Bug Fixes
 
 * **js:** Update JS namespace from Mozilla to Mzp (#253)
