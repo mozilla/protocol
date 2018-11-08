@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **css:** Primary buttons should use a solid background color on hover (#264)
+
 # 3.0.0
 
 ## Features

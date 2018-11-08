@@ -24,7 +24,7 @@
     &:focus,
     &:hover {
         @include transform(translate(-2px, -2px));
-        background-color: transparent;
+        background-color: $color-white;
         box-shadow: 4px 4px 0 0 $color-black;
         color: $color-black;
     }
@@ -47,7 +47,7 @@
 
     &:focus,
     &:hover {
-        background-color: transparent;
+        background-color: $color-black;
         box-shadow: 4px 4px 0 0 $color-white;
         color: $color-white;
     }
