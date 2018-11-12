@@ -29,7 +29,7 @@
         margin-bottom: 0;
     }
 
-    .mzp-c-button-download {
+    .mzp-c-button-download-container {
         margin: $margin-lg 0 0;
     }
 
@@ -103,7 +103,7 @@
         margin: $margin-sm 0 0;
     }
 
-    .mzp-c-button-download {
+    .mzp-c-button-download-container {
         display: inline-block;
         margin-bottom: 0;
     }
@@ -188,7 +188,7 @@
             width: calc(33.3% - #{$margin-lg});
         }
 
-        .mzp-c-button-download {
+        .mzp-c-button-download-container {
             @include bidi(((float, right, left),));
         }
     }
