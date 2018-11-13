@@ -390,7 +390,7 @@ Pattern templates can also benefit from these helpers:
 
 ```hbs
 {{! src/patterns/components/button/primary.hbs }}
-{{#embed "components.button.base" class="mzp-c-button-primary"}}
+{{#embed "components.button.base" class="mzp-t-dark"}}
   {{#content "content"}}
     Primary Button
   {{/content}}
@@ -398,7 +398,7 @@ Pattern templates can also benefit from these helpers:
 ```
 
 ```html
-<button class="mzp-c-button mzp-c-button-primary">
+<button class="mzp-c-button mzp-t-dark">
   Primary Button
 </button>
 ```

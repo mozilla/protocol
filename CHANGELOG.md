@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **css:** Fix download button positioning in call out component (#268)
+
 # 3.0.1
 
 ## Bug Fixes
