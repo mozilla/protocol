@@ -524,7 +524,7 @@ Note: the following instructions assume the mozilla reporitory is the remote cal
 
 Each time an updated package is published to NPM, https://protocol.mozilla.org/ should also be updated so the documentation site matches the NPM package features.
 
-1. Verify all is good on the [staging site](https://mozilla-protocol.netlify.com/).
+1. Verify all is good on the [staging site](https://protocol-stage.moz.works/).
 2. Make sure your local `master` branch is up to date
 3. Push the `master` branch to the `prod` branch: `git push origin master:prod`.
 

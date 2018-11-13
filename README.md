@@ -42,7 +42,8 @@ Running `npm start` will install dependencies, build your toolkit, and start the
 
 - [Project Structure](docs#project-structure)
 - [Build Process](docs#build-process)
-- [Publishing](docs#publishing)
+- [Publishing](docs#publishing-to-npm)
+- [Deployment](docs#deployment)
 - [Acknowledgements](docs#acknowledgements)
 
 
