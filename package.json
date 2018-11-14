@@ -1,6 +1,6 @@
 {
   "name": "protocol",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "private": true,
   "author": "Mozilla",
   "description": "A design system for Mozilla's websites.",
