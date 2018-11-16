@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **js:** Add missing del dependency in build (#271).
+
 # 3.1.0
 
 ## Features
