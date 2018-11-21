@@ -86,9 +86,9 @@
 }
 
 /* -------------------------------------------------------------------------- */
-// Download Buttons
+// Product Buttons
 
-.mzp-c-button.mzp-t-download {
+.mzp-c-button.mzp-t-product {
     background-color: $color-blue-60;
     border-color: transparent;
     color: $color-white;
@@ -108,11 +108,11 @@
     }
 }
 
-.mzp-c-button.mzp-t-download.mzp-t-small {
+.mzp-c-button.mzp-t-product.mzp-t-small {
     padding: $padding-sm $padding-md;
 }
 
-.mzp-c-button.mzp-t-download.mzp-t-secondary {
+.mzp-c-button.mzp-t-product.mzp-t-secondary {
     background-color: transparent;
     border-color: $color-blue-60;
     color: $color-blue-60;
@@ -133,13 +133,13 @@
     }
 }
 
-// Download Button Container
+/* -------------------------------------------------------------------------- */
+// Download Button Molecule
+
 .mzp-c-button-download-container {
     text-align: center;
     margin-bottom: 24px;
 }
-
-// Download Button Privacy Link
 
 .mzp-c-button-download-privacy-link {
     @include text-body-xs;
