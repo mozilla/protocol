@@ -24,6 +24,10 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         min-height: 220px;
     }
 
+    .mzp-c-billboard-content-inner {
+        width: 100%;
+    }
+
     .mzp-c-billboard-title {
         @include text-display-md;
     }
