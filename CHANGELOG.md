@@ -5,6 +5,10 @@
 * **css:** Rename download button theme to product button theme (#273)
 * **gulp:** Update to Gulp 4.0 (#285)
 
+## Bug Fixes
+
+* **css:** Fix billboard overflowing text in IE 10 (#276)
+
 # 4.0.0
 
 ## Features
