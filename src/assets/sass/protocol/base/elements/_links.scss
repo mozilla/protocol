@@ -9,7 +9,7 @@
     text-decoration: underline;
 
     &:hover {
-        color: $color-link-hover;
+        text-decoration: none;
     }
 
     &:active {
@@ -25,13 +25,20 @@
     }
 }
 
+.mzp-t-dark {
+    :link,
+    :link:visited {
+        color: $color-white;
+    }
+}
+
 .mzp-c-cta-link {
     font-weight: bold;
 
     &:link,
     &:visited {
-        border-bottom: 2px solid transparent;
-        color: $color-black;
+        border-bottom: 2px solid;
+        color: $color-link;
         text-decoration: none;
     }
 
@@ -39,20 +46,12 @@
     &:active,
     &:focus {
         @include transition(border-bottom-color 100ms ease-in-out);
-        border-bottom: 2px solid $color-black;
-        color: $color-black;
+        border-bottom-color: transparent;
     }
 
     .mzp-t-dark & {
         &:link,
         &:visited {
-            color: $color-white;
-        }
-
-        &:hover,
-        &:active,
-        &:focus {
-            border-color: $color-white;
             color: $color-white;
         }
     }

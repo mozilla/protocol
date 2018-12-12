@@ -98,7 +98,12 @@
         &:visited {
             color: $color-black;
             text-decoration: none;
+
+            .mzp-c-card-cta-text {
+                color: $color-link;
+            }
         }
+
 
         &:hover,
         &:active,
@@ -107,11 +112,10 @@
             box-shadow: 0 0 0 4px $color-gray-20;
 
             .mzp-c-card-title,
-            .mzp-c-card-cta-text {
+            .mzp-c-card-cta-text  {
                 @include transition(border-bottom-color 100ms ease-in-out);
-                border-bottom: 2px solid $color-black;
+                border-bottom: 2px solid;
             }
-
         }
     }
 

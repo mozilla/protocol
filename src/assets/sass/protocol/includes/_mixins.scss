@@ -231,12 +231,13 @@
     a:link,
     a:visited {
         color: $color-white;
+        text-decoration: underline;
     }
 
     a:hover,
     a:focus,
     a:active {
-        color: darken($color-white, 10%);
+        text-decoration: none;
     }
 }
 
