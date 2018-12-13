@@ -309,9 +309,11 @@ if (typeof Mzp === 'undefined') {
      * Basic feature detect for 1st class menu JS support.
      */
     Menu.isSupported = function() {
-        return typeof window.matchMedia !== 'undefined' &&
-               window.matchMedia('all').addListener &&
-               'classList' in document.createElement('div');
+        if (typeof Mzp.Supports !== 'undefined') {
+            return Mzp.Supports.matchMedia && Mzp.Supports.classList;
+        } else {
+            return false;
+        }
     };
 
     /**

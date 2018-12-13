@@ -9,14 +9,14 @@
     font-weight: bold;
 
     label,
-    .mzp-c-cta-link {
+    .mzp-c-language-switcher-link {
         @include bidi(((margin, 0 $margin-lg $margin-sm 0, 0 0 $margin-sm $margin-lg),));
         @include text-body-sm;
         display: inline-block;
     }
 
     // hide the <label> visually should a language link be shown instead.
-    .mzp-c-cta-link + label {
+    .mzp-c-language-switcher-link + label {
         @include visually-hidden;
     }
 
@@ -34,13 +34,5 @@
     // form submit button is shown when JS is not enabled.
     .js & button {
         display: none;
-    }
-
-    @media #{$mq-md} {
-        @include colspan(4);
-        @include bidi((
-            (float, left, right),
-            (padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),
-        ));
     }
 }

@@ -1,0 +1,75 @@
+---
+name: Custom expand and collapse
+description: The functions driving the details and summary component can be called independently.
+order: 3
+notes: |
+    - Styling must be provided seperately
+    - Details can be initialized using `Mzp.Details.init(selector, options)`, where `options` is an Object with the following properties:
+      - `onDetailsOpen` [Function] callback when a details is opened (optional).
+      - `onDetailsClosed` [Function] callback when a details is closed (optional).
+---
+
+<style>
+  /* Styling must be provided seperately, don't use these ones they're intentionally bad */
+  .demo-section:before {
+    color: #00A;
+    content: 'Enlarge window to see Mzp.Details.destroy';
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 767px) {
+    .demo-section:before {
+      content: 'Shrink window to see Mzp.Details.init';
+    }
+  }
+
+  .demo-section button {
+    border: none;
+    background: #00A;
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .demo-section button[aria-expanded=false]:after {
+    content: " 👈";
+  }
+
+  .demo-section button[aria-expanded=true]:after {
+    content: " 👇";
+  }
+
+  .demo-section .is-closed[aria-hidden=true] {
+    display: none;
+  }
+</style>
+
+<section class="demo-section">
+  <h5 class="demo-heading">Heading</h5>
+  <p>Proin in dapibus nulla. Nam vitae est vitae tellus mollis eleifend in eu erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean feugiat ante porttitor purus elementum, eget vestibulum ex volutpat. Sed gravida convallis rutrum. Quisque pharetra eros eget malesuada vulputate.</p>
+  <p>Cras maximus interdum interdum. Maecenas vitae ligula et eros porta feugiat. Nullam facilisis odio non ante varius tempor ut ac turpis.</p>
+  <h5 class="demo-heading">Heading</h5>
+  <p>Proin in dapibus nulla. Nam vitae est vitae tellus mollis eleifend in eu erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean feugiat ante porttitor purus elementum, eget vestibulum ex volutpat. Sed gravida convallis rutrum. Quisque pharetra eros eget malesuada vulputate.</p>
+  <p>Cras maximus interdum interdum. Maecenas vitae ligula et eros porta feugiat. Nullam facilisis odio non ante varius tempor ut ac turpis.</p>
+</section>
+
+<script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-details.js"></script>
+<script>
+(function() {
+  'use strict';
+  var _mqWide = matchMedia('(max-width: 767px)');
+
+  if (_mqWide.matches) {
+    window.Mzp.Details.init('.demo-heading');
+  }
+
+  _mqWide.addListener(function(mq) {
+      if (mq.matches) {
+          window.Mzp.Details.init('.demo-heading');
+      } else {
+          window.Mzp.Details.destroy('.demo-heading');
+      }
+  });
+})();
+</script>

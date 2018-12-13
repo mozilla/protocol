@@ -1,8 +1,14 @@
 # HEAD
 
+## Features
+
+* **js:** Add details component and demo (#129)
+* **css:** Add footer component and demo (#184)
+
 ## Bug Fixes
 
 * **js:** Add missing del dependency in build (#271).
+* Update tokens (mozilla/protocol-tokens#27)
 
 # 3.1.0
 

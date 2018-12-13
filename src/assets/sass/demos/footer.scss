@@ -3,32 +3,8 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 /* -------------------------------------------------------------------------- */
-// Hero demo
+// Footer demo
 
 @import '../protocol/includes/lib';
 @import '../docs/protocol';
 @import '../docs/protocol-extra';
-
-
-.section-next {
-    background: $color-gray-20;
-
-    &.mzp-t-dark {
-        color: #fff;
-        background-color: $color-gray-60;
-    }
-
-    h2 {
-        @include text-display-md;
-    }
-
-    .mzp-c-card-picto .mzp-c-card-picto-content::before{
-        background-color: $color-gray-40;
-    }
-
-}
-
-
-hr {
-    margin: $layout-xl 0 0;
-}

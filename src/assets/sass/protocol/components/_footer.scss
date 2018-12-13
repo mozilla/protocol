@@ -12,75 +12,37 @@
     background: $color-black;
     clear: both;
     color: $color-white;
-    line-height: 1.3;
     margin: 0;
-    padding: $padding-xl 0;
+    padding-top: $spacing-lg;
     width: 100%;
 
-    .mzp-c-footer-primary,
-    .mzp-c-footer-legal {
-        a:link,
-        a:visited {
-            color: $color-white;
-            font-weight: normal;
-            text-decoration: none;
-        }
-
-        a:hover,
-        a:focus,
-        a:active {
-            color: $color-white;
-            text-decoration: underline;
-        }
-    }
-
-    h5 {
-        @include text-display-xs;
+    a:link,
+    a:visited {
         color: $color-white;
-        margin-bottom: $margin-lg;
-
-        a:link,
-        a:visited {
-            font-weight: bold;
-        }
+        font-weight: normal;
+        text-decoration: underline;
     }
 
-    li {
-        list-style-type: none;
-        margin: 0 0 $margin-md;
+    a:hover,
+    a:focus,
+    a:active {
+        color: $color-white;
+        text-decoration: none;
     }
+}
 
-    nav {
-        @include border-box;
-        @include clearfix;
-        margin: 0 auto;
-        min-width: $content-xs;
-    }
 
-    .mzp-c-footer-section {
-        margin-bottom: $margin-xl;
-    }
+/* -------------------------------------------------------------------------- */
+// Footer primary section, contains logo and sections with links
 
-    .mzp-c-footer-primary {
-        @include text-body-md;
-    }
+.mzp-c-footer-primary {
+    @include text-body-md;
+    @include border-box;
+    @include clearfix;
+    margin: 0 auto $spacing-2xl;
 
-    .mzp-c-footer-secondary {
-        @include text-body-xs;
-    }
-
-    @media #{$mq-md} {
-        .mzp-c-footer-primary .mzp-c-footer-section {
-            @include colspan(4);
-            @include bidi((
-                (float, left, right),
-                (padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),
-            ));
-        }
-
-        .mzp-c-footer-secondary {
-            padding-top: $padding-lg;
-        }
+    @media #{$mq-lg} {
+        margin-bottom: $spacing-xl;
     }
 }
 
@@ -88,7 +50,7 @@
 // Footer Mozilla logo
 
 .mzp-c-footer-primary-logo {
-    margin-bottom: $margin-xl;
+    margin-bottom: $spacing-xl;
 
     a {
         background: url('#{$image-path}/logos/mozilla/white.svg') no-repeat;
@@ -98,13 +60,172 @@
         height: 32px;
         width: 100px;
     }
+}
+
+
+/* -------------------------------------------------------------------------- */
+// Footer section containing list and heading
+
+.mzp-c-footer-sections {
+    @include clearfix;
 
     @media #{$mq-md} {
-        @include colspan(4);
-        @include bidi((
-            (float, left, right),
-            (padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),
-        ));
+        border-bottom: 1px solid $color-gray-70;
+        padding-bottom: $layout-lg;
+    }
+
+    @media #{$mq-lg} {
+        padding-bottom: $layout-md;
+    }
+}
+
+.mzp-c-footer-section {
+    @include clearfix;
+    margin-bottom: $spacing-sm;
+
+    a:link,
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: underline;
+    }
+
+    @media (min-width: #{$screen-sm}) and (max-width: #{$screen-lg - 1px}) {
+        @include bidi(((float, left, right),));
+        @include grid-half;
+
+        &:nth-child(odd) {
+            @include bidi(((clear, left, right),));
+            @include bidi(((padding, 0 ($layout-md / 2) 0 0, 0 0 0 ($layout-md / 2)),));
+        }
+
+        &:nth-child(even) {
+            @include bidi(((padding, 0 0 0 ($layout-md / 2), 0 ($layout-md / 2) 0 0),));
+        }
+    }
+}
+
+@media #{$mq-lg} {
+
+    .mzp-c-footer-section {
+        @include bidi(((float, left, right),));
+        padding: 0 ($layout-md / 2);
+
+        &:first-child {
+            @include bidi(((padding, 0 ($layout-md / 2) 0 0, 0 0 0 ($layout-md / 2)),));
+        }
+
+        &:last-child {
+            @include bidi(((padding, 0 0 0 ($layout-md / 2), 0 ($layout-md / 2) 0 0),));
+        }
+    }
+
+    @for $cols from 2 through 6 {
+        $width: 100% / $cols;
+        // http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
+        .mzp-c-footer-section:first-child:nth-last-child(n+#{$cols}),
+        .mzp-c-footer-section:first-child:nth-last-child(n+#{$cols}) ~ .mzp-c-footer-section:nth-child(1n-1) {
+            width: calc(#{$width} - (#{$layout-md} - (#{$layout-md} / #{$cols})));
+        }
+    }
+}
+
+.mzp-c-footer-heading {
+    &,
+    & button {
+        @include text-body-md;
+        @include bidi(((text-align, left, right),));
+        background-color: transparent;
+        border-bottom: 1px solid $color-gray-70;
+        border: 0;
+        color: inherit;
+        margin-bottom: 0;
+        padding: $spacing-md 0;
+        position: relative;
+        width: 100%;
+    }
+
+    &.is-summary {
+        padding: 0;
+        border-bottom: 0;
+
+        button:focus {
+            outline: 1px dotted #fff;
+        }
+
+        button:before {
+            background: $url-image-expand-white top left no-repeat;
+            @include background-size(16px, 16px);
+            @include bidi(((right, 8px, left, auto),));
+            @include transition(transform 100ms ease-in-out);
+            content: '';
+            height: 16px;
+            margin-top: -8px;
+            position: absolute;
+            top: 50%;
+            width: 16px;
+        }
+
+        button[aria-expanded=true]:before {
+            @include transform(rotate(45deg));
+        }
+    }
+
+    a:link,
+    a:visited {
+        font-weight: bold;
+    }
+
+    @media #{$mq-md} {
+        border-bottom: 0;
+        padding: $spacing-sm 0;
+    }
+}
+
+.mzp-c-footer-list {
+    margin-bottom: $spacing-xl;
+
+    li {
+        list-style-type: none;
+        padding: $spacing-xs 0;
+
+        &:first-child {
+            margin-top: $spacing-sm;
+
+            @media #{$mq-md} {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &.is-closed[aria-hidden="true"] {
+        display: none;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+// Footer secondary contains langauge selector, social icons, legal, and lisence
+
+
+.mzp-c-footer-secondary {
+    @include text-body-xs;
+    position: relative;
+}
+
+/* -------------------------------------------------------------------------- */
+// Footer language selector
+
+.mzp-c-footer-language {
+    @include clearfix;
+    margin-bottom: $spacing-lg;
+
+    @media #{$mq-md} {
+        @include bidi(((float, right, left),));
     }
 }
 
@@ -112,14 +233,16 @@
 // Footer social icon links
 
 .mzp-c-footer-links-social {
-    @include bidi(((margin, $margin-lg 0 0, 0 0 0 $margin-md),));
+    margin-bottom: $spacing-2xl;
 
     li {
+        @include bidi(((margin, 0 $spacing-md 0 0, 0 0 0 $spacing-md),));
         display: inline-block;
-        margin-right: $margin-md;
+        vertical-align: bottom;
 
         a {
             @include image-replaced;
+            border-bottom: 1px solid transparent;
             display: block;
             height: 16px;
             width: 16px;
@@ -135,44 +258,66 @@
             &.youtube {
                 background-image: url('#{$image-path}/icons/social/youtube/white.svg');
             }
-        }
-    }
-}
 
-/* -------------------------------------------------------------------------- */
-// Footer legal links
-
-.mzp-c-footer-legal {
-    li {
-        @include bidi(((padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),));
-        display: inline;
-
-        &:last-child {
-            padding-right: 0;
+            &:hover,
+            &:focus {
+                border-bottom-color: $color-white;
+            }
         }
     }
 
     @media #{$mq-md} {
-        @include colspan(8);
-        @include bidi((
-            (float, left, right),
-            (padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),
-        ));
+        @include bidi(((right, 0, left, auto),));
+        @include bidi(((text-align, right, left),));
+        bottom: 0;
+        margin-bottom: 0;
+        max-width: 33%; // don't over lap with legal links
+        position: absolute;
+
+        li {
+            @include bidi((
+                (padding, 0 0 $spacing-md $spacing-lg, 0 $spacing-lg $spacing-md 0),
+                (margin, 0 , 0),
+            ));
+        }
     }
 }
+
+
+
+/* -------------------------------------------------------------------------- */
+// Footer license and terms
+
+.mzp-c-footer-legal {
+    li {
+        @include bidi(((padding, 0 $spacing-lg $spacing-md 0, 0 0 $spacing-md $spacing-lg),));
+        display: inline-block;
+
+        &:last-child {
+            @include bidi(((padding-right, 0, padding-left, 0),));
+        }
+    }
+}
+
 
 /* -------------------------------------------------------------------------- */
 // Footer license
 
 .mzp-c-footer-license {
-    margin-bottom: $margin-xl;
-
-    a:link,
-    a:visited {
-        color: $color-gray-40;
-    }
+    margin-bottom: $spacing-xl;
 
     @media #{$mq-md} {
-        margin-bottom: 0;
+        max-width: 66%; // don't over lap with social links
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+// Footer license
+
+.mzp-c-footer-terms {
+
+    @media #{$mq-md} {
+        max-width: 66%; // don't over lap with social links
     }
 }
