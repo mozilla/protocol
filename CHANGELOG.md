@@ -1,4 +1,4 @@
-# HEAD
+# 3.2.0
 
 ## Features
 
@@ -8,7 +8,7 @@
 ## Bug Fixes
 
 * **js:** Add missing del dependency in build (#271).
-* Update tokens (mozilla/protocol-tokens#27)
+* **css:** Update tokens (mozilla/protocol-tokens#27)
 
 # 3.1.0
 
