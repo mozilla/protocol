@@ -7,7 +7,7 @@ const plumber = require('gulp-plumber');
 const merge = require('merge-stream');
 
 // Compile the main Protocol Sass file(s) to CSS.
-gulp.task('sass:compile', () => {
+function compileSass() {
     let tasks = [];
 
     Object.keys(config).forEach((key) => {
@@ -21,4 +21,6 @@ gulp.task('sass:compile', () => {
     });
 
     return merge(tasks);
-});
+}
+
+module.exports = compileSass;

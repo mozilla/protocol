@@ -5,8 +5,8 @@ const handleErrors = require('../utils/handleErrors');
 const config = require('../config').concatJS;
 const merge = require('merge-stream');
 
-// Concatenate main Protocol & docs JS files.
-gulp.task('js:concat', () => {
+// Concatenate docs JS files.
+function concatJS() {
     let tasks = [];
 
     Object.keys(config).forEach((key) => {
@@ -18,4 +18,6 @@ gulp.task('js:concat', () => {
     });
 
     return merge(tasks);
-});
+}
+
+module.exports = concatJS;

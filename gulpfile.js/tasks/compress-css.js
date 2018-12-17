@@ -5,7 +5,7 @@ const config = require('../config').compressCss;
 const merge = require('merge-stream');
 
 // Create minified versions of all CSS assets.
-gulp.task('css:compress', () => {
+function compressCSS() {
     let tasks = [];
 
     Object.keys(config.tasks).forEach((key) => {
@@ -17,4 +17,6 @@ gulp.task('css:compress', () => {
     });
 
     return merge(tasks);
-});
+}
+
+module.exports = compressCSS;
