@@ -7,7 +7,7 @@ const config = require('../config').compressJS;
 const merge = require('merge-stream');
 
 // Create minified versions of all JS assets.
-gulp.task('js:compress', () => {
+function compressJS() {
     let tasks = [];
 
     Object.keys(config.tasks).forEach((key) => {
@@ -20,4 +20,6 @@ gulp.task('js:compress', () => {
     });
 
     return merge(tasks);
-});
+}
+
+module.exports = compressJS;

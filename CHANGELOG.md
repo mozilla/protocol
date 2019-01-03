@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **gulp:** Update to Gulp 4.0 (#285)
+
 # 4.0.0
 
 ## Features

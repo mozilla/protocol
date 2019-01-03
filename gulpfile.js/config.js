@@ -159,32 +159,20 @@ module.exports = {
         }
     },
     watch: {
-        watchers: [
-            {
-                match: [
-                    './src/static/**/*',
-                    `${src}/package/*`
-                ],
-                tasks: ['static:copy']
-            },
-            {
-                match: `${src}/js/**/*.js`,
-                tasks: ['js:lint', 'js:concat', 'js:copy']
-            },
-            {
-                match: `${src}/sass/**/*.scss`,
-                tasks: ['css:lint', 'sass:compile']
-            },
-            {
-                match: [
-                    './src/**/*.hbs',
-                    './src/data/**/*',
-                    './src/**/*.yaml',
-                    './src/**/*.md'
-                ],
-                tasks: ['drizzle']
-            }
-        ]
+        watchers: {
+            static: [
+                './src/static/**/*',
+                `${src}/package/*`
+            ],
+            js: [`${src}/js/**/*.js`],
+            css: `${src}/sass/**/*.scss`,
+            drizzle: [
+                './src/**/*.hbs',
+                './src/data/**/*',
+                './src/**/*.yaml',
+                './src/**/*.md'
+            ]
+        }
     },
     drizzle: {
         beautifier: {

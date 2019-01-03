@@ -1,5 +1,4 @@
 const drizzle = require('drizzle-builder');
-const gulp = require('gulp');
 const config = require('../config');
 const helpers = require('@cloudfour/hbs-helpers');
 
@@ -7,6 +6,8 @@ const helpers = require('@cloudfour/hbs-helpers');
 Object.assign(config.drizzle, { helpers });
 
 // Register Drizzle builder task
-gulp.task('drizzle', () => {
+function drizzleTask() {
     return drizzle(config.drizzle);
-});
+}
+
+module.exports = drizzleTask;

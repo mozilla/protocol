@@ -487,14 +487,11 @@ dist/assets
 
 The build sequence consists of a small set of [Gulp][gulp] tasks. While you'll probably only need `gulp` and `gulp --dev` most of the time, the other tasks can be called independently to process only a subset of your source files:
 
-| Task            | Description
-| ---             | ---
-| `gulp`          | Build everything and start the development server.
-| `gulp --dev`    | Do everything `gulp` does, but with file watching.
-| `gulp clean`    | Empty the destination directory.
-| `gulp frontend` | Run the frontend composite task, which lints, compiles and builds all the source files.
-| `gulp serve`    | Start the development server.
-| `gulp watch`    | Run tasks automatically when file changes occur.
+| Task         | Description
+| ---          | ---
+| `gulp`       | Build everything and start the development server.
+| `gulp --dev` | Do everything `gulp` does, but with file watching.
+| `gulp build` | Just build everything.
 
 # Running tests
 
