@@ -5,36 +5,12 @@ notes: |
   anything else that might not be production-ready.
 ---
 
-<script src="../../assets/docs/js/docs.js"></script>
+<p>These are some demos.</p>
 
-  <article class="protosite-pattern">
-
-<header class="protosite-pattern-head">
-<h1 id="design-principles" class="protosite-pattern-title">
-Demos
-</h1>
-
-<div class="protosite-pattern-desc">
-<p>These are the guiding principles that inform our design decisions.
-The components, pages, and websites we create should be:</p>
-
-</div>
-</header>
-
-
-<div class="protosite-pattern-editor">
-
-  <ul class="mzp-u-list-styled">
-    {{#each (pages "demos" ignore="index")}}
-      <li>
-        <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
-      </li>
-    {{/each}}
-  </ul>
-
-</div>
-<div class="protosite-pattern-illustration">
-<img src="../../static/img/protosite/resources@2x.png" width="300" height="300" alt="">
-</div>
-
-</article>
+<ul class="mzp-u-list-styled">
+  {{#each (pages "demos" ignore="index")}}
+    <li>
+      <a href="{{@root.baseurl}}/{{url}}">{{data.title}}</a>
+    </li>
+  {{/each}}
+</ul>

@@ -1,68 +1,64 @@
 ---
-name: CSS Guide
-doclayout: true
-order: 3
-description: |
-  Coding style can be really personal and everyone has their own opinions and preferences.
-
-  But when we work as a team on a shared codebase it's invaluable to agree to some basic rules.
-resources: true;
-
+title: CSS Coding Guide
+order: 2
 ---
 
-<h4>Terminology</h4>
+Coding style can be really personal and everyone has their own opinions
+and preferences. But when we work as a team on a shared codebase it's
+invaluable to agree to some basic rules. The CSS in Protocol should be
+written consistently no matter who wrote it.
 
-<p>Just so we all know what we’re talking about, a CSS *rule* comprises one
+
+## Terminology
+
+Just so we all know what we’re talking about, a CSS *rule* comprises one
 or more *selectors* followed by a *declaration block* consisting of one
 or more *declarations*. A declaration comprises a *property* and a *value*
-(some properties accept multiple values).</p>
+(some properties accept multiple values).
 
-<p>A rule in CSS looks like:</p>
+A rule in CSS looks like:
 
-<pre class="protosite-pattern-code  language-scss">
-  <code id="language-scss" class="  language-scss">
+```css
 selector {
     property: value;
-}
-  </code>
-</pre>
+}```
 
-<h4>Simple selectors</h4>
 
-<p>Use the shortest, least specific selector required to do the job.</p>
+## Simple selectors
 
-<p>Favor classes over IDs. IDs in CSS aren’t expressly forbidden, just
+Use the shortest, least specific selector required to do the job.
+
+Favor classes over IDs. IDs in CSS aren’t expressly forbidden, just
 strongly discouraged. Using ID selectors can lead to specificity wars
 requiring ever more powerful selectors to override previous styling. A
 better option is an attribute selector like `[id='widget']` which selects
 the element by its ID but has the same specificity as a class. Everybody
-wins.</p>
+wins.
 
-<p>Avoid qualifying classes with type selectors. It slows down performance
-and makes classes less portable. E.g. `.widget` is better than `div.widget`.</p>
+Avoid qualifying classes with type selectors. It slows down performance
+and makes classes less portable. E.g. `.widget` is better than `div.widget`.
 
 
-<b>Minimal nesting</b>
+### Minimal nesting
 
-<p>We use SCSS as a pre-processor. Nested rules are converted into descendent
+We use SCSS as a pre-processor. Nested rules are converted into descendent
 selectors in the generated style sheet. The deeper the nesting, the more
 complex and specific the final selector will be. Don’t nest rules unless
 necessary for context and specificity, and don’t nest rules just to group
-them together (use comments to label sections of the style sheet for grouping).</p>
+them together (use comments to label sections of the style sheet for grouping).
 
-<p>All the declarations for the parent element should come before the nested
+All the declarations for the parent element should come before the nested
 rules. Include a blank line before each nested rule to separate it from the
-rule or declaration above it.</p>
+rule or declaration above it.
 
-<pre class="protosite-pattern-code  language-scss">
-  <code id="language-scss" class="  language-scss">
+```scss
 // NO - This is horrible
 .widget-container {
     float: right;
     .widgets {
         .widget-foo {
             background: #ccc;
-            h4 {
+            h3 {
                 color: red;
             }
             padding: 10px;
@@ -81,17 +77,15 @@ rule or declaration above it.</p>
     background: #ccc;
     padding: 10px;
 
-    h4 {
+    h3 {
         color: red;
     }
-}
-  </code>
-</pre>
+}```
 
 
-<h4>Format</h4>
+## Format
 
-<ul class="mzp-u-list-styled">
+<ul class="prose">
     <li>One selector per line.</li>
     <li>One declaration per line.</li>
     <li>Order declarations alphabetically (from A to Z).</li>
@@ -109,8 +103,7 @@ rule or declaration above it.</p>
     <li>Use `//` for comment blocks (instead of `/* */`).</li>
 </ul>
 
-<pre class="protosite-pattern-code  language-scss">
-  <code id="language-scss" class="  language-scss">
+```scss
 .selector1,
 .selector2 {
     // This is a comment
@@ -124,8 +117,7 @@ rule or declaration above it.</p>
     background: rgba(255, 255, 255, .25);
     padding: 20px;
 }
-  </code>
-</pre>
+```
 
 When possible, limit line lengths to 80 characters. It improves readability,
 minimizes horizontal scrolling, makes it possible to view files side by side,
@@ -137,8 +129,7 @@ Long, comma-separated property values – such as multiple background images,
 gradients, transforms, transitions, webfonts, or text and box shadows – can
 be arranged across multiple lines (indented one level from their property).
 
-<pre class="protosite-pattern-code  language-scss">
-  <code id="language-scss" class="  language-scss">
+```scss
 .selector {
     background-image:
         linear-gradient(#fff, #ccc),
@@ -150,17 +141,18 @@ be arranged across multiple lines (indented one level from their property).
         border-color 500ms ease-in,
         opacity 100ms ease-in;
 }
-  </code>
-</pre>
+```
 
-<h4>Units</h4>
+### Units
 
-<ul class="mzp-u-list-styled">
+<ul class="prose">
     <li>Use pixels for fixed-width elements.</li>
     <li>Use percentages for fluid-width elements.</li>
     <li>Use rems for `font-size` because it respects user preferences.</li>
-    <li>Use <a href="http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/">unitless `line-height`</a>
+    <li>Use [unitless `line-height`](http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/)
         in conjunction with `font-size`; it acts as a multiplier of font size.
         E.g. `line-height: 1.5`.</li>
     <li>Use milliseconds for timing, e.g. `500ms` not `.5s`.</li>
 </ul>
+
+

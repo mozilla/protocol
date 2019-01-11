@@ -6,21 +6,17 @@ http://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+jav
  * @author Tim  Shedor
  */
 
-@import '../protocol/includes/lib';
-
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
 	background: none;
-	@include zilla-slab;
-	font-size: 1rem;
-	letter-spacing: 1px;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5rem;
+	line-height: 1.5;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -41,10 +37,11 @@ pre[class*="language-"] {
 }
 pre[class*="language-"]>code {
 	position: relative;
+	border-left: 10px solid #358ccb;
 	box-shadow: -1px 0 0 0 #358ccb, 0 0 0 1px #dfdfdf;
-	background-color: #ffffff;
-	background-image: linear-gradient(transparent 50%, #f6f6f6 50%);
-	background-size: 3rem 3rem;
+	background-color: #fdfdfd;
+	background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+	background-size: 3em 3em;
 	background-origin: content-box;
 	background-attachment: local;
 }
@@ -52,7 +49,7 @@ pre[class*="language-"]>code {
 code[class*="language"] {
 	max-height: inherit;
 	height: inherit;
-	padding: 1.5rem 2.5rem;
+	padding: 1em;
 	display: block;
 	overflow: auto;
 }
@@ -128,7 +125,7 @@ pre[class*="language-"]:after {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #ff0039;
+	color: #c92c2c;
 }
 
 .token.selector,
@@ -138,7 +135,7 @@ pre[class*="language-"]:after {
 .token.function,
 .token.builtin,
 .token.inserted {
-	color: #12bc00;
+	color: #2f9c0a;
 }
 
 .token.operator,
@@ -153,7 +150,7 @@ pre[class*="language-"]:after {
 .token.attr-value,
 .token.keyword,
 .token.class-name {
-	color: #0060DF;
+	color: #1990b8;
 }
 
 .token.regex,
@@ -229,16 +226,3 @@ pre .line-highlight {
 	margin-top: 0;
 }
 
-code.language-markup {
-	overflow: hidden;
-}
-
-code.language-markup:before,
-code.language-scss:before {
-	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="1200"><text fill="#000" fill-rule="evenodd" font-family="ZillaSlab-Regular, Zilla Slab" font-size="16" letter-spacing="1" opacity=".25"><tspan x="0" y="15">1</tspan> <tspan x="0" y="39">2</tspan> <tspan x="0" y="63">3</tspan> <tspan x="0" y="87">4</tspan> <tspan x="0" y="111">5</tspan> <tspan x="0" y="135">6</tspan> <tspan x="0" y="159">7</tspan> <tspan x="0" y="183">8</tspan> <tspan x="0" y="207">9</tspan> <tspan x="0" y="231">10</tspan> <tspan x="0" y="255">11</tspan> <tspan x="0" y="279">12</tspan> <tspan x="0" y="303">13</tspan> <tspan x="0" y="327">14</tspan> <tspan x="0" y="351">15</tspan> <tspan x="0" y="375">16</tspan> <tspan x="0" y="399">17</tspan> <tspan x="0" y="423">18</tspan> <tspan x="0" y="447">19</tspan> <tspan x="0" y="471">20</tspan> <tspan x="0" y="495">21</tspan> <tspan x="0" y="519">22</tspan> <tspan x="0" y="543">23</tspan> <tspan x="0" y="567">24</tspan> <tspan x="0" y="591">25</tspan> <tspan x="0" y="615">26</tspan> <tspan x="0" y="639">27</tspan> <tspan x="0" y="663">28</tspan> <tspan x="0" y="687">29</tspan> <tspan x="0" y="711">30</tspan> <tspan x="0" y="735">31</tspan> <tspan x="0" y="759">32</tspan> <tspan x="0" y="783">33</tspan> <tspan x="0" y="807">34</tspan> <tspan x="0" y="831">35</tspan> <tspan x="0" y="855">36</tspan> <tspan x="0" y="879">37</tspan> <tspan x="0" y="903">38</tspan> <tspan x="0" y="927">39</tspan> <tspan x="0" y="951">40</tspan> <tspan x="0" y="975">41</tspan> <tspan x="0" y="999">42</tspan> <tspan x="0" y="1023">43</tspan> <tspan x="0" y="1047">44</tspan> <tspan x="0" y="1071">45</tspan> <tspan x="0" y="1095">46</tspan> <tspan x="0" y="1119">47</tspan> <tspan x="0" y="1143">48</tspan> <tspan x="0" y="1167">49</tspan> <tspan x="0" y="1191">50</tspan></text></svg>');
-	position: absolute;
-	left: 16px;
-	top: 24px;
-	height: calc(100% - 48px);
-	overflow: hidden;
-}

@@ -1,0 +1,24 @@
+---
+title: Tokens
+name: Tokens
+order: 4
+---
+
+<p>A complete list of Protocol tokens and their values. The source code for all tokens can be <a href="https://github.com/mozilla/protocol-tokens">found here</a>.</p>
+
+<table class="protosite-token-list">
+  <thead>
+    <tr>
+      <th scope="col"><strong>Name</strong></th>
+      <th scope="col"><strong>Value</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each (data "index")}}
+    <tr>
+      <td><code class="language-scss">{{ token }}</code></td>
+      <td><code class="language-css">{{ value }}</code></td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

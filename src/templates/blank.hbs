@@ -20,14 +20,11 @@
   </head>
   <body class="{{bodyclass}}">
     <div class="protosite-page">
+    {{#block "body"}}
+      {{#block "main"}}{{/block}}
+    {{/block}}
 
-      {{#block "header"}}{{/block}}
-
-      {{#block "body"}}
-        {{#block "main"}}{{/block}}
-      {{/block}}
-
-      {{#block "foot"}}{{/block}}
+    {{#block "foot"}}{{/block}}
     </div>
   </body>
 </html>
