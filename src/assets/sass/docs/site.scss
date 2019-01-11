@@ -336,14 +336,38 @@
 
 
 // grid
-#Grid {
-    .mzp-l-grid > div {
+.mzp-l-grid {
+    > div {
         background-color: mediumaquamarine;
         color: #fff;
         font-weight: bold;
         text-align: center;
         border: 24px solid aquamarine;
-    }
+        @include grid(1/1);
+      }
+
+      // Create grids with up to 8 columns (don't include 5 and 7 column grids)
+      @for $column-span from 1 through 6 {
+        @for $column-max from 2 through 8 {
+          @if $column-span < $column-max and $column-span != 5 {
+            .protosite-l-grid-#{$column-span}-#{$column-max} {
+              @include grid($column-span / $column-max);
+            }
+          }
+        }
+      }
+
+      // Grid - Positioning
+      > div:nth-child(n):nth-last-child(1).protosite-u-right {
+          @include bidi(((float, right, left),));
+      }
+      > div:nth-child(n):nth-last-child(1).protosite-u-center {
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+}
 
 // buttons
 #protosite-primary-dark-preview,
@@ -351,5 +375,4 @@
 #protosite-download-dark-preview {
   background: $color-black;
   padding: $padding-md;
-
 }

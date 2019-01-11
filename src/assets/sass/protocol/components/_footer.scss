@@ -96,7 +96,7 @@
 
     @media (min-width: #{$screen-sm}) and (max-width: #{$screen-lg - 1px}) {
         @include bidi(((float, left, right),));
-        @include grid-half;
+        @include grid(1/2);
 
         &:nth-child(odd) {
             @include bidi(((clear, left, right),));
@@ -188,7 +188,8 @@
                 (padding, 0 $padding-lg 0 0, 0 0 0 $padding-lg),
             ));
         }
-
+    }
+}
 .mzp-c-footer-list {
     margin-bottom: $spacing-xl;
 
