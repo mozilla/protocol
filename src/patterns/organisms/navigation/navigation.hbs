@@ -7,7 +7,7 @@ notes: |
   - On wide viewports, navigation content is displayed inline.
   - On small viewports, navigation content is hidden by default and toggled via a menu icon.
   - The Mozilla logo is always visible.
-  - Navigation can be initialized using `Mozilla.Navigation.init(options)`, where `options` is an Object with the following properties.
+  - Navigation can be initialized using `Mzp.Navigation.init(options)`, where `options` is an Object with the following properties.
       - `onNavOpen` [Function] A callback when the small screen navigation icon is clicked to open (optional).
       - `onNavClose` [Function] A callback when the small screen navigation icon is clicked to close (optional).
 links:
@@ -21,7 +21,7 @@ links:
       <div class="mzp-c-navigation-logo"><a href="https://www.mozilla.org/">Mozilla</a></div>
       <div class="mzp-c-navigation-items" id="mzp-c-navigation-items">
         <div class="mzp-c-navigation-download">
-          {{#embed "patterns.molecules.download-button.download-button" class="mzp-t-download-secondary"}}{{/embed}}
+          {{#embed "patterns.molecules.download-button.download-button" class="mzp-t-download mzp-t-secondary mzp-t-small"}}{{/embed}}
         </div>
         <div class="mzp-c-navigation-menu">
           {{#block "menu"}}
@@ -32,4 +32,3 @@ links:
     </div>
   </div>
 </div>
-

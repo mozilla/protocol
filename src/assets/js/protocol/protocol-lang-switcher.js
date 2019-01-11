@@ -3,8 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // create namespace
-if (typeof Mozilla === 'undefined') {
-    var Mozilla = {};
+if (typeof Mzp === 'undefined') {
+    var Mzp = {};
 }
 
 (function() {
@@ -47,7 +47,7 @@ if (typeof Mozilla === 'undefined') {
      * @param {function} Custom callback for analytics.
      */
     LangSwitcher.init = function(callback) {
-        var language = document.querySelectorAll('.mzp-c-language-switcher-select');
+        var language = document.querySelectorAll('.mzp-js-language-switcher-select');
 
         for (var i = 0; i < language.length; i++) {
             language[i].setAttribute('data-previous-language', language[i].value);
@@ -67,6 +67,6 @@ if (typeof Mozilla === 'undefined') {
 
     };
 
-    window.Mozilla.LangSwitcher = LangSwitcher;
+    window.Mzp.LangSwitcher = LangSwitcher;
 
 })();

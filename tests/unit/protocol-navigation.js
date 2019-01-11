@@ -39,7 +39,7 @@ describe('protocol-navigation.js', function() {
             spyOn(options, 'open');
             spyOn(options, 'close');
 
-            Mozilla.Navigation.init({
+            Mzp.Navigation.init({
                 onNavOpen: options.open,
                 onNavClose: options.close
             });

@@ -3,8 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // create namespace
-if (typeof Mozilla === 'undefined') {
-    var Mozilla = {};
+if (typeof Mzp === 'undefined') {
+    var Mzp = {};
 }
 
 (function() {
@@ -155,7 +155,8 @@ if (typeof Mozilla === 'undefined') {
          * re-queues the JavaScript to run at the end of the current excecution.
          */
         setTimeout(function() {
-            if (!self.contains(document.activeElement)) {
+            // If the menu is open and the newly focused element is not a child, then call close().
+            if (!self.contains(document.activeElement) && self.classList.contains('is-selected')) {
                 Menu.close();
             }
         }, 0);
@@ -308,9 +309,11 @@ if (typeof Mozilla === 'undefined') {
      * Basic feature detect for 1st class menu JS support.
      */
     Menu.isSupported = function() {
-        return typeof window.matchMedia !== 'undefined' &&
-               window.matchMedia('all').addListener &&
-               'classList' in document.createElement('div');
+        if (typeof Mzp.Supports !== 'undefined') {
+            return Mzp.Supports.matchMedia && Mzp.Supports.classList;
+        } else {
+            return false;
+        }
     };
 
     /**
@@ -334,6 +337,6 @@ if (typeof Mozilla === 'undefined') {
         }
     };
 
-    window.Mozilla.Menu = Menu;
+    window.Mzp.Menu = Menu;
 
 })();

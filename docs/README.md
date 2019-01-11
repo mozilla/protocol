@@ -390,7 +390,7 @@ Pattern templates can also benefit from these helpers:
 
 ```hbs
 {{! src/patterns/components/button/primary.hbs }}
-{{#embed "components.button.base" class="mzp-c-button-primary"}}
+{{#embed "components.button.base" class="mzp-t-dark"}}
   {{#content "content"}}
     Primary Button
   {{/content}}
@@ -398,7 +398,7 @@ Pattern templates can also benefit from these helpers:
 ```
 
 ```html
-<button class="mzp-c-button mzp-c-button-primary">
+<button class="mzp-c-button mzp-t-dark">
   Primary Button
 </button>
 ```
@@ -487,14 +487,11 @@ dist/assets
 
 The build sequence consists of a small set of [Gulp][gulp] tasks. While you'll probably only need `gulp` and `gulp --dev` most of the time, the other tasks can be called independently to process only a subset of your source files:
 
-| Task            | Description
-| ---             | ---
-| `gulp`          | Build everything and start the development server.
-| `gulp --dev`    | Do everything `gulp` does, but with file watching.
-| `gulp clean`    | Empty the destination directory.
-| `gulp frontend` | Run the frontend composite task, which lints, compiles and builds all the source files.
-| `gulp serve`    | Start the development server.
-| `gulp watch`    | Run tasks automatically when file changes occur.
+| Task         | Description
+| ---          | ---
+| `gulp`       | Build everything and start the development server.
+| `gulp --dev` | Do everything `gulp` does, but with file watching.
+| `gulp build` | Just build everything.
 
 # Running tests
 
@@ -524,7 +521,7 @@ Note: the following instructions assume the mozilla reporitory is the remote cal
 
 Each time an updated package is published to NPM, https://protocol.mozilla.org/ should also be updated so the documentation site matches the NPM package features.
 
-1. Verify all is good on the [staging site](https://mozilla-protocol.netlify.com/).
+1. Verify all is good on the [staging site](https://protocol-stage.moz.works/).
 2. Make sure your local `master` branch is up to date
 3. Push the `master` branch to the `prod` branch: `git push origin master:prod`.
 

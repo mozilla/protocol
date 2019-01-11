@@ -334,6 +334,7 @@
     }
 }
 
+
 // grid
 #Grid {
     .mzp-l-grid > div {
@@ -343,4 +344,12 @@
         text-align: center;
         border: 24px solid aquamarine;
     }
+
+// buttons
+#protosite-primary-dark-preview,
+#protosite-secondary-dark-preview,
+#protosite-download-dark-preview {
+  background: $color-black;
+  padding: $padding-md;
+
 }
