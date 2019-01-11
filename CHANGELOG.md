@@ -3,6 +3,55 @@
 ## Features
 
 * **css:** Add grid system classes and mixins (#233)
+* **gulp:** Update to Gulp 4.0 (#285)
+
+# 4.0.0
+
+## Features
+
+* **js:** Add details component and demo (#129)
+* **css:** Add footer component and demo (#184)
+
+## Bug Fixes
+
+* **js:** Add missing del dependency in build (#271).
+* **css:** Update tokens (mozilla/protocol-tokens#27)
+
+# 3.1.0
+
+## Features
+
+* **css:** Update Language Selector to include optional link to language selection page (#259)
+
+## Bug Fixes
+
+* **css:** Fix Side Menu RTL styles (#204).
+* **css:** Fix card molecule icon alignment for RTL (#203)
+* **css:** Remove autoprefixer to ensure consistency using pre-compiled CSS (#119).
+* **css:** Fix download button positioning in call out component (#268)
+
+# 3.0.1
+
+## Bug Fixes
+
+* **css:** Primary buttons should use a solid background color on hover (#264)
+
+# 3.0.0
+
+## Features
+
+* **css:** Add button variants (#224)
+* **css:** Revise button states (#224)
+
+## Bug Fixes
+
+* **js:** Update JS namespace from Mozilla to Mzp (#253)
+* **js:** Rename '.mzp-c-language-switcher-select' class (#242)
+
+# 2.4.3
+
+## Features
+
 * **docs:** Document deployment process (#171)
 
 ## Bug Fixes
