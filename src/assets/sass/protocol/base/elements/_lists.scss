@@ -55,6 +55,26 @@ ol.mzp-u-list-styled {
     }
 }
 
+dl.mzp-u-list-styled {
+    dt {
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    dd {
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
+        margin-bottom: .25em;
+    }
+
+    ul, ol {
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
+        margin-bottom: 0;
+    }
+    ul {
+        list-style: circle;
+    }
+}
+
 
 /* !important required to trump specificity and print stylesheet overrides */
 .mzp-u-list-unstyled {

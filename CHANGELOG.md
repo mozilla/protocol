@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Define basic styles for dl lists (#295)
 * **js:** Update ESLint to consume @mozilla-protocol/eslint-config (##85)
 * **css:** Rename download button theme to product button theme (#273)
 * **css:** Navigation items that are links without menus get hover styles (#304)
