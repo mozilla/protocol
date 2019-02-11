@@ -54,9 +54,9 @@ describe('protocol-menu.js', function() {
     describe('interactions (desktop)', function() {
 
         var options = {
-            open: function() {},
-            close: function() {},
-            buttonClose: function() {}
+            open: function() {}, // eslint-disable-line no-empty-function
+            close: function() {}, // eslint-disable-line no-empty-function
+            buttonClose: function() {} // eslint-disable-line no-empty-function
         };
 
         beforeEach(function() {
@@ -147,9 +147,9 @@ describe('protocol-menu.js', function() {
     describe('interactions (mobile)', function() {
 
         var options = {
-            open: function() {},
-            close: function() {},
-            buttonClose: function() {}
+            open: function() {}, // eslint-disable-line no-empty-function
+            close: function() {}, // eslint-disable-line no-empty-function
+            buttonClose: function() {} // eslint-disable-line no-empty-function
         };
 
         beforeEach(function() {

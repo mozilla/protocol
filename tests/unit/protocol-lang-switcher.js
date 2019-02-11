@@ -81,7 +81,7 @@ describe('protocol-lang-switcher.js', function() {
 
         it('should fire a callback when supplied', function () {
             var result = {
-                callback: function() {}
+                callback: function() {} // eslint-disable-line no-empty-function
             };
 
             spyOn(result, 'callback');

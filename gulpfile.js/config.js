@@ -1,3 +1,5 @@
+'use strict';
+
 const path = require('path');
 const dest = './dist/assets';
 const src = './src/assets';

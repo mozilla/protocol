@@ -32,8 +32,8 @@ describe('protocol-navigation.js', function() {
             var button = document.querySelector('.mzp-c-navigation-menu-button');
             var menu = document.querySelector('.mzp-c-navigation-items');
             var options = {
-                open: function() {},
-                close: function() {}
+                open: function() {}, // eslint-disable-line no-empty-function
+                close: function() {} // eslint-disable-line no-empty-function
             };
 
             spyOn(options, 'open');

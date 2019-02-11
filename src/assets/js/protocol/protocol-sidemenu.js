@@ -19,7 +19,7 @@
         e.preventDefault();
         menu.classList.toggle('mzp-is-active');
 
-        var menuExpanded = menuMain.getAttribute('aria-expanded') == 'true' ? 'false' : 'true';
+        var menuExpanded = menuMain.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
         menuMain.setAttribute('aria-expanded', menuExpanded);
     }, false);
 

@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp');
 const config = require('../config').staticCopy;
 const merge = require('merge-stream');

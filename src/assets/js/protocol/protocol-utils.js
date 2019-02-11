@@ -4,7 +4,7 @@
 
 
 // create namespace
-if (typeof Mzp === 'undefined') {
+if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     var Mzp = {};
 }
 
@@ -37,7 +37,9 @@ if (typeof Mzp === 'undefined') {
         while (el) {
 
             // If we've reached our match, bail
-            if (el.matches(selector)) break;
+            if (el.matches(selector)) {
+                break;
+            }
 
             // If filtering by a selector, check if the sibling matches
             if (filter && !el.matches(filter)) {

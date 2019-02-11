@@ -1,3 +1,5 @@
+'use strict';
+
 const notify = require('gulp-notify');
 
 module.exports = function() {

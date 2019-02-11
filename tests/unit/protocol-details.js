@@ -129,7 +129,7 @@ describe('protocol-details.js', function() {
         it('triggers the callback', function() {
             Mzp.Details.init('#test-wrapper section > h3');
             var options = {
-                onDetailsOpen: function() {},
+                onDetailsOpen: function() {}, // eslint-disable-line no-empty-function
             };
             var content = document.querySelector('#test2-heading-1 + p');
             var contentId = content.id;
@@ -167,7 +167,7 @@ describe('protocol-details.js', function() {
         it('triggers the callback', function() {
             Mzp.Details.init('#test-wrapper section > h3');
             var options = {
-                onDetailsClose: function() {},
+                onDetailsClose: function() {}, // eslint-disable-line no-empty-function
             };
             var content = document.querySelector('#test2-heading-1 + p');
             var contentId = content.id;

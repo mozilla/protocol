@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp');
 const clean = require('./clean');
 const lintCSS = require('./lint-css');
