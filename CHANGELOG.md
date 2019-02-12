@@ -3,6 +3,8 @@
 ## Features
 
 * **css:** Rename download button theme to product button theme (#273)
+* **css:** Navigation items that are links without menus get hover styles (#304)
+* **css:** Let menu item titles not be links (#307)
 * **gulp:** Update to Gulp 4.0 (#285)
 
 # 4.0.0
