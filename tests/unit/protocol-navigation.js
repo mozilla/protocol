@@ -15,6 +15,17 @@ describe('protocol-navigation.js', function() {
                           '</div>' +
                       '</div>' +
                     '</div>' +
+                  '</div>' +
+                  '<div class="mzp-c-navigation">' +
+                    '<div class="mzp-c-navigation-l-content">' +
+                      '<div class="mzp-c-navigation-container">' +
+                          '<button class="mzp-c-navigation-menu-button" type="button" aria-controls="map-c-navigation-items">Menu</button>' +
+                          '<div class="mzp-c-navigation-logo"><a href="https://www.mozilla.org/">Mozilla</a></div>' +
+                          '<div class="mzp-c-navigation-items" id="map-c-navigation-items">' +
+                            '<div class="mzp-c-navigation-items-container"></div>' +
+                          '</div>' +
+                      '</div>' +
+                    '</div>' +
                   '</div>';
         document.documentElement.insertAdjacentHTML('beforeend', nav);
     });

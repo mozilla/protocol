@@ -20,17 +20,19 @@ if (typeof Mzp === 'undefined') {
      * Event handler for navigation menu button `click` events.
      */
     Navigation.onClick = function(e) {
+        var navItem  = e.target.parentNode.querySelector('.mzp-c-navigation-items');
+
         e.preventDefault();
 
         // Update button state
         e.target.classList.toggle('is-active');
 
         // Update menu state
-        navItems.classList.toggle('is-open');
+        navItem.classList.toggle('is-open');
 
         // Update aria-expended state on menu.
-        var expanded = navItems.classList.contains('is-open') ? true : false;
-        navItems.setAttribute('aria-expanded', expanded);
+        var expanded = navItem.classList.contains('is-open') ? true : false;
+        navItem.setAttribute('aria-expanded', expanded);
 
         if (expanded) {
             if (typeof _options.onNavOpen === 'function') {
@@ -47,18 +49,23 @@ if (typeof Mzp === 'undefined') {
      * Set initial ARIA navigation states.
      */
     Navigation.setAria = function() {
-        navItems.setAttribute('aria-expanded', false);
+        for (var i = 0; i < navItems.length; i++) {
+            navItems[i].setAttribute('aria-expanded', false);
+        }
     };
 
     /**
      * Bind navigation event handlers.
      */
     Navigation.bindEvents = function() {
-        navItems = document.querySelector('.mzp-c-navigation-items');
-        if (navItems) {
-            document.querySelector('.mzp-c-navigation-menu-button').addEventListener('click', Navigation.onClick, false);
-            Navigation.setAria();
+        navItems = document.querySelectorAll('.mzp-c-navigation-items');
+        if (navItems.length > 0) {
+            var navButtons = document.querySelectorAll('.mzp-c-navigation-menu-button');
+            for (var i = 0; i < navButtons.length; i++) {
+                navButtons[i].addEventListener('click', Navigation.onClick, false);
+            }
         }
+        Navigation.setAria();
     };
 
     /**

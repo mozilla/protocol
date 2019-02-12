@@ -14,15 +14,17 @@ links:
     Navigation Demo: /demos/navigation.html
 ---
 
-<div class="mzp-c-navigation">
+<div class="mzp-c-navigation" {{#if id}}id="{{id}}"{{/if}}>
   <div class="mzp-c-navigation-l-content">
     <div class="mzp-c-navigation-container">
-      <button class="mzp-c-navigation-menu-button" type="button" aria-controls="map-c-navigation-items">Menu</button>
-      <div class="mzp-c-navigation-logo"><a href="https://www.mozilla.org/">Mozilla</a></div>
+      <button class="mzp-c-navigation-menu-button {{#if button-label}}has-label{{/if}}" type="button" aria-controls="map-c-navigation-items">{{#if button-label}}{{ button-label }}{{ else }}Menu{{/if}}</button>
+      {{#if logo}}<div class="mzp-c-navigation-logo"><a href="https://www.mozilla.org/">Mozilla</a></div>{{/if}}
       <div class="mzp-c-navigation-items" id="mzp-c-navigation-items">
+        {{#if download}}
         <div class="mzp-c-navigation-download">
           {{#embed "patterns.molecules.download-button.download-button" class="mzp-t-product mzp-t-secondary mzp-t-small"}}{{/embed}}
         </div>
+        {{/if}}
         <div class="mzp-c-navigation-menu">
           {{#block "menu"}}
             {{#embed "patterns.molecules.menu.menu"}}{{/embed}}
