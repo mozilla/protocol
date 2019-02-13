@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp');
 const gulpStylelint = require('gulp-stylelint');
 const config = require('../config').lintCss;

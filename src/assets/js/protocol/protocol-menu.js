@@ -3,11 +3,11 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // create namespace
-if (typeof Mzp === 'undefined') {
+if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     var Mzp = {};
 }
 
-(function() {
+(function(Mzp) {
     'use strict';
 
     var Menu = {};
@@ -339,4 +339,4 @@ if (typeof Mzp === 'undefined') {
 
     window.Mzp.Menu = Menu;
 
-})();
+})(window.Mzp);

@@ -4,7 +4,7 @@
 
 
 // create namespace
-if (typeof Mzp === 'undefined') {
+if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     var Mzp = {};
 }
 

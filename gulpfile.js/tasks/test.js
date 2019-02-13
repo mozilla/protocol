@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp');
 const config = require('../config').testJS;
 const Server = require('karma').Server;

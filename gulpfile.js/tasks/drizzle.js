@@ -1,3 +1,5 @@
+'use strict';
+
 const drizzle = require('drizzle-builder');
 const config = require('../config');
 const helpers = require('@cloudfour/hbs-helpers');

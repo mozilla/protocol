@@ -4,7 +4,7 @@
 
 
 // create namespace
-if (typeof Mzp === 'undefined') {
+if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     var Mzp = {};
 }
 
@@ -53,7 +53,7 @@ if (typeof Mzp === 'undefined') {
         root.appendChild(el);
         diff = el.offsetHeight;
         el.open = true;
-        diff = diff != el.offsetHeight;
+        diff = diff !== el.offsetHeight;
         root.removeChild(el);
         if (fake) {
             root.parentNode.removeChild(root);
