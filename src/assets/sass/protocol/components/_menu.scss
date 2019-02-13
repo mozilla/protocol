@@ -97,8 +97,11 @@
 
         .mzp-c-menu-title {
             border-bottom: none;
-            cursor: default;
             padding: 0 $spacing-sm $spacing-lg;
+
+            &.mzp-has-drop-down {
+                cursor: default;
+            }
         }
 
         &.mzp-has-drop-down .mzp-c-menu-title:before {
@@ -132,8 +135,8 @@
             display: none;
         }
 
-        &:hover,
-        &:focus {
+        &.mzp-has-drop-down:hover,
+        &.mzp-has-drop-down:focus {
             .mzp-c-menu-title {
                 @include highlighted;
                 z-index: 1001;
@@ -145,7 +148,7 @@
             }
         }
 
-        &:focus-within {
+        &.mzp-has-drop-down:focus-within {
             .mzp-c-menu-title {
                 @include highlighted;
                 z-index: 1001;

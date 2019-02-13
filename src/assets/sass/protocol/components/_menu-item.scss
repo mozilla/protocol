@@ -34,17 +34,28 @@ $icon-size: 24px;
         }
     }
 
-    &.mzp-has-icon .mzp-c-menu-item-link {
-        @include bidi(((padding-left, $icon-size + $spacing-lg, padding-right, 0),));
-        position: relative;
+    .mzp-c-menu-item-head {
+        display: block;
 
-        .mzp-c-menu-item-icon {
-            @include bidi(((left, $spacing-sm, right, auto),));
-            height: $icon-size;
-            margin: 0;
-            position: absolute;
-            top: $spacing-sm;
-            width: $icon-size;
+        .mzp-c-menu-item-title {
+            border-bottom: 2px solid transparent;
+        }
+    }
+
+    &.mzp-has-icon {
+        .mzp-c-menu-item-head,
+        .mzp-c-menu-item-link {
+            @include bidi(((padding-left, $icon-size + $spacing-lg, padding-right, 0),));
+            position: relative;
+
+            .mzp-c-menu-item-icon {
+                @include bidi(((left, $spacing-sm, right, auto),));
+                height: $icon-size;
+                margin: 0;
+                position: absolute;
+                top: $spacing-sm;
+                width: $icon-size;
+            }
         }
     }
 
@@ -111,7 +122,8 @@ $icon-size: 24px;
             box-shadow: 0 0 0 4px $color-gray-20;
         }
 
-        .mzp-c-menu-item-link {
+        .mzp-c-menu-item-link,
+        .mzp-c-menu-item-head {
             padding: $spacing-sm;
         }
 
