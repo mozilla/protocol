@@ -2,6 +2,7 @@
 
 ## Features
 
+* **js:** Update ESLint to consume @mozilla-protocol/eslint-config (##85)
 * **css:** Rename download button theme to product button theme (#273)
 * **gulp:** Update to Gulp 4.0 (#285)
 * **css:** Convert CTA links to blue (#280)

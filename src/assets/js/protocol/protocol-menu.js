@@ -7,7 +7,7 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     var Mzp = {};
 }
 
-(function() {
+(function(Mzp) {
     'use strict';
 
     var Menu = {};
@@ -309,8 +309,8 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
      * Basic feature detect for 1st class menu JS support.
      */
     Menu.isSupported = function() {
-        if (typeof window.Mzp.Supports !== 'undefined') {
-            return window.Mzp.Supports.matchMedia && window.Mzp.Supports.classList;
+        if (typeof Mzp.Supports !== 'undefined') {
+            return Mzp.Supports.matchMedia && Mzp.Supports.classList;
         } else {
             return false;
         }
@@ -339,4 +339,4 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
 
     window.Mzp.Menu = Menu;
 
-})();
+})(window.Mzp);
