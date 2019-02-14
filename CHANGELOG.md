@@ -5,7 +5,7 @@
 * **css:** Define basic styles for dl lists (#295)
 * **css:** Add basic styles for hr elements (#296)
 * **js:** Update ESLint to consume @mozilla-protocol/eslint-config (##85)
-* **css:** Rename download button theme to product button theme (#273)
+* **css:** (breaking) Rename download button theme to product button theme (#273)
 * **css:** Navigation items that are links without menus get hover styles (#304)
 * **css:** Let menu item titles not be links (#307)
 * **gulp:** Update to Gulp 4.0 (#285)
