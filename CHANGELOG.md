@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Define basic styles for dl lists (#295)
 * **css:** Add basic styles for hr elements (#296)
 * **js:** Update ESLint to consume @mozilla-protocol/eslint-config (##85)
 * **css:** Rename download button theme to product button theme (#273)
