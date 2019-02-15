@@ -242,6 +242,7 @@
 
         a {
             @include image-replaced;
+            background-repeat: no-repeat;
             border-bottom: 1px solid transparent;
             display: block;
             height: 16px;
