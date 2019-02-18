@@ -297,12 +297,15 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     };
 
     /**
-     * Enables simplified menu using pure CSS hover states.
+     * Enhances the menu for 1st class JS support.
      */
-    Menu.cssFallback = function() {
-        var menu = document.querySelector('.mzp-c-menu');
-        var currentClassName = menu.className;
-        menu.className = currentClassName.replace(/mzp-c-menu/, 'mzp-c-menu mzp-c-menu-basic');
+    Menu.enhanceJS = function() {
+        var menu = document.querySelectorAll('.mzp-c-menu');
+
+        for (var i = 0; i < menu.length; i++) {
+            menu[i].classList.remove('mzp-is-basic');
+            menu[i].classList.add('mzp-is-enhanced');
+        }
     };
 
     /**
@@ -332,8 +335,7 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
         if (Menu.isSupported()) {
             Menu.handleState();
             Menu.setAria();
-        } else {
-            Menu.cssFallback();
+            Menu.enhanceJS();
         }
     };
 

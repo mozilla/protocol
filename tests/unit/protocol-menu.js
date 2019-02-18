@@ -5,7 +5,7 @@ describe('protocol-menu.js', function() {
     'use strict';
 
     beforeEach(function () {
-        var menu = '<nav class="mzp-c-menu">' +
+        var menu = '<nav class="mzp-c-menu mzp-is-basic">' +
                      '<ul class="mzp-c-menu-category-list">' +
                        '<li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">' +
                           '<a class="mzp-c-menu-title" href="#" aria-haspopup="true" aria-controls="mzp-c-menu-panel-example">Firefox</a>' +
@@ -38,16 +38,17 @@ describe('protocol-menu.js', function() {
             Mzp.Menu.init();
 
             expect(Mzp.Menu.handleState).toHaveBeenCalled();
+            expect(document.querySelector('.mzp-c-menu').classList.contains('mzp-is-enhanced')).toBeTruthy();
         });
 
         it('should fallback to basic CSS when not supported', function() {
             spyOn(Mzp.Menu, 'isSupported').and.returnValue(false);
-            spyOn(Mzp.Menu, 'cssFallback').and.callThrough();
+            spyOn(Mzp.Menu, 'handleState');
 
             Mzp.Menu.init();
 
-            expect(Mzp.Menu.cssFallback).toHaveBeenCalled();
-            expect(document.querySelector('.mzp-c-menu').classList.contains('mzp-c-menu-basic')).toBeTruthy();
+            expect(Mzp.Menu.handleState).not.toHaveBeenCalled();
+            expect(document.querySelector('.mzp-c-menu').classList.contains('mzp-is-basic')).toBeTruthy();
         });
     });
 
