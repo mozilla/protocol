@@ -64,8 +64,8 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
             for (var i = 0; i < navButtons.length; i++) {
                 navButtons[i].addEventListener('click', Navigation.onClick, false);
             }
+            Navigation.setAria();
         }
-        Navigation.setAria();
     };
 
     /**
