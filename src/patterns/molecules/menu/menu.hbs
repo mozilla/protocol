@@ -1,7 +1,6 @@
 ---
 name: Menu
 description: An expandable menu used in the [Navigation](/patterns/organisms/navigation.html) organism, consisting of [Menu Items](/patterns/molecules/menu.html#menu-item) and an optional [Card](/patterns/molecules/card.html#extra-small-card) molecule.
-hidepreview: true
 order: 1
 notes: |
   - On wide viewports a menu's content is displayed when hovering or focusing on a menu link.
@@ -21,6 +20,9 @@ links:
 <nav class="mzp-c-menu mzp-is-basic">
   <ul class="mzp-c-menu-category-list">
     {{#block "content"}}
+      <li class="mzp-c-menu-category">
+          <a class="mzp-c-menu-title" href="https://www.mozilla.org/">Sample Link</a>
+      </li>
       <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
         <a class="mzp-c-menu-title" href="#" aria-haspopup="true" aria-controls="mzp-c-menu-panel-example">Firefox</a>
         <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-example">
@@ -63,3 +65,18 @@ links:
   </ul>
 </nav>
 
+<script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-menu.js"></script>
+
+<script>
+  Mzp.Menu.init({
+      onMenuOpen: function() {
+          console.log('Menu opened');
+      },
+      onMenuClose: function() {
+          console.log('Menu closed');
+      },
+      onMenuButtonClose: function() {
+          console.log('Menu close button clicked');
+      }
+  });
+</script>
