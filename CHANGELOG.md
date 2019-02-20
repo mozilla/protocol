@@ -2,7 +2,6 @@
 
 ## Features
 
-* **css:** Social icon backgrounds no longer repeat (#317)
 * **css:** Define basic styles for dl lists (#295)
 * **css:** Add basic styles for hr elements (#296)
 * **js:** Update ESLint to consume @mozilla-protocol/eslint-config (##85)
@@ -14,6 +13,9 @@
 
 ## Bug Fixes
 
+* **css:** Use `mzp` namespace for menu and navigation state classes (#324)
+* **js:** (breaking) Make the Menu molecule more resilient to JS errors (#320)
+* **css:** Social icon backgrounds no longer repeat (#317)
 * **css:** Fix billboard overflowing text in IE 10 (#276)
 
 # 4.0.0

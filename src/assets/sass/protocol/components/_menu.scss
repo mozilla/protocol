@@ -123,8 +123,7 @@
 }
 
 // Basic hover interactions with JavaScript disabled or not supported..
-.no-js .mzp-c-menu-category,
-.mzp-c-menu-basic .mzp-c-menu-category {
+.mzp-c-menu.mzp-is-basic .mzp-c-menu-category {
 
     .mzp-c-menu-title:before {
         display: none;
@@ -163,8 +162,8 @@
 }
 
 // Enhanced hover interactions with JavaScript enabled.
-.js .mzp-c-menu-category {
-    &.is-selected {
+.mzp-c-menu.mzp-is-enhanced .mzp-c-menu-category {
+    &.mzp-is-selected {
         .mzp-c-menu-title:before {
             @include transform(rotate(45deg));
         }
@@ -175,13 +174,13 @@
     }
 
     @media #{$mq-md} {
-        &.is-animated {
+        &.mzp-is-animated {
             .mzp-c-menu-panel,
             .mzp-c-menu-title:after {
                 @include animation(mzp-a-fade-in 80ms ease-in 0ms 1 normal both);
             }
         }
-        &.is-selected {
+        &.mzp-is-selected {
             .mzp-c-menu-title {
                 @include highlighted;
                 z-index: 101;
@@ -316,8 +315,7 @@
     }
 }
 
-.no-js .mzp-c-menu-panel,
-.mzp-c-menu-basic .mzp-c-menu-panel {
+.mzp-c-menu.mzp-is-basic .mzp-c-menu-panel {
     display: block;
 
     @media #{$mq-md} {

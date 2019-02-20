@@ -5,7 +5,7 @@ describe('protocol-menu.js', function() {
     'use strict';
 
     beforeEach(function () {
-        var menu = '<nav class="mzp-c-menu">' +
+        var menu = '<nav class="mzp-c-menu mzp-is-basic">' +
                      '<ul class="mzp-c-menu-category-list">' +
                        '<li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">' +
                           '<a class="mzp-c-menu-title" href="#" aria-haspopup="true" aria-controls="mzp-c-menu-panel-example">Firefox</a>' +
@@ -38,16 +38,17 @@ describe('protocol-menu.js', function() {
             Mzp.Menu.init();
 
             expect(Mzp.Menu.handleState).toHaveBeenCalled();
+            expect(document.querySelector('.mzp-c-menu').classList.contains('mzp-is-enhanced')).toBeTruthy();
         });
 
         it('should fallback to basic CSS when not supported', function() {
             spyOn(Mzp.Menu, 'isSupported').and.returnValue(false);
-            spyOn(Mzp.Menu, 'cssFallback').and.callThrough();
+            spyOn(Mzp.Menu, 'handleState');
 
             Mzp.Menu.init();
 
-            expect(Mzp.Menu.cssFallback).toHaveBeenCalled();
-            expect(document.querySelector('.mzp-c-menu').classList.contains('mzp-c-menu-basic')).toBeTruthy();
+            expect(Mzp.Menu.handleState).not.toHaveBeenCalled();
+            expect(document.querySelector('.mzp-c-menu').classList.contains('mzp-is-basic')).toBeTruthy();
         });
     });
 
@@ -87,14 +88,14 @@ describe('protocol-menu.js', function() {
             item.dispatchEvent(mockEnterEvent);
             jasmine.clock().tick(200);
 
-            expect(item.classList.contains('is-selected')).toBeTruthy();
+            expect(item.classList.contains('mzp-is-selected')).toBeTruthy();
             expect(options.open).toHaveBeenCalled();
 
             mockLeaveEvent.initEvent('mouseleave', true, true);
             item.dispatchEvent(mockLeaveEvent);
             jasmine.clock().tick(200);
 
-            expect(item.classList.contains('is-selected')).toBeFalsy();
+            expect(item.classList.contains('mzp-is-selected')).toBeFalsy();
             expect(options.close).toHaveBeenCalled();
         });
 
@@ -112,7 +113,7 @@ describe('protocol-menu.js', function() {
 
             title.click();
 
-            expect(item.classList.contains('is-selected')).toBeTruthy();
+            expect(item.classList.contains('mzp-is-selected')).toBeTruthy();
             expect(options.open).toHaveBeenCalled();
         });
 
@@ -133,12 +134,12 @@ describe('protocol-menu.js', function() {
             item.dispatchEvent(mockEnterEvent);
             jasmine.clock().tick(200);
 
-            expect(item.classList.contains('is-selected')).toBeTruthy();
+            expect(item.classList.contains('mzp-is-selected')).toBeTruthy();
             expect(options.open).toHaveBeenCalled();
 
             document.querySelector('.mzp-c-menu-button-close').click();
 
-            expect(item.classList.contains('is-selected')).toBeFalsy();
+            expect(item.classList.contains('mzp-is-selected')).toBeFalsy();
             expect(options.buttonClose).toHaveBeenCalled();
             expect(options.close).toHaveBeenCalled();
         });
@@ -171,11 +172,11 @@ describe('protocol-menu.js', function() {
             });
 
             title.click();
-            expect(item.classList.contains('is-selected')).toBeTruthy();
+            expect(item.classList.contains('mzp-is-selected')).toBeTruthy();
             expect(options.open).toHaveBeenCalled();
 
             title.click();
-            expect(item.classList.contains('is-selected')).toBeFalsy();
+            expect(item.classList.contains('mzp-is-selected')).toBeFalsy();
             expect(options.close).toHaveBeenCalled();
         });
     });
