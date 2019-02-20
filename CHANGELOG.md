@@ -13,6 +13,7 @@
 
 ## Bug Fixes
 
+* **css:** Use `mzp` namespace for menu and navigation state classes (#324)
 * **js:** (breaking) Make the Menu molecule more resilient to JS errors (#320)
 * **css:** Social icon backgrounds no longer repeat (#317)
 * **css:** Fix billboard overflowing text in IE 10 (#276)

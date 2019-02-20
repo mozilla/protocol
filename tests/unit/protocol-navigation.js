@@ -45,14 +45,14 @@ describe('protocol-navigation.js', function() {
             });
             button.click();
 
-            expect(menu.classList.contains('is-open')).toBeTruthy();
-            expect(button.classList.contains('is-active')).toBeTruthy();
+            expect(menu.classList.contains('mzp-is-open')).toBeTruthy();
+            expect(button.classList.contains('mzp-is-active')).toBeTruthy();
             expect(options.open).toHaveBeenCalled();
 
             button.click();
 
-            expect(menu.classList.contains('is-open')).toBeFalsy();
-            expect(button.classList.contains('is-active')).toBeFalsy();
+            expect(menu.classList.contains('mzp-is-open')).toBeFalsy();
+            expect(button.classList.contains('mzp-is-active')).toBeFalsy();
             expect(options.close).toHaveBeenCalled();
         });
     });

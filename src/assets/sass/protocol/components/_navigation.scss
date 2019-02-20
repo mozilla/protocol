@@ -164,7 +164,7 @@
     &:hover,
     &:active,
     &:focus,
-    &.is-active  {
+    &.mzp-is-active  {
         background-color: $color-gray-20;
     }
 }
@@ -186,7 +186,7 @@
     .mzp-c-navigation-items {
         display: none;
 
-        &.is-open {
+        &.mzp-is-open {
             display: block;
         }
 

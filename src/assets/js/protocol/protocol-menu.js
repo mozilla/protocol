@@ -30,10 +30,10 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
      */
     Menu.open = function(el, animate) {
         if (animate) {
-            el.classList.add('is-animated');
+            el.classList.add('mzp-is-animated');
         }
 
-        el.classList.add('is-selected');
+        el.classList.add('mzp-is-selected');
 
         _menuOpen = true; // For checking menu state on keyup.
 
@@ -49,14 +49,14 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
      * Note: on small screens more than one menu can be open at the same time.
      */
     Menu.close = function() {
-        var current = document.querySelectorAll('.mzp-c-menu-category.is-selected');
+        var current = document.querySelectorAll('.mzp-c-menu-category.mzp-is-selected');
 
         for (var i = 0; i < current.length; i++) {
             // The following classes must be removed in the correct order
             // to work around a bug in bedrock's classList polyfill for IE9.
             // https://github.com/mozilla/bedrock/issues/6221 :/
-            current[i].classList.remove('is-selected');
-            current[i].classList.remove('is-animated');
+            current[i].classList.remove('mzp-is-selected');
+            current[i].classList.remove('mzp-is-animated');
 
             current[i].querySelector('.mzp-c-menu-title').setAttribute('aria-expanded', false);
         }
@@ -95,7 +95,7 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
      * @param {Object} el - DOM element (`.mzp-c-menu-category.mzp-js-expandable`)
      */
     Menu.toggle = function(el) {
-        var state = el.classList.contains('is-selected') ? true : false;
+        var state = el.classList.contains('mzp-is-selected') ? true : false;
 
         if (!state) {
             Menu.open(el);
@@ -103,8 +103,8 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
             // The following classes must be removed in the correct order
             // to work around a bug in bedrock's classList polyfill for IE9.
             // https://github.com/mozilla/bedrock/issues/6221 :/
-            el.classList.remove('is-selected');
-            el.classList.remove('is-animated');
+            el.classList.remove('mzp-is-selected');
+            el.classList.remove('mzp-is-animated');
             el.querySelector('.mzp-c-menu-title').setAttribute('aria-expanded', false);
 
             if (typeof _options.onMenuClose === 'function') {
@@ -156,7 +156,7 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
          */
         setTimeout(function() {
             // If the menu is open and the newly focused element is not a child, then call close().
-            if (!self.contains(document.activeElement) && self.classList.contains('is-selected')) {
+            if (!self.contains(document.activeElement) && self.classList.contains('mzp-is-selected')) {
                 Menu.close();
             }
         }, 0);

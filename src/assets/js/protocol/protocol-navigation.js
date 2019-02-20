@@ -23,13 +23,13 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
         e.preventDefault();
 
         // Update button state
-        e.target.classList.toggle('is-active');
+        e.target.classList.toggle('mzp-is-active');
 
         // Update menu state
-        navItems.classList.toggle('is-open');
+        navItems.classList.toggle('mzp-is-open');
 
         // Update aria-expended state on menu.
-        var expanded = navItems.classList.contains('is-open') ? true : false;
+        var expanded = navItems.classList.contains('mzp-is-open') ? true : false;
         navItems.setAttribute('aria-expanded', expanded);
 
         if (expanded) {
