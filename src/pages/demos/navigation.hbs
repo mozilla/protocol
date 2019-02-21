@@ -5,7 +5,7 @@ styles:
   - navigation
 ---
 
-{{#embed "patterns.organisms.navigation.navigation"}}
+{{#embed "patterns.organisms.navigation.navigation" logo=true download=true id="navigation-demo"}}
   {{#content "menu"}}
     {{#embed "patterns.molecules.menu.menu"}}
       {{#content "content"}}
@@ -382,59 +382,158 @@ styles:
   {{/content}}
 {{/embed}}
 
-<div class="mzp-l-content">
-  <main class="mzp-l-main">
-    <article class="mzp-c-article">
-      <h1 class="mzp-c-article-title">Navigation Demo</h1>
+<div>
+  <main>
+    <div class="mzp-l-content">
+      <article class="mzp-c-article">
+        <h1 class="mzp-c-article-title">Navigation Demo</h1>
 
-      <p>Et pri porro ceteros tacimates, est at option dignissim intellegat.
-        Tollit fuisset urbanitas nec no, feugiat sensibus an mea, nominavi
-        <a href="#">interpretaris te eam</a>. No virtute imperdiet pro, ut pro
-        sint viderer philosophia. Torquatos necessitatibus sit in, ad sit summo
-        molestie adolescens, liber oratio veniam in per.</p>
+        <p>Et pri porro ceteros tacimates, est at option dignissim intellegat.
+          Tollit fuisset urbanitas nec no, feugiat sensibus an mea, nominavi
+          <a href="#">interpretaris te eam</a>. No virtute imperdiet pro, ut pro
+          sint viderer philosophia. Torquatos necessitatibus sit in, ad sit summo
+          molestie adolescens, liber oratio veniam in per.</p>
 
-      <p>No qui option timeam impetus, dolor salutatus pertinacia ea eam, at
-        inani summo democritum vis. Est id quis admodum tractatos, ei ius
-        eligendi platonem, maiorum eleifend et eam. Ei odio cetero voluptatibus
-        ius, prima blandit epicurei te cum. Illud verterem principes vix te,
-        te pro tale dicit. Debitis senserit no quo, vix et altera mollis
-        scaevola. Sit no soleat aperiri vituperata. Qui <a href="#">id placerat
-        euripidis</a>.</p>
+        <p>No qui option timeam impetus, dolor salutatus pertinacia ea eam, at
+          inani summo democritum vis. Est id quis admodum tractatos, ei ius
+          eligendi platonem, maiorum eleifend et eam. Ei odio cetero voluptatibus
+          ius, prima blandit epicurei te cum. Illud verterem principes vix te,
+          te pro tale dicit. Debitis senserit no quo, vix et altera mollis
+          scaevola. Sit no soleat aperiri vituperata. Qui <a href="#">id placerat
+          euripidis</a>.</p>
 
-      <h2>Tale augue splendide in quo</h2>
+        <h2>Tale augue splendide in quo</h2>
 
-      <ul class="mzp-u-list-styled">
-        <li>Diam repudiare vel cu.</li>
-        <li>Meis augue regione mei at, <a href="#">ornatus epicurei</a> ius eu.</li>
-        <li>Nam nemore consulatu et, alia hinc ex pro. Sumo rebum ea his, cu
-          possit nostro interesset has. Vide mollis eleifend cum cu, nec an
-          aeque simul concludaturque.</li>
-        <li>Eius omnium appellantur eam ne, pri an unum appellantur. Cu ius tota
-          posse dicant, autem quodsi evertitur eum no.</li>
-      </ul>
+        <ul class="mzp-u-list-styled">
+          <li>Diam repudiare vel cu.</li>
+          <li>Meis augue regione mei at, <a href="#">ornatus epicurei</a> ius eu.</li>
+          <li>Nam nemore consulatu et, alia hinc ex pro. Sumo rebum ea his, cu
+            possit nostro interesset has. Vide mollis eleifend cum cu, nec an
+            aeque simul concludaturque.</li>
+          <li>Eius omnium appellantur eam ne, pri an unum appellantur. Cu ius tota
+            posse dicant, autem quodsi evertitur eum no.</li>
+        </ul>
 
-      <h3>Affert graeco eum id</h3>
+        <h3>Affert graeco eum id</h3>
 
-      <p>An quo epicurei placerat repudiare. Ut cetero molestiae mei, per id
-        efficiantur consectetuer, in paulo repudiare vim. Inermis delectus
-        adipiscing eos ad, sed ei graeci eleifend intellegam. Eu abhorreant
-        neglegentur duo, eu mei nisl mundi.</p>
+        <p>An quo epicurei placerat repudiare. Ut cetero molestiae mei, per id
+          efficiantur consectetuer, in paulo repudiare vim. Inermis delectus
+          adipiscing eos ad, sed ei graeci eleifend intellegam. Eu abhorreant
+          neglegentur duo, eu mei nisl mundi.</p>
+      </article>
+    </div>
 
-      <ol class="mzp-u-list-styled">
-        <li>Veniam saperet corrumpit in has. Vim movet doming concludaturque an,
-          elitr libris sit ei. Ut vel probo viris, qui persius scripserit
-          repudiandae ut.</li>
-        <li>Eum doming forensibus at. Has an justo aperiam evertitur. Sea dolor
-          nullam scripta ea, possit appareat pericula ea pro.</li>
-        <li>Mei sint consequuntur ei, est ut quando omittam, possim efficiendi sed id.</li>
-      </ol>
+    {{#embed "patterns.organisms.navigation.navigation" id="in-page-nav-demo"}}
+      {{#content "menu"}}
+        {{#embed "patterns.molecules.menu.menu"}}
+          {{#content "content"}}
+            <li class="mzp-c-menu-category">
+              <a class="mzp-c-menu-title" href="#one">Veniam saperet</a>
+            </li>
+            <li class="mzp-c-menu-category">
+              <a class="mzp-c-menu-title" href="#two">Eum doming</a>
+            </li>
+            <li class="mzp-c-menu-category">
+              <a class="mzp-c-menu-title" href="#three">Mei sint</a>
+            </li>
+            <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
+              <a class="mzp-c-menu-title" href="https://www.mozilla.org/about/" aria-haspopup="true" aria-controls="about-2">Sample</a>
+              <div class="mzp-c-menu-panel mzp-has-card" id="about-2">
+                <div class="mzp-c-menu-panel-container">
+                  <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-about">Close Sample menu</button>
+                  <div class="mzp-c-menu-panel-content">
+                    <ul>
+                      <li>
+                        {{#embed "patterns.molecules.menu.menu-item" icon="true"}}
+                          {{#content "title"}}Header without a link with icon{{/content}}
+                          {{#content "icon"}}<svg class="mzp-c-menu-item-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 6.706V6H2v2h2v8H2v2h7v-2H6v-6c.667-1.333 1.5-2 2.5-2s1.833.667 2.5 2v8h5v-2h-3v-6c.667-1.333 1.5-2 2.5-2s1.833.667 2.5 2v8h4v-2h-2v-6c-.667-2.667-2.167-4-4.5-4-1.52 0-2.687.566-3.5 1.699C11.187 6.566 10.02 6 8.5 6c-.98 0-1.814.235-2.5.706zM8.5 4c1.324 0 2.507.327 3.5.97.993-.643 2.176-.97 3.5-.97 3.308 0 5.563 2.004 6.44 5.515l.06.239V14h2v6H0v-6h2v-4H0V4h8c.164.005.331 0 .5 0zM16 14v-3.484a1.845 1.845 0 0 0-.374-.454c-.068-.055-.088-.062-.126-.062-.038 0-.058.007-.126.062-.111.09-.239.239-.374.454V14h1zm-7 0v-3.484a1.845 1.845 0 0 0-.374-.454C8.558 10.007 8.538 10 8.5 10c-.038 0-.058.007-.126.062-.111.09-.239.239-.374.454V14h1z" fill="#000" fill-rule="nonzero"/></svg>{{/content}}
+                          {{#content "desc"}}
+                            <p class="mzp-c-menu-item-desc">Learn about Mozilla.</p>
+                          {{/content}}
+                          {{#content "list"}}
+                            <ul class="mzp-c-menu-item-list">
+                              <li><a href="https://www.mozilla.org/about/">About Mozilla</a></li>
+                              <li><a href="https://www.mozilla.org/about/leadership/">Leadership</a></li>
+                              <li><a href="https://www.mozilla.org/foundation/">Mozilla Foundation</a></li>
+                            </ul>
+                          {{/content}}
+                        {{/embed}}
+                      </li>
+                      <li>
+                        {{#embed "patterns.molecules.menu.menu-item" icon="true" link="https://careers.mozilla.org/"}}
+                          {{#content "title"}}Careers{{/content}}
+                          {{#content "icon"}}<svg class="mzp-c-menu-item-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M10.95 21.02H8.772L6.11 22.796A2 2 0 0 1 3 21.13v-4.596a2 2 0 0 1 .89-1.664L7 12.798V9.52a10 10 0 0 1 1.264-4.866l1.989-3.571a2 2 0 0 1 3.494 0l1.99 3.571A10 10 0 0 1 17 9.52v3.28l3.11 2.072a2 2 0 0 1 .89 1.664v4.596a2 2 0 0 1-3.11 1.665l-2.662-1.776H12.95V23a1 1 0 0 1-2 0v-1.98zm2-2H15v-9.5a8 8 0 0 0-1.01-3.894L12 2.056l-1.99 3.57A8 8 0 0 0 9 9.52v9.501h1.95V17a1 1 0 1 1 2 0v2.02zM7 15.202l-2 1.333v4.596l2-1.333v-4.596zm10 4.596l2 1.333v-4.596l-2-1.333v4.596zM12 10a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" fill="#000" fill-rule="nonzero"/></svg>{{/content}}
+                          {{#content "desc"}}
+                            <p class="mzp-c-menu-item-desc">Work for a mission-driven organization that builds purpose-driven products.</p>
+                          {{/content}}
+                          {{#content "list"}}{{/content}}
+                        {{/embed}}
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        {{#embed "patterns.molecules.menu.menu-item"}}
+                          {{#content "title"}}Header without a link or icon{{/content}}
+                          {{#content "desc"}}
+                            <p class="mzp-c-menu-item-desc">Join the fight for a healthy internet.</p>
+                          {{/content}}
+                          {{#content "list"}}
+                            <ul class="mzp-c-menu-item-list">
+                              <li><a href="https://www.mozilla.org/contribute/events/">Events</a></li>
+                              <li><a href="https://donate.mozilla.org/">Donate</a></li>
+                            </ul>
+                          {{/content}}
+                        {{/embed}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {{/content}}
+        {{/embed}}
+      {{/content}}
+    {{/embed}}
 
-      <p>Suavitate comprehensam ea nam, tacimates vituperata vim te. Usu in
-        laboramus maiestatis definitionem, noster complectitur at vim. Qui ut
-        doctus sententiae percipitur, vivendum mediocritatem ea eum. Eu cum
-        tantas nostrud, ea docendi blandit nec, vis id aeterno intellegat
-        accommodare.</p>
-    </article>
+    <div class="mzp-l-content">
+      <article class="mzp-c-article">
+        <ol class="mzp-u-list-styled">
+          <li id="one">
+            <p><strong>Veniam saperet</strong> corrumpit in has. Vim movet doming concludaturque an,
+            elitr libris sit ei. Ut vel probo viris, qui persius scripserit
+            repudiandae ut.</p>
+            <p>Suavitate comprehensam ea nam, tacimates vituperata vim te. Usu in
+              laboramus maiestatis definitionem, noster complectitur at vim. Qui ut
+              doctus sententiae percipitur, vivendum mediocritatem ea eum. Eu cum
+              tantas nostrud, ea docendi blandit nec, vis id aeterno intellegat
+              accommodare.</p>
+          </li>
+          <li id="two">
+            <p><strong>Eum doming</strong> forensibus at. Has an justo aperiam evertitur. Sea dolor
+            nullam scripta ea, possit appareat pericula ea pro.</p>
+            <p>Suavitate comprehensam ea nam, tacimates vituperata vim te. Usu in
+              laboramus maiestatis definitionem, noster complectitur at vim. Qui ut
+              doctus sententiae percipitur, vivendum mediocritatem ea eum. Eu cum
+              tantas nostrud, ea docendi blandit nec, vis id aeterno intellegat
+              accommodare.</p>
+          </li>
+          <li id="three">
+            <p><strong>Mei sint</strong> consequuntur ei, est ut quando omittam, possim efficiendi sed id.</p>
+            <p>Suavitate comprehensam ea nam, tacimates vituperata vim te. Usu in
+              laboramus maiestatis definitionem, noster complectitur at vim. Qui ut
+              doctus sententiae percipitur, vivendum mediocritatem ea eum. Eu cum
+              tantas nostrud, ea docendi blandit nec, vis id aeterno intellegat
+              accommodare.</p>
+          </li>
+        </ol>
+
+        <p>Suavitate comprehensam ea nam, tacimates vituperata vim te. Usu in
+          laboramus maiestatis definitionem, noster complectitur at vim. Qui ut
+          doctus sententiae percipitur, vivendum mediocritatem ea eum. Eu cum
+          tantas nostrud, ea docendi blandit nec, vis id aeterno intellegat
+          accommodare.</p>
+      </article>
+    </div>
   </main>
 </div>
 

@@ -13,6 +13,7 @@
 
 ## Bug Fixes
 
+* **js:** Enable second navigation menu on pages (#300)
 * **css:** Use `mzp` namespace for menu and navigation state classes (#324)
 * **js:** (breaking) Make the Menu molecule more resilient to JS errors (#320)
 * **css:** Social icon backgrounds no longer repeat (#317)

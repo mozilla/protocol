@@ -11,34 +11,37 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     'use strict';
 
     var Navigation = {};
-    var navItems;
+    var navItemsLists;
     var _options = {
-        onNavOpen: null
+        onNavOpen: null,
+        onNavClose: null
     };
 
     /**
      * Event handler for navigation menu button `click` events.
      */
     Navigation.onClick = function(e) {
+        var thisNavItemList = e.target.parentNode.querySelector('.mzp-c-navigation-items');
+
         e.preventDefault();
 
         // Update button state
         e.target.classList.toggle('mzp-is-active');
 
         // Update menu state
-        navItems.classList.toggle('mzp-is-open');
+        thisNavItemList.classList.toggle('mzp-is-open');
 
         // Update aria-expended state on menu.
-        var expanded = navItems.classList.contains('mzp-is-open') ? true : false;
-        navItems.setAttribute('aria-expanded', expanded);
+        var expanded = thisNavItemList.classList.contains('mzp-is-open') ? true : false;
+        thisNavItemList.setAttribute('aria-expanded', expanded);
 
         if (expanded) {
             if (typeof _options.onNavOpen === 'function') {
-                _options.onNavOpen();
+                _options.onNavOpen(thisNavItemList);
             }
         } else {
             if (typeof _options.onNavClose === 'function') {
-                _options.onNavClose();
+                _options.onNavClose(thisNavItemList);
             }
         }
     };
@@ -47,16 +50,21 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
      * Set initial ARIA navigation states.
      */
     Navigation.setAria = function() {
-        navItems.setAttribute('aria-expanded', false);
+        for (var i = 0; i < navItemsLists.length; i++) {
+            navItemsLists[i].setAttribute('aria-expanded', false);
+        }
     };
 
     /**
      * Bind navigation event handlers.
      */
     Navigation.bindEvents = function() {
-        navItems = document.querySelector('.mzp-c-navigation-items');
-        if (navItems) {
-            document.querySelector('.mzp-c-navigation-menu-button').addEventListener('click', Navigation.onClick, false);
+        navItemsLists = document.querySelectorAll('.mzp-c-navigation-items');
+        if (navItemsLists.length > 0) {
+            var navButtons = document.querySelectorAll('.mzp-c-navigation-menu-button');
+            for (var i = 0; i < navButtons.length; i++) {
+                navButtons[i].addEventListener('click', Navigation.onClick, false);
+            }
             Navigation.setAria();
         }
     };
