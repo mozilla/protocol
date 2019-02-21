@@ -150,16 +150,16 @@
 // Mobile Navigation Icon
 
 .mzp-c-navigation-menu-button {
+    @include bidi(((background-position, right 6px center, left 6px center ),));
     @include bidi(((float, right, left),));
-    @include image-replaced;
-    background: transparent url('#{$image-path}/icons/ui/menu-black.svg') center center no-repeat;
+    @include bidi(((padding-right, 32px, padding-left, 0),));
+    background-color: transparent;
+    background-image: url('#{$image-path}/icons/ui/menu-black.svg');
+    background-repeat: no-repeat;
     border-radius: 4px;
     border: none;
-    cursor: pointer;
     display: none;
     height: 32px;
-    padding: 0;
-    width: 32px;
 
     &:hover,
     &:active,
@@ -168,6 +168,15 @@
         background-color: $color-gray-20;
     }
 }
+
+.mzp-c-navigation-menu-button:not(.has-label) {
+    @include bidi(((background-position, center center, center center ),));
+    @include bidi(((padding, 0, 0),));
+    @include image-replaced;
+    cursor: pointer;
+    width: 32px;
+}
+
 
 .js .mzp-c-navigation-menu-button {
     display: block;
