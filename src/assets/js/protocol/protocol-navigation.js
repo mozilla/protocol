@@ -13,14 +13,15 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     var Navigation = {};
     var navItemsLists;
     var _options = {
-        onNavOpen: null
+        onNavOpen: null,
+        onNavClose: null
     };
 
     /**
      * Event handler for navigation menu button `click` events.
      */
     Navigation.onClick = function(e) {
-        var thisNavItemList  = e.target.parentNode.querySelector('.mzp-c-navigation-items');
+        var thisNavItemList = e.target.parentNode.querySelector('.mzp-c-navigation-items');
 
         e.preventDefault();
 
@@ -36,11 +37,11 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
 
         if (expanded) {
             if (typeof _options.onNavOpen === 'function') {
-                _options.onNavOpen();
+                _options.onNavOpen(thisNavItemList);
             }
         } else {
             if (typeof _options.onNavClose === 'function') {
-                _options.onNavClose();
+                _options.onNavClose(thisNavItemList);
             }
         }
     };
