@@ -152,7 +152,7 @@
 .mzp-c-navigation-menu-button {
     @include bidi(((background-position, right 6px center, left 6px center ),));
     @include bidi(((float, right, left),));
-    @include bidi(((padding-right, 32px, padding-left, 0),));
+    @include bidi(((padding, 0 32px 0 6px, 0 6px 0 32px),));
     background-color: transparent;
     background-image: url('#{$image-path}/icons/ui/menu-black.svg');
     background-repeat: no-repeat;
