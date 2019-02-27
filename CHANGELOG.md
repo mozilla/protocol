@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Add optional label to navigation mobile menu button (#313)
 * **docs:** Add example menu to menu molecule page (#322)
 * **css:** Define basic styles for dl lists (#295)
 * **css:** Add basic styles for hr elements (#296)
