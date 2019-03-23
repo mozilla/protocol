@@ -1,3 +1,9 @@
+# HEAD
+
+# Bug Fixes
+
+* **css:** Visited link colour in t-dark themes too dark #335
+
 # 5.0.0
 
 ## Features

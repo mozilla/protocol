@@ -234,9 +234,14 @@
         text-decoration: underline;
     }
 
+    a:visited {
+        opacity: 0.8;
+    }
+
     a:hover,
     a:focus,
     a:active {
+        opacity: 1;
         text-decoration: none;
     }
 }
