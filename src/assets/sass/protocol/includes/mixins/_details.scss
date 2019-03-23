@@ -1,0 +1,47 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+@mixin details {
+    .is-summary {
+        button {
+            color: inherit;
+            background: transparent;
+            font-family: inherit;
+            font-weight: inherit;
+            font-size: inherit;
+            text-align: inherit;
+            border: 0;
+            width: 100%;
+            position: relative;
+        }
+    }
+
+    .is-closed[aria-hidden="true"] {
+        display: none;
+    }
+}
+
+@mixin summary {
+    position: relative;
+    @include bidi(((padding-right, $layout-md, padding-left, 0),));
+
+    &:before {
+        background: $url-image-expand-black top left no-repeat;
+        @include background-size(16px, 16px);
+        @include bidi(((right, 8px, left, auto),));
+        @include transition(transform 100ms ease-in-out);
+        content: '';
+        height: 16px;
+        margin-top: -8px;
+        position: absolute;
+        top: 50%;
+        width: 16px;
+    }
+}
+
+@mixin summary-open {
+    @include transform(rotate(45deg));
+}

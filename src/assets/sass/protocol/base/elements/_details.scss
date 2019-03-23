@@ -3,51 +3,23 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @import '../../includes/lib';
+@import '../../includes/mixins/details';
 
 .mzp-c-details,
 details {
-    .is-summary {
-        button {
-            color: inherit;
-            background: transparent;
-            font-family: inherit;
-            font-weight: inherit;
-            font-size: inherit;
-            text-align: inherit;
-            border: 0;
-            width: 100%;
-            position: relative;
-        }
-    }
-
-    .is-closed[aria-hidden="true"] {
-        display: none;
-    }
+    @include details;
 }
 
 summary,
 details .is-summary button,
 .mzp-c-details .is-summary button {
-    position: relative;
-
-    &:before {
-        background: $url-image-expand-black top left no-repeat;
-        @include background-size(16px, 16px);
-        @include bidi(((right, 8px, left, auto),));
-        @include transition(transform 100ms ease-in-out);
-        content: '';
-        height: 16px;
-        margin-top: -8px;
-        position: absolute;
-        top: 50%;
-        width: 16px;
-    }
+    @include summary;
 }
 
 details[open] summary:before,
 details .is-summary button[aria-expanded=true]:before,
 .mzp-c-details .is-summary button[aria-expanded=true]:before {
-    @include transform(rotate(45deg));
+    @include summary-open;
 }
 
 summary::-webkit-details-marker {
