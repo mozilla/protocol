@@ -2,6 +2,7 @@
 
 # Bug Fixes
 
+* **css:** Update at2x to allow background-size: contain (#336)
 * **css:** (breaking) Remove curve under hero component (#311)
 * **css:** (breaking) Move Zilla Slab from default theme to custom theme (#342)
 * **css:** Call Out component is missing display: flex vendor prefixes (#218)

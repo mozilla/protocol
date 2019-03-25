@@ -13,6 +13,11 @@
 @mixin at2x($path, $w: auto, $h: auto) {
     $hr-suffix: '-high-res';
 
+    // Do not set height to auto if width is contain
+    @if $w = 'contain' {
+        $h: #{''};
+    }
+
     // Set a counter and get the length of the image path.
     $position: -1;
     $strpath: '#{$path}';
