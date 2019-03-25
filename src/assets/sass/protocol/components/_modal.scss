@@ -46,18 +46,18 @@ html.mzp-is-noscroll {
 }
 
 .mzp-c-modal-window {
-    padding: $padding-lg;
+    padding: $spacing-lg;
 }
 
 .mzp-c-modal-inner {
     @include clearfix;
     background: rgba(0, 0, 0, .9);
     max-width: 1200px;
-    padding: $padding-xl;
+    padding: $spacing-xl;
     position: relative;
 
     &> header {
-        @include bidi(((padding-right, $padding-xl * 2, padding-left, 0),));
+        @include bidi(((padding-right, $spacing-xl * 2, padding-left, 0),));
 
         h2 {
             @include text-display-sm;
@@ -67,7 +67,7 @@ html.mzp-is-noscroll {
     }
 
     @media #{$mq-lg} {
-        margin: $margin-lg auto ($margin-xl * 2);
+        margin: $spacing-lg auto ($spacing-xl * 2);
     }
 }
 
@@ -105,7 +105,7 @@ html.mzp-is-noscroll {
     @include light-links;
     background: transparent;
     margin: 0 auto;
-    padding-top: $padding-lg;
+    padding-top: $spacing-lg;
     color: $color-white;
 }
 
@@ -114,7 +114,7 @@ html.mzp-is-noscroll {
     img, video {
         display: block;
         width: 100%;
-        margin-bottom: $margin-xl;
+        margin-bottom: $spacing-xl;
     }
 }
 

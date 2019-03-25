@@ -9,11 +9,11 @@
 
 .mzp-c-card-picto {
     color: $color-black;
-    padding: $padding-xl 0;
+    padding: $spacing-xl 0;
     text-align: center;
 
     .mzp-c-card-picto-content {
-        padding-top: 56px + $padding-lg;
+        padding-top: 56px + $spacing-lg;
         position: relative;
 
         &:before {
@@ -48,12 +48,12 @@
     }
 
     @media #{$mq-md} {
-        padding: $padding-2xl 0;
+        padding: $spacing-2xl 0;
 
         .mzp-c-card-picto-content {
             margin: 0 auto;
             max-width: 240px;
-            padding: (56px + $padding-lg) $padding-lg 0;
+            padding: (56px + $spacing-lg) $spacing-lg 0;
         }
     }
 }
@@ -68,7 +68,7 @@
     .mzp-c-card-picto-content {
         @include bidi((
             (clear, left, right),
-            (padding-left, 56px + $padding-lg, padding-right, 0),
+            (padding-left, 56px + $spacing-lg, padding-right, 0),
         ));
         padding-top: 0;
         position: relative;
