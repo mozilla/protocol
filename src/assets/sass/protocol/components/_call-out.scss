@@ -203,14 +203,14 @@
             }
 
             .mzp-c-call-out-content {
+                @include flexbox;
                 width: auto;
                 align-items: center;
-                display: flex;
             }
 
             .mzp-c-call-out-cta {
+                @include flexbox;
                 align-items: center;
-                display: flex;
                 justify-content: flex-end;
                 width: auto;
             }

@@ -150,8 +150,8 @@
                 display: grid;
 
                 .mzp-c-card-feature-content {
-                   align-items: center;
-                   display: flex;
+                    @include flexbox;
+                    align-items: center;
                 }
             }
 
