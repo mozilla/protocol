@@ -2,6 +2,7 @@
 
 # Bug Fixes
 
+* **css:** (breaking) Update protocol/tokens v3.0.0
 * **css:** blockquote needs mzp-t-firefox theme #303
 * **css:** Summary button text over laps icon #331
 * **css:** Make summary and details widget styles into mixins #332
