@@ -2,6 +2,7 @@
 
 # Bug Fixes
 
+* **css:** (breaking) Remove curve under hero component (#311)
 * **css:** (breaking) Move Zilla Slab from default theme to custom theme (#342)
 * **css:** Call Out component is missing display: flex vendor prefixes (#218)
 * **css:** Decrease size of article h3 and h4s #293
