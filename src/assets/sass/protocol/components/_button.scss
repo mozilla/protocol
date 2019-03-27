@@ -55,8 +55,8 @@ a.mzp-c-button.mzp-t-dark {
     }
 
     &:disabled {
-        background-color: $color-gray-60;
-        border-color: $color-gray-60;
+        background-color: $color-gray-80;
+        border-color: $color-gray-80;
         color: $color-black;
         pointer-events: none;
     }
@@ -82,8 +82,8 @@ a.mzp-c-button.mzp-t-dark {
 
     &:disabled {
         background-color: transparent;
-        border-color: $color-gray-60;
-        color: $color-gray-60;
+        border-color: $color-gray-80;
+        color: $color-gray-80;
     }
 }
 
@@ -132,8 +132,8 @@ a.mzp-c-button.mzp-t-product.mzp-t-secondary {
 
     &:disabled {
         background-color: transparent;
-        border-color: $color-gray-60;
-        color: $color-gray-60;
+        border-color: $color-gray-80;
+        color: $color-gray-80;
     }
 }
 

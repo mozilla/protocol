@@ -77,7 +77,7 @@
 
 .mzp-c-hero-desc {
     @include text-body-lg;
-    color: $color-gray-70;
+    color: $color-gray-90;
     margin-bottom: $spacing-md;
 }
 
@@ -242,7 +242,7 @@
 
         &.mzp-t-dark:after,
         .mzp-t-dark &:after {
-            background-color: $color-gray-60;
+            background-color: $color-gray-80;
         }
 
         // Utility class to remove the bottom curve.

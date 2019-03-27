@@ -24,7 +24,7 @@
         @include bidi((
             (margin-right, $spacing-xs, margin-left, 0),
         ));
-        color: $color-gray-60;
+        color: $color-gray-80;
         display: inline-block;
 
         &:after {
@@ -73,7 +73,7 @@
 
     .mzp-is-current a {
         font-weight: bold;
-        background-color: $color-gray-40;
+        background-color: $color-gray-20;
     }
 }
 
@@ -90,7 +90,7 @@
             (right, 0, left, auto),
         ));
         @include transform(rotate(90deg));
-        color: $color-gray-60;
+        color: $color-gray-80;
         content: none;
         font-size: 1.5em;
         position: absolute;

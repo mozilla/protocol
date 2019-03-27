@@ -70,7 +70,7 @@
     @include clearfix;
 
     @media #{$mq-md} {
-        border-bottom: 1px solid $color-gray-70;
+        border-bottom: 1px solid $color-gray-90;
         padding-bottom: $layout-lg;
     }
 
@@ -140,7 +140,7 @@
         @include text-body-md;
         @include bidi(((text-align, left, right),));
         background-color: transparent;
-        border-bottom: 1px solid $color-gray-70;
+        border-bottom: 1px solid $color-gray-90;
         border: 0;
         color: inherit;
         margin-bottom: 0;
