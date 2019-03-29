@@ -10,8 +10,11 @@ h1, h2, h3, h4, h5, h6, legend {
     margin: 0 0 .5em;
 }
 
-h1, h2, h3, h4 {
-    @include zilla-slab;
+// Mozilla theme class for headlines using Zilla.
+.mzp-t-mozilla {
+    h1, h2, h3, h4 {
+        @include zilla-slab;
+    }
 }
 
 // Firefox theme class for headlines using Open Sans.
