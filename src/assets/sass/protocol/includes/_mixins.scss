@@ -234,6 +234,10 @@
         text-decoration: underline;
     }
 
+    a:visited {
+        color: transparentize($color-white, 0.2);
+    }
+
     a:hover,
     a:focus,
     a:active {

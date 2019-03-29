@@ -26,10 +26,7 @@
 }
 
 .mzp-t-dark {
-    :link,
-    :link:visited {
-        color: $color-white;
-    }
+    @include light-links;
 }
 
 .mzp-c-cta-link {

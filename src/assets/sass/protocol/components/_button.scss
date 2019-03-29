@@ -7,7 +7,8 @@
 /* -------------------------------------------------------------------------- */
 // Primary Button
 
-.mzp-c-button {
+.mzp-c-button,
+a.mzp-c-button {
     @include border-box;
     @include text-cta;
     @include transition(background-color 100ms, box-shadow 100ms, color 100ms, transform 100ms);
@@ -19,7 +20,7 @@
     display: inline-block;
     font-weight: bold;
     padding: ($padding-md - 2px) ($padding-xl - 2px); //2px extra padding removed to compensate for 2px border.
-    text-decoration: none;
+    text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
 
     &:focus,
     &:hover {
@@ -40,7 +41,8 @@
     padding: ($padding-sm - 2px) ($padding-md - 2px);
 }
 
-.mzp-c-button.mzp-t-dark  {
+.mzp-c-button.mzp-t-dark,
+a.mzp-c-button.mzp-t-dark {
     background-color: $color-white;
     border-color: $color-white;
     color: $color-black;
@@ -88,7 +90,8 @@
 /* -------------------------------------------------------------------------- */
 // Product Buttons
 
-.mzp-c-button.mzp-t-product {
+.mzp-c-button.mzp-t-product,
+a.mzp-c-button.mzp-t-product {
     background-color: $color-blue-60;
     border-color: transparent;
     color: $color-white;
@@ -112,7 +115,8 @@
     padding: $padding-sm $padding-md;
 }
 
-.mzp-c-button.mzp-t-product.mzp-t-secondary {
+.mzp-c-button.mzp-t-product.mzp-t-secondary,
+a.mzp-c-button.mzp-t-product.mzp-t-secondary {
     background-color: transparent;
     border-color: $color-blue-60;
     color: $color-blue-60;
