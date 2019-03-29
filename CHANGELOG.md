@@ -1,7 +1,8 @@
 # HEAD
 
 # Bug Fixes
-
+* **css:** Summary button text over laps icon #331
+* **css:** Make summary and details widget styles into mixins #332
 * **css:** Visited link colour in t-dark themes too dark #335
 
 # 5.0.0
