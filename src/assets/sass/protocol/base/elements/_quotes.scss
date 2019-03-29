@@ -18,6 +18,9 @@ blockquote {
     & > :last-child {
         margin-bottom: 0;
     }
+
+    .mzp-t-firefox &,
+    &.mzp-t-firefox {
+        @include open-sans;
+    }
 }
-
-
