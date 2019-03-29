@@ -10,7 +10,6 @@ blockquote {
         (border-left, 5px solid $color-gray-20, border-right, 0),
         ));
     @include text-display-md;
-    @include zilla-slab;
     margin: $spacing-md auto;
     padding: $spacing-sm $spacing-lg;
     font-weight: bold;
@@ -22,5 +21,10 @@ blockquote {
     .mzp-t-firefox &,
     &.mzp-t-firefox {
         @include open-sans;
+    }
+
+    &.mzp-t-mozilla,
+    .mzp-t-mozilla & {
+        @include zilla-slab;
     }
 }
