@@ -1,0 +1,257 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+$padding: 48px;
+
+%content-padding {
+    padding: $layout-xs;
+
+    @media #{$mq-md} {
+        padding: $layout-xs $layout-lg;
+    }
+
+    @media #{$mq-lg} {
+        padding: $layout-xs $layout-xl;
+    }
+}
+
+.mzp-c-block {
+    position: relative;
+    padding: $padding;
+    max-width: 1228px;
+    min-width: 304px;
+    margin: 0 auto ($padding * 2) auto;
+
+    @media all and (min-width:768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "first second";
+        grid-gap: $padding * 2;
+
+        &.mzp-l-block-body-33 {
+            grid-template-columns: 2fr 3fr;
+        }
+
+        &.mzp-l-block-body-33.mzp-is-inversed {
+            grid-template-columns: 3fr 2fr;
+        }
+
+        &.mzp-l-block-body-66 {
+            grid-template-columns: 3fr 2fr;
+        }
+
+        &.mzp-l-block-body-66.mzp-is-inversed {
+            grid-template-columns: 2fr 3fr;
+        }
+    }
+}
+
+.mzp-c-block-body {
+    grid-area: first;
+    position: relative;
+    min-width: 0; //because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+
+    .mzp-is-inversed & {
+        grid-area: second;
+    }
+
+    @media all and (min-width:768px) {
+        > *:first-child {
+            margin-top: 0;
+        }
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &.v-top {
+        align-self: start;
+    }
+
+    &.v-center {
+        align-self: center;
+    }
+
+    &.v-bottom {
+        align-self: end;
+    }
+
+    &.h-start {
+        text-align: left;
+    }
+
+    &.h-center {
+        text-align: center;
+    }
+
+    &.h-end {
+        text-align: right;
+    }
+}
+
+
+.mzp-c-block-media {
+    grid-area: second;
+    position: relative;
+    min-width: 0; //https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+
+    .mzp-is-inversed & {
+        grid-area: first;
+    }
+
+    img {
+        display: block;
+    }
+
+    // alignment
+    &.v-top {
+        align-self: start;
+    }
+
+    &.v-center {
+        align-self: center;
+    }
+
+    &.v-bottom {
+        align-self: end;
+    }
+
+    // padding
+    @media all and (max-width:767px) {
+        &.fit-flush {
+        margin: $padding * -1;
+
+        &:first-child {
+        margin-bottom: 0;
+        }
+
+        &:last-child {
+        margin-top: 0;
+        }
+    }
+
+    &.fit-flush-top {
+    margin-top: $padding * -1;
+
+        &:last-child {
+            margin-top: 0;
+        }
+    }
+
+    &.fit-flush-side {
+        margin-right: $padding * -1;
+        margin-left: $padding * -1;
+    }
+
+    &.fit-flush-bottom {
+        margin-bottom: $padding * -1;
+
+        &:first-child {
+        margin-bottom: 0;
+        }
+    }
+
+    &.fit-pop {
+        margin: $padding * 2 * -1;
+
+        &:first-child {
+            margin-bottom: 0;
+        }
+
+        &:last-child {
+            margin-top: 0;
+        }
+    }
+
+    &.fit-pop-top {
+        margin-top: $padding * 2 * -1;
+
+        &:last-child {
+            margin-top: 0;
+        }
+    }
+
+    &.fit-pop-side {
+        margin-right: $padding * 2 * -1;
+        margin-left: $padding * 2 * -1;
+    }
+
+    &.fit-pop-bottom {
+        margin-bottom: $padding * 2 * -1;
+
+        &:first-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media all and (min-width:768px) {
+    &.fit-flush {
+        margin: $padding * -1;
+        margin-left: 0;
+    }
+
+    &.fit-flush-top {
+        margin-top: $padding * -1;
+    }
+
+    &.fit-flush-side {
+        margin-right: $padding * -1;
+    }
+
+    &.fit-flush-bottom {
+        margin-bottom: $padding * -1;
+    }
+
+    &.fit-pop {
+        margin: $padding * 2 * -1;
+        margin-left: 0;
+    }
+
+    &.fit-pop-top {
+        margin-top: $padding * 2 * -1;
+    }
+
+    &.fit-pop-side {
+        margin-right: $padding * 2 * -1;
+    }
+
+    &.fit-pop-bottom {
+        margin-bottom: $padding * 2 * -1;
+    }
+}
+
+// side
+@media all and (min-width:768px) {
+    &.grow-cover {
+        align-self: stretch;
+
+        img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        max-width: none;
+        max-height: 100%;
+        width: auto;
+
+            .mzp-is-inversed & {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+
+    &.grow-push {
+        align-self: stretch;
+
+            img {
+                max-width: none;
+            }
+        }
+    }
+}

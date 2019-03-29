@@ -1,0 +1,33 @@
+---
+name: Block
+order: 1
+description: |
+  Multi-purpose component for putting a group of text and a single image or video beside it.
+notes: |
+  - Highly customizable positioning options.
+  - default
+  - No default typorgraphy styles are applied to the body content, use atoms to achive the desired content and appearnace.
+  - Add the `mzp-t-dark` class to invert text colors for dark backgrounds.
+  - [See the demo page](/demos/block.html) for more examples in a full window context.
+links:
+    More examples: /demos/block.html
+---
+
+<section class="mzp-c-block {{block_classes}}">
+    <div class="mzp-c-block-body {{body_classes}}">
+      {{#block "content"}}
+        <h1>A Headline With 30 Characters</h1>
+        <p>A description with a maximum of 140 characters and <a href="#">a link</a>. That means we usually only have room for one or two sentences. Like this.</p>
+        <p>
+          <a class="mzp-c-button" href="#">Call to action</a>
+        </p>
+      {{/block}}
+    </div>
+    <div class="mzp-c-block-media {{media_classes}}">
+      {{#if img_src }}
+        <img src="{{@root.baseurl}}/static/img/block/{{img_src}}" alt="">
+      {{ else }}
+        <img src="{{@root.baseurl}}/static/img/block/devices.png" alt="" srcset="{{@root.baseurl}}/static/img/block/devices-high-res.png 2x">
+      {{/if}}
+    </div>
+</section>
