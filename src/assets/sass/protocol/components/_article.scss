@@ -13,11 +13,11 @@
     }
 
     h3 {
-        @include text-display-lg;
+        @include text-display-sm;
     }
 
     h4 {
-        @include text-display-sm;
+        @include text-display-xs;
     }
 
     @media #{$mq-md} {
