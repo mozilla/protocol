@@ -10,7 +10,7 @@
 .mzp-c-card {
     @include border-box;
     background: $color-white;
-    margin-bottom: $margin-lg;
+    margin-bottom: $spacing-lg;
 
     // Preserve aspect ratio of images and avoid content jump when loading.
     &.mzp-has-aspect-1-1 .mzp-c-card-media-wrapper {
@@ -41,15 +41,15 @@
 
     .mzp-c-card-content {
         @include border-box;
-        padding: $padding-sm;
+        padding: $spacing-sm;
     }
 
     .mzp-c-card-tag {
         @include open-sans;
         @include text-body-sm;
-        color: $color-gray-60;
+        color: $color-gray-80;
         font-weight: normal;
-        margin-bottom: $margin-xs;
+        margin-bottom: $spacing-xs;
     }
 
     &.mzp-has-video .mzp-c-card-tag,
@@ -82,12 +82,12 @@
     }
 
     .mzp-c-card-desc {
-        margin: $margin-xs 0 0;
+        margin: $spacing-xs 0 0;
     }
 
     .mzp-c-card-cta {
         font-weight: bold;
-        margin: $margin-xs 0 0;
+        margin: $spacing-xs 0 0;
     }
 
     .mzp-c-card-block-link {
@@ -121,8 +121,8 @@
 
     .mzp-c-card-meta {
         @include text-body-xs;
-        color: $color-gray-60;
-        margin: $margin-lg 0 0;
+        color: $color-gray-80;
+        margin: $spacing-lg 0 0;
     }
 
     @media #{$mq-sm} {
@@ -130,7 +130,7 @@
     }
 
     @media #{$mq-md} {
-        margin-bottom: $margin-xl;
+        margin-bottom: $spacing-xl;
     }
 }
 

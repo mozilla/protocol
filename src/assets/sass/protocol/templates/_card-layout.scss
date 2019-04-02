@@ -19,10 +19,10 @@
         .mzp-c-card {
             @include bidi((
                 (float, left, right),
-                (margin-left, 0, $margin-xl),
-                (margin-right, $margin-xl, 0),
+                (margin-left, 0, $spacing-xl),
+                (margin-right, $spacing-xl, 0),
             ));
-            width: calc(50% - (#{$margin-xl} / 2));
+            width: calc(50% - (#{$spacing-xl} / 2));
 
             &:nth-child(odd) {
                 margin-left: 0;
@@ -37,12 +37,12 @@
 
     @media #{$mq-lg} {
         .mzp-c-card {
-            width: calc(33.3% - (#{$margin-xl} - (#{$margin-xl} / 3)));
+            width: calc(33.3% - (#{$spacing-xl} - (#{$spacing-xl} / 3)));
 
             &:nth-child(odd) {
                 @include bidi((
-                    (margin-left, 0, $margin-xl),
-                    (margin-right, $margin-xl, 0),
+                    (margin-left, 0, $spacing-xl),
+                    (margin-right, $spacing-xl, 0),
                 ));
             }
 
@@ -57,7 +57,7 @@
         }
 
         .mzp-c-card.mzp-c-card-large {
-            width: calc(66.6% - (#{$margin-xl} / 3));
+            width: calc(66.6% - (#{$spacing-xl} / 3));
         }
     }
 }
@@ -74,10 +74,10 @@
         .mzp-c-card {
             @include bidi((
                 (float, left, right),
-                (margin-left, 0, $margin-xl),
-                (margin-right, $margin-xl, 0),
+                (margin-left, 0, $spacing-xl),
+                (margin-right, $spacing-xl, 0),
             ));
-            width: calc(50% - (#{$margin-xl} / 2));
+            width: calc(50% - (#{$spacing-xl} / 2));
 
             &:nth-child(even) {
                 margin-left: 0;
@@ -89,15 +89,15 @@
     @media #{$mq-lg} {
         .mzp-c-card {
             @include bidi((
-                (margin-left, 0, $margin-xl),
-                (margin-right, $margin-xl, 0),
+                (margin-left, 0, $spacing-xl),
+                (margin-right, $spacing-xl, 0),
             ));
-            width: calc(25% - (#{$margin-xl} - (#{$margin-xl} / 4)));
+            width: calc(25% - (#{$spacing-xl} - (#{$spacing-xl} / 4)));
 
             &:nth-child(even) {
                 @include bidi((
-                    (margin-left, 0, $margin-xl),
-                    (margin-right, $margin-xl, 0),
+                    (margin-left, 0, $spacing-xl),
+                    (margin-right, $spacing-xl, 0),
                 ));
             }
 
@@ -122,11 +122,11 @@
         @include clearfix;
 
         .mzp-c-card {
-            width: calc(50% - (#{$margin-xl} / 2));
+            width: calc(50% - (#{$spacing-xl} / 2));
             @include bidi((
                 (float, left, right),
-                (margin-left, 0, $margin-xl),
-                (margin-right, $margin-xl, 0),
+                (margin-left, 0, $spacing-xl),
+                (margin-right, $spacing-xl, 0),
             ));
 
             &:nth-child(even) {
@@ -138,12 +138,12 @@
 
     @media #{$mq-lg} {
         .mzp-c-card {
-            width: calc(33.3% - (#{$margin-xl} - (#{$margin-xl} / 3)));
+            width: calc(33.3% - (#{$spacing-xl} - (#{$spacing-xl} / 3)));
 
             &:nth-child(even) {
                 @include bidi((
-                    (margin-left, 0, $margin-xl),
-                    (margin-right, $margin-xl, 0),
+                    (margin-left, 0, $spacing-xl),
+                    (margin-right, $spacing-xl, 0),
                 ));
             }
 
@@ -186,8 +186,8 @@
         .mzp-c-card {
             @include bidi((
                 (float, left, right),
-                (margin-left, 0, $margin-xl),
-                (margin-right, $margin-xl, 0),
+                (margin-left, 0, $spacing-xl),
+                (margin-right, $spacing-xl, 0),
             ));
 
             &:nth-child(2n) {
@@ -202,7 +202,7 @@
     }
 
     .mzp-l-card-half .mzp-c-card {
-        width: calc(50% - (#{$margin-xl} - (#{$margin-xl} / 2)));
+        width: calc(50% - (#{$spacing-xl} - (#{$spacing-xl} / 2)));
     }
 }
 

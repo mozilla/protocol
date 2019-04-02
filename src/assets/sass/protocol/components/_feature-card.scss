@@ -8,7 +8,7 @@
 // A single large feature card with media, headline & description.
 
 .mzp-c-card-feature {
-    margin: 0 auto $margin-xl;
+    margin: 0 auto $spacing-xl;
     text-align: center;
 
     // Preserve aspect ratio of images and avoid content jump when loading.
@@ -35,7 +35,7 @@
 
     .mzp-c-card-feature-content {
         @include bidi(((text-align, left, right),));
-        margin-top: $margin-md;
+        margin-top: $spacing-md;
     }
 
     .mzp-c-card-feature-title {
@@ -44,12 +44,12 @@
 
     .mzp-c-card-feature-desc {
         @include text-body-md;
-        color: $color-gray-70;
-        margin: $margin-xs 0;
+        color: $color-gray-90;
+        margin: $spacing-xs 0;
     }
 
     .mzp-c-card-feature-list li {
-        margin-bottom: $margin-xl;
+        margin-bottom: $spacing-xl;
 
         &:last-child {
             margin-bottom: 0;
@@ -70,7 +70,7 @@
         max-width: 800px;
 
         .mzp-c-card-feature-list li {
-            margin-bottom: $margin-2xl;
+            margin-bottom: $spacing-2xl;
         }
 
         &.mzp-l-card-feature-left-half,
@@ -92,14 +92,14 @@
         &.mzp-l-card-feature-right-half {
             .mzp-c-card-feature-content,
             .mzp-c-card-feature-media-wrapper {
-                width: calc(50% - (#{$margin-xl} / 2));
+                width: calc(50% - (#{$spacing-xl} / 2));
             }
         }
 
         &.mzp-l-card-feature-left-third,
         &.mzp-l-card-feature-right-third {
             .mzp-c-card-feature-content {
-                width: calc(41% - #{$margin-2xl});
+                width: calc(41% - #{$spacing-2xl});
             }
 
             .mzp-c-card-feature-media-wrapper {
@@ -207,7 +207,7 @@
             &.mzp-l-card-feature-right-half,
             &.mzp-l-card-feature-left-third,
             &.mzp-l-card-feature-right-third {
-                @include grid-column-gap($margin-2xl);
+                @include grid-column-gap($spacing-2xl);
             }
         }
     }

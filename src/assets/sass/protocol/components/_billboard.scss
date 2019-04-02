@@ -44,7 +44,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
 
     @media #{$mq-md} {
         @include clearfix;
-        margin: $margin-xl 0;
+        margin: $spacing-xl 0;
 
         .mzp-c-billboard-content {
             max-width: 300px;
@@ -57,7 +57,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         }
 
         .mzp-c-billboard-image-container {
-            margin: $margin-lg 0;
+            margin: $spacing-lg 0;
             max-width: 300px;
         }
 

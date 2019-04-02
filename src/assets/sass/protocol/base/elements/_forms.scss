@@ -42,7 +42,7 @@ input[type='time'] {
     @include border-box;
     background: $color-white;
     border-radius: 3px;
-    border: 1px solid $color-gray-60;
+    border: 1px solid $color-gray-80;
     display: inline-block;
     line-height: 1.25;
     padding: .25em $spacing-sm;
@@ -61,7 +61,7 @@ input[type='time'] {
 
         &:hover,
         &:focus {
-            border-color: $color-gray-60;
+            border-color: $color-gray-80;
         }
     }
 }
@@ -84,7 +84,7 @@ fieldset li {
 
 .mzp-c-fieldnote {
     @include text-body-sm;
-    color: $color-gray-60;
+    color: $color-gray-80;
     display: block;
     font-weight: normal;
 }

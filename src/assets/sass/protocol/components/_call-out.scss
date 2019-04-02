@@ -12,7 +12,7 @@
     text-align: center;
 
     &.mzp-t-dark {
-        background-color: $color-gray-60;
+        background-color: $color-gray-80;
         color: $color-white;
 
         .mzp-c-call-out-desc {
@@ -30,7 +30,7 @@
     }
 
     .mzp-c-button-download-container {
-        margin: $margin-lg 0 0;
+        margin: $spacing-lg 0 0;
     }
 
     &.mzp-t-product-firefox,
@@ -42,7 +42,7 @@
             @include background-size(64px 64px);
             background-position: top center;
             background-repeat: no-repeat;
-            padding: (64px + $padding-lg) 0 0 0;
+            padding: (64px + $spacing-lg) 0 0 0;
         }
     }
 
@@ -70,8 +70,8 @@
         .mzp-l-content {
             margin: 0 auto;
             max-width: 800px;
-            padding-bottom: $padding-2xl;
-            padding-top: $padding-2xl;
+            padding-bottom: $spacing-2xl;
+            padding-top: $spacing-2xl;
         }
     }
 }
@@ -83,7 +83,7 @@
     background-color: $color-gray-20;
 
     &.mzp-t-dark {
-        background-color: $color-gray-60;
+        background-color: $color-gray-80;
         color: $color-white;
 
         .mzp-c-call-out-desc {
@@ -100,7 +100,7 @@
     }
 
     .mzp-c-call-out-cta {
-        margin: $margin-sm 0 0;
+        margin: $spacing-sm 0 0;
     }
 
     .mzp-c-button-download-container {
@@ -118,7 +118,7 @@
             @include background-size(64px 64px);
             @include bidi(((background-position, left top, right top),));
             background-repeat: no-repeat;
-            padding: (64px + $padding-lg) 0 0 0;
+            padding: (64px + $spacing-lg) 0 0 0;
         }
     }
 
@@ -148,8 +148,8 @@
         .mzp-l-content {
             margin: 0 auto;
             max-width: 1056px;
-            padding-bottom: $padding-2xl;
-            padding-top: $padding-2xl;
+            padding-bottom: $spacing-2xl;
+            padding-top: $spacing-2xl;
         }
 
         &.mzp-t-product-firefox,
@@ -160,9 +160,9 @@
             .mzp-c-call-out-content {
                 @include bidi((
                     (background-position, left center, right center),
-                    (padding, 0 0 0 (64px + $padding-xl), 0 (64px + $padding-xl) 0 0),
+                    (padding, 0 0 0 (64px + $spacing-xl), 0 (64px + $spacing-xl) 0 0),
                 ));
-                min-height: 64px + ($padding-lg * 2);
+                min-height: 64px + ($spacing-lg * 2);
             }
         }
 
@@ -172,20 +172,20 @@
         }
 
         .mzp-c-call-out-title + .mzp-c-call-out-desc {
-            margin-top: $margin-sm;
+            margin-top: $spacing-sm;
         }
 
         .mzp-c-call-out-content {
             @include bidi(((float, left, right),));
             max-width: 624px;
-            width: calc(66.6% - #{$margin-lg});
+            width: calc(66.6% - #{$spacing-lg});
         }
 
         .mzp-c-call-out-cta {
             @include bidi(((float, right, left),));
             margin: 0;
             position: relative;
-            width: calc(33.3% - #{$margin-lg});
+            width: calc(33.3% - #{$spacing-lg});
         }
 
         .mzp-c-button-download-container {
@@ -197,7 +197,7 @@
         @media #{$mq-md} {
 
             .mzp-l-content {
-                @include grid-column-gap($margin-xl);
+                @include grid-column-gap($spacing-xl);
                 display: grid;
                 grid-template-columns: 2fr 1fr;
             }
