@@ -1,4 +1,4 @@
-# HEAD
+# 6.0.0
 
 # Bug Fixes
 
