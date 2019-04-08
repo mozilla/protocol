@@ -14,7 +14,7 @@
     $hr-suffix: '-high-res';
 
     // Do not set height to auto if width is contain
-    @if $w = 'contain' {
+    @if $w == 'contain' {
         $h: #{''};
     }
 
