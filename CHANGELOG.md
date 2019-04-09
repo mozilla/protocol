@@ -1,3 +1,9 @@
+# 6.0.1
+
+# Bug Fixes
+
+* **css:** Error in at2x mixin #368
+
 # 6.0.0
 
 # Bug Fixes
