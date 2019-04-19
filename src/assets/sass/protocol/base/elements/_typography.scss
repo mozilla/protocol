@@ -13,14 +13,14 @@ h1, h2, h3, h4, h5, h6, legend {
 // Mozilla theme class for headlines using Zilla.
 .mzp-t-mozilla {
     h1, h2, h3, h4 {
-        @include zilla-slab;
+        @include font-mozilla;
     }
 }
 
-// Firefox theme class for headlines using Open Sans.
+// Firefox theme class for headlines.
 .mzp-t-firefox {
     h1, h2, h3, h4 {
-        @include open-sans;
+        @include font-firefox;
     }
 }
 

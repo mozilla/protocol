@@ -14,7 +14,7 @@ body {
     @include text-body-md;
     background: #fff;
     color: $color-black;
-    font-family: $base-font-stack;
+    font-family: $font-base-family;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }

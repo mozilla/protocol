@@ -45,7 +45,7 @@
     }
 
     .mzp-c-card-tag {
-        @include open-sans;
+        @include font-base;
         @include text-body-sm;
         color: $color-gray-80;
         font-weight: normal;
@@ -72,7 +72,7 @@
     }
 
     .mzp-c-card-title {
-        @include text-display-sm;
+        @include text-display-xs;
         display: inline;
     }
 
@@ -172,7 +172,7 @@
     }
 
     .mzp-c-card-title {
-        @include text-display-xs;
+        @include text-display-xxs;
     }
 
     .mzp-c-card-desc {

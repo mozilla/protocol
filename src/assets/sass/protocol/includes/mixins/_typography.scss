@@ -4,14 +4,17 @@
 
 
 // Font families
-@mixin open-sans {
-    font-family: $font-open-sans;
+@mixin font-base {
+    font-family: $font-base-family;
 }
 
-@mixin zilla-slab {
+@mixin font-mozilla {
     font-family: $font-zilla-slab;
 }
 
+@mixin font-firefox {
+    font-family: $font-firefox-sans;
+}
 
 // A mixin to output font-size in rems with a px fallback for old browsers.
 // Declare sizes in pixels for ease and clarity, the mixin does the math.
@@ -42,87 +45,93 @@
 //  .subtitle { @include text-display-lg; }
 //  .intro { @include text-body-lg; }
 
+$text-body-line-height: $font-base-line-height;
+$text-display-line-height: 1.1;
+
+// display copy: headings, blockquotes, other fancy stuff
 @mixin text-display-xxl { // Use this one sparingly.
     @include font-size(48px);
-    line-height: 1.083;
+    line-height: $text-display-line-height;
 
     @media #{$mq-md} {
-        @include font-size(72px);
-        line-height: 1;
+        @include font-size(64px);
     }
 }
 
 @mixin text-display-xl {
     @include font-size(40px);
-    line-height: 1.111;
+    line-height: $text-display-line-height;
 
     @media #{$mq-md} {
-        @include font-size(60px);
-        line-height: 1.066;
+        @include font-size(56px);
     }
 }
 
 @mixin text-display-lg {
     @include font-size(32px);
-    line-height: 1.125;
+    line-height: $text-display-line-height;
 
     @media #{$mq-md} {
         @include font-size(48px);
-        line-height: 1.083;
     }
 }
 
 @mixin text-display-md {
     @include font-size(24px);
-    line-height: 1.166;
+    line-height: $text-display-line-height;
 
     @media #{$mq-lg} {
-        @include font-size(36px);
-        line-height: 1.1111;
+        @include font-size(40px);
     }
 }
 
 @mixin text-display-sm {
     @include font-size(21px);
-    line-height: 1.143;
+    line-height: $text-display-line-height;
 
     @media #{$mq-md} {
-        @include font-size(24px);
-        line-height: 1.166;
+        @include font-size(32px);
     }
 }
 
 @mixin text-display-xs {
     @include font-size(18px);
-    line-height: 1.333;
+    line-height: $text-display-line-height;
+
+    @media #{$mq-md} {
+        @include font-size(24px);
+    }
 }
 
 @mixin text-display-xxs {
-    @include font-size(14px);
-    line-height: 1.285;
+    @include font-size(16px);
+    line-height: $text-display-line-height;
 }
 
+// body copy
 @mixin text-body-lg {
     @include font-size(18px);
-    line-height: 1.5;
+    line-height: $text-body-line-height;
 }
 
 @mixin text-body-md {
     @include font-size(16px);
-    line-height: 1.5;
+    line-height: $text-body-line-height;
 }
 
 @mixin text-body-sm {
     @include font-size(14px);
-    line-height: 1.285;
+    line-height: $text-body-line-height;
 }
 
 @mixin text-body-xs {
     @include font-size(12px);
-    line-height: 1.333;
+    line-height: $text-body-line-height;
 }
 
-@mixin text-cta {
+@mixin text-body-cta {
     @include font-size(16px);
-    line-height: 1.5;
+    line-height: $text-body-line-height;
 }
+
+

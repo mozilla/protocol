@@ -78,7 +78,7 @@
 }
 
 .mzp-c-sidemenu-label {
-    @include open-sans;
+    @include font-base;
     @include text-body-sm;
     @include bidi((
         (padding-right, $spacing-lg, padding-left, 0),
@@ -99,7 +99,7 @@
 }
 
 .mzp-c-sidemenu-title {
-    @include open-sans;
+    @include font-base;
     @include text-body-lg;
     line-height: 1.5;
     margin-bottom: .25em;

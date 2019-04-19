@@ -20,11 +20,11 @@ blockquote {
 
     .mzp-t-firefox &,
     &.mzp-t-firefox {
-        @include open-sans;
+        @include font-firefox;
     }
 
     &.mzp-t-mozilla,
     .mzp-t-mozilla & {
-        @include zilla-slab;
+        @include font-mozilla;
     }
 }

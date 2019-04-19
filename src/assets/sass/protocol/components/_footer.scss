@@ -8,7 +8,7 @@
 // Footer section styles
 
 .mzp-c-footer {
-    @include open-sans;
+    @include font-base;
     background: $color-black;
     clear: both;
     color: $color-white;

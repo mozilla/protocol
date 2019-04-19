@@ -10,7 +10,7 @@
 .mzp-c-button,
 a.mzp-c-button {
     @include border-box;
-    @include text-cta;
+    @include text-body-cta;
     @include transition(background-color 100ms, box-shadow 100ms, color 100ms, transform 100ms);
     background-color: $color-black;
     border-radius: 2px;
