@@ -21,6 +21,7 @@ blockquote {
     .mzp-t-firefox &,
     &.mzp-t-firefox {
         @include font-firefox;
+        color: $color-off-black;
     }
 
     &.mzp-t-mozilla,
