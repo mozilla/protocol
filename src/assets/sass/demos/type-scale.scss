@@ -29,7 +29,7 @@ hr {
 .scale-sample-body-md { @include text-body-md; }
 .scale-sample-body-sm { @include text-body-sm; }
 .scale-sample-body-xs { @include text-body-xs; }
-.scale-sample-cta { @include text-cta; }
+.scale-sample-cta { @include text-body-cta; }
 
 .label {
     @include text-body-sm;
@@ -44,7 +44,7 @@ hr {
     }
 
     .scale-sample:after {
-        @include open-sans;
+        @include font-base;
         @include text-body-sm;
         color: $color-gray-80;
         font-weight: normal;
@@ -55,7 +55,7 @@ hr {
         content: '(60px/64px)';
 
         @media #{$mq-md} {
-            content: '(72px/72px)';
+            content: '(64px/70px)';
         }
     }
 
@@ -63,7 +63,7 @@ hr {
         content: '(48px/52px)';
 
         @media #{$mq-md} {
-            content: '(60px/64px)';
+            content: '(56px/62px)';
         }
     }
 
@@ -71,7 +71,7 @@ hr {
         content: '(36px/40px)';
 
         @media #{$mq-md} {
-            content: '(48px/52px)';
+            content: '(48px/53px)';
         }
     }
 
@@ -79,7 +79,7 @@ hr {
         content: '(24px/28px)';
 
         @media #{$mq-md} {
-            content: '(36px/40px)';
+            content: '(40px/44px)';
         }
     }
 
@@ -87,16 +87,16 @@ hr {
         content: '(21px/24px)';
 
         @media #{$mq-md} {
-            content: '(24px/28px)';
+            content: '(32px/35px)';
         }
     }
 
     .scale-sample-display-xs:after {
-        content: '(18px/24px)';
+        content: '(24px/26px)';
     }
 
     .scale-sample-display-xxs:after {
-        content: '(14px/18px)';
+        content: '(16px/18px)';
     }
 
     .scale-sample-body-lg:after {

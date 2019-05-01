@@ -74,7 +74,7 @@
 }
 
 .protosite-nav-menu-title {
-    @include text-display-sm;
+    @include text-display-xs;
 }
 
 .protosite-nav-main-item {
@@ -123,7 +123,7 @@
     }
 
     .protosite-swatch-name {
-        @include open-sans;
+        @include font-base;
         @include text-display-sm;
     }
 
@@ -176,11 +176,11 @@
 }
 
 #specimen-zilla-slab {
-    @include zilla-slab;
+    @include font-mozilla;
 }
 
-#specimen-open-sans {
-    @include open-sans;
+#specimen-inter {
+    @include font-base;
 }
 
 .protosite-section {

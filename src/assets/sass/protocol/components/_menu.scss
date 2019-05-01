@@ -22,7 +22,7 @@
 .mzp-c-menu {
 
     h1, h2, h3, h4, h5, h6 {
-        @include open-sans;
+        @include font-base;
     }
 
     @media #{$mq-md} {
@@ -43,7 +43,7 @@
 .mzp-c-menu-category {
 
     .mzp-c-menu-title {
-        @include open-sans;
+        @include font-base;
         @include text-body-md;
         border-bottom: 1px solid $color-gray-30;
         color: $color-black;

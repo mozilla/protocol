@@ -6,14 +6,37 @@ styles:
   - type-scale
 ---
 
-<p>[Todo: Some kind of introduction about our approach to typography in general, maybe some basic principles.]</p>
-
 <h2 id="typefaces">Typefaces</h2>
-<p>Zilla Slab and Open Sans are the standard typefaces on Mozilla branded websites. As a general rule, type set in Zilla Slab should stand out. Avoid stacking 2 sizes of Zilla one on top of the other. Pair headings in Zilla Slab with subheadings in Open Sans.</p>
+<p>Inter is the standard typeface for Protocol sites.</p>
+<p>Zilla Slab and Inter are the standard typefaces on Mozilla branded websites.</p>
+<p>Some Firefox branded websites are also licensed to use Firefox Sharp Sans.</p>
+
+<h3 id="typeface-inter">Inter</h3>
+<p>This open source, sans-serif font was designed by <a href="https://rsms.me/">Rasmus Andersson</a>.</p>
+<p>Inter is our standard type face for both headings and body copy. If you do not apply any themes by default your Protocol site will be entirely in Inter.</p>
+<p>Everything is Inter by default. If you need to declare it specifically you can use the mixin <code>@include font-base;</code>.</p>
+
+
+<ul>
+    <li><a href="https://rsms.me/inter/">Download from https://rsms.me/inter/</a></li>
+</ul>
+
+<figure id="specimen-inter" class="protosite-specimen protosite-specimen-font">
+{{#with (data "specimens")}}
+    {{this.alphabet}}
+    {{this.characters}}
+    {{this.digits}}
+    {{this.punctuation}}
+    {{this.special}}
+    {{this.currencies}}
+{{/with}}
+</figure>
 
 <h3 id="typeface-zilla-slab">Zilla Slab</h3>
 <p>Zilla Slab is our custom typeface for the Mozilla brand. We use it for our wordmark and as a display font for headlines on Mozilla branded sites. It’s a contemporary slab serif based on Typotheque’s Tesla. Zilla Slab is a free, open source font available for download.</p>
-<p>Zilla Slab can be applied to headings by adding the class `mzp-t-mozilla` to the component or included with the mixin `@include zilla-slab;`.</p>
+<p>Zilla Slab, is primarily a display font and should only be used on large text like headings. As a general rule, type set in Zilla Slab should stand out. Avoid stacking two sizes of Zilla one on top of the other. Pair headings in Zilla Slab with subheadings in Inter.</p>
+<p>Zilla Slab can be applied to headings by adding the class <code>mzp-t-mozilla</code> to the component or included with the mixin <code>@include font-mozilla;</code>.</p>
+
 
 <ul>
     <li><a href="https://github.com/mozilla/zilla-slab/releases/latest" rel="external">Download from Github</a></li>
@@ -31,24 +54,9 @@ styles:
 {{/with}}
 </figure>
 
-<h3 id="typeface-open-sans">Open Sans</h3>
-<p>Open Sans is our standard typeface for body copy, labels, captions, links, navigation, etc. because it’s more legible at smaller sizes than Zilla Slab, which is primarily a display font. Open Sans is also used as a heading/display font when the Firefox brand needs to be expressed more than the Mozilla brand. This open source font was designed by Steve Matteson.</p>
-
-<ul>
-    <li><a href="http://opensans.com">Download from OpenSans.com</a></li>
-    <li><a href="https://fonts.google.com/specimen/Open+Sans">Use on Google Fonts</a></li>
-</ul>
-
-<figure id="specimen-open-sans" class="protosite-specimen protosite-specimen-font">
-{{#with (data "specimens")}}
-    {{this.alphabet}}
-    {{this.characters}}
-    {{this.digits}}
-    {{this.punctuation}}
-    {{this.special}}
-    {{this.currencies}}
-{{/with}}
-</figure>
+<h3 id="typeface-sharp-sans">Firefox Sharp Sans</h3>
+<p>Sharp Sans is a closed license font licensed for use on some Firefox Marketing sites.</p>
+<p>Contact the websites team for more information on how to use this font with Protocol if you believe your use is covered by the license. If you can't find us in the phonebook you can [open an issue on the Protocol repo](https://github.com/mozilla/protocol/issues/new).</p>
 
 <h2 id="styles">Styles</h2>
 
@@ -93,26 +101,27 @@ styles:
 @include text-body-md;
 @include text-body-sm;
 @include text-body-xs;
-@include text-cta;</code></pre>
+@include text-body-cta;</code></pre>
 </div>
 
 <p>Those mixins include media queries to adjust the sizes at key breakpoints. Text gets bigger as the viewport gets bigger. You can resize your window to see this in action on the sample above or on the <a href="{{@root.baseurl}}/demos/type-scale.html">demo page</a>.</p>
 
-<p>For example, here’s the 4XL mixin:</p>
+<p>For example, here’s the XL mixin:</p>
 
 <div class="protosite-pattern-embed">
-<pre class="protosite-pattern-code language-scss"><code>@mixin text-display-xl {
-    @include font-size(40px);
-    line-height: 1.111;
+<pre class="protosite-pattern-code language-scss"><code>
+  @mixin text-display-xl {
+      @include font-size(40px);
+      line-height: $text-display-line-height;
 
-    @media #{$mq-md} {
-        @include font-size(60px);
-        line-height: 1.066;
-    }
+      @media #{$mq-md} {
+          @include font-size(56px);
+      }
+  }
 }</code></pre>
 </div>
 
-<p>The funky line-heights are calculated to fit the 4-pixel baseline grid, give or take a pixel with rounding. Also note that these mixins only declare the size and line-height, not the font-family or weight.</p>
+<p>Note that these mixins only declare the size and line-height, not the font-family or weight.</p>
 
 <p>The sizing mixins in turn use another Sass mixin to convert a pixel size to <code>rem</code> for output, assuming a 16px root size (the default in graphical browsers). Because we use <code>rem</code> for font sizing all of our declared sizes are really just suggestions and the end user can resize as they see fit. Text sizes are flexible so design accordingly.</p>
 

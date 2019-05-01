@@ -20,11 +20,12 @@ blockquote {
 
     .mzp-t-firefox &,
     &.mzp-t-firefox {
-        @include open-sans;
+        @include font-firefox;
+        color: $color-off-black;
     }
 
     &.mzp-t-mozilla,
     .mzp-t-mozilla & {
-        @include zilla-slab;
+        @include font-mozilla;
     }
 }

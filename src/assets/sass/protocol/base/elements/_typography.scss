@@ -13,15 +13,18 @@ h1, h2, h3, h4, h5, h6, legend {
 // Mozilla theme class for headlines using Zilla.
 .mzp-t-mozilla {
     h1, h2, h3, h4 {
-        @include zilla-slab;
+        @include font-mozilla;
     }
 }
 
-// Firefox theme class for headlines using Open Sans.
 .mzp-t-firefox {
+    // Firefox theme class for headlines.
     h1, h2, h3, h4 {
-        @include open-sans;
+        @include font-firefox;
     }
+
+    // type in Firefox themes is off-black
+    color: $color-off-black;
 }
 
 // Type scale defined in includes/mixins/_typography.scss

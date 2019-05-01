@@ -20,7 +20,7 @@ button,
 input,
 select,
 textarea {
-    @include open-sans;
+    @include font-base;
     @include text-body-md;
 }
 

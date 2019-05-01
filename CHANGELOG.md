@@ -1,3 +1,9 @@
+# HEAD
+
+# Features
+
+* **css:** (breaking) Implement Updated Font Stacks (#342)
+
 # 6.0.1
 
 # Bug Fixes
