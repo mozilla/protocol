@@ -92,14 +92,14 @@ a.mzp-c-button.mzp-t-dark {
 
 .mzp-c-button.mzp-t-product,
 a.mzp-c-button.mzp-t-product {
-    background-color: $color-blue-60;
+    background-color: $color-blue-50;
     border-color: transparent;
     color: $color-white;
 
     &:focus,
     &:hover {
         @include transform(none);
-        background-color: $color-blue-70;
+        background-color: $color-blue-60;
         box-shadow: none;
         color: $color-white;
     }
@@ -118,13 +118,13 @@ a.mzp-c-button.mzp-t-product {
 .mzp-c-button.mzp-t-product.mzp-t-secondary,
 a.mzp-c-button.mzp-t-product.mzp-t-secondary {
     background-color: transparent;
-    border-color: $color-blue-60;
-    color: $color-blue-60;
+    border-color: $color-blue-50;
+    color: $color-blue-50;
 
     &:focus,
     &:hover {
         @include transform(none);
-        background-color: $color-blue-70;
+        background-color: $color-blue-60;
         border-color: transparent;
         box-shadow: none;
         color: $color-white;
