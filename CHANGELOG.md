@@ -2,6 +2,7 @@
 
 # Features
 
+* **css:** Update product button theme color (#380)
 * **css:** (breaking) Implement Updated Font Stacks (#342)
 
 # 6.0.1
