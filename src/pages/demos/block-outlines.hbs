@@ -1,0 +1,247 @@
+---
+title: Block Examples
+layout: blank
+styles:
+  - block-outlines
+---
+
+<p>Do not nest in l-content</p>
+<p>This demo best viewed at x</p>
+
+<h1>Media size</h1>
+
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="" }}
+  {{#content "content"}}
+  <h2>default grow</h2>
+    <p>By default the image will be constraied by the width of the media container.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="grow-cover" }}
+  {{#content "content"}}
+    <h3>grow-cover</h3>
+    <p>The image will be constrained by the height of the media container, to the maximum of the image height.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="grow-cover" }}
+  {{#content "content"}}
+    <p>In some cases this means the image will overflow the container.</p>
+    <div class="spacer">Spacer</div>
+    <div class="spacer">Spacer</div>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" body_classes="v-start" media_classes="grow-push" }}
+  {{#content "content"}}
+    <h3>grow-push</h3>
+    <p>The image will be it's natural height, pushing the container larger.</p>
+    <p>In some cases this means the image will overflow the container.</p>
+  {{/content}}
+{{/embed}}
+
+<h1>Block Layout</h1>
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes=""  }}
+  {{#content "content"}}
+    <h2>default layout</h2>
+    <p>By default the body is 50% of the available space.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="mzp-l-block-body-33" body_classes=""  }}
+  {{#content "content"}}
+    <h2>mzp-l-block-body-33</h2>
+    <p>The body can be 33%</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="mzp-l-block-body-66" body_classes=""  }}
+  {{#content "content"}}
+    <h2>mzp-l-block-body-66</h2>
+    <p>The body can be 66%</p>
+  {{/content}}
+{{/embed}}
+
+
+{{#embed "patterns.organisms.block.block" block_classes="mzp-is-inversed" body_classes="" media_classes="" }}
+  {{#content "content"}}
+    <h2 class="mzp-c-card-feature-title">mzp-is-inversed</h2>
+    <p class="mzp-c-card-feature-desc">An inversed block will have the media on the left.</p>
+  {{/content}}
+{{/embed}}
+
+<h1>Fit</h1>
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes=""  }}
+  {{#content "content"}}
+    <h2>default</h2>
+    <p>Both the body and media will be inside the block container with padding between them and the edges.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="fit-flush-top" }}
+  {{#content "content"}}
+    <h3 class="mzp-c-billboard-title">fit-flush-top</h3>
+    <p class="mzp-c-billboard-desc">Chaning the fit to "flush" will make the media flush to the block container. It can be set on all sides with <code>fit-flush</code> or on individual sides with <code>fit-flush-top</code>, <code>fit-flush-bottom</code>, or <code>fit-flush-side</code>. The image can only be flush to the outside of the container, not to the text container.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="fit-flush" }}
+  {{#content "content"}}
+    <h3 class="mzp-c-billboard-title">fit-flush</h3>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="fit-pop-top" }}
+  {{#content "content"}}
+    <h3 class="mzp-c-billboard-title">fit-pop-top</h3>
+    <p class="mzp-c-billboard-desc">Chaning the fit to "pop" will make the media pop out of the block container. It can be set on all sides with <code>fit-pop</code> or on individual sides with <code>fit-pop-top</code>, <code>fit-pop-bottom</code>, or <code>fit-pop-side</code>. The image can only pop out of the container on the top, bottom, and side away from the body text.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="fit-pop" }}
+  {{#content "content"}}
+    <h4 class="mzp-c-billboard-title">fit-pop</h4>
+  {{/content}}
+{{/embed}}
+
+<h1>Body alignment</h1>
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="" }}
+  {{#content "content"}}
+    <h2>default</h2>
+    <p>The body is <strong>top</strong> and <strong>left</strong> aligned by default.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="v-end" }}
+  {{#content "content"}}
+    <h2>v-end</h2>
+    <p>The text can be aligned to the bottom.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="v-center" }}
+  {{#content "content"}}
+    <h2>v-center</h2>
+    <p>Or vertically centered.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="h-center" }}
+  {{#content "content"}}
+    <h2>h-center</h2>
+    <p>Or horizontally centered.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="h-end" }}
+  {{#content "content"}}
+    <h2>h-end</h2>
+    <p>Or horizontally aligned to the other side of the body container.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="v-end h-end" }}
+  {{#content "content"}}
+    <h2>Vertical and horizontal aligment can be combined</h2>
+    <p>Here is v-end and h-end.</p>
+  {{/content}}
+{{/embed}}
+
+<h1>Media alignment</h1>
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="" media_classes="" img_src="add-ons.png" }}
+  {{#content "content"}}
+    <h2>default</h2>
+    <p>The media is top aligned by default.</p>
+    <div class="spacer">Spacer</div>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="" media_classes="v-end" img_src="add-ons.png" }}
+  {{#content "content"}}
+    <h2>v-end</h2>
+    <p>The media can be aligned to the bottom.</p>
+    <div class="spacer">Spacer</div>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="" media_classes="v-center" img_src="add-ons.png" }}
+  {{#content "content"}}
+    <h2>v-middle</h2>
+    <p>Or vertically centered.</p>
+    <div class="spacer">Spacer</div>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="" media_classes="h-center" img_src="add-ons.png" }}
+  {{#content "content"}}
+    <h2>h-center</h2>
+    <p>Or horizontally centered.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="" media_classes="h-end" img_src="add-ons.png" }}
+  {{#content "content"}}
+    <h2>h-end</h2>
+    <p>Or horizontally aligned to the other side of the body container.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" block_classes="" body_classes="" media_classes="v-end h-end" img_src="add-ons.png" }}
+  {{#content "content"}}
+    <h2>Vertical and horizontal aligment can be combined</h2>
+    <p>Here is v-end and h-end.</p>
+    <div class="spacer">Spacer</div>
+  {{/content}}
+{{/embed}}
+
+
+<h1>Source order &amp; Mobile layout</h1>
+
+<section class="mzp-c-block">
+    <div class="mzp-c-block-media">
+        <img src="../static/img/block/devices.png" alt="" srcset="../static/img/block/devices-high-res.png 2x">
+    </div>
+    <div class="mzp-c-block-body ">
+    <h3>Second</h3>
+    <p>Test</p>
+    </div>
+</section>
+
+
+<h1>Inversed Testing</h1>
+
+<section class="mzp-c-block mzp-l-block-body-33 mzp-is-inversed">
+    <div class="mzp-c-block-media">
+        <img src="../static/img/block/devices.png" alt="" srcset="../static/img/block/devices-high-res.png 2x">
+    </div>
+    <div class="mzp-c-block-body ">
+    <h3>Second</h3>
+    <p>Test</p>
+    </div>
+</section>
+
+
+<section class="mzp-c-block mzp-is-inversed">
+    <div class="mzp-c-block-media">
+        <img src="../static/img/block/devices.png" alt="" srcset="../static/img/block/devices-high-res.png 2x">
+    </div>
+    <div class="mzp-c-block-body ">
+    <h3>Second</h3>
+    <p>Test</p>
+    </div>
+</section>
+
+
+<section class="mzp-c-block mzp-l-block-body-66 mzp-is-inversed">
+    <div class="mzp-c-block-media">
+        <img src="../static/img/block/devices.png" alt="" srcset="../static/img/block/devices-high-res.png 2x">
+    </div>
+    <div class="mzp-c-block-body ">
+    <h3>Second</h3>
+    <p>Test</p>
+    </div>
+</section>

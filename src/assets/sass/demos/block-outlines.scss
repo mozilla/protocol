@@ -1,0 +1,49 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+/* -------------------------------------------------------------------------- */
+// Block demo
+
+@import '../protocol/includes/lib';
+@import '../docs/protocol';
+@import '../docs/protocol-extra';
+
+.mzp-c-block,
+.mzp-c-block-media,
+.mzp-c-block-body {
+    &:after {
+        content: attr(class);
+        background-color: #fff;
+        display: block;
+        font-family: monospace;
+        font-size: 12px;
+        left: 0;
+        padding: 0 2px;
+        position: absolute;
+        top: 0;
+    }
+}
+
+.mzp-c-block {
+    background-color: rgba(0, 0, 255, 0.1);
+    border: 1px solid #00f;
+}
+
+.mzp-c-block-media {
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid #0f0;
+}
+.mzp-c-block-body {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid #f00;
+}
+
+.spacer {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    margin: 20px;
+}
