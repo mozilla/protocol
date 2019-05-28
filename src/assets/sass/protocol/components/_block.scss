@@ -7,51 +7,65 @@
 $padding: $layout-xs;
 
 .mzp-c-block {
-    margin: 0 auto ($layout-xs * 2) auto;
+    @include clearfix();
+    margin: ($layout-xs * 2) auto;
     max-width: $content-max;
     min-width: $content-xs;
-    position: relative;
     padding: $layout-xs;
+    position: relative;
 
-    @media #{$mq-md} {
-        // grid is all start/end based we don't need bidi declarations for RTL support \o/
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "body media";
-        grid-gap: $layout-md;
-        padding: $layout-md;
+    .h-start {
+        justify-self: start;
+        text-align: left;
 
-        &.mzp-l-block-body-33 {
-            grid-template-columns: 2fr 3fr;
-        }
-
-        &.mzp-l-block-body-66 {
-            grid-template-columns: 3fr 2fr;
-        }
-
-       &.mzp-is-inversed {
-            grid-template-areas: "media body";
-       }
-
-       &.mzp-l-block-body-33.mzp-is-inversed {
-            grid-template-columns: 3fr 2fr;
-        }
-
-        &.mzp-l-block-body-66.mzp-is-inversed {
-            grid-template-columns: 2fr 3fr;
+        img {
+            margin: 0 auto 0 0;
         }
     }
 
+    .h-center {
+        justify-self: center;
+        text-align: center;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    .h-end {
+        justify-self: end;
+        text-align: right;
+
+        img {
+            margin: 0 0 0 auto;
+        }
+    }
+
+    .v-start {
+        align-self: start;
+    }
+
+    .v-center {
+        align-self: center;
+    }
+
+    .v-end {
+        align-self: end;
+    }
+
+    @media #{$mq-md} {
+        margin: ($layout-md * 2) auto;
+        padding: $layout-md ($layout-md / 2);
+    }
+
     @media #{$mq-lg} {
-        grid-gap: $layout-lg;
-        padding: $layout-lg;
+        margin: ($layout-lg * 2) auto;
+        padding: $layout-lg ($layout-lg / 2);
     }
 }
 
 .mzp-c-block-body {
-    grid-area: body;
     position: relative;
-    min-width: 0; //because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
 
     @media all and (max-width:767px) {
         &:first-child {
@@ -64,6 +78,11 @@ $padding: $layout-xs;
     }
 
     @media #{$mq-md} {
+        @include border-box;
+        @include bidi(((float, left, right),));
+        width: 50%;
+        padding: 0 ($layout-md / 2);
+
         > *:first-child {
             margin-top: 0;
         }
@@ -71,92 +90,66 @@ $padding: $layout-xs;
         > *:last-child {
             margin-bottom: 0;
         }
+
+        .mzp-l-block-body-33 & {
+            width: 33%;
+        }
+
+        .mzp-l-block-body-66 & {
+            width: 66%;
+        }
+
+        .mzp-is-inversed & {
+            @include bidi(((float, right, left),));
+        }
     }
 
-    // alignment
-    &.v-start {
-        align-self: start;
-    }
-
-    &.v-center {
-        align-self: center;
-    }
-
-    &.v-end {
-        align-self: end;
-    }
-
-    &.h-start {
-        text-align: left;
-    }
-
-    &.h-center {
-        text-align: center;
-    }
-
-    &.h-end {
-        text-align: right;
+    @media #{$mq-lg} {
+        padding: 0 ($layout-lg / 2);
     }
 }
 
 
 .mzp-c-block-media {
-    grid-area: media;
     position: relative;
-    min-width: 0; // because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
 
-    img {
-        display: block;
-    }
+    @media #{$mq-md} {
+        @include border-box;
+        @include bidi(((float, right, left),));
+        width: 50%;
+        padding: 0 ($layout-md / 2);
 
-    // alignment
-    &.v-start {
-        align-self: start;
-    }
 
-    &.v-center {
-        align-self: center;
-    }
+        .mzp-l-block-body-33 & {
+            width: 66%;
+        }
 
-    &.v-end {
-        align-self: end;
-    }
+        .mzp-l-block-body-66 & {
+            width: 33%;
+        }
 
-    &.h-start {
-        justify-self: start;
-
-        img {
-            margin: 0 auto 0 0;
+        .mzp-is-inversed & {
+            @include bidi(((float, left, right),));
         }
     }
 
-    &.h-center {
-        justify-self: center;
-
-        img {
-            margin: 0 auto;
-        }
+    @media #{$mq-lg} {
+        padding: 0 ($layout-lg / 2);
     }
+}
 
-    &.h-end {
-        justify-self: end;
-
-        img {
-            margin: 0 0 0 auto;
-        }
-    }
-
+.mzp-c-block-media {
     // padding
     @media all and (max-width:767px) {
         &.fit-flush {
-        margin: $layout-xs * -1;
+            margin: $layout-xs * -1;
 
             &:first-child {
-            margin-bottom: 0;
+                margin-bottom: 0;
             }
 
             &:last-child {
-            margin-top: 0;
+                margin-top: 0;
             }
         }
 
@@ -216,15 +209,12 @@ $padding: $layout-xs;
     }
 
     @media #{$mq-md} {
-        &.fit-flush {
-            margin: $layout-md * -1;
-            margin-left: 0;
-        }
-
+        &.fit-flush,
         &.fit-flush-top {
             margin-top: $layout-md * -1;
         }
 
+        &.fit-flush,
         &.fit-flush-side {
             [dir='ltr'] :not(.mzp-is-inversed) > &,
             [dir='rtl'] .mzp-is-inversed > & {
@@ -237,19 +227,17 @@ $padding: $layout-xs;
             }
         }
 
+        &.fit-flush,
         &.fit-flush-bottom {
             margin-bottom: $layout-md * -1;
         }
 
-        &.fit-pop {
-            margin: $layout-md * 2 * -1;
-            margin-left: 0;
-        }
-
+        &.fit-pop,
         &.fit-pop-top {
             margin-top: $layout-md * 2 * -1;
         }
 
+        &.fit-pop,
         &.fit-pop-side {
             [dir='ltr'] :not(.mzp-is-inversed) > &,
             [dir='rtl'] .mzp-is-inversed > & {
@@ -262,58 +250,20 @@ $padding: $layout-xs;
             }
         }
 
+        &.fit-pop,
         &.fit-pop-bottom {
             margin-bottom: $layout-md * 2 * -1;
-        }
-
-        &.grow-cover {
-            align-self: stretch;
-
-            img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            max-width: none;
-            max-height: 100%;
-            width: auto;
-
-                [dir='rtl'] &,
-                .mzp-is-inversed & {
-                    left: auto;
-                    right: 0;
-                }
-            }
-        }
-
-        &.grow-push {
-            align-self: stretch;
-
-            img {
-                max-width: none;
-            }
         }
     }
 
     @media #{$mq-lg} {
-        &.fit-flush {
-            margin: $layout-lg * -1;
 
-            [dir='ltr'] :not(.mzp-is-inversed) > &,
-            [dir='rtl'] .mzp-is-inversed > & {
-                margin-left: 0;
-            }
-
-            [dir='rtl'] :not(.mzp-is-inversed) > &,
-            [dir='ltr'] .mzp-is-inversed & {
-                margin-right: 0;
-            }
-        }
-
+        &.fit-flush,
         &.fit-flush-top {
             margin-top: $layout-lg * -1;
         }
 
+        &.fit-flush,
         &.fit-flush-side {
 
             [dir='ltr'] :not(.mzp-is-inversed) > &,
@@ -327,28 +277,17 @@ $padding: $layout-xs;
             }
         }
 
+        &.fit-flush,
         &.fit-flush-bottom {
             margin-bottom: $layout-lg * -1;
         }
 
-        &.fit-pop {
-            margin: $layout-lg * 2 * -1;
-
-            [dir='ltr'] :not(.mzp-is-inversed) > &,
-            [dir='rtl'] .mzp-is-inversed > & {
-                margin-left: 0;
-            }
-
-            [dir='rtl'] :not(.mzp-is-inversed) > &,
-            [dir='ltr'] .mzp-is-inversed & {
-                margin-right: 0;
-            }
-        }
-
+        &.fit-pop,
         &.fit-pop-top {
             margin-top: $layout-lg * 2 * -1;
         }
 
+        &.fit-pop,
         &.fit-pop-side {
             [dir='ltr'] :not(.mzp-is-inversed) > &,
             [dir='rtl'] .mzp-is-inversed > & {
@@ -361,9 +300,114 @@ $padding: $layout-xs;
             }
         }
 
+        &.fit-pop,
         &.fit-pop-bottom {
             margin-bottom: $layout-lg * 2 * -1;
         }
     }
+}
 
+@supports(display:grid) {
+
+    .mzp-c-block {
+
+        @media #{$mq-md} {
+            padding: $layout-md;
+        }
+
+        @media #{$mq-lg} {
+            padding: $layout-lg;
+        }
+
+
+        @media #{$mq-md} {
+            // grid is all start/end based we don't need bidi declarations for RTL support \o/
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "body media";
+            grid-column-gap: $layout-md;
+
+            &.mzp-l-block-body-33 {
+                grid-template-columns: 2fr 3fr;
+            }
+
+            &.mzp-l-block-body-66 {
+                grid-template-columns: 3fr 2fr;
+            }
+
+            &.mzp-is-inversed {
+                grid-template-areas: "media body";
+            }
+
+            &.mzp-l-block-body-33.mzp-is-inversed {
+                grid-template-columns: 3fr 2fr;
+            }
+
+            &.mzp-l-block-body-66.mzp-is-inversed {
+                grid-template-columns: 2fr 3fr;
+            }
+        }
+
+        @media #{$mq-lg} {
+            grid-column-gap: $layout-lg;
+        }
+    }
+
+    .mzp-c-block-body {
+        float: none;
+        grid-area: body;
+        min-width: 0; //because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+        padding: 0 !important; /* stylelint-disable-line declaration-no-important */
+        width: auto !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+    .mzp-c-block-media {
+        align-self: stretch;
+        float: none;
+        grid-area: media;
+        min-width: 0; // because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+        padding: 0 !important; /* stylelint-disable-line declaration-no-important */
+        width: auto !important; /* stylelint-disable-line declaration-no-important */
+
+        @media #{$mq-md} {
+
+            img {
+                display: block;
+                max-width: none;
+            }
+
+            .mzp-is-inversed > &:not(.h-start),
+            .mzp-is-inversed > &:not(.h-center) {
+                justify-self: end; // how to do this without over riding h-center etc.
+            }
+
+            &.constrain-width {
+                align-self: stretch;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            &.constrain-height {
+                align-self: stretch;
+
+                img {
+                    bottom: 0;
+                    left: 0;
+                    max-height: 100%;
+                    max-width: none;
+                    position: absolute;
+                    top: 0;
+                    width: auto;
+
+                    [dir='rtl'] &,
+                    .mzp-is-inversed & {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
 }

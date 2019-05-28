@@ -8,23 +8,30 @@ styles:
 <p>Do not nest in l-content</p>
 <p>This demo best viewed at x</p>
 
-<h1>Media size</h1>
+<p>test on small screens. You might want to set an aligment on a small screen even if it doensn't look like it needs it at large</p>
+
+<p>should fit pop still align with the grid in the midde? (I think so...)</p>
+
+<p>3 uttility classes, each controls something different, layout, green box, image in green box</p>
+
+<h1>Media constraints</h1>
 
 {{#embed "patterns.organisms.block.block" body_classes="" media_classes="" }}
   {{#content "content"}}
-  <h2>default grow</h2>
-    <p>By default the image will be constraied by the width of the media container.</p>
+  <h2>default</h2>
+  <p>The image will be it's natural height, pushing the container larger.</p>
+  <p>In some cases this means the image will overflow the container.</p>
   {{/content}}
 {{/embed}}
 
-{{#embed "patterns.organisms.block.block" body_classes="" media_classes="grow-cover" }}
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="constrain-height" }}
   {{#content "content"}}
-    <h3>grow-cover</h3>
+    <h3>constrain-height</h3>
     <p>The image will be constrained by the height of the media container, to the maximum of the image height.</p>
   {{/content}}
 {{/embed}}
 
-{{#embed "patterns.organisms.block.block" body_classes="" media_classes="grow-cover" }}
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="constrain-height" }}
   {{#content "content"}}
     <p>In some cases this means the image will overflow the container.</p>
     <div class="spacer">Spacer</div>
@@ -32,11 +39,10 @@ styles:
   {{/content}}
 {{/embed}}
 
-{{#embed "patterns.organisms.block.block" body_classes="v-start" media_classes="grow-push" }}
+{{#embed "patterns.organisms.block.block" body_classes="v-start" media_classes="constrain-width" }}
   {{#content "content"}}
-    <h3>grow-push</h3>
-    <p>The image will be it's natural height, pushing the container larger.</p>
-    <p>In some cases this means the image will overflow the container.</p>
+    <h3>constrain-width</h3>
+    <p>By the image will be constrained by the width of the media container.</p>
   {{/content}}
 {{/embed}}
 
@@ -103,6 +109,20 @@ styles:
 {{#embed "patterns.organisms.block.block" body_classes="" media_classes="fit-pop" }}
   {{#content "content"}}
     <h4 class="mzp-c-billboard-title">fit-pop</h4>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="fit-flush-bottom fit-pop-top constrain-width" }}
+  {{#content "content"}}
+    <h3 class="mzp-c-billboard-title">Mixed flush and pop</h3>
+    <p>You can mix fit-flush and fit-pop classes, here is fit-flush-bottom fit-pop-top.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.block.block" body_classes="" media_classes="fit-flush constrain-width" }}
+  {{#content "content"}}
+    <h3 class="mzp-c-billboard-title">fit with constraint</h3>
+    <p>In the examples above the image overflows the container. If you want it to stay inside the container one of the contstraint classes will need to be added.</p>
   {{/content}}
 {{/embed}}
 
