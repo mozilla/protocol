@@ -50,7 +50,7 @@
 }
 
 .mzp-c-hero-title {
-    @include text-display-lg;
+    @include text-title-lg;
     margin-bottom: $spacing-md;
 
     // Product logos
@@ -77,7 +77,7 @@
 }
 
 .mzp-c-hero-tagline {
-    @include text-display-sm;
+    @include text-title-sm;
 }
 
 .mzp-c-hero-image {

@@ -29,25 +29,29 @@ h1, h2, h3, h4, h5, h6, legend {
 
 // Type scale defined in includes/mixins/_typography.scss
 h1 {
-    @include text-display-xxl;
+    @include text-title-xxl;
     margin-bottom: .25em;
 }
 
 h2 {
-    @include text-display-xl;
+    @include text-title-xl;
     margin-bottom: .45em;
 }
 
 h3 {
-    @include text-display-lg;
+    @include text-title-lg;
 }
 
 h4 {
-    @include text-display-md;
+    @include text-title-md;
 }
 
-h5, h6 {
-    @include text-display-sm;
+h5 {
+    @include text-title-sm;
+}
+
+h6 {
+    @include text-title-xs;
 }
 
 p,

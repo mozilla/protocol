@@ -22,6 +22,9 @@ $image-path: '../img' !default;
 // Base includes - animations
 @import 'base/includes';
 
+// Utility includes
+@import 'base/utilities/typography';
+
 // Global components
 @import 'components/card';
 @import 'components/footer';

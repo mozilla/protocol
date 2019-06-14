@@ -108,13 +108,13 @@ styles:
 <p>We use Sass mixins to declare these font sizes:</p>
 
 <div class="protosite-pattern-embed">
-<pre class="protosite-pattern-code language-scss"><code>@include text-display-xxl;
-@include text-display-xl;
-@include text-display-lg;
-@include text-display-md;
-@include text-display-sm;
-@include text-display-xs;
-@include text-display-xxs;
+<pre class="protosite-pattern-code language-scss"><code>@include text-title-xxl;
+@include text-title-xl;
+@include text-title-lg;
+@include text-title-md;
+@include text-title-sm;
+@include text-title-xs;
+@include text-title-xxs;
 @include text-body-lg;
 @include text-body-md;
 @include text-body-sm;
@@ -128,9 +128,9 @@ styles:
 
 <div class="protosite-pattern-embed">
 <pre class="protosite-pattern-code language-scss"><code>
-  @mixin text-display-xl {
+  @mixin text-title-xl {
       @include font-size(40px);
-      line-height: $text-display-line-height;
+      line-height: $text-title-line-height;
 
       @media #{$mq-md} {
           @include font-size(56px);

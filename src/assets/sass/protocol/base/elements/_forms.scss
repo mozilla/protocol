@@ -71,7 +71,7 @@ select:focus {
 }
 
 legend {
-    @include text-display-sm;
+    @include text-title-sm;
 
     .mzp-u-inline & {
         @include text-body-md;

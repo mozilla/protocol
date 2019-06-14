@@ -74,7 +74,7 @@
 }
 
 .protosite-nav-menu-title {
-    @include text-display-xs;
+    @include text-title-xs;
 }
 
 .protosite-nav-main-item {
@@ -124,7 +124,7 @@
 
     .protosite-swatch-name {
         @include font-base;
-        @include text-display-sm;
+        @include text-title-sm;
     }
 
     @media #{$mq-md} {
@@ -172,7 +172,7 @@
 }
 
 .protosite-specimen-font {
-    @include text-display-md;
+    @include text-title-md;
 }
 
 #specimen-zilla-slab {
@@ -245,11 +245,11 @@
 }
 
 .protosite-pattern-title {
-    @include text-display-md;
+    @include text-title-md;
 }
 
 .protosite-pattern-extra h3 {
-    @include text-display-sm;
+    @include text-title-sm;
 }
 
 .protosite-pattern-extra ul {

@@ -29,7 +29,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
     }
 
     .mzp-c-billboard-title {
-        @include text-display-md;
+        @include text-title-md;
     }
 
     .mzp-c-billboard-image-container {

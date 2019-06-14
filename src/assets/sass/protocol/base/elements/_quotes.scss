@@ -6,7 +6,7 @@
 
 blockquote {
     @include bidi(((border-width, 0 0 0 5px, 0 5px 0 0),));
-    @include text-display-sm;
+    @include text-title-sm;
     border-color: $color-marketing-gray-20;
     border-style: solid;
     margin: $spacing-lg auto;
@@ -14,7 +14,7 @@ blockquote {
     font-weight: bold;
 
     cite {
-        @include text-display-xs;
+        @include text-title-xs;
         color: $color-marketing-gray-70;
 
         &:before {
