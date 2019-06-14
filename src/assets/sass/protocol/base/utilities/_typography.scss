@@ -1,0 +1,118 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+.mzp-u-title-xxl {
+    @include text-display-xxl;
+
+    .mzp-t-mozilla {
+        & {
+            @include font-mozilla;
+        }
+    }
+
+    .mzp-t-firefox {
+        & {
+            @include font-firefox;
+        }
+    }
+}
+
+.mzp-u-title-xl {
+    @include text-display-xl;
+
+    .mzp-t-mozilla {
+        & {
+            @include font-mozilla;
+        }
+    }
+
+    .mzp-t-firefox {
+        & {
+            @include font-firefox;
+        }
+    }
+}
+
+.mzp-u-title-lg {
+    @include text-display-lg;
+
+    .mzp-t-mozilla {
+        & {
+            @include font-mozilla;
+        }
+    }
+
+    .mzp-t-firefox {
+        & {
+            @include font-firefox;
+        }
+    }
+}
+
+.mzp-u-title-md {
+    @include text-display-md;
+
+    .mzp-t-mozilla {
+        & {
+            @include font-mozilla;
+        }
+    }
+
+    .mzp-t-firefox {
+        & {
+            @include font-firefox;
+        }
+    }
+}
+
+.mzp-u-title-sm {
+    @include text-display-sm;
+
+    .mzp-t-mozilla {
+        & {
+            @include font-mozilla;
+        }
+    }
+
+    .mzp-t-firefox {
+        & {
+            @include font-firefox;
+        }
+    }
+}
+
+.mzp-u-title-xs {
+    @include text-display-xs;
+
+    .mzp-t-mozilla {
+        & {
+            @include font-mozilla;
+        }
+    }
+
+    .mzp-t-firefox {
+        & {
+            @include font-firefox;
+        }
+    }
+}
+
+.mzp-u-title-xxs {
+    @include text-display-xxs;
+
+    .mzp-t-mozilla {
+        & {
+            @include font-mozilla;
+        }
+    }
+
+    .mzp-t-firefox {
+        & {
+            @include font-firefox;
+        }
+    }
+}
+
