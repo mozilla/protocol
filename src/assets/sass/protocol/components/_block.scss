@@ -376,8 +376,7 @@ $padding: $layout-xs;
                 max-width: none;
             }
 
-            .mzp-is-inversed > &:not(.h-start),
-            .mzp-is-inversed > &:not(.h-center) {
+            .mzp-is-inversed > &:not([class*="h-"]) {
                 justify-self: end; // how to do this without over riding h-center etc.
             }
 
