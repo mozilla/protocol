@@ -1,3 +1,7 @@
+# HEAD
+
+* **css:** Text display mixin consistency (#389)
+
 # 7.0.0
 
 # Features
