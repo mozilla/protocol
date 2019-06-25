@@ -9,7 +9,7 @@ blockquote {
         (border-left, 5px solid $color-gray-20, border-right, 0),
         ));
     @include text-display-sm;
-    margin: $spacing-lg auto $spacing-lg;
+    margin: $spacing-lg auto;
     padding: $spacing-sm $spacing-lg;
     font-weight: bold;
 
@@ -36,9 +36,4 @@ blockquote {
     .mzp-t-mozilla & {
         @include font-mozilla;
     }
-}
-
-[dir='rtl'] {
-    cite:before { content: ''; }
-    cite:after { content: ' —'; }
 }
