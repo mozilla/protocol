@@ -1,6 +1,7 @@
 # HEAD
 
 * **css:** Text display mixin consistency (#389)
+* **css:** Add citation to blockquote and decrease font size (#366)
 
 # 7.0.0
 
