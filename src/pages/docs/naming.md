@@ -1,6 +1,6 @@
 ---
 title: Naming Convention
-order: 1
+order: 2
 ---
 
 For ease of integration and to avoid conflicts with other sites, frameworks,
@@ -12,7 +12,7 @@ naming convention with a set of prefixes to put rules into a few different
 categories:
 
 <ul class="mzp-u-list-styled">
-    <li>`c-` for component names. Expect a lot of this one, e.g. `.mzp-c-card`, `.mzp-c-btn`.</li>
+    <li>`c-` for component names. Expect a lot of this one, e.g. `.mzp-c-card`, `.mzp-c-button`.</li>
     <li>`t-` for theme styles, when a component has one or more alternative styles, e.g. `.mzp-t-dark`, `.mzp-t-firefox`.</li>
     <li>`l-` for layout-related styles, e.g. `.mzp-l-grid-half`, `.mzp-l-grid-third`. These are presentational so should be rare. Prefer mixins.</li>
     <li>`u-` for utility styles, which have a broad scope and can be powerful overrides, e.g. `.mzp-u-inline`, `.mzp-u-no-margin`. These are presentational so should be rare. Prefer mixins.</li>
@@ -50,12 +50,12 @@ purpose, or function, not its presentation.
 
 ```scss
 // NO - Presentational
-.mzp-c-card-large { ... }
-.mzp-c-btn-blue { ... }
+.mzp-c-box { ... }
+.mzp-c-button-blue { ... }
 
 // YES - Meaningful
-.mzp-c-card-featured { ... }
-.mzp-c-btn-primary { ... }
+.mzp-c-card { ... }
+.mzp-c-button-download { ... }
 ```
 
 Notable exceptions are the handful of layout and utility classes (prefixed

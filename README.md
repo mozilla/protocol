@@ -4,6 +4,8 @@ A modular design system for Mozilla websites.
 
 https://protocol.mozilla.org/
 
+Protocol is in an *early stage of development* and likely to change a lot in the near future. If you're interested in using it on your project, let us know and we can help you.
+
 ## Getting Started
 
 Protocol is built on the [Node.js](https://nodejs.org/) platform and published to [NPM](https://www.npmjs.com/), so be sure to have both installed before proceeding.
