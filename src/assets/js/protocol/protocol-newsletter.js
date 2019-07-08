@@ -10,10 +10,10 @@
     // Expand email form on input focus or submit if details aren't visible
     function initEmailForm() {
         var newsletterForm = document.getElementById('newsletter-form');
-        var submitButton = document.getElementById('newsletter-submit');
-        var formDetails = document.getElementById('newsletter-details');
-        var emailField = document.querySelector('.mzp-js-email-field');
-        var formExpanded = window.getComputedStyle(formDetails).display === 'none' ? false : true;
+        var submitButton;
+        var formDetails;
+        var emailField;
+        var formExpanded;
 
         function emailFormShowDetails() {
             if (!formExpanded) {
@@ -22,23 +22,30 @@
             }
         }
 
-        emailField.addEventListener('focus', function() {
-            emailFormShowDetails();
-        });
+        if (newsletterForm) {
+            submitButton = document.getElementById('newsletter-submit');
+            formDetails = document.getElementById('newsletter-details');
+            emailField = document.querySelector('.mzp-js-email-field');
+            formExpanded = window.getComputedStyle(formDetails).display === 'none' ? false : true;
 
-        submitButton.addEventListener('click', function(e) {
-            if (!formExpanded) {
-                e.preventDefault();
+            emailField.addEventListener('focus', function() {
                 emailFormShowDetails();
-            }
-        });
+            });
 
-        newsletterForm.addEventListener('submit', function(e) {
-            if (!formExpanded) {
-                e.preventDefault();
-                emailFormShowDetails();
-            }
-        });
+            submitButton.addEventListener('click', function(e) {
+                if (!formExpanded) {
+                    e.preventDefault();
+                    emailFormShowDetails();
+                }
+            });
+
+            newsletterForm.addEventListener('submit', function(e) {
+                if (!formExpanded) {
+                    e.preventDefault();
+                    emailFormShowDetails();
+                }
+            });
+        }
     }
     initEmailForm();
 

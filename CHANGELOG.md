@@ -1,3 +1,7 @@
+# HEAD
+
+* **js:** Newsletter.js only runs when there is a newsletter (#400)
+
 # 7.0.1
 
 * **css:** Text display mixin consistency (#389)
