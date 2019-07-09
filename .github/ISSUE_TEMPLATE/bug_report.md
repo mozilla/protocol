@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Report an error you've discovered
-title: "[bug]"
+title: ""
 labels: 'Bug :beetle:'
 assignees: ''
 
