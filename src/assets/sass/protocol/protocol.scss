@@ -12,8 +12,9 @@ $image-path: '../img' !default;
 // Individual pages may include additional component styles as needed.
 
 // Fonts
-@import 'includes/fonts/zilla-slab';
 @import 'includes/fonts/inter';
+@import 'includes/fonts/metropolis';
+@import 'includes/fonts/zilla-slab';
 
 // Base elements - general HTML elements
 @import 'base/elements';
