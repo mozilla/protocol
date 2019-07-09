@@ -1,5 +1,9 @@
 # HEAD
 
+## Features
+
+* **css:** Add Metropolis as Firefox brand font (#386)
+
 ## Bug Fixes
 
 * **css:** Increase contrast on sidebar mobile menu (#407)

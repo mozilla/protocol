@@ -179,6 +179,10 @@
     @include font-mozilla;
 }
 
+#specimen-metropolis {
+    @include font-firefox;
+}
+
 #specimen-inter {
     @include font-base;
 }
