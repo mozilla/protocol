@@ -1,4 +1,6 @@
-# HEAD
+# 7.0.2
+
+## Bug Fixes
 
 * **js:** Newsletter.js only runs when there is a newsletter (#400)
 
