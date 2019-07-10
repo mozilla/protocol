@@ -1,6 +1,6 @@
 ---
 title: CSS Coding Guide
-order: 2
+order: 4
 ---
 
 Coding style can be really personal and everyone has their own opinions
@@ -85,7 +85,7 @@ rule or declaration above it.
 
 ## Format
 
-<ul class="prose">
+<ul class="mzp-u-list-styled">
     <li>One selector per line.</li>
     <li>One declaration per line.</li>
     <li>Order declarations alphabetically (from A to Z).</li>
@@ -145,7 +145,7 @@ be arranged across multiple lines (indented one level from their property).
 
 ### Units
 
-<ul class="prose">
+<ul class="mzp-u-list-styled">
     <li>Use pixels for fixed-width elements.</li>
     <li>Use percentages for fluid-width elements.</li>
     <li>Use rems for `font-size` because it respects user preferences.</li>
