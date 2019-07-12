@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **css:** Increase contrast on sidebar mobile menu (#407)
+
 # 7.0.2
 
 ## Bug Fixes
