@@ -7,6 +7,7 @@
 
 ## Bug Fixes
 
+* **css:** Article max-width restricted to size of parent container (#422)
 * **css:** Increase contrast on sidebar mobile menu (#407)
 
 # 7.0.2
