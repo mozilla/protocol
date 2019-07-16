@@ -5,7 +5,8 @@
 @import '../includes/lib';
 
 .mzp-c-article {
-    max-width: $content-md;
+    width: $content-md;
+    max-width: 100%;
 
     // Step down the heading levels
     h2 {
