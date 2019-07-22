@@ -1,0 +1,27 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+/* -------------------------------------------------------------------------- */
+// Base Float Box class
+
+.mzp-c-box-emphasis {
+    background: $color-white;
+    box-shadow: 0 0 10px 0 $color-gray-30;
+    border-radius: 0.2em;
+
+    .mzp-c-box-emphasis-content {
+        padding: 3em;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Medium sized card
+
+.mzp-c-box-emphasis.mzp-c-box-emphasis-medium {
+    @media #{$mq-sm} {
+        max-width: 610px;
+    }
+}
