@@ -5,23 +5,41 @@
 @import '../includes/lib';
 
 /* -------------------------------------------------------------------------- */
-// Base Float Box class
+// Base emphasis Box class
+section.mzp-c-box-emphasis-medium {
+    padding: 1em;
+    margin: 2em;
+    display: inline-block;
+}
+
+.mzp-c-box-emphasis-content {
+    text-align: center;
+    padding: 1em;
+}
+
+.mzp-c-box-emphasis-fuzzy {
+    background: $color-white;
+    box-shadow: 0 0 15px 0 $color-gray-30;
+    border-radius: 0.2em;
+}
 
 .mzp-c-box-emphasis {
     background: $color-white;
     box-shadow: 0 0 10px 0 $color-gray-30;
     border-radius: 0.2em;
+}
 
-    .mzp-c-box-emphasis-content {
-        padding: 3em;
-    }
+.mzp-c-box-emphasis-sharp {
+    background: $color-white;
+    box-shadow: 0 0 5px 0 $color-gray-30;
+    border-radius: 0.2em;
 }
 
 /* -------------------------------------------------------------------------- */
 // Medium sized card
 
-.mzp-c-box-emphasis.mzp-c-box-emphasis-medium {
+.mzp-c-box-emphasis-medium {
     @media #{$mq-sm} {
-        max-width: 610px;
+        max-width: 700px;
     }
 }

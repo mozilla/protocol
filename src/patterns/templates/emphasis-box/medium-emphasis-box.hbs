@@ -3,13 +3,32 @@ name: Medium Emphasis Box
 description: A medium emphasis box
 order: 2
 notes: |
-    - This is intended to in
+    - This is intended to be used in addition to a card or some other block element
 
 ---
+<section class="mzp-c-box-emphasis-fuzzy mzp-c-box-emphasis-medium" >
+  <div class="mzp-c-box-emphasis-content" >
+    {{#block "content"}}
+    <h3>This is a fuzzy Emphasis Box</h3>
+    <p>This is some filler content. Cats are the best, every cat.</p>
+    {{/block}}
+  </div>
+</section>
 
 <section class="mzp-c-box-emphasis mzp-c-box-emphasis-medium" >
   <div class="mzp-c-box-emphasis-content" >
     {{#block "content"}}
+    <h3>This is a standard Emphasis Box</h3>
+    <p>This is some filler content. Cats are the best, every cat.</p>
+    {{/block}}
+  </div>
+</section>
+
+<section class="mzp-c-box-emphasis-sharp mzp-c-box-emphasis-medium" >
+  <div class="mzp-c-box-emphasis-content" >
+    {{#block "content"}}
+    <h3>This is a sharp Emphasis Box</h3>
+    <p>This is some filler content. Cats are the best, every cat.</p>
     {{/block}}
   </div>
 </section>
