@@ -10,45 +10,59 @@
     border-radius: 4px;
     border: 1px;
     box-shadow: 1px 1px 1px rgba(27,31,35,.1);
-    margin: $layout-xs auto 0;
-    height: 42px;
     font-weight: normal;
+    margin: $layout-xs auto 0;
     max-width: $content-sm;
     text-align: center;
 
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
     &.mzp-is-sticky {
-        position: fixed;
-        top: 0;
-        z-index: 2;
+        left: 0;
         margin-left: auto;
         margin-right: auto;
-        left: 0;
+        position: fixed;
         right: 0;
+        top: 0;
+        z-index: 2;
+
+        .mzp-c-notification-bar-button {
+            width: 20px;
+
+            @media #{$mq-sm}{
+                width: 42px;
+            }
+        }
     }
 
     .mzp-c-notification-bar-button {
-        @include image-replaced;
-        @include bidi((
-                (float, right, left),
-                (border-radius, 0 4px 4px 0, 4px 0 0 4px),
-            ));
-        background: $color-gray-40
-            url("#{$image-path}/icons/ui/close-black.svg") center center
-            no-repeat;
+        background: transparent url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
         border: none;
-        display: block;
-        height: 42px;
-        min-width: 0;
-        padding: 0;
-        width: 42px;
+        float: right;
+        height: 20px;
+        padding: 10px;
 
         &:hover,
         &:focus {
             cursor: pointer;
         }
 
-        &:focus {
-            outline: 1px dotted $color-white;
+        @media #{$mq-sm} {
+            @include image-replaced;
+            @include bidi((
+                    (float, right, left),
+                    (border-radius, 0 4px 4px 0, 4px 0 0 4px),
+                ));
+            background: $color-gray-40 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+            border: none;
+            float: right;
+            height: 45px;
+            padding: 0;
+            width: 42px;
         }
     }
 
@@ -56,9 +70,7 @@
         background-color: $color-green-30;
 
         .mzp-c-notification-bar-button {
-            background: $color-green-60
-                url("#{$image-path}/icons/ui/close-black.svg") center center
-                no-repeat;
+            background: $color-green-60 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
         }
     }
 
@@ -66,9 +78,7 @@
         background-color: $color-red-40;
 
         .mzp-c-notification-bar-button {
-            background: $color-red-60
-                url("#{$image-path}/icons/ui/close-black.svg") center center
-                no-repeat;
+            background: $color-red-60 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
         }
     }
 
@@ -76,9 +86,7 @@
         background-color: $color-yellow-20;
 
         .mzp-c-notification-bar-button {
-            background: $color-yellow-40
-                url("#{$image-path}/icons/ui/close-black.svg") center center
-                no-repeat;
+            background: $color-yellow-40 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
         }
     }
 
@@ -88,14 +96,17 @@
         font-weight: 600;
 
         .mzp-c-notification-bar-button {
-            background: $color-blue-70
-                url("#{$image-path}/icons/ui/close-white.svg") center center
-                no-repeat;
+            background: $color-blue-70 url("#{$image-path}/icons/ui/close-white.svg") center center no-repeat;
         }
     }
 
     .mzp-c-notification-bar-content {
         display: inline-block;
-        margin-top: $spacing-lg/2;
+        margin: 10px;
+        width: 80%;
+
+        @media #{$mq-sm} {
+            margin-top: 15px;
+        }
     }
 }

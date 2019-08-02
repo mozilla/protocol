@@ -13,29 +13,51 @@ Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
     var options = {};
 
     /*
-    options: object of optional params:
-        title: title to display inside the notification.
-        className: optional CSS class name to apply to the notification.
+    origin: element that triggered the notification.
+    options: object of params:
+        title: title to display inside the notification. [required]
+        className: CSS class name to apply to the notification.
         closeText: 'string to use for close button a11y.
         hasDismiss: boolean - include or not include dismiss button.
         isSticky: boolean - determines if notification is absolutely positioned and sticky.
+        onNotificationOpen: function to fire after notification has been opened.
+        onNotificationClose: function to fire after notification has been closed.
     */
 
     var _init = function(origin, opts) {
-        options = opts;
+
+        if (typeof opts === 'object') {
+            for (var i in opts) {
+                if (opts.hasOwnProperty(i)) {
+                    options[i] = opts[i];
+                }
+            }
+        }
 
         // Create new notification
-        var title = (options && options.title) ? options.title : '';
+        var title = document.createTextNode(options.title);
         var className = (options && options.className) ? options.className : '';
         var closeText = (options && options.closeText) ? options.closeText : '';
         var isSticky = (options && options.isSticky) ? 'mzp-is-sticky' : '';
 
+        var notification = document.createElement('aside');
+        notification.className = 'mzp-c-notification-bar ' + className + ' ' + isSticky;
+
+        // Notification Title
+        if (options && options.title){
+            var notificationTitle = document.createElement('p');
+            notificationTitle.className = 'mzp-c-notification-bar-content';
+            notificationTitle.appendChild(title);
+
+            // add title to notification
+            notification.appendChild(notificationTitle);
+        }else{
+            console.log('Notification banner requires title parameter.'); // eslint-disable-line no-console
+        }
+
         // Notification Fragment
-        var notificationFragment = document.createRange().createContextualFragment(
-            '<aside class="mzp-c-notification-bar ' + className + ' ' + isSticky + '">' +
-            '   <p class="mzp-c-notification-bar-content">' + title + '</p>' +
-            '</aside>'
-        );
+        var notificationFragment = document.createDocumentFragment();
+        notificationFragment.appendChild(notification);
 
         // Dismiss Button
         var dismissButton = '<button class="mzp-c-notification-bar-button" type="button">' + closeText + '</button>';
@@ -47,11 +69,8 @@ Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
             var button = notificationFragment.querySelector('.mzp-c-notification-bar-button');
 
             button.setAttribute('title', closeText);
-            button.addEventListener('click', function(e) {
-                _closeNotification(e);
-            });
+            button.addEventListener('click', _closeNotification, false);
         }
-
 
         // Add notification to page
         document.body.insertBefore(notificationFragment, document.body.childNodes[0]);
@@ -61,8 +80,8 @@ Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
 
 
         // Execute (optional) open callback
-        if (options && typeof(options.onCreate) === 'function') {
-            options.onCreate();
+        if (options && typeof(options.onNotificationOpen) === 'function') {
+            options.onNotificationOpen();
         }
     };
 
@@ -72,8 +91,8 @@ Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
         e.currentTarget.parentNode.remove();
 
         // execute (optional) callback
-        if (options && typeof(options.onDestroy) === 'function') {
-            options.onDestroy();
+        if (options && typeof(options.onNotificationClose) === 'function') {
+            options.onNotificationClose(e.target);
         }
 
         // free up options

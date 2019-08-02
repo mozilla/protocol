@@ -2,19 +2,29 @@
 name: Notification bar
 description: A notification bar provides contextual feedback messages
 notes: |
-    - Notification bars have a range of different colors
+  A JS example to invoke a notification is provided below.
+
+  The notification JS provides the following options
+    - `origin` [DOM Element] element that triggered the notification
+    - `options` [Object] object of params
+        - `title` [String] message to display in the notification. (Required)
+        - `className` [String] optional CSS class name to apply to the notification.
+        - `onNotificationOpen` [Function] function to fire after notification has been opened.
+        - `onNotificationClose` [Function] function to fire after notification has been closed.
+        - `hasDismiss` [Boolean] include or not include dismiss button.
+        - `closeText` [String] text to use for close button a11y.
+        - `isSticky` [Boolean] determines if notification is absolutely positioned and sticky.
+
+  Inline JavaScript in this example is for demo purposes only. Use external files in production code.
+
+  Notification bars have a range of different colors.
     - `mzp-t-success`
     - `mzp-t-warning`
     - `mzp-t-error`
     - `mzp-t-click`
-    - An optional dismiss button
-    - `mzp-has-dismiss`
-    - And optional stickiness
-    - `mzp-is-sticky`
-order: 5
 ---
 
-<button class="mzp-c-button">Open Notification</button>
+<button class="mzp-c-button mzp-js-notification-trigger">Open Notification</button>
 
 <ul class="notification-demo-list">
   <li>
@@ -63,10 +73,10 @@ order: 5
     for (var i = 0; i < dissmissButtons.length; i++) {
       dissmissButtons[i].addEventListener('click', function(e) {
         e.currentTarget.parentNode.remove();
-      });
+      }, false);
     }
 
-    var notificationButton = document.querySelector('.mzp-c-button');
+    var notificationButton = document.querySelector('.mzp-js-notification-trigger');
 
     notificationButton.addEventListener('click', function (e) {
       e.preventDefault();
@@ -78,10 +88,10 @@ order: 5
         hasDismiss: true,
         isSticky: true,
 
-        onCreate: function () {
+        onNotificationOpen: function () {
           console.log('Notification opened');
         },
-        onDestroy: function () {
+        onNotificationClose: function () {
           console.log('Notification closed');
         }
       });

@@ -29,8 +29,8 @@ describe('protocol-notification.js', function() {
 
                 Mzp.Notification.init(button, {
                     hasDismiss: true,
-                    onCreate: options.open,
-                    onDestroy: options.close
+                    onNotificationOpen: options.open,
+                    onNotificationClose: options.close
                 });
             });
         });
