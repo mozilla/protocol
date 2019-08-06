@@ -45,13 +45,13 @@ Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
 
         // Notification Title
         if (options && options.title){
+
             var notificationTitle = document.createElement('p');
-            notificationTitle.className = 'mzp-c-notification-bar-content';
             notificationTitle.appendChild(title);
 
             // add title to notification
             notification.appendChild(notificationTitle);
-        }else{
+        } else {
             console.log('Notification banner requires title parameter.'); // eslint-disable-line no-console
         }
 
@@ -64,7 +64,7 @@ Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
 
         // Show button & add event listener
         if (options && options.hasDismiss){
-            notificationFragment.childNodes[0].insertAdjacentHTML('beforeend', dismissButton);
+            notificationFragment.childNodes[0].insertAdjacentHTML('afterbegin', dismissButton);
 
             var button = notificationFragment.querySelector('.mzp-c-notification-bar-button');
 

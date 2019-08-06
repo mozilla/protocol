@@ -5,15 +5,46 @@
 @import "../includes/lib";
 
 .mzp-c-notification-bar {
-    @include text-display-xxs;
+    @include text-body-sm;
     background-color: $color-gray-20;
     border-radius: 4px;
     border: 1px;
     box-shadow: 1px 1px 1px rgba(27,31,35,.1);
     font-weight: normal;
     margin: $layout-xs auto 0;
-    max-width: $content-sm;
     text-align: center;
+    position: relative;
+    padding: 10px;
+
+    @media #{$mq-sm} {
+        display: inline-block;
+        padding: 0;
+        min-width: $content-sm;
+        max-width: $content-md;
+    }
+
+    p {
+        margin: 0 15px;
+        @media #{$mq-sm} {
+            float: left;
+            margin: 11px 15px;
+        }
+    }
+
+    a {
+        color: inherit;
+        font-size: inherit;
+        font-weight: 700;
+        margin: 11px 0;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        @media #{$mq-sm} {
+            float: left;
+        }
+    }
 
     &:after {
         content: "";
@@ -23,28 +54,27 @@
 
     &.mzp-is-sticky {
         left: 0;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 15px 15px 0;
         position: fixed;
         right: 0;
         top: 0;
         z-index: 2;
-
-        .mzp-c-notification-bar-button {
-            width: 20px;
-
-            @media #{$mq-sm}{
-                width: 42px;
-            }
-        }
     }
 
     .mzp-c-notification-bar-button {
-        background: transparent url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+        @include image-replaced;
+        @include bidi((
+            (float, right, left),
+            (border-radius, 0 4px 4px 0, 4px 0 0 4px),
+            ));
+        background: url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
         border: none;
-        float: right;
         height: 20px;
-        padding: 10px;
+        width: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 5px;
 
         &:hover,
         &:focus {
@@ -52,41 +82,43 @@
         }
 
         @media #{$mq-sm} {
-            @include image-replaced;
-            @include bidi((
-                    (float, right, left),
-                    (border-radius, 0 4px 4px 0, 4px 0 0 4px),
-                ));
             background: $color-gray-40 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
-            border: none;
-            float: right;
-            height: 45px;
+            position: static;
             padding: 0;
-            width: 42px;
+            margin: 0;
+            height: 46px;
+            width: 40px;
+            float: right;
         }
     }
 
     &.mzp-t-success {
         background-color: $color-green-30;
 
-        .mzp-c-notification-bar-button {
-            background: $color-green-60 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+        @media #{$mq-sm} {
+            .mzp-c-notification-bar-button {
+                background: $color-green-60 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+            }
         }
     }
 
     &.mzp-t-error {
         background-color: $color-red-40;
 
-        .mzp-c-notification-bar-button {
-            background: $color-red-60 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+        @media #{$mq-sm} {
+            .mzp-c-notification-bar-button {
+                background: $color-red-60 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+            }
         }
     }
 
     &.mzp-t-warning {
         background-color: $color-yellow-20;
 
-        .mzp-c-notification-bar-button {
-            background: $color-yellow-40 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+        @media #{$mq-sm} {
+            .mzp-c-notification-bar-button {
+                background: $color-yellow-40 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+            }
         }
     }
 
@@ -95,18 +127,10 @@
         color: $color-white;
         font-weight: 600;
 
-        .mzp-c-notification-bar-button {
-            background: $color-blue-70 url("#{$image-path}/icons/ui/close-white.svg") center center no-repeat;
-        }
-    }
-
-    .mzp-c-notification-bar-content {
-        display: inline-block;
-        margin: 10px;
-        width: 80%;
-
         @media #{$mq-sm} {
-            margin-top: 15px;
+            .mzp-c-notification-bar-button {
+                background: $color-blue-70 url("#{$image-path}/icons/ui/close-white.svg") center center no-repeat;
+            }
         }
     }
 }
