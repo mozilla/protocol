@@ -6,9 +6,11 @@ http://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+jav
  * @author Tim  Shedor
  */
 
+@import './node_modules/@mozilla-protocol/tokens/dist/index.scss';
+
 code[class*="language-"],
 pre[class*="language-"] {
-	color: black;
+	color: $color-black;
 	background: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	text-align: left;
@@ -37,10 +39,10 @@ pre[class*="language-"] {
 }
 pre[class*="language-"]>code {
 	position: relative;
-	border-left: 10px solid #358ccb;
-	box-shadow: -1px 0 0 0 #358ccb, 0 0 0 1px #dfdfdf;
-	background-color: #fdfdfd;
-	background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+	border-left: 10px solid $color-blue-40;
+	box-shadow: -1px 0 0 0 $color-blue-40, 0 0 0 1px $color-gray-30;
+	background-color: $color-white;
+	background-image: linear-gradient(transparent 50%, rgba($color-blue-50, .04) 50%);
 	background-size: 3em 3em;
 	background-origin: content-box;
 	background-attachment: local;
@@ -57,7 +59,7 @@ code[class*="language"] {
 /* Margin bottom to accomodate shadow */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background-color: #fdfdfd;
+	background-color: $color-white;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -69,8 +71,8 @@ pre[class*="language-"] {
 	position: relative;
 	padding: .2em;
 	border-radius: 0.3em;
-	color: #c92c2c;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	color: $color-red-60;
+	border: 1px solid rgba($color-black, 0.1);
 	display: inline;
 	white-space: normal;
 }
@@ -86,7 +88,7 @@ pre[class*="language-"]:after {
 	width: 40%;
 	height: 20%;
 	max-height: 13em;
-	box-shadow: 0 13px 8px #979797;
+	box-shadow: 0 13px 8px $color-gray-50;
 	-webkit-transform: rotate(-2deg);
 	-moz-transform: rotate(-2deg);
 	-ms-transform: rotate(-2deg);
@@ -110,11 +112,11 @@ pre[class*="language-"]:after {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #7D8B99;
+	color: $color-gray-50;
 }
 
 .token.punctuation {
-	color: #5F6364;
+	color: $color-gray-80;
 }
 
 .token.property,
@@ -125,7 +127,7 @@ pre[class*="language-"]:after {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #c92c2c;
+	color: $color-blue-50;
 }
 
 .token.selector,
@@ -135,33 +137,33 @@ pre[class*="language-"]:after {
 .token.function,
 .token.builtin,
 .token.inserted {
-	color: #2f9c0a;
+	color: $color-pink-70;
 }
 
 .token.operator,
 .token.entity,
 .token.url,
 .token.variable {
-	color: #a67f59;
-	background: rgba(255, 255, 255, 0.5);
+	color: $color-yellow-70;
+	background: rgba($color-white, 0.5);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword,
 .token.class-name {
-	color: #1990b8;
+	color: $color-blue-60;
 }
 
 .token.regex,
 .token.important {
-	color: #e90;
+	color: $color-orange-60;
 }
 
 .language-css .token.string,
 .style .token.string {
-	color: #a67f59;
-	background: rgba(255, 255, 255, 0.5);
+	color: $color-yellow-70;
+	background: rgba($color-white, 0.5);
 }
 
 .token.important {
@@ -196,7 +198,7 @@ pre[class*="language-"]:after {
 .token.tab:not(:empty):before,
 .token.cr:before,
 .token.lf:before {
-	color: #e0d7d1;
+	color: $color-red-10;
 }
 
 /* Plugin styles: Line Numbers */

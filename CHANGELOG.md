@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Prism styles consume Protocol Tokens (#452)
 * **css:** Details button gets cursor:pointer when hovered (#367)
 * **css:** Add Metropolis as Firefox brand font (#386)
 
