@@ -7,20 +7,22 @@
 /* -------------------------------------------------------------------------- */
 // Base emphasis Box class
 section.mzp-c-box-emphasis-medium {
-    padding: 1em;
-    margin: 2em;
+    background: $color-white;
+    border-radius: 6px;
     display: inline-block;
+    text-align: center;
+    margin: $spacing-md;
 }
 
 .mzp-c-box-emphasis-content {
     text-align: center;
-    padding: 1em;
+    padding: $spacing-xl;
 }
 
 .mzp-c-box-emphasis-fuzzy {
     background: $color-white;
     box-shadow: 0 0 15px 0 $color-gray-30;
-    border-radius: 0.2em;
+    border-radius: 6px;
 }
 
 .mzp-c-box-emphasis {
@@ -32,7 +34,7 @@ section.mzp-c-box-emphasis-medium {
 .mzp-c-box-emphasis-sharp {
     background: $color-white;
     box-shadow: 0 0 5px 0 $color-gray-30;
-    border-radius: 0.2em;
+    border-radius: 6px;
 }
 
 /* -------------------------------------------------------------------------- */
