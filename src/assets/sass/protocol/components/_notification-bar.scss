@@ -17,17 +17,18 @@
     padding: 10px;
 
     @media #{$mq-sm} {
-        display: inline-block;
         padding: 0;
         min-width: $content-sm;
         max-width: $content-md;
+        height: 46px;
     }
 
     p {
+        display: block;
         margin: 0 15px;
+
         @media #{$mq-sm} {
-            float: left;
-            margin: 11px 15px;
+            display: inline;
         }
     }
 
@@ -35,14 +36,9 @@
         color: inherit;
         font-size: inherit;
         font-weight: 700;
-        margin: 11px 0;
 
         &:hover {
             text-decoration: none;
-        }
-
-        @media #{$mq-sm} {
-            float: left;
         }
     }
 
@@ -54,26 +50,29 @@
 
     &.mzp-is-sticky {
         left: 0;
-        margin: 15px 15px 0;
+        margin: 15px;
         position: fixed;
         right: 0;
-        top: 0;
         z-index: 2;
+
+        @media #{$mq-sm} {
+            margin: 15px auto;
+        }
     }
 
     .mzp-c-notification-bar-button {
-        @include image-replaced;
         @include bidi((
-            (float, right, left),
-            (border-radius, 0 4px 4px 0, 4px 0 0 4px),
-            ));
+                    (right, 0, auto),
+                    (left, auto, 0),
+                ));
+
+        @include image-replaced;
         background: url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
         border: none;
         height: 20px;
         width: 20px;
         position: absolute;
         top: 0;
-        right: 0;
         margin: 5px;
 
         &:hover,
@@ -82,11 +81,15 @@
         }
 
         @media #{$mq-sm} {
+            @include bidi((
+                (float, right, left),
+                (border-radius, 0 4px 4px 0, 4px 0 0 4px),
+                ));
             background: $color-gray-40 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
             position: static;
             padding: 0;
             margin: 0;
-            height: 46px;
+            height: 100%;
             width: 40px;
             float: right;
         }

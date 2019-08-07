@@ -39,6 +39,9 @@ describe('protocol-notification.js', function() {
             var button = document.querySelector('.mzp-c-button');
             button.click();
             expect(options.open).toHaveBeenCalled();
+
+            var notification = document.querySelector('.mzp-c-notification-bar');
+            expect(notification).toBeTruthy();
         });
 
         it('closes as expected', function() {
@@ -48,6 +51,9 @@ describe('protocol-notification.js', function() {
             var dismissButton = document.querySelector('.mzp-c-notification-bar-button');
             dismissButton.click();
             expect(options.close).toHaveBeenCalled();
+
+            var notification = document.querySelector('.mzp-c-notification-bar');
+            expect(notification).toBeFalsy();
         });
 
     });
