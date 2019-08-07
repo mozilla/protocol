@@ -33,11 +33,11 @@ describe('protocol-notification.js', function() {
                     onNotificationClose: options.close
                 });
             });
+
+            button.click();
         });
 
         it('opens as expected', function() {
-            var button = document.querySelector('.mzp-c-button');
-            button.click();
             expect(options.open).toHaveBeenCalled();
 
             var notification = document.querySelector('.mzp-c-notification-bar');
@@ -45,15 +45,12 @@ describe('protocol-notification.js', function() {
         });
 
         it('closes as expected', function() {
-            var button = document.querySelector('.mzp-c-button');
-            button.click();
-
             var dismissButton = document.querySelector('.mzp-c-notification-bar-button');
             dismissButton.click();
             expect(options.close).toHaveBeenCalled();
 
             var notification = document.querySelector('.mzp-c-notification-bar');
-            expect(notification).toBeFalsy();
+            expect(notification).toEqual(null);
         });
 
     });
