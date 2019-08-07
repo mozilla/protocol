@@ -44,6 +44,7 @@ Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
         notification.className = 'mzp-c-notification-bar ' + className + ' ' + isSticky;
 
         // Notification Title
+
         if (options && options.title){
 
             var notificationTitle = document.createElement('p');
@@ -51,8 +52,6 @@ Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
 
             // add title to notification
             notification.appendChild(notificationTitle);
-        } else {
-            console.log('Notification banner requires title parameter.'); // eslint-disable-line no-console
         }
 
         // Notification Fragment
