@@ -37,6 +37,13 @@ describe('protocol-notification.js', function() {
             button.click();
         });
 
+        afterEach(function(){
+            var node = document.querySelector('.mzp-c-notification-bar');
+            if (node) {
+                node.parentNode.removeChild(node);
+            }
+        });
+
         it('opens as expected', function() {
             expect(options.open).toHaveBeenCalled();
 
