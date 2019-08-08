@@ -11,6 +11,13 @@ describe('protocol-notification.js', function() {
         document.documentElement.insertAdjacentHTML('afterbegin', details);
     });
 
+    afterEach(function(){
+        var node = document.querySelector('.mzp-c-button');
+        if (node) {
+            node.parentNode.removeChild(node);
+        }
+    });
+
     describe('interactions', function () {
 
         var options = {
