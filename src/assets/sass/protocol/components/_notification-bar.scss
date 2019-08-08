@@ -1,0 +1,140 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import "../includes/lib";
+
+.mzp-c-notification-bar {
+    @include text-body-sm;
+    background-color: $color-gray-20;
+    border-radius: 4px;
+    border: 1px;
+    box-shadow: 1px 1px 1px rgba(27,31,35,.1);
+    font-weight: normal;
+    margin: $layout-xs auto 0;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+
+    @media #{$mq-sm} {
+        padding: 0;
+        min-width: $content-sm;
+        max-width: $content-md;
+        height: 46px;
+    }
+
+    p {
+        display: inline-block;
+        margin: 0 15px;
+
+        @media #{$mq-sm} {
+            line-height: 46px;
+        }
+    }
+
+    a {
+        color: inherit;
+        display: inline-block;
+        font-size: inherit;
+        font-weight: 700;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    &.mzp-is-sticky {
+        left: 0;
+        margin: 15px;
+        position: fixed;
+        right: 0;
+        z-index: 2;
+
+        @media #{$mq-sm} {
+            margin: 15px auto;
+        }
+    }
+
+    .mzp-c-notification-bar-button {
+        @include bidi((
+                    (right, 0, auto),
+                    (left, auto, 0),
+                ));
+
+        @include image-replaced;
+        background: url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+        border: none;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 0;
+        margin: 5px;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+        }
+
+        @media #{$mq-sm} {
+            @include bidi((
+                (float, right, left),
+                (border-radius, 0 4px 4px 0, 4px 0 0 4px),
+                ));
+            background: $color-gray-40 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+            position: static;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 40px;
+            float: right;
+        }
+    }
+
+    &.mzp-t-success {
+        background-color: $color-green-30;
+
+        @media #{$mq-sm} {
+            .mzp-c-notification-bar-button {
+                background: $color-green-60 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+            }
+        }
+    }
+
+    &.mzp-t-error {
+        background-color: $color-red-40;
+
+        @media #{$mq-sm} {
+            .mzp-c-notification-bar-button {
+                background: $color-red-60 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+            }
+        }
+    }
+
+    &.mzp-t-warning {
+        background-color: $color-yellow-20;
+
+        @media #{$mq-sm} {
+            .mzp-c-notification-bar-button {
+                background: $color-yellow-40 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+            }
+        }
+    }
+
+    &.mzp-t-click {
+        background-color: $color-blue-50;
+        color: $color-white;
+        font-weight: 600;
+
+        @media #{$mq-sm} {
+            .mzp-c-notification-bar-button {
+                background: $color-blue-70 url("#{$image-path}/icons/ui/close-white.svg") center center no-repeat;
+            }
+        }
+    }
+}

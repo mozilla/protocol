@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Add Notification bar component (#383)
 * **css:** Details button gets cursor:pointer when hovered (#367)
 * **css:** Add Metropolis as Firefox brand font (#386)
 
