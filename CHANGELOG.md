@@ -10,6 +10,7 @@
 
 * **css:** Article max-width restricted to size of parent container (#422)
 * **css:** Increase contrast on sidebar mobile menu (#407)
+* **css:** Remove double underline from CTA links in dark theme (#374)
 
 # 7.0.2
 
