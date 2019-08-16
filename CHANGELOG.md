@@ -1,6 +1,7 @@
 ## HEAD
 
 * **css:** Fx theme CTAs should use the Metropolis Font (#468)
+* **css:** Separate newsletter form and newsletter layout styling (#444)
 
 # 8.0.0
 
