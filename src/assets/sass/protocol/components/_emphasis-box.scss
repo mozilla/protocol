@@ -16,11 +16,3 @@
     padding: $spacing-xl;
 }
 
-/* -------------------------------------------------------------------------- */
-// Medium sized card
-
-.mzp-c-box-emphasis-medium {
-    @media #{$mq-sm} {
-        max-width: 700px;
-    }
-}
