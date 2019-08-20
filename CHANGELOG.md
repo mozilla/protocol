@@ -1,10 +1,10 @@
-# HEAD
+# 8.0.0
 
 ## Features
 
 * **css:** Add Notification bar component (#383)
 * **css:** Details button gets cursor:pointer when hovered (#367)
-* **css:** Add Metropolis as Firefox brand font (#386)
+* **css:** (breaking) Add Metropolis as Firefox brand font (#386)
 
 ## Bug Fixes
 

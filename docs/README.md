@@ -508,10 +508,11 @@ Protocol is published to NPM under the `@mozilla-protocol/core` namespace/packag
 1. Before you start make sure the project's [CHANGELOG.md][changelog] is up to date.
 2. Update the package `version` number in [src/assets/package/package.json][package.json] (use [Semantic Versioning][semver] to determine what the new version number should be).
 3. Update the package README [assets/package/README.md][readme].
-4. Submit a pull request with your changes (or commit directly to `master` if you have permission). Once the changes have been merged to master:
-5. Tag a new release. You can do this either using [Git tag][git-tag], or directly on the [GitHub website][releases].
-6. Run `npm test` to run the build script and front-end tests. The package contents will be located in `./dist/assets/protocol/`.
-7. If the build is successful and all tests pass, publish to NPM using `npm publish ./dist/assets/protocol/`.
+4. Run `npm install` to update the package-lock.json file.
+5. Submit a pull request with your changes (or commit directly to `master` if you have permission). Once the changes have been merged to master:
+6. Tag a new release. You can do this either using [Git tag][git-tag], or directly on the [GitHub website][releases].
+7. Run `npm test` to run the build script and front-end tests. The package contents will be located in `./dist/assets/protocol/`.
+8. If the build is successful and all tests pass, publish to NPM using `npm publish ./dist/assets/protocol/`.
 
 # Deployment
 
