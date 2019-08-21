@@ -35,6 +35,10 @@ a.mzp-c-button {
         border-color: $color-gray-30;
         pointer-events: none;
     }
+
+    .mzp-t-firefox & {
+        @include font-firefox;
+    }
 }
 
 .mzp-c-button.mzp-t-small {
