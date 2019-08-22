@@ -23,25 +23,18 @@
     }
 }
 
-.mzp-s-content {
-    @include border-box;
-    @include clearfix;
-    margin: 0 auto;
+.mzp-t-narrow {
     max-width: $content-max;
     min-width: $content-xs;
-    padding: $layout-xs;
-    position: relative;
 
     @media #{$mq-md} {
         max-width: $content-md;
         min-width: $content-xs;
-        padding: $layout-xs $layout-lg;
     }
 
     @media #{$mq-lg} {
         max-width: $content-lg;
         min-width: $content-xs;
-        padding: $layout-xs $layout-xl;
     }
 }
 
