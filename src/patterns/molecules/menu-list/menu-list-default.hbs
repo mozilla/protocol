@@ -1,0 +1,23 @@
+---
+name: Menu List
+description: A sort title, when clicked, expands a list of links.
+order: 1
+notes: |
+    - Use the mzp-t-cta and mzp-t-download options to customize the appearance
+---
+
+
+<div class="mzp-c-menu-list">
+  <h3 class="mzp-c-menu-list-title">Meet the Family</h3>
+  <ul class="mzp-c-menu-list-list">
+    <li class="mzp-c-menu-list-item"><a href="#">Lockwise</a></li>
+    <li class="mzp-c-menu-list-item"><a href="#">Monitor</a></li>
+    <li class="mzp-c-menu-list-item"><a href="#">Send</a></li>
+    <li class="mzp-c-menu-list-item"><a href="#">Slightly longer menu item for testing</a></li>
+  </ul>
+</div>
+
+<script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-details.js"></script>
+<script>
+  window.Mzp.Details.init('.mzp-c-menu-list-title');
+</script>
