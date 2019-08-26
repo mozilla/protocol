@@ -25,16 +25,13 @@
 
 .mzp-t-narrow {
     max-width: $content-max;
-    min-width: $content-xs;
 
     @media #{$mq-md} {
         max-width: $content-md;
-        min-width: $content-xs;
     }
 
     @media #{$mq-lg} {
         max-width: $content-lg;
-        min-width: $content-xs;
     }
 }
 
