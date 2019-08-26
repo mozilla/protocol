@@ -24,7 +24,6 @@
 }
 
 .mzp-t-narrow {
-    max-width: $content-max;
 
     @media #{$mq-md} {
         max-width: $content-md;
