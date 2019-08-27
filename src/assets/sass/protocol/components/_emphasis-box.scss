@@ -1,0 +1,15 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+/* -------------------------------------------------------------------------- */
+// Base emphasis Box class
+.mzp-c-box-emphasis {
+    background: $color-white;
+    border-radius: 6px;
+    margin: $spacing-md;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .25);
+    padding: $spacing-xl;
+}
