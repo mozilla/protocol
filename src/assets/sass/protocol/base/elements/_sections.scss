@@ -14,6 +14,10 @@
     padding: $layout-xs;
     position: relative;
 
+    &.mzp-l-content.mzp-t-narrow {
+        max-width: $content-md;
+    }
+
     @media #{$mq-md} {
         padding: $layout-xs $layout-lg;
     }
@@ -23,9 +27,7 @@
     }
 }
 
-.mzp-l-content.mzp-t-narrow {
-    max-width: $content-md;
-}
+
 
 hr {
     border: 0 solid $color-gray-20;
