@@ -23,15 +23,8 @@
     }
 }
 
-.mzp-t-narrow {
-
-    @media #{$mq-md} {
-        max-width: $content-md;
-    }
-
-    @media #{$mq-lg} {
-        max-width: $content-lg;
-    }
+.mzp-l-content.mzp-t-narrow {
+    max-width: $content-md;
 }
 
 hr {
