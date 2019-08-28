@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Adds a narrow content channel (#469)
 * **css:** Add Notification bar component (#383)
 * **css:** Added Emphasis box (#385)
 * **css:** Details button gets cursor:pointer when hovered (#367)
