@@ -14,7 +14,7 @@
     padding: $layout-xs;
     position: relative;
 
-    &.mzp-l-content.mzp-t-narrow {
+    &.mzp-t-narrow {
         max-width: $content-md;
     }
 
@@ -26,8 +26,6 @@
         padding: $layout-xs $layout-xl;
     }
 }
-
-
 
 hr {
     border: 0 solid $color-gray-20;
