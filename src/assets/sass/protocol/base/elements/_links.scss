@@ -46,6 +46,10 @@
         border-bottom-color: transparent;
     }
 
+    .mzp-t-firefox & {
+        @include font-firefox;
+    }
+
     .mzp-t-dark & {
         &:link,
         &:visited {
