@@ -64,11 +64,11 @@
     }
 
     &.mzp-has-video .mzp-c-card-tag {
-        background-image: url('#{$image-path}/icons/ui/video.svg');
+        background-image: url('#{$image-path}/icons/video-card.svg');
     }
 
     &.mzp-has-audio .mzp-c-card-tag {
-        background-image: url('#{$image-path}/icons/ui/audio.svg');
+        background-image: url('#{$image-path}/icons/audio-card.svg');
     }
 
     .mzp-c-card-title {

@@ -68,7 +68,8 @@
                 ));
 
         @include image-replaced;
-        background: url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+        background: url("#{$image-path}/icons/close.svg") center center no-repeat;
+        background-size: 20px 20px;
         border: none;
         height: 20px;
         width: 20px;
@@ -86,7 +87,7 @@
                 (float, right, left),
                 (border-radius, 0 4px 4px 0, 4px 0 0 4px),
                 ));
-            background: $color-gray-40 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+            background-color: $color-gray-40;
             position: static;
             padding: 0;
             margin: 0;
@@ -101,7 +102,7 @@
 
         @media #{$mq-sm} {
             .mzp-c-notification-bar-button {
-                background: $color-green-60 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+                background-color: $color-green-60;
             }
         }
     }
@@ -111,7 +112,7 @@
 
         @media #{$mq-sm} {
             .mzp-c-notification-bar-button {
-                background: $color-red-60 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+                background-color: $color-red-60;
             }
         }
     }
@@ -121,7 +122,7 @@
 
         @media #{$mq-sm} {
             .mzp-c-notification-bar-button {
-                background: $color-yellow-40 url("#{$image-path}/icons/ui/close-black.svg") center center no-repeat;
+                background-color: $color-yellow-40;
             }
         }
     }
@@ -131,9 +132,11 @@
         color: $color-white;
         font-weight: 600;
 
-        @media #{$mq-sm} {
-            .mzp-c-notification-bar-button {
-                background: $color-blue-70 url("#{$image-path}/icons/ui/close-white.svg") center center no-repeat;
+        .mzp-c-notification-bar-button {
+            background-image: url("#{$image-path}/icons/close-white.svg");
+
+            @media #{$mq-sm} {
+                background-color: $color-blue-70;
             }
         }
     }

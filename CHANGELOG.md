@@ -1,3 +1,7 @@
+## HEAD
+
+* **assets:** (breaking) Update @mozilla-protocol/assets to 2.1.1 (#479)
+
 ## 8.1.0
 
 * **docs:** Added component issue templates (#379)
