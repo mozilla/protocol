@@ -36,8 +36,7 @@
     &.mzp-t-product-firefox,
     &.mzp-t-product-beta,
     &.mzp-t-product-developer,
-    &.mzp-t-product-nightly,
-    &.mzp-t-product-focus {
+    &.mzp-t-product-nightly {
         .mzp-c-call-out-title {
             @include background-size(64px 64px);
             background-position: top center;
@@ -47,23 +46,19 @@
     }
 
     &.mzp-t-product-firefox .mzp-c-call-out-title {
-        @include at2x('#{$image-path}/logos/firefox/firefox.png', 64px, 64px);
+        @include at2x('#{$image-path}/logos/firefox/browser/logo-lg.png', 64px, 64px);
     }
 
     &.mzp-t-product-beta .mzp-c-call-out-title {
-        @include at2x('#{$image-path}/logos/firefox/beta.png', 64px, 64px);
+        @include at2x('#{$image-path}/logos/firefox/browser/beta/logo-lg.png', 64px, 64px);
     }
 
     &.mzp-t-product-developer .mzp-c-call-out-title {
-        @include at2x('#{$image-path}/logos/firefox/developer.png', 64px, 64px);
+        @include at2x('#{$image-path}/logos/firefox/browser/developer/logo-lg.png', 64px, 64px);
     }
 
     &.mzp-t-product-nightly .mzp-c-call-out-title {
-        @include at2x('#{$image-path}/logos/firefox/nightly.png', 64px, 64px);
-    }
-
-    &.mzp-t-product-focus .mzp-c-call-out-title {
-        @include at2x('#{$image-path}/logos/firefox/focus.png', 64px, 64px);
+        @include at2x('#{$image-path}/logos/firefox/browser/nightly/logo-lg.png', 64px, 64px);
     }
 
     @media #{$mq-md} {
@@ -111,8 +106,7 @@
     &.mzp-t-product-firefox ,
     &.mzp-t-product-beta,
     &.mzp-t-product-developer,
-    &.mzp-t-product-nightly,
-    &.mzp-t-product-focus {
+    &.mzp-t-product-nightly {
         .mzp-c-call-out-content {
             @include border-box;
             @include background-size(64px 64px);
@@ -123,23 +117,19 @@
     }
 
     &.mzp-t-product-firefox .mzp-c-call-out-content {
-        @include at2x('#{$image-path}/logos/firefox/firefox.png', 64px, 64px);
+        @include at2x('#{$image-path}/logos/firefox/browser/logo-lg.png', 64px, 64px);
     }
 
     &.mzp-t-product-beta .mzp-c-call-out-content {
-        @include at2x('#{$image-path}/logos/firefox/beta.png', 64px, 64px);
+        @include at2x('#{$image-path}/logos/firefox/browser/beta/logo-lg.png', 64px, 64px);
     }
 
     &.mzp-t-product-developer .mzp-c-call-out-content {
-        @include at2x('#{$image-path}/logos/firefox/developer.png', 64px, 64px);
+        @include at2x('#{$image-path}/logos/firefox/browser/developer/logo-lg.png', 64px, 64px);
     }
 
     &.mzp-t-product-nightly .mzp-c-call-out-content {
-        @include at2x('#{$image-path}/logos/firefox/nightly.png', 64px, 64px);
-    }
-
-    &.mzp-t-product-focus .mzp-c-call-out-content {
-        @include at2x('#{$image-path}/logos/firefox/focus.png', 64px, 64px);
+        @include at2x('#{$image-path}/logos/firefox/browser/nightly/logo-lg.png', 64px, 64px);
     }
 
     @media #{$mq-md} {
@@ -155,8 +145,7 @@
         &.mzp-t-product-firefox,
         &.mzp-t-product-beta,
         &.mzp-t-product-developer,
-        &.mzp-t-product-nightly,
-        &.mzp-t-product-focus {
+        &.mzp-t-product-nightly {
             .mzp-c-call-out-content {
                 @include bidi((
                     (background-position, left center, right center),
