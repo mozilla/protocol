@@ -1,5 +1,6 @@
 ## HEAD
 
+* **css:** Bold menu titles (#481)
 * **css:** Fx theme CTAs should use the Metropolis Font (#468)
 * **css:** Separate newsletter form and newsletter layout styling (#444)
 * **css:** Add inline list component (#465)
