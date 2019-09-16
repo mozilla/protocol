@@ -1,8 +1,9 @@
-## HEAD
+## 8.1.0
 
 * **docs:** Added component issue templates (#379)
 * **css:** Bold menu titles (#481)
 * **css:** Add Menu List component (#474)
+* **css:** Added Emphasis box (#385)
 * **css:** Fx theme CTAs should use the Metropolis Font (#468)
 * **css:** Separate newsletter form and newsletter layout styling (#444)
 * **css:** Add inline list component (#465)
@@ -13,7 +14,6 @@
 
 * **css:** Adds a narrow content channel (#469)
 * **css:** Add Notification bar component (#383)
-* **css:** Added Emphasis box (#385)
 * **css:** Details button gets cursor:pointer when hovered (#367)
 * **css:** (breaking) Add Metropolis as Firefox brand font (#386)
 
