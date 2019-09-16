@@ -80,6 +80,13 @@ minor tweaks that don’t need extensive testing or review, but for any serious
 coding you really should have a local instance running so you can see your work
 as it progresses.
 
+### Requesting New or Updated Components
+
+If you would like to request changes to a component or a new component be added to Protocol,
+please [submit an issue on Github](https://github.com/mozilla/protocol/issues) using the appropriate
+issue template. Please make sure to fill out this template as thoroughly as possible,
+as this will help the team triage effectively.
+
 ### Reporting Bugs
 
 To report an error you’ve discovered in Protocol, [submit an issue on Github](https://github.com/mozilla/protocol/issues)

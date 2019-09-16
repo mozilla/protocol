@@ -1,5 +1,6 @@
 ## HEAD
 
+* **docs:** Added component issue templates (#379)
 * **css:** Bold menu titles (#481)
 * **css:** Add Menu List component (#474)
 * **css:** Fx theme CTAs should use the Metropolis Font (#468)
