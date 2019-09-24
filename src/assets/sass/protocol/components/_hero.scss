@@ -23,8 +23,7 @@
     &.mzp-t-product-firefox,
     &.mzp-t-product-beta,
     &.mzp-t-product-developer,
-    &.mzp-t-product-nightly,
-    &.mzp-t-product-focus {
+    &.mzp-t-product-nightly {
         .mzp-c-hero-title {
             @include background-size(80px 80px);
             background-position: top center;
@@ -56,23 +55,19 @@
 
     // Product logos
     .mzp-t-product-firefox & {
-        @include at2x('#{$image-path}/logos/firefox/firefox.png', 80px, 80px);
+        @include at2x('#{$image-path}/logos/firefox/browser/logo-lg.png', 80px, 80px);
     }
 
     .mzp-t-product-beta & {
-        @include at2x('#{$image-path}/logos/firefox/beta.png', 80px, 80px);
+        @include at2x('#{$image-path}/logos/firefox/browser/beta/logo-lg.png', 80px, 80px);
     }
 
     .mzp-t-product-developer & {
-        @include at2x('#{$image-path}/logos/firefox/developer.png', 80px, 80px);
+        @include at2x('#{$image-path}/logos/firefox/browser/developer/logo-lg.png', 80px, 80px);
     }
 
     .mzp-t-product-nightly & {
-        @include at2x('#{$image-path}/logos/firefox/nightly.png', 80px, 80px);
-    }
-
-    .mzp-t-product-focus & {
-        @include at2x('#{$image-path}/logos/firefox/focus.png', 80px, 80px);
+        @include at2x('#{$image-path}/logos/firefox/browser/nightly/logo-lg.png', 80px, 80px);
     }
 }
 
@@ -116,8 +111,7 @@
             &.mzp-t-product-firefox,
             &.mzp-t-product-beta,
             &.mzp-t-product-developer,
-            &.mzp-t-product-nightly,
-            &.mzp-t-product-focus {
+            &.mzp-t-product-nightly {
                 .mzp-c-hero-title {
                     @include bidi(((background-position, left top, right top),));
                     padding-top: (80px + $spacing-2xl);

@@ -1,3 +1,16 @@
+## HEAD
+
+* **assets:** (breaking) Update @mozilla-protocol/assets to 3.0.0 (#479)
+
+### Migration Tips
+  * Browser logo is for Firefox 70+
+  * Browser logos have new names and directories
+    * e.g. `logos/firefox/firefox.png` → `logos/firefox/browser/logo-lg.png`
+    * Logos are also slightly larger, check height & width are declared
+  * UI icons have moved up a directory `/icons/ui/` → `/icons/`
+  * Remove `-black` from file names for black icons
+  * Focus theme has been removed
+
 ## 8.1.0
 
 * **docs:** Added component issue templates (#379)
