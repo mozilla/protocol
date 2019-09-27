@@ -1,3 +1,7 @@
+# HEAD
+
+* **js:** Use window.Mzp in Modal and Notification components (#488)
+
 ## 9.0.0
 
 * **assets:** (breaking) Update @mozilla-protocol/assets to 3.0.0 (#479)

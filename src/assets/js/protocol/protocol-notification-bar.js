@@ -7,9 +7,10 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     var Mzp = {};
 }
 
-Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
+(function() {
     'use strict';
 
+    var Notification = {};
     var options = {};
 
     /*
@@ -24,7 +25,7 @@ Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
         onNotificationClose: function to fire after notification has been closed.
     */
 
-    var _init = function(origin, opts) {
+    Notification.init = function(origin, opts) {
 
         if (typeof opts === 'object') {
             for (var i in opts) {
@@ -103,9 +104,6 @@ Mzp.Notification = (function() { // eslint-disable-line block-scoped-var
         origin.classList.remove('mzp-c-notification-origin');
     };
 
-    return {
-        init: function(origin, opts) {
-            _init(origin, opts);
-        }
-    };
+    window.Mzp.Notification = Notification;
+
 })(window);
