@@ -1,4 +1,6 @@
-# HEAD
+## 9.0.1
+
+## Bug Fixes
 
 * **js:** Use window.Mzp in Modal and Notification components (#488)
 
