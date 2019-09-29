@@ -1,3 +1,5 @@
+* **css:** Rename `mzp-c-box-emphasis` to `mzp-c-emphasis-box` (#489)
+
 ## 9.0.0
 
 * **assets:** (breaking) Update @mozilla-protocol/assets to 3.0.0 (#479)
