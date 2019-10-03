@@ -26,8 +26,8 @@
     }
 
     .mzp-c-card-media-wrapper {
-        background-color: $color-gray-20;
-        border-radius: 2px;
+        background-color: $color-light-gray-20;
+        border-radius: $border-radius-xs;
         overflow: hidden;
         position: relative;
     }
@@ -47,7 +47,7 @@
     .mzp-c-card-tag {
         @include font-base;
         @include text-body-sm;
-        color: $color-gray-80;
+        color: $color-dark-gray-40;
         font-weight: normal;
         margin-bottom: $spacing-xs;
     }
@@ -91,7 +91,7 @@
     }
 
     .mzp-c-card-block-link {
-        border-radius: 2px;
+        border-radius: $border-radius-xs;
         display: block;
 
         &:link,
@@ -109,7 +109,7 @@
         &:active,
         &:focus {
             @include transition(box-shadow .1s ease-in-out);
-            box-shadow: 0 0 0 4px $color-gray-20;
+            box-shadow: 0 0 0 4px $color-light-gray-30;
 
             .mzp-c-card-title,
             .mzp-c-card-cta-text  {
@@ -121,7 +121,7 @@
 
     .mzp-c-card-meta {
         @include text-body-xs;
-        color: $color-gray-80;
+        color: $color-dark-gray-30;
         margin: $spacing-lg 0 0;
     }
 
@@ -180,7 +180,7 @@
     }
 
     .mzp-c-card-block-link {
-        border-radius: 2px;
+        border-radius: $border-radius-xs;
         height: 100%;
     }
 

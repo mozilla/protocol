@@ -8,15 +8,15 @@
 // Call Out component
 
 .mzp-c-call-out {
-    background-color: $color-gray-20;
+    background-color: $color-light-gray-20;
     text-align: center;
 
     &.mzp-t-dark {
-        background-color: $color-gray-80;
+        background-color: $color-light-gray-80;
         color: $color-white;
 
         .mzp-c-call-out-desc {
-            color: $color-gray-30;
+            color: $color-light-gray-30;
         }
     }
 
@@ -75,14 +75,14 @@
 // Compact Call Out component
 
 .mzp-c-call-out-compact {
-    background-color: $color-gray-20;
+    background-color: $color-light-gray-30;
 
     &.mzp-t-dark {
-        background-color: $color-gray-80;
+        background-color: $color-light-gray-80;
         color: $color-white;
 
         .mzp-c-call-out-desc {
-            color: $color-gray-30;
+            color: $color-light-gray-20;
         }
     }
 

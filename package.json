@@ -25,7 +25,7 @@
   "dependencies": {
     "@cloudfour/hbs-helpers": "^0.9.0",
     "@mozilla-protocol/assets": "^3.0.1",
-    "@mozilla-protocol/tokens": "^3.0.0",
+    "@mozilla-protocol/tokens": "^5.0.2",
     "del": "^3.0.0",
     "drizzle-builder": "0.0.10",
     "eslint": "^5.13.0",
@@ -46,7 +46,7 @@
     "merge-stream": "^1.0.1",
     "prismjs": "^1.4.1",
     "require-dir": "^1.2.0",
-    "stylelint": "^9.2.0",
+    "stylelint": "^11.0.0",
     "yargs": "^12.0.5"
   },
   "devDependencies": {
@@ -54,7 +54,7 @@
     "browser-sync": "^2.26.3",
     "doctoc": "^1.4.0",
     "jasmine-core": "^3.2.0",
-    "karma": "^3.0.0",
+    "karma": "^4.3.0",
     "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.2"
   }

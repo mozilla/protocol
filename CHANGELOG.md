@@ -1,5 +1,7 @@
-## HEAD
+## 11.0.0
 
+* **tokens:** (breaking) update @mozilla-protocol/tokens to 5.0.2
+* **assets:** update @mozilla-protocol/assets to 3.0.1
 * **css:** Changes '.mzp-c-button-download-container' display property to 'inline-block' from 'block' (#486)
 * **js:** Support a CTA link in NotificationBar (#460)
 

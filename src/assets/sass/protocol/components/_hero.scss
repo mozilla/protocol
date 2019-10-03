@@ -35,7 +35,7 @@
     // Dark theme
     &.mzp-t-dark,
     .mzp-t-dark & {
-        background-color: $color-gray-80;
+        background-color: $color-dark-gray-30;
         color: $color-white;
 
         .mzp-c-hero-desc {
@@ -73,7 +73,6 @@
 
 .mzp-c-hero-desc {
     @include text-body-lg;
-    color: $color-gray-90;
     margin-bottom: $spacing-md;
 }
 

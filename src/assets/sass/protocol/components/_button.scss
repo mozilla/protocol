@@ -13,7 +13,7 @@ a.mzp-c-button {
     @include text-body-cta;
     @include transition(background-color 100ms, box-shadow 100ms, color 100ms, transform 100ms);
     background-color: $color-black;
-    border-radius: 2px;
+    border-radius: $border-radius-xs;
     border: 2px solid $color-black;
     color: $color-white;
     cursor: pointer;
@@ -31,8 +31,8 @@ a.mzp-c-button {
     }
 
     &:disabled {
-        background-color: $color-gray-30;
-        border-color: $color-gray-30;
+        background-color: $color-light-gray-40;
+        border-color: $color-light-gray-40;
         pointer-events: none;
     }
 
@@ -59,8 +59,8 @@ a.mzp-c-button.mzp-t-dark {
     }
 
     &:disabled {
-        background-color: $color-gray-80;
-        border-color: $color-gray-80;
+        background-color: $color-light-gray-80;
+        border-color: $color-light-gray-80;
         color: $color-black;
         pointer-events: none;
     }
@@ -75,8 +75,8 @@ a.mzp-c-button.mzp-t-dark {
 
     &:disabled {
         background-color: transparent;
-        border-color: $color-gray-30;
-        color: $color-gray-30;
+        border-color: $color-light-gray-30;
+        color: $color-light-gray-30;
     }
 }
 
@@ -86,8 +86,8 @@ a.mzp-c-button.mzp-t-dark {
 
     &:disabled {
         background-color: transparent;
-        border-color: $color-gray-80;
-        color: $color-gray-80;
+        border-color: $color-light-gray-80;
+        color: $color-light-gray-80;
     }
 }
 
@@ -109,8 +109,8 @@ a.mzp-c-button.mzp-t-product {
     }
 
     &:disabled {
-        background-color: $color-gray-30;
-        border-color: $color-gray-30;
+        background-color: $color-light-gray-80;
+        border-color: $color-light-gray-80;
         pointer-events: none;
     }
 }
@@ -136,8 +136,8 @@ a.mzp-c-button.mzp-t-product.mzp-t-secondary {
 
     &:disabled {
         background-color: transparent;
-        border-color: $color-gray-80;
-        color: $color-gray-80;
+        border-color: $color-dark-gray-05;
+        color: $color-dark-gray-05;
     }
 }
 

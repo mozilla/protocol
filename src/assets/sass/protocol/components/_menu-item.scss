@@ -7,7 +7,7 @@
 $icon-size: 24px;
 
 .mzp-c-menu-item {
-    border-radius: 2px;
+    border-radius: $border-radius-xs;
     margin-bottom: $spacing-lg;
 
     .mzp-c-menu-item-link {
@@ -119,7 +119,7 @@ $icon-size: 24px;
     @media #{$mq-md} {
         &:hover {
             @include transition(box-shadow .1s ease-in-out);
-            box-shadow: 0 0 0 4px $color-gray-20;
+            box-shadow: 0 0 0 4px $color-light-gray-30;
         }
 
         .mzp-c-menu-item-link,
