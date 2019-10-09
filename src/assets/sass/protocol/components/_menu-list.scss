@@ -10,10 +10,10 @@
 
 .mzp-c-menu-list-title {
     font-size: inherit;
-    font-weight: bold;
 
     .mzp-t-mozilla .mzp-t-cta & {
         @include font-firefox;
+        font-weight: bold;
     }
 }
 

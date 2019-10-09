@@ -1,3 +1,7 @@
+## HEAD
+
+* **css:** CTA links now use text underlines instead of borders (#490)
+
 ## 9.0.1
 
 ## Bug Fixes
