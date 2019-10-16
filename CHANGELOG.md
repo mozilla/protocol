@@ -1,3 +1,7 @@
+## HEAD
+
+* **css:** Changes '.mzp-c-button-download-container' display property to 'inline-block' from 'block' (#486)
+
 ## 10.0.1
 
 * **css:** Fix zap import (#520)
