@@ -1,6 +1,7 @@
 ## HEAD
 
 * **css:** CTA links now use text underlines instead of borders (#490)
+* **css:** Changes '.mzp-c-button-download-container' display property to 'inline-block' from 'block' (#486)
 
 ## 9.0.1
 
