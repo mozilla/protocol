@@ -1,5 +1,6 @@
 ## HEAD
 
+* **assets:** Update @mozilla-protocol/assets to 3.0.1 (#509)
 * **css:** CTA links now use text underlines instead of borders (#490)
 
 ## 9.0.1
