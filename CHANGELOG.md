@@ -1,4 +1,14 @@
+## HEAD
+
 * **css:** Rename `mzp-c-box-emphasis` to `mzp-c-emphasis-box` (#489)
+* **assets:** Update @mozilla-protocol/assets to 3.0.1 (#509)
+* **css:** CTA links now use text underlines instead of borders (#490)
+
+## 9.0.1
+
+## Bug Fixes
+
+* **js:** Use window.Mzp in Modal and Notification components (#488)
 
 ## 9.0.0
 

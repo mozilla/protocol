@@ -34,7 +34,7 @@ The core CSS file is bundled as `protocol.css`, which contains styling for thing
 
 ## Building From Source
 
-To build Protocol from source including the documentatiion site, you can clone the repo from GitHub:
+To build Protocol from source including the documentation site, you can clone the repo from GitHub:
 
 ```
 $ git clone https://github.com/mozilla/protocol.git

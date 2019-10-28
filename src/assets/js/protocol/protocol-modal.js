@@ -7,12 +7,13 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     var Mzp = {};
 }
 
-Mzp.Modal = (function(w) { // eslint-disable-line block-scoped-var
+(function() {
     'use strict';
 
+    var Modal = {};
     var open = false;
-    var body = w.document.body;
-    var html = w.document.documentElement;
+    var body = document.body;
+    var html = document.documentElement;
     var options = {};
     var pageContentParent;
     var pageContent;
@@ -29,14 +30,14 @@ Mzp.Modal = (function(w) { // eslint-disable-line block-scoped-var
         allowScroll: boolean - allow/restrict page scrolling when modal is open.
         closeText: string to use for close button a11y.
     */
-    var _createModal = function(origin, content, opts) {
+    Modal.createModal = function(origin, content, opts) {
         options = opts;
 
         var isSmallViewport = window.innerWidth < 760;
 
         // Make sure modal is closed (if one exists)
         if (open) {
-            _closeModal();
+            Modal.closeModal();
         }
 
         // Create new modal
@@ -77,13 +78,13 @@ Mzp.Modal = (function(w) { // eslint-disable-line block-scoped-var
 
         // close modal on clicking close button or background.
         var closeButton = document.querySelector('.mzp-c-modal-button-close');
-        closeButton.addEventListener('click', _closeModal, false);
+        closeButton.addEventListener('click', Modal.closeModal, false);
         closeButton.setAttribute('title', closeText);
 
         // close modal on clicking the background (but not bubbled event).
         document.querySelector('.mzp-c-modal .mzp-c-modal-window').addEventListener('click', function (e) {
             if (e.target === this) {
-                _closeModal();
+                Modal.closeModal();
             }
         }, false);
 
@@ -108,7 +109,7 @@ Mzp.Modal = (function(w) { // eslint-disable-line block-scoped-var
 
     var _onDocumentKeyUp = function(e) {
         if (e.keyCode === 27 && open) {
-            _closeModal();
+            Modal.closeModal();
         }
     };
 
@@ -120,7 +121,7 @@ Mzp.Modal = (function(w) { // eslint-disable-line block-scoped-var
         }
     };
 
-    var _closeModal = function(e) {
+    Modal.closeModal = function(e) {
         if (e) {
             e.preventDefault();
         }
@@ -153,12 +154,6 @@ Mzp.Modal = (function(w) { // eslint-disable-line block-scoped-var
         options = {};
     };
 
-    return {
-        createModal: function(origin, content, opts) {
-            _createModal(origin, content, opts);
-        },
-        closeModal: function() {
-            _closeModal();
-        }
-    };
-})(window);
+    window.Mzp.Modal = Modal;
+
+})();

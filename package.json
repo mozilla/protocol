@@ -1,6 +1,6 @@
 {
   "name": "protocol",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "private": true,
   "author": "Mozilla",
   "description": "A design system for Mozilla's websites.",
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@cloudfour/hbs-helpers": "^0.9.0",
-    "@mozilla-protocol/assets": "^3.0.0",
+    "@mozilla-protocol/assets": "^3.0.1",
     "@mozilla-protocol/tokens": "^3.0.0",
     "del": "^3.0.0",
     "drizzle-builder": "0.0.10",
