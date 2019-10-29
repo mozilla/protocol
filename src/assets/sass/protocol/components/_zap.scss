@@ -5,12 +5,12 @@
 
 @import '../protocol/includes/lib';
 
-[class*=" mzp-t-zap"], [class^=mzp-t-zap] strong {
+[class*="mzp-has-zap"] strong {
     @include zap('#{$image-path}/zaps/zap-01.svg');
 }
 
 @for $num from 2 through 18 {
-    .mzp-t-zap-#{$num} strong {
+    .mzp-has-zap-#{$num} strong {
         // add leading zero if necessary
         $zero: '';
         @if $num < 10 {
