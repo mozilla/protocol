@@ -1,5 +1,6 @@
 ## HEAD
 
+* **css:** Menu List Firefox theme CTA uses firefox-font #503
 * **css:** Enlarge Footer UI icons (#495)
 * **css:** Add Zap component (#511)
 * **css:** (breaking) Rename `mzp-c-box-emphasis` to `mzp-c-emphasis-box` (#489)
