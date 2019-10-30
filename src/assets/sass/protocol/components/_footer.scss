@@ -159,15 +159,15 @@
 
         button:before {
             background: $url-image-expand-white top left no-repeat;
-            @include background-size(16px, 16px);
+            @include background-size(24px, 24px);
             @include bidi(((right, 8px, left, auto),));
             @include transition(transform 100ms ease-in-out);
             content: '';
-            height: 16px;
-            margin-top: -8px;
+            height: 24px;
+            margin-top: -12px;
             position: absolute;
             top: 50%;
-            width: 16px;
+            width: 24px;
         }
 
         button[aria-expanded=true]:before {
