@@ -1,5 +1,6 @@
 ## HEAD
 
+* **css:** Add Firefox variant of navigation (#483)
 * **css:** Menu List Firefox theme CTA uses firefox-font #503
 * **css:** Enlarge Footer UI icons (#495)
 * **css:** Add Zap component (#511)
