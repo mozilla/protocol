@@ -1,6 +1,9 @@
 ## HEAD
 
 * **css:** Add Firefox variant of navigation (#483)
+* **css:** Menu List Firefox theme CTA uses firefox-font #503
+* **css:** Enlarge Footer UI icons (#495)
+* **css:** Add Zap component (#511)
 * **css:** (breaking) Rename `mzp-c-box-emphasis` to `mzp-c-emphasis-box` (#489)
 * **assets:** Update @mozilla-protocol/assets to 3.0.1 (#509)
 * **css:** CTA links now use text underlines instead of borders (#490)
