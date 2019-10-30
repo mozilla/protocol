@@ -14,6 +14,10 @@
     padding: $layout-xs;
     position: relative;
 
+    &.mzp-t-narrow {
+        max-width: $content-md;
+    }
+
     @media #{$mq-md} {
         padding: $layout-xs $layout-lg;
     }

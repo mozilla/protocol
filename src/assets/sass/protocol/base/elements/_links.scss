@@ -32,24 +32,7 @@
 .mzp-c-cta-link {
     font-weight: bold;
 
-    &:link,
-    &:visited {
-        border-bottom: 2px solid;
-        color: $color-link;
-        text-decoration: none;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-        @include transition(border-bottom-color 100ms ease-in-out);
-        border-bottom-color: transparent;
-    }
-
-    .mzp-t-dark & {
-        &:link,
-        &:visited {
-            color: $color-white;
-        }
+    .mzp-t-firefox & {
+        @include font-firefox;
     }
 }

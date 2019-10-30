@@ -89,6 +89,30 @@
     @media #{$mq-xl} {
         @include bidi(((margin, $spacing-lg ($spacing-lg * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-lg * 2)),));
     }
+
+    .mzp-t-firefox & {
+        a {
+            @include background-size(81px, 27px);
+            background-image: url('#{$image-path}/logos/firefox/logo-word-hor-sm.png');
+            height: 27px;
+            width: 81px;
+        }
+
+        @media #{$mq-md} {
+            a {
+                margin-top: 7px;
+            }
+        }
+
+        @media #{$mq-lg} {
+            a {
+                @include at2x('#{$image-path}/logos/firefox/logo-word-hor-sm.png', 109px, 36px);
+                height: 36px;
+                margin-top: 1px;
+                width: 109px;
+            }
+        }
+    }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -154,7 +178,7 @@
     @include bidi(((float, right, left),));
     @include bidi(((padding, 0 32px 0 6px, 0 6px 0 32px),));
     background-color: transparent;
-    background-image: url('#{$image-path}/icons/ui/menu-black.svg');
+    background-image: url('#{$image-path}/icons/menu.svg');
     background-repeat: no-repeat;
     border-radius: 4px;
     border: none;

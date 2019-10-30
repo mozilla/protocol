@@ -48,7 +48,7 @@
         border-bottom: 1px solid $color-gray-30;
         color: $color-black;
         display: block;
-        font-weight: normal;
+        font-weight: bold;
         margin-bottom: 0;
         min-height: 40px;
         padding: $spacing-sm 0;
@@ -72,15 +72,15 @@
 
         &:before {
             background:  $url-image-expand-black top left no-repeat;
-            @include background-size(16px, 16px);
+            @include background-size(20px, 20px);
             @include bidi(((right, 8px, left, auto),));
             @include transition(transform 100ms ease-in-out);
             content: '';
-            height: 16px;
+            height: 20px;
             margin-top: -8px;
             position: absolute;
             top: 50%;
-            width: 16px;
+            width: 20px;
         }
     }
 
@@ -209,7 +209,7 @@
     .mzp-c-menu-button-close {
         @include image-replaced;
         @include transition(transform 100ms ease-in-out);
-        background: transparent url('#{$image-path}/icons/ui/close-black.svg') center center no-repeat;
+        background: transparent url('#{$image-path}/icons/close.svg') center center no-repeat;
         border: none;
         cursor: pointer;
         display: none;

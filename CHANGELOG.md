@@ -1,15 +1,57 @@
-# HEAD
+## HEAD
+
+* **css:** Prism styles consume Protocol Tokens (#452)
+* **css:** Add Firefox variant of navigation (#483)
+* **css:** Menu List Firefox theme CTA uses firefox-font #503
+* **css:** Enlarge Footer UI icons (#495)
+* **css:** Add Zap component (#511)
+* **css:** (breaking) Rename `mzp-c-box-emphasis` to `mzp-c-emphasis-box` (#489)
+* **assets:** Update @mozilla-protocol/assets to 3.0.1 (#509)
+* **css:** CTA links now use text underlines instead of borders (#490)
+
+## 9.0.1
+
+## Bug Fixes
+
+* **js:** Use window.Mzp in Modal and Notification components (#488)
+
+## 9.0.0
+
+* **assets:** (breaking) Update @mozilla-protocol/assets to 3.0.0 (#479)
+
+### Migration Tips
+  * Browser logo is for Firefox 70+
+  * Browser logos have new names and directories
+    * e.g. `logos/firefox/firefox.png` → `logos/firefox/browser/logo-lg.png`
+    * Logos are also slightly larger, check height & width are declared
+  * UI icons have moved up a directory `/icons/ui/` → `/icons/`
+  * Remove `-black` from file names for black icons
+  * Focus theme has been removed
+
+## 8.1.0
+
+* **docs:** Added component issue templates (#379)
+* **css:** Bold menu titles (#481)
+* **css:** Add Menu List component (#474)
+* **css:** Added Emphasis box (#385)
+* **css:** Fx theme CTAs should use the Metropolis Font (#468)
+* **css:** Separate newsletter form and newsletter layout styling (#444)
+* **css:** Add inline list component (#465)
+
+# 8.0.0
 
 ## Features
 
-* **css:** Prism styles consume Protocol Tokens (#452)
+* **css:** Adds a narrow content channel (#469)
+* **css:** Add Notification bar component (#383)
 * **css:** Details button gets cursor:pointer when hovered (#367)
-* **css:** Add Metropolis as Firefox brand font (#386)
+* **css:** (breaking) Add Metropolis as Firefox brand font (#386)
 
 ## Bug Fixes
 
 * **css:** Article max-width restricted to size of parent container (#422)
 * **css:** Increase contrast on sidebar mobile menu (#407)
+* **css:** Remove double underline from CTA links in dark theme (#374)
 
 # 7.0.2
 

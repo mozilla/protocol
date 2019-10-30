@@ -27,11 +27,13 @@ module.exports = function(config) {
             '../dist/assets/protocol/protocol/js/protocol-lang-switcher.js',
             '../dist/assets/protocol/protocol/js/protocol-menu.js',
             '../dist/assets/protocol/protocol/js/protocol-navigation.js',
+            '../dist/assets/protocol/protocol/js/protocol-notification-bar.js',
             // tests
             'unit/protocol-details.js',
             'unit/protocol-lang-switcher.js',
             'unit/protocol-menu.js',
-            'unit/protocol-navigation.js'
+            'unit/protocol-navigation.js',
+            'unit/protocol-notification-bar.js'
         ],
 
 
