@@ -1,4 +1,4 @@
-## HEAD
+## 10.0.0
 
 * **css:** Prism styles consume Protocol Tokens (#452)
 * **css:** Add Firefox variant of navigation (#483)
