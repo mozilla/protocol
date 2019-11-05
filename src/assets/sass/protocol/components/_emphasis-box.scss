@@ -9,7 +9,12 @@
 .mzp-c-emphasis-box {
     background: $color-white;
     border-radius: $border-radius-md;
-    margin: $spacing-md;
     box-shadow: $box-shadow-sm;
+    margin: $spacing-md;
     padding: $spacing-xl;
+
+    &.mzp-t-dark {
+        background: $color-marketing-gray-80;
+        color: $color-white;
+    }
 }
