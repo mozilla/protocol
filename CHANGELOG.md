@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **component:** Updates to emphasis box, with additional documentation and usage guidelines.
+
 # 11.0.1
 
 ## Bug Fixes
