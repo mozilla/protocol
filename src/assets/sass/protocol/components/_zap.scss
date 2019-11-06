@@ -3,7 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-@import '../protocol/includes/lib';
+@import '../includes/lib';
 
 [class*="mzp-has-zap"] strong {
     @include zap('#{$image-path}/zaps/zap-01.svg');

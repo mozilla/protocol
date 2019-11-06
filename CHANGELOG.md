@@ -1,3 +1,7 @@
+## HEAD
+
+* **css:** Fix zap import (#520)
+
 ## 10.0.0
 
 * **css:** Prism styles consume Protocol Tokens (#452)
