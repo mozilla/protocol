@@ -1,4 +1,4 @@
-## HEAD
+## 10.0.1
 
 * **css:** Fix zap import (#520)
 
