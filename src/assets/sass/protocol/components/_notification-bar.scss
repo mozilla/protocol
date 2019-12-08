@@ -5,31 +5,26 @@
 @import "../includes/lib";
 
 .mzp-c-notification-bar {
+    @include clearfix;
     @include text-body-sm;
     background-color: $color-marketing-gray-20;
     border-radius: $border-radius-sm;
     border: 1px;
-    box-shadow: 1px 1px 1px rgba(27,31,35,.1);
+    box-shadow: $box-shadow-md;
     font-weight: normal;
     margin: $layout-xs auto 0;
     text-align: center;
     position: relative;
-    padding: 10px;
+    padding: $spacing-md $spacing-2xl;
 
     @media #{$mq-sm} {
-        padding: 0;
         min-width: $content-sm;
         max-width: $content-md;
-        height: 46px;
     }
 
     p {
         display: inline-block;
-        margin: 0 15px;
-
-        @media #{$mq-sm} {
-            line-height: 46px;
-        }
+        margin: 0 auto;
     }
 
     a {
@@ -41,12 +36,6 @@
         &:hover {
             text-decoration: none;
         }
-    }
-
-    &:after {
-        content: "";
-        display: block;
-        clear: both;
     }
 
     &.mzp-is-sticky {
@@ -63,10 +52,9 @@
 
     .mzp-c-notification-bar-button {
         @include bidi((
-                    (right, 0, auto),
-                    (left, auto, 0),
-                ));
-
+            (right, 0, auto),
+            (left, auto, 0),
+        ));
         @include image-replaced;
         background: url("#{$image-path}/icons/close.svg") center center no-repeat;
         background-size: 20px 20px;
@@ -85,10 +73,9 @@
         @media #{$mq-sm} {
             @include bidi((
                 (float, right, left),
-                (border-radius, 0 4px 4px 0, 4px 0 0 4px),
-                ));
+                (border-radius, 0 $border-radius-sm $border-radius-sm 0, $border-radius-sm 0 0 $border-radius-sm),
+            ));
             background-color: $color-marketing-gray-40;
-            position: static;
             padding: 0;
             margin: 0;
             height: 100%;

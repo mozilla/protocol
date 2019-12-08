@@ -1,11 +1,22 @@
-## 11.0.0
+# HEAD
+
+## Bug Fixes
+
+* **css:** Fix notification bar line height breaking container. (#525)
+
+# 11.0.0
+
+## Features
 
 * **tokens:** (breaking) update @mozilla-protocol/tokens to 5.0.3
 * **assets:** update @mozilla-protocol/assets to 3.0.1
-* **css:** Changes '.mzp-c-button-download-container' display property to 'inline-block' from 'block' (#486)
 * **js:** Support a CTA link in NotificationBar (#460)
 
-### Migration Tips
+## Bug Fixes
+
+* **css:** Changes '.mzp-c-button-download-container' display property to 'inline-block' from 'block' (#486)
+
+## Migration Tips
   * Use tokens for border radius (rounded corners): `$border-radius-xs`, `$border-radius-sm`, `$border-radius-md`, `$border-radius-lg`
   * Use tokens for box shadows: `$box-shadow-sm`, `$box-shadow-md`, `$box-shadow-lg`
   * `$color-off-black` is now `$color-ink-80`
@@ -14,11 +25,13 @@
   * Mozilla brand colors are namespaced as `$color-moz-*`. Avoid mixing Mozilla colors with Firefox colors.
 
 
-## 10.0.1
+# 10.0.1
+
+## Bug Fixes
 
 * **css:** Fix zap import (#520)
 
-## 10.0.0
+# 10.0.0
 
 * **css:** Prism styles consume Protocol Tokens (#452)
 * **css:** Add Firefox variant of navigation (#483)
@@ -29,17 +42,17 @@
 * **assets:** Update @mozilla-protocol/assets to 3.0.1 (#509)
 * **css:** CTA links now use text underlines instead of borders (#490)
 
-## 9.0.1
+# 9.0.1
 
 ## Bug Fixes
 
 * **js:** Use window.Mzp in Modal and Notification components (#488)
 
-## 9.0.0
+# 9.0.0
 
 * **assets:** (breaking) Update @mozilla-protocol/assets to 3.0.0 (#479)
 
-### Migration Tips
+## Migration Tips
   * Browser logo is for Firefox 70+
   * Browser logos have new names and directories
     * e.g. `logos/firefox/firefox.png` → `logos/firefox/browser/logo-lg.png`
@@ -48,7 +61,7 @@
   * Remove `-black` from file names for black icons
   * Focus theme has been removed
 
-## 8.1.0
+# 8.1.0
 
 * **docs:** Added component issue templates (#379)
 * **css:** Bold menu titles (#481)
