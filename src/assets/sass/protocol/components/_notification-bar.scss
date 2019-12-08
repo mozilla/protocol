@@ -20,16 +20,11 @@
         padding: 0;
         min-width: $content-sm;
         max-width: $content-md;
-        height: 46px;
     }
 
     p {
         display: inline-block;
-        margin: 0 15px;
-
-        @media #{$mq-sm} {
-            line-height: 46px;
-        }
+        margin: 12px 45px;
     }
 
     a {
@@ -88,7 +83,6 @@
                 (border-radius, 0 4px 4px 0, 4px 0 0 4px),
                 ));
             background-color: $color-gray-40;
-            position: static;
             padding: 0;
             margin: 0;
             height: 100%;
