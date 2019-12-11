@@ -15,7 +15,7 @@ $padding: $layout-xs;
     padding: $layout-xs;
     position: relative;
 
-    .h-start {
+    .mzp-l-h-start {
         justify-self: start;
         text-align: left;
 
@@ -24,7 +24,7 @@ $padding: $layout-xs;
         }
     }
 
-    .h-center {
+    .mzp-l-h-center {
         justify-self: center;
         text-align: center;
 
@@ -33,7 +33,7 @@ $padding: $layout-xs;
         }
     }
 
-    .h-end {
+    .mzp-l-h-end {
         @include bidi(((text-align, right, left),));
         justify-self: end;
 
@@ -42,15 +42,15 @@ $padding: $layout-xs;
         }
     }
 
-    .v-start {
+    .mzp-l-v-start {
         align-self: start;
     }
 
-    .v-center {
+    .mzp-l-v-center {
         align-self: center;
     }
 
-    .v-end {
+    .mzp-l-v-end {
         align-self: end;
     }
 
@@ -62,6 +62,11 @@ $padding: $layout-xs;
     @media #{$mq-lg} {
         margin: ($layout-lg * 2) auto;
         padding: $layout-lg ($layout-xl / 2);
+    }
+
+    .mzp-l-content & {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -82,7 +87,7 @@ $padding: $layout-xs;
         @include border-box;
         @include bidi(((float, left, right),));
         width: 50%;
-        padding: 0 ($layout-md / 2);
+        padding: 0 ($layout-md / 2); //TODO: remove this on grid layouts?
 
         > *:first-child {
             margin-top: 0;
@@ -100,7 +105,7 @@ $padding: $layout-xs;
             width: 66%;
         }
 
-        .mzp-is-reversed & {
+        .mzp-l-reversed & {
             @include bidi(((float, right, left),));
         }
     }
@@ -129,7 +134,7 @@ $padding: $layout-xs;
             width: 33%;
         }
 
-        .mzp-is-reversed & {
+        .mzp-l-reversed & {
             @include bidi(((float, left, right),));
         }
     }
@@ -142,7 +147,7 @@ $padding: $layout-xs;
 .mzp-c-block-media {
     // padding
     @media all and (max-width:767px) {
-        &.fit-flush {
+        &.mzp-l-fit-flush {
             margin: $layout-xs * -1;
 
             &:first-child {
@@ -154,7 +159,7 @@ $padding: $layout-xs;
             }
         }
 
-        &.fit-flush-top {
+        &.mzp-l-fit-flush-top {
             margin-top: $layout-xs * -1;
 
             &:last-child {
@@ -162,20 +167,20 @@ $padding: $layout-xs;
             }
         }
 
-        &.fit-flush-side {
+        &.mzp-l-fit-flush-side {
             margin-right: $layout-xs * -1;
             margin-left: $layout-xs * -1;
         }
 
-        &.fit-flush-bottom {
+        &.mzp-l-fit-flush-bottom {
             margin-bottom: $layout-xs * -1;
 
             &:first-child {
-            margin-bottom: 0;
+                margin-bottom: 0;
             }
         }
 
-        &.fit-pop {
+        &.mzp-l-fit-pop {
             margin: $layout-xs * 2 * -1;
 
             &:first-child {
@@ -187,7 +192,7 @@ $padding: $layout-xs;
             }
         }
 
-        &.fit-pop-top {
+        &.mzp-l-fit-pop-top {
             margin-top: $layout-xs * 2 * -1;
 
             &:last-child {
@@ -195,12 +200,12 @@ $padding: $layout-xs;
             }
         }
 
-        &.fit-pop-side {
+        &.mzp-l-fit-pop-side {
             margin-right: $layout-xs * 2 * -1;
             margin-left: $layout-xs * 2 * -1;
         }
 
-        &.fit-pop-bottom {
+        &.mzp-l-fit-pop-bottom {
             margin-bottom: $layout-xs * 2 * -1;
 
             &:first-child {
@@ -210,99 +215,99 @@ $padding: $layout-xs;
     }
 
     @media #{$mq-md} {
-        &.fit-flush,
-        &.fit-flush-top {
+        &.mzp-l-fit-flush,
+        &.mzp-l-fit-flush-top {
             margin-top: $layout-lg * -1;
         }
 
-        &.fit-flush,
-        &.fit-flush-side {
-            [dir='ltr'] :not(.mzp-is-reversed) > &,
-            [dir='rtl'] .mzp-is-reversed > & {
+        &.mzp-l-fit-flush,
+        &.mzp-l-fit-flush-side {
+            [dir='ltr'] :not(.mzp-l-reversed) > &,
+            [dir='rtl'] .mzp-l-reversed > & {
                 margin-right: $layout-lg * -1;
             }
 
-            [dir='rtl'] :not(.mzp-is-reversed) > &,
-            .mzp-is-reversed & {
+            [dir='rtl'] :not(.mzp-l-reversed) > &,
+            .mzp-l-reversed & {
                 margin-left: $layout-lg * -1;
             }
         }
 
-        &.fit-flush,
-        &.fit-flush-bottom {
+        &.mzp-l-fit-flush,
+        &.mzp-l-fit-flush-bottom {
             margin-bottom: $layout-lg * -1;
         }
 
-        &.fit-pop,
-        &.fit-pop-top {
+        &.mzp-l-fit-pop,
+        &.mzp-l-fit-pop-top {
             margin-top: $layout-lg * 2 * -1;
         }
 
-        &.fit-pop,
-        &.fit-pop-side {
-            [dir='ltr'] :not(.mzp-is-reversed) > &,
-            [dir='rtl'] .mzp-is-reversed > & {
+        &.mzp-l-fit-pop,
+        &.mzp-l-fit-pop-side {
+            [dir='ltr'] :not(.mzp-l-reversed) > &,
+            [dir='rtl'] .mzp-l-reversed > & {
                 margin-right: $layout-lg * 2 * -1;
             }
 
-            [dir='rtl'] :not(.mzp-is-reversed) > &,
-            [dir='ltr'] .mzp-is-reversed & {
+            [dir='rtl'] :not(.mzp-l-reversed) > &,
+            [dir='ltr'] .mzp-l-reversed & {
                 margin-left: $layout-lg * 2 * -1;
             }
         }
 
-        &.fit-pop,
-        &.fit-pop-bottom {
+        &.mzp-l-fit-pop,
+        &.mzp-l-fit-pop-bottom {
             margin-bottom: $layout-lg * 2 * -1;
         }
     }
 
     @media #{$mq-lg} {
 
-        &.fit-flush,
-        &.fit-flush-top {
+        &.mzp-l-fit-flush,
+        &.mzp-l-fit-flush-top {
             margin-top: $layout-xl * -1;
         }
 
-        &.fit-flush,
-        &.fit-flush-side {
+        &.mzp-l-fit-flush,
+        &.mzp-l-fit-flush-side {
 
-            [dir='ltr'] :not(.mzp-is-reversed) > &,
-            [dir='rtl'] .mzp-is-reversed > & {
+            [dir='ltr'] :not(.mzp-l-reversed) > &,
+            [dir='rtl'] .mzp-l-reversed > & {
                 margin-right: $layout-xl * -1;
             }
 
-            [dir='rtl'] :not(.mzp-is-reversed) > &,
-            [dir='ltr'] .mzp-is-reversed & {
+            [dir='rtl'] :not(.mzp-l-reversed) > &,
+            [dir='ltr'] .mzp-l-reversed & {
                 margin-left: $layout-xl * -1;
             }
         }
 
-        &.fit-flush,
-        &.fit-flush-bottom {
+        &.mzp-l-fit-flush,
+        &.mzp-l-fit-flush-bottom {
             margin-bottom: $layout-xl * -1;
         }
 
-        &.fit-pop,
-        &.fit-pop-top {
+        &.mzp-l-fit-pop,
+        &.mzp-l-fit-pop-top {
             margin-top: $layout-xl * 2 * -1;
         }
 
-        &.fit-pop,
-        &.fit-pop-side {
-            [dir='ltr'] :not(.mzp-is-reversed) > &,
-            [dir='rtl'] .mzp-is-reversed > & {
+        &.mzp-l-fit-pop,
+        &.mzp-l-fit-pop-side {
+            [dir='ltr'] :not(.mzp-l-reversed) > &,
+            [dir='rtl'] .mzp-l-reversed > & {
                 margin-right: $layout-xl * 2 * -1;
             }
 
-            [dir='rtl'] :not(.mzp-is-reversed) > &,
-            [dir='ltr'] .mzp-is-reversed & {
+            [dir='rtl'] :not(.mzp-l-reversed) > &,
+            [dir='ltr'] .mzp-l-reversed & {
                 margin-left: $layout-xl * 2 * -1;
             }
         }
 
-        &.fit-pop,
-        &.fit-pop-bottom {
+        &.mzp-l-fit-pop,
+        &.mzp-l-fit-pop-bottom {
             margin-bottom: $layout-xl * 2 * -1;
         }
     }
@@ -336,15 +341,15 @@ $padding: $layout-xs;
                 grid-template-columns: 3fr 2fr;
             }
 
-            &.mzp-is-reversed {
+            &.mzp-l-reversed {
                 grid-template-areas: "media body";
             }
 
-            &.mzp-l-block-body-33.mzp-is-reversed {
+            &.mzp-l-block-body-33.mzp-l-reversed {
                 grid-template-columns: 3fr 2fr;
             }
 
-            &.mzp-l-block-body-66.mzp-is-reversed {
+            &.mzp-l-block-body-66.mzp-l-reversed {
                 grid-template-columns: 2fr 3fr;
             }
         }
@@ -377,11 +382,15 @@ $padding: $layout-xs;
                 max-width: none;
             }
 
-            .mzp-is-reversed > &:not([class*="h-"]) {
-                justify-self: end; // how to do this without over riding h-center etc.
+            .mzp-l-reversed & {
+                @include bidi(((float, none, none),));
             }
 
-            &.constrain-width {
+            .mzp-l-reversed > &:not([class*="h-"]) {
+                justify-self: end; // how to do this without over riding mzp-l-h-center etc.
+            }
+
+            &.mzp-l-constrain-width {
                 align-self: stretch;
 
                 img {
@@ -389,7 +398,7 @@ $padding: $layout-xs;
                 }
             }
 
-            &.constrain-height {
+            &.mzp-l-constrain-height {
                 align-self: stretch;
 
                 img {
@@ -402,7 +411,7 @@ $padding: $layout-xs;
                     width: auto;
 
                     [dir='rtl'] &,
-                    .mzp-is-reversed & {
+                    .mzp-l-reversed & {
                         left: auto;
                         right: 0;
                     }
