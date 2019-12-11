@@ -99,7 +99,7 @@ $padding: $layout-xs;
             width: 66%;
         }
 
-        .mzp-is-inversed & {
+        .mzp-is-reversed & {
             @include bidi(((float, right, left),));
         }
     }
@@ -128,7 +128,7 @@ $padding: $layout-xs;
             width: 33%;
         }
 
-        .mzp-is-inversed & {
+        .mzp-is-reversed & {
             @include bidi(((float, left, right),));
         }
     }
@@ -216,13 +216,13 @@ $padding: $layout-xs;
 
         &.fit-flush,
         &.fit-flush-side {
-            [dir='ltr'] :not(.mzp-is-inversed) > &,
-            [dir='rtl'] .mzp-is-inversed > & {
+            [dir='ltr'] :not(.mzp-is-reversed) > &,
+            [dir='rtl'] .mzp-is-reversed > & {
                 margin-right: $layout-md * -1;
             }
 
-            [dir='rtl'] :not(.mzp-is-inversed) > &,
-            .mzp-is-inversed & {
+            [dir='rtl'] :not(.mzp-is-reversed) > &,
+            .mzp-is-reversed & {
                 margin-left: $layout-md * -1;
             }
         }
@@ -239,13 +239,13 @@ $padding: $layout-xs;
 
         &.fit-pop,
         &.fit-pop-side {
-            [dir='ltr'] :not(.mzp-is-inversed) > &,
-            [dir='rtl'] .mzp-is-inversed > & {
+            [dir='ltr'] :not(.mzp-is-reversed) > &,
+            [dir='rtl'] .mzp-is-reversed > & {
                 margin-right: $layout-md * 2 * -1;
             }
 
-            [dir='rtl'] :not(.mzp-is-inversed) > &,
-            [dir='ltr'] .mzp-is-inversed & {
+            [dir='rtl'] :not(.mzp-is-reversed) > &,
+            [dir='ltr'] .mzp-is-reversed & {
                 margin-left: $layout-md * 2 * -1;
             }
         }
@@ -266,13 +266,13 @@ $padding: $layout-xs;
         &.fit-flush,
         &.fit-flush-side {
 
-            [dir='ltr'] :not(.mzp-is-inversed) > &,
-            [dir='rtl'] .mzp-is-inversed > & {
+            [dir='ltr'] :not(.mzp-is-reversed) > &,
+            [dir='rtl'] .mzp-is-reversed > & {
                 margin-right: $layout-lg * -1;
             }
 
-            [dir='rtl'] :not(.mzp-is-inversed) > &,
-            [dir='ltr'] .mzp-is-inversed & {
+            [dir='rtl'] :not(.mzp-is-reversed) > &,
+            [dir='ltr'] .mzp-is-reversed & {
                 margin-left: $layout-lg * -1;
             }
         }
@@ -289,13 +289,13 @@ $padding: $layout-xs;
 
         &.fit-pop,
         &.fit-pop-side {
-            [dir='ltr'] :not(.mzp-is-inversed) > &,
-            [dir='rtl'] .mzp-is-inversed > & {
+            [dir='ltr'] :not(.mzp-is-reversed) > &,
+            [dir='rtl'] .mzp-is-reversed > & {
                 margin-right: $layout-lg * 2 * -1;
             }
 
-            [dir='rtl'] :not(.mzp-is-inversed) > &,
-            [dir='ltr'] .mzp-is-inversed & {
+            [dir='rtl'] :not(.mzp-is-reversed) > &,
+            [dir='ltr'] .mzp-is-reversed & {
                 margin-left: $layout-lg * 2 * -1;
             }
         }
@@ -335,15 +335,15 @@ $padding: $layout-xs;
                 grid-template-columns: 3fr 2fr;
             }
 
-            &.mzp-is-inversed {
+            &.mzp-is-reversed {
                 grid-template-areas: "media body";
             }
 
-            &.mzp-l-block-body-33.mzp-is-inversed {
+            &.mzp-l-block-body-33.mzp-is-reversed {
                 grid-template-columns: 3fr 2fr;
             }
 
-            &.mzp-l-block-body-66.mzp-is-inversed {
+            &.mzp-l-block-body-66.mzp-is-reversed {
                 grid-template-columns: 2fr 3fr;
             }
         }
@@ -376,7 +376,7 @@ $padding: $layout-xs;
                 max-width: none;
             }
 
-            .mzp-is-inversed > &:not([class*="h-"]) {
+            .mzp-is-reversed > &:not([class*="h-"]) {
                 justify-self: end; // how to do this without over riding h-center etc.
             }
 
@@ -401,7 +401,7 @@ $padding: $layout-xs;
                     width: auto;
 
                     [dir='rtl'] &,
-                    .mzp-is-inversed & {
+                    .mzp-is-reversed & {
                         left: auto;
                         right: 0;
                     }
