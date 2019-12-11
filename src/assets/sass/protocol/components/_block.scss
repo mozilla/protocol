@@ -8,6 +8,7 @@ $padding: $layout-xs;
 
 .mzp-c-block {
     @include clearfix();
+    @include border-box;
     margin: ($layout-xs * 2) auto;
     max-width: $content-max;
     min-width: $content-xs;
@@ -33,8 +34,8 @@ $padding: $layout-xs;
     }
 
     .h-end {
+        @include bidi(((text-align, right, left),));
         justify-self: end;
-        text-align: right;
 
         img {
             margin: 0 0 0 auto;
@@ -55,12 +56,12 @@ $padding: $layout-xs;
 
     @media #{$mq-md} {
         margin: ($layout-md * 2) auto;
-        padding: $layout-md ($layout-md / 2);
+        padding: $layout-md ($layout-lg / 2);
     }
 
     @media #{$mq-lg} {
         margin: ($layout-lg * 2) auto;
-        padding: $layout-lg ($layout-lg / 2);
+        padding: $layout-lg ($layout-xl / 2);
     }
 }
 
@@ -211,68 +212,18 @@ $padding: $layout-xs;
     @media #{$mq-md} {
         &.fit-flush,
         &.fit-flush-top {
-            margin-top: $layout-md * -1;
-        }
-
-        &.fit-flush,
-        &.fit-flush-side {
-            [dir='ltr'] :not(.mzp-is-reversed) > &,
-            [dir='rtl'] .mzp-is-reversed > & {
-                margin-right: $layout-md * -1;
-            }
-
-            [dir='rtl'] :not(.mzp-is-reversed) > &,
-            .mzp-is-reversed & {
-                margin-left: $layout-md * -1;
-            }
-        }
-
-        &.fit-flush,
-        &.fit-flush-bottom {
-            margin-bottom: $layout-md * -1;
-        }
-
-        &.fit-pop,
-        &.fit-pop-top {
-            margin-top: $layout-md * 2 * -1;
-        }
-
-        &.fit-pop,
-        &.fit-pop-side {
-            [dir='ltr'] :not(.mzp-is-reversed) > &,
-            [dir='rtl'] .mzp-is-reversed > & {
-                margin-right: $layout-md * 2 * -1;
-            }
-
-            [dir='rtl'] :not(.mzp-is-reversed) > &,
-            [dir='ltr'] .mzp-is-reversed & {
-                margin-left: $layout-md * 2 * -1;
-            }
-        }
-
-        &.fit-pop,
-        &.fit-pop-bottom {
-            margin-bottom: $layout-md * 2 * -1;
-        }
-    }
-
-    @media #{$mq-lg} {
-
-        &.fit-flush,
-        &.fit-flush-top {
             margin-top: $layout-lg * -1;
         }
 
         &.fit-flush,
         &.fit-flush-side {
-
             [dir='ltr'] :not(.mzp-is-reversed) > &,
             [dir='rtl'] .mzp-is-reversed > & {
                 margin-right: $layout-lg * -1;
             }
 
             [dir='rtl'] :not(.mzp-is-reversed) > &,
-            [dir='ltr'] .mzp-is-reversed & {
+            .mzp-is-reversed & {
                 margin-left: $layout-lg * -1;
             }
         }
@@ -305,6 +256,56 @@ $padding: $layout-xs;
             margin-bottom: $layout-lg * 2 * -1;
         }
     }
+
+    @media #{$mq-lg} {
+
+        &.fit-flush,
+        &.fit-flush-top {
+            margin-top: $layout-xl * -1;
+        }
+
+        &.fit-flush,
+        &.fit-flush-side {
+
+            [dir='ltr'] :not(.mzp-is-reversed) > &,
+            [dir='rtl'] .mzp-is-reversed > & {
+                margin-right: $layout-xl * -1;
+            }
+
+            [dir='rtl'] :not(.mzp-is-reversed) > &,
+            [dir='ltr'] .mzp-is-reversed & {
+                margin-left: $layout-xl * -1;
+            }
+        }
+
+        &.fit-flush,
+        &.fit-flush-bottom {
+            margin-bottom: $layout-xl * -1;
+        }
+
+        &.fit-pop,
+        &.fit-pop-top {
+            margin-top: $layout-xl * 2 * -1;
+        }
+
+        &.fit-pop,
+        &.fit-pop-side {
+            [dir='ltr'] :not(.mzp-is-reversed) > &,
+            [dir='rtl'] .mzp-is-reversed > & {
+                margin-right: $layout-xl * 2 * -1;
+            }
+
+            [dir='rtl'] :not(.mzp-is-reversed) > &,
+            [dir='ltr'] .mzp-is-reversed & {
+                margin-left: $layout-xl * 2 * -1;
+            }
+        }
+
+        &.fit-pop,
+        &.fit-pop-bottom {
+            margin-bottom: $layout-xl * 2 * -1;
+        }
+    }
 }
 
 @supports(display:grid) {
@@ -312,11 +313,11 @@ $padding: $layout-xs;
     .mzp-c-block {
 
         @media #{$mq-md} {
-            padding: $layout-md;
+            padding: $layout-lg;
         }
 
         @media #{$mq-lg} {
-            padding: $layout-lg;
+            padding: $layout-xl;
         }
 
 
@@ -325,7 +326,7 @@ $padding: $layout-xs;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-areas: "body media";
-            grid-column-gap: $layout-md;
+            grid-column-gap: $layout-lg;
 
             &.mzp-l-block-body-33 {
                 grid-template-columns: 2fr 3fr;
@@ -349,7 +350,7 @@ $padding: $layout-xs;
         }
 
         @media #{$mq-lg} {
-            grid-column-gap: $layout-lg;
+            grid-column-gap: $layout-xl;
         }
     }
 
