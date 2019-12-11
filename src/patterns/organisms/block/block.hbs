@@ -25,9 +25,9 @@ links:
     </div>
     <div class="mzp-c-block-media {{media_classes}}">
       {{#if img_src }}
-        <img src="{{@root.baseurl}}/static/img/block/{{img_src}}" alt="">
+        <img class="mzp-c-block-media-img" src="{{@root.baseurl}}/static/img/block/{{img_src}}" alt="">
       {{ else }}
-        <img src="{{@root.baseurl}}/static/img/block/devices.png" alt="" srcset="{{@root.baseurl}}/static/img/block/devices-high-res.png 2x">
+        <img class="mzp-c-block-media-img" src="{{@root.baseurl}}/static/img/block/devices.png" alt="" srcset="{{@root.baseurl}}/static/img/block/devices-high-res.png 2x">
       {{/if}}
     </div>
 </section>

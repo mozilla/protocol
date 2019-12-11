@@ -28,7 +28,7 @@ $padding: $layout-xs;
         justify-self: center;
         text-align: center;
 
-        img {
+        .mzp-c-block-media-img {
             margin: 0 auto;
         }
     }
@@ -37,7 +37,7 @@ $padding: $layout-xs;
         @include bidi(((text-align, right, left),));
         justify-self: end;
 
-        img {
+        .mzp-c-block-media-img {
             margin: 0 0 0 auto;
         }
     }
@@ -81,6 +81,11 @@ $padding: $layout-xs;
         &:last-child {
             margin-top: $layout-xs;
         }
+
+        .mzp-has-media-mobile-hide & {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
 
     @media #{$mq-md} {
@@ -98,11 +103,11 @@ $padding: $layout-xs;
         }
 
         .mzp-l-block-body-33 & {
-            width: 33%;
+            width: 33.33%;
         }
 
         .mzp-l-block-body-66 & {
-            width: 66%;
+            width: 66.66%;
         }
 
         .mzp-l-reversed & {
@@ -119,6 +124,12 @@ $padding: $layout-xs;
 .mzp-c-block-media {
     position: relative;
 
+    @media all and (max-width:767px) {
+        .mzp-has-media-mobile-hide & {
+            display: none;
+        }
+    }
+
     @media #{$mq-md} {
         @include border-box;
         @include bidi(((float, right, left),));
@@ -127,11 +138,11 @@ $padding: $layout-xs;
 
 
         .mzp-l-block-body-33 & {
-            width: 66%;
+            width: 66.66%;
         }
 
         .mzp-l-block-body-66 & {
-            width: 33%;
+            width: 33.33%;
         }
 
         .mzp-l-reversed & {
@@ -142,9 +153,7 @@ $padding: $layout-xs;
     @media #{$mq-lg} {
         padding: 0 ($layout-lg / 2);
     }
-}
 
-.mzp-c-block-media {
     // padding
     @media all and (max-width:767px) {
         &.mzp-l-fit-flush {
@@ -377,7 +386,7 @@ $padding: $layout-xs;
 
         @media #{$mq-md} {
 
-            img {
+            .mzp-c-block-media-img {
                 display: block;
                 max-width: none;
             }
@@ -391,17 +400,15 @@ $padding: $layout-xs;
             }
 
             &.mzp-l-constrain-width {
-                align-self: stretch;
 
-                img {
+                .mzp-c-block-media-img {
                     max-width: 100%;
                 }
             }
 
             &.mzp-l-constrain-height {
-                align-self: stretch;
 
-                img {
+                .mzp-c-block-media-img {
                     bottom: 0;
                     left: 0;
                     max-height: 100%;

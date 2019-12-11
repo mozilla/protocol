@@ -42,7 +42,7 @@ styles:
   {{/content}}
 {{/embed}}
 
-{{#embed "patterns.organisms.block.block" block_classes="mzp-l-reversed" body_classes="mzp-l-v-center mzp-l-h-center" media_classes="mzp-l-v-end mzp-l-h-center mzp-l-fit-pop-top mzp-l-fit-pop-bottom mzp-l-constrain-width" img_src="billboard-image.png" }}
+{{#embed "patterns.organisms.block.block" block_classes="mzp-l-reversed" body_classes="mzp-l-v-center mzp-l-h-center" media_classes="mzp-l-v-center mzp-l-h-center mzp-l-fit-pop-top mzp-l-fit-pop-bottom" img_src="billboard-image.png" }}
   {{#content "content"}}
     <h3 class="mzp-c-billboard-title">Billboard replacement</h3>
     <p class="mzp-c-billboard-desc">A description with a maximum of 100 characters. That usually means only one or two sentences.</p>
@@ -50,51 +50,64 @@ styles:
   {{/content}}
 {{/embed}}
 
-
-  <div style="background-color:#bddefd;">
-    <div class="mzp-c-block" style="background-color:#bddefd;">
-        <div class="mzp-c-block-body mzp-l-v-start">
-          <h2>Firefox</h2>
-            <h3>Your life is your business. Not ours.</h3>
-            <p>Firefox fights for you.</p>
-            <p><button>Download</button></p>
-        </div>
-        <div class="mzp-c-block-media mzp-l-constrain-none">
-            <img src="https://www.mozilla.org/media/img/home/2018/banner-fffy.png" height="350" width="720">
-        </div>
-    </div>
+<div style="background-color:#bddefd;">
+  <div class="mzp-c-block mzp-l-reversed mzp-has-media-mobile-hide" style="background-color:#bddefd;">
+      <div class="mzp-c-block-body mzp-l-v-center mzp-l-h-center">
+        <h3 class="mzp-c-billboard-title">Billboard replacement</h3>
+        <p class="mzp-c-billboard-desc">A description with a maximum of 100 characters. That usually means only one or two sentences.</p>
+        <a class="mzp-c-cta-link" href="#">Learn more about us</a>
+      </div>
+      <div class="mzp-c-block-media mzp-l-constrain-width mzp-l-v-center mzp-l-h-center mzp-l-fit-pop-top mzp-l-fit-pop-bottom">
+          <img class="mzp-c-block-media-img" src="https://www.mozilla.org/media/img/home/2018/banner-fffy.png" height="350" width="720">
+      </div>
   </div>
+</div>
 
-  <div class="mzp-c-block" style="background-color:#ffffff;">
-    <div class="mzp-c-block-media mzp-l-fit-flush mzp-l-v-center mzp-l-constrain-width">
-      <img src="https://www.mozilla.org/media/img/firefox/accounts/fxa-lockbox.png" height="590" width="590" style="background:#fff;">
-    </div>
-    <div class="mzp-c-block-body mzp-l-v-center">
-      <h2 class="c-primary-cta-title">Remember your passwords in Lockbox</h2>
-      <p>No more getting locked out of apps and websites. Lockbox secures all the passwords you’ve saved in Firefox and gives you easy access across all your iOS devices.</p>
-      <p><a href="#" class="mzp-c-cta-link">Get the lockbox app</a></p>
-    </div>
-  </div>
 
-   <div class="mzp-c-block" style="background-color:#ffffff;">
-    <div class="mzp-c-block-media mzp-l-fit-flush mzp-l-constrain-height">
-      <img src="https://www.mozilla.org/media/img/firefox/accounts/fxa-hero-img.png" height="770" width="1200" style="background:#fff;">
-    </div>
-    <div class="mzp-c-block-body mzp-l-v-center">
-      <p>Firefox</p>
-      <h2 class="c-primary-cta-title">One log-in. Power and privacy everywhere.</h2>
-      <p><a href="#">Create a Firefox Account</a></p>
-    </div>
+<div style="background-color:#bddefd;">
+  <div class="mzp-c-block" style="background-color:#bddefd;">
+      <div class="mzp-c-block-body mzp-l-v-start">
+        <h2>Firefox</h2>
+          <h3>Your life is your business. Not ours.</h3>
+          <p>Firefox fights for you.</p>
+          <p><button>Download</button></p>
+      </div>
+      <div class="mzp-c-block-media mzp-l-constrain-none">
+          <img class="mzp-c-block-media-img" src="https://www.mozilla.org/media/img/home/2018/banner-fffy.png" height="350" width="720">
+      </div>
   </div>
+</div>
+
+<div class="mzp-c-block" style="background-color:#ffffff;">
+  <div class="mzp-c-block-media mzp-l-fit-flush mzp-l-v-center mzp-l-constrain-width">
+    <img class="mzp-c-block-media-img" src="https://www.mozilla.org/media/img/firefox/accounts/fxa-lockbox.png" height="590" width="590" style="background:#fff;">
+  </div>
+  <div class="mzp-c-block-body mzp-l-v-center">
+    <h2 class="c-primary-cta-title">Remember your passwords in Lockbox</h2>
+    <p>No more getting locked out of apps and websites. Lockbox secures all the passwords you’ve saved in Firefox and gives you easy access across all your iOS devices.</p>
+    <p><a href="#" class="mzp-c-cta-link">Get the lockbox app</a></p>
+  </div>
+</div>
+
+<div class="mzp-c-block" style="background-color:#ffffff;">
+  <div class="mzp-c-block-media mzp-l-fit-flush mzp-l-constrain-height">
+    <img class="mzp-c-block-media-img" src="https://www.mozilla.org/media/img/firefox/accounts/fxa-hero-img.png" height="770" width="1200" style="background:#fff;">
+  </div>
+  <div class="mzp-c-block-body mzp-l-v-center">
+    <p>Firefox</p>
+    <h2 class="c-primary-cta-title">One log-in. Power and privacy everywhere.</h2>
+    <p><a href="#">Create a Firefox Account</a></p>
+  </div>
+</div>
 
 <div style="background:#0a84ff;">
-     <div class="mzp-c-block mzp-l-reversed" style="background-color:#0a84ff;">
-    <div class="mzp-c-block-media mzp-l-fit-pop-top mzp-l-fit-flush-bottom mzp-l-v-end mzp-l-h-end">
-      <img src="https://www.mozilla.org/media/img/firefox/whatsnew_63/wnp63-content-blocking.31a5c46e7f2a.png" height="374" width="649" style="background:transparent;">
-    </div>
-    <div class="mzp-c-block-body mzp-l-v-center">
-      <h2 class="c-primary-cta-title">One log-in. Power and privacy everywhere.</h2>
-      <p><a href="#">Create a Firefox Account</a></p>
-    </div>
+    <div class="mzp-c-block mzp-l-reversed" style="background-color:#0a84ff;">
+  <div class="mzp-c-block-media mzp-l-fit-pop-top mzp-l-fit-flush-bottom mzp-l-v-end mzp-l-h-end">
+    <img class="mzp-c-block-media-img" src="https://www.mozilla.org/media/img/firefox/whatsnew_63/wnp63-content-blocking.31a5c46e7f2a.png" height="374" width="649" style="background:transparent;">
   </div>
- </div>
+  <div class="mzp-c-block-body mzp-l-v-center">
+    <h2 class="c-primary-cta-title">One log-in. Power and privacy everywhere.</h2>
+    <p><a href="#">Create a Firefox Account</a></p>
+  </div>
+</div>
+</div>
