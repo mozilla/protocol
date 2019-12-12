@@ -4,8 +4,6 @@
 
 @import '../includes/lib';
 
-$padding: $layout-xs;
-
 .mzp-c-block {
     @include clearfix();
     @include border-box;
@@ -17,9 +15,9 @@ $padding: $layout-xs;
 
     .mzp-l-h-start {
         justify-self: start;
-        text-align: left;
+        @include bidi(((text-align, left, right),));
 
-        img {
+        .mzp-c-block-media-img {
             margin: 0 auto 0 0;
         }
     }
@@ -55,13 +53,8 @@ $padding: $layout-xs;
     }
 
     @media #{$mq-md} {
-        margin: ($layout-md * 2) auto;
-        padding: $layout-md ($layout-lg / 2);
-    }
-
-    @media #{$mq-lg} {
-        margin: ($layout-lg * 2) auto;
-        padding: $layout-lg ($layout-xl / 2);
+        margin: $layout-lg auto;
+        padding: $layout-lg ($layout-lg / 2);
     }
 
     .mzp-l-content & {
@@ -114,10 +107,6 @@ $padding: $layout-xs;
             @include bidi(((float, right, left),));
         }
     }
-
-    @media #{$mq-lg} {
-        padding: 0 ($layout-lg / 2);
-    }
 }
 
 
@@ -148,10 +137,6 @@ $padding: $layout-xs;
         .mzp-l-reversed & {
             @include bidi(((float, left, right),));
         }
-    }
-
-    @media #{$mq-lg} {
-        padding: 0 ($layout-lg / 2);
     }
 
     // padding
@@ -270,56 +255,6 @@ $padding: $layout-xs;
             margin-bottom: $layout-lg * 2 * -1;
         }
     }
-
-    @media #{$mq-lg} {
-
-        &.mzp-l-fit-flush,
-        &.mzp-l-fit-flush-top {
-            margin-top: $layout-xl * -1;
-        }
-
-        &.mzp-l-fit-flush,
-        &.mzp-l-fit-flush-side {
-
-            [dir='ltr'] :not(.mzp-l-reversed) > &,
-            [dir='rtl'] .mzp-l-reversed > & {
-                margin-right: $layout-xl * -1;
-            }
-
-            [dir='rtl'] :not(.mzp-l-reversed) > &,
-            [dir='ltr'] .mzp-l-reversed & {
-                margin-left: $layout-xl * -1;
-            }
-        }
-
-        &.mzp-l-fit-flush,
-        &.mzp-l-fit-flush-bottom {
-            margin-bottom: $layout-xl * -1;
-        }
-
-        &.mzp-l-fit-pop,
-        &.mzp-l-fit-pop-top {
-            margin-top: $layout-xl * 2 * -1;
-        }
-
-        &.mzp-l-fit-pop,
-        &.mzp-l-fit-pop-side {
-            [dir='ltr'] :not(.mzp-l-reversed) > &,
-            [dir='rtl'] .mzp-l-reversed > & {
-                margin-right: $layout-xl * 2 * -1;
-            }
-
-            [dir='rtl'] :not(.mzp-l-reversed) > &,
-            [dir='ltr'] .mzp-l-reversed & {
-                margin-left: $layout-xl * 2 * -1;
-            }
-        }
-
-        &.mzp-l-fit-pop,
-        &.mzp-l-fit-pop-bottom {
-            margin-bottom: $layout-xl * 2 * -1;
-        }
-    }
 }
 
 @supports(display:grid) {
@@ -329,11 +264,6 @@ $padding: $layout-xs;
         @media #{$mq-md} {
             padding: $layout-lg;
         }
-
-        @media #{$mq-lg} {
-            padding: $layout-xl;
-        }
-
 
         @media #{$mq-md} {
             // grid is all start/end based we don't need bidi declarations for RTL support \o/
@@ -361,10 +291,6 @@ $padding: $layout-xs;
             &.mzp-l-block-body-66.mzp-l-reversed {
                 grid-template-columns: 2fr 3fr;
             }
-        }
-
-        @media #{$mq-lg} {
-            grid-column-gap: $layout-xl;
         }
     }
 

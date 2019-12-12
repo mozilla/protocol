@@ -12,7 +12,7 @@
 .mzp-c-block,
 .mzp-c-block-media,
 .mzp-c-block-body {
-    position: relative;
+
     &:before {
         content: attr(class);
         background-color: #fff;
@@ -29,10 +29,6 @@
 
 .mzp-c-block {
     background-color: rgba(0, 0, 255, 0.1);
-
-    @media #{$mq-md} {
-        margin-bottom: $layout-2xl;
-    }
 }
 
 .mzp-c-block-media {
