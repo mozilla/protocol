@@ -1,0 +1,20 @@
+build-sync-stage:
+  only:
+    - master
+    - gitlab-stage
+  tags:
+    - oregon-b-shell
+  script:
+    - bin/build.sh stage
+    - cd dist
+    - aws s3 sync . s3://mozilla-protocol-stage --acl public-read --delete --profile protocol
+
+build-sync-prod:
+  only:
+    - prod
+  tags:
+    - oregon-b-shell
+  script:
+    - bin/build.sh prod
+    - cd dist
+    - aws s3 sync . s3://mozilla-protocol --acl public-read --delete --profile protocol
