@@ -5,22 +5,26 @@
 @import '../includes/lib';
 
 $v-grid-xs: $layout-xs;
-$h-grid-xs: $layout-lg;
+$h-grid-xs: $layout-md;
 
-$h-grid-md: $layout-lg;
-$v-grid-md: $layout-lg; // should match mzp-l-content values
+$h-grid-md: $layout-lg; // should match mzp-l-content values
+$v-grid-md: $layout-sm;
 
-$h-grid-lg: $layout-lg;
-$v-grid-lg: $layout-xl; // should match mzp-l-content values
+$h-grid-lg: $layout-lg; // should match mzp-l-content values
+$v-grid-lg: $layout-lg;
 
 .mzp-c-block {
     @include clearfix();
     @include border-box;
-    margin: ($v-grid-xs * 2) auto;
+    margin: 0 auto;
     max-width: $content-max;
     min-width: $content-xs;
     padding: $h-grid-xs;
     position: relative;
+
+    &.mzp-has-bg {
+        margin: ($v-grid-xs * 2) auto;
+    }
 
     .mzp-l-h-start {
         justify-self: start;
@@ -62,8 +66,11 @@ $v-grid-lg: $layout-xl; // should match mzp-l-content values
     }
 
     @media #{$mq-md} {
-        margin: $layout-lg auto;
-        padding: $layout-lg ($layout-lg / 2);
+        padding: $v-grid-md ($h-grid-md / 2);
+
+        &.mzp-has-bg {
+            margin: ($v-grid-md * 2) auto;
+        }
     }
 
     .mzp-l-content & {
@@ -116,6 +123,10 @@ $v-grid-lg: $layout-xl; // should match mzp-l-content values
             @include bidi(((float, right, left),));
         }
     }
+
+    @media #{$mq-lg} {
+        padding: 0 ($h-grid-lg / 2);
+    }
 }
 
 
@@ -146,6 +157,10 @@ $v-grid-lg: $layout-xl; // should match mzp-l-content values
         .mzp-l-reversed & {
             @include bidi(((float, left, right),));
         }
+    }
+
+    @media #{$mq-lg} {
+        padding: 0 ($h-grid-lg / 2);
     }
 
     // padding
@@ -264,6 +279,54 @@ $v-grid-lg: $layout-xl; // should match mzp-l-content values
             margin-bottom: $h-grid-md * 2 * -1;
         }
     }
+
+    @media #{$mq-lg} {
+        &.mzp-l-fit-flush,
+        &.mzp-l-fit-flush-top {
+            margin-top: $v-grid-lg * -1;
+        }
+
+        &.mzp-l-fit-flush,
+        &.mzp-l-fit-flush-side {
+            [dir='ltr'] :not(.mzp-l-reversed) > &,
+            [dir='rtl'] .mzp-l-reversed > & {
+                margin-right: $h-grid-lg * -1;
+            }
+
+            [dir='rtl'] :not(.mzp-l-reversed) > &,
+            .mzp-l-reversed & {
+                margin-left: $h-grid-lg * -1;
+            }
+        }
+
+        &.mzp-l-fit-flush,
+        &.mzp-l-fit-flush-bottom {
+            margin-bottom: $v-grid-lg * -1;
+        }
+
+        &.mzp-l-fit-pop,
+        &.mzp-l-fit-pop-top {
+            margin-top: $v-grid-lg * 2 * -1;
+        }
+
+        &.mzp-l-fit-pop,
+        &.mzp-l-fit-pop-side {
+            [dir='ltr'] :not(.mzp-l-reversed) > &,
+            [dir='rtl'] .mzp-l-reversed > & {
+                margin-right: $h-grid-lg * 2 * -1;
+            }
+
+            [dir='rtl'] :not(.mzp-l-reversed) > &,
+            [dir='ltr'] .mzp-l-reversed & {
+                margin-left: $h-grid-lg * 2 * -1;
+            }
+        }
+
+        &.mzp-l-fit-pop,
+        &.mzp-l-fit-pop-bottom {
+            margin-bottom: $h-grid-lg * 2 * -1;
+        }
+    }
 }
 
 @supports(display:grid) {
@@ -300,6 +363,10 @@ $v-grid-lg: $layout-xl; // should match mzp-l-content values
             &.mzp-l-block-body-66.mzp-l-reversed {
                 grid-template-columns: 2fr 3fr;
             }
+        }
+
+        @media #{$mq-lg} {
+            padding: $v-grid-lg $h-grid-lg;
         }
     }
 
