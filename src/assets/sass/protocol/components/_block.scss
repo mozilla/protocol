@@ -5,26 +5,54 @@
 @import '../includes/lib';
 
 $v-grid-xs: $layout-xs;
-$h-grid-xs: $layout-md;
+$h-grid-xs: $layout-lg; // should match mzp-l-content values
 
-$h-grid-md: $layout-lg; // should match mzp-l-content values
-$v-grid-md: $layout-sm;
-
-$h-grid-lg: $layout-lg; // should match mzp-l-content values
 $v-grid-lg: $layout-lg;
+$h-grid-lg: $layout-xl; // should match mzp-l-content values
 
 .mzp-c-block {
+    position: relative;
+    overflow-x: hidden;
+
+    &.mzp-has-pop {
+        padding: ($v-grid-xs * 2) 0;
+    }
+
+    &:before {
+        content: '';
+        background-color: #000;
+        position: absolute;
+        top: $v-grid-xs * 2;
+        bottom: $v-grid-xs * 2;
+        left: 0;
+        right: 0;
+    }
+
+    @media #{$mq-lg} {
+
+        &.mzp-has-pop {
+            padding: ($v-grid-lg * 2) 0;
+        }
+
+        &:before {
+            content: '';
+            background-color: #000;
+            position: absolute;
+            top: $v-grid-lg * 2;
+            bottom: $v-grid-lg * 2;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+.mzp-c-block-container {
     @include clearfix();
     @include border-box;
     margin: 0 auto;
     max-width: $content-max;
     min-width: $content-xs;
-    padding: $h-grid-xs;
-    position: relative;
-
-    &.mzp-has-bg {
-        margin: ($v-grid-xs * 2) auto;
-    }
+    padding: $v-grid-xs $h-grid-xs;
 
     .mzp-l-h-start {
         justify-self: start;
@@ -65,24 +93,15 @@ $v-grid-lg: $layout-lg;
         align-self: end;
     }
 
-    @media #{$mq-md} {
-        padding: $v-grid-md ($h-grid-md / 2);
-
-        &.mzp-has-bg {
-            margin: ($v-grid-md * 2) auto;
-        }
-    }
-
-    .mzp-l-content & {
-        padding-left: 0;
-        padding-right: 0;
+    @media #{$mq-lg} {
+        padding: $v-grid-lg ($h-grid-lg / 2);
     }
 }
 
 .mzp-c-block-body {
     position: relative;
 
-    @media all and (max-width:767px) {
+    @media all and (max-width: #{$screen-lg - 1}) {
         &:first-child {
             margin-bottom: $v-grid-xs;
         }
@@ -91,17 +110,17 @@ $v-grid-lg: $layout-lg;
             margin-top: $v-grid-xs;
         }
 
-        .mzp-has-media-mobile-hide & {
+        .mzp-has-media-hide & {
             margin-top: 0;
             margin-bottom: 0;
         }
     }
 
-    @media #{$mq-md} {
+    @media #{$mq-lg} {
         @include border-box;
         @include bidi(((float, left, right),));
         width: 50%;
-        padding: 0 ($h-grid-md / 2);
+        padding: 0 ($h-grid-lg / 2);
 
         > *:first-child {
             margin-top: 0;
@@ -123,27 +142,23 @@ $v-grid-lg: $layout-lg;
             @include bidi(((float, right, left),));
         }
     }
-
-    @media #{$mq-lg} {
-        padding: 0 ($h-grid-lg / 2);
-    }
 }
 
 
 .mzp-c-block-media {
     position: relative;
 
-    @media all and (max-width:767px) {
-        .mzp-has-media-mobile-hide & {
+    @media all and (max-width:#{$screen-lg - 1}) {
+        .mzp-has-media-hide & {
             display: none;
         }
     }
 
-    @media #{$mq-md} {
+    @media #{$mq-lg} {
         @include border-box;
         @include bidi(((float, right, left),));
         width: 50%;
-        padding: 0 ($h-grid-md / 2);
+        padding: 0 ($h-grid-lg / 2);
 
 
         .mzp-l-block-body-33 & {
@@ -159,14 +174,10 @@ $v-grid-lg: $layout-lg;
         }
     }
 
-    @media #{$mq-lg} {
-        padding: 0 ($h-grid-lg / 2);
-    }
-
     // padding
     @media all and (max-width:767px) {
         &.mzp-l-fit-flush {
-            margin: $v-grid-xs * -1;
+            margin: #{$v-grid-xs * -1} #{$h-grid-xs * -1};
 
             &:first-child {
                 margin-bottom: 0;
@@ -186,8 +197,8 @@ $v-grid-lg: $layout-lg;
         }
 
         &.mzp-l-fit-flush-side {
-            margin-right: $v-grid-xs * -1;
-            margin-left: $v-grid-xs * -1;
+            margin-right: $h-grid-xs * -1;
+            margin-left: $h-grid-xs * -1;
         }
 
         &.mzp-l-fit-flush-bottom {
@@ -199,7 +210,7 @@ $v-grid-lg: $layout-lg;
         }
 
         &.mzp-l-fit-pop {
-            margin: $v-grid-xs * 2 * -1;
+            margin: ($v-grid-xs * 2 * -1) ($h-grid-xs * 2 * -1);
 
             &:first-child {
                 margin-bottom: 0;
@@ -219,8 +230,8 @@ $v-grid-lg: $layout-lg;
         }
 
         &.mzp-l-fit-pop-side {
-            margin-right: $v-grid-xs * 2 * -1;
-            margin-left: $v-grid-xs * 2 * -1;
+            margin-right: $h-grid-xs * 2 * -1;
+            margin-left: $h-grid-xs * 2 * -1;
         }
 
         &.mzp-l-fit-pop-bottom {
@@ -229,54 +240,6 @@ $v-grid-lg: $layout-lg;
             &:first-child {
                 margin-bottom: 0;
             }
-        }
-    }
-
-    @media #{$mq-md} {
-        &.mzp-l-fit-flush,
-        &.mzp-l-fit-flush-top {
-            margin-top: $v-grid-md * -1;
-        }
-
-        &.mzp-l-fit-flush,
-        &.mzp-l-fit-flush-side {
-            [dir='ltr'] :not(.mzp-l-reversed) > &,
-            [dir='rtl'] .mzp-l-reversed > & {
-                margin-right: $h-grid-md * -1;
-            }
-
-            [dir='rtl'] :not(.mzp-l-reversed) > &,
-            .mzp-l-reversed & {
-                margin-left: $h-grid-md * -1;
-            }
-        }
-
-        &.mzp-l-fit-flush,
-        &.mzp-l-fit-flush-bottom {
-            margin-bottom: $v-grid-md * -1;
-        }
-
-        &.mzp-l-fit-pop,
-        &.mzp-l-fit-pop-top {
-            margin-top: $v-grid-md * 2 * -1;
-        }
-
-        &.mzp-l-fit-pop,
-        &.mzp-l-fit-pop-side {
-            [dir='ltr'] :not(.mzp-l-reversed) > &,
-            [dir='rtl'] .mzp-l-reversed > & {
-                margin-right: $h-grid-md * 2 * -1;
-            }
-
-            [dir='rtl'] :not(.mzp-l-reversed) > &,
-            [dir='ltr'] .mzp-l-reversed & {
-                margin-left: $h-grid-md * 2 * -1;
-            }
-        }
-
-        &.mzp-l-fit-pop,
-        &.mzp-l-fit-pop-bottom {
-            margin-bottom: $h-grid-md * 2 * -1;
         }
     }
 
@@ -324,80 +287,73 @@ $v-grid-lg: $layout-lg;
 
         &.mzp-l-fit-pop,
         &.mzp-l-fit-pop-bottom {
-            margin-bottom: $h-grid-lg * 2 * -1;
+            margin-bottom: $v-grid-lg * 2 * -1;
         }
     }
 }
 
 @supports(display:grid) {
 
-    .mzp-c-block {
-
-        @media #{$mq-md} {
-            padding: $layout-lg;
-        }
-
-        @media #{$mq-md} {
-            // grid is all start/end based we don't need bidi declarations for RTL support \o/
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: "body media";
-            grid-column-gap: $h-grid-md;
-
-            &.mzp-l-block-body-33 {
-                grid-template-columns: 2fr 3fr;
-            }
-
-            &.mzp-l-block-body-66 {
-                grid-template-columns: 3fr 2fr;
-            }
-
-            &.mzp-l-reversed {
-                grid-template-areas: "media body";
-            }
-
-            &.mzp-l-block-body-33.mzp-l-reversed {
-                grid-template-columns: 3fr 2fr;
-            }
-
-            &.mzp-l-block-body-66.mzp-l-reversed {
-                grid-template-columns: 2fr 3fr;
-            }
-        }
+    .mzp-c-block-container  {
 
         @media #{$mq-lg} {
             padding: $v-grid-lg $h-grid-lg;
         }
+
+        @media #{$mq-lg} {
+            // grid is all start/end based we don't need bidi declarations for RTL support \o/
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "body media";
+            grid-column-gap: $h-grid-lg;
+
+            .mzp-l-block-body-33 > & {
+                grid-template-columns: 2fr 3fr;
+            }
+
+            .mzp-l-block-body-66 > & {
+                grid-template-columns: 3fr 2fr;
+            }
+
+            .mzp-l-reversed > & {
+                grid-template-areas: "media body";
+            }
+
+            .mzp-l-block-body-33.mzp-l-reversed > & {
+                grid-template-columns: 3fr 2fr;
+            }
+
+            .mzp-l-block-body-66.mzp-l-reversed > & {
+                grid-template-columns: 2fr 3fr;
+            }
+        }
+    }
+
+    // extra specificitly to over-ride the styles that make the float fall-back work
+    .mzp-c-block-container .mzp-c-block-body,
+    .mzp-c-block-container .mzp-c-block-media {
+        float: none;
+        min-width: 0; //because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+        padding: 0;
+        width: auto;
     }
 
     .mzp-c-block-body {
-        float: none;
         grid-area: body;
-        min-width: 0; //because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
-        padding: 0 !important; /* stylelint-disable-line declaration-no-important */
-        width: auto !important; /* stylelint-disable-line declaration-no-important */
     }
 
     .mzp-c-block-media {
         align-self: stretch;
-        float: none;
         grid-area: media;
-        min-width: 0; // because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
-        padding: 0 !important; /* stylelint-disable-line declaration-no-important */
-        width: auto !important; /* stylelint-disable-line declaration-no-important */
 
-        @media #{$mq-md} {
+        @media #{$mq-lg} {
 
             .mzp-c-block-media-img {
                 display: block;
                 max-width: none;
             }
 
-            .mzp-l-reversed & {
-                @include bidi(((float, none, none),));
-            }
-
-            .mzp-l-reversed > &:not([class*="h-"]) {
+            .mzp-l-reversed > .mzp-c-block-container > &:not([class*="h-"]) {
                 justify-self: end; // how to do this without over riding mzp-l-h-center etc.
             }
 
