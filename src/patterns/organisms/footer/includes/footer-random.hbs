@@ -3,7 +3,7 @@ name: Footer with odd columns and no language switcher
 ---
 
 <footer class="mzp-c-footer">
-  <div class="mzp-l-content">
+  <div class="mzp-l-content {{#if content-class}}{{content-class}}{{/if}}">
     <nav class="mzp-c-footer-primary">
       {{#embed "patterns.organisms.footer.includes.footer-primary-logo"}}{{/embed}}
       <div class="mzp-c-footer-sections">

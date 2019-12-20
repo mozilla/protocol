@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** (breaking) Document content container and add width theme classes (#505)
 * **css:** Add button container and alignment options (#580)
 * **css:** Update form spacing and add form layout components (#508)
 * **css:** Add form dark theme (#508)
@@ -25,6 +26,7 @@
 
 ## Migration Tips
 
+* Find and replace `mzp-t-narrow` with `mzp-t-content-md` on content containers (`mzp-l-content`).
 * Styled form inputs now include bottom spacing. If you have added this spacing to your forms in another way (for example, wrapping them in paragraph tags) you could end up with double spacing.
 * Find and replace `mzp-t-small` to `mzp-t-md` on buttons.
 * Content sizes have changed slightly, see https://github.com/mozilla/protocol-tokens/pull/81/files
