@@ -9,47 +9,47 @@
 @import '../docs/protocol';
 @import '../docs/protocol-extra';
 
-// .mzp-c-block,
-// .mzp-c-block-container,
-// .mzp-c-block-media,
-// .mzp-c-block-body {
+.mzp-c-block,
+.mzp-c-block-container,
+.mzp-c-block-media,
+.mzp-c-block-body {
 
-//     &:before {
-//         content: attr(class);
-//         background-color: #fff;
-//         color: #000;
-//         display: block;
-//         font-family: monospace;
-//         font-size: 12px;
-//         left: 0;
-//         padding: 0 2px;
-//         position: absolute;
-//         top: 0;
-//         z-index: 1;
-//     }
-// }
+    &:before {
+        content: attr(class);
+        background-color: #fff;
+        color: #000;
+        display: block;
+        font-family: monospace;
+        font-size: 12px;
+        left: 0;
+        padding: 0 2px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+}
 
-// .mzp-c-block-container {
-//     &:before {
-//         top: 1em;
-//     }
-// }
+.mzp-c-block-container {
+    &:before {
+        top: 1em;
+    }
+}
 
-// .mzp-c-block {
-//    outline: 1px solid red;
-// }
+.mzp-c-block {
+   outline: 1px solid red;
+}
 
-// .mzp-c-block-container {
-//     background-color: rgba(0, 0, 255, 0.1);
-// }
+.mzp-c-block-container {
+    background-color: rgba(0, 0, 255, 0.1);
+}
 
-// .mzp-c-block-media {
-//     background-color: rgba(0, 255, 0, 0.1);
-// }
+.mzp-c-block-media {
+    background-color: rgba(0, 255, 0, 0.1);
+}
 
-// .mzp-c-block-body {
-//     background-color: rgba(255, 0, 0, 0.1);
-// }
+.mzp-c-block-body {
+    background-color: rgba(255, 0, 0, 0.1);
+}
 
 .spacer {
     align-items: center;
