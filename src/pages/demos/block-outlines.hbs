@@ -6,17 +6,15 @@ styles:
 ---
 
 Interactive widget:
-- background
 - toggle outlines
 -> output what classes to add to what elements
-- mobile config
 
-<form id="config" style="columns:3;">
+<form id="config">
   <fieldset id="config-preset">
     <label>common configs
       <select>
         <option>--</option>
-        <option>defaults</option>
+        <option>default</option>
         <option>billboard</option>
         <option>feature</option>
         <option>hero</option>
@@ -25,54 +23,74 @@ Interactive widget:
   </fieldset>
   <fieldset id="config-block">
     <legend>Block config</legend>
-    <label><input type="checkbox" id="mzp-l-reversed" value="mzp-l-reversed" name="reversed">Reversed</label>
-    <label><input type="checkbox" id="mzp-t-dark" value="mzp-t-dark" name="reversed">Dark</label>
-    <label><input type="checkbox" id="mzp-has-bg" value="mzp-has-bg" name="bg">background</label>
-    <label><input type="radio" id="mzp-l-block-body-50"  value="" name="portion" checked>half/half</label>
-    <label><input type="radio" id="mzp-l-block-body-33" value="mzp-l-block-body-33" name="portion">Body takes up less space</label>
-    <label><input type="radio" id="mzp-l-block-body-66" value="mzp-l-block-body-66" name="portion">Body takes up more space</label>
-
-    <label><input type="radio" value="" name="pop" checked>none (default)</label>
-    <label><input type="radio" id="mzp-l-pop-top" value="mzp-l-pop-top" name="pop">pop-top</label>
-    <label><input type="radio" id="mzp-l-pop-bottom" value="mzp-l-pop-bottom" name="pop">pop-bottom</label>
-    <label><input type="radio" id="mzp-l-pop" value="mzp-l-pop" name="pop">pop</label>
+    <fieldset>
+      <label><input type="checkbox" id="mzp-l-reversed" value="mzp-l-reversed" name="reversed">Reversed</label>
+      <label><input type="checkbox" id="mzp-t-dark" value="mzp-t-dark" name="reversed">Dark</label>
+      <label><input type="checkbox" id="mzp-has-bg" value="mzp-has-bg" name="bg">background</label>
+    </fieldset>
+    <fieldset>
+      <label><input type="radio" id="mzp-l-block-body-50"  value="" name="portion" checked>half/half</label>
+      <label><input type="radio" id="mzp-l-block-body-33" value="mzp-l-block-body-33" name="portion">Body takes up less space</label>
+      <label><input type="radio" id="mzp-l-block-body-66" value="mzp-l-block-body-66" name="portion">Body takes up more space</label>
+    </fieldset>
+    <fieldset>
+      <label><input type="radio" value="" name="pop" checked>none (default)</label>
+      <label><input type="radio" id="mzp-l-pop-top" value="mzp-l-pop-top" name="pop">pop-top</label>
+      <label><input type="radio" id="mzp-l-pop-bottom" value="mzp-l-pop-bottom" name="pop">pop-bottom</label>
+      <label><input type="radio" id="mzp-l-pop" value="mzp-l-pop" name="pop">pop</label>
+    </fieldset>
   </fieldset>
   <fieldset id="config-body">
     <legend>Body config</legend>
-    <button type="button" id="add-text" class="mzp-c-button mzp-t-small mzp-t-secondary">Add text to body</button>
-    <button type="button" id="remove-text" class="mzp-c-button mzp-t-small mzp-t-secondary">Remove text from body</button>
     <label><input type="checkbox" id="body-mzp-l-v-pad" value="mzp-l-v-pad" name="body-pad">Pad</label>
-    <p>horizontal alignment</p>
-    <label><input type="radio" value="" name="body-h-align" checked>default</label>
-    <label><input type="radio" id="body-mzp-l-h-start" value="mzp-l-h-start" name="body-h-align">start</label>
-    <label><input type="radio" id="body-mzp-l-h-center" value="mzp-l-h-center" name="body-h-align">center</label>
-    <label><input type="radio" id="body-mzp-l-h-end" value="mzp-l-h-end" name="body-h-align">end</label>
-    <p>vertical alignment</p>
-    <label><input type="radio" value="" name="body-v-align" checked>default</label>
-    <label><input type="radio" id="body-mzp-l-v-start" value="mzp-l-v-start" name="body-v-align">top</label>
-    <label><input type="radio" id="body-mzp-l-v-center" value="mzp-l-v-center" name="body-v-align">center</label>
-    <label><input type="radio" id="body-mzp-l-v-end" value="mzp-l-v-end" name="body-v-align">bottom</label>
+    <fieldset>
+      <button type="button" id="add-text" class="mzp-c-button mzp-t-small mzp-t-secondary">Add text to body</button>
+      <button type="button" id="remove-text" class="mzp-c-button mzp-t-small mzp-t-secondary">Remove text from body</button>
+    </fieldset>
+    <fieldset>
+      <legend>horizontal alignment</legend>
+      <label><input type="radio" value="" name="body-h-align" checked>default</label>
+      <label><input type="radio" id="body-mzp-l-h-start" value="mzp-l-h-start" name="body-h-align">start</label>
+      <label><input type="radio" id="body-mzp-l-h-center" value="mzp-l-h-center" name="body-h-align">center</label>
+      <label><input type="radio" id="body-mzp-l-h-end" value="mzp-l-h-end" name="body-h-align">end</label>
+    </fieldset>
+    <fieldset>
+      <legend>vertical alignment</legend>
+      <label><input type="radio" value="" name="body-v-align" checked>default</label>
+      <label><input type="radio" id="body-mzp-l-v-start" value="mzp-l-v-start" name="body-v-align">top</label>
+      <label><input type="radio" id="body-mzp-l-v-center" value="mzp-l-v-center" name="body-v-align">center</label>
+      <label><input type="radio" id="body-mzp-l-v-end" value="mzp-l-v-end" name="body-v-align">bottom</label>
+    </fieldset>
   </fieldset>
   <fieldset id="config-media">
     <legend>Media config</legend>
-    <button type="button" id="img-small" class="mzp-c-button mzp-t-small mzp-t-secondary">Small image</button>
-    <button type="button" id="img-big" class="mzp-c-button mzp-t-small mzp-t-secondary">Big image</button>
-    toggle media position in source
     <label><input type="checkbox" id="media-mzp-l-v-pad" value="mzp-l-v-pad" name="media-pad">Pad</label>
-    <label><input type="checkbox" id="mzp-l-media-constrain" value="mzp-l-media-constrain-mobile" name="mobile">mobile constrain</label>
-    <label><input type="radio" value="" name="constrain" checked>none</label>
-    <label><input type="radio" id="mzp-l-media-constrain-width" value="mzp-l-media-constrain-width" name="constrain">width</label>
-    <label><input type="radio" id="mzp-l-media-constrain-height" value="mzp-l-media-constrain-height" name="constrain">height</label>
-    <p>horizontal alignment</p>
-    <label><input type="radio" value="" name="media-h-align" checked>default</label>
-    <label><input type="radio" id="media-mzp-l-h-start" value="mzp-l-h-start" name="media-h-align">start</label>
-    <label><input type="radio" id="media-mzp-l-h-center" value="mzp-l-h-center" name="media-h-align">center</label>
-    <label><input type="radio" id="media-mzp-l-h-end" value="mzp-l-h-end" name="media-h-align">end</label>
-    <p>vertical alignment</p>
-    <label><input type="radio" value="" name="media-v-align" checked>default</label>
-    <label><input type="radio" id="media-mzp-l-v-start" value="mzp-l-v-start" name="media-v-align">top</label>
-    <label><input type="radio" id="media-mzp-l-v-center" value="mzp-l-v-center" name="media-v-align">center</label>
-    <label><input type="radio" id="media-mzp-l-v-end" value="mzp-l-v-end" name="media-v-align">bottom</label>
+    <fieldset>
+      <button type="button" id="img-small" class="mzp-c-button mzp-t-small mzp-t-secondary">Small image</button>
+      <button type="button" id="img-big" class="mzp-c-button mzp-t-small mzp-t-secondary">Big image</button>
+      <!-- TODO: toggle media position in source -->
+    </fieldset>
+    <fieldset>
+      <legend>Constrain media:</legend>
+      <label><input type="radio" value="" name="constrain" checked>none</label>
+      <label><input type="radio" id="mzp-l-media-constrain-width" value="mzp-l-media-constrain-width" name="constrain">width</label>
+      <label><input type="radio" id="mzp-l-media-constrain-height" value="mzp-l-media-constrain-height" name="constrain">height</label>
+      <label><input type="checkbox" id="mzp-l-media-constrain" value="mzp-l-media-constrain-mobile" name="mobile">in mobile</label>
+    </fieldset>
+    <fieldset>
+      <legend>horizontal alignment</legend>
+      <label><input type="radio" value="" name="media-h-align" checked>default</label>
+      <label><input type="radio" id="media-mzp-l-h-start" value="mzp-l-h-start" name="media-h-align">start</label>
+      <label><input type="radio" id="media-mzp-l-h-center" value="mzp-l-h-center" name="media-h-align">center</label>
+      <label><input type="radio" id="media-mzp-l-h-end" value="mzp-l-h-end" name="media-h-align">end</label>
+    </fieldset>
+    <fieldset>
+      <legend>vertical alignment</legend>
+      <label><input type="radio" value="" name="media-v-align" checked>default</label>
+      <label><input type="radio" id="media-mzp-l-v-start" value="mzp-l-v-start" name="media-v-align">top</label>
+      <label><input type="radio" id="media-mzp-l-v-center" value="mzp-l-v-center" name="media-v-align">center</label>
+      <label><input type="radio" id="media-mzp-l-v-end" value="mzp-l-v-end" name="media-v-align">bottom</label>
+    </fieldset>
   </fieldset>
 </form>
 
@@ -281,11 +299,11 @@ can't use mzp-l-media-constrain-height with v-?<br> need to add mzp-l-h-end to i
   {{#content "content"}}
     <h2 class="mzp-c-card-feature-title">mzp-l-reversed</h2>
     <p class="mzp-c-card-feature-desc">An inversed block will have the media on the left.</p>
-    <p class="mzp-c-card-feature-desc">If you do not contrtain the width or height of the image be sure to set a horizontal aligment for it or it will overlap the text.</p>
+    <p class="mzp-c-card-feature-desc">If you do not contrtain the width or height of the image be sure to set a horizontal aligment for it or it will overlap the text (like this!).</p>
   {{/content}}
 {{/embed}}
 
-<h1>Fit</h1>
+<h1>Pop</h1>
 
 {{#embed "patterns.organisms.block.block" }}
   {{#content "content"}}
@@ -457,46 +475,3 @@ can't use mzp-l-media-constrain-height with v-?<br> need to add mzp-l-h-end to i
     </div>
   </div>
 </section>
-
-<h1>Inversed Testing</h1>
-
-<section class="mzp-c-block mzp-l-block-body-33 mzp-l-reversed">
-  <div class="mzp-c-block-container">
-    <div class="mzp-c-block-media">
-        <img class="mzp-c-block-media-img" src="../static/img/block/devices.png" alt="" srcset="../static/img/block/devices-high-res.png 2x">
-    </div>
-    <div class="mzp-c-block-body ">
-      <h3>Second</h3>
-      <p>Test</p>
-    </div>
-  </div>
-</section>
-
-
-<section class="mzp-c-block mzp-l-reversed">
-  <div class="mzp-c-block-container">
-    <div class="mzp-c-block-media">
-        <img class="mzp-c-block-media-img" src="../static/img/block/devices.png" alt="" srcset="../static/img/block/devices-high-res.png 2x">
-    </div>
-    <div class="mzp-c-block-body ">
-      <h3>Second</h3>
-      <p>Test</p>
-    </div>
-  </div>
-</section>
-
-
-<section class="mzp-c-block mzp-l-block-body-66 mzp-l-reversed">
-  <div class="mzp-c-block-container">
-    <div class="mzp-c-block-media">
-        <img class="mzp-c-block-media-img" src="../static/img/block/devices.png" alt="" srcset="../static/img/block/devices-high-res.png 2x">
-    </div>
-    <div class="mzp-c-block-body ">
-      <h3>Second</h3>
-      <p>Test</p>
-    </div>
-  </div>
-</section>
-
-
-

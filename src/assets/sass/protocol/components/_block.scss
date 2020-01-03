@@ -71,30 +71,28 @@ $h-grid-lg: $layout-xl;
     @media all and (max-width: #{$screen-lg - 1}) {
         &:first-child {
             margin-bottom: $v-grid-xs;
+
+            @media all and (min-width: #{$screen-md}) {
+                margin-bottom: $v-grid-md;
+            }
         }
 
         &:last-child {
             margin-top: $v-grid-xs;
+
+            @media all and (min-width: #{$screen-md}) {
+                margin-top: $v-grid-md;
+            }
         }
 
         .mzp-has-media-hide & {
             margin-top: 0;
             margin-bottom: 0;
-        }
-    }
 
-    @media all and (min-width: #{$screen-md}) and (max-width: #{$screen-lg - 1}) {
-        &:first-child {
-            margin-bottom: $v-grid-md;
-        }
-
-        &:last-child {
-            margin-top: $v-grid-md;
-        }
-
-        .mzp-has-media-hide & {
-            margin-top: 0;
-            margin-bottom: 0;
+            @media all and (min-width: #{$screen-md}) {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -280,30 +278,28 @@ $h-grid-lg: $layout-xl;
         @media all and (max-width: #{$screen-lg - 1}) {
             &:first-child {
                 padding-top: $v-grid-xs;
+
+                @media all and (min-width: #{$screen-md}) {
+                    padding-top: $v-grid-md;
+                }
             }
 
             &:last-child {
                 padding-bottom: $v-grid-xs;
+
+                @media all and (min-width: #{$screen-md}) {
+                    padding-bottom: $v-grid-md;
+                }
             }
 
             @at-root #{selector-append(".mzp-has-media-hide", &)} {
                 padding-top: $v-grid-xs;
                 padding-bottom: $v-grid-xs;
-            }
-        }
 
-        @media all and (min-width: #{$screen-md}) and (max-width: #{$screen-lg - 1}) {
-            &:first-child {
-                padding-top: $v-grid-md;
-            }
-
-            &:last-child {
-                padding-bottom: $v-grid-md;
-            }
-
-            @at-root #{selector-append(".mzp-has-media-hide", &)} {
-                padding-top: $v-grid-md;
-                padding-bottom: $v-grid-md;
+                @media all and (min-width: #{$screen-md}) {
+                    padding-top: $v-grid-md;
+                    padding-bottom: $v-grid-md;
+                }
             }
         }
     }
