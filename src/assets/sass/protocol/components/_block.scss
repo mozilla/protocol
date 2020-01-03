@@ -23,16 +23,16 @@ $h-grid-lg: $layout-xl;
 // Basic vertical alignment
 
 .mzp-c-block {
-    position: relative;
     overflow-x: hidden;
-    padding: $v-grid-xs $layout-xs;
+    padding: $v-grid-xs 0;
+    position: relative;
 
     @media #{$mq-md} {
-        padding: $v-grid-md $h-grid-md;
+        padding: $v-grid-md 0;
     }
 
     @media #{$mq-lg} {
-        padding: $v-grid-lg $h-grid-lg;
+        padding: $v-grid-lg 0;
     }
 }
 
@@ -42,6 +42,15 @@ $h-grid-lg: $layout-xl;
     margin: 0 auto;
     max-width: $content-max;
     min-width: $content-xs;
+    padding: 0 $layout-xs;
+
+    @media #{$mq-md} {
+        padding: 0 $h-grid-md;
+    }
+
+    @media #{$mq-lg} {
+        padding: 0 $h-grid-lg;
+    }
 
     .mzp-t-dark &,
     .mzp-has-bg {
@@ -186,13 +195,14 @@ $h-grid-lg: $layout-xl;
             }
         }
 
-        // extra specificitly to over-ride the styles that make the float fall-back work
-        .mzp-c-block-container .mzp-c-block-body,
-        .mzp-c-block-container .mzp-c-block-media {
-            float: none;
-            min-width: 0; //because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
-            padding: 0;
-            width: auto;
+        .mzp-c-block-body,
+        .mzp-c-block-media {
+            .mzp-c-block-container & { // extra specificitly to over-ride the styles that make the float fall-back work
+                float: none;
+                min-width: 0; //because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+                padding: 0;
+                width: auto;
+            }
         }
 
         .mzp-c-block-body {
@@ -207,10 +217,6 @@ $h-grid-lg: $layout-xl;
                 display: block;
                 max-width: none;
             }
-
-            .mzp-l-reversed > .mzp-c-block-container > &:not([class*="h-"]) {
-                justify-self: end; // TODO: how to do this without over riding mzp-l-h-center etc.
-            }
         }
     }
 }
@@ -221,7 +227,7 @@ $h-grid-lg: $layout-xl;
 .mzp-c-block-media {
     @media all and (max-width: #{$screen-lg - 1}) {
         // center image & constrain width
-        &.mzp-l-constrain-mobile {
+        &.mzp-l-media-constrain-mobile {
             text-align: center;
 
             .mzp-c-block-media-img {
@@ -233,18 +239,21 @@ $h-grid-lg: $layout-xl;
 
     @media #{$mq-lg} {
         @supports ( display:grid ) {
-            &.mzp-l-constrain-width {
+            &.mzp-l-media-constrain-width {
                 .mzp-c-block-media-img {
                     max-width: 100%;
                 }
             }
 
-            &.mzp-l-constrain-height {
+            &.mzp-l-media-constrain-height {
+                height: 100%;
+                justify-self: auto !important; /* stylelint-disable-line declaration-no-important */
+
                 .mzp-c-block-media-img {
                     bottom: 0;
                     left: 0;
                     max-height: 100%;
-                    max-width: none;
+                    max-width: auto;
                     position: absolute;
                     top: 0;
                     width: auto;
@@ -260,16 +269,99 @@ $h-grid-lg: $layout-xl;
     }
 }
 
-/* -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+// vertical spacing for body or media
+
+
+.mzp-t-dark,
+.mzp-has-bg {
+    .mzp-c-block-body {
+        // vertical spacing between text and edges when there's a bg-color
+        @media all and (max-width: #{$screen-lg - 1}) {
+            &:first-child {
+                padding-top: $v-grid-xs;
+            }
+
+            &:last-child {
+                padding-bottom: $v-grid-xs;
+            }
+
+            @at-root #{selector-append(".mzp-has-media-hide", &)} {
+                padding-top: $v-grid-xs;
+                padding-bottom: $v-grid-xs;
+            }
+        }
+
+        @media all and (min-width: #{$screen-md}) and (max-width: #{$screen-lg - 1}) {
+            &:first-child {
+                padding-top: $v-grid-md;
+            }
+
+            &:last-child {
+                padding-bottom: $v-grid-md;
+            }
+
+            @at-root #{selector-append(".mzp-has-media-hide", &)} {
+                padding-top: $v-grid-md;
+                padding-bottom: $v-grid-md;
+            }
+        }
+    }
+}
+
+@media #{$mq-lg} {
+    @supports(display:grid) {
+        .mzp-t-dark,
+        .mzp-has-bg {
+            .mzp-c-block-body {
+                padding: $v-grid-lg 0;
+            }
+        }
+
+        .mzp-l-v-pad {
+            &.mzp-c-block-body,
+            &.mzp-c-block-media {
+                padding: $v-grid-lg 0;
+            }
+        }
+
+        .mzp-l-pop-top,
+        .mzp-l-pop {
+            &.mzp-c-block {
+                padding-top: $v-grid-lg * 2;
+            }
+            .mzp-c-block-media {
+                margin-top: $v-grid-lg * -1;
+            }
+        }
+        .mzp-l-pop-bottom,
+        .mzp-l-pop {
+            &.mzp-c-block {
+                padding-bottom: $v-grid-lg * 2;
+            }
+            .mzp-c-block-media {
+                margin-bottom: $v-grid-lg * -1;
+            }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------- */
 // vertical and horizontal aligment for body or media
+// text align works for float fallback
+// justify positioning works for no constraint or width constraint
+// absolute positioning works on constrain-height
 
 .mzp-c-block-container {
     .mzp-l-h-start {
-        justify-self: start;
         @include bidi(((text-align, left, right),));
+        justify-self: start;
 
         .mzp-c-block-media-img {
-            margin: 0 auto 0 0;
+            @include bidi((
+                (margin-right, auto, margin-left, 0),
+                (margin-left, 0, margin-right, 0),
+            ));
         }
     }
 
@@ -280,6 +372,15 @@ $h-grid-lg: $layout-xl;
         .mzp-c-block-media-img {
             margin: 0 auto;
         }
+
+        @media #{$mq-lg} {
+            @supports(display:grid) {
+                &.mzp-l-media-constrain-height .mzp-c-block-media-img {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
     }
 
     .mzp-l-h-end {
@@ -287,19 +388,50 @@ $h-grid-lg: $layout-xl;
         justify-self: end;
 
         .mzp-c-block-media-img {
-            margin: 0 0 0 auto;
+            @include bidi((
+                (margin-left, auto, margin-right, 0),
+                (margin-right, 0, margin-left, 0),
+            ));
+        }
+
+        @media #{$mq-lg} {
+            @supports(display:grid) {
+                &.mzp-l-media-constrain-height .mzp-c-block-media-img {
+                    right: 0;
+                    left: auto;
+                }
+            }
         }
     }
 
-    .mzp-l-v-start {
-        align-self: start;
-    }
+    // vertical alignment only after grid starts
+    @media #{$mq-lg} {
+        @supports(display:grid) {
 
-    .mzp-l-v-center {
-        align-self: center;
-    }
+            .mzp-l-v-start {
+                align-self: start;
+            }
 
-    .mzp-l-v-end {
-        align-self: end;
+            .mzp-l-v-center {
+                align-self: center;
+
+                &.mzp-l-media-constrain-height .mzp-c-block-media-img {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &.mzp-l-h-center.mzp-l-media-constrain-height .mzp-c-block-media-img {
+                    transform: translateY(-50%) translateX(-50%);
+                }
+            }
+
+            .mzp-l-v-end {
+                align-self: end;
+
+                &.mzp-l-media-constrain-height .mzp-c-block-media-img {
+                    top: auto;
+                }
+            }
+        }
     }
 }
