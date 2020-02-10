@@ -11,11 +11,11 @@
 
 
 .section-next {
-    background: $color-dark-gray-05;
+    background: $color-marketing-gray-20;
 
     &.mzp-t-dark {
         color: #fff;
-        background-color: $color-dark-gray-30;
+        background-color: $color-marketing-gray-80;
     }
 
     h2 {
@@ -23,7 +23,7 @@
     }
 
     .mzp-c-card-picto .mzp-c-card-picto-content::before{
-        background-color: $color-light-gray-80;
+        background-color: $color-marketing-gray-40;
     }
 
 }

@@ -42,7 +42,7 @@ input[type='time'] {
     @include border-box;
     background: $color-white;
     border-radius: $border-radius-sm;
-    border: 1px solid $color-dark-gray-05;
+    border: 1px solid $color-marketing-gray-80;
     display: inline-block;
     line-height: 1.25;
     padding: .25em $spacing-sm;
@@ -57,11 +57,11 @@ input[type='time'] {
     }
 
     &:disabled {
-        background: $color-light-gray-80;
+        background: $color-marketing-gray-30;
 
         &:hover,
         &:focus {
-            border-color: $color-dark-gray-05;
+            border-color: $color-marketing-gray-80;
         }
     }
 }
@@ -90,8 +90,8 @@ fieldset li {
 }
 
 .mzp-c-form-errors {
-    background: $color-yellow-05;
-    border: 2px solid $color-yellow-30;
+    background: $color-yellow-50;
+    border: 2px solid $color-yellow-60;
     margin: 0 0 1em;
     padding: $spacing-sm $spacing-md;
 
@@ -105,10 +105,10 @@ fieldset li {
 }
 
 .mzp-is-error {
-    color: $color-red-80;
+    color: $color-red-60;
 
     .mzp-c-fieldnote {
-        color: $color-red-80;
+        color: $color-red-60;
     }
 
     textarea,
@@ -121,17 +121,17 @@ fieldset li {
     input[type='number'],
     input[type='date'],
     input[type='time'] {
-        border-color: $color-red-80;
+        border-color: $color-red-60;
 
         &:focus {
-            box-shadow: 0 0 0 2px $color-red-70;
+            box-shadow: 0 0 0 2px $color-red-50;
         }
     }
 
     select,
     input[type='checkbox'],
     input[type='radio'] {
-        box-shadow: 0 0 0 2px $color-red-70;
+        box-shadow: 0 0 0 2px $color-red-50;
     }
 
 }

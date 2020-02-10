@@ -8,7 +8,7 @@
 
 .mzp-c-sidemenu {
     @include text-body-md;
-    background-color: $color-light-gray-20;
+    background-color: $color-marketing-gray-20;
     padding: $spacing-sm $spacing-lg;
     margin: 0 -#{$spacing-lg} $layout-sm;
 }
@@ -24,7 +24,7 @@
         @include bidi((
             (margin-right, $spacing-xs, margin-left, 0),
         ));
-        color: $color-dark-gray-40;
+        color: $color-marketing-gray-80;
         display: inline-block;
 
         &:after {
@@ -73,7 +73,7 @@
 
     .mzp-is-current a {
         font-weight: bold;
-        background-color: $color-light-gray-30;
+        background-color: $color-marketing-gray-20;
     }
 }
 
@@ -90,7 +90,7 @@
             (right, 0, left, auto),
         ));
         @include transform(rotate(90deg));
-        color: $color-dark-gray-40;
+        color: $color-marketing-gray-80;
         content: none;
         font-size: 1.5em;
         position: absolute;

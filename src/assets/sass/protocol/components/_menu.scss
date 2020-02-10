@@ -45,7 +45,7 @@
     .mzp-c-menu-title {
         @include font-base;
         @include text-body-md;
-        border-bottom: 1px solid $color-light-gray-40;
+        border-bottom: 1px solid $color-marketing-gray-30;
         color: $color-black;
         display: block;
         font-weight: bold;
@@ -261,7 +261,7 @@
     }
 
     @media #{$mq-md} {
-        border-top: 1px solid $color-light-gray-40;
+        border-top: 1px solid $color-marketing-gray-20;
         box-shadow: 0 16px 16px -16px rgba(0, 0, 0, 0.3);
         left: 0;
         padding: $spacing-xl $spacing-xs;

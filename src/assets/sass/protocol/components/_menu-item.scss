@@ -119,7 +119,7 @@ $icon-size: 24px;
     @media #{$mq-md} {
         &:hover {
             @include transition(box-shadow .1s ease-in-out);
-            box-shadow: 0 0 0 4px $color-light-gray-30;
+            box-shadow: 0 0 0 4px $color-marketing-gray-20;
         }
 
         .mzp-c-menu-item-link,

@@ -44,7 +44,7 @@
 
     .mzp-c-card-feature-desc {
         @include text-body-md;
-        color: $color-light-gray-80;
+        color: $color-marketing-gray-90;
         margin: $spacing-xs 0;
     }
 
@@ -61,7 +61,7 @@
         color: $color-white;
 
         .mzp-c-card-feature-desc {
-            color: $color-light-gray-30;
+            color: $color-marketing-gray-30;
         }
     }
 

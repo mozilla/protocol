@@ -5,12 +5,9 @@
 @import '../../includes/lib';
 
 blockquote {
-    @include bidi((
-        (border-left-width, 5px, 0),
-        (border-right-width, 0, 5px),
-    ));
+    @include bidi(((border-width, 0 0 0 5px, 0 5px 0 0),));
     @include text-display-sm;
-    border-color: $color-light-gray-80;
+    border-color: $color-marketing-gray-20;
     border-style: solid;
     margin: $spacing-lg auto;
     padding: $spacing-sm $spacing-lg;
@@ -18,7 +15,7 @@ blockquote {
 
     cite {
         @include text-display-xs;
-        color: $color-light-gray-80;
+        color: $color-marketing-gray-70;
 
         &:before {
             content: '— ';

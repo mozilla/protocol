@@ -17,7 +17,7 @@
         position: relative;
 
         &:before {
-            background: $color-light-gray-30;
+            background: $color-marketing-gray-20;
             content: '';
             height: 56px;
             left: 50%;
@@ -34,7 +34,7 @@
 
     .mzp-c-card-picto-desc {
         @include text-body-md;
-        color: $color-dark-gray-10;
+        color: $color-marketing-gray-90;
         margin-bottom: 0;
     }
 
@@ -43,7 +43,7 @@
         color: $color-white;
 
         .mzp-c-card-picto-desc {
-            color: $color-light-gray-30;
+            color: $color-marketing-gray-30;
         }
     }
 

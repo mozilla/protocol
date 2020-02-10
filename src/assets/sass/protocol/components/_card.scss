@@ -26,7 +26,7 @@
     }
 
     .mzp-c-card-media-wrapper {
-        background-color: $color-light-gray-20;
+        background-color: $color-marketing-gray-20;
         border-radius: $border-radius-xs;
         overflow: hidden;
         position: relative;
@@ -47,7 +47,7 @@
     .mzp-c-card-tag {
         @include font-base;
         @include text-body-sm;
-        color: $color-dark-gray-40;
+        color: $color-marketing-gray-80;
         font-weight: normal;
         margin-bottom: $spacing-xs;
     }
@@ -109,7 +109,7 @@
         &:active,
         &:focus {
             @include transition(box-shadow .1s ease-in-out);
-            box-shadow: 0 0 0 4px $color-light-gray-30;
+            box-shadow: 0 0 0 4px $color-marketing-gray-20;
 
             .mzp-c-card-title,
             .mzp-c-card-cta-text  {
@@ -121,7 +121,7 @@
 
     .mzp-c-card-meta {
         @include text-body-xs;
-        color: $color-dark-gray-30;
+        color: $color-marketing-gray-80;
         margin: $spacing-lg 0 0;
     }
 
