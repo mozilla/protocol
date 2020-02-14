@@ -71,9 +71,10 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
             ctaAnchor.className = 'mzp-c-notification-bar-cta';
 
             // If there are any extra attrs, add them to the element
-            Object.entries(ctaAttrs).forEach(function(attrPair) {
-                ctaAnchor.setAttribute(attrPair[0], attrPair[1]);
-            });
+            var key;
+            for (key in ctaAttrs){
+                ctaAnchor.setAttribute(key, ctaAttrs[key]);
+            }
             notification.appendChild(ctaAnchor);
         }
 
