@@ -8,6 +8,10 @@ notes: |
     - `origin` [DOM Element] element that triggered the notification
     - `options` [Object] object of params
         - `title` [String] message to display in the notification. (Required)
+        - `cta`: [Object] options for rendering an Anchor node after the title.
+            text: (Required) text content for an Anchor element
+            url: (Required) URL for the Anchor element
+            attrs: map of additional options for the Anchor element, eg: 'target', 'rel'
         - `className` [String] optional CSS class name to apply to the notification.
         - `onNotificationOpen` [Function] function to fire after notification has been opened.
         - `onNotificationClose` [Function] function to fire after notification has been closed.
@@ -83,7 +87,12 @@ notes: |
       e.preventDefault();
 
       Mzp.Notification.init(e.target, {
-        title: 'This is the title',
+        title: 'This is the title.',
+        cta: {
+          text: "And this is a CTA link.",
+          url: "https://www.mozilla.org",
+          attrs: {"target": "_blank", "rel": "noopener"}
+        },
         className: 'mzp-t-warning',
         closeText: 'Close notification',
         hasDismiss: true,

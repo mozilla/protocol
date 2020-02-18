@@ -17,6 +17,10 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     origin: element that triggered the notification.
     options: object of params:
         title: title to display inside the notification. [required]
+        cta: [Object] options for rendering an Anchor node after the title.
+            text: text content for an Anchor element
+            url: URL for the Anchor element
+            attrs: map of additional options for the Anchor element, eg 'target', 'rel' etc
         className: CSS class name to apply to the notification.
         closeText: 'string to use for close button a11y.
         hasDismiss: boolean - include or not include dismiss button.
@@ -40,6 +44,7 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
         var className = (options && options.className) ? options.className : '';
         var closeText = (options && options.closeText) ? options.closeText : '';
         var isSticky = (options && options.isSticky) ? 'mzp-is-sticky' : '';
+        var ctaOptions = options && options.cta ? options.cta : {};
 
         var notification = document.createElement('aside');
         notification.className = 'mzp-c-notification-bar ' + className + ' ' + isSticky;
@@ -53,6 +58,24 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
 
             // add title to notification
             notification.appendChild(notificationTitle);
+        }
+
+        // Notification CTA link
+        if (options && options.cta) {
+            var ctaAnchor = document.createElement('a'),
+                ctaAttrs = ctaOptions.attrs ? ctaOptions.attrs : {};
+
+            // build main <a> element, with the appropriate CSS class
+            ctaAnchor.appendChild(document.createTextNode(ctaOptions.text));
+            ctaAnchor.href = ctaOptions.url;
+            ctaAnchor.className = 'mzp-c-notification-bar-cta';
+
+            // If there are any extra attrs, add them to the element
+            var key;
+            for (key in ctaAttrs){
+                ctaAnchor.setAttribute(key, ctaAttrs[key]);
+            }
+            notification.appendChild(ctaAnchor);
         }
 
         // Notification Fragment

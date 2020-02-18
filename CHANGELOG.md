@@ -1,6 +1,7 @@
 ## HEAD
 
 * **css:** Changes '.mzp-c-button-download-container' display property to 'inline-block' from 'block' (#486)
+* **js:** Support a CTA link in NotificationBar (#460)
 
 ## 10.0.1
 
