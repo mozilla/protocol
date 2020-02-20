@@ -14,17 +14,16 @@
     margin: $layout-xs auto 0;
     text-align: center;
     position: relative;
-    padding: 10px;
+    padding: $spacing-md $spacing-2xl;
 
     @media #{$mq-sm} {
-        padding: 0;
         min-width: $content-sm;
         max-width: $content-md;
     }
 
     p {
+        margin: 0 $spacing-md;
         display: inline-block;
-        margin: $spacing-md $spacing-2xl;
     }
 
     a {
