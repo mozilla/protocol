@@ -40,7 +40,7 @@ pre[class*="language-"] {
 pre[class*="language-"]>code {
 	position: relative;
 	border-left: 10px solid $color-blue-40;
-	box-shadow: -1px 0 0 0 $color-blue-40, 0 0 0 1px $color-gray-30;
+	box-shadow: -1px 0 0 0 $color-blue-40, 0 0 0 1px $color-marketing-gray-30;
 	background-color: $color-white;
 	background-image: linear-gradient(transparent 50%, rgba($color-blue-50, .04) 50%);
 	background-size: 3em 3em;
@@ -88,7 +88,7 @@ pre[class*="language-"]:after {
 	width: 40%;
 	height: 20%;
 	max-height: 13em;
-	box-shadow: 0 13px 8px $color-gray-50;
+	box-shadow: 0 13px 8px $color-dark-gray-50;
 	-webkit-transform: rotate(-2deg);
 	-moz-transform: rotate(-2deg);
 	-ms-transform: rotate(-2deg);
@@ -112,11 +112,11 @@ pre[class*="language-"]:after {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: $color-gray-50;
+	color: $color-dark-gray-50;
 }
 
 .token.punctuation {
-	color: $color-gray-80;
+	color: $color-dark-gray-80;
 }
 
 .token.property,

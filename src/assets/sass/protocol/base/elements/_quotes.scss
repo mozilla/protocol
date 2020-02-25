@@ -5,17 +5,17 @@
 @import '../../includes/lib';
 
 blockquote {
-    @include bidi((
-        (border-left, 5px solid $color-gray-20, border-right, 0),
-        ));
+    @include bidi(((border-width, 0 0 0 5px, 0 5px 0 0),));
     @include text-display-sm;
+    border-color: $color-marketing-gray-20;
+    border-style: solid;
     margin: $spacing-lg auto;
     padding: $spacing-sm $spacing-lg;
     font-weight: bold;
 
     cite {
         @include text-display-xs;
-        color: $color-gray-70;
+        color: $color-marketing-gray-70;
 
         &:before {
             content: '— ';
@@ -29,7 +29,7 @@ blockquote {
     .mzp-t-firefox &,
     &.mzp-t-firefox {
         @include font-firefox;
-        color: $color-off-black;
+        color: $color-ink-80;
     }
 
     &.mzp-t-mozilla,

@@ -41,8 +41,8 @@ input[type='date'],
 input[type='time'] {
     @include border-box;
     background: $color-white;
-    border-radius: 3px;
-    border: 1px solid $color-gray-80;
+    border-radius: $border-radius-sm;
+    border: 1px solid $color-marketing-gray-80;
     display: inline-block;
     line-height: 1.25;
     padding: .25em $spacing-sm;
@@ -57,11 +57,11 @@ input[type='time'] {
     }
 
     &:disabled {
-        background: $color-gray-30;
+        background: $color-marketing-gray-30;
 
         &:hover,
         &:focus {
-            border-color: $color-gray-80;
+            border-color: $color-marketing-gray-80;
         }
     }
 }
@@ -84,7 +84,7 @@ fieldset li {
 
 .mzp-c-fieldnote {
     @include text-body-sm;
-    color: $color-gray-80;
+    color: $color-dark-gray-40;
     display: block;
     font-weight: normal;
 }

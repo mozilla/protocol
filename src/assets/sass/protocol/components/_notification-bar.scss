@@ -6,8 +6,8 @@
 
 .mzp-c-notification-bar {
     @include text-body-sm;
-    background-color: $color-gray-20;
-    border-radius: 4px;
+    background-color: $color-marketing-gray-20;
+    border-radius: $border-radius-sm;
     border: 1px;
     box-shadow: 1px 1px 1px rgba(27,31,35,.1);
     font-weight: normal;
@@ -87,7 +87,7 @@
                 (float, right, left),
                 (border-radius, 0 4px 4px 0, 4px 0 0 4px),
                 ));
-            background-color: $color-gray-40;
+            background-color: $color-marketing-gray-40;
             position: static;
             padding: 0;
             margin: 0;

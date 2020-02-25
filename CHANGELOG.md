@@ -1,7 +1,18 @@
-## HEAD
+## 11.0.0
 
+* **tokens:** (breaking) update @mozilla-protocol/tokens to 5.0.3
+* **assets:** update @mozilla-protocol/assets to 3.0.1
 * **css:** Changes '.mzp-c-button-download-container' display property to 'inline-block' from 'block' (#486)
 * **js:** Support a CTA link in NotificationBar (#460)
+
+### Migration Tips
+  * Use tokens for border radius (rounded corners): `$border-radius-xs`, `$border-radius-sm`, `$border-radius-md`, `$border-radius-lg`
+  * Use tokens for box shadows: `$box-shadow-sm`, `$box-shadow-md`, `$box-shadow-lg`
+  * `$color-off-black` is now `$color-ink-80`
+  * The gray palette is greatly expanded. Old gray colors map closely to the new "marketing gray" palette. For example, `$color-gray-30` is now `$color-marketing-gray-30`
+  * `$screen-lg` breakpoint is now 1024px. This shouldn't impact layout because this token should only be used in media queries (use the `$content-*` tokens for layout)
+  * Mozilla brand colors are namespaced as `$color-moz-*`. Avoid mixing Mozilla colors with Firefox colors.
+
 
 ## 10.0.1
 
