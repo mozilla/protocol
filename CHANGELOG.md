@@ -2,6 +2,7 @@
 
 ## Bug Fixes
 
+* **css:** Add link color styles to notification bar (#541)
 * **css:** Fix notification bar line height breaking container. (#525)
 
 # 11.0.0
