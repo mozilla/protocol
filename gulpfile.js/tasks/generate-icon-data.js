@@ -22,12 +22,13 @@ function readDirRecursive(dir, subdir='') {
 }
 
 // Generating icons info into json file
-function generateIconData() {
+function generateIconData(cb) {
     const iconData = readDirRecursive(config.src).map(f => ({
         src: f,
         name: f.replace(/^social\//,'').replace('/','-').replace(/\..+?$/,''),
     }));
     fs.writeFileSync(config.dest, JSON.stringify(iconData, null, 2));
+    cb();
 }
 
 module.exports = generateIconData;
