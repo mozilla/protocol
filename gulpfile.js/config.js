@@ -115,6 +115,10 @@ module.exports = {
             dest: `${dest}/docs/js/`
         }
     },
+    generateIconData: {
+        src: './node_modules/@mozilla-protocol/assets/icons',
+        dest: './src/data/icons.json'
+    },
     staticCopy: {
         package: {
             src: `${src}/package/*`,
