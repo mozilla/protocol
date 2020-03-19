@@ -91,6 +91,7 @@
             width: 40px;
             float: right;
 
+            &:hover,
             &:focus {
                 background-color: $color-marketing-gray-50;
                 border: 0;
@@ -105,6 +106,7 @@
             .mzp-c-notification-bar-button {
                 background-color: $color-green-60;
 
+                &:hover,
                 &:focus {
                     background-color: $color-green-70;
                 }
@@ -119,6 +121,7 @@
             .mzp-c-notification-bar-button {
                 background-color: $color-red-60;
 
+                &:hover,
                 &:focus {
                     background-color: $color-red-70;
                 }
@@ -133,6 +136,7 @@
             .mzp-c-notification-bar-button {
                 background-color: $color-yellow-40;
 
+                &:hover,
                 &:focus {
                     background-color: $color-yellow-50;
                 }
@@ -151,6 +155,7 @@
             @media #{$mq-sm} {
                 background-color: $color-blue-70;
 
+                &:hover,
                 &:focus {
                     background-color: $color-blue-80;
                 }
