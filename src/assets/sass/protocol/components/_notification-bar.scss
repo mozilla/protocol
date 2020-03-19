@@ -5,6 +5,7 @@
 @import "../includes/lib";
 
 .mzp-c-notification-bar {
+    @include border-box;
     @include clearfix;
     @include text-body-sm;
     background-color: $color-marketing-gray-20;
@@ -13,13 +14,12 @@
     box-shadow: $box-shadow-md;
     color: $color-ink-80;
     font-weight: normal;
-    margin: $layout-xs auto 0;
-    text-align: center;
-    position: relative;
+    margin: $layout-xs $spacing-md 0;
     padding: $spacing-md $spacing-2xl;
+    position: relative;
+    text-align: center;
 
     @media #{$mq-sm} {
-        min-width: $content-sm;
         max-width: $content-md;
     }
 
@@ -34,6 +34,7 @@
         display: inline-block;
         font-size: inherit;
         font-weight: 700;
+        margin: 0 $spacing-sm;
 
         &:hover,
         &:active,
@@ -44,14 +45,14 @@
     }
 
     &.mzp-is-sticky {
-        left: 0;
-        margin: 15px;
+        left: $spacing-md;
+        margin: $spacing-md 0;
         position: fixed;
-        right: 0;
+        right: $spacing-md;
         z-index: 2;
 
         @media #{$mq-sm} {
-            margin: 15px auto;
+            margin: $spacing-md auto;
         }
     }
 
@@ -61,18 +62,21 @@
             (left, auto, 0),
         ));
         @include image-replaced;
-        background: url("#{$image-path}/icons/close.svg") center center no-repeat;
-        background-size: 20px 20px;
-        border: none;
+        background: url("#{$image-path}/icons/close.svg") center center/20px 20px no-repeat;
+        border: 0;
         height: 20px;
-        width: 20px;
+        margin: $spacing-sm;
+        padding: 0;
         position: absolute;
         top: 0;
-        margin: 5px;
+        width: 20px;
 
-        &:hover,
-        &:focus {
+        &:hover {
             cursor: pointer;
+        }
+
+        &:focus {
+            border: 1px solid;
         }
 
         @media #{$mq-sm} {
@@ -86,6 +90,12 @@
             height: 100%;
             width: 40px;
             float: right;
+
+            &:hover,
+            &:focus {
+                background-color: $color-marketing-gray-50;
+                border: 0;
+            }
         }
     }
 
@@ -95,6 +105,11 @@
         @media #{$mq-sm} {
             .mzp-c-notification-bar-button {
                 background-color: $color-green-60;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-green-70;
+                }
             }
         }
     }
@@ -105,6 +120,11 @@
         @media #{$mq-sm} {
             .mzp-c-notification-bar-button {
                 background-color: $color-red-60;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-red-70;
+                }
             }
         }
     }
@@ -115,6 +135,11 @@
         @media #{$mq-sm} {
             .mzp-c-notification-bar-button {
                 background-color: $color-yellow-40;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-yellow-50;
+                }
             }
         }
     }
@@ -129,6 +154,11 @@
 
             @media #{$mq-sm} {
                 background-color: $color-blue-70;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-blue-80;
+                }
             }
         }
     }
