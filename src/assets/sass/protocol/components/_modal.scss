@@ -81,7 +81,7 @@ html.mzp-is-noscroll {
     .mzp-c-modal-button-close {
         @include image-replaced;
         background: transparent url('#{$image-path}/icons/close-white.svg') center center no-repeat;
-        @include background-size(16px 16px);
+        @include background-size(20px 20px);
         border: none;
         height: 42px;
         min-width: 0;

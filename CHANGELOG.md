@@ -6,6 +6,10 @@
 * **css:** Button style updates. (#429)
 * **css:** Add styled select drop downs (#435)
 
+## Bug Fixes
+
+* **css:** Embiggen the modal close button (#557)
+
 ## Migration Tips
 
 * Styled form inputs now include bottom spacing. If you have added this spacing to your forms in another way (for example, wrapping them in paragraph tags) you could end up with double spacing.
