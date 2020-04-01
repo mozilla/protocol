@@ -51,6 +51,34 @@
 }
 
 /* -------------------------------------------------------------------------- */
+// Sticky navigation styles
+
+@supports (position: sticky) {
+    html.mzp-has-sticky-navigation {
+        .mzp-c-navigation.mzp-is-sticky {
+            @include transition(transform 300ms ease-in-out);
+            left: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            &.mzp-is-scrolling {
+                box-shadow: 0 0 5px 1px rgba(9, 32, 77, .12);
+            }
+
+            &.mzp-is-hidden {
+                @include transform(translate(0, -100%));
+            }
+        }
+
+        // add scroll-offset for anchor links.
+        .mzp-is-anchor-link {
+            scroll-margin-top: 120px; /* stylelint-disable-line property-no-unknown */
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
 // Mozilla Logo
 
 .mzp-c-navigation-logo {

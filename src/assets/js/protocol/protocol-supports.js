@@ -22,6 +22,22 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     }());
 
     /**
+    * requestAnimationFrame
+    * @return {Boolean} boolean value for if the browser supports requestAnimationFrame
+    */
+    Supports.requestAnimationFrame = (function() {
+        return 'requestAnimationFrame' in window;
+    }());
+
+    /**
+    * cssFeatureQueries
+    * @return {Boolean} boolean value for if the browser supports cssFeatureQueries
+    */
+    Supports.cssFeatureQueries = (function() {
+        return typeof CSS !== 'undefined' && typeof CSS.supports !== 'undefined';
+    }());
+
+    /**
     * classList
     * @return {Boolean} boolean value for if the browser supports classList
     */

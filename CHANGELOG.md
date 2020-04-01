@@ -2,13 +2,15 @@
 
 ## Features
 
-* **utility:** Add title size utility classes (#297)
-  ** rename `text-display-` to `text-title-`, keep `text-display-` as an alias
+* **js:** Implement sticky scrolling behaviour for navigation component as an opt-in feature (#560).
+* **utility:** Add title size utility classes. Rename `text-display-` to `text-title-`, keep `text-display-` as an alias (#297).
 * **component:** Updates to emphasis box, with additional documentation and usage guidelines.
-* **css:** Notification bar updates; use border-box (#549), fix image replacement bug, add focus styles, tweak spacing.
+* **css:** Notification bar updates; use border-box, fix image replacement bug, add focus styles, tweak spacing (#549).
 
 ## Migration Tips
-  * Find and replace `text-display-` to `text-title-`
+
+* Add a class of `mzp-is-sticky` to `mzp-c-navigation` to opt-in to sticky navigation.
+* Find and replace `text-display-` to `text-title-`.
 
 # 11.0.1
 
