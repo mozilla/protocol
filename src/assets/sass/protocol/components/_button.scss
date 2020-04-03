@@ -4,35 +4,100 @@
 
 @import '../includes/lib';
 
+$field-focus-ring: 0 0 0 2px rgba($color-blue-40, .5);
+$focus-border-color: #008aea;
+
+@mixin default-states {
+    &:focus {
+        border-color: $focus-border-color;
+    }
+
+    &:hover {
+        background-color: $color-marketing-gray-20;
+        border-color: $color-black;
+        box-shadow: none;
+        color: $color-black;
+    }
+
+    &:active {
+        background-color: $color-marketing-gray-20;
+        border-color: $color-marketing-gray-70;
+        color: $color-black;
+    }
+}
+
+@mixin default-states-dark {
+    &:focus {
+        border-color: $focus-border-color;
+    }
+
+    &:hover {
+        background-color: $color-dark-gray-60;
+        border-color: $color-white;
+        color: $color-white;
+    }
+
+    &:active {
+        background-color: $color-dark-gray-60;
+        border-color: $color-light-gray-50;
+        color: $color-white;
+    }
+}
+
+@mixin product-states {
+    &:focus {
+        border-color: $focus-border-color;
+    }
+
+    &:hover {
+        background-color: $color-blue-60;
+        border-color: transparent;
+        color: $color-white;
+    }
+
+    &:active {
+        background-color: $color-blue-80;
+        border-color: transparent;
+        color: $color-white;
+    }
+}
+
+@mixin product-states-dark {
+    @include product-states;
+}
+
 /* -------------------------------------------------------------------------- */
-// Primary Button
+// Button shape and size
 
 .mzp-c-button,
 a.mzp-c-button {
     @include border-box;
-    @include text-body-cta;
-    @include transition(background-color 100ms, box-shadow 100ms, color 100ms, transform 100ms);
-    background-color: $color-black;
-    border-radius: $border-radius-xs;
-    border: 2px solid $color-black;
-    color: $color-white;
+    @include font-size(16px);
+    border-radius: $border-radius-sm;
+    border: 2px solid transparent;
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
-    padding: ($spacing-md - 2px) ($spacing-xl - 2px); //2px extra padding removed to compensate for 2px border.
+    padding: 6px (16px - 2px); //2px extra padding removed to compensate for 2px border.
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
 
-    &:focus,
-    &:hover {
-        @include transform(translate(-2px, -2px));
-        background-color: $color-white;
-        box-shadow: 4px 4px 0 0 $color-black;
-        color: $color-black;
+    &:focus {
+        box-shadow: $field-focus-ring;
+        border-color: $focus-border-color;
+        outline: none;
     }
 
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
+    &:hover {
+        box-shadow: none;
+    }
+
+
     &:disabled {
-        background-color: $color-marketing-gray-30;
-        border-color: $color-marketing-gray-30;
+        opacity: 0.6;
         pointer-events: none;
     }
 
@@ -41,53 +106,75 @@ a.mzp-c-button {
     }
 }
 
-.mzp-c-button.mzp-t-small {
-    padding: ($spacing-sm - 2px) ($spacing-md - 2px);
+// Sizes
+
+.mzp-c-button.mzp-t-sm {
+    @include font-size(12px);
+    border-radius: $border-radius-xs;
+    padding: 1px (16px - 2px);
 }
 
-.mzp-c-button.mzp-t-dark,
-a.mzp-c-button.mzp-t-dark {
-    background-color: $color-white;
-    border-color: $color-white;
-    color: $color-black;
+.mzp-c-button.mzp-t-small, // backwards compatability
+.mzp-c-button.mzp-t-md {
+    @include font-size(14px);
+    padding: 3.5px (16px - 2px);
+    min-height: 32px;
+}
 
-    &:focus,
-    &:hover {
-        background-color: $color-black;
-        box-shadow: 4px 4px 0 0 $color-white;
-        color: $color-white;
-    }
+.mzp-c-button.mzp-t-lg {
+    @include font-size(16px);
+    padding: 6px (16px - 2px);
+    min-height: 40px;
+}
 
-    &:disabled {
-        background-color: $color-light-gray-80;
-        border-color: $color-light-gray-80;
+.mzp-c-button.mzp-t-xl {
+    @include font-size(16px);
+    padding: 10px (16px - 2px);
+    min-height: 48px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+// Primary
+
+.mzp-c-button,
+a.mzp-c-button {
+    background-color: $color-black;
+    border: 2px solid $color-black;
+    color: $color-white;
+
+    @include default-states;
+
+    // dark
+    &.mzp-t-dark {
+        background-color: $color-white;
+        border-color: $color-white;
         color: $color-black;
-        pointer-events: none;
+
+        @include default-states-dark;
     }
 }
 
 /* -------------------------------------------------------------------------- */
-// Secondary Buttons
+// Secondary
 
-.mzp-c-button.mzp-t-secondary {
-    background-color: transparent;
-    color: $color-black;
-
-    &:disabled {
+.mzp-c-button,
+a.mzp-c-button {
+    &.mzp-t-secondary {
         background-color: transparent;
-        border-color: $color-light-gray-30;
-        color: $color-light-gray-30;
-    }
-}
+        border-color: $color-black;
+        color: $color-black;
 
-.mzp-c-button.mzp-t-secondary.mzp-t-dark {
-    background-color: transparent;
-    color: $color-white;
+        @include default-states;
 
-    &:disabled {
-        background-color: transparent;
-        border-color: $color-light-gray-80;
-        color: $color-light-gray-80;
+        // dark
+        &.mzp-t-dark {
+            background-color: transparent;
+            border-color: $color-white;
+            color: $color-white;
+
+            @include default-states-dark;
+        }
     }
 }
 
@@ -100,44 +187,77 @@ a.mzp-c-button.mzp-t-product {
     border-color: transparent;
     color: $color-white;
 
-    &:focus,
-    &:hover {
-        @include transform(none);
-        background-color: $color-blue-60;
-        box-shadow: none;
-        color: $color-white;
-    }
+    @include product-states;
 
-    &:disabled {
-        background-color: $color-light-gray-80;
-        border-color: $color-light-gray-80;
-        pointer-events: none;
-    }
-}
+    // dark is the same as light
 
-.mzp-c-button.mzp-t-product.mzp-t-small {
-    padding: $spacing-sm $spacing-md;
-}
-
-.mzp-c-button.mzp-t-product.mzp-t-secondary,
-a.mzp-c-button.mzp-t-product.mzp-t-secondary {
-    background-color: transparent;
-    border-color: $color-blue-50;
-    color: $color-blue-50;
-
-    &:focus,
-    &:hover {
-        @include transform(none);
-        background-color: $color-blue-60;
-        border-color: transparent;
-        box-shadow: none;
-        color: $color-white;
-    }
-
-    &:disabled {
+    // secondary
+    &.mzp-t-secondary {
         background-color: transparent;
-        border-color: $color-dark-gray-05;
-        color: $color-dark-gray-05;
+        border-color: $color-blue-50;
+        color: $color-blue-50;
+
+        @include product-states;
+
+        // dark
+        &.mzp-t-dark {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: transparent;
+            color: $color-white;
+
+            @include product-states;
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Neutral Buttons
+
+.mzp-c-button,
+a.mzp-c-button {
+    &.mzp-t-neutral {
+        background-color: transparent;
+        border-color: $color-marketing-gray-30;
+        color: $color-marketing-gray-70;
+
+        &:focus {
+            border-color: $focus-border-color;
+        }
+
+        &:hover {
+            background-color: $color-marketing-gray-20;
+            border-color: $color-marketing-gray-40;
+            color: $color-marketing-gray-70;
+        }
+
+        &:active {
+            background-color: $color-marketing-gray-20;
+            border-color: $color-marketing-gray-50;
+            color: $color-marketing-gray-70;
+        }
+
+         // dark
+         &.mzp-t-dark {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+            color: $color-white;
+
+            &:focus {
+                border-color: $focus-border-color;
+            }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-color: rgba(255, 255, 255, 0.6);
+                color: $color-white;
+            }
+
+            &:active {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-color: rgba(255, 255, 255, 0.4);
+                color: $color-white;
+            }
+        }
     }
 }
 

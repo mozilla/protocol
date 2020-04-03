@@ -1,6 +1,11 @@
 # HEAD
 
+* **css:** Button style updates. (#429)
 * **css:** Add styled select drop downs (#435)
+
+## Migration Tips
+
+* Find and replace `mzp-t-small` to `mzp-t-md` on buttons.
 
 # 11.0.2
 
