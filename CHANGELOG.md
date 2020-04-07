@@ -1,6 +1,14 @@
 # HEAD
 
+## Features
+
 * **css:** Add styled select drop downs (#435)
+* **css:** (breaking) Add styled text inputs (#430)
+
+## Migration Tips
+
+* Styled form inputs now include bottom spacing. If you have added this spacing to your forms in another way (for example, wrapping them in paragraph tags) you could end up with double spacing.
+
 
 # 11.0.2
 

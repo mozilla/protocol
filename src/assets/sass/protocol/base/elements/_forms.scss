@@ -5,7 +5,6 @@
 @import '../../includes/lib';
 @import '../../includes/forms/lib';
 
-@import '../../includes/forms/lib';
 
 /* -------------------------------------------------------------------------- */
 // Resets
@@ -33,6 +32,41 @@ legend {
     max-width: 100%; /* 1 */
     padding: 0; /* 3 */
     white-space: normal; /* 1 */
+}
+
+input,
+textarea {
+    @include font-base;
+    @include text-body-md;
+    line-height: 1.25;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+ [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+ ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
 }
 
 
@@ -73,50 +107,183 @@ textarea {
     line-height: 1.25;
 }
 
-textarea {
-    height: auto;
-    max-width: 100%;
+select:focus {
+    box-shadow: 0 0 0 2px $color-blue-40;
 }
 
+legend {
+    @include text-display-sm;
+
+    .mzp-u-inline & {
+        @include text-body-md;
+    }
+}
+
+fieldset li {
+    margin-bottom: .5em;
+}
+
+/* -------------------------------------------------------------------------- */
+// Inputs & Textarea (excluding checkboxes and radio buttons)
+
 textarea,
+input[list],
+input[type='date'],
 input[type='email'],
-input[type='url'],
-input[type='tel'],
+input[type='number'],
 input[type='password'],
 input[type='search'],
+input[type='tel'],
 input[type='text'],
-input[type='number'],
-input[type='date'],
-input[type='time'] {
-    @include border-box;
-    background: $color-white;
-    border-radius: $border-radius-sm;
-    border: 1px solid $color-marketing-gray-80;
-    display: inline-block;
-    line-height: 1.25;
-    padding: .25em $spacing-sm;
+input[type='time'],
+input[type='url'] {
+    @include form-input;
+
+    &::placeholder {
+        color: $color-marketing-gray-70;
+    }
 
     &:hover {
-        border-color: $color-black;
+        border-color: $color-link-hover;
     }
 
     &:focus {
-        border-color: $color-black;
-        box-shadow: 0 0 0 2px $color-blue-40;
+        outline: none;
+        border-color: $color-link;
+        box-shadow: $field-focus-ring;
     }
 
-    &:disabled {
-        background: $color-marketing-gray-30;
+    .mzp-is-error & {
+        border-color: $form-red;
+        box-shadow: none;
 
-        &:hover,
+        &:hover {
+            border-color: $color-red-80;
+        }
+
+        &:focus {
+            border-color: $form-red;
+            box-shadow: 0 0 0 2px rgba($form-red, .5);
+        }
+    }
+
+    &:disabled,
+    &[aria-disabled=true] {
+        background: $color-marketing-gray-10;
+        border-color: $color-marketing-gray-30;
+        color: $color-marketing-gray-70;
+
         &:focus {
             border-color: $color-marketing-gray-80;
         }
     }
 }
 
-fieldset li {
-    margin-bottom: .5em;
+textarea,
+input[type='email'],
+input[list],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'] {
+    min-width: $field-min-width;
+    max-width: 100%;
+}
+
+textarea[cols],
+input[size] {
+    min-width: 0;
+}
+
+/* size on HTML is not a good way to size things, this is most evident at small sizes */
+input[size='2'] {
+    max-width: calc(2.5ch + #{$field-padding * 2});
+}
+
+input[size='3'] {
+    max-width: calc(3.5ch + #{$field-padding * 2});
+}
+
+input[size='4'] {
+    max-width: calc(4.5ch + #{$field-padding * 2});
+}
+
+input[size='5'] {
+    max-width: calc(5.5ch + #{$field-padding * 2});
+}
+
+input[type='search'] {
+    background-image: $url-image-search-form;
+    background-repeat: no-repeat;
+    background-position: left 8px top 50%;
+    padding: $field-padding $field-padding $field-padding calc(1.5em + #{$field-padding * 2});
+
+    &:hover {
+        background-image: $url-image-search-link-hover;
+    }
+
+    &:focus {
+        background-image: $url-image-search-link;
+    }
+
+    [dir="rtl"] & {
+        background-position: right 8px top 50%;
+        padding: $field-padding calc(1.5em + #{$field-padding * 2}) $field-padding $field-padding;
+    }
+}
+
+input[type='color'],
+input[type='file'] {
+    background: $color-white;
+    border-radius: $field-border-radius;
+    border: $field-border;
+    line-height: 1.25;
+    margin: 0 0 $field-v-spacing;
+
+    &:hover {
+        border-color: $color-link-hover;
+    }
+
+    &:focus {
+        border-color: $color-link;
+        box-shadow: $field-focus-ring;
+        outline: none;
+    }
+
+    .mzp-is-error & {
+        border-color: $form-red;
+        box-shadow: none;
+
+        &:hover {
+            border-color: $color-red-80;
+        }
+
+        &:focus {
+            border-color: $form-red;
+            box-shadow: 0 0 0 2px rgba($form-red, .5);
+        }
+    }
+
+    &:disabled,
+    &[aria-disabled=true] {
+        background: $color-marketing-gray-30;
+        border-color: $color-marketing-gray-30;
+        color: $color-marketing-gray-70;
+
+        &:focus {
+            border-color: $color-marketing-gray-80;
+        }
+    }
+}
+
+input[type='file'] {
+    padding: $field-padding;
+}
+
+textarea {
+    height: auto;
 }
 
 
@@ -179,23 +346,7 @@ label {
 .mzp-is-error {
     color: $form-red;
 
-    textarea,
-    input[type='email'],
-    input[type='url'],
-    input[type='tel'],
-    input[type='password'],
-    input[type='search'],
-    input[type='text'],
-    input[type='number'],
-    input[type='date'],
-    input[type='time'] {
-        border-color: $color-red-60;
-
-        &:focus {
-            box-shadow: 0 0 0 2px $color-red-50;
-        }
-    }
-
+    select,
     input[type='checkbox'],
     input[type='radio'] {
         box-shadow: 0 0 0 2px $color-red-50;

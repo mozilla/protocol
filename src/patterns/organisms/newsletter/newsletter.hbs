@@ -22,15 +22,14 @@ links:
     </header>
 
     <fieldset class="mzp-c-newsletter-content">
-      <div class="mzp-c-form-errors" id="newsletter-errors"></div>
+      <div class="mzp-c-form-errors" id="newsletter-errors">{{#if errors}}{{#block "errors"}}{{/block}}{{/if}}</div>
 
-      <p>
+      <div>
         <label for="email">Your email address</label>
         <input type="email" class="mzp-js-email-field" id="email" name="email" placeholder="yourname@example.com" required aria-required="true">
-      </p>
+      </div>
 
       <div id="newsletter-details" class="mzp-c-newsletter-details">
-        <p>
           <label for="country">Country</label>
           <select id="country" name="country" required aria-required="true">
             {{#each (data "items")}}
@@ -38,16 +37,13 @@ links:
             {{/each}}
               <option>And so on...</option>
           </select>
-        </p>
 
-        <p>
           <label for="language">Language</label>
           <select id="language" name="lang" required aria-required="true">
             {{#each (data "items")}}
               <option value="{{language}}">{{language}}</option>
             {{/each}}
           </select>
-        </p>
 
         <fieldset class="mzp-u-inline">
           <legend>Format</legend>
