@@ -1,3 +1,7 @@
+# HEAD
+
+* **css:** Add styled select drop downs (#435)
+
 # 11.0.2
 
 ## Features

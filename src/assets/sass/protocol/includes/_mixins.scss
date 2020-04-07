@@ -124,6 +124,12 @@
             box-decoration-break: $value;
 }
 
+@mixin appearance($value) {
+    -webkit-appearance: $value;
+       -moz-appearance: $value;
+	        appearance: $value;
+}
+
 
 // Hide an element visually, but not from screen readers
 @mixin visually-hidden {
