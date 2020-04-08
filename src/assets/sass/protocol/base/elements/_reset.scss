@@ -12,7 +12,7 @@ audio, video, canvas {
     display: inline-block;
 }
 
-html, body, form, fieldset, legend,
+html, body,
 h1, h2, h3, h4, h5, h6, hr,
 p, pre, blockquote, figure, figcaption,
 table, ul, ol, li, dl, dt, dd {
@@ -36,7 +36,7 @@ table {
     border-spacing: 0;
 }
 
-fieldset, iframe, a img {
+iframe, a img {
     border: 0;
 }
 
