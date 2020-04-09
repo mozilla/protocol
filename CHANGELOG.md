@@ -2,8 +2,13 @@
 
 ## Features
 
+* **utility:** Add title size utility classes (#297)
+  ** rename `text-display-` to `text-title-`, keep `text-display-` as an alias
 * **component:** Updates to emphasis box, with additional documentation and usage guidelines.
 * **css:** Notification bar updates; use border-box (#549), fix image replacement bug, add focus styles, tweak spacing.
+
+## Migration Tips
+  * Find and replace `text-display-` to `text-title-`
 
 # 11.0.1
 

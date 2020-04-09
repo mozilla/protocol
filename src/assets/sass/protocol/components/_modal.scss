@@ -60,7 +60,7 @@ html.mzp-is-noscroll {
         @include bidi(((padding-right, $spacing-xl * 2, padding-left, 0),));
 
         h2 {
-            @include text-display-xs;
+            @include text-title-xs;
             @include font-base;
             color: #fff;
         }

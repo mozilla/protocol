@@ -72,7 +72,7 @@
     }
 
     .mzp-c-card-title {
-        @include text-display-xs;
+        @include text-title-xs;
         display: inline;
     }
 
@@ -149,7 +149,7 @@
 .mzp-c-card.mzp-c-card-large {
 
     .mzp-c-card-title {
-        @include text-display-md;
+        @include text-title-md;
     }
 
     .mzp-c-card-desc {
@@ -172,7 +172,7 @@
     }
 
     .mzp-c-card-title {
-        @include text-display-xxs;
+        @include text-title-xxs;
     }
 
     .mzp-c-card-desc {

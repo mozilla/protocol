@@ -10,15 +10,15 @@
 
     // Step down the heading levels
     h2 {
-        @include text-display-md;
+        @include text-title-md;
     }
 
     h3 {
-        @include text-display-sm;
+        @include text-title-sm;
     }
 
     h4 {
-        @include text-display-xs;
+        @include text-title-xs;
     }
 
     @media #{$mq-md} {
@@ -35,7 +35,7 @@
 }
 
 .mzp-c-article-title {
-    @include text-display-xl;
+    @include text-title-xl;
 }
 
 .mzp-c-article-intro {

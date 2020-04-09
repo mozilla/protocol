@@ -41,72 +41,83 @@
 // there's some redundancy at smaller sizes because we don't want things
 // getting too tiny.
 // Example usage:
-//  .title { @include text-display-xl; }
-//  .subtitle { @include text-display-lg; }
+//  .title { @include text-title-xl; }
+//  .subtitle { @include text-title-lg; }
 //  .intro { @include text-body-lg; }
 
 $text-body-line-height: $font-base-line-height;
-$text-display-line-height: 1.1;
+$text-title-line-height: 1.1;
 
 // display copy: headings, blockquotes, other fancy stuff
-@mixin text-display-xxl { // Use this one sparingly.
+@mixin text-title-xxl { // Use this one sparingly.
     @include font-size(48px);
-    line-height: $text-display-line-height;
+    line-height: $text-title-line-height;
 
     @media #{$mq-md} {
         @include font-size(64px);
     }
 }
 
-@mixin text-display-xl {
+@mixin text-title-xl {
     @include font-size(40px);
-    line-height: $text-display-line-height;
+    line-height: $text-title-line-height;
 
     @media #{$mq-md} {
         @include font-size(56px);
     }
 }
 
-@mixin text-display-lg {
+@mixin text-title-lg {
     @include font-size(32px);
-    line-height: $text-display-line-height;
+    line-height: $text-title-line-height;
 
     @media #{$mq-md} {
         @include font-size(48px);
     }
 }
 
-@mixin text-display-md {
+@mixin text-title-md {
     @include font-size(24px);
-    line-height: $text-display-line-height;
+    line-height: $text-title-line-height;
 
     @media #{$mq-md} {
         @include font-size(40px);
     }
 }
 
-@mixin text-display-sm {
+@mixin text-title-sm {
     @include font-size(21px);
-    line-height: $text-display-line-height;
+    line-height: $text-title-line-height;
 
     @media #{$mq-md} {
         @include font-size(32px);
     }
 }
 
-@mixin text-display-xs {
+@mixin text-title-xs {
     @include font-size(18px);
-    line-height: $text-display-line-height;
+    line-height: $text-title-line-height;
 
     @media #{$mq-md} {
         @include font-size(24px);
     }
 }
 
-@mixin text-display-xxs {
+@mixin text-title-xxs {
     @include font-size(16px);
-    line-height: $text-display-line-height;
+    line-height: $text-title-line-height;
 }
+
+// backwards compatibility
+
+$text-display-line-height: $text-title-line-height;
+@mixin text-display-xxl { @include text-title-xxl; }
+@mixin text-display-xl { @include text-title-xl; }
+@mixin text-display-lg { @include text-title-lg; }
+@mixin text-display-md { @include text-title-md; }
+@mixin text-display-sm { @include text-title-sm; }
+@mixin text-display-xs { @include text-title-xs; }
+@mixin text-display-xxs { @include text-title-xxs; }
 
 // body copy
 @mixin text-body-lg {

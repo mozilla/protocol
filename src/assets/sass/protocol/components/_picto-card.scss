@@ -29,7 +29,7 @@
     }
 
     .mzp-c-card-picto-title {
-        @include text-display-xs;
+        @include text-title-xs;
     }
 
     .mzp-c-card-picto-desc {
@@ -62,7 +62,7 @@
     @include bidi(((text-align, left, right),));
 
     .mzp-c-card-picto-title {
-        @include text-display-sm;
+        @include text-title-sm;
     }
 
     .mzp-c-card-picto-content {
