@@ -3,9 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @import '../includes/lib';
-
-$field-focus-ring: 0 0 0 2px rgba($color-blue-40, .5);
-$focus-border-color: #008aea;
+@import '../includes/forms/lib';
 
 @mixin default-states {
     &:focus {
@@ -73,12 +71,14 @@ $focus-border-color: #008aea;
 a.mzp-c-button {
     @include border-box;
     @include font-size(16px);
+    @include transition(background-color 100ms, box-shadow 100ms, color 100ms);
     border-radius: $border-radius-sm;
     border: 2px solid transparent;
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
-    padding: 6px (16px - 2px); //2px extra padding removed to compensate for 2px border.
+    line-height: remify(40px - 4px);
+    padding: 0 (24px - 2px); //2px extra padding removed to compensate for 2px border.
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
 
     &:focus {
@@ -111,26 +111,24 @@ a.mzp-c-button {
 .mzp-c-button.mzp-t-sm {
     @include font-size(12px);
     border-radius: $border-radius-xs;
-    padding: 1px (16px - 2px);
+    padding: 0 (16px - 2px);
+    line-height: remify(24px - 4px);
 }
 
 .mzp-c-button.mzp-t-small, // backwards compatability
 .mzp-c-button.mzp-t-md {
     @include font-size(14px);
-    padding: 3.5px (16px - 2px);
-    min-height: 32px;
+    line-height: remify(32px - 4px);
 }
 
 .mzp-c-button.mzp-t-lg {
     @include font-size(16px);
-    padding: 6px (16px - 2px);
-    min-height: 40px;
+    line-height: remify(40px - 4px);
 }
 
 .mzp-c-button.mzp-t-xl {
     @include font-size(16px);
-    padding: 10px (16px - 2px);
-    min-height: 48px;
+    line-height: remify(48px - 4px);
 }
 
 
@@ -201,7 +199,7 @@ a.mzp-c-button.mzp-t-product {
 
         // dark
         &.mzp-t-dark {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba($color-white, .3);
             border-color: transparent;
             color: $color-white;
 
@@ -238,8 +236,8 @@ a.mzp-c-button {
 
          // dark
          &.mzp-t-dark {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.6);
+            background-color: rgba($color-white, .1);
+            border-color: rgba($color-white, .6);
             color: $color-white;
 
             &:focus {
@@ -247,14 +245,14 @@ a.mzp-c-button {
             }
 
             &:hover {
-                background-color: rgba(255, 255, 255, 0.2);
-                border-color: rgba(255, 255, 255, 0.6);
+                background-color: rgba($color-white, .2);
+                border-color: rgba($color-white, .6);
                 color: $color-white;
             }
 
             &:active {
-                background-color: rgba(255, 255, 255, 0.2);
-                border-color: rgba(255, 255, 255, 0.4);
+                background-color: rgba($color-white, .2);
+                border-color: rgba($color-white, .4);
                 color: $color-white;
             }
         }
