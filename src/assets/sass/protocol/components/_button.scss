@@ -8,6 +8,7 @@
 @mixin default-states {
     &:focus {
         border-color: $focus-border-color;
+        box-shadow: $field-focus-ring;
     }
 
     &:hover {
@@ -27,11 +28,13 @@
 @mixin default-states-dark {
     &:focus {
         border-color: $focus-border-color;
+        box-shadow: $field-focus-ring-dark;
     }
 
     &:hover {
         background-color: $color-dark-gray-60;
         border-color: $color-white;
+        box-shadow: none;
         color: $color-white;
     }
 
@@ -45,11 +48,13 @@
 @mixin product-states {
     &:focus {
         border-color: $focus-border-color;
+        box-shadow: $field-focus-ring;
     }
 
     &:hover {
         background-color: $color-blue-60;
         border-color: transparent;
+        box-shadow: none;
         color: $color-white;
     }
 
@@ -94,7 +99,6 @@ a.mzp-c-button {
     &:hover {
         box-shadow: none;
     }
-
 
     &:disabled {
         opacity: 0.6;
