@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Update form label styles (#430)
 * **js:** Implement sticky scrolling behaviour for navigation component as an opt-in feature (#560).
 * **utility:** Add title size utility classes. Rename `text-display-` to `text-title-`, keep `text-display-` as an alias (#297).
 * **component:** Updates to emphasis box, with additional documentation and usage guidelines.
