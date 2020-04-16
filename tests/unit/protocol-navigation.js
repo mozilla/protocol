@@ -17,6 +17,8 @@ describe('protocol-navigation.js', function() {
                     '</div>' +
                   '</div>';
         document.documentElement.insertAdjacentHTML('beforeend', nav);
+
+        spyOn(Mzp.Navigation, 'supportsSticky').and.returnValue(true);
     });
 
     afterEach(function(){
@@ -54,6 +56,40 @@ describe('protocol-navigation.js', function() {
             expect(menu.classList.contains('mzp-is-open')).toBeFalsy();
             expect(button.classList.contains('mzp-is-active')).toBeFalsy();
             expect(options.close).toHaveBeenCalled();
+        });
+    });
+
+    describe('sticky behaviour', function() {
+
+        it('should not initialize sticky behaviour by default', function() {
+            spyOn(Mzp.Navigation, 'initSticky');
+
+            Mzp.Navigation.init();
+            expect(Mzp.Navigation.initSticky).not.toHaveBeenCalled();
+        });
+
+        it('should initialize sticky behaviour when specified', function() {
+            document.querySelector('.mzp-c-navigation').classList.add('mzp-is-sticky');
+            spyOn(Mzp.Navigation, 'initSticky');
+
+            Mzp.Navigation.init();
+            expect(Mzp.Navigation.initSticky).toHaveBeenCalled();
+        });
+
+        it('should create sticky behaviour for large viewports', function() {
+            document.querySelector('.mzp-c-navigation').classList.add('mzp-is-sticky');
+            spyOn(Mzp.Navigation, 'isLargeViewport').and.returnValue(true);
+            spyOn(Mzp.Navigation, 'createSticky');
+            Mzp.Navigation.init();
+            expect(Mzp.Navigation.createSticky).toHaveBeenCalled();
+        });
+
+        it('should not create sticky behaviour for small viewports', function() {
+            document.querySelector('.mzp-c-navigation').classList.add('mzp-is-sticky');
+            spyOn(Mzp.Navigation, 'isLargeViewport').and.returnValue(false);
+            spyOn(Mzp.Navigation, 'createSticky');
+            Mzp.Navigation.init();
+            expect(Mzp.Navigation.createSticky).not.toHaveBeenCalled();
         });
     });
 });
