@@ -5,7 +5,9 @@ description: |
 nonos: |
     - Avoid breaking rank just for font sizing. The next heading after an `h1` should be an `h2` even if that `h2` is much smaller. Use HTML for meaning and CSS for styling. You can make that `h2` whatever size you need.
     - Avoid "stacking" headings without any body content in between, eg. an `h2` immediately following an `h1`. If you need a subheading or tagline immediately after a title, chances are it should be a paragraph rather than a second heading.
+    - If you only need to adjust the text size you can use the title size utility classes. Example: `mzp-u-title-sm`
 links:
+    Heading Utility Classes: /patterns/templates/card-layout.html
     MDN: https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements
 order: 1
 ---
@@ -17,4 +19,8 @@ order: 1
   <h4>{{heading}}</h4>
   <h5>{{heading}}</h5>
   <h6>{{heading}}</h6>
+{{/with}}
+
+{{#with (data "specimens")}}
+  <h6 class="mzp-u-title-md">H6 with the utility class to make it a medium title.</h6>
 {{/with}}

@@ -12,11 +12,13 @@ notes: |
   - Navigation can be initialized using `Mzp.Navigation.init(options)`, where `options` is an Object with the following properties.
       - `onNavOpen` [Function] A callback when the small screen navigation icon is clicked to open (optional).
       - `onNavClose` [Function] A callback when the small screen navigation icon is clicked to close (optional).
+  - Navigation can opt-in to sticky scroll behaviour by adding the class `mzp-is-sticky`.
+      - Sticky behaviour will only be applied to viewports that are wider than `$mq-md` and taller than `$mq-tall`.
 links:
     Navigation Demo: /demos/navigation.html
 ---
 
-<div class="mzp-c-navigation">
+<div class="mzp-c-navigation {{#if sticky}}mzp-is-sticky{{/if}}">
   <div class="mzp-c-navigation-l-content">
     <div class="mzp-c-navigation-container">
       <button class="mzp-c-navigation-menu-button{{#if button-label}} has-label{{/if}}" type="button" aria-controls="{{ id }}">{{#if button-label}}{{ button-label }}{{ else }}Menu{{/if}}</button>
