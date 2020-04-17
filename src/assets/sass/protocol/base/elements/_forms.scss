@@ -3,6 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @import '../../includes/lib';
+@import '../../includes/forms/lib';
 
 @import '../../includes/forms/lib';
 
@@ -65,9 +66,11 @@ label {
 button,
 input,
 select,
+optgroup,
 textarea {
     @include font-base;
     @include text-body-md;
+    line-height: 1.25;
 }
 
 textarea {
@@ -110,10 +113,6 @@ input[type='time'] {
             border-color: $color-marketing-gray-80;
         }
     }
-}
-
-select:focus {
-    box-shadow: 0 0 0 2px $color-blue-40;
 }
 
 fieldset li {
@@ -197,10 +196,93 @@ label {
         }
     }
 
-    select,
     input[type='checkbox'],
     input[type='radio'] {
         box-shadow: 0 0 0 2px $color-red-50;
     }
 
+}
+
+
+/* -------------------------------------------------------------------------- */
+// Select
+
+// with thanks to https://www.filamentgroup.com/lab/select-css.html
+select {
+    @include appearance(none);
+    @include border-box;
+    @include bidi((
+        (background-position, right 8px top 50%, left 8px top 50%),
+        (padding, $field-padding $symbol-spacing $field-padding $field-padding, $field-padding $field-padding $field-padding $symbol-spacing),
+    ));
+    @include form-input;
+    background-image: $url-image-arrow-down-form, $select-bg;
+    background-repeat: no-repeat, repeat;
+    background-size: 1.5em auto, 100%;
+    display: block;
+    font-weight: normal;
+    max-width: 100%;
+    min-width: $field-min-width;
+    text-overflow: ellipsis;
+
+    // no down arrow on multi selects
+    &[multiple] {
+        &,
+        &:hover,
+        &:focus {
+            background: $color-white;
+            padding: $field-padding;
+        }
+    }
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    &:hover {
+        border-color: $color-link-hover;
+        background-image: $url-image-arrow-down-link-hover, $select-bg;
+    }
+
+    &:focus {
+        border-color: $color-link;
+        background-image: $url-image-arrow-down-link, $select-bg;
+        box-shadow: $field-focus-ring;
+        color: #222;
+        outline: none;
+    }
+
+    .mzp-is-error & {
+        border-color: $form-red;
+        box-shadow: none;
+
+        &:hover {
+            border-color: $color-red-80;
+        }
+
+        &:focus {
+            border-color: $form-red;
+            box-shadow: 0 0 0 2px rgba($form-red, .5);
+        }
+    }
+
+    &:disabled,
+    &[aria-disabled=true] {
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+                          $select-bg-disabled;
+        border-color: $color-marketing-gray-30;
+        color: $color-marketing-gray-70;
+
+        &:hover {
+            border-color: $color-marketing-gray-30;
+        }
+
+        &:focus {
+            border-color: $color-marketing-gray-80;
+        }
+    }
+
+    option {
+        font-weight: normal;
+    }
 }
