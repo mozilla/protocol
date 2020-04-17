@@ -21,6 +21,8 @@ $field-focus-ring: 0 0 0 2px rgba($color-blue-40, .5);
 $label-v-spacing: $spacing-sm;
 $info-v-spacing: $spacing-md;
 $symbol-spacing: calc(1.5em + #{$spacing-sm * 2});
+$select-bg: linear-gradient(to bottom, $color-white 0%, $color-white 100%); // must keep gradient to avoid bugs
+$select-bg-disabled: linear-gradient(to bottom, $color-marketing-gray-10 0%, $color-marketing-gray-10 100%);
 
 @mixin form-label() {
     @include text-body-sm;
