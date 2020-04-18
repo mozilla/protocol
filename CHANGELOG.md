@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Tweak form error styles (#508)
 * **css:** (breaking) Add styled text inputs (#430)
 * **css:** Button style updates. (#429)
 * **css:** Add styled select drop downs (#435)
