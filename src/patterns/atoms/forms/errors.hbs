@@ -20,14 +20,14 @@ labels:
 </div>
 
 <fieldset>
-  <p class="mzp-is-error">
+  <div class="mzp-is-error">
     <label for="email">
       E-mail <em class="mzp-c-fieldnote">Required</em>
     </label>
     <input type="email" name="email" id="email" placeholder="you@example.com">
-  </p>
+  </div>
 
-  <p class="mzp-is-error">
+  <div class="mzp-is-error">
     <label for="language">Language</label>
     <select name="language" id="language" required aria-required="true">
       <option value="">- select -</option>
@@ -35,24 +35,22 @@ labels:
       <option value="{{lang-code}}">{{language}}</option>
     {{/each}}
     </select>
-  </p>
+  </div>
 
-  <ul>
-    <li class="mzp-is-error">
-      <label for="username">
-        Username
-        <span class="mzp-c-fieldnote">Must be at least 6 characters.</span>
-      </label>
-      <input type="text" id="username" name="username" value="bub">
-    </li>
-    <li>
-      <label for="password">
-        Password
-        <span class="mzp-c-fieldnote">Must be at least 8 characters and contain at least one numeral. Passwords are case sensitive. This is an example of a pretty lengthy note.</span>
-      </label>
-      <input type="password" id="password" name="password">
-    </li>
-  </ul>
+  <div class="mzp-is-error">
+    <label for="username">
+      Username
+      <span class="mzp-c-fieldnote">Must be at least 6 characters.</span>
+    </label>
+    <input type="text" id="username" name="username" value="bub">
+  </div>
+  <div class="mzp-is-error">
+    <label for="password">
+      Password
+      <span class="mzp-c-fieldnote">Must be at least 8 characters and contain at least one numeral. Passwords are case sensitive. This is an example of a pretty lengthy note.</span>
+    </label>
+    <input type="password" id="password" name="password">
+  </div>
 
   <p class="mzp-is-error">
     <label for="accept" class="mzp-u-inline">
