@@ -82,8 +82,7 @@ a.mzp-c-button {
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
-    line-height: remify(40px - 4px);
-    padding: 0 (24px - 2px); //2px extra padding removed to compensate for 2px border.
+    padding: 6px $spacing-lg;
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
 
     &:focus {
@@ -115,24 +114,23 @@ a.mzp-c-button {
 .mzp-c-button.mzp-t-sm {
     @include font-size(12px);
     border-radius: $border-radius-xs;
-    padding: 0 (16px - 2px);
-    line-height: remify(24px - 4px);
+    padding: 1px $spacing-md;
 }
 
 .mzp-c-button.mzp-t-small, // backwards compatability
 .mzp-c-button.mzp-t-md {
     @include font-size(14px);
-    line-height: remify(32px - 4px);
+    padding: $spacing-xs $spacing-lg;
 }
 
 .mzp-c-button.mzp-t-lg {
     @include font-size(16px);
-    line-height: remify(40px - 4px);
+    padding: 6px $spacing-lg;
 }
 
 .mzp-c-button.mzp-t-xl {
     @include font-size(16px);
-    line-height: remify(48px - 4px);
+    padding: 10px $spacing-lg;
 }
 
 
