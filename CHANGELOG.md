@@ -2,13 +2,14 @@
 
 ## Features
 
-* **css:** Add styled select drop downs (#435)
 * **css:** (breaking) Add styled text inputs (#430)
+* **css:** Button style updates. (#429)
+* **css:** Add styled select drop downs (#435)
 
 ## Migration Tips
 
 * Styled form inputs now include bottom spacing. If you have added this spacing to your forms in another way (for example, wrapping them in paragraph tags) you could end up with double spacing.
-
+* Find and replace `mzp-t-small` to `mzp-t-md` on buttons.
 
 # 11.0.2
 
