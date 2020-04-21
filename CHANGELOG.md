@@ -9,6 +9,7 @@
 ## Bug Fixes
 
 * **css:** Embiggen the modal close button (#557)
+* **css:** Center the notification bar in larger viewports
 
 ## Migration Tips
 
