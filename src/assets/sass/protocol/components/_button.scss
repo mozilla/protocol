@@ -82,6 +82,7 @@ a.mzp-c-button {
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
+    line-height: $text-body-line-height;
     padding: 6px $spacing-lg;
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
 
