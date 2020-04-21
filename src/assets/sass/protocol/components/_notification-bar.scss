@@ -20,6 +20,7 @@
     text-align: center;
 
     @media #{$mq-sm} {
+        margin: $layout-xs auto 0;
         max-width: $content-md;
     }
 
