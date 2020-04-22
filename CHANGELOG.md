@@ -11,6 +11,7 @@
 * **css:** Embiggen the modal close button (#557)
 * **css:** Center the notification bar in larger viewports
 * **css:** Button line-height bug fix
+* **css:** Code cleanup in reset.scss & forms.scss
 
 ## Migration Tips
 

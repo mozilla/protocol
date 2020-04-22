@@ -34,11 +34,29 @@ legend {
     white-space: normal; /* 1 */
 }
 
+button,
 input,
+select,
+optgroup,
 textarea {
     @include font-base;
     @include text-body-md;
     line-height: 1.25;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+    overflow: auto;
 }
 
 /**
@@ -46,7 +64,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 
- [type="search"] {
+[type="search"] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
 }
@@ -64,7 +82,7 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 
- ::-webkit-file-upload-button {
+::-webkit-file-upload-button {
     -webkit-appearance: button; /* 1 */
     font: inherit; /* 2 */
 }
@@ -97,31 +115,6 @@ label {
     color: $form-text;
 }
 
-button,
-input,
-select,
-optgroup,
-textarea {
-    @include font-base;
-    @include text-body-md;
-    line-height: 1.25;
-}
-
-select:focus {
-    box-shadow: 0 0 0 2px $color-blue-40;
-}
-
-legend {
-    @include text-display-sm;
-
-    .mzp-u-inline & {
-        @include text-body-md;
-    }
-}
-
-fieldset li {
-    margin-bottom: .5em;
-}
 
 /* -------------------------------------------------------------------------- */
 // Inputs & Textarea (excluding checkboxes and radio buttons)
@@ -288,77 +281,9 @@ textarea {
 
 
 /* -------------------------------------------------------------------------- */
-// Basic utility classes
-
-fieldset {
-    &.mzp-u-inline {
-        margin-bottom: 0;
-    }
-}
-
-legend {
-    .mzp-u-inline & {
-        @include form-label();
-    }
-}
-
-label {
-    &.mzp-u-inline {
-        @include bidi(((padding, 0 $spacing-sm 0 0, 0 0 0 $spacing-sm),));
-        display: inline;
-    }
-}
-
-.mzp-c-fieldnote {
-    @include text-body-sm;
-    display: block;
-    font-weight: normal;
-
-    .mzp-is-error & {
-        color: $form-red;
-    }
-
-    .mzp-c-button + & {
-        margin-top: $spacing-sm * -1;
-    }
-}
-
-
-/* -------------------------------------------------------------------------- */
-// Errors
-
-.mzp-c-form-errors {
-    background: $color-yellow-50;
-    border: 2px solid $color-yellow-60;
-    color: $color-black;
-    margin: 0 0 1em;
-    padding: $spacing-sm $spacing-md;
-
-    ul {
-        margin-bottom: 0;
-    }
-
-    li {
-        margin-bottom: .5em;
-    }
-}
-
-.mzp-is-error {
-    color: $form-red;
-
-    select,
-    input[type='checkbox'],
-    input[type='radio'] {
-        box-shadow: 0 0 0 2px $color-red-50;
-    }
-
-}
-
-
-/* -------------------------------------------------------------------------- */
 // Select
-
 // with thanks to https://www.filamentgroup.com/lab/select-css.html
+
 select {
     @include appearance(none);
     @include border-box;
@@ -436,4 +361,72 @@ select {
     option {
         font-weight: normal;
     }
+}
+
+
+/* -------------------------------------------------------------------------- */
+// Basic utility classes
+
+fieldset {
+    &.mzp-u-inline {
+        margin-bottom: 0;
+    }
+}
+
+legend {
+    .mzp-u-inline & {
+        @include form-label();
+    }
+}
+
+label {
+    &.mzp-u-inline {
+        @include bidi(((padding, 0 $spacing-sm 0 0, 0 0 0 $spacing-sm),));
+        display: inline;
+    }
+}
+
+.mzp-c-fieldnote {
+    @include text-body-sm;
+    display: block;
+    font-weight: normal;
+
+    .mzp-is-error & {
+        color: $form-red;
+    }
+
+    .mzp-c-button + & {
+        margin-top: $spacing-sm * -1;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+// Errors
+
+.mzp-c-form-errors {
+    background: $color-yellow-50;
+    border: 2px solid $color-yellow-60;
+    color: $color-black;
+    margin: 0 0 1em;
+    padding: $spacing-sm $spacing-md;
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    li {
+        margin-bottom: .5em;
+    }
+}
+
+.mzp-is-error {
+    color: $form-red;
+
+    select,
+    input[type='checkbox'],
+    input[type='radio'] {
+        box-shadow: 0 0 0 2px $color-red-50;
+    }
+
 }
