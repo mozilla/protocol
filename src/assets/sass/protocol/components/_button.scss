@@ -7,7 +7,7 @@
 
 @mixin default-states {
     &:focus {
-        border-color: $focus-border-color;
+        border-color: $button-border-color-focus;
         box-shadow: $field-focus-ring;
     }
 
@@ -27,7 +27,7 @@
 
 @mixin default-states-dark {
     &:focus {
-        border-color: $focus-border-color;
+        border-color: $button-border-color-focus;
         box-shadow: $field-focus-ring-dark;
     }
 
@@ -47,7 +47,7 @@
 
 @mixin product-states {
     &:focus {
-        border-color: $focus-border-color;
+        border-color: $button-border-color-focus;
         box-shadow: $field-focus-ring;
     }
 
@@ -88,7 +88,7 @@ a.mzp-c-button {
 
     &:focus {
         box-shadow: $field-focus-ring;
-        border-color: $focus-border-color;
+        border-color: $button-border-color-focus;
         outline: none;
     }
 
@@ -222,7 +222,7 @@ a.mzp-c-button {
         color: $color-marketing-gray-70;
 
         &:focus {
-            border-color: $focus-border-color;
+            border-color: $button-border-color-focus;
         }
 
         &:hover {
@@ -244,7 +244,7 @@ a.mzp-c-button {
             color: $color-white;
 
             &:focus {
-                border-color: $focus-border-color;
+                border-color: $button-border-color-focus;
             }
 
             &:hover {
