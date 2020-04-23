@@ -405,28 +405,23 @@ label {
 // Errors
 
 .mzp-c-form-errors {
-    background: $color-yellow-50;
-    border: 2px solid $color-yellow-60;
-    color: $color-black;
-    margin: 0 0 1em;
-    padding: $spacing-sm $spacing-md;
+    @include light-links;
+    background-color: $form-red;
+    border-radius: $field-border-radius;
+    color: $color-white;
+    padding: $spacing-sm;
+    margin-bottom: $spacing-xl;
 
-    ul {
+    :last-child {
         margin-bottom: 0;
     }
 
     li {
-        margin-bottom: .5em;
+        margin-bottom: $label-v-spacing;
     }
-}
 
-.mzp-is-error {
-    color: $form-red;
-
-    select,
     input[type='checkbox'],
     input[type='radio'] {
         box-shadow: 0 0 0 2px $color-red-50;
     }
-
 }
