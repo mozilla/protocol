@@ -45,12 +45,12 @@ Example:
 </div>
 ```
 
-Names should be semantically meaningful, descriptive of the element's content,
-purpose, or function, not its presentation.
+Component names should be semantically meaningful, descriptive of the element's content,
+purpose, or function, not only its presentation.
 
 ```scss
 // NO - Presentational
-.mzp-c-box { ... }
+.mzp-c-outline { ... }
 .mzp-c-button-blue { ... }
 
 // YES - Meaningful
@@ -63,7 +63,28 @@ by `l-` and `u-`) which you should only use when necessary and practical.
 In most cases there will be an equivalent SCSS mixin that may be preferable to
 adding presentational classes in your markup.
 
-## Resources
+### Sizes
+
+We use a "T-shirt" convention when we need to describe sizes, e.g. "lg" for large
+and "sm" for small. In this t-shirt scale system, the default should be the medium
+"md" size and you can scale up or down from there.
+
+```scss
+.mzp-t-size-2xl { ... }
+.mzp-t-size-xl { ... }
+.mzp-t-size-lg { ... }
+.mzp-t-size-md { ... }
+.mzp-t-size-sm { ... }
+.mzp-t-size-xs { ... }
+.mzp-t-size-2xs { ... }
+```
+
+Note that when we need mulitple Xes we opt for a numeral. This avoids confusion or
+ambuguity in the event we need to reference some extreme size. "5xl" looks better
+than "xxxxxl".
+
+
+### Resources
 
 * [Scalable and Modular Architechture for CSS (SMACSS) - Jonathan Snook](https://smacss.com/book/)
 * [CSS Architecture for Design Systems - Brad Frost](http://bradfrost.com/blog/post/css-architecture-for-design-systems/)

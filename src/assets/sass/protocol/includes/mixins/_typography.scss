@@ -3,19 +3,22 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
+//* -------------------------------------------------------------------------- */
 // Font families
 @mixin font-base {
-    font-family: $font-base-family;
+    font-family: $font-stack-base;
 }
 
 @mixin font-mozilla {
-    font-family: $font-zilla-slab;
+    font-family: $font-stack-mozilla;
 }
 
 @mixin font-firefox {
-    font-family: $font-metropolis;
+    font-family: $font-stack-firefox;
 }
 
+
+//* -------------------------------------------------------------------------- */
 // A mixin to output font-size in rems with a px fallback for old browsers.
 // Declare sizes in pixels for ease and clarity, the mixin does the math.
 // Requires: remify(), pixify() - defined in includes/functions.scss.
@@ -36,113 +39,131 @@
 }
 
 
+//* -------------------------------------------------------------------------- */
 // Consistent font sizes. Avoid sizing text arbitrarily and use this
 // set of predefined sizes. Sizes adapt at common breakpoints, and
 // there's some redundancy at smaller sizes because we don't want things
 // getting too tiny.
+//
 // Example usage:
 //  .title { @include text-title-xl; }
 //  .subtitle { @include text-title-lg; }
 //  .intro { @include text-body-lg; }
 
-$text-body-line-height: $font-base-line-height;
-$text-title-line-height: 1.1;
-
-// display copy: headings, blockquotes, other fancy stuff
-@mixin text-title-xxl { // Use this one sparingly.
-    @include font-size(48px);
-    line-height: $text-title-line-height;
+@mixin text-title-2xl {
+    @include font-size(type-scale('title-xl-size'));
+    line-height: type-scale('title-xl-line-height');
 
     @media #{$mq-md} {
-        @include font-size(64px);
+        @include font-size(type-scale('title-2xl-size'));
+        line-height: type-scale('title-2xl-line-height');
     }
 }
 
 @mixin text-title-xl {
-    @include font-size(40px);
-    line-height: $text-title-line-height;
+    @include font-size(type-scale('title-lg-size'));
+    line-height: type-scale('title-lg-line-height');
 
     @media #{$mq-md} {
-        @include font-size(56px);
+        @include font-size(type-scale('title-xl-size'));
+        line-height: type-scale('title-xl-line-height');
     }
 }
 
 @mixin text-title-lg {
-    @include font-size(32px);
-    line-height: $text-title-line-height;
+    @include font-size(type-scale('title-md-size'));
+    line-height: type-scale('title-md-line-height');
 
     @media #{$mq-md} {
-        @include font-size(48px);
+        @include font-size(type-scale('title-lg-size'));
+        line-height: type-scale('title-lg-line-height');
     }
 }
 
 @mixin text-title-md {
-    @include font-size(24px);
-    line-height: $text-title-line-height;
+    @include font-size(type-scale('title-sm-size'));
+    line-height: type-scale('title-sm-line-height');
 
     @media #{$mq-md} {
-        @include font-size(40px);
+        @include font-size(type-scale('title-md-size'));
+        line-height: type-scale('title-md-line-height');
     }
 }
 
 @mixin text-title-sm {
-    @include font-size(21px);
-    line-height: $text-title-line-height;
+    @include font-size(type-scale('title-xs-size'));
+    line-height: type-scale('title-xs-line-height');
 
     @media #{$mq-md} {
-        @include font-size(32px);
+        @include font-size(type-scale('title-sm-size'));
+        line-height: type-scale('title-sm-line-height');
     }
 }
 
 @mixin text-title-xs {
-    @include font-size(18px);
-    line-height: $text-title-line-height;
+    @include font-size(type-scale('title-2xs-size'));
+    line-height: type-scale('title-2xs-line-height');
 
     @media #{$mq-md} {
-        @include font-size(24px);
+        @include font-size(type-scale('title-xs-size'));
+        line-height: type-scale('title-xs-line-height');
     }
 }
 
-@mixin text-title-xxs {
-    @include font-size(16px);
-    line-height: $text-title-line-height;
+@mixin text-title-2xs {
+    @include font-size(type-scale('title-3xs-size'));
+    line-height: type-scale('title-3xs-line-height');
+
+    @media #{$mq-md} {
+        @include font-size(type-scale('title-2xs-size'));
+        line-height: type-scale('title-2xs-line-height');
+    }
 }
 
-// backwards compatibility
+@mixin text-title-3xs {
+    @include font-size(type-scale('title-3xs-size'));
+    line-height: type-scale('title-3xs-line-height');
+}
 
+
+// body copy
+@mixin text-body-xl {
+    @include font-size(type-scale('body-xl-size'));
+    line-height: type-scale('body-line-height');
+}
+
+@mixin text-body-lg {
+    @include font-size(type-scale('body-lg-size'));
+    line-height: type-scale('body-line-height');
+}
+
+@mixin text-body-md {
+    @include font-size(type-scale('body-md-size'));
+    line-height: type-scale('body-line-height');
+}
+
+@mixin text-body-sm {
+    @include font-size(type-scale('body-sm-size'));
+    line-height: type-scale('body-line-height');
+}
+
+@mixin text-body-xs {
+    @include font-size(type-scale('body-xs-size'));
+    line-height: type-scale('body-line-height');
+}
+
+
+// Aliases for backwards compatibility
+$text-body-line-height: type-scale('body-line-height');
+$text-title-line-height: type-scale('title-md-line-height');
 $text-display-line-height: $text-title-line-height;
-@mixin text-display-xxl { @include text-title-xxl; }
+@mixin text-display-xxl { @include text-title-2xl; }
 @mixin text-display-xl { @include text-title-xl; }
 @mixin text-display-lg { @include text-title-lg; }
 @mixin text-display-md { @include text-title-md; }
 @mixin text-display-sm { @include text-title-sm; }
 @mixin text-display-xs { @include text-title-xs; }
-@mixin text-display-xxs { @include text-title-xxs; }
-
-// body copy
-@mixin text-body-lg {
-    @include font-size(18px);
-    line-height: $text-body-line-height;
-}
-
-@mixin text-body-md {
-    @include font-size(16px);
-    line-height: $text-body-line-height;
-}
-
-@mixin text-body-sm {
-    @include font-size(14px);
-    line-height: $text-body-line-height;
-}
-
-@mixin text-body-xs {
-    @include font-size(12px);
-    line-height: $text-body-line-height;
-}
-
-@mixin text-body-cta {
-    @include font-size(16px);
-    line-height: $text-body-line-height;
-}
+@mixin text-display-xxs { @include text-title-2xs; }
+@mixin text-body-cta { @include text-body-md; }
 
 

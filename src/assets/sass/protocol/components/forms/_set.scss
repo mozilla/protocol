@@ -5,13 +5,10 @@
 @import '../../includes/lib';
 @import '../../includes/forms/lib';
 
-/*
 
-    a component to group multiple form fields or choices together
-    - you probably want to add this on a fieldset element
-    - pairs well with a form-subheading
-
-*/
+// a component to group multiple form fields or choices together
+// - you probably want to add this on a fieldset element
+// - pairs well with a form-subheading
 
 .mzp-c-field-set {
     // field-set gets its bottom spacing from the last item inside it

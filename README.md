@@ -30,7 +30,7 @@ Alternatively, you can also [download the latest release](https://github.com/moz
 
 Once installed, the relevant CSS and JS files will be available in your project under `./node_modules/@mozilla-protocol/core/`.
 
-The core CSS file is bundled as `protocol.css`, which contains styling for things such as basic elements and typography. Component and layout CSS is bundled as `protocol-extra.scss` for convenience.
+The core CSS file is bundled as `protocol.css`, which contains styling for things such as basic elements and typography. Component and layout CSS is bundled as `protocol-components.scss` for convenience.
 
 **Note**: The original source (.scss) files are also included in the published package. You may want to consider compiling your own CSS to include only what you need for each page of your website, in order to further optimize for performance.
 

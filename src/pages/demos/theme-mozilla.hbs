@@ -1,0 +1,56 @@
+---
+title: Mozilla Theme
+layout: blank
+styles:
+  - theme-mozilla
+---
+
+{{#with (data "specimens")}}
+<div class="mzp-l-content mzp-t-content-md">
+  <h1 class="title">Mozilla theme</h1>
+
+  <p class="background-alt">Secondary background color</p>
+
+  <p>Body text including a <a href="https://example.com">normal link</a>. {{ sentence }}</p>
+
+  <p class="text-alt">Secondary text color</p>
+
+  <p><a class="mzp-c-cta-link" href="https://example.com">CTA link</a></p>
+
+  <p>
+    <button class="mzp-c-button mzp-t-md">Button</button>
+    <a href="#" class="mzp-c-button mzp-t-secondary mzp-t-md">Button</a>
+    <button class="mzp-c-button mzp-t-product mzp-t-lg">Button</button>
+    <a href="#" class="mzp-c-button mzp-t-product mzp-t-secondary mzp-t-lg">Button</a>
+    <button class="mzp-c-button mzp-t-neutral">Button</button>
+  </p>
+
+  <div class="background-inverse">
+    <p>Inverse colors.</p>
+    <p>
+      <button class="mzp-c-button mzp-t-md mzp-t-dark">Button</button>
+      <a href="#" class="mzp-c-button mzp-t-secondary mzp-t-md mzp-t-dark">Button</a>
+      <button class="mzp-c-button mzp-t-product mzp-t-lg mzp-t-dark">Button</button>
+      <a href="#" class="mzp-c-button mzp-t-product mzp-t-secondary mzp-t-lg mzp-t-dark">Button</a>
+      <button class="mzp-c-button mzp-t-neutral mzp-t-dark">Button</button>
+    </p>
+  </div>
+
+
+  <hr>
+  <p>Type scale</p>
+  <h1>Title 2XL {{heading}}</h1>
+  <h2>Title XL {{heading}}</h2>
+  <h3>Title LG {{heading}}</h3>
+  <h4>Title MD {{heading}}</h4>
+  <h5>Title SM {{heading}}</h5>
+  <h6>Title XS {{heading}}</h6>
+  <h6 class="mzp-u-title-2xs">Title 2XS {{heading}}</h6>
+
+  <p class="body-xl"><b>Body XL</b> {{sentence}}</p>
+  <p class="body-lg"><b>Body LG</b> {{sentence}}</p>
+  <p class="body-md"><b>Body MD</b> {{sentence}}</p>
+  <p class="body-sm"><b>Body SM</b> {{sentence}}</p>
+  <p class="body-xs"><b>Body XS</b> {{sentence}}</p>
+</div>
+{{/with}}

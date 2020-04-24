@@ -9,12 +9,9 @@
 }
 
 .mzp-c-menu-list-title {
+    font-family: get-theme('button-font-family');
     font-size: inherit;
-
-    .mzp-t-firefox .mzp-t-cta & {
-        @include font-firefox;
-        font-weight: bold;
-    }
+    font-weight: bold;
 }
 
 .mzp-c-menu-list-list {
@@ -61,7 +58,7 @@
 }
 
 
-/* ---- */
+//* ---- */
 // JS init
 
 //TODO: hide menu if JS enabled

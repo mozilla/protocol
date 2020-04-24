@@ -4,9 +4,8 @@
 
 @import '../includes/lib';
 
-/* form */
+// Form
 .mzp-c-newsletter-form {
-
     input[type='email'],
     select {
         width: 100%;
@@ -38,7 +37,6 @@
 }
 
 
-/* thanks */
 // Hide thank you message
 .mzp-c-newsletter-thanks {
     @include hidden;
@@ -51,7 +49,7 @@
     @include hidden;
 }
 
-/* form wrapper with image */
+// Form wrapper with image
 .mzp-c-newsletter {
     margin: 0 auto $spacing-lg;
     max-width: $content-sm;

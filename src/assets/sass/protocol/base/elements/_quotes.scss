@@ -9,13 +9,15 @@ blockquote {
     @include text-title-sm;
     border-color: $color-marketing-gray-20;
     border-style: solid;
+    color: get-theme('title-text-color');
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
     margin: $spacing-lg auto;
     padding: $spacing-sm $spacing-lg;
-    font-weight: bold;
 
     cite {
         @include text-title-xs;
-        color: $color-marketing-gray-70;
+        color: get-theme('body-text-color-alt');
 
         &:before {
             content: '— ';
@@ -24,16 +26,5 @@ blockquote {
 
     & > :last-child {
         margin-bottom: 0;
-    }
-
-    .mzp-t-firefox &,
-    &.mzp-t-firefox {
-        @include font-firefox;
-        color: $color-ink-80;
-    }
-
-    &.mzp-t-mozilla,
-    .mzp-t-mozilla & {
-        @include font-mozilla;
     }
 }

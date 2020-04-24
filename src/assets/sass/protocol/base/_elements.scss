@@ -2,7 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+// Reset first
 @import 'elements/reset';
+
+// Sorted alphabetically
 @import 'elements/details';
 @import 'elements/document';
 @import 'elements/forms';
@@ -11,4 +15,17 @@
 @import 'elements/quotes';
 @import 'elements/sections';
 @import 'elements/tables';
-@import 'elements/typography';
+@import 'elements/titles';
+
+
+p,
+ul,
+ol,
+dl,
+table {
+    margin: 0 0 1.25em;
+}
+
+code {
+    font-size: .875em;
+}

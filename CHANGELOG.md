@@ -18,7 +18,24 @@
 
 ## Features
 
+* **css:** (breaking) Implement brand themes. (#447)
+* **css:** Update type scale(s) (#410)
 * **css:** Add sticky promo component (#603)
+
+## Migration Tips
+
+* xxl and xxs font size mixins are renamed to 2xl and 2xs respectively. Replace all instances.
+  * `text-title-xxl` changes to `text-title-2xl`
+  * `text-title-xxs` changes to `text-title-2xs`
+* xxl and xxs title utility classes are renamed to 2xl and 2xs respectively. Replace all instances in HTML (also consider replacing utility classes in HTML with the equivalent mixins in Sass/SCSS).
+  * `mzp-u-title-xxl` changes to `mzp-u-title-2xl`
+  * `mzp-u-title-xxs` changes to `mzp-u-title-2xs`
+* `protocol-extra.scss` is renamed to `protocol-components.scss`
+* The variables `$font-metropolis`, `$font-zilla-slab`, and `$font-inter` are deprecated in favor of design tokens `$font-stack-firefox`, `$font-stack-mozilla`, and `$font-stack-base` respectively.
+  * `$font-metropilis` changes to `$font-stack-firefox`
+  * `$font-zilla-slab` changes to `$font-stack-mozilla`
+  * `$font-inter` changes to `$font-stack-base`
+
 
 # 12.0.1
 
