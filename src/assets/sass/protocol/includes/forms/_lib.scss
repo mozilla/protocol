@@ -55,7 +55,7 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
 // mixins
 // use padding as much as possible, margins don't collapse on form elements
 
-@mixin form-label() {
+@mixin field-label() {
     @include text-body-sm;
     display: block;
     font-weight: bold;

@@ -121,7 +121,7 @@ legend {
 }
 
 label {
-    @include form-label();
+    @include field-label();
     color: $form-text;
 }
 
@@ -392,7 +392,7 @@ fieldset {
 
 legend {
     .mzp-u-inline & {
-        @include form-label();
+        @include field-label();
     }
 }
 

@@ -245,3 +245,22 @@
     }
 
 }
+
+// info
+.mzp-c-choice-info {
+    @include form-info;
+
+    .mzp-c-choices + & {
+        margin-top: $field-v-spacing * -1 + $info-v-spacing;
+    }
+
+    .mzp-c-choice-label + & {
+        padding-top: $info-v-spacing;
+        @include bidi(((padding-left, $choice-spacing, padding-right, 0),));
+    }
+
+    .mzp-c-choice + & {
+        margin-top: $label-v-spacing * -1;
+        @include bidi(((padding-left, $choice-spacing, padding-right, 0),));
+    }
+}
