@@ -267,14 +267,14 @@ a.mzp-c-button {
 
 .mzp-c-button-download-container {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: $field-v-spacing;
     display: inline-block;
 }
 
 .mzp-c-button-download-privacy-link {
     @include text-body-xs;
     display: block;
-    margin-top: $spacing-md;
+    margin-top: $info-v-spacing;
 
     a:link,
     a:visited {

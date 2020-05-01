@@ -1,0 +1,70 @@
+---
+name: Button Container
+description: |
+  The `.mzp-c-button-container` class can be used around a group of buttons. It applies a flexbox context and the default   form spacing. Modifier classes can then be added to change the layout.
+order: 1
+---
+<div class="mzp-c-form">
+  <h2 class="mzp-u-title-xs">Default</h2>
+  <div class="mzp-c-button-container">
+    {{#embed "patterns.atoms.buttons.primary" }}{{#content "content"}}Primary{{/content}}{{/embed}}
+    {{#embed "patterns.atoms.buttons.secondary" }}{{#content "content"}}Secondary{{/content}}{{/embed}}
+    <p class="mzp-c-button-info">More information.</p>
+  </div>
+
+  <h2 class="mzp-u-title-xs"><code>mzp-l-h-end</code> Align buttons to the right</h2>
+  <div class="mzp-c-button-container mzp-l-h-end">
+    {{#embed "patterns.atoms.buttons.primary" }}{{#content "content"}}Primary{{/content}}{{/embed}}
+    {{#embed "patterns.atoms.buttons.secondary" }}{{#content "content"}}Secondary{{/content}}{{/embed}}
+    <p class="mzp-c-button-info">More information.</p>
+  </div>
+
+  <h2 class="mzp-u-title-xs"><code>mzp-l-h-center</code> Align buttons in the center</h2>
+  <div class="mzp-c-button-container mzp-l-h-center">
+    {{#embed "patterns.atoms.buttons.primary" }}{{#content "content"}}Primary{{/content}}{{/embed}}
+    {{#embed "patterns.atoms.buttons.secondary" }}{{#content "content"}}Secondary{{/content}}{{/embed}}
+    <p class="mzp-c-button-info">More information.</p>
+  </div>
+
+  <h2 class="mzp-u-title-xs"><code>mzp-l-h-between</code> Space buttons appart evenly, starting from the edges of the container</h2>
+  <div class="mzp-c-button-container mzp-l-h-between">
+    {{#embed "patterns.atoms.buttons.primary" }}{{#content "content"}}Primary{{/content}}{{/embed}}
+    {{#embed "patterns.atoms.buttons.secondary" }}{{#content "content"}}Secondary{{/content}}{{/embed}}
+    <p class="mzp-c-button-info">More information.</p>
+  </div>
+
+  <h2 class="mzp-u-title-xs"><code>mzp-l-column</code> Stack the buttons in one column</h2>
+  <div class="mzp-c-button-container mzp-l-column">
+    {{#embed "patterns.atoms.buttons.primary" }}{{#content "content"}}Primary{{/content}}{{/embed}}
+    {{#embed "patterns.atoms.buttons.secondary" }}{{#content "content"}}Secondary{{/content}}{{/embed}}
+    <p class="mzp-c-button-info">More information.</p>
+  </div>
+
+  <h2 class="mzp-u-title-xs"><code>mzp-l-column-xs-sm</code> Stack the buttons in one column on xs and sm screens</h2>
+  <div class="mzp-c-button-container mzp-l-column-xs-sm">
+    {{#embed "patterns.atoms.buttons.primary" }}{{#content "content"}}Primary{{/content}}{{/embed}}
+    {{#embed "patterns.atoms.buttons.secondary" }}{{#content "content"}}Secondary{{/content}}{{/embed}}
+    <p class="mzp-c-button-info">More information.</p>
+  </div>
+
+  <h2 class="mzp-u-title-xs"><code>mzp-l-strech</code> Strech the buttons to fill the container</h2>
+  <div class="mzp-c-button-container mzp-l-strech mzp-l-h-center">
+    {{#embed "patterns.atoms.buttons.primary" }}{{#content "content"}}Primary{{/content}}{{/embed}}
+    {{#embed "patterns.atoms.buttons.secondary" }}{{#content "content"}}Secondary{{/content}}{{/embed}}
+    <p class="mzp-c-button-info">You can combine <code>mzp-l-strech</code> with <code>mzp-l-column-on-xs-sm</code> to switch to a single column on mobile.</p>
+  </div>
+
+  <h2 class="mzp-u-title-xs"><code>mzp-l-reversed-on-lg-xl</code> Reverse the button order on lg and xl screens</h2>
+  <div class="mzp-c-button-container mzp-l-reversed-on-lg-xl mzp-l-h-end">
+    {{#embed "patterns.atoms.buttons.primary" }}{{#content "content"}}Primary{{/content}}{{/embed}}
+    {{#embed "patterns.atoms.buttons.secondary" }}{{#content "content"}}Secondary{{/content}}{{/embed}}
+    <p class="mzp-c-button-info">More information.</p>
+  </div>
+
+  <h2 class="mzp-u-title-xs">Reversed buttons with a different alignment option</h2>
+  <div class="mzp-c-button-container mzp-l-reversed-on-lg-xl mzp-l-h-between">
+    {{#embed "patterns.atoms.buttons.primary" }}{{#content "content"}}Primary{{/content}}{{/embed}}
+    {{#embed "patterns.atoms.buttons.secondary" }}{{#content "content"}}Secondary{{/content}}{{/embed}}
+    <p class="mzp-c-button-info">More information.</p>
+  </div>
+</div>
