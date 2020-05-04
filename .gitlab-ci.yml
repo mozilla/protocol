@@ -3,7 +3,7 @@ build-sync-stage:
     - master
     - gitlab-stage
   tags:
-    - oregon-b-shell
+    - mozmeao
   script:
     - bin/build.sh stage
     - cd dist
@@ -13,7 +13,7 @@ build-sync-prod:
   only:
     - prod
   tags:
-    - oregon-b-shell
+    - mozmeao
   script:
     - bin/build.sh prod
     - cd dist
