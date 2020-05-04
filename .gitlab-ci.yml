@@ -7,7 +7,7 @@ build-sync-stage:
   script:
     - bin/build.sh stage
     - cd dist
-    - aws s3 sync . s3://mozilla-protocol-stage --acl public-read --delete --profile protocol
+    - aws s3 sync . s3://mozilla-protocol-stage --acl public-read --delete
 
 build-sync-prod:
   only:
@@ -17,4 +17,4 @@ build-sync-prod:
   script:
     - bin/build.sh prod
     - cd dist
-    - aws s3 sync . s3://mozilla-protocol --acl public-read --delete --profile protocol
+    - aws s3 sync . s3://mozilla-protocol --acl public-read --delete 
