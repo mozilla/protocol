@@ -159,8 +159,9 @@
 
 // not the most up to date method, but works in IE7
 @mixin image-replaced {
+    direction: ltr;
     overflow: hidden;
-    text-indent: 120%; // extra 20% to account for fancy fonts that may overhang
+    text-indent: -9999px;
     white-space: nowrap;
 }
 
