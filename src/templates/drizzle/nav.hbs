@@ -11,16 +11,22 @@
       <img class="protosite-nav-main-mozlogo" src="{{@root.baseurl}}/assets/protocol/protocol/img/logos/mozilla/white.svg" width="100" alt="Mozilla">
     </a>
 
-    <a class="protosite-js-nav-toggle" href="#nav">Menu</a>
+     <a class="protosite-js-nav-toggle" href="#nav">
+          <div class="hamburger-container">
+              <div class="hamburger"></div>
+              <div class="hamburger"></div>
+              <div class="hamburger"></div>
+          </div>
+      </a>
   </header>
-
+  <hr>
   <div class="protosite-nav-main-menu" id="protosite-nav-main-menu">
     <ul>
       <li class="protosite-nav-main-item">
         <a href="{{@root.baseurl}}">Home</a>
       </li>
     </ul>
-
+<hr>
     {{!-- Fundamentals --}}
     <h4 class="protosite-nav-menu-title">Fundamentals</h4>
     <ul>
@@ -30,7 +36,7 @@
         </li>
       {{/each}}
     </ul>
-
+<hr>
     {{!-- Atom Patterns --}}
     <h4 class="protosite-nav-menu-title">Atoms</h4>
     <ul>
@@ -40,7 +46,7 @@
         </li>
       {{/each}}
     </ul>
-
+<hr>
     {{!-- Molecule Patterns --}}
     {{#if (collections "molecules")}}
     <h4 class="protosite-nav-menu-title">Molecules</h4>
@@ -52,7 +58,7 @@
       {{/each}}
     </ul>
     {{/if}}
-
+<hr>
     {{!-- Organism Patterns --}}
     {{#if (collections "organisms")}}
     <h4 class="protosite-nav-menu-title">Organisms</h4>
@@ -64,7 +70,7 @@
       {{/each}}
     </ul>
     {{/if}}
-
+<hr>
     {{!-- Template Patterns --}}
     {{#if (collections "templates")}}
     <h4 class="protosite-nav-menu-title">Templates</h4>
@@ -76,7 +82,7 @@
       {{/each}}
     </ul>
     {{/if}}
-
+<hr>
     {{!-- Other pages --}}
     <h4 class="protosite-nav-menu-title">Other Stuff</h4>
     <ul>

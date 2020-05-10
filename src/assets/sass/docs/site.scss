@@ -4,6 +4,18 @@
 
 @import '../protocol/includes/lib';
 
+//Menu icon for responsive version
+.hamburger{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+  }
+
+  .hamburger-container{
+      margin-top:10px;
+      margin-left: 5px;
+  }
 
 .protosite-main {
     padding: 20px 4vw;
@@ -26,7 +38,7 @@
 
         &:hover,
         &:focus {
-            color: #eee;
+            color: black;
             text-decoration: underline;
         }
 
@@ -78,7 +90,18 @@
 }
 
 .protosite-nav-main-item {
+   
     margin: 0 0 .25em;
+    list-style-type:none;
+    color:#5a5b5b;
+    padding:10px;
+    border-bottom:1px solid #272a2c;
+    border-top:1px solid #1c1f21;
+    overflow: auto;
+    cursor:pointer;
+    
+   
+
 }
 
 .js .protosite-nav-main-menu {
