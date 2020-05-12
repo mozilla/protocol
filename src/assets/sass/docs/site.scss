@@ -11,6 +11,51 @@
     @media #{$mq-md} {
         padding-left: 24vw;
     }
+
+    pre:not(.protosite-pattern-code) {
+        margin: 0 0 2em;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        caption {
+            @include bidi(((text-align, left, right),));
+            margin-bottom: .25em;
+            width: 100%;
+        }
+
+        th,
+        td {
+            @include bidi(((text-align, left, right),));
+            border-top: 1px solid rgba(0, 0, 0, .2);
+            padding: .5em 10px;
+            text-align: left;
+        }
+
+        thead th,
+        thead td {
+            border-top: 0;
+            padding-top: 0;
+        }
+    }
+
+    > h1 {
+        @include text-title-lg;
+    }
+
+    > h2 {
+        @include text-title-md;
+    }
+
+    > h3 {
+        @include text-title-sm;
+    }
+
+    > h4 {
+        @include text-title-xs;
+    }
 }
 
 // Nav sidebar
