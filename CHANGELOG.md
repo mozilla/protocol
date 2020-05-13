@@ -2,6 +2,7 @@
 
 ## Features
 
+* **tokens:** update @mozilla-protocol/tokens to 5.0.5
 * **css:** Tweak form error styles (#508)
 * **css:** (breaking) Add styled text inputs (#430)
 * **css:** Button style updates. (#429)
@@ -18,6 +19,8 @@
 
 * Styled form inputs now include bottom spacing. If you have added this spacing to your forms in another way (for example, wrapping them in paragraph tags) you could end up with double spacing.
 * Find and replace `mzp-t-small` to `mzp-t-md` on buttons.
+* Content sizes have changed slightly, see https://github.com/mozilla/protocol-tokens/pull/81/files
+* The value of `$layout-2xl` increased
 
 # 11.0.2
 
