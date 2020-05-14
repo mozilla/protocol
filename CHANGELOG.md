@@ -2,6 +2,8 @@
 
 ## Features
 
+* **css:** Update form spacing and add form layout components (#508)
+* **css:** Add form dark theme (#508)
 * **css:** Add styled checkboxes and radio buttons (#439)
 * **tokens:** update @mozilla-protocol/tokens to 5.0.5
 * **css:** Tweak form error styles (#508)
