@@ -117,8 +117,10 @@
         height: .75rem;
         position: absolute;
         top: .19rem;
-        transform: rotate(45deg);
-        transform-origin: bottom right;
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        -ms-transform-origin: bottom right;
+            transform-origin: bottom right;
         width: .35rem;
     }
 
