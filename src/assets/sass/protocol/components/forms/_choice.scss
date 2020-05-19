@@ -60,172 +60,182 @@
 // control
 .mzp-c-choice-control {
 
-    // hide real controls
+    // position real controls
     &[type=checkbox],
     &[type=radio] {
         @include bidi(((left, 0, right, auto),));
         box-sizing: border-box;
-        height: $choice-height;
-        opacity: 0;
         position: absolute;
         top: 0;
-        width: $choice-height;
         z-index: 1;
     }
 
-    // recreate controls with CSS
-    // with thanks to https://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html
+    // IE8 and lower don't support some of this, but they also don't support media queries
+    // also the checked state doesn't print, so exclude special formating from print styles
+    @media screen {
 
-    &[type=checkbox] + label::before,
-    &[type=radio] + label::before {
-        @include bidi(((left, 0, right, auto),));
-        @include border-box;
-        background: $color-white;
-        border-radius: 2px;
-        border: $field-border;
-        content: '';
-        cursor: pointer;
-        display: block;
-        height: $choice-height;
-        position: absolute;
-        text-align: center;
-        top: 0;
-        width: $choice-height;
-    }
-
-    &[type=radio] + label::before {
-        border-radius: 100%;
-    }
-
-    // :checked styles
-
-    &[type=checkbox]:checked + label::before {
-        background-color: $choice-fill;
-        border-color: $choice-fill;
-    }
-
-    &[type=checkbox]:checked + label::after {
-        // checkmark is defined with rems so it scales on zoom
-        @include bidi((
-            (left, .03rem, auto),
-            (right, auto, .83rem),
-        ));
-        border-bottom: remify(3px) solid $color-white;
-        border-right: remify(3px) solid $color-white;
-        content: '';
-        display: block;
-        height: .75rem;
-        position: absolute;
-        top: .19rem;
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-        -ms-transform-origin: bottom right;
-            transform-origin: bottom right;
-        width: .35rem;
-    }
-
-    &[type=radio]:checked + label::before {
-        background-color: $choice-fill;
-        border-color: $choice-fill;
-        box-shadow: inset 0 0 0 .25em $color-white;
-    }
-
-    // hover
-
-    &[type=checkbox]:hover + label::before,
-    &[type=checkbox] + label:hover::before,
-    &[type=radio]:hover + label::before,
-    &[type=radio] + label:hover::before {
-        border-color: $field-border-color-hover;
-    }
-
-    // focus
-
-    &[type=checkbox]:focus + label::before,
-    &[type=radio]:focus + label::before {
-        border-color: $field-border-color-hover;
-        box-shadow: $field-focus-ring;
-    }
-
-    &[type=radio]:checked:focus + label::before {
-        border-color: $field-border-color-hover;
-        box-shadow: inset 0 0 0 .25em $color-white, $field-focus-ring;
-    }
-
-
-    // error
-
-    .mzp-is-error & {
-        &[type=checkbox] + label::before,
-        &[type=radio] + label::before {
-            border-color: $field-border-color-error;
+        // hide real controls
+        &[type=checkbox],
+        &[type=radio] {
+            height: $choice-height;
+            opacity: 0;
+            width: $choice-height;
         }
 
-        &[type=checkbox]:checked + label::before,
+        // recreate controls with CSS
+        // with thanks to https://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html
+
+        &[type=checkbox] + label::before,
+        &[type=radio] + label::before {
+            @include bidi(((left, 0, right, auto),));
+            @include border-box;
+            background: $color-white;
+            border-radius: 2px;
+            border: $field-border;
+            content: '';
+            cursor: pointer;
+            display: block;
+            height: $choice-height;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: $choice-height;
+        }
+
+        &[type=radio] + label::before {
+            border-radius: 100%;
+        }
+
+        // :checked styles
+
+        &[type=checkbox]:checked + label::before {
+            background-color: $choice-fill;
+            border-color: $choice-fill;
+        }
+
+        &[type=checkbox]:checked + label::after {
+            // checkmark is defined with rems so it scales on zoom
+            @include bidi((
+                (left, .03rem, auto),
+                (right, auto, .83rem),
+            ));
+            border-bottom: remify(3px) solid $color-white;
+            border-right: remify(3px) solid $color-white;
+            content: '';
+            display: block;
+            height: .75rem;
+            position: absolute;
+            top: .19rem;
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            -ms-transform-origin: bottom right;
+                transform-origin: bottom right;
+            width: .35rem;
+        }
+
         &[type=radio]:checked + label::before {
-            background-color: $field-border-color-error;
-            border-color: $field-border-color-error;
+            background-color: $choice-fill;
+            border-color: $choice-fill;
+            box-shadow: inset 0 0 0 .25em $color-white;
         }
 
         // hover
+
         &[type=checkbox]:hover + label::before,
         &[type=checkbox] + label:hover::before,
         &[type=radio]:hover + label::before,
         &[type=radio] + label:hover::before {
-            border-color: $field-border-color-error-hover;
+            border-color: $field-border-color-hover;
         }
 
         // focus
+
         &[type=checkbox]:focus + label::before,
         &[type=radio]:focus + label::before {
-            border-color: $field-border-color-error-hover;
-            box-shadow: $field-focus-ring-error;
+            border-color: $field-border-color-hover;
+            box-shadow: $field-focus-ring;
         }
 
         &[type=radio]:checked:focus + label::before {
-            box-shadow: inset 0 0 0 .25em $color-white, $field-focus-ring-error;
+            border-color: $field-border-color-hover;
+            box-shadow: inset 0 0 0 .25em $color-white, $field-focus-ring;
         }
-    }
 
-    // disabled
 
-    &[type=checkbox][disabled] + label::before,
-    &[type=radio][disabled] + label::before {
-        border-color: $field-border-color-disabled;
-    }
+        // error
 
-    &[type=checkbox][disabled]:checked + label::before {
-        background-color: $color-marketing-gray-10;
-        border-color: $field-border-color-disabled;
-    }
+        .mzp-is-error & {
+            &[type=checkbox] + label::before,
+            &[type=radio] + label::before {
+                border-color: $field-border-color-error;
+            }
 
-    &[type=checkbox][disabled]:checked + label::after {
-        border-bottom-color: $field-border-color-disabled;
-        border-right-color: $field-border-color-disabled;
-    }
+            &[type=checkbox]:checked + label::before,
+            &[type=radio]:checked + label::before {
+                background-color: $field-border-color-error;
+                border-color: $field-border-color-error;
+            }
 
-    &[type=radio][disabled]:checked + label::before {
-        background-color: $field-border-color-disabled;
-        border-color: $field-border-color-disabled;
-    }
+            // hover
+            &[type=checkbox]:hover + label::before,
+            &[type=checkbox] + label:hover::before,
+            &[type=radio]:hover + label::before,
+            &[type=radio] + label:hover::before {
+                border-color: $field-border-color-error-hover;
+            }
 
-    // disabled hover
-    &[type=checkbox][disabled]:hover + label::before,
-    &[type=checkbox][disabled] + label:hover::before,
-    &[type=radio][disabled]:hover + label::before,
-    &[type=radio][disabled] + label:hover::before {
-        border-color: $field-border-color-disabled;
-    }
+            // focus
+            &[type=checkbox]:focus + label::before,
+            &[type=radio]:focus + label::before {
+                border-color: $field-border-color-error-hover;
+                box-shadow: $field-focus-ring-error;
+            }
 
-    // disabled focus
-    &[type=checkbox][disabled]:focus + label::before,
-    &[type=radio][disabled]:focus + label::before {
-        border-color: $field-border-color-disabled;
-        box-shadow: $field-focus-ring-error;
-    }
+            &[type=radio]:checked:focus + label::before {
+                box-shadow: inset 0 0 0 .25em $color-white, $field-focus-ring-error;
+            }
+        }
 
-    &[type=radio][disabled]:checked:focus + label::before {
-        box-shadow: inset 0 0 0 .25em $color-white, $field-focus-ring;
+        // disabled
+
+        &[type=checkbox][disabled] + label::before,
+        &[type=radio][disabled] + label::before {
+            border-color: $field-border-color-disabled;
+        }
+
+        &[type=checkbox][disabled]:checked + label::before {
+            background-color: $color-marketing-gray-10;
+            border-color: $field-border-color-disabled;
+        }
+
+        &[type=checkbox][disabled]:checked + label::after {
+            border-bottom-color: $field-border-color-disabled;
+            border-right-color: $field-border-color-disabled;
+        }
+
+        &[type=radio][disabled]:checked + label::before {
+            background-color: $field-border-color-disabled;
+            border-color: $field-border-color-disabled;
+        }
+
+        // disabled hover
+        &[type=checkbox][disabled]:hover + label::before,
+        &[type=checkbox][disabled] + label:hover::before,
+        &[type=radio][disabled]:hover + label::before,
+        &[type=radio][disabled] + label:hover::before {
+            border-color: $field-border-color-disabled;
+        }
+
+        // disabled focus
+        &[type=checkbox][disabled]:focus + label::before,
+        &[type=radio][disabled]:focus + label::before {
+            border-color: $field-border-color-disabled;
+            box-shadow: $field-focus-ring-error;
+        }
+
+        &[type=radio][disabled]:checked:focus + label::before {
+            box-shadow: inset 0 0 0 .25em $color-white, $field-focus-ring;
+        }
     }
 
     // high contrast mode
@@ -245,7 +255,6 @@
             display: none !important; /* stylelint-disable-line declaration-no-important */
         }
     }
-
 }
 
 // info
