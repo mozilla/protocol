@@ -5,13 +5,21 @@
 // Import all the things!
 @import '../lib';
 
-/* forms
-- use padding as much as possible, margins don't collapse on form elements
-*/
 
+/* -------------------------------------------------------------------------- */
+// variables
+
+// colors
 $form-red: #D70022;
 $form-text: $color-marketing-gray-70;
-$field-border: 2px solid $color-marketing-gray-50;
+
+// fields
+$field-border-color: $color-marketing-gray-50;
+$field-border-color-hover: $color-link-hover;
+$field-border-color-error: $form-red;
+$field-border-color-error-hover: $color-red-80;
+$field-border-color-disabled: $color-marketing-gray-30;
+$field-border: 2px solid $field-border-color;
 $field-min-width: 300px;
 $field-border-radius: $border-radius-sm;
 $field-padding: $spacing-sm;
@@ -19,14 +27,35 @@ $field-h-spacing: $spacing-md;
 $field-v-spacing: $spacing-lg;
 $field-focus-ring: 0 0 0 2px rgba($color-blue-40, .5);
 $field-focus-ring-dark: 0 0 0 2px mix($color-blue-40, $color-white);
-$focus-border-color: #008aea;
+$field-focus-ring-error: 0 0 0 2px rgba($color-red-50, .5);
+
+// buttons
+$button-border-color-focus: #008aea;
+
+// label
 $label-v-spacing: $spacing-sm;
+
+// info
 $info-v-spacing: $spacing-md;
 $symbol-spacing: calc(1.5em + #{$spacing-sm * 2});
+
+//select
 $select-bg: linear-gradient(to bottom, $color-white 0%, $color-white 100%); // must keep gradient to avoid bugs
 $select-bg-disabled: linear-gradient(to bottom, $color-marketing-gray-10 0%, $color-marketing-gray-10 100%);
 
-@mixin form-label() {
+// choices
+$choice-height: remify(22px);
+$choice-spacing: remify(22px + $spacing-sm);
+$choice-fill: $color-link;
+$choice-fill-error: $form-red;
+$line-height-shim: 0.15em; // two elements with text appear to have more space between them than two block elements with solid edges, this shim is about equal to the distance between the top of the text and the edge of it's containing block
+
+
+/* -------------------------------------------------------------------------- */
+// mixins
+// use padding as much as possible, margins don't collapse on form elements
+
+@mixin field-label() {
     @include text-body-sm;
     display: block;
     font-weight: bold;

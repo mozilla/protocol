@@ -87,6 +87,16 @@ textarea {
     font: inherit; /* 2 */
 }
 
+/**
+* 1. Add the correct box sizing in IE 10.
+* 2. Remove the padding in IE 10.
+*/
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
 
 /* -------------------------------------------------------------------------- */
 // Element styles
@@ -111,8 +121,15 @@ legend {
 }
 
 label {
-    @include form-label();
+    @include field-label();
     color: $form-text;
+}
+
+
+/* check boxes and radio buttons */
+[type="checkbox"],
+[type="radio"] {
+    border-radius: $field-border-radius;
 }
 
 
@@ -137,7 +154,7 @@ input[type='url'] {
     }
 
     &:hover {
-        border-color: $color-link-hover;
+        border-color: $field-border-color-hover;
     }
 
     &:focus {
@@ -147,16 +164,16 @@ input[type='url'] {
     }
 
     .mzp-is-error & {
-        border-color: $form-red;
+        border-color: $field-border-color-error;
         box-shadow: none;
 
         &:hover {
-            border-color: $color-red-80;
+            border-color: $field-border-color-error-hover;
         }
 
         &:focus {
             border-color: $form-red;
-            box-shadow: 0 0 0 2px rgba($form-red, .5);
+            box-shadow: $field-focus-ring-error;
         }
     }
 
@@ -236,7 +253,7 @@ input[type='file'] {
     margin: 0 0 $field-v-spacing;
 
     &:hover {
-        border-color: $color-link-hover;
+        border-color: $field-border-color-hover;
     }
 
     &:focus {
@@ -246,16 +263,16 @@ input[type='file'] {
     }
 
     .mzp-is-error & {
-        border-color: $form-red;
+        border-color: $field-border-color-error;
         box-shadow: none;
 
         &:hover {
-            border-color: $color-red-80;
+            border-color: $field-border-color-error-hover;
         }
 
         &:focus {
             border-color: $form-red;
-            box-shadow: 0 0 0 2px rgba($form-red, .5);
+            box-shadow: $field-focus-ring-error;
         }
     }
 
@@ -316,7 +333,7 @@ select {
     }
 
     &:hover {
-        border-color: $color-link-hover;
+        border-color: $field-border-color-hover;
         background-image: $url-image-arrow-down-link-hover, $select-bg;
     }
 
@@ -329,16 +346,16 @@ select {
     }
 
     .mzp-is-error & {
-        border-color: $form-red;
+        border-color: $field-border-color-error;
         box-shadow: none;
 
         &:hover {
-            border-color: $color-red-80;
+            border-color: $field-border-color-error-hover;
         }
 
         &:focus {
             border-color: $form-red;
-            box-shadow: 0 0 0 2px rgba($form-red, .5);
+            box-shadow: $field-focus-ring-error;
         }
     }
 
@@ -375,7 +392,7 @@ fieldset {
 
 legend {
     .mzp-u-inline & {
-        @include form-label();
+        @include field-label();
     }
 }
 
@@ -419,9 +436,11 @@ label {
     li {
         margin-bottom: $label-v-spacing;
     }
+}
 
+.mzp-is-error {
     input[type='checkbox'],
     input[type='radio'] {
-        box-shadow: 0 0 0 2px $color-red-50;
+        box-shadow: $field-focus-ring-error;
     }
 }

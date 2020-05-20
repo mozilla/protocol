@@ -1,0 +1,277 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+@import '../../includes/forms/lib';
+
+// I'm collectivly calling radio buttons and checkboxes "choices"
+
+// parent wrapper if there are multiple choice elements together
+// optional if you do not want to group your choices
+.mzp-c-choices {
+    // the bottom spacing on these involves maths because the margins don't collapse on fieldsets
+    // normally I'd just remove the bottom margin on the :last-child
+    // but with inline elements we can't know how many are on the last line to remove the bottom margin
+    // the maths is done with padding instead of margin so there's consistant behaviour no matter what element the class is applied to
+    // so we strip the margins off
+    margin-bottom: 0;
+    padding-bottom: $field-v-spacing - $label-v-spacing;
+}
+
+// wrapper around the label and control
+.mzp-c-choice {
+    box-sizing: border-box;
+    clear: left;
+    margin-bottom: 0;
+    margin-top: $line-height-shim; // other labels have a bit of line height, mock that here for better vertical spacing
+    min-height: $choice-height;
+    padding-bottom: $field-v-spacing;
+    position: relative;
+
+    .mzp-c-choices & {
+        padding-bottom: $label-v-spacing;
+    }
+
+    .mzp-c-choices.mzp-l-choices-inline & {
+        display: inline-block;
+        padding-right: $field-h-spacing;
+        vertical-align: top;
+    }
+}
+
+// label
+.mzp-c-choice-label {
+    @include bidi(((padding-left, $choice-spacing, padding-right, 0),));
+    margin-bottom: 0;
+    padding-top: 3px;
+    padding-bottom: 0;
+    vertical-align: top;
+
+    .mzp-c-choices & {
+        font-weight: normal;
+    }
+
+    &.mzp-t-sm {
+        font-weight: normal;
+    }
+}
+
+// control
+.mzp-c-choice-control {
+
+    // position real controls
+    &[type=checkbox],
+    &[type=radio] {
+        @include bidi(((left, 0, right, auto),));
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    // IE8 and lower don't support some of this, but they also don't support media queries
+    // also the checked state doesn't print, so exclude special formating from print styles
+    @media screen {
+
+        // hide real controls
+        &[type=checkbox],
+        &[type=radio] {
+            height: $choice-height;
+            opacity: 0;
+            width: $choice-height;
+        }
+
+        // recreate controls with CSS
+        // with thanks to https://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html
+
+        &[type=checkbox] + label::before,
+        &[type=radio] + label::before {
+            @include bidi(((left, 0, right, auto),));
+            @include border-box;
+            background: $color-white;
+            border-radius: 2px;
+            border: $field-border;
+            content: '';
+            cursor: pointer;
+            display: block;
+            height: $choice-height;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: $choice-height;
+        }
+
+        &[type=radio] + label::before {
+            border-radius: 100%;
+        }
+
+        // :checked styles
+
+        &[type=checkbox]:checked + label::before {
+            background-color: $choice-fill;
+            border-color: $choice-fill;
+        }
+
+        &[type=checkbox]:checked + label::after {
+            // checkmark is defined with rems so it scales on zoom
+            @include bidi((
+                (left, .03rem, auto),
+                (right, auto, .83rem),
+            ));
+            border-bottom: remify(3px) solid $color-white;
+            border-right: remify(3px) solid $color-white;
+            content: '';
+            display: block;
+            height: .75rem;
+            position: absolute;
+            top: .19rem;
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            -ms-transform-origin: bottom right;
+                transform-origin: bottom right;
+            width: .35rem;
+        }
+
+        &[type=radio]:checked + label::before {
+            background-color: $choice-fill;
+            border-color: $choice-fill;
+            box-shadow: inset 0 0 0 .25em $color-white;
+        }
+
+        // hover
+
+        &[type=checkbox]:hover + label::before,
+        &[type=checkbox] + label:hover::before,
+        &[type=radio]:hover + label::before,
+        &[type=radio] + label:hover::before {
+            border-color: $field-border-color-hover;
+        }
+
+        // focus
+
+        &[type=checkbox]:focus + label::before,
+        &[type=radio]:focus + label::before {
+            border-color: $field-border-color-hover;
+            box-shadow: $field-focus-ring;
+        }
+
+        &[type=radio]:checked:focus + label::before {
+            border-color: $field-border-color-hover;
+            box-shadow: inset 0 0 0 .25em $color-white, $field-focus-ring;
+        }
+
+
+        // error
+
+        .mzp-is-error & {
+            &[type=checkbox] + label::before,
+            &[type=radio] + label::before {
+                border-color: $field-border-color-error;
+            }
+
+            &[type=checkbox]:checked + label::before,
+            &[type=radio]:checked + label::before {
+                background-color: $field-border-color-error;
+                border-color: $field-border-color-error;
+            }
+
+            // hover
+            &[type=checkbox]:hover + label::before,
+            &[type=checkbox] + label:hover::before,
+            &[type=radio]:hover + label::before,
+            &[type=radio] + label:hover::before {
+                border-color: $field-border-color-error-hover;
+            }
+
+            // focus
+            &[type=checkbox]:focus + label::before,
+            &[type=radio]:focus + label::before {
+                border-color: $field-border-color-error-hover;
+                box-shadow: $field-focus-ring-error;
+            }
+
+            &[type=radio]:checked:focus + label::before {
+                box-shadow: inset 0 0 0 .25em $color-white, $field-focus-ring-error;
+            }
+        }
+
+        // disabled
+
+        &[type=checkbox][disabled] + label::before,
+        &[type=radio][disabled] + label::before {
+            border-color: $field-border-color-disabled;
+        }
+
+        &[type=checkbox][disabled]:checked + label::before {
+            background-color: $color-marketing-gray-10;
+            border-color: $field-border-color-disabled;
+        }
+
+        &[type=checkbox][disabled]:checked + label::after {
+            border-bottom-color: $field-border-color-disabled;
+            border-right-color: $field-border-color-disabled;
+        }
+
+        &[type=radio][disabled]:checked + label::before {
+            background-color: $field-border-color-disabled;
+            border-color: $field-border-color-disabled;
+        }
+
+        // disabled hover
+        &[type=checkbox][disabled]:hover + label::before,
+        &[type=checkbox][disabled] + label:hover::before,
+        &[type=radio][disabled]:hover + label::before,
+        &[type=radio][disabled] + label:hover::before {
+            border-color: $field-border-color-disabled;
+        }
+
+        // disabled focus
+        &[type=checkbox][disabled]:focus + label::before,
+        &[type=radio][disabled]:focus + label::before {
+            border-color: $field-border-color-disabled;
+            box-shadow: $field-focus-ring-error;
+        }
+
+        &[type=radio][disabled]:checked:focus + label::before {
+            box-shadow: inset 0 0 0 .25em $color-white, $field-focus-ring;
+        }
+    }
+
+    // high contrast mode
+    @media screen and (-ms-high-contrast: active) {
+        // use the built in form controls
+        &[type=checkbox],
+        &[type=radio] {
+            height: auto !important; /* stylelint-disable-line declaration-no-important */
+            width: auto !important; /* stylelint-disable-line declaration-no-important */
+            opacity: 1 !important; /* stylelint-disable-line declaration-no-important */
+        }
+
+        // hide our custom ones
+        &[type=checkbox] + label::before,
+        &[type=checkbox] + label::after,
+        &[type=radio] + label::before {
+            display: none !important; /* stylelint-disable-line declaration-no-important */
+        }
+    }
+}
+
+// info
+.mzp-c-choice-info {
+    @include form-info;
+
+    .mzp-c-choices + & {
+        margin-top: $field-v-spacing * -1 + $info-v-spacing;
+    }
+
+    .mzp-c-choice-label + & {
+        padding-top: $info-v-spacing;
+        @include bidi(((padding-left, $choice-spacing, padding-right, 0),));
+    }
+
+    .mzp-c-choice + & {
+        margin-top: $label-v-spacing * -1;
+        @include bidi(((padding-left, $choice-spacing, padding-right, 0),));
+    }
+}

@@ -1,0 +1,7 @@
+<div class="mzp-c-choice {{#if error}}mzp-is-error{{/if}}">
+  <input class="mzp-c-choice-control" type="{{ type }}" name="{{ name }}" id="{{ id }}" value="{{ value }}" {{#if checked}}checked{{/if}} {{#if required}}required aria-required="true"{{/if}} {{#if disabled}}disabled{{/if}}>
+  <label class="mzp-c-choice-label {{#if is-legal}} mzp-t-sm{{/if}}" for="{{ id }}">{{#block "label"}}Label{{/block}}</label>
+  {{#if msg}}<div class="mzp-c-choice-msg">{{ msg }}</div>{{/if}}
+  {{#if info}}<p class="mzp-c-choice-info">{{#block "info"}}{{/block}}</p>{{/if}}
+</div>
+

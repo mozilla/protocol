@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Add styled checkboxes and radio buttons (#439)
 * **tokens:** update @mozilla-protocol/tokens to 5.0.5
 * **css:** Tweak form error styles (#508)
 * **css:** (breaking) Add styled text inputs (#430)
