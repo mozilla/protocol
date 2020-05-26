@@ -7,14 +7,14 @@ labels:
 ---
 
 <p>Todo:</p>
-<ul class="mzp-u-list-styled">
+<ul class="mzp-u-list-unstyled">
   <li>Some guidelines about color and how we use it.</li>
   <li>Swatches need better grouping e.g. "Primary/Secondary brand colors", "Interface colors".</li>
 </ul>
 
-<ul class="protosite-swatch-gallery">
-  {{#each (data "colors")}}
-    <li class="protosite-swatch">
+<ul>
+  {{#each (data "icons")}}
+    <li>
       {{> drizzle.swatch }}
     </li>
   {{/each}}
