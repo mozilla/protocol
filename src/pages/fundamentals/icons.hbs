@@ -1,6 +1,6 @@
 ---
-title: Icons
-name: Icons
+title: Icon assets
+name: Icon assets
 order: 5
 labels:
   - inprogress
@@ -8,14 +8,9 @@ labels:
 
 <p>Todo:</p>
 <ul class="mzp-u-list-unstyled">
-  <li>Some guidelines about color and how we use it.</li>
-  <li>Swatches need better grouping e.g. "Primary/Secondary brand colors", "Interface colors".</li>
+  <li>add a background color selector for icons (white grey ink black)</li>
+  <li>add a icon size preview selector?</li>
+  <li>add a copy to clipbord feature</li>
 </ul>
 
-<ul>
-  {{#each (data "icons")}}
-    <li>
-      {{> drizzle.swatch }}
-    </li>
-  {{/each}}
-</ul>
+{{renderIcons (data "icons")}}

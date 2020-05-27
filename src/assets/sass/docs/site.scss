@@ -345,3 +345,35 @@
   background: $color-black;
   padding: $spacing-md;
 }
+
+
+// icons page
+.icons {
+    width: 60px;
+    padding:3px;
+    border-radius: 6px;
+    background-color: $color-light-gray-30;
+}
+h2.icon-title {
+    @include font-base;
+    @include text-display-lg;
+    text-transform: capitalize;
+
+}
+.img-group {
+    display: inline-block;
+    width: 240px;
+    height: 120px;
+}
+.icon-name {
+    margin-right: 10px;
+    padding-left: 4px;
+    border: 2px solid white;
+    border-radius: 6px;
+    border-left-color: $color-ink-10;
+    border-left-width: 10px;
+    white-space: nowrap;
+    overflow: scroll;
+    padding-bottom: 10px;
+    padding-top:5px;
+}
