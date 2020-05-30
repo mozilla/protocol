@@ -161,6 +161,10 @@ input[type='url'] {
         outline: none;
         border-color: $color-link;
         box-shadow: $field-focus-ring;
+
+        .mzp-t-dark & {
+            box-shadow: $field-focus-ring-dark;
+        }
     }
 
     .mzp-is-error & {
@@ -343,6 +347,10 @@ select {
         box-shadow: $field-focus-ring;
         color: #222;
         outline: none;
+
+        .mzp-t-dark & {
+            box-shadow: $field-focus-ring-dark;
+        }
     }
 
     .mzp-is-error & {
