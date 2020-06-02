@@ -349,17 +349,14 @@
 
 // icons page
 
-@keyframes fadeIn {
+@keyframes fadeInOut {
     0% {
         opacity:0;
     }
-    100% {
+    40% {
         opacity:1;
     }
-  }
-
-  @keyframes fadeOut {
-    0% {
+    60% {
         opacity:1;
     }
     100% {
@@ -380,6 +377,7 @@ h2.icon-title {
 .img-group {
     display: inline-block;
     text-align: center;
+    position: relative;
     z-index: 1;
     width: 200px;
     height: 120px;
@@ -388,14 +386,14 @@ h2.icon-title {
     p.copied {
         background-color: whitesmoke;
         position: absolute;
-        margin-left: -30px;
-        margin-top: -100px;
-        display: none;
+        top: 30px;
+        left: 80px;
+        padding: 2px;
+        opacity: 0;
     }
     p.copied.fade {
         display: inline;
-        animation: fadeIn ease .7s;
-        animation: fadeOut ease .7s;
+        animation: fadeInOut ease 3s;
         opacity: 0;
     }
 }
