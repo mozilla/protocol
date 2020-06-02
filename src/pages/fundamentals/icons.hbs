@@ -10,30 +10,31 @@ labels:
 <ul class="mzp-u-list-unstyled">
   <li>add a background color selector for icons (white grey ink black)</li>
   <li>add a icon size preview selector?</li>
-  <li>add a copy to clipbord feature</li>
 </ul>
 <section class="icon-list">
   {{renderIcons (data "icons")}}
 </section>
 
 <script>
-
   document.querySelectorAll(".img-group").forEach( element => {
-    element.addEventListener("click", () => {copyImgUrl(element)});
+    element.addEventListener("click", copyImgUrl);
   })
 
-  function copyImgUrl(element){
+  async function copyImgUrl(event){
+    const element = event.currentTarget;
     const imageLink = element.attributes[1].textContent;
-    navigator.clipboard.writeText(imageLink).then(() => {
-      console.log("Copied!");
+    try {
+      await navigator.clipboard.writeText(imageLink);
+      document.querySelectorAll(".img-group p.fade").forEach( element => {
+        element.classList.remove('fade');
+      });
       element.lastElementChild.classList.add('fade');
       setTimeout(() => {
         element.lastElementChild.classList.remove('fade');
       }, 3000);
-    }, () => {
+    } catch {
       /* clipboard write failed */
       console.log('Copy Failed!');
-    });
+    }
   };
-
 </script>
