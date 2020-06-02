@@ -12,8 +12,8 @@ function renderIcons(iconData, depth=2){
         .forEach( (key) => {
             output += `<h${depth} class="icon-title">${key}</h${depth}>`;
             iconData[key].files.forEach( (file) => {
-                output += `<div class="img-group"><img src="/assets/protocol/protocol/img/icons/${file.src}" class="icons"/>`;
-                output += `<p class="icon-name">${file.name}</p></div>`;
+                output += `<div class="img-group" data-clipboard-text="img/icons/${file.src}"><img src="/assets/protocol/protocol/img/icons/${file.src}" class="icons"/>`;
+                output += `<p class="icon-name">${file.name}</p><p class="copied">Copied!</p></div>`;
             });
             iconData[key].subsets.forEach((subset) => {
                 output += renderIcons(subset, (depth<4) ? depth+1 : 4);

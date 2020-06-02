@@ -1,6 +1,6 @@
 ---
-title: Icon assets
-name: Icon assets
+title: Icon Assets
+name: Icon Assets
 order: 5
 labels:
   - inprogress
@@ -12,5 +12,28 @@ labels:
   <li>add a icon size preview selector?</li>
   <li>add a copy to clipbord feature</li>
 </ul>
+<section class="icon-list">
+  {{renderIcons (data "icons")}}
+</section>
 
-{{renderIcons (data "icons")}}
+<script>
+
+  document.querySelectorAll(".img-group").forEach( element => {
+    element.addEventListener("click", () => {copyImgUrl(element)});
+  })
+
+  function copyImgUrl(element){
+    const imageLink = element.attributes[1].textContent;
+    navigator.clipboard.writeText(imageLink).then(() => {
+      console.log("Copied!");
+      element.lastElementChild.classList.add('fade');
+      setTimeout(() => {
+        element.lastElementChild.classList.remove('fade');
+      }, 1400);
+    }, () => {
+      /* clipboard write failed */
+      console.log('Copy Failed!');
+    });
+  };
+
+</script>

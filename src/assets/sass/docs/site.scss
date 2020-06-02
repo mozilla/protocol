@@ -348,6 +348,25 @@
 
 
 // icons page
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
 .icons {
     width: 60px;
     padding:3px;
@@ -357,23 +376,36 @@
 h2.icon-title {
     @include font-base;
     @include text-display-lg;
-    text-transform: capitalize;
-
 }
 .img-group {
     display: inline-block;
-    width: 240px;
+    text-align: center;
+    z-index: 1;
+    width: 200px;
     height: 120px;
+    padding: 10px;
+
+    p.copied {
+        background-color: whitesmoke;
+        position: absolute;
+        margin-left: -30px;
+        margin-top: -100px;
+        display: none;
+    }
+    p.copied.fade {
+        display: inline;
+        animation: fadeIn ease .7s;
+        animation: fadeOut ease .7s;
+        opacity: 0;
+    }
 }
 .icon-name {
     margin-right: 10px;
     padding-left: 4px;
-    border: 2px solid white;
-    border-radius: 6px;
-    border-left-color: $color-ink-10;
-    border-left-width: 10px;
     white-space: nowrap;
-    overflow: scroll;
-    padding-bottom: 10px;
-    padding-top:5px;
+    overflow: auto;
 }
+.icon-title {
+    text-transform: capitalize;
+}
+
