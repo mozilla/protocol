@@ -11,6 +11,7 @@
 
 ## Bug Fixes
 
+* **node:** Update gulp-sass to v4.1.0 (#598)
 * **css:** Fix bug with new select box and footer language select (#584)
 * **css:** Switch to negative text indent for image replacement (#519)
 * **css:** Embiggen the modal close button (#557)
