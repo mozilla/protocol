@@ -1,0 +1,33 @@
+---
+name: form-header and form-footer
+description: |
+  The form header and footer components can be used to put some distance between the form components
+  and their setup and submission content.
+order: 2
+tips: |
+  - These layout features are most useful in larger forms. If you have a small form like a login they're optional.
+links:
+    Long form: /demos/forms/long.html
+    Account signup: /demos/forms/accounts.html
+---
+
+<form class="mzp-c-form">
+  <div class="mzp-c-form-header">
+      <h2 class="mzp-c-form-heading">Heading</h2>
+      <p>The heading and this paragraph are inside a form-header.</p>
+  </div>
+  <fieldset class="mzp-c-field-set">
+    {{#embed "patterns.molecules.forms.fields.input" id="id_name" name="name" type="text"}}
+      {{#content "label"}}Label{{/content}}
+    {{/embed}}
+    {{#embed "patterns.molecules.forms.fields.input" id="id_user_email" name="user_email" type="text"  info="true" }}
+      {{#content "label"}}Label{{/content}}
+      {{#content "info"}}Supplementary information about the form fields can be included in a field-info.{{/content}}
+    {{/embed}}
+  </fieldset>
+  <div class="mzp-c-form-footer">
+    <p>This paragraph and the elements below are in a form-footer</p>
+    <button class="mzp-c-button">Button</button>
+    <p class="mzp-c-form-info mzp-t-xs">The button container component is optional - use it for button alignment options if you need them.</p>
+  </div>
+</form>

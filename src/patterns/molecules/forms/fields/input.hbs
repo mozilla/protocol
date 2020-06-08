@@ -1,0 +1,6 @@
+<div class="mzp-c-field {{ fieldClass }}">
+  <label class="mzp-c-field-label" for="{{ id }}">{{#block "label"}}Label{{/block}}</label>
+  <input class="mzp-c-field-control {{ controlClass }}" type="{{ type }}" id="{{ id }}" {{#if required}}required aria-required="true"{{/if}} {{#block "attrs"}}{{/block}}>
+  {{#if msg}}<div class="mzp-c-field-msg">{{ msg }}</div>{{/if}}
+  {{#if info}}<p class="mzp-c-field-info">{{#block "info"}}{{/block}}</p>{{/if}}
+</div>

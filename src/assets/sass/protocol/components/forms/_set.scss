@@ -1,0 +1,31 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+@import '../../includes/forms/lib';
+
+/*
+
+    a component to group multiple form fields or choices together
+    - you probably want to add this on a fieldset element
+    - pairs well with a form-subheading
+
+*/
+
+.mzp-c-field-set {
+    // field-set gets its bottom spacing from the last item inside it
+    margin-bottom: 0;
+}
+
+// add extra space when a field-set follows a different field-set or a field
+.mzp-c-field + .mzp-c-field-set,
+.mzp-c-field-set + .mzp-c-field-set {
+    padding-top: $spacing-sm;
+}
+
+.mzp-c-field-set-info {
+    @include form-info;
+    // if there's a field-set-info it should be the last thing and needs to add some spacing
+    padding-bottom: $field-v-spacing;
+}
