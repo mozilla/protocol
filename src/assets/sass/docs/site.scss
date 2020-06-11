@@ -61,6 +61,10 @@
     }
 }
 
+.protosite-pattern-desc ul {
+    list-style-type: disc;
+}
+
 .protosite-nav-main-head {
     margin: 0 0 20px;
 }
@@ -341,8 +345,7 @@
 // buttons
 #protosite-primary-dark-preview,
 #protosite-secondary-dark-preview,
-#protosite-neutral-dark-preview,
-#protosite-product-secondary-dark-preview {
+#protosite-download-dark-preview {
   background: $color-black;
   padding: $spacing-md;
 }

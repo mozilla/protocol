@@ -1,0 +1,13 @@
+<div class="mzp-c-field">
+  <label class="mzp-c-field-label" for="{{ id }}">{{#block "label"}}Label{{/block}}</label>
+  <input class="mzp-c-field-contol" list="{{ id }}-options" name="list" id="{{ id }}" {{#if required}}required aria-required="true"{{/if}}>
+  <datalist id="{{ id }}-options">
+    {{#block "options"}}
+      <option value="Option 1">
+      <option value="Option 2">
+      <option value="Option 3">
+    {{/block}}
+  </datalist>
+  {{#if msg}}<div class="mzp-c-field-msg">{{ msg }}</div>{{/if}}
+  {{#if info}}<p class="mzp-c-field-info">{{#block "info"}}{{/block}}</p>{{/if}}
+</div>

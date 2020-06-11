@@ -2,6 +2,8 @@
 
 ## Features
 
+* **css:** Update form spacing and add form layout components (#508)
+* **css:** Add form dark theme (#508)
 * **css:** Add styled checkboxes and radio buttons (#439)
 * **tokens:** update @mozilla-protocol/tokens to 5.0.5
 * **css:** Tweak form error styles (#508)
@@ -12,6 +14,7 @@
 ## Bug Fixes
 
 * **node:** Update gulp-sass to v4.1.0 (#598)
+* **css:** Fix relative imports in protocol-extra.scss (#597)
 * **css:** Fix bug with new select box and footer language select (#584)
 * **css:** Switch to negative text indent for image replacement (#519)
 * **css:** Embiggen the modal close button (#557)

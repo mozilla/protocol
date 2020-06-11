@@ -1,0 +1,21 @@
+---
+name: Form fields
+description: |
+  The field component is a wrapper around a field-label and field-control. It can contain an optional field-info.
+
+  `<label>` and `<input>` elements inherit some styles without having these classes applied. The classes will ensure the right spacing, especially when using other layout options.
+order: 1
+tips: |
+  - These layout features are most useful in larger forms. If you have a small form like a login they're optional.
+links:
+    Long form: /demos/forms/long.html
+---
+
+<div class="mzp-c-form">
+  {{#embed "patterns.molecules.forms.fields.input" id="id_name" name="name" type="text"}}
+    {{#content "label"}}Label{{/content}}
+  {{/embed}}
+  {{#embed "patterns.molecules.forms.fields.input" id="id_name" name="name" type="text" fieldClass="mzp-l-stretch"}}
+    {{#content "label"}}Label <span class="mzp-c-fieldnote">Get a full width input by adding class <code>mzp-l-stretch</code> to the parent.</span>{{/content}}
+  {{/embed}}
+</form>

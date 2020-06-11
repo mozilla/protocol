@@ -66,7 +66,8 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
 
 @mixin form-info() {
     @include text-body-sm;
-    margin: 0; // remove default element margin (eg paragraph)
+    display: block;
+    font-weight: normal;
 }
 
 @mixin form-input() {

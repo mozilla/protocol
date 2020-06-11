@@ -268,6 +268,7 @@ While any arbitrary data can be added and referenced, there are some special pro
 | **notes**      | string  | Annotate details about a Pattern variation with [Markdown][marked] formatting.
 | **links**      | object  | Provide a menu of additional documentation links for a Pattern.
 | **sourceless** | boolean | Prevent the HTML source of a Pattern from being displayed.
+| **hideembed** | boolean | Prevent the HTML source and preview of a Pattern from being displayed.
 | **layout**     | string  | Associate a [Layout](#layouts) template to be used for wrapping Page content. Example:&nbsp;`layout: blank`
 
 ## Templates

@@ -1,0 +1,110 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+@import '../../includes/forms/lib';
+
+/*
+Basic atoms that make up a form
+- form
+    - form
+    - form-header
+    - form-heading
+    - form-footer
+*/
+
+
+.mzp-c-form {
+    color: $form-text;
+    margin-bottom: $field-v-spacing;
+
+    &.mzp-t-dark {
+        color: $color-white;
+    }
+
+    // if we're using the form component bottom spacing comes from `field` and `choice` components
+    fieldset {
+        margin-bottom: 0;
+    }
+}
+
+// header
+
+.mzp-c-form-header {
+    margin-bottom: $spacing-lg;
+
+    > * {
+        margin-bottom: 0;
+
+        + * {
+            margin-top: $info-v-spacing;
+        }
+    }
+}
+
+// footer
+.mzp-c-form-footer {
+    padding-top: $spacing-xl - $field-v-spacing;
+
+    > * {
+        margin-bottom: 0;
+
+        + * {
+            margin-top: $info-v-spacing;
+        }
+    }
+}
+
+// heading
+
+.mzp-c-form-heading,
+legend.mzp-c-form-heading {
+    @include text-title-xs;
+    font-weight: bold;
+    margin: 0 0 $spacing-lg 0;
+
+    .mzp-c-form-header > & {
+        margin-bottom: 0;
+    }
+
+    .mzp-t-firefox & {
+        @include font-firefox;
+        color: $color-ink-80;
+    }
+
+    .mzp-t-mozilla & {
+        @include font-mozilla;
+    }
+
+    .mzp-t-dark &,
+    .mzp-t-dark.mzp-t-firefox &,
+    .mzp-t-firefox .mzp-t-dark & {
+        color: $color-white;
+    }
+}
+
+// subheading
+
+.mzp-c-form-subheading,
+legend.mzp-c-form-subheading {
+    @include text-body-lg;
+    font-weight: bold;
+    margin-bottom: $field-v-spacing;
+}
+
+legend.mzp-c-form-heading,
+legend.mzp-c-form-subheading {
+    float: left;
+    width: 100%;
+}
+
+// info
+
+.mzp-c-form-info {
+    @include form-info;
+
+    &.mzp-t-xs {
+        @include text-body-xs;
+    }
+}

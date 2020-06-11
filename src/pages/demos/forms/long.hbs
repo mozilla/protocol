@@ -1,0 +1,88 @@
+---
+title: Example Form
+layout: blank
+styles:
+  - forms
+---
+<div class="mzp-l-content mzp-t-firefox">
+  <h1 class="mzp-u-title-md">Example of a long form using many types of form components:</h1>
+</div>
+<div class="mzp-l-content mzp-t-firefox">
+  <form class="mzp-c-form">
+    <div class="mzp-c-form-header">
+        <h2 class="mzp-c-form-heading">Speaker request form</h2>
+        <p>Please complete and submit the form below to request a speaker from Mozilla for your upcoming event.</p>
+    </div>
+    <fieldset class="mzp-c-field-set">
+      <legend class="mzp-c-form-subheading">Event Information</legend>
+      {{#embed "patterns.molecules.forms.fields.input" id="event_name" type="text" required="true"}}{{#content "label"}}Event Name{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.input" id="event_url" type="url" required="true"}}
+        {{#content "label"}}Event URL{{/content}}
+        {{# content "attrs"}}placeholder="https://"{{/content}}
+      {{/embed}}
+      {{#embed "patterns.molecules.forms.fields.input" id="event_date" type="date" required="true" info="true"}}
+        {{#content "label"}}Event Date{{/content}}
+        {{#content "info"}}If the event is sooner than 20 business days we are unlikely to be able to provide a speaker{{/content}}
+      {{/embed}}
+      {{#embed "patterns.molecules.forms.fields.input" id="event_time" type="time" required="true"}}{{#content "label"}}Event Time{{/content}}{{/embed}}
+    </fieldset>
+    <fieldset class="mzp-c-field-set">
+      <legend class="mzp-c-form-subheading">Your Contact Information</legend>
+      {{#embed "patterns.molecules.forms.fields.input" id="contact_company" type="text" required="true"}}{{#content "label"}}Company{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.input" id="contact_name" type="text" required="true"}}{{#content "label"}}Name{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.input" id="contact_pronouns" type="text" required="true"}}
+        {{#content "label"}}Pronouns{{/content}}
+        {{#content "attrs"}}size="6"{{/content}}
+      {{/embed}}
+      {{#embed "patterns.molecules.forms.fields.input" id="contact_email" type="email" required="true"}}
+        {{#content "label"}}Email{{/content}}
+        {{#content "attrs"}}maxlength="254"{{/content}}
+      {{/embed}}
+      {{#embed "patterns.molecules.forms.fields.input" id="contact_phone" type="tel" required="true"}}
+        {{#content "label"}}Phone{{/content}}
+        {{#content "attrs"}}size="13"{{/content}}
+      {{/embed}}
+    </fieldset>
+    <fieldset class="mzp-c-field-set">
+      <legend class="mzp-c-form-subheading">Event Details</legend>
+      {{#embed "patterns.molecules.forms.fields.textarea" id="event_details"}}
+        {{#content "label"}}Tell us about your event <span class="mzp-c-fieldnote">Theme, venue, audience demographics, confirmed speakers...</span>{{/content}}
+        {{#content "attrs"}}rows="5" cols="60"{{/content}}
+      {{/embed}}
+    </fieldset>
+    <fieldset class="mzp-c-field-set">
+      <legend class="mzp-c-form-subheading">Speaker Request</legend>
+      {{#embed "patterns.molecules.forms.fields.input" id="guest_1" type="text"}}{{#content "label"}}Guest Speaker Choice #1{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.input" id="guest_2" type="text"}}{{#content "label"}}Guest Speaker Choice #2{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.input" id="guest_topic" type="text"}}
+        {{#content "label"}}Topic of Presentation{{/content}}
+        {{#content "attrs"}}maxlength="255"{{/content}}
+      {{/embed}}
+      {{#embed "patterns.molecules.forms.fields.select" id="guest_lang" }}
+        {{#content "label"}}Presentation Language{{/content}}
+        {{#content "options"}}
+          <option selected>English</option>
+          <option>German</option>
+          <option>French</option>
+        {{/content}}
+      {{/embed}}
+      {{#embed "patterns.molecules.forms.fields.input" id="guest_length" type="number"}}
+        {{#content "label"}}Presentation Length{{/content}}
+        {{#content "attrs"}}min="0.5" step="0.5" placeholder="2.5" size="5"{{/content}}
+      {{/embed}}
+    </fieldset>
+    <footer class="mzp-c-form-footer">
+       <div class="mzp-c-button-container mzp-l-h-between">
+          <button type="submit" class="mzp-c-button mzp-t-primary" id="submit">
+            Submit Request
+          </button>
+          <button type="submit" class="mzp-c-button mzp-t-secondary" id="submit">
+            Cancel
+          </button>
+          <p class="mzp-c-button-info">
+            Expect a response in 2-3 business days.
+          </p>
+        </div>
+      </footer>
+  </form>
+</div>

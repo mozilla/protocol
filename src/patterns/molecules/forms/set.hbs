@@ -1,0 +1,29 @@
+---
+name: Field sets
+description: |
+  Field sets group form fields that are realted themeatically. Field-sets will often correspond to the fieldset element but not always.
+order: 2
+tips: |
+  - if you are using `<legends>` add the `mzp-c-form-subheading` class to make then behave as expected.
+---
+
+<form class="mzp-c-form">
+  <fieldset class="mzp-c-field-set">
+    <legend class="mzp-c-form-subheading">Legend</legend>
+    {{#embed "patterns.molecules.forms.fields.input" id="one" name="one" type="text"}}
+      {{#content "label"}}Label{{/content}}
+    {{/embed}}
+    {{#embed "patterns.molecules.forms.fields.input" id="two" name="two" type="text"}}
+      {{#content "label"}}Label{{/content}}
+    {{/embed}}
+  </fieldset>
+  <fieldset class="mzp-c-field-set">
+    <legend class="mzp-c-form-subheading">Legend</legend>
+    {{#embed "patterns.molecules.forms.fields.input" id="three" name="three" type="text"}}
+      {{#content "label"}}Label{{/content}}
+    {{/embed}}
+    {{#embed "patterns.molecules.forms.fields.input" id="four" name="four" type="text" }}
+      {{#content "label"}}Label{{/content}}
+    {{/embed}}
+  </fieldset>
+</form>

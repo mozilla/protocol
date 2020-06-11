@@ -1,0 +1,80 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+@import '../../includes/forms/lib';
+
+/*
+
+    a form field component has a label and a control
+    it may also optionally have info
+
+    - field
+    - field-label
+    - field-control
+    - field-info
+
+*/
+
+// field
+.mzp-c-field {
+    margin: 0;
+    max-width: 100%;
+    padding-bottom: $field-v-spacing;
+
+    button {
+        margin-bottom: 0;
+    }
+
+    textarea,
+    select,
+    input[list],
+    input[type='color'],
+    input[type='date'],
+    input[type='email'],
+    input[type='file'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='time'],
+    input[type='url'] {
+        margin-bottom: 0; // bottom margin is on the parent element now
+    }
+}
+
+// labels
+.mzp-c-field-label {
+    @include field-label;
+}
+
+legend.mzp-c-field-label {
+    float: left;
+    width: 100%;
+}
+
+// control
+
+.mzp-c-field-control {
+
+    .mzp-l-stretch & {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+// info
+.mzp-c-field-info {
+    @include form-info;
+    margin: 0; // remove default element margin (eg paragraph)
+
+    .mzp-c-field-control + & {
+        padding-top: $info-v-spacing;
+    }
+
+    .mzp-c-field-msg + & {
+        padding-top: $spacing-xs;
+    }
+}

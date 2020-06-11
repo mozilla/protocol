@@ -1,0 +1,6 @@
+<div class="mzp-c-field">
+  <label class="mzp-c-field-label">{{#block "label"}}Label{{/block}}</label>
+  <textarea class="mzp-c-field-control" name="textarea" id="{{id}}" {{#if required}}required aria-required="true"{{/if}} {{#block "attrs"}}{{/block}}></textarea>
+  {{#if msg}}<div class="mzp-c-field-msg">{{ msg }}</div>{{/if}}
+  {{#if info}}<p class="mzp-c-field-info">{{#block "info"}}{{/block}}</p>{{/if}}
+</div>
