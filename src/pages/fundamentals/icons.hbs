@@ -5,7 +5,7 @@ order: 5
 labels:
   - inprogress
 ---
-
+<p>You can find the source icons in our <a href="https://github.com/mozilla/protocol-assets/tree/master/icons">protocol-assets</a> Github repo</p>
 <p>Todo:</p>
 <ul class="mzp-u-list-unstyled">
   <li>add a background color selector for icons (white grey ink black)</li>
@@ -16,8 +16,8 @@ labels:
 </section>
 
 <script>
-  document.querySelectorAll(".img-group").forEach( element => {
-    element.addEventListener("click", copyImgUrl);
+  document.querySelectorAll('.img-group').forEach( element => {
+    element.addEventListener('click', copyImgUrl);
   })
 
   async function copyImgUrl(event){
@@ -25,8 +25,8 @@ labels:
     const imageLink = element.attributes[1].textContent;
     try {
       await navigator.clipboard.writeText(imageLink);
-      document.querySelectorAll(".img-group p.fade").forEach( element => {
-        element.classList.remove('fade');
+      document.querySelectorAll('.img-group p.fade').forEach( el => {
+        el.classList.remove('fade');
       });
       element.lastElementChild.classList.add('fade');
       setTimeout(() => {
