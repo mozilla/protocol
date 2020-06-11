@@ -12,6 +12,7 @@ const copyJS = require('./copy-js');
 const concatJS = require('./concat-js');
 const compressCSS = require('./compress-css');
 const compressJS = require('./compress-js');
+const generateIconData = require('./generate-icon-data');
 
 /*
   Build task
@@ -28,6 +29,7 @@ const compressJS = require('./compress-js');
 const build = gulp.series(
     clean,
     gulp.parallel(lintCSS, lintJS),
+    generateIconData,
     copyStaticFiles,
     drizzleTask,
     gulp.parallel(compileSass, copySass, copyJS, concatJS),

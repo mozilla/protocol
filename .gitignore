@@ -2,5 +2,7 @@ node_modules
 dist
 src/data/colors.json
 src/data/index.json
+src/data/icons.json
 .netlify
 .DS_Store
+.node-version

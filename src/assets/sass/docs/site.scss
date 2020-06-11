@@ -349,3 +349,51 @@
   background: $color-black;
   padding: $spacing-md;
 }
+
+
+// icons page
+
+.icons {
+    width: 60px;
+    padding:3px;
+    border-radius: 6px;
+    background-color: $color-light-gray-30;
+}
+h2.icon-title {
+    @include font-base;
+    @include text-display-lg;
+}
+.img-group {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 200px;
+    height: 120px;
+    padding: 10px;
+    cursor: pointer;
+
+    p.copied {
+        background-color: whitesmoke;
+        position: absolute;
+        width: 66px;
+        top: 30px;
+        left: 50%;
+        margin-left: -33px;
+        padding: 2px 0;
+        opacity: 0;
+        transition: opacity .25s ease-in-out;
+    }
+    p.copied.fade {
+        opacity: 1;
+    }
+}
+.icon-name {
+    margin-right: 10px;
+    padding-left: 4px;
+    white-space: nowrap;
+    overflow: auto;
+}
+.icon-title {
+    text-transform: capitalize;
+}
+
