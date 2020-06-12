@@ -1,0 +1,105 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+@import '../../includes/forms/lib';
+
+.mzp-c-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: $field-v-spacing;
+
+    // no bottom spacing if last thing in form
+
+    .mzp-c-form > .mzp-c-button-container:last-child {
+        margin-bottom: 0;
+    }
+
+    // align start
+    &.mzp-l-h-start {
+        justify-content: flex-start;
+        @include bidi(((text-align, left, right),));
+    }
+
+    // align end
+    &.mzp-l-h-end {
+        justify-content: flex-end;
+        @include bidi(((text-align, right, left),));
+    }
+
+    // align space between
+    &.mzp-l-h-between {
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    // align center
+    &.mzp-l-h-center {
+        justify-content: center;
+        text-align: center;
+    }
+
+    // full width
+    &.mzp-l-strech {
+        align-items: stretch;
+
+        .mzp-c-button {
+            flex-grow: 1;
+        }
+    }
+
+    // full width
+    &.mzp-l-column {
+        text-align: center;
+
+        .mzp-c-button {
+            width: 100%;
+
+            & + .mzp-c-button {
+                @include bidi(((margin-left, 0, margin-right, 0),));
+                margin-top: $field-v-spacing;
+            }
+        }
+    }
+
+    // mobile only full width
+    @media (max-width: #{$screen-md - 1px}) {
+        &.mzp-l-column-on-xs-sm {
+            text-align: center;
+
+            .mzp-c-button {
+                width: 100%;
+
+                & + .mzp-c-button {
+                    @include bidi(((margin-left, 0, margin-right, 0),));
+                    margin-top: $field-v-spacing;
+                }
+            }
+        }
+    }
+
+    @media #{$mq-lg} {
+        // desktop only reverse order
+        &.mzp-l-reversed-on-lg-xl {
+            flex-direction: row-reverse;
+
+            .mzp-c-button + .mzp-c-button {
+                margin-right: $field-h-spacing;
+                @include bidi(((margin-left, 0, margin-right, 0),));
+            }
+        }
+    }
+
+    // put spacing between multiple buttons
+    .mzp-c-button + .mzp-c-button {
+        @include bidi(((margin-left, $field-h-spacing, margin-right, 0),));
+    }
+}
+
+.mzp-c-button-info {
+    @include form-info;
+    @include text-body-xs;
+    width: 100%;
+    padding-top: $info-v-spacing;
+}

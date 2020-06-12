@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Add button container and alignment options (#580)
 * **css:** Update form spacing and add form layout components (#508)
 * **css:** Add form dark theme (#508)
 * **css:** Add styled checkboxes and radio buttons (#439)
