@@ -7,7 +7,6 @@
 
 // This wrapper element sets the content width
 .mzp-l-content {
-    @include border-box;
     @include clearfix;
     margin: 0 auto;
     max-width: $content-max;
@@ -32,10 +31,6 @@
 
         @media #{$mq-md} {
             padding: $layout-xs;
-        }
-
-        @media #{$mq-lg} {
-            padding: $layout-xs $layout-md;
         }
     }
 
