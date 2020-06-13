@@ -33,6 +33,10 @@
         margin-top: $info-v-spacing;
     }
 
+    &.mzp-t-stretch .mzp-c-button {
+        max-width: none;
+    }
+
     @media #{$mq-sm} {
         @include bidi(((text-align, left, right),));
         align-items: start;
@@ -51,6 +55,14 @@
         &.mzp-l-align-end {
             @include bidi(((text-align, right, left),));
             justify-content: flex-end;
+        }
+
+        &.mzp-t-stretch {
+            align-items: stretch;
+
+            .mzp-c-button {
+                flex-grow: 1;
+            }
         }
     }
 }
