@@ -33,7 +33,7 @@
         margin-top: $info-v-spacing;
     }
 
-    &.mzp-t-stretch .mzp-c-button {
+    &.mzp-l-stretch .mzp-c-button {
         max-width: none;
     }
 
@@ -57,7 +57,7 @@
             justify-content: flex-end;
         }
 
-        &.mzp-t-stretch {
+        &.mzp-l-stretch {
             align-items: stretch;
 
             .mzp-c-button {
