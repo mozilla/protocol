@@ -1,6 +1,6 @@
 {
   "name": "@mozilla-protocol/core",
-  "version": "11.0.2",
+  "version": "12.0.0",
   "description": "A design system for Mozilla's websites.",
   "repository": {
     "type": "git",
