@@ -14,6 +14,14 @@
     padding: $layout-xs;
     position: relative;
 
+    @media #{$mq-md} {
+        padding: $layout-xs $layout-lg;
+    }
+
+    @media #{$mq-lg} {
+        padding: $layout-xs $layout-xl;
+    }
+
     &.mzp-t-content-sm {
         max-width: $content-sm;
 
@@ -40,14 +48,6 @@
 
     &.mzp-t-content-xl {
         max-width: $content-xl;
-    }
-
-    @media #{$mq-md} {
-        padding: $layout-xs $layout-lg;
-    }
-
-    @media #{$mq-lg} {
-        padding: $layout-xs $layout-xl;
     }
 }
 
