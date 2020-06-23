@@ -4,9 +4,9 @@
 
 @import '../../includes/lib';
 
+
 // This wrapper element sets the content width
 .mzp-l-content {
-    @include border-box;
     @include clearfix;
     margin: 0 auto;
     max-width: $content-max;
@@ -14,16 +14,40 @@
     padding: $layout-xs;
     position: relative;
 
-    &.mzp-t-narrow {
-        max-width: $content-md;
-    }
-
     @media #{$mq-md} {
         padding: $layout-xs $layout-lg;
     }
 
     @media #{$mq-lg} {
         padding: $layout-xs $layout-xl;
+    }
+
+    &.mzp-t-content-sm {
+        max-width: $content-sm;
+
+        @media #{$mq-md} {
+            padding: $layout-xs;
+        }
+
+        @media #{$mq-lg} {
+            padding: $layout-xs;
+        }
+    }
+
+    &.mzp-t-content-md {
+        max-width: $content-md;
+
+        @media #{$mq-md} {
+            padding: $layout-xs;
+        }
+    }
+
+    &.mzp-t-content-lg {
+        max-width: $content-lg;
+    }
+
+    &.mzp-t-content-xl {
+        max-width: $content-xl;
     }
 }
 

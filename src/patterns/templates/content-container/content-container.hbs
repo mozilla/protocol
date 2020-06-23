@@ -1,0 +1,26 @@
+---
+name: Content container
+description: |
+    This container element sets the maximum width of content on the page, centers the column horizontally in the viewport, and includes some padding that prevents its contents from butting against the edges of the viewport or against other adjacent elements. The maximum width and spacing change at different responsive breakpoints to adapt to different viewport widths.
+links:
+    Examples: /demos/content-containers.html
+    Container visualization: /demos/content-container-vis.html
+notes: |
+    - The container's width isn't explicit; it's a fluid box with a minimum width of 304px and constrained to a maximum width that differs at different responsive breakpoints. If you want to know how wide this box is, the answer is: it depends. Refer [the `$content-*` tokens](/fundamentals/tokens.html) for the maximum width values.
+    - Side padding also adjusts at different breakpoints, with less padding on small windows and more padding in large windows. [Check out the demo](/demos/content-container-vis.html) and resize your browser to see how the width and padding responds to the viewport.
+    - You can apply theme classes to set a max-width narrower than the default, to constrain the maximum width even in larger viewports. [See the demo](/demos/content-container.html) for examples of these.
+        - `.mzp-t-content-sm` : 432px
+        - `.mzp-t-content-md` : 688px
+        - `.mzp-t-content-lg` : 928px
+        - `.mzp-t-content-xl` : 1152px
+    - This container is often (but not always) inside another element that defines a full-width "tier" or horizontal section of a page, with this `.mzp-l-content` inner container defining the column centered within that section. If you need a page section to have a "full bleed" background that extends to the edges of the window, apply that background to an outer container and not to `.mzp-l-content`.
+nonos: |
+    - Don't nest an `.mzp-l-content` container element inside another one. The width and spacing adjusts to the viewport breakpoint so nested containers may do unpredictable things as the window size changes.
+    - Some Protocol components are intended to be full-width and already include `mzp-l-content` container as part of the component. Don't nest those components inside another `mzp-l-content` container.
+---
+{{#with (data "specimens")}}
+<div class="mzp-l-content">
+  <h3>{{heading}}</h3>
+  <p>{{paragraph}}</p>
+</div>
+{{/with}}

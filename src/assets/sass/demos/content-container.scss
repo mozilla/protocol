@@ -1,0 +1,35 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+//* -------------------------------------------------------------------------- */
+// Content container demo
+
+@import '../protocol/includes/lib';
+@import '../docs/protocol';
+@import '../docs/protocol-extra';
+
+.mzp-c-hero.mzp-t-dark,
+.demo-alt-tier {
+    background: $color-ink-80;
+}
+
+// Styles for the visualization page
+.display {
+    background: rgba(0, 255, 100, .25);
+    margin-top: $layout-sm;
+    margin-bottom: $layout-sm;
+}
+
+.label {
+    @include text-body-lg;
+    background: rgba(255, 255, 255, .5);
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    padding: $spacing-sm 0;
+
+    code {
+        display: block;
+    }
+}

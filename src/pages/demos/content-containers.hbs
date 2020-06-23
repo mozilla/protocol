@@ -1,0 +1,72 @@
+---
+title: Content container examples
+notes: A demo page mixing and combining different sized containers.
+layout: blank
+styles:
+  - content-container
+---
+
+{{#embed "patterns.organisms.navigation.navigation" logo=true download=true id="navigation-demo"}}{{/embed}}
+
+<main class="mzp-t-firefox">
+
+{{#embed "patterns.organisms.hero.hero" image="true" class="mzp-t-dark" content-class="mzp-t-content-xl"}}
+  {{#content "content"}}
+    <h1 class="mzp-c-hero-title">A Page Hero with Image</h1>
+
+    <div class="mzp-c-hero-desc">
+      <p>This page demonstrates mixing different container sizes on a single page. This hero component is in an extra large container, <code>mzp-t-content-xl</code>. It also has a full-bleed background.</p>
+    </div>
+
+    <p class="mzp-c-hero-cta">
+      <a class="mzp-c-button mzp-t-product" href="#">Call to action</a>
+    </p>
+  {{/content}}
+
+  {{#content "hero-image"}}
+    <div class="mzp-c-hero-image">
+      <img src="{{@root.baseurl}}/static/img/hero/hero-devices.png" alt="">
+    </div>
+  {{/content}}
+{{/embed}}
+
+  <div class="mzp-l-content mzp-t-content-md">
+    {{#embed "patterns.molecules.feature-card.feature-card" class="mzp-l-card-feature-right-half"}}{{/embed}}
+    {{#embed "patterns.molecules.feature-card.feature-card" class="mzp-l-card-feature-left-half"}}
+      {{#content "content"}}
+        <h2 class="mzp-c-card-feature-title">A headline with 30 characters</h2>
+        <p class="mzp-c-card-feature-desc">
+          These two feature cards are in a medium container, <code>.mzp-t-content-md</code>. The row of cards below is in a large container, <code>.mzp-t-content-lg</code>.
+        </p>
+      {{/content}}
+    {{/embed}}
+  </div>
+
+  <div class="mzp-l-content mzp-t-content-lg">
+    <div class="mzp-l-card-third">
+      {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
+      {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
+      {{#embed "patterns.molecules.card.small-card" class="mzp-has-aspect-3-2"}}{{/embed}}
+    </div>
+  </div>
+
+  <div class="mzp-l-content mzp-t-content-xl">
+  {{#embed "patterns.organisms.billboard.billboard" class="mzp-l-billboard-left"}}
+    {{#content "content"}}
+      <h2 class="mzp-c-billboard-title">A short headline</h2>
+      <p class="mzp-c-billboard-desc">This billboard is in an extra large container, <code>.mzp-t-content-xl</code>. The row of picto cards below is in a medium container, <code>.mzp-t-content-md</code>.</p>
+      <a class="mzp-c-cta-link" href="#">Learn more</a>
+    {{/content}}
+  {{/embed}}
+  </div>
+
+  <section class="demo-alt-tier mzp-t-dark">
+    <div class="mzp-l-card-third mzp-l-content mzp-t-content-md">
+      {{#embed "patterns.molecules.picto-card.picto-card"}}{{/embed}}
+      {{#embed "patterns.molecules.picto-card.picto-card"}}{{/embed}}
+      {{#embed "patterns.molecules.picto-card.picto-card"}}{{/embed}}
+    </div>
+  </section>
+</main>
+
+{{#embed "patterns.organisms.footer.includes.footer-random"}}{{/embed}}
