@@ -1,4 +1,4 @@
-# HEAD
+# 12.0.0
 
 ## Features
 
@@ -27,11 +27,11 @@
 ## Migration Tips
 
 * Find and replace `mzp-t-narrow` with `mzp-t-content-md` on content containers (`mzp-l-content`).
+* Content width tokens have changed slightly, which could impact page layout. See https://github.com/mozilla/protocol-tokens/pull/81/files
 * Styled form inputs now include bottom spacing. If you have added this spacing to your forms in another way (for example, wrapping them in paragraph tags) you could end up with double spacing.
 * Find and replace `mzp-t-small` to `mzp-t-md` on buttons.
-* Content sizes have changed slightly, see https://github.com/mozilla/protocol-tokens/pull/81/files
-* The value of `$layout-2xl` increased
-* The new select box styles include the down arrow as a background image. If you have declared a `background` or `background-image` for selects locally that should be removed.
+* The value of `$layout-2xl` has increased.
+* The new select box styles include the down arrow as a background image. If you have declared a `background` or `background-image` for selects locally, you should remove it.
 * Add `mzp-t-dark` to `<form class="mzp-c-language-switcher">` (or to any other parent element) to get a brighter focus ring on the language select box.
 
 # 11.0.2
