@@ -46,15 +46,15 @@
     "merge-stream": "^1.0.1",
     "prismjs": "^1.4.1",
     "require-dir": "^1.2.0",
-    "stylelint": "^9.2.0",
-    "yargs": "^12.0.5"
+    "stylelint": "^13.6.1",
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
     "@mozilla-protocol/eslint-config": "^1.1.0",
     "browser-sync": "^2.26.3",
     "doctoc": "^1.4.0",
     "jasmine-core": "^3.2.0",
-    "karma": "^3.0.0",
+    "karma": "^5.1.0",
     "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.2"
   }
