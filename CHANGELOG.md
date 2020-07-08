@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **css:** Reduce content container min-width to avoid crawlbars (#611)
+
 # 12.0.0
 
 ## Features

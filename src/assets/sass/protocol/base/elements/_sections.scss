@@ -10,7 +10,7 @@
     @include clearfix;
     margin: 0 auto;
     max-width: $content-max;
-    min-width: $content-xs;
+    min-width: $content-xs - ($layout-xs * 2);
     padding: $layout-xs;
     position: relative;
 
