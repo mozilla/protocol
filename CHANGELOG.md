@@ -3,6 +3,7 @@
 ## Bug Fixes
 
 * **css:** Reduce content container min-width to avoid crawlbars (#611)
+* **css**: Decrease min-width of form fields (Fix #607)
 
 # 12.0.0
 
