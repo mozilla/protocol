@@ -5,6 +5,7 @@
 * **css:** Navigation is max-content width on large screens (#615)
 * **css:** Set text-align on image replacement mixin (#618)
 * **css:** Reduce content container min-width to avoid crawlbars (#611)
+* **css**: Decrease min-width of form fields (Fix #607)
 
 # 12.0.0
 

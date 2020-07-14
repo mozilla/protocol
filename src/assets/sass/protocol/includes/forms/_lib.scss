@@ -20,7 +20,7 @@ $field-border-color-error: $form-red;
 $field-border-color-error-hover: $color-red-80;
 $field-border-color-disabled: $color-marketing-gray-30;
 $field-border: 2px solid $field-border-color;
-$field-min-width: 300px;
+$field-min-width: $content-xs - ($layout-xs * 2);
 $field-border-radius: $border-radius-sm;
 $field-padding: $spacing-sm;
 $field-h-spacing: $spacing-md;
