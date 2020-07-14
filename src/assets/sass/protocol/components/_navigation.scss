@@ -26,17 +26,9 @@
     }
 
     .mzp-c-navigation-container {
+        @include clearfix;
         margin: 0 auto;
-        max-width: $content-max - ($layout-xs * 2);
-
-        @media #{$mq-md} {
-            @include clearfix;
-            max-width: $content-max - ($layout-lg * 2);
-        }
-
-        @media #{$mq-lg} {
-            max-width: $content-max - ($layout-xl * 2);
-        }
+        max-width: $content-max;
     }
 }
 
