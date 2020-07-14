@@ -2,6 +2,7 @@
 
 ## Bug Fixes
 
+* **css:** Navigation is max-content width on large screens (#615)
 * **css:** Set text-align on image replacement mixin (#618)
 * **css:** Reduce content container min-width to avoid crawlbars (#611)
 
