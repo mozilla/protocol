@@ -2,6 +2,7 @@
 
 ## Bug Fixes
 
+* **css:** Set text-align on image replacement mixin (#618)
 * **css:** Reduce content container min-width to avoid crawlbars (#611)
 
 # 12.0.0
