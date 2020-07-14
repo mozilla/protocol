@@ -161,6 +161,7 @@
 @mixin image-replaced {
     direction: ltr;
     overflow: hidden;
+    text-align: left;
     text-indent: -9999px;
     white-space: nowrap;
 }
