@@ -126,7 +126,7 @@
     }
 
     @media #{$mq-sm} {
-        max-width: 450px;
+        max-width: $content-sm;
     }
 
     @media #{$mq-md} {
@@ -139,7 +139,7 @@
 
 .mzp-c-card.mzp-c-card-medium {
     @media #{$mq-sm} {
-        max-width: 610px;
+        max-width: $content-md;
     }
 }
 
@@ -157,7 +157,7 @@
     }
 
     @media #{$mq-sm} {
-        max-width: 930px;
+        max-width: $content-lg;
     }
 }
 
@@ -185,6 +185,6 @@
     }
 
     @media #{$mq-lg} {
-        max-width: 300px;
+        max-width: $content-xs;
     }
 }
