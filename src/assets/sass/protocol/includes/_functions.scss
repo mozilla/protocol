@@ -60,10 +60,6 @@
 // function will draw its values from that alternative map.
 
 @function type-scale($scale) {
-  @if not $scale {
-    @return false;
-  }
-
   // Default to Firefox brand scale
   $scale-map: $theme-type-scale-firefox;
 
@@ -83,8 +79,8 @@
   }
 
   @if not map-has-key($scale-map, $scale) {
-    @error '`#{$scale}` is not a valid type scale token. '
-      + 'Valid tokens: #{map-keys($scale-map)}';
+    @error '`#{$scale}` is not a valid type scale variable name. '
+      + 'Valid variable names: #{map-keys($scale-map)}';
   }
 
   @return map-get($scale-map, $scale);
@@ -96,10 +92,6 @@
 // Theme maps are defined in includes/_theme.scss
 
 @function get-theme($var) {
-  @if not $var {
-    @return false;
-  }
-
   // Default to Firefox theme
   $theme-map: $theme-firefox;
 
@@ -109,13 +101,9 @@
   }
 
   @if not map-has-key($theme-map, $var) {
-    @error '`#{$var}` is not a valid theme token. '
-      + 'Valid tokens: #{map-keys($theme-map)}';
+    @error '`#{$var}` is not a valid theme variable. '
+      + 'Valid theme variable names: #{map-keys($theme-map)}';
   }
 
   @return map-get($theme-map, $var);
 }
-
-
-
-

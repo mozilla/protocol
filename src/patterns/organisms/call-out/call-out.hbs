@@ -3,18 +3,17 @@ name: Call Out
 order: 1
 description: A vertical call out section containing a logo, headline, description and a call-to-action button.
 notes: |
-    - Product icons can be displayed using an additional theme classes.
-      - `mzp-t-product-firefox`.
-      - `mzp-t-product-beta`.
-      - `mzp-t-product-developer`.
-      - `mzp-t-product-nightly`.
-    - Adding a theme class of `mzp-t-mozilla` will render the title font using Zilla Slab.
+    - Product icons can be displayed using an additional theme class:
+      - `mzp-t-product-firefox`
+      - `mzp-t-product-beta`
+      - `mzp-t-product-developer`
+      - `mzp-t-product-nightly`
     - A dark theme is also available using the theme class `mzp-t-dark`.
 links:
     Call Out Demo: /demos/call-out.html
 ---
 
-<section class="mzp-c-call-out {{#if class}}{{class}}{{else}}mzp-t-product-firefox mzp-t-firefox{{/if}}">
+<section class="mzp-c-call-out {{#if class}}{{class}}{{/if}}">
   <div class="mzp-l-content {{#if content-class}}{{content-class}}{{/if}}">
   {{#block "content"}}
     <h2 class="mzp-c-call-out-title">A headline with 30 characters</h2>

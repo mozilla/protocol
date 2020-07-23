@@ -7,6 +7,7 @@
 @import 'elements/reset';
 
 // Sorted alphabetically
+@import 'elements/common';
 @import 'elements/details';
 @import 'elements/document';
 @import 'elements/forms';
@@ -16,16 +17,3 @@
 @import 'elements/sections';
 @import 'elements/tables';
 @import 'elements/titles';
-
-
-p,
-ul,
-ol,
-dl,
-table {
-    margin: 0 0 1.25em;
-}
-
-code {
-    font-size: .875em;
-}

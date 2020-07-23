@@ -12,7 +12,7 @@ html {
 
 body {
     @include text-body-md;
-    background: $color-white;
+    background: get-theme('background-color');
     color: get-theme('body-text-color');
     font-family: get-theme('body-font-family');
     line-height: type-scale('body-line-height');

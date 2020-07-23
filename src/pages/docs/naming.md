@@ -13,14 +13,14 @@ categories:
 
 <ul class="mzp-u-list-styled">
     <li>`c-` for component names. Expect a lot of this one, e.g. `.mzp-c-card`, `.mzp-c-button`.</li>
-    <li>`t-` for theme styles, when a component has one or more alternative styles, e.g. `.mzp-t-dark`, `.mzp-t-firefox`.</li>
-    <li>`l-` for layout-related styles, e.g. `.mzp-l-grid-half`, `.mzp-l-grid-third`. These are presentational so should be rare. Prefer mixins.</li>
-    <li>`u-` for utility styles, which have a broad scope and can be powerful overrides, e.g. `.mzp-u-inline`, `.mzp-u-no-margin`. These are presentational so should be rare. Prefer mixins.</li>
+    <li>`t-` for theme styles, when a component has one or more alternative styles, e.g. `.mzp-t-dark`, `.mzp-t-product-firefox`.</li>
+    <li>`l-` for layout-related styles, e.g. `.mzp-l-content`, `.mzp-l-grid-third`. These are essentially presentational names, mostly used for container elements.</li>
+    <li>`u-` for utility styles, which have a broad scope and can be powerful overrides, e.g. `.mzp-u-inline`, `.mzp-u-title-md`. These are presentational so should be rare. Prefer mixins in a style sheet over classes in HTML.</li>
     <li>`qa-` used as selector hooks for tests (unit tests, integration tests, etc.). These classes are not meant as styling hooks; no CSS should be applied to any `qa-` classes!</li>
     <li>`is-` to indicate a current state, e.g. `.mzp-is-active`, `.mzp-is-collapsed` (typically assigned by JS and not hard-coded).</li>
     <li>`has-` to indicate that a component contains some other component, when the parent gets some styling to accommodate the child, e.g. `.mzp-has-submenu`, `.mzp-has-image`.</li>
     <li>`js-` used as a behavior hook for JavaScript, e.g. `.mzp-js-sticky`, `.mzp-js-collapsible`, `.mzp-js-toggle`. Indicates potential for a change of state and usually shouldn’t have any styling.</li>
-    <li>`a-` for a CSS animation names, e.g. `mzp-a-fade-in`, `mzp-a-fade-out`.</li>
+    <li>`a-` for CSS animation names, e.g. `mzp-a-fade-in`, `mzp-a-slide-from-right`.</li>
 </ul>
 
 Our names are all lowercase and hyphen-separated or “kebab-case,” e.g.
