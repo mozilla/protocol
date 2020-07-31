@@ -19,7 +19,7 @@
     margin-bottom: $field-v-spacing;
 
     &.mzp-t-dark {
-        color: $color-white;
+        color: get-theme('body-text-color-inverse');
     }
 
     // if we're using the form component bottom spacing comes from `field` and `choice` components

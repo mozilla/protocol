@@ -406,6 +406,10 @@ See [our page on typography](/fundamentals/typography.html) for more info and ex
 @include text-title-lg;
 ```
 
+Different themes have slightly different type scales so this mixin draws its output
+from the defined brand theme. See [our page on themes](/fundamentals/themes.html)
+for more info and examples.
+
 #### bidi
 The bidi mixin (short for “bi-directional”) is used to declare both left-to-right and
 right-to-left values for a CSS property together, and output appropriate declarations
@@ -431,4 +435,54 @@ e.g. `example.png` and `example-high-res.png`
 @include at2x('/img/example.png', 100px, 100px);
 ```
 
+### Themes
 
+Protocol supports [multiple brand themes](/fundamentals/typography.html), namely the Mozilla
+and Firefox brands. Themes work by defining sets of variables in Sass maps in the
+`/includes/_themes.scss` file, and those variables are fetched via the `get-theme()` function.
+That function determines which set of variables to draw from based on the declared brand theme,
+thus any themable property in CSS can have different values for different brands.
+
+```scss
+.mzp-c-my-component {
+    background-color: get-theme('background-color');
+    color: get-theme('body-text-color');
+
+    .mzp-c-my-component-title {
+        color: get-theme('title-text-color');
+        font-family: get-theme('title-font-family');
+    }
+}
+```
+
+Use the `get-theme()` function for any themeable properties, especially basic colors for
+foreground (text) and backgrounds. Note that most colors have an "inverse" counterpart
+to use in dark style variants. Refer to `/includes/_themes.scss` for the actual values
+for each brand theme, but here are the variable names in a handy list:
+
+```
+body-font-family
+button-font-family
+title-font-family
+background-color-alt-inverse
+background-color-alt
+background-color-inverse
+background-color
+body-text-color-alt-inverse
+body-text-color-alt
+body-text-color-inverse
+body-text-color
+link-color-hover-inverse
+link-color-hover
+link-color-inverse
+link-color-visited-hover-inverse
+link-color-visited-hover
+link-color-visited-inverse
+link-color-visited
+link-color
+```
+
+Text sizes are also defined as theme variables, allowing different brands to have slightly
+different type scales. Don't use the `get-theme()` function for text sizing; use the text
+size mixins instead. The mixins already draw from the theme variables but come with baked-in
+responsive styling as well.

@@ -65,8 +65,8 @@ $logos: (
 
     // Dark theme
     &.mzp-t-dark {
-        background-color: $color-ink-70;
-        color: $color-white;
+        background-color: get-theme('background-color-inverse');
+        color: get-theme('body-text-color-inverse');
     }
 
     // Product logos

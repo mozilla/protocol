@@ -20,10 +20,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.mzp-t-dark {
-    color: get-theme('body-text-color-inverse');
-}
-
 // A few places use a class to hide elements. We should try to avoid that.
 .hidden {
     @include hidden;

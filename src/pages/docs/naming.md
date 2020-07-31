@@ -79,8 +79,8 @@ and "sm" for small. In this t-shirt scale system, the default should be the medi
 .mzp-t-size-2xs { ... }
 ```
 
-Note that when we need mulitple Xes we opt for a numeral. This avoids confusion or
-ambuguity in the event we need to reference some extreme size. "5xl" looks better
+Note that when we need multiple Xes we opt for a numeral. This avoids confusion or
+ambuguity in the event we need to reference some extreme size. "5xl" is more readable
 than "xxxxxl".
 
 

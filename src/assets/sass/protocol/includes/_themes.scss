@@ -27,9 +27,11 @@ $theme-fonts-mozilla: (
 // Colors
 
 $theme-colors-firefox: (
+    background-color-alt-inverse: $color-ink-50,
     background-color-alt: $color-light-gray-10,
     background-color-inverse: $color-ink-80,
     background-color: $color-white,
+    body-text-color-alt-inverse: $color-marketing-gray-30,
     body-text-color-alt: $color-marketing-gray-70,
     body-text-color-inverse: $color-white,
     body-text-color: $color-marketing-gray-80,
@@ -46,9 +48,11 @@ $theme-colors-firefox: (
 );
 
 $theme-colors-mozilla: (
+    background-color-alt-inverse: $color-dark-gray-60,
     background-color-alt: $color-light-gray-10,
     background-color-inverse: $color-black,
     background-color: $color-white,
+    body-text-color-alt-inverse: $color-light-gray-30,
     body-text-color-alt: $color-dark-gray-90,
     body-text-color-inverse: $color-white,
     body-text-color: $color-black,
