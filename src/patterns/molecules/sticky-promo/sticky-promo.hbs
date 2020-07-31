@@ -1,0 +1,25 @@
+---
+name: Sticky Promo Card
+description: The primary purpose of the Sticky Card component is to ensure that the content it’s promoting remains a constant on the page -- always visible within the viewport no matter a user’s scroll position. Sticky Promo Cards can be used to promote a product and provide a CTA. While the card itself is both content and context agnostic, it should only be used strategically on pages where it will be most effective.
+notes: |
+  - Use only one primary cta per card.
+  - Use only one sticky promo card per page.
+  - The copy on the card should be short and succinct, ideally no longer than 2 lines at display size in English.
+  - Ensure that the sticky card placement receives maximum contrast to the background content that lies underneath (ex. If the sticky promo appears over a light colored background, use a dark sticky card by adding `mzp-t-dark` to the class list.)
+  - Add one of these product theme classes to include a logo above the title:
+    - `mzp-t-product-firefox`
+    - `mzp-t-product-beta`
+    - `mzp-t-product-developer`
+    - `mzp-t-product-nightly`
+
+---
+
+<aside class="mzp-c-sticky-promo mzp-t-product-firefox mzp-t-dark">
+  <button class="mzp-c-sticky-promo-close" type="button">Close</button>
+  <h3 class="mzp-c-sticky-promo-title">Get the latest Firefox Browser.</h3>
+  <a class="mzp-c-button mzp-t-product mzp-t-small" href="#">Download Now</a>
+</aside>
+
+<script
+ src="../../../assets/protocol/protocol/js/protocol-sticky-promo.js">
+</script>
