@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **css:** Add sticky promo component (#603)
+
 # 12.0.1
 
 ## Bug Fixes
