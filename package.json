@@ -44,7 +44,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.7",
     "merge-stream": "^1.0.1",
-    "prismjs": "^1.4.1",
+    "prismjs": "^1.21.0",
     "require-dir": "^1.2.0",
     "stylelint": "^13.6.1",
     "yargs": "^15.3.1"
