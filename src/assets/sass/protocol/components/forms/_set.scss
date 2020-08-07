@@ -28,4 +28,12 @@
     @include form-info;
     // if there's a field-set-info it should be the last thing and needs to add some spacing
     padding-bottom: $field-v-spacing;
+
+    .mzp-c-field-set-msg + & {
+        padding-top: $spacing-xs;
+    }
+}
+
+.mzp-c-field-set-msg:last-child {
+    margin-bottom: $field-v-spacing;
 }

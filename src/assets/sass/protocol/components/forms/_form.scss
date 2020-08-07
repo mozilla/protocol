@@ -107,4 +107,8 @@ legend.mzp-c-form-subheading {
     &.mzp-t-xs {
         @include text-body-xs;
     }
+
+    .mzp-c-form-msg + & {
+        padding-top: $spacing-xs;
+    }
 }
