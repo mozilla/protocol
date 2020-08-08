@@ -67,7 +67,7 @@
 
     @media #{$mq-md} {
         margin-bottom: $layout-2xl;
-        max-width: 800px;
+        max-width: $content-md;
 
         .mzp-c-card-feature-list li {
             margin-bottom: $spacing-2xl;
@@ -92,14 +92,14 @@
         &.mzp-l-card-feature-right-half {
             .mzp-c-card-feature-content,
             .mzp-c-card-feature-media-wrapper {
-                width: calc(50% - (#{$spacing-xl} / 2));
+                width: calc(50% - (#{$h-grid-sm} / 2));
             }
         }
 
         &.mzp-l-card-feature-left-third,
         &.mzp-l-card-feature-right-third {
             .mzp-c-card-feature-content {
-                width: calc(41% - #{$spacing-2xl});
+                width: calc(41% - #{$h-grid-sm});
             }
 
             .mzp-c-card-feature-media-wrapper {
@@ -146,7 +146,7 @@
             &.mzp-l-card-feature-right-half,
             &.mzp-l-card-feature-left-third,
             &.mzp-l-card-feature-right-third {
-                @include grid-column-gap($spacing-xl);
+                @include grid-column-gap($h-grid-sm);
                 display: grid;
 
                 .mzp-c-card-feature-content {
@@ -207,7 +207,7 @@
             &.mzp-l-card-feature-right-half,
             &.mzp-l-card-feature-left-third,
             &.mzp-l-card-feature-right-third {
-                @include grid-column-gap($spacing-2xl);
+                @include grid-column-gap($h-grid-lg);
             }
         }
     }

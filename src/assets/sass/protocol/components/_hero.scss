@@ -46,7 +46,7 @@
 
 .mzp-c-hero-body {
     margin: 0 auto;
-    max-width: 480px;
+    max-width: $content-sm;
 }
 
 .mzp-c-hero-title {
@@ -96,8 +96,8 @@
 
             .mzp-c-hero-body {
                 @include bidi((
-                    (margin-right, calc(50% + #{$spacing-xl}), 0),
-                    (margin-left, 0, calc(50% + #{$spacing-xl}))
+                    (margin-right, calc(50% + #{$h-grid-sm/2}), 0),
+                    (margin-left, 0, calc(50% + #{$h-grid-sm/2}))
                 ));
                 width: calc(50% - #{$spacing-xl});
             }
@@ -121,15 +121,15 @@
             &.mzp-l-reverse {
                 .mzp-c-hero-body {
                     @include bidi((
-                        (margin-right, 0, calc(50% + #{$spacing-xl})),
-                        (margin-left, calc(50% + #{$spacing-xl}), 0)
+                        (margin-right, 0, calc(50% + #{$h-grid-sm/2})),
+                        (margin-left, calc(50% + #{$h-grid-sm/2}), 0)
                     ));
                 }
 
                 .mzp-c-hero-image {
                     @include bidi((
-                        (right, 50%, auto),
-                        (left, auto, 50%)
+                        (right, calc(50% + #{$h-grid-sm/2}), auto),
+                        (left, auto, calc(50% + #{$h-grid-sm/2}))
                     ));
 
                     img {
@@ -145,10 +145,10 @@
 
     .mzp-c-hero-image {
         @include bidi((
-            (left, 50%, auto),
-            (right, auto, 50%)
+            (left, calc(50% + #{$h-grid-sm/2}), auto),
+            (right, auto, calc(50% + #{$h-grid-sm/2}))
         ));
-        height: calc(100% - #{$layout-lg});
+        height: calc(100% - #{$h-grid-sm});
         overflow: hidden;
         padding: 0;
         position: absolute;
@@ -177,8 +177,8 @@
         &.mzp-has-image {
             .mzp-c-hero-body {
                 @include bidi((
-                    (margin-right, calc(50% + #{$spacing-2xl}), 0),
-                    (margin-left, 0, calc(50% + #{$spacing-2xl}))
+                    (margin-right, calc(50% + #{$h-grid-lg/2}), 0),
+                    (margin-left, 0, calc(50% + #{$h-grid-lg/2}))
                 ));
                 width: calc(50% - #{$spacing-2xl});
             }
@@ -186,16 +186,30 @@
             &.mzp-l-reverse {
                 .mzp-c-hero-body {
                     @include bidi((
-                        (margin-right, 0, calc(50% + #{$spacing-2xl})),
-                        (margin-left, calc(50% + #{$spacing-2xl}), 0)
+                        (margin-right, 0, calc(50% + #{$h-grid-lg/2})),
+                        (margin-left, calc(50% + #{$h-grid-lg/2}), 0)
                     ));
+                }
+
+                .mzp-c-hero-image {
+                    @include bidi((
+                        (right, calc(50% + #{$h-grid-lg/2}), auto),
+                        (left, auto, calc(50% + #{$h-grid-lg/2}))
+                    ));
+
+                    img {
+                        @include bidi((
+                            (left, auto, 0),
+                            (right, 0, auto)
+                        ));
+                    }
                 }
             }
         }
     }
 
     .mzp-c-hero-body {
-        max-width: 580px;
+        max-width: $content-md;
     }
 
     .mzp-c-hero-title {
@@ -207,6 +221,10 @@
     }
 
     .mzp-c-hero-image {
+        @include bidi((
+            (left, calc(50% + #{$h-grid-lg/2}), auto),
+            (right, auto, calc(50% + #{$h-grid-lg/2}))
+        ));
         height: calc(100% - #{$layout-xl});
         top: $spacing-2xl;
     }

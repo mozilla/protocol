@@ -1,6 +1,6 @@
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+// file, You can obtain one at http://mozilla.org/MPL / 2.0/.
 
 @import '../includes/lib';
 
@@ -19,16 +19,16 @@
             .mzp-l-main {
                 @include bidi((
                     (float, right, left),
-                    (padding-left, $spacing-md, 0),
-                    (padding-right, 0, $spacing-md)
+                    (padding-left, $h-grid-sm / 2, 0),
+                    (padding-right, 0, $h-grid-sm / 2)
                 ));
             }
 
             .mzp-l-sidebar {
                 @include bidi((
                     (float, left, right),
-                    (padding-right, $spacing-md, 0),
-                    (padding-left, 0, $spacing-md)
+                    (padding-right, $h-grid-sm / 2, 0),
+                    (padding-left, 0, $h-grid-sm / 2)
                 ));
             }
         }
@@ -37,16 +37,16 @@
             .mzp-l-main {
                 @include bidi((
                     (float, left, right),
-                    (padding-right, $spacing-md, 0),
-                    (padding-left, 0, $spacing-md)
+                    (padding-right, $h-grid-sm / 2, 0),
+                    (padding-left, 0, $h-grid-sm / 2)
                 ));
             }
 
             .mzp-l-sidebar {
                 @include bidi((
                     (float, right, left),
-                    (padding-left, $spacing-md, 0),
-                    (padding-right, 0, $spacing-md)
+                    (padding-left, $h-grid-sm / 2, 0),
+                    (padding-right, 0, $h-grid-sm / 2)
                 ));
             }
         }
@@ -54,6 +54,46 @@
 }
 
 @media #{$mq-lg} {
+    .mzp-has-sidebar {
+        &.mzp-l-sidebar-left {
+            .mzp-l-main {
+                @include bidi((
+                    (float, right, left),
+                    (padding-left, $h-grid-lg / 2, 0),
+                    (padding-right, 0, $h-grid-lg / 2)
+                ));
+            }
+
+            .mzp-l-sidebar {
+                @include bidi((
+                    (float, left, right),
+                    (padding-right, $h-grid-lg / 2, 0),
+                    (padding-left, 0, $h-grid-lg / 2)
+                ));
+            }
+        }
+
+        &.mzp-l-sidebar-right {
+            .mzp-l-main {
+                @include bidi((
+                    (float, left, right),
+                    (padding-right, $h-grid-lg / 2, 0),
+                    (padding-left, 0, $h-grid-lg / 2)
+                ));
+            }
+
+            .mzp-l-sidebar {
+                @include bidi((
+                    (float, right, left),
+                    (padding-left, $h-grid-lg / 2, 0),
+                    (padding-right, 0, $h-grid-lg / 2)
+                ));
+            }
+        }
+    }
+}
+
+@media #{$mq-xl} {
     .mzp-has-sidebar {
         .mzp-l-main {
             @include grid-three-quarters;
