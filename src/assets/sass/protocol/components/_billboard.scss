@@ -4,8 +4,13 @@
 
 @import '../includes/lib';
 
-$billboard-content-width-md: 300px + $spacing-sm; // content width + spacing small.
-$billboard-content-width-lg: 374px + $spacing-md; // content width + spacing medium.
+$billboard-image-width-sm: 220px;
+//                   half the screen - l-content gutter - half distance to center - padding from side of billboard
+$billboard-image-width-md: $screen-md / 2 - $layout-lg - $h-grid-sm/2 - $spacing-sm;
+$billboard-image-width-lg: $screen-lg / 2 - $layout-xl - $h-grid-lg/2 - $spacing-md;
+
+$billboard-content-width-md: $billboard-image-width-md + $h-grid-sm/2; // image width + space from center
+$billboard-content-width-lg: $billboard-image-width-lg + $h-grid-sm/2; // image width + space from center
 
 .mzp-c-billboard {
     background: $color-marketing-gray-20;
@@ -21,7 +26,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
 
     .mzp-c-billboard-content-container {
         padding: $spacing-lg $spacing-sm;
-        min-height: 220px;
+        min-height: $billboard-image-width-sm;
     }
 
     .mzp-c-billboard-content-inner {
@@ -47,7 +52,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         margin: $spacing-xl 0;
 
         .mzp-c-billboard-content {
-            max-width: 300px;
+            max-width: $billboard-image-width-md;
         }
 
         .mzp-c-billboard-content-container {
@@ -58,7 +63,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
 
         .mzp-c-billboard-image-container {
             margin: $spacing-lg 0;
-            max-width: 300px;
+            max-width: $billboard-image-width-md;
         }
 
         .mzp-c-billboard-image {
@@ -67,7 +72,6 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
 
         &.mzp-l-billboard-left {
             .mzp-c-billboard-content {
-                left: 0;
                 margin-left: calc(50% - #{$billboard-content-width-md});
                 width: 50%;
             }
@@ -81,7 +85,6 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
 
         &.mzp-l-billboard-right {
             .mzp-c-billboard-content {
-                right: 0;
                 margin-right: calc(50% - #{$billboard-content-width-md});
                 width: 50%;
             }
@@ -99,12 +102,12 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
 
         .mzp-c-billboard-content {
             @include border-box;
-            max-width: 374px;
+            max-width: $billboard-image-width-lg;
         }
 
         .mzp-c-billboard-image-container {
             margin: -42px 0;
-            max-width: 374px;
+            max-width: $billboard-image-width-lg;
         }
 
         .mzp-c-billboard-image {

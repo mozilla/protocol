@@ -78,7 +78,7 @@
 
         @supports (display: grid) {
             & {
-                @include grid-column-gap($spacing-xl);
+                @include grid-column-gap($h-grid-sm);
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
 
@@ -107,6 +107,7 @@
 
     @media #{$mq-lg} {
         & {
+            @include grid-column-gap($h-grid-lg);
             padding: $layout-md $layout-xl;
         }
 
