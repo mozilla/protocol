@@ -19,6 +19,11 @@
       <li class="protosite-nav-main-item">
         <a href="{{@root.baseurl}}">Home</a>
       </li>
+      <li class="protosite-nav-main-item">
+        {{#with (page "docs/index")}}
+          {{> nav-item label=data.title}}
+        {{/with}}
+      </li>
     </ul>
 
     {{!-- Fundamentals --}}
@@ -80,11 +85,6 @@
     {{!-- Other pages --}}
     <h4 class="protosite-nav-menu-title">Other Stuff</h4>
     <ul>
-      <li class="protosite-nav-main-item">
-        {{#with (page "docs/index")}}
-          {{> nav-item label=data.title}}
-        {{/with}}
-      </li>
       <li class="protosite-nav-main-item">
         {{#with (page "demos/index")}}
           {{> nav-item label=data.title}}

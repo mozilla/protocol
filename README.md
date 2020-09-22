@@ -4,9 +4,9 @@ Protocol is a design system for Mozilla and Firefox websites. It establishes a c
 
 https://protocol.mozilla.org/
 
-Protocol is still an evolving project. It is used primarily by the Mozilla Websites Marketing team, as the front-end for [https://www.mozilla.org](https://www.mozilla.org). The long term aim is a design system that can be used by anyone at Mozilla to build an on-brand website.
+Protocol is still an evolving project. Currently it’s used primarily by the Mozilla Marketing Websites team as the front-end for [www.mozilla.org](https://www.mozilla.org). The long term goal is to provide a robust, unified design system that anyone at Mozilla can use to build an on-brand website.
 
-If you're interested in using Protocol in your project, let us know and we can help you. You can find us in #protocol-design-system on Mozilla’s Slack (for Mozillians) or [file an issue on GitHub](https://github.com/mozilla/protocol/issues).</p>
+If you’re interested in using Protocol on your project, let us know and we can help you. You can find us in #protocol-design-system on Mozilla’s Slack (for Mozillians) or in #protocol-design-system on [Matrix](https://chat.mozilla.org/) (open to the public). Also feel free to [file an issue on GitHub](https://github.com/mozilla/protocol/issues).
 
 ![Current npm package version.](https://img.shields.io/npm/v/@mozilla-protocol/core)
 ![Total downloads on npm.](https://img.shields.io/npm/dt/@mozilla-protocol/core)
