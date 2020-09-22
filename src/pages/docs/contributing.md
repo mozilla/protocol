@@ -3,17 +3,17 @@ title: Contributing to Protocol
 order: 2
 ---
 
-Protocol, like everything else Mozilla makes, is open source. We welcome
-contributions from people like you. Yes, you, whoever you are reading this,
-can do something to make Protocol better and more useful, no matter your
-skill level or area of interest.
+Protocol, like everything else Mozilla makes, is [open source](https://developer.mozilla.org/docs/Mozilla/Developer_guide/Introduction).
+We welcome contributions from people like you. Yes, you, whoever you are
+reading this, can do something to make Protocol better and more useful,
+no matter your skill level or area of interest.
 
 ### Reporting Bugs
 
 The easiest way to help is to report bugs. Let us know if something isn't
 doing what you think it should do and we can try to fix it.
 
-To report an error you’ve discovered in Protocol, [submit an issue on Github](https://github.com/mozilla/protocol/issues)
+To report an error you’ve discovered in Protocol, [submit an issue on Github](https://github.com/mozilla/protocol/issues/new/choose/)
 with a detailed description of the error and steps to reproduce. If possible,
 include a link to a live example and/or a screenshot of the bug in effect.
 Also be sure to mention the browser (and version) and operating system.
@@ -25,7 +25,7 @@ so it’s a good idea to search through [recently closed issues](https://github.
 ### Requesting New Features
 
 If you would like to request changes to a component or a new component be
-added to Protocol, please [submit an issue on Github](https://github.com/mozilla/protocol/issues)
+added to Protocol, please [submit an issue on Github](https://github.com/mozilla/protocol/issues/new/choose/)
 using the appropriate issue template. Please try to fill out this template
 as thoroughly as you can. This will help the team understand the request
 and triage issues more effectively.
@@ -157,7 +157,7 @@ root folder looks something like:
 protocol
 ├── bin (scripts that deploy the site to the server)
 ├── dist (where source files are built locally for serving [not found in git])
-├── docs (Drizzle documentation)
+├── docs (documentation for Drizzle, the tool that drives the Protocol site)
 ├── gulpfile.js (scripts that build and process the pattern library and CSS framework)
 ├── src (the real source of the site; this is the meat of Protocol)
 └── tests (automated test scripts)
