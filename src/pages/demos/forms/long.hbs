@@ -9,12 +9,12 @@ styles:
   <br>
   <form class="mzp-c-form">
     <div class="mzp-c-form-header">
-      <h2 class="mzp-c-form-heading">Speaker request form</h2>
+      <h2 class="mzp-c-form-title">Speaker request form</h2>
       <p>Please complete and submit the form below to request a speaker from Mozilla for your upcoming event.</p>
     </div>
 
     <fieldset class="mzp-c-field-set">
-      <legend class="mzp-c-form-subheading">Event Information</legend>
+      <legend class="mzp-c-form-subtitle">Event Information</legend>
       {{#embed "patterns.molecules.forms.fields.input" id="event_name" type="text" required="true"}}{{#content "label"}}Event Name{{/content}}{{/embed}}
       {{#embed "patterns.molecules.forms.fields.input" id="event_url" type="url" required="true"}}
         {{#content "label"}}Event URL{{/content}}
@@ -28,7 +28,7 @@ styles:
     </fieldset>
 
     <fieldset class="mzp-c-field-set">
-      <legend class="mzp-c-form-subheading">Your Contact Information</legend>
+      <legend class="mzp-c-form-subtitle">Your Contact Information</legend>
       {{#embed "patterns.molecules.forms.fields.input" id="contact_company" type="text" required="true"}}{{#content "label"}}Company{{/content}}{{/embed}}
       {{#embed "patterns.molecules.forms.fields.input" id="contact_name" type="text" required="true"}}{{#content "label"}}Name{{/content}}{{/embed}}
       {{#embed "patterns.molecules.forms.fields.input" id="contact_pronouns" type="text" required="true"}}
@@ -46,7 +46,7 @@ styles:
     </fieldset>
 
     <fieldset class="mzp-c-field-set">
-      <legend class="mzp-c-form-subheading">Event Details</legend>
+      <legend class="mzp-c-form-subtitle">Event Details</legend>
       {{#embed "patterns.molecules.forms.fields.textarea" id="event_details"}}
         {{#content "label"}}Tell us about your event <span class="mzp-c-fieldnote">Theme, venue, audience demographics, confirmed speakers...</span>{{/content}}
         {{#content "attrs"}}rows="5" cols="60"{{/content}}
@@ -54,7 +54,7 @@ styles:
     </fieldset>
 
     <fieldset class="mzp-c-field-set">
-      <legend class="mzp-c-form-subheading">Speaker Request</legend>
+      <legend class="mzp-c-form-subtitle">Speaker Request</legend>
       {{#embed "patterns.molecules.forms.fields.input" id="guest_1" type="text"}}{{#content "label"}}Guest Speaker Choice #1{{/content}}{{/embed}}
       {{#embed "patterns.molecules.forms.fields.input" id="guest_2" type="text"}}{{#content "label"}}Guest Speaker Choice #2{{/content}}{{/embed}}
       {{#embed "patterns.molecules.forms.fields.input" id="guest_topic" type="text"}}

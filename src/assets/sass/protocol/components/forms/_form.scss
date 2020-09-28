@@ -10,7 +10,7 @@
 // - form
 //     - form
 //     - form-header
-//     - form-heading
+//     - form-title
 //     - form-footer
 
 
@@ -57,9 +57,9 @@
 }
 
 
-// Heading/title
-.mzp-c-form-heading,
-legend.mzp-c-form-heading {
+// Title
+.mzp-c-form-title,
+legend.mzp-c-form-title {
     @include text-title-xs;
     color: get-theme('title-text-color');
     font-family: get-theme('title-font-family');
@@ -76,16 +76,16 @@ legend.mzp-c-form-heading {
 }
 
 
-// Subheading
-.mzp-c-form-subheading,
-legend.mzp-c-form-subheading {
+// Subtitle
+.mzp-c-form-subtitle,
+legend.mzp-c-form-subtitle {
     @include text-body-lg;
     font-weight: bold;
     margin-bottom: $field-v-spacing;
 }
 
-legend.mzp-c-form-heading,
-legend.mzp-c-form-subheading {
+legend.mzp-c-form-title,
+legend.mzp-c-form-subtitle {
     float: left;
     width: 100%;
 }
