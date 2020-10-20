@@ -12,4 +12,11 @@
         e.currentTarget.parentNode.classList.add('mzp-a-fade-out');
     }, false);
 
+    var stickyPromo = document.querySelector('.mzp-c-sticky-promo');
+
+    if (stickyPromo.classList.contains('mzp-js-show-on-load')) {
+        document.addEventListener('DOMContentLoaded', function(){
+            stickyPromo.classList.add('mzp-a-slide-in');
+        });
+    }
 })();
