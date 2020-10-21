@@ -16,12 +16,17 @@ notes: |
 
 ---
 
-<aside class="mzp-c-sticky-promo mzp-t-product-firefox mzp-t-dark mzp-js-show-on-load">
+<aside class="mzp-c-sticky-promo mzp-t-product-firefox mzp-t-dark">
   <button class="mzp-c-sticky-promo-close" type="button">Close</button>
   <h3 class="mzp-c-sticky-promo-title">Get the latest Firefox Browser.</h3>
   <a class="mzp-c-button mzp-t-product mzp-t-small" href="#">Download Now</a>
 </aside>
 
-<script
- src="../../../assets/protocol/protocol/js/protocol-sticky-promo.js">
+<script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-sticky-promo.js"></script>
+
+<script>
+(function() {
+    'use strict';
+    Mzp.StickyPromo.open();
+})();
 </script>

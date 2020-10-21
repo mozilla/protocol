@@ -2,21 +2,57 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+// create namespace
+if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
+    var Mzp = {};
+}
+
 (function() {
     'use strict';
 
-    var closeButton = document.querySelector('.mzp-c-sticky-promo-close');
+    var StickyPromo = {};
+    var stickyPromo;
+    var closeButton;
 
-    closeButton.addEventListener('click', function(e) {
-        e.preventDefault();
+    stickyPromo = document.querySelector('.mzp-c-sticky-promo');
+
+    /*
+    element: This component inits if it can find an instance of `.mzp-c-sticky-promo` in the DOM.
+    */
+    StickyPromo.init = function(element) {
+        if (!element) {
+            return false;
+        }
+
+        // Set close button/actions
+        closeButton = document.querySelector('.mzp-c-sticky-promo-close');
+        closeButton.addEventListener('click', StickyPromo.close, false);
+
+        // Backward compatibility to auto-show the promo if the class `mzp-js-show-on-load` is present.
+        if (element.classList.contains('mzp-js-show-on-load')) {
+            document.addEventListener('DOMContentLoaded', function(){
+                StickyPromo.open();
+            });
+        }
+    };
+
+    StickyPromo.close = function(e) {
+        if (e) {
+            e.preventDefault();
+        }
+
         e.currentTarget.parentNode.classList.add('mzp-a-fade-out');
-    }, false);
+    };
 
-    var stickyPromo = document.querySelector('.mzp-c-sticky-promo');
+    StickyPromo.open = function(e) {
+        if (e) {
+            e.preventDefault();
+        }
+        stickyPromo.classList.add('mzp-a-slide-in');
+    };
 
-    if (stickyPromo.classList.contains('mzp-js-show-on-load')) {
-        document.addEventListener('DOMContentLoaded', function(){
-            stickyPromo.classList.add('mzp-a-slide-in');
-        });
-    }
+    StickyPromo.init(stickyPromo);
+
+    window.Mzp.StickyPromo = StickyPromo;
+
 })();
