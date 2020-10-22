@@ -41,6 +41,7 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
             e.preventDefault();
         }
 
+        e.currentTarget.parentNode.classList.remove('mzp-a-slide-in', 'mzp-js-show-on-load');
         e.currentTarget.parentNode.classList.add('mzp-a-fade-out');
     };
 
@@ -49,6 +50,7 @@ if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
             e.preventDefault();
         }
         stickyPromo.classList.add('mzp-a-slide-in');
+        stickyPromo.classList.remove('mzp-a-fade-out');
     };
 
     StickyPromo.init(stickyPromo);

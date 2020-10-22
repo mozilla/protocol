@@ -39,8 +39,12 @@ $logos: (
     position: fixed;
     width: $content-xs;
     z-index: 10;
-    animation: 600ms ease 1500ms both;
+    animation: 600ms ease 300ms both;
     opacity: 0;
+
+    &.mzp-js-show-on-load {
+        animation-delay: 1000ms;
+    }
 
     &.mzp-a-slide-in {
         @include bidi(((animation-name, mzp-a-slide-in-right, mzp-a-slide-in-left),));

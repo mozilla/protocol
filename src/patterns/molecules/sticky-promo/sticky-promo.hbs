@@ -2,7 +2,7 @@
 name: Sticky Promo Card
 description: The primary purpose of the Sticky Card component is to ensure that the content it’s promoting remains a constant on the page -- always visible within the viewport no matter a user’s scroll position. Sticky Promo Cards can be used to promote a product and provide a CTA. While the card itself is both content and context agnostic, it should only be used strategically on pages where it will be most effective.
 notes: |
-  - The element is hidden by default. To show it, add `mzp-a-slide-in` to the class list.
+  - The element is hidden by default and made visible by the `Mzp.StickyPromo.open()` function.
   - As a helper, you can set the sticky promo to automatically animate in once the page is loaded by adding `mzp-js-show-on-load` to the class list.
   - Use only one primary cta per card.
   - Use only one sticky promo card per page.
@@ -21,12 +21,14 @@ notes: |
   <h3 class="mzp-c-sticky-promo-title">Get the latest Firefox Browser.</h3>
   <a class="mzp-c-button mzp-t-product mzp-t-small" href="#">Download Now</a>
 </aside>
+<button id="showSticky" class="mzp-c-button mzp-t-md" type="button">Show Sticky Promo</button>
 
 <script src="{{@root.baseurl}}/assets/protocol/protocol/js/protocol-sticky-promo.js"></script>
 
 <script>
 (function() {
     'use strict';
-    Mzp.StickyPromo.open();
+    var showStickyBtn = document.getElementById("showSticky");
+    showStickyBtn.addEventListener('click', Mzp.StickyPromo.open, false);
 })();
 </script>
