@@ -25,12 +25,10 @@ $logos: (
 }
 
 .mzp-c-sticky-promo {
-    @include bidi(((animation-name, mzp-a-slide-in-right, mzp-a-slide-in-left),));
     @include bidi((
         (right, $spacing-md, auto),
         (left, auto, $spacing-md),
     ));
-    animation: 600ms ease 1500ms both;
     background-color: $color-white;
     border-radius: $border-radius-sm;
     bottom: 0;
@@ -41,6 +39,16 @@ $logos: (
     position: fixed;
     width: $content-xs;
     z-index: 10;
+    animation: 600ms ease 300ms both;
+    opacity: 0;
+
+    &.mzp-js-show-on-load {
+        animation-delay: 1000ms;
+    }
+
+    &.mzp-a-slide-in {
+        @include bidi(((animation-name, mzp-a-slide-in-right, mzp-a-slide-in-left),));
+    }
 
     &.mzp-a-fade-out {
         @include animation(mzp-a-fade-out 100ms ease 5ms both);
@@ -106,4 +114,3 @@ $logos: (
         background: transparent url("#{$image-path}/icons/close-white.svg") center center no-repeat;
     }
 }
-
