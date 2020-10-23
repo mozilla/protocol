@@ -1,10 +1,10 @@
-# HEAD
+# 12.1.1
 
 ## Features
 
 * **css:** Revise sticky promo component to be hidden by default  (#638)
 
-# 12.0.1
+# 12.1.0
 
 ## Features
 
