@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **component:** Add error message component (#430)
+
 # 12.1.1
 
 ## Features
@@ -8,7 +14,6 @@
 
 ## Features
 
-* **component:** Add error message component (#430)
 * **css:** Add sticky promo component (#603)
 
 # 12.0.1

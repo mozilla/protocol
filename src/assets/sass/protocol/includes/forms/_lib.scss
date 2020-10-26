@@ -85,7 +85,7 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
 @mixin form-msg() {
     @include text-body-xs;
     @include border-box;
-    background-color: $form-red;
+    background-color: $field-border-color-error-hover;
     border-radius: $border-radius-sm;
     box-shadow: $box-shadow-sm;
     color: $color-white;
@@ -99,7 +99,7 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
 @mixin form-msg-pointer() {
     @include bidi(((left, 6px, right, auto),));
     border: 7px solid transparent;
-    border-bottom: 8px solid $form-red;
+    border-bottom: 8px solid $field-border-color-error-hover;
     bottom: 100%;
     content: '';
     height: 0;
