@@ -33,8 +33,8 @@
 
 * **css:** Revise sticky promo component to be hidden by default  (#638)
 
-
 # 12.1.0
+
 
 ## Features
 

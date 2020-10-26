@@ -20,14 +20,13 @@ $font-path: '../fonts' !default;
 // Mozilla brands.
 @import 'includes/fonts/inter';
 
-// Metropolis is used with the Firefox brand. Remove this import if
-// your site uses the Mozilla brand exclusively.
-@import 'includes/fonts/metropolis';
+// Zilla Slab is used with the Mozilla brand. Remove this import if
+// your site uses the Firefox brand exclusively.
+@import 'includes/fonts/zilla-slab';
 
-// Zilla Slab is used with the Mozilla brand. Uncomment this import if
-// your site uses the Mozilla brand.
-// @import 'includes/fonts/zilla-slab';
-
+// Metropolis is used with the Firefox brand. Uncomment this import if
+// your site uses the Firefox brand.
+// @import 'includes/fonts/metropolis';
 
 // Base elements - general HTML elements
 @import 'base/elements';

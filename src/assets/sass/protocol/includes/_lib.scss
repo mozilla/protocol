@@ -10,7 +10,7 @@
 // apply different styling to some elements based on which brand
 // you're representing on the page.
 
-// This sets Firefox as the default brand out of the box. You can
+// This sets Mozilla as the default brand out of the box. You can
 // override this variable in other style sheets by setting a different
 // value *before* the lib file import.
 
@@ -18,7 +18,7 @@
 //      'firefox'
 //      'mozilla'
 
-$brand-theme: 'firefox' !default;
+$brand-theme: 'mozilla' !default;
 
 
 //* -------------------------------------------------------------------------- */
