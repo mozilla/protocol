@@ -68,6 +68,7 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
     @include text-body-sm;
     display: block;
     font-weight: normal;
+    margin-bottom: 0;
 }
 
 @mixin form-input() {
@@ -79,4 +80,30 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
     line-height: 1.25;
     margin: 0 0 $field-v-spacing;
     padding: $field-padding;
+}
+
+@mixin form-msg() {
+    @include text-body-xs;
+    @include border-box;
+    background-color: $field-border-color-error-hover;
+    border-radius: $border-radius-sm;
+    box-shadow: $box-shadow-sm;
+    color: $color-white;
+    display: table; // make it behave like inline-block but still get a new line
+    margin: 2px 0 0;
+    max-width: 100%;
+    padding: $spacing-xs #{$spacing-sm + 2px};
+    position: relative;
+}
+
+@mixin form-msg-pointer() {
+    @include bidi(((left, 6px, right, auto),));
+    border: 7px solid transparent;
+    border-bottom: 8px solid $field-border-color-error-hover;
+    bottom: 100%;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+    z-index: 1;
 }

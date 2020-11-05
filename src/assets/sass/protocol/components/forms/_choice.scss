@@ -274,4 +274,8 @@
         margin-top: $label-v-spacing * -1;
         @include bidi(((padding-left, $choice-spacing, padding-right, 0),));
     }
+
+    .mzp-c-choice-msg + & {
+        padding-top: $spacing-xs;
+    }
 }

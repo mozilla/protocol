@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **component:** Add error message component (#430)
+
 # 12.1.1
 
 ## Features

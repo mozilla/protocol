@@ -123,9 +123,12 @@ label {
 
 
 /* check boxes and radio buttons */
-[type="checkbox"],
-[type="radio"] {
+[type="checkbox"] {
     border-radius: $field-border-radius;
+}
+
+[type="radio"] {
+    border-radius: 100%;
 }
 
 
