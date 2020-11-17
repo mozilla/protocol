@@ -1,4 +1,4 @@
-# HEAD
+# 13.0.0
 
 ## Features
 
@@ -25,8 +25,6 @@
   * `$font-inter` changes to `$font-stack-base`
 * `mzp-c-form-heading` and `mzp-c-form-subheading` have been changed to `mzp-c-form-title` and `mzp-c-form-subtitle`.
 
-
-
 # 12.1.1
 
 ## Features
@@ -34,7 +32,6 @@
 * **css:** Revise sticky promo component to be hidden by default  (#638)
 
 # 12.1.0
-
 
 ## Features
 
