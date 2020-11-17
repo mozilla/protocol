@@ -7,14 +7,15 @@
 
 html {
     font-size: 100%;
-    background: #fff;
+    background: $color-white;
 }
 
 body {
     @include text-body-md;
-    background: #fff;
-    color: $color-black;
-    font-family: $font-base-family;
+    background: get-theme('background-color');
+    color: get-theme('body-text-color');
+    font-family: get-theme('body-font-family');
+    line-height: type-scale('body-line-height');
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }

@@ -73,7 +73,7 @@ module.exports = {
         protocol: {
             src: [
                 `${src}/sass/protocol/protocol.scss`,
-                `${src}/sass/protocol/protocol-extra.scss`
+                `${src}/sass/protocol/protocol-components.scss`
             ],
             dest: `${dest}/protocol/protocol/css/`
         },

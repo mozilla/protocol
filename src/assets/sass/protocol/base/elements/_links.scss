@@ -4,11 +4,15 @@
 
 @import '../../includes/lib';
 
+
 :link {
-    color: $color-link;
+    color: get-theme('link-color');
     text-decoration: underline;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
+        color: get-theme('link-color-hover');
         text-decoration: none;
     }
 
@@ -18,10 +22,12 @@
 }
 
 :visited {
-    color: $color-link-visited;
+    color: get-theme('link-color-visited');
 
-    &:hover {
-        color: $color-link-visited-hover;
+    &:hover,
+    &:focus,
+    &:active {
+        color: get-theme('link-color-visited-hover');
     }
 }
 
@@ -30,9 +36,6 @@
 }
 
 .mzp-c-cta-link {
+    font-family: get-theme('button-font-family');
     font-weight: bold;
-
-    .mzp-t-firefox & {
-        @include font-firefox;
-    }
 }

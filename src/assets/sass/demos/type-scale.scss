@@ -2,34 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-/* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
 // Typescale demo
 
 @import '../protocol/includes/lib';
 @import '../docs/protocol';
-@import '../docs/protocol-extra';
-
-body {
-    background: repeating-linear-gradient(transparent, transparent 3px, rgba(0, 255, 255, .2) 4px, transparent 4px, transparent 7px, rgba(0, 255, 255, .4) 8px);
-}
-
-hr {
-    margin: 40px auto;
-    max-width: $content-max - (160px);
-}
-
-.scale-sample-display-xxl { @include text-title-xxl; }
-.scale-sample-display-xl { @include text-title-xl; }
-.scale-sample-display-lg { @include text-title-lg; }
-.scale-sample-display-md { @include text-title-md; }
-.scale-sample-display-sm { @include text-title-sm; }
-.scale-sample-display-xs { @include text-title-xs; }
-.scale-sample-display-xxs { @include text-title-xxs; }
-.scale-sample-body-lg { @include text-body-lg; }
-.scale-sample-body-md { @include text-body-md; }
-.scale-sample-body-sm { @include text-body-sm; }
-.scale-sample-body-xs { @include text-body-xs; }
-.scale-sample-cta { @include text-body-cta; }
 
 .label {
     @include text-body-sm;
@@ -38,85 +15,147 @@ hr {
 }
 
 
-#specimen-type-scale {
+.scale-sample {
+    margin: 0 0 .25em;
+}
+
+.scale-sample-title-2xl { @include text-title-2xl; }
+.scale-sample-title-xl { @include text-title-xl; }
+.scale-sample-title-lg { @include text-title-lg; }
+.scale-sample-title-md { @include text-title-md; }
+.scale-sample-title-sm { @include text-title-sm; }
+.scale-sample-title-xs { @include text-title-xs; }
+.scale-sample-title-2xs { @include text-title-2xs; }
+.scale-sample-title-3xs { @include text-title-3xs; }
+.scale-sample-body-xl { @include text-body-xl; }
+.scale-sample-body-lg { @include text-body-lg; }
+.scale-sample-body-md { @include text-body-md; }
+.scale-sample-body-sm { @include text-body-sm; }
+.scale-sample-body-xs { @include text-body-xs; }
+
+
+#specimen-type-scale-condensed {
     .scale-sample {
         margin: 0 0 .25em;
     }
 
-    .scale-sample:after {
-        @include font-base;
-        @include text-body-sm;
-        color: $color-marketing-gray-80;
-        font-weight: normal;
-        margin-left: 10px;
-    }
-
-    .scale-sample-display-xxl:after {
-        content: '(60px/64px)';
+    .scale-sample-title-2xl {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'title-xl-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'title-xl-line-height');
 
         @media #{$mq-md} {
-            content: '(64px/70px)';
+            font-size: map-get($theme-type-scale-condensed-firefox, 'title-2xl-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'title-2xl-line-height');
         }
     }
 
-    .scale-sample-display-xl:after {
-        content: '(48px/52px)';
+    .scale-sample-title-xl {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'title-lg-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'title-lg-line-height');
 
         @media #{$mq-md} {
-            content: '(56px/62px)';
+            font-size: map-get($theme-type-scale-condensed-firefox, 'title-xl-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'title-xl-line-height');
         }
     }
 
-    .scale-sample-display-lg:after {
-        content: '(36px/40px)';
+    .scale-sample-title-lg {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'title-md-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'title-md-line-height');
 
         @media #{$mq-md} {
-            content: '(48px/53px)';
+            font-size: map-get($theme-type-scale-condensed-firefox, 'title-lg-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'title-lg-line-height');
         }
     }
 
-    .scale-sample-display-md:after {
-        content: '(24px/28px)';
+    .scale-sample-title-md {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'title-sm-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'title-sm-line-height');
 
         @media #{$mq-md} {
-            content: '(40px/44px)';
+            font-size: map-get($theme-type-scale-condensed-firefox, 'title-md-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'title-md-line-height');
         }
     }
 
-    .scale-sample-display-sm:after {
-        content: '(21px/24px)';
+    .scale-sample-title-sm {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'title-xs-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'title-xs-line-height');
 
         @media #{$mq-md} {
-            content: '(32px/35px)';
+            font-size: map-get($theme-type-scale-condensed-firefox, 'title-sm-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'title-sm-line-height');
         }
     }
 
-    .scale-sample-display-xs:after {
-        content: '(24px/26px)';
+    .scale-sample-title-xs {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'title-2xs-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'title-2xs-line-height');
+
+        @media #{$mq-md} {
+            font-size: map-get($theme-type-scale-condensed-firefox, 'title-xs-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'title-xs-line-height');
+        }
     }
 
-    .scale-sample-display-xxs:after {
-        content: '(16px/18px)';
+    .scale-sample-title-2xs {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'title-3xs-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'title-3xs-line-height');
+
+        @media #{$mq-md} {
+            font-size: map-get($theme-type-scale-condensed-firefox, 'title-2xs-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'title-2xs-line-height');
+        }
     }
 
-    .scale-sample-body-lg:after {
-        content: '(18px/28px)';
+    .scale-sample-title-3xs {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'title-3xs-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'title-3xs-line-height');
     }
 
-    .scale-sample-body-md:after {
-        content: '(16px/24px)';
+    .scale-sample-body-xl {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'body-lg-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'body-lg-line-height');
+
+        @media #{$mq-md} {
+            font-size: map-get($theme-type-scale-condensed-firefox, 'body-xl-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'body-xl-line-height');
+        }
     }
 
-    .scale-sample-body-sm:after {
-        content: '(14px/18px)';
+    .scale-sample-body-lg {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'body-md-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'body-md-line-height');
+
+        @media #{$mq-md} {
+            font-size: map-get($theme-type-scale-condensed-firefox, 'body-lg-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'body-lg-line-height');
+        }
     }
 
-    .scale-sample-body-xs:after {
-        content: '(12px/16px)';
+    .scale-sample-body-md {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'body-sm-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'body-sm-line-height');
+
+        @media #{$mq-md} {
+            font-size: map-get($theme-type-scale-condensed-firefox, 'body-md-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'body-md-line-height');
+        }
     }
 
-    .scale-sample-cta:after {
-        content: '(16px/18px)';
+    .scale-sample-body-sm {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'body-xs-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'body-xs-line-height');
+
+        @media #{$mq-md} {
+            font-size: map-get($theme-type-scale-condensed-firefox, 'body-sm-size');
+            line-height: map-get($theme-type-scale-condensed-firefox, 'body-sm-line-height');
+        }
+    }
+
+    .scale-sample-body-xs {
+        font-size: map-get($theme-type-scale-condensed-firefox, 'body-xs-size');
+        line-height: map-get($theme-type-scale-condensed-firefox, 'body-xs-line-height');
     }
 }
-

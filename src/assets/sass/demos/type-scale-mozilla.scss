@@ -1,0 +1,32 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+//* -------------------------------------------------------------------------- */
+// Typescale demo
+
+$brand-theme: 'mozilla';
+
+@import '../protocol/includes/lib';
+@import '../docs/protocol';
+
+
+.scale-sample-title-2xl { @include text-title-2xl; }
+.scale-sample-title-xl { @include text-title-xl; }
+.scale-sample-title-lg { @include text-title-lg; }
+.scale-sample-title-md { @include text-title-md; }
+.scale-sample-title-sm { @include text-title-sm; }
+.scale-sample-title-xs { @include text-title-xs; }
+.scale-sample-title-2xs { @include text-title-2xs; }
+.scale-sample-title-3xs { @include text-title-3xs; }
+.scale-sample-body-xl { @include text-body-xl; }
+.scale-sample-body-lg { @include text-body-lg; }
+.scale-sample-body-md { @include text-body-md; }
+.scale-sample-body-sm { @include text-body-sm; }
+.scale-sample-body-xs { @include text-body-xs; }
+
+.label {
+    @include text-body-sm;
+    color: $color-marketing-gray-80;
+    margin: 1em 0 .5em;
+}

@@ -3,13 +3,17 @@ name: Call Out (compact)
 order: 2
 description: A more compact version of a call out section, with smaller copy and a horizontal layout.
 notes: |
-    - Adding a theme class of `mzp-t-mozilla` will render the title font using Zilla Slab.
     - For RTL languages, the content and call-to-action will swap positions.
+    - Product icons can be displayed using an additional theme class:
+      - `mzp-t-product-firefox`
+      - `mzp-t-product-beta`
+      - `mzp-t-product-developer`
+      - `mzp-t-product-nightly`
 links:
     Compact Call Out Demo: /demos/call-out-compact.html
 ---
 
-<section class="mzp-c-call-out-compact {{#if class}}{{class}}{{else}}mzp-t-product-firefox mzp-t-firefox{{/if}}">
+<section class="mzp-c-call-out-compact {{#if class}}{{class}}{{/if}}">
   <div class="mzp-l-content">
     <div class="mzp-c-call-out-content">
       <div class="mzp-c-call-out-container">

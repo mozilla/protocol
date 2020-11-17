@@ -13,14 +13,14 @@ categories:
 
 <ul class="mzp-u-list-styled">
     <li>`c-` for component names. Expect a lot of this one, e.g. `.mzp-c-card`, `.mzp-c-button`.</li>
-    <li>`t-` for theme styles, when a component has one or more alternative styles, e.g. `.mzp-t-dark`, `.mzp-t-firefox`.</li>
-    <li>`l-` for layout-related styles, e.g. `.mzp-l-grid-half`, `.mzp-l-grid-third`. These are presentational so should be rare. Prefer mixins.</li>
-    <li>`u-` for utility styles, which have a broad scope and can be powerful overrides, e.g. `.mzp-u-inline`, `.mzp-u-no-margin`. These are presentational so should be rare. Prefer mixins.</li>
+    <li>`t-` for theme styles, when a component has one or more alternative styles, e.g. `.mzp-t-dark`, `.mzp-t-product-firefox`.</li>
+    <li>`l-` for layout-related styles, e.g. `.mzp-l-content`, `.mzp-l-grid-third`. These are essentially presentational names, mostly used for container elements.</li>
+    <li>`u-` for utility styles, which have a broad scope and can be powerful overrides, e.g. `.mzp-u-inline`, `.mzp-u-title-md`. These are presentational so should be rare. Prefer mixins in a style sheet over classes in HTML.</li>
     <li>`qa-` used as selector hooks for tests (unit tests, integration tests, etc.). These classes are not meant as styling hooks; no CSS should be applied to any `qa-` classes!</li>
     <li>`is-` to indicate a current state, e.g. `.mzp-is-active`, `.mzp-is-collapsed` (typically assigned by JS and not hard-coded).</li>
     <li>`has-` to indicate that a component contains some other component, when the parent gets some styling to accommodate the child, e.g. `.mzp-has-submenu`, `.mzp-has-image`.</li>
     <li>`js-` used as a behavior hook for JavaScript, e.g. `.mzp-js-sticky`, `.mzp-js-collapsible`, `.mzp-js-toggle`. Indicates potential for a change of state and usually shouldn’t have any styling.</li>
-    <li>`a-` for a CSS animation names, e.g. `mzp-a-fade-in`, `mzp-a-fade-out`.</li>
+    <li>`a-` for CSS animation names, e.g. `mzp-a-fade-in`, `mzp-a-slide-from-right`.</li>
 </ul>
 
 Our names are all lowercase and hyphen-separated or “kebab-case,” e.g.
@@ -45,12 +45,12 @@ Example:
 </div>
 ```
 
-Names should be semantically meaningful, descriptive of the element's content,
-purpose, or function, not its presentation.
+Component names should be semantically meaningful, descriptive of the element's content,
+purpose, or function, not only its presentation.
 
 ```scss
 // NO - Presentational
-.mzp-c-box { ... }
+.mzp-c-outline { ... }
 .mzp-c-button-blue { ... }
 
 // YES - Meaningful
@@ -63,7 +63,28 @@ by `l-` and `u-`) which you should only use when necessary and practical.
 In most cases there will be an equivalent SCSS mixin that may be preferable to
 adding presentational classes in your markup.
 
-## Resources
+### Sizes
+
+We use a "T-shirt" convention when we need to describe sizes, e.g. "lg" for large
+and "sm" for small. In this t-shirt scale system, the default should be the medium
+"md" size and you can scale up or down from there.
+
+```scss
+.mzp-t-size-2xl { ... }
+.mzp-t-size-xl { ... }
+.mzp-t-size-lg { ... }
+.mzp-t-size-md { ... }
+.mzp-t-size-sm { ... }
+.mzp-t-size-xs { ... }
+.mzp-t-size-2xs { ... }
+```
+
+Note that when we need multiple Xes we opt for a numeral. This avoids confusion or
+ambuguity in the event we need to reference some extreme size. "5xl" is more readable
+than "xxxxxl".
+
+
+### Resources
 
 * [Scalable and Modular Architechture for CSS (SMACSS) - Jonathan Snook](https://smacss.com/book/)
 * [CSS Architecture for Design Systems - Brad Frost](http://bradfrost.com/blog/post/css-architecture-for-design-systems/)

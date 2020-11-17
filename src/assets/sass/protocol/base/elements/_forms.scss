@@ -6,7 +6,7 @@
 @import '../../includes/forms/lib';
 
 
-/* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
 // Resets
 // many from https://necolas.github.io/normalize.css/
 
@@ -18,20 +18,17 @@ legend {
     padding: 0;
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-
+//  1. Correct the text wrapping in Edge and IE.
+//  2. Correct the color inheritance from `fieldset` elements in IE.
+//  3. Remove the padding so developers are not caught out when they zero out
+//    `fieldset` elements in all browsers.
 legend {
-    box-sizing: border-box; /* 1 */
-    color: inherit; /* 2 */
-    display: table; /* 1 */
-    max-width: 100%; /* 1 */
-    padding: 0; /* 3 */
-    white-space: normal; /* 1 */
+    box-sizing: border-box; // 1
+    color: inherit; // 2
+    display: table; // 1
+    max-width: 100%; // 1
+    padding: 0; // 3
+    white-space: normal; // 1
 }
 
 button,
@@ -51,54 +48,41 @@ button,
     -webkit-appearance: button;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
+// Remove the default vertical scrollbar in IE 10+.
 textarea {
     overflow: auto;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
+// 1. Correct the odd appearance in Chrome and Safari.
+// 2. Correct the outline style in Safari.
 [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
+    -webkit-appearance: textfield; // 1
+    outline-offset: -2px; // 2
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
+// Remove the inner padding in Chrome and Safari on macOS.
 [type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
+// 1. Correct the inability to style clickable types in iOS and Safari.
+// 2. Change font properties to `inherit` in Safari.
 ::-webkit-file-upload-button {
-    -webkit-appearance: button; /* 1 */
-    font: inherit; /* 2 */
+    -webkit-appearance: button; // 1
+    font: inherit; // 2
 }
 
-/**
-* 1. Add the correct box sizing in IE 10.
-* 2. Remove the padding in IE 10.
-*/
+
+// 1. Add the correct box sizing in IE 10.
+// 2. Remove the padding in IE 10.
 [type="checkbox"],
 [type="radio"] {
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
+    box-sizing: border-box; // 1
+    padding: 0; // 2
 }
 
 
-/* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
 // Element styles
 
 fieldset {
@@ -109,12 +93,9 @@ fieldset {
 
 legend {
     @include text-body-lg;
+    font-family: get-theme('title-font-family');
     font-weight: bold;
     margin-bottom: $field-v-spacing;
-
-    .mzp-t-firefox & {
-        @include font-firefox;
-    }
 }
 
 label {
@@ -122,8 +103,9 @@ label {
 }
 
 
-/* check boxes and radio buttons */
-[type="checkbox"] {
+// check boxes and radio buttons
+[type="checkbox"],
+[type="radio"] {
     border-radius: $field-border-radius;
 }
 
@@ -132,7 +114,7 @@ label {
 }
 
 
-/* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
 // Inputs & Textarea (excluding checkboxes and radio buttons)
 
 textarea,
@@ -210,7 +192,7 @@ input[size] {
     min-width: 0;
 }
 
-/* size on HTML is not a good way to size things, this is most evident at small sizes */
+// size on HTML is not a good way to size things, this is most evident at small sizes
 input[size='2'] {
     max-width: calc(2.5ch + #{$field-padding * 2});
 }
@@ -300,7 +282,7 @@ textarea {
 }
 
 
-/* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
 // Select
 // with thanks to https://www.filamentgroup.com/lab/select-css.html
 
@@ -388,7 +370,7 @@ select {
 }
 
 
-/* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
 // Basic utility classes
 
 fieldset {
@@ -423,7 +405,7 @@ label {
 }
 
 
-/* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
 // Errors
 
 .mzp-c-form-errors {

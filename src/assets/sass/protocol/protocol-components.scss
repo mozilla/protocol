@@ -3,8 +3,14 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
+// This file imports all Protocol components, compiled to protocol-components.css
+// You probably shouldn't use this, and should instead compile Protocol
+// yourself and only import the components you need. But this makes all
+// components available if you don't have the ability to compile Protocol
+// from source.
+
+
 // Default media paths can be overwritten globally.
-$font-path: '../fonts' !default;
 $image-path: '../img' !default;
 
 @import 'components/article';

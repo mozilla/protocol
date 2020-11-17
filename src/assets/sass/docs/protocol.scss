@@ -5,4 +5,8 @@
 $font-path:  '/assets/protocol/protocol/fonts';
 $image-path: '/assets/protocol/protocol/img';
 
+// Import Metropolis to use on the docsite.
+// (Inter and Zill Slab are already included with the default theme)
+@import '../protocol/includes/fonts/metropolis';
+
 @import '../protocol/protocol.scss';

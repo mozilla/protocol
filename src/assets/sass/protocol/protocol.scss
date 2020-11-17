@@ -3,27 +3,39 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-// Default media paths can be overwritten globally.
-$font-path: '../fonts' !default;
+// This example file sets up a basic Protocol site, with general styles
+// and components that occur on every page such as the navigation and
+// footer. You can customize this file for your project, importing only
+// the fonts, includes, and global components you actually need.
+// Individual style sheets can import additional components as needed.
+
+
+// Relative media paths tell Protocol where to find images and fonts in your
+// installation. These defaults can be overwritten as needed in other style sheets.
 $image-path: '../img' !default;
+$font-path: '../fonts' !default;
 
 
-// These are general styles for elements/components that occur on every page.
-// Individual pages may include additional component styles as needed.
-
-// Fonts
+// Inter is our general-purpose font for body text in both Firefox and
+// Mozilla brands.
 @import 'includes/fonts/inter';
-@import 'includes/fonts/metropolis';
+
+// Zilla Slab is used with the Mozilla brand. Remove this import if
+// your site uses the Firefox brand exclusively.
 @import 'includes/fonts/zilla-slab';
+
+// Metropolis is used with the Firefox brand. Uncomment this import if
+// your site uses the Firefox brand.
+// @import 'includes/fonts/metropolis';
 
 // Base elements - general HTML elements
 @import 'base/elements';
 
+// Base utilities
+@import 'base/utilities/titles';
+
 // Base includes - animations
 @import 'base/includes';
-
-// Utility includes
-@import 'base/utilities/typography';
 
 // Global components
 @import 'components/card';

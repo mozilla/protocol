@@ -4,7 +4,7 @@
 
 @import '../includes/lib';
 
-/* -------------------------------------------------------------------------- */
+//* -------------------------------------------------------------------------- */
 // A single large feature card with media, headline & description.
 
 .mzp-c-card-feature {
@@ -58,10 +58,10 @@
 
     // dark theme color styling
     .mzp-t-dark & {
-        color: $color-white;
+        color: get-theme('body-text-color-inverse');
 
         .mzp-c-card-feature-desc {
-            color: $color-marketing-gray-30;
+            color: get-theme('body-text-color-alt-inverse');
         }
     }
 

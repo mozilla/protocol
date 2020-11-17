@@ -235,24 +235,30 @@
     }
 }
 
+
 // Light color links for dark backgrounds.
 @mixin light-links {
-    a:link,
-    a:visited {
-        color: $color-white;
-        text-decoration: underline;
+    a:link {
+        color: get-theme('link-color-inverse');
     }
 
     a:visited {
-        color: transparentize($color-white, 0.2);
+        color: get-theme('link-color-visited-inverse');
     }
 
     a:hover,
     a:focus,
     a:active {
-        text-decoration: none;
+        color: get-theme('link-color-hover-inverse');
+    }
+
+    a:visited:hover,
+    a:visited:focus,
+    a:visited:active {
+        color: get-theme('link-color-visited-hover-inverse');
     }
 }
+
 
 // Mixins for CSS grid legacy prefixed properties
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1398482
