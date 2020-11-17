@@ -4,6 +4,10 @@
 
 * **component:** Add error message component (#430)
 
+## Bug Fixes
+
+* **js:** Check for sidemenu before initializing (#643)
+
 # 12.1.1
 
 ## Features
