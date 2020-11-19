@@ -47,8 +47,10 @@ complex and specific the final selector will be. Don’t nest rules unless
 necessary for context and specificity, and don’t nest rules just to group
 them together (use comments to label sections of the style sheet for grouping).
 
-All the declarations for the parent element should come before the nested
-rules. Include a blank line before each nested rule to separate it from the
+All the style declarations for the parent element should come before any
+nested rules.
+
+Include a blank line before each nested rule to separate it from the
 rule or declaration above it.
 
 ```scss
@@ -100,7 +102,7 @@ rule or declaration above it.
     <li>User lowercase and shorthand hex values, e.g. `#aaa`.</li>
     <li>Always use hex values unless you are declaring rgba.</li>
     <li>Separate each rule by a blank line.</li>
-    <li>Use `//` for comment blocks (instead of `/* */`).</li>
+    <li>Use `//` for comments (instead of `/* */`).</li>
 </ul>
 
 ```scss
@@ -116,8 +118,7 @@ rule or declaration above it.
 .selector-b {
     background: rgba(255, 255, 255, .25);
     padding: 20px;
-}
-```
+}```
 
 When possible, limit line lengths to 80 characters. It improves readability,
 minimizes horizontal scrolling, makes it possible to view files side by side,
@@ -140,8 +141,45 @@ be arranged across multiple lines (indented one level from their property).
     transition:
         border-color 500ms ease-in,
         opacity 100ms ease-in;
-}
-```
+}```
+
+### Comments
+
+Use `//` for comments in Sass instead of `/* */`, including multi-line comment blocks.
+Our configuration is set to strip `//` comments when the CSS is compiled and minified,
+but will allow `/* */` comments to pass through. There's usually no need to include
+developer comments in minified CSS sent to browsers, so it just adds extra bytes.
+
+An exception is special comments to override a linting rules, which require the
+`/* */` formatting.
+
+```scss
+// This thing should never
+// ever have a border.
+.this-thing {
+    border: 0 none !important; /* stylelint-disable-line declaration-no-important */
+}```
+
+In a long style sheet it's not a bad idea to add dividing lines (with two blank
+lines before it) to help set sections apart visually.
+
+```scss
+//*----------------------------------------------------------------------------*/
+// Useless Sass Functions
+
+// This is an imaginary function that doesn't actually do
+// anything, but it does include an example of how to format
+// multi-line comment blocks.
+// Usage:
+//    non-function('non-value');
+
+@function non-function($non-value) {
+    @if $non-value {
+        @return $non-value;
+    }
+
+    @return $non-value;
+}```
 
 ### Units
 

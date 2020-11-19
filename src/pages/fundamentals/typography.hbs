@@ -7,40 +7,18 @@ styles:
 ---
 
 <h2 id="typefaces">Typefaces</h2>
-<p>Protocol comes with three fonts: Metropolis, Zilla Slab, and Inter.</p>
-<p>Firefox branded websites use Metropolis for titles and Inter for body text. Don't use Metropolis for body text.</p>
+<p>Protocol comes with three fonts: Zilla Slab, Metropolis, and Inter.</p>
 <p>Mozilla branded websites use Zilla Slab for titles and Inter for body text. Don't use Zilla Slab for body text.</p>
+<p>Firefox branded websites use Metropolis for titles and Inter for body text. Don't use Metropolis for body text.</p>
 
 <h3 id="typeface-inter">Inter</h3>
-<p>Inter is an open source, sans-serif font was designed by <a href="https://rsms.me/">Rasmus Andersson</a>. This is our standard type face for body copy in both Firefox and Mozilla brands. If you need to declare it specifically (such as to override some other inherited font) you can use the mixin <code class="language-scss">@include font-base;</code>.</p>
+<p>Inter is an open source, sans-serif font designed by <a href="https://rsms.me/">Rasmus Andersson</a>. This is our standard type face for body copy in both Firefox and Mozilla brands. If you need to declare it specifically (such as to override some other inherited font) you can use the mixin <code class="language-scss">@include font-base;</code>.</p>
 
 <ul class="mzp-u-list-styled">
   <li><a href="https://rsms.me/inter/">Download from https://rsms.me/inter/</a></li>
 </ul>
 
 <figure id="specimen-inter" class="protosite-specimen protosite-specimen-font">
-{{#with (data "specimens")}}
-  {{this.alphabet}}
-  {{this.characters}}
-  {{this.digits}}
-  {{this.punctuation}}
-  {{this.special}}
-  {{this.currencies}}
-{{/with}}
-</figure>
-
-<h3 id="typeface-metropolis">Metropolis</h3>
-
-<p>Metropolis is a free, open source font used for headlines on marketing and product web experiences. It's a geometric sans-serif font by Chris Simpson, very similar in style and character to Firefox Sharp Sans, the proprietary font used to create logo lockups for Firefox products (<strong>do not use Firefox Sharp Sans as a webfont</strong>).
-<p>Use Metropolis for large text like headings. As a general rule, type set in Metroplis should stand out. Avoid stacking two sizes of Metropolis one on top of the other. Pair headings in Metropolis with subheadings in Inter.</p>
-<p>You can declare Metropolis explicitly with the mixin <code class="language-scss">@include font-firefox;</code>.</p>
-<p>Don't italicize Metropolis. Protocol only includes normal and bold versions of this font.</p>
-
-<ul class="mzp-u-list-styled">
-  <li><a href="https://github.com/chrismsimpson/Metropolis/releases/latest" rel="external">Download from Github</a></li>
-</ul>
-
-<figure id="specimen-metropolis" class="protosite-specimen protosite-specimen-font">
 {{#with (data "specimens")}}
   {{this.alphabet}}
   {{this.characters}}
@@ -63,6 +41,28 @@ styles:
 </ul>
 
 <figure id="specimen-zilla-slab" class="protosite-specimen protosite-specimen-font">
+{{#with (data "specimens")}}
+  {{this.alphabet}}
+  {{this.characters}}
+  {{this.digits}}
+  {{this.punctuation}}
+  {{this.special}}
+  {{this.currencies}}
+{{/with}}
+</figure>
+
+<h3 id="typeface-metropolis">Metropolis</h3>
+
+<p>Metropolis is a free, open source font used for headlines on marketing and product web experiences. It's a geometric sans-serif font by Chris Simpson, very similar in style and character to Firefox Sharp Sans, the proprietary font used to create logo lockups for Firefox products (<strong>do not use Firefox Sharp Sans as a webfont</strong>).
+<p>Use Metropolis for large text like headings. As a general rule, type set in Metroplis should stand out. Avoid stacking two sizes of Metropolis one on top of the other. Pair headings in Metropolis with subheadings in Inter.</p>
+<p>You can declare Metropolis explicitly with the mixin <code class="language-scss">@include font-firefox;</code>.</p>
+<p>Don't italicize Metropolis. Protocol only includes normal and bold versions of this font.</p>
+
+<ul class="mzp-u-list-styled">
+  <li><a href="https://fontsarena.com/metropolis-by-chris-simpson/" rel="external">Download from Fonts Arena</a></li>
+</ul>
+
+<figure id="specimen-metropolis" class="protosite-specimen protosite-specimen-font">
 {{#with (data "specimens")}}
   {{this.alphabet}}
   {{this.characters}}

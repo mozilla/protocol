@@ -380,13 +380,36 @@ such a variable in one place and it will automatically propagate to every other 
 of Protocol. The `$spacing-lg` variable is `24px` but if we want to change that to
 `20px` we would only have to make that change once.
 
-We call these variables design tokens and they’re more than just variables. Design
-tokens are a way to document the lowest level design attributes and share them throughout
-a complex system, and even across multiple systems. You can see
-[a list of all the design tokens](/fundamentals/tokens.html) in Protocol. We use
-tokens as much as possible in place of hard-coded values, especially for colors and
-units of measure. Whenever you need a basic value in CSS, see if there’s already a
-token for it.
+### Tokens
+
+The example above shows a Sass variable used as a margin value. We call variables
+like these _design tokens_ and they’re more than just variables. Design tokens are
+a way to document the lowest level design attributes and share them throughout a
+complex system, and even across multiple systems. We use tokens as much as possible
+in place of hard-coded values, especially for colors and units of measure. Whenever
+you need a basic value in CSS, see if there’s already a token for it. You can see
+[a list of all the design tokens in Protocol](/fundamentals/tokens.html).
+
+Tokens are also a partial abstraction of the value they represent. Assigning a name
+to a token also implies a particular purpose a step removed from its specific value.
+A token like `$spacing-md` represents "a medium unit of space" and we don't necessarily
+need to think about exactly how many pixels that is, we only know it's a bit larger
+than small and a bit smaller than large. For now we've decided that a medium space is
+`16px`, but that could easily change to `12px` or `20px` because "medium" is relative.
+Avoid misusing a token as an alias for its specific value since the whole point is
+that the value can change.
+
+Also avoid misusing a token to fill in a value for something it wasn't made for. For
+example, the token `$spacing-md` is intended for spacing within or between elements.
+Don't use it set the height of an image or width of a border or size of a font (unless
+there's a very good reason to do so).
+
+(Side note: The `$spacing-*` tokens are smaller units, mostly for interior spacing
+inside components or between close elements. The `$layout-*` tokens are larger,
+intended for wider gaps between components on the page.)
+
+Protocol's design tokens [reside in their own repository](https://github.com/mozilla/protocol-tokens)
+and are [published as their own package](https://www.npmjs.com/package/@mozilla-protocol/tokens).
 
 ### Mixins
 
@@ -478,25 +501,27 @@ to use in dark style variants. Refer to `/includes/_themes.scss` for the actual 
 for each brand theme, but here are the variable names in a handy list:
 
 ```
-body-font-family
-button-font-family
-title-font-family
-background-color-alt-inverse
-background-color-alt
-background-color-inverse
 background-color
-body-text-color-alt-inverse
-body-text-color-alt
-body-text-color-inverse
+background-color-alt
+background-color-alt-inverse
+background-color-inverse
+body-font-family
 body-text-color
-link-color-hover-inverse
-link-color-hover
-link-color-inverse
-link-color-visited-hover-inverse
-link-color-visited-hover
-link-color-visited-inverse
-link-color-visited
+body-text-color-alt
+body-text-color-alt-inverse
+body-text-color-inverse
+button-font-family
 link-color
+link-color-hover
+link-color-hover-inverse
+link-color-inverse
+link-color-visited
+link-color-visited-hover
+link-color-visited-hover-inverse
+link-color-visited-inverse
+title-font-family
+title-text-color
+title-text-color-inverse
 ```
 
 Text sizes are also defined as theme variables, allowing different brands to have slightly
