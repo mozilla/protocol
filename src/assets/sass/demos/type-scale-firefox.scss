@@ -5,11 +5,16 @@
 //* -------------------------------------------------------------------------- */
 // Typescale demo
 
-$brand-theme: 'mozilla';
+$brand-theme: 'firefox';
 
 @import '../protocol/includes/lib';
 @import '../docs/protocol';
 
+.label {
+    @include text-body-sm;
+    color: $color-marketing-gray-80;
+    margin: 1em 0 .5em;
+}
 
 .scale-sample-title-2xl { @include text-title-2xl; }
 .scale-sample-title-xl { @include text-title-xl; }
@@ -25,8 +30,3 @@ $brand-theme: 'mozilla';
 .scale-sample-body-sm { @include text-body-sm; }
 .scale-sample-body-xs { @include text-body-xs; }
 
-.label {
-    @include text-body-sm;
-    color: $color-marketing-gray-80;
-    margin: 1em 0 .5em;
-}

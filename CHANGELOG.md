@@ -25,11 +25,13 @@
   * `mzp-u-title-xxl` changes to `mzp-u-title-2xl`
   * `mzp-u-title-xxs` changes to `mzp-u-title-2xs`
 * `protocol-extra.scss` is renamed to `protocol-components.scss`
+* `base/utilities/_typography.scss` is renamed to `base/utilities/_titles.scss`
 * The variables `$font-metropolis`, `$font-zilla-slab`, and `$font-inter` are deprecated in favor of design tokens `$font-stack-firefox`, `$font-stack-mozilla`, and `$font-stack-base` respectively.
   * `$font-metropilis` changes to `$font-stack-firefox`
   * `$font-zilla-slab` changes to `$font-stack-mozilla`
   * `$font-inter` changes to `$font-stack-base`
 * `mzp-c-form-heading` and `mzp-c-form-subheading` have been changed to `mzp-c-form-title` and `mzp-c-form-subtitle`.
+* Headings/titles now have an explicitly declared text color (not inherited).
 
 # 12.1.1
 
