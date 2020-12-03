@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **css:** Add a new mixin for explicitly white links, when regular inverse link colors are undesirable (#648)
+
 # 13.0.0
 
 ## Features

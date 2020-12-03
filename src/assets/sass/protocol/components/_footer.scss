@@ -9,6 +9,7 @@
 
 .mzp-c-footer {
     @include font-base;
+    @include white-links;
     background: $color-black;
     clear: both;
     color: $color-white;
@@ -18,16 +19,14 @@
 
     a:link,
     a:visited {
-        color: $color-white;
         font-weight: normal;
         text-decoration: underline;
-    }
 
-    a:hover,
-    a:focus,
-    a:active {
-        color: $color-white;
-        text-decoration: none;
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -86,12 +85,12 @@
     a:link,
     a:visited {
         text-decoration: none;
-    }
 
-    a:hover,
-    a:focus,
-    a:active {
-        text-decoration: underline;
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: underline;
+        }
     }
 
     @media (min-width: #{$screen-sm}) and (max-width: #{$screen-lg - 1px}) {

@@ -435,6 +435,23 @@ e.g. `example.png` and `example-high-res.png`
 @include at2x('/img/example.png', 100px, 100px);
 ```
 
+#### light-links
+The light-links mixin inverts link colors in elements/components with dark backgrounds.
+
+```scss
+@include light-links;
+```
+
+#### white-links
+The white-links mixin explicitly sets link colors (in all pseudo-class states) to white.
+This is useful for some elements/components with dark backgrounds where the regular
+inverted link colors might be undesirable, typically for utilitarian components like a
+footer.
+
+```scss
+@include white-links;
+```
+
 ### Themes
 
 Protocol supports [multiple brand themes](/fundamentals/typography.html), namely the Mozilla
