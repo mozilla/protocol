@@ -21,12 +21,14 @@ $brand-theme: 'mozilla';
 }
 
 .background-inverse {
+    @include light-links;
     background: get-theme('background-color-inverse');
     color: get-theme('body-text-color-inverse');
     padding: $spacing-md;
 }
 
 .background-alt-inverse {
+    @include light-links;
     background: get-theme('background-color-alt-inverse');
     color: get-theme('body-text-color-alt-inverse');
     padding: $spacing-md;
