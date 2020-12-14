@@ -259,6 +259,20 @@
     }
 }
 
+// White color links for dark backgrounds, when link colors are undesirable.
+@mixin white-links {
+    a:link,
+    a:visited {
+        color: $color-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-white;
+        }
+    }
+}
+
 
 // Mixins for CSS grid legacy prefixed properties
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1398482

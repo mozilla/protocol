@@ -409,7 +409,7 @@ label {
 // Errors
 
 .mzp-c-form-errors {
-    @include light-links;
+    @include white-links;
     background-color: $form-red;
     border-radius: $field-border-radius;
     color: $color-white;
