@@ -150,7 +150,7 @@ Our configuration is set to strip `//` comments when the CSS is compiled and min
 but will allow `/* */` comments to pass through. There's usually no need to include
 developer comments in minified CSS sent to browsers, so it just adds extra bytes.
 
-An exception is special comments to override a linting rules, which require the
+An exception is special comments to override linting rules, which require the
 `/* */` formatting.
 
 ```scss
