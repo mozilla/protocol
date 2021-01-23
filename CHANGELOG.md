@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **a11y:** Fix link button focus color. (#655)
+
 # 13.0.1
 
 ## Features
