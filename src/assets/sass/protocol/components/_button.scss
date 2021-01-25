@@ -88,8 +88,9 @@ a.mzp-c-button {
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
 
     &:focus {
-        box-shadow: $field-focus-ring;
         border-color: $button-border-color-focus;
+        box-shadow: $field-focus-ring;
+        color: $color-white;
         outline: none;
     }
 
