@@ -34,6 +34,7 @@ $image-path: '../img' !default;
 @import 'components/modal';
 @import 'components/newsletter-form';
 @import 'components/notification-bar';
+@import 'components/picto';
 @import 'components/picto-card';
 @import 'components/section-heading';
 @import 'components/sidebar-menu';
@@ -42,6 +43,7 @@ $image-path: '../img' !default;
 @import 'templates/card-layout';
 @import 'templates/main-with-sidebar';
 
+@import 'templates/multi-column';
 
 // logos
 @import 'components/logos/logo-product-firefox';

@@ -3,6 +3,7 @@ name: Picto Card
 description: A card with a pictographic icon, headline, and description.
 order: 5
 notes: |
+    - **This component is deprecated. Use the new [Picto component](/patterns/molecules/picto.html).**
     - This card type should be arranged in groups of two or three using the `.mzp-l-card-half` and `.mzp-l-card-third` layout classes.
     - Icons are presentational so should be applied as CSS background images via a `.mzp-c-card-picto-content::before` pseudo class.
     - Headlines should be a maximum of 30 characters, and descriptions a maximum of 60 characters.
@@ -11,6 +12,8 @@ notes: |
 links:
     Card Layout Class: /patterns/templates/card-layout.html
     Picto Card Layout Demo: /demos/card-picto-layout.html
+labels:
+  - deprecated
 ---
 
 <section class="mzp-c-card-picto {{#if class}}{{class}}{{/if}}">

@@ -1,0 +1,70 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+
+// TODO: Replace column gaps with grid spacing theme variables. (PR #669)
+
+@media #{$mq-md} {
+    .mzp-l-columns {
+        display: grid;
+        grid-column-gap: get-theme('h-grid-md');
+        column-gap: get-theme('h-grid-md');
+
+        &.mzp-t-columns-two,
+        &.mzp-t-columns-four {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media #{$mq-lg} {
+    .mzp-l-columns {
+        grid-column-gap: get-theme('h-grid-xl');
+        column-gap: get-theme('h-grid-xl');
+
+        &.mzp-t-columns-three {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &.mzp-t-columns-four {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+// Only one column in small containers
+.mzp-t-content-sm .mzp-l-columns,
+.mzp-l-columns.mzp-t-content-sm {
+    display: block;
+}
+
+// Change three columns to one in medium containers
+.mzp-t-content-md .mzp-l-columns.mzp-t-columns-three,
+.mzp-l-columns.mzp-t-columns-three.mzp-t-content-md {
+    display: block;
+}
+
+// Smaller gutters in medium containers
+.mzp-t-content-md .mzp-l-columns,
+.mzp-l-columns.mzp-t-content-md {
+    grid-column-gap: get-theme('h-grid-md');
+    column-gap: get-theme('h-grid-md');
+}
+
+// Change four columns to two in medium containers, plus smaller gutters
+.mzp-t-content-md .mzp-l-columns.mzp-t-columns-four,
+.mzp-l-columns.mzp-t-columns-four.mzp-t-content-md {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+// Smaller gutters on three and four columns in large containers
+.mzp-t-content-lg .mzp-l-columns.mzp-t-columns-three,
+.mzp-l-columns.mzp-t-columns-three.mzp-t-content-lg,
+.mzp-t-content-lg .mzp-l-columns.mzp-t-columns-four,
+.mzp-l-columns.mzp-t-columns-four.mzp-t-content-lg {
+    grid-column-gap: get-theme('h-grid-md');
+    column-gap:get-theme('h-grid-md');
+}
