@@ -6,6 +6,34 @@
 // themes. Mixins and functions can draw from these variable maps, swapping to
 // a different map based on the value of the global $brand-theme variable.
 
+//* -------------------------------------------------------------------------- */
+// Vertical and Horizontal Spacing
+
+
+$theme-spacing-firefox: (
+    // xs
+    v-grid-xs: $layout-md,
+    h-grid-xs: $layout-xs,
+
+    // sm is the same as xs
+    v-grid-sm: $layout-md,
+    h-grid-sm: $layout-xs,
+
+    // md
+    v-grid-md: $layout-md,
+    h-grid-md: $layout-md,
+
+    // lg is the same as md
+    v-grid-lg: $layout-md,
+    h-grid-lg: $layout-md,
+
+    // xl
+    v-grid-xl: $layout-xl,
+    h-grid-xl: 80px,
+);
+
+$theme-spacing-mozilla: $theme-spacing-firefox;
+
 
 //* -------------------------------------------------------------------------- */
 // Fonts
@@ -194,5 +222,5 @@ $theme-type-scale-condensed-mozilla: (
 // Usage:
 //    map-get($theme-firefox, 'background-color-alt');
 
-$theme-firefox: map-collect($theme-fonts-firefox, $theme-colors-firefox, $theme-type-scale-firefox);
-$theme-mozilla: map-collect($theme-fonts-mozilla, $theme-colors-mozilla, $theme-type-scale-mozilla);
+$theme-firefox: map-collect($theme-spacing-firefox, $theme-fonts-firefox, $theme-colors-firefox, $theme-type-scale-firefox);
+$theme-mozilla: map-collect($theme-spacing-mozilla, $theme-fonts-mozilla, $theme-colors-mozilla, $theme-type-scale-mozilla);
