@@ -1,5 +1,9 @@
 # HEAD
 
+## Features
+
+* **css:** Add horizontal grid tokens (#345)
+
 ## Bug Fixes
 
 * **a11y:** Fix link button focus color. (#655)

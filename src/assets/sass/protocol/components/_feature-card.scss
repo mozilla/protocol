@@ -67,7 +67,7 @@
 
     @media #{$mq-md} {
         margin-bottom: $layout-2xl;
-        max-width: 800px;
+        max-width: $content-md;
 
         .mzp-c-card-feature-list li {
             margin-bottom: $spacing-2xl;

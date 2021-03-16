@@ -15,31 +15,19 @@
     position: relative;
 
     @media #{$mq-md} {
-        padding: $layout-xs $layout-lg;
+        padding: $layout-xs $h-grid-md;
     }
 
-    @media #{$mq-lg} {
-        padding: $layout-xs $layout-xl;
+    @media #{$mq-xl} {
+        padding: $layout-xs ($layout-lg * 2);
     }
 
     &.mzp-t-content-sm {
         max-width: $content-sm;
-
-        @media #{$mq-md} {
-            padding: $layout-xs;
-        }
-
-        @media #{$mq-lg} {
-            padding: $layout-xs;
-        }
     }
 
     &.mzp-t-content-md {
         max-width: $content-md;
-
-        @media #{$mq-md} {
-            padding: $layout-xs;
-        }
     }
 
     &.mzp-t-content-lg {
