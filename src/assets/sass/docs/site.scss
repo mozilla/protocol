@@ -110,6 +110,14 @@
     list-style-type: disc;
 }
 
+.protosite-pattern-desc ol {
+    list-style-type: decimal;
+}
+
+.protosite-pattern-desc li li {
+    margin-left: $layout-sm;
+}
+
 .protosite-nav-main-head {
     margin: 0 0 20px;
 }

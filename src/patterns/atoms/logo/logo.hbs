@@ -1,0 +1,21 @@
+---
+name: Logos
+description: |
+  This component uses an image replacement technique for better SEO. You can, of course, still use a regular img element to insert a logo if it fits your use case better. Don't forget the alt text.
+
+  1. Add the CSS files to your bundle. You will need both the file for logo and for the product logo you want.
+  2. Add the component class `mzp-c-logo` the size class (eg: `mzp-t-md`) and the product class (eg: `mzp-t-product-firefox`) to your page
+     - For vertical spacing put the logo classes on or inside a heading or paragraph.
+order: 1
+notes: |
+tips: |
+  - Logos need both a size and product theme to display.
+    - Size classes are: `mzp-t-xs`, `mzp-t-sm`, `mzp-t-md`, `mzp-t-lg`, `mzp-t-xl`.
+    - Product classes are: `mzp-t-product-family`, `mzp-t-product-firefox`, `mzp-t-product-beta`, `mzp-t-product-developer`, `mzp-t-product-nightly`, `mzp-t-product-focus`, `mzp-t-product-lockwise`, `mzp-t-product-monitor`, `mzp-t-product-mozilla`, `mzp-t-product-vpn`, `mzp-t-product-pocket`.
+links:
+    See all sizes and products: /demos/logo.html
+---
+
+
+<h2>{{#embed "patterns.molecules.logo.logo" size="lg" product="family" label="Firefox"}}{{/embed}}</h2>
+<p>{{#embed "patterns.molecules.logo.logo" size="sm" product="firefox" label="Firefox Browser"}}{{/embed}}</p>
