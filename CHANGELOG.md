@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Add Section Heading component (Fix #664)
 * **css:** Add horizontal spacing tokens (#345)
 * **css:** Add vertical spacing tokens (#536)
 
