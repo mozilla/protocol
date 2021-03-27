@@ -4,21 +4,17 @@ description: |
   Wordmarks work a lot like the logos except they change when nested under a `.mzp-t-dark` class.
 
   1. Add the CSS files to your bundle. You will need both the file for wordmark and for the product wordmark you want.
-  2. Add the component class `mzp-c-wordmark` the size class (eg: `mzp-t-md`) and the product class (eg: `mzp-t-product-firefox`) to your page
+  2. Add the component class `mzp-c-wordmark` the size class (eg: `mzp-t-md`) and the product class (eg: `mzp-t-product-firefox`) to your markup
      - For vertical spacing put the wordmark classes on or inside a heading or paragraph.
-order: 1
+order: 3
 notes: |
 tips: |
   - Wordmarks need both a size and product theme to display.
     - Size classes are: `mzp-t-xs`, `mzp-t-sm`, `mzp-t-md`, `mzp-t-lg`, `mzp-t-xl`.
     - Product classes are: `mzp-t-product-family`, `mzp-t-product-firefox`, `mzp-t-product-beta`, `mzp-t-product-developer`, `mzp-t-product-nightly`, `mzp-t-product-focus`, `mzp-t-product-lockwise`, `mzp-t-product-monitor`, `mzp-t-product-mozilla`, `mzp-t-product-vpn`, `mzp-t-product-pocket`.
-links:
-    See all sizes and products: /demos/logo.html
 ---
 
-<h2>{{#embed "patterns.molecules.logo.wordmark" size="lg" product="family" label="Firefox"}}{{/embed}}</h2>
-<p>{{#embed "patterns.molecules.logo.wordmark" size="md" product="firefox" label="Firefox Browser"}}{{/embed}}</p>
-<p>{{#embed "patterns.molecules.logo.wordmark" size="md" product="lockwise" label="Firefox Lockwise"}}{{/embed}}</p>
-<h2>{{#embed "patterns.molecules.logo.wordmark" size="lg" product="mozilla" label="Mozilla"}}{{/embed}}</h2
-<p>{{#embed "patterns.molecules.logo.wordmark" size="md" product="vpn" label="Mozilla VPN"}}{{/embed}}</p>
+<div class="mzp-c-wordmark mzp-t-{{#if size}}{{size}}{{else}}md{{/if}} mzp-t-product-{{#if product}}{{product}}{{else}}firefox{{/if}}">
+  {{#if label}}{{label}}{{else}}Firefox Browser{{/if}}
+</div>
 
