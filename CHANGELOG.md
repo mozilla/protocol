@@ -1,8 +1,18 @@
 # HEAD
 
+## Features
+
+* **css:** Add horizontal spacing tokens (#345)
+* **css:** Add vertical spacing tokens (#536)
+
 ## Bug Fixes
 
 * **a11y:** Fix link button focus color. (#655)
+
+## Migration Tips
+
+* The new spacing tokens increase vertical spacing at some breakpoints for `.mzp-l-content`. If you have custom components which match the padding around Protocol components you may wish to update those components to use the new spacing tokens.
+
 
 # 13.0.1
 
