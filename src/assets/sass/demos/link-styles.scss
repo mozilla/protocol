@@ -16,11 +16,11 @@ span[class^='visited'] {
 }
 
 .link {
-    color: $color-link;
+    color: get-theme('link-color');
     text-decoration: underline;
 
     &:hover {
-        color: $color-link-hover;
+        color: get-theme('link-color-hover');
     }
 
     &:active {
@@ -29,37 +29,37 @@ span[class^='visited'] {
 }
 
 .visited {
-    color: $color-link-visited;
+    color: get-theme('link-color-visited');
     text-decoration: underline;
 
     &:hover {
-        color: $color-link-visited-hover;
+        color: get-theme('link-color-visited-hover');
     }
 }
 
 .link-hover {
-    color: $color-link-hover;
+    color: get-theme('link-color-visited');
     text-decoration: underline;
 }
 
 .link-active {
-    color: $color-link;
+    color: get-theme('link-color');
     background-color: rgba(0, 0, 0, .05);
     text-decoration: underline;
 }
 
 .visited {
-    color: $color-link-visited;
+    color: get-theme('link-color-visited');
     text-decoration: underline;
 }
 
 .visited-hover {
-    color: $color-link-visited-hover;
+    color: get-theme('link-color-visited-hover');
     text-decoration: underline;
 }
 
 .visited-active {
     background-color: rgba(0, 0, 0, .05);
-    color: $color-link-visited;
+    color: get-theme('link-color-visited');
     text-decoration: underline;
 }

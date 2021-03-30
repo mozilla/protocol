@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Add a theme class for alt background colors
 * **css:** Add logo and wordmark components (#665)
 * **css:** Add support for mozilla, pocket, and vpn logos to hero and callout components (#663)
 * **assets:** (breaking) Update @mozilla-protocol/assets to 4.0.0
