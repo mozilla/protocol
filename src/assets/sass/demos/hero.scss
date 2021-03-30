@@ -8,27 +8,3 @@
 @import '../protocol/includes/lib';
 @import '../docs/protocol';
 @import '../docs/protocol-components';
-
-
-.section-next {
-    background: $color-marketing-gray-20;
-
-    &.mzp-t-dark {
-        color: #fff;
-        background-color: $color-marketing-gray-80;
-    }
-
-    h2 {
-        @include text-title-md;
-    }
-
-    .mzp-c-card-picto .mzp-c-card-picto-content::before{
-        background-color: $color-marketing-gray-40;
-    }
-
-}
-
-
-hr {
-    margin: $layout-xl 0 0;
-}

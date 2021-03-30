@@ -1,0 +1,22 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+
+// Theme classes for background colors
+
+.mzp-t-background-alt {
+    background-color: get-theme('background-color-alt');
+}
+
+.mzp-t-dark {
+    background-color: get-theme('background-color-inverse');
+    color: get-theme('body-text-color-inverse');
+}
+
+.mzp-t-dark.mzp-t-background-alt,
+.mzp-t-dark .mzp-t-background-alt {
+    background-color: get-theme('background-color-alt-inverse');
+}

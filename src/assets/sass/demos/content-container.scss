@@ -11,7 +11,7 @@
 
 .mzp-c-hero.mzp-t-dark,
 .demo-alt-tier {
-    background: $color-ink-80;
+    background: get-theme('background-color-inverse');
 }
 
 // Styles for the visualization page

@@ -32,6 +32,7 @@ $font-path: '../fonts' !default;
 @import 'base/elements';
 
 // Base utilities
+@import 'base/utilities/backgrounds';
 @import 'base/utilities/titles';
 
 // Base includes - animations
