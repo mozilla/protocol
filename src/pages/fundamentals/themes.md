@@ -43,3 +43,15 @@ You can activate the condensed type scale by setting a variable when you compile
 ```scss
 $type-scale: 'condensed';
 ```
+
+## Component themes
+
+In addition to the global themes for brand and type scale, we have a few standard component-level theming classes you can use.
+
+### Dark theme
+
+Many components have an inverse color variant that applies a dark background color with light foreground colors, invoked with the `mzp-t-dark` theme class.
+
+### Section backgrounds
+
+There's a basic `mzp-t-background-alt` class that applies a secondary background color to most elements or component, especially useful for alternating sections of a page.
