@@ -37,34 +37,34 @@
 
 // Only one column in small containers
 .mzp-t-content-sm .mzp-l-columns,
-.mzp-l-columns.mzp-t-content-sm {
+.mzp-t-content-sm.mzp-l-columns {
     display: block;
 }
 
 // Change three columns to one in medium containers
 .mzp-t-content-md .mzp-l-columns.mzp-t-columns-three,
-.mzp-l-columns.mzp-t-columns-three.mzp-t-content-md {
+.mzp-t-content-md.mzp-l-columns.mzp-t-columns-three {
     display: block;
 }
 
 // Smaller gutters in medium containers
 .mzp-t-content-md .mzp-l-columns,
-.mzp-l-columns.mzp-t-content-md {
+.mzp-t-content-md.mzp-l-columns{
     grid-column-gap: get-theme('h-grid-md');
     column-gap: get-theme('h-grid-md');
 }
 
 // Change four columns to two in medium containers, plus smaller gutters
 .mzp-t-content-md .mzp-l-columns.mzp-t-columns-four,
-.mzp-l-columns.mzp-t-columns-four.mzp-t-content-md {
+.mzp-t-content-md.mzp-l-columns.mzp-t-columns-four {
     grid-template-columns: repeat(2, 1fr);
 }
 
 // Smaller gutters on three and four columns in large containers
 .mzp-t-content-lg .mzp-l-columns.mzp-t-columns-three,
-.mzp-l-columns.mzp-t-columns-three.mzp-t-content-lg,
+.mzp-t-content-lg.mzp-l-columns.mzp-t-columns-three,
 .mzp-t-content-lg .mzp-l-columns.mzp-t-columns-four,
-.mzp-l-columns.mzp-t-columns-four.mzp-t-content-lg {
+.mzp-t-content-lg.mzp-l-columns.mzp-t-columns-four {
     grid-column-gap: get-theme('h-grid-md');
     column-gap:get-theme('h-grid-md');
 }
