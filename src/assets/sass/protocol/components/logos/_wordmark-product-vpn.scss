@@ -12,7 +12,7 @@
     $path_white : '#{$image-path}/logos/mozilla/vpn/logo-word-hor-stack-white-#{$logo-size}.png';
     $at2x_path_white: '#{$image-path}/logos/mozilla/vpn/logo-word-hor-stack-white-#{$logo-size}-high-res.png';
 
-    .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-#{$layout-size} {
+    .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-#{$layout-size} {
         background-image: url('#{$path}');
 
         // xs does not need high res version, it's shrunk for low-res

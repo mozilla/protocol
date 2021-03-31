@@ -23,27 +23,27 @@ $logo-sizes: (
     margin-top: 0;
     max-width: 100%;
 
-    &.mzp-t-xs {
+    &.mzp-t-wordmark-xs {
         height: $layout-xs;
         width: 130px;
     }
 
-    &.mzp-t-sm {
+    &.mzp-t-wordmark-sm {
         height: $layout-sm;
         width: 174px;
     }
 
-    &.mzp-t-md {
+    &.mzp-t-wordmark-md {
         height: $layout-md;
         width: 262px;
     }
 
-    &.mzp-t-lg {
+    &.mzp-t-wordmark-lg {
         height: $layout-lg;
         width: 347px;
     }
 
-    &.mzp-t-xl {
+    &.mzp-t-wordmark-xl {
         height: $layout-xl;
         width: 521px;
     }
@@ -55,7 +55,7 @@ $logo-sizes: (
     $path_white : '#{$image-path}/logos/#{$dir}/logo-word-hor-white-#{$logo-size}.png';
     $at2x_path_white: '#{$image-path}/logos/#{$dir}/logo-word-hor-white-#{$logo-size}-high-res.png';
 
-    .mzp-c-wordmark.mzp-t-product-#{$product}.mzp-t-#{$layout-size} {
+    .mzp-c-wordmark.mzp-t-product-#{$product}.mzp-t-wordmark-#{$layout-size} {
         background-image: url('#{$path}');
 
         // xs does not need high res version, it's shrunk for low-res
