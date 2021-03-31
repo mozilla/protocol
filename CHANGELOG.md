@@ -2,9 +2,16 @@
 
 ## Features
 
+* **css:** Add logo and wordmark components (#665)
+* **css:** Add support for mozilla, pocket, and vpn logos to hero and callout components (#663)
+* **assets:** (breaking) Update @mozilla-protocol/assets to 4.0.0
 * **css:** Add Section Heading component (Fix #664)
 * **css:** Add horizontal spacing tokens (#345)
 * **css:** Add vertical spacing tokens (#536)
+
+## Migration Tips
+
+* See notes for [Protocol Assets 4.0.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#migration-tips)
 
 ## Bug Fixes
 

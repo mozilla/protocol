@@ -18,10 +18,7 @@
     text-align: center;
 
     // Product logos
-    &.mzp-t-product-firefox,
-    &.mzp-t-product-beta,
-    &.mzp-t-product-developer,
-    &.mzp-t-product-nightly {
+    &[class*='mzp-t-product-'] {
         .mzp-c-hero-title {
             @include background-size(80px 80px);
             background-position: top center;
@@ -67,6 +64,26 @@
     .mzp-t-product-nightly & {
         @include at2x('#{$image-path}/logos/firefox/browser/nightly/logo-lg.png', 80px, 80px);
     }
+
+    .mzp-t-product-focus & {
+        @include at2x('#{$image-path}/logos/firefox/browser/focus/logo-lg.png', 80px, 80px);
+    }
+
+    .mzp-t-product-mozilla & {
+        @include at2x('#{$image-path}/logos/mozilla/logo-lg.png', 80px, 80px);
+    }
+
+    .mzp-t-product-vpn & {
+        @include at2x('#{$image-path}/logos/mozilla/vpn/logo-lg.png', 80px, 80px);
+    }
+
+    .mzp-t-product-vpn.mzp-t-dark & {
+        background-image: url('#{$image-path}/logos/mozilla/vpn/logo-flat-white.svg');
+    }
+
+    .mzp-t-product-pocket & {
+        @include at2x('#{$image-path}/logos/pocket/logo-lg.png', 80px, 80px);
+    }
 }
 
 .mzp-c-hero-desc {
@@ -105,10 +122,7 @@
                 clear: both;
             }
 
-            &.mzp-t-product-firefox,
-            &.mzp-t-product-beta,
-            &.mzp-t-product-developer,
-            &.mzp-t-product-nightly {
+            &[class*='mzp-t-product-'] {
                 .mzp-c-hero-title {
                     @include bidi(((background-position, left top, right top),));
                     padding-top: (80px + $spacing-2xl);

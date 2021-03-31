@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@cloudfour/hbs-helpers": "^0.9.0",
-    "@mozilla-protocol/assets": "^3.0.2",
+    "@mozilla-protocol/assets": "^4.0.0",
     "@mozilla-protocol/tokens": "^5.0.5",
     "del": "^3.0.0",
     "drizzle-builder": "0.0.10",

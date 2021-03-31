@@ -33,16 +33,17 @@
         margin: $spacing-lg 0 0;
     }
 
-    &.mzp-t-product-firefox,
-    &.mzp-t-product-beta,
-    &.mzp-t-product-developer,
-    &.mzp-t-product-nightly {
+    &[class*='mzp-t-product-'] {
         .mzp-c-call-out-title {
             @include background-size(64px 64px);
             background-position: top center;
             background-repeat: no-repeat;
             padding: (64px + $spacing-lg) 0 0 0;
         }
+    }
+
+    &.mzp-t-product-family .mzp-c-call-out-title {
+        @include at2x('#{$image-path}/logos/firefox/logo-lg.png', 64px, 64px);
     }
 
     &.mzp-t-product-firefox .mzp-c-call-out-title {
@@ -60,6 +61,27 @@
     &.mzp-t-product-nightly .mzp-c-call-out-title {
         @include at2x('#{$image-path}/logos/firefox/browser/nightly/logo-lg.png', 64px, 64px);
     }
+
+    &.mzp-t-product-focus .mzp-c-call-out-title {
+        @include at2x('#{$image-path}/logos/firefox/browser/focus/logo-lg.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-mozilla .mzp-c-call-out-title {
+        @include at2x('#{$image-path}/logos/mozilla/logo-lg.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-vpn .mzp-c-call-out-title {
+        @include at2x('#{$image-path}/logos/mozilla/vpn/logo-lg.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-vpn.mzp-t-dark .mzp-c-call-out-content {
+        background-image: url('#{$image-path}/logos/mozilla/vpn/logo-flat-white.svg');
+    }
+
+    &.mzp-t-product-pocket .mzp-c-call-out-title {
+        @include at2x('#{$image-path}/logos/pocket/logo-lg.png', 64px, 64px);
+    }
+
 
     @media #{$mq-md} {
         .mzp-l-content {
@@ -103,10 +125,7 @@
         margin-bottom: 0;
     }
 
-    &.mzp-t-product-firefox ,
-    &.mzp-t-product-beta,
-    &.mzp-t-product-developer,
-    &.mzp-t-product-nightly {
+    &[class*='mzp-t-product-'] {
         .mzp-c-call-out-content {
             @include border-box;
             @include background-size(64px 64px);
@@ -114,6 +133,10 @@
             background-repeat: no-repeat;
             padding: (64px + $spacing-lg) 0 0 0;
         }
+    }
+
+    &.mzp-t-product-family .mzp-c-call-out-content {
+        @include at2x('#{$image-path}/logos/firefox/logo-lg.png', 64px, 64px);
     }
 
     &.mzp-t-product-firefox .mzp-c-call-out-content {
@@ -132,6 +155,26 @@
         @include at2x('#{$image-path}/logos/firefox/browser/nightly/logo-lg.png', 64px, 64px);
     }
 
+    &.mzp-t-product-focus .mzp-c-call-out-content {
+        @include at2x('#{$image-path}/logos/firefox/browser/focus/logo-lg.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-mozilla .mzp-c-call-out-content {
+        @include at2x('#{$image-path}/logos/mozilla/logo-lg.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-vpn .mzp-c-call-out-content {
+        @include at2x('#{$image-path}/logos/mozilla/vpn/logo-lg.png', 64px, 64px);
+    }
+
+    &.mzp-t-product-vpn.mzp-t-dark .mzp-c-call-out-content {
+        background-image: url('#{$image-path}/logos/mozilla/vpn/logo-flat-white.svg');
+    }
+
+    &.mzp-t-product-pocket .mzp-c-call-out-content {
+        @include at2x('#{$image-path}/logos/pocket/logo-lg.png', 64px, 64px);
+    }
+
     @media #{$mq-md} {
         @include clearfix;
 
@@ -142,10 +185,7 @@
             padding-top: $spacing-2xl;
         }
 
-        &.mzp-t-product-firefox,
-        &.mzp-t-product-beta,
-        &.mzp-t-product-developer,
-        &.mzp-t-product-nightly {
+        &[class*='mzp-t-product-'] {
             .mzp-c-call-out-content {
                 @include bidi((
                     (background-position, left center, right center),
