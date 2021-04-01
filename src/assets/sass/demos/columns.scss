@@ -1,0 +1,37 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+//* -------------------------------------------------------------------------- */
+// Multi-column layout demo
+
+@import '../protocol/includes/lib';
+@import '../docs/protocol';
+@import '../docs/protocol-components';
+
+h1 {
+    @include text-title-md;
+}
+
+h2 {
+    @include text-title-sm;
+}
+
+h3 {
+    @include text-title-xs;
+}
+
+.label {
+    background: rgba(0, 255, 100, .5);
+    padding: $spacing-xs 0;
+    text-align: center;
+}
+
+.display .mzp-l-columns {
+    margin-bottom: $spacing-lg;
+
+    & > * {
+        background: rgba(0, 255, 100, .25);
+        margin-bottom: $spacing-lg;
+    }
+}

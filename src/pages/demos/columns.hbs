@@ -1,0 +1,264 @@
+---
+title: Multi-column layout examples
+layout: blank
+styles:
+  - columns
+---
+<h1 class="mzp-l-content">Multi-column layout examples</h1>
+
+{{#with (data "specimens")}}
+<section class="mzp-l-content mzp-l-columns mzp-t-columns-two">
+  <div>
+    <h2>Column One</h2>
+    <p>{{paragraph}}</p>
+  </div>
+
+  <div>
+    <h2>Column Two</h2>
+    <p>{{sentence}}</p>
+    <p>{{sentence}}</p>
+  </div>
+</section>
+
+<hr>
+
+<section class="mzp-l-content mzp-l-columns mzp-t-columns-three">
+  <div>
+    <h2>Column One</h2>
+    <p>{{sentence}}</p>
+  </div>
+
+  <div>
+    <h2>Column Two</h2>
+    <p>{{sentence}}</p>
+  </div>
+
+  <div>
+    <h2>Column Three</h2>
+    <p>{{sentence}}</p>
+  </div>
+</section>
+
+<hr>
+
+<section class="mzp-l-content mzp-l-columns mzp-t-columns-four">
+  <div>
+    <h2>Column One</h2>
+    <p>{{sentence}}</p>
+  </div>
+
+  <div>
+    <h2>Column Two</h2>
+    <p>{{sentence}}</p>
+  </div>
+
+  <div>
+    <h2>Column Three</h2>
+    <p>{{sentence}}</p>
+  </div>
+
+  <div>
+    <h2>Column Four</h2>
+    <p>{{sentence}}</p>
+  </div>
+</section>
+
+<hr>
+
+<section class="mzp-l-content mzp-l-columns mzp-t-columns-two">
+  {{#embed "patterns.molecules.card.medium-card"}}{{/embed}}
+
+  <div>
+    <h2>{{heading}}</h2>
+    <p>{{sentence}}</p>
+    <p>{{paragraph}}</p>
+    <p>{{sentence}}</p>
+    <p>{{paragraph}}</p>
+  </div>
+</section>
+
+<hr>
+
+<div id="container-sizes" class="mzp-l-content mzp-l-content-md">
+  <p>Multi-column layouts can changed depending on the size of their container, as well as the size of the viewport.</p>
+</div>
+
+<section class="mzp-l-content mzp-t-content-md display">
+  <h2 class="label">Medium container</h2>
+
+  <p class="label"><code>mzp-t-columns-two</code></p>
+  <div class="mzp-l-columns mzp-t-columns-two">
+    <div>
+      <h3>Column One</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Two</h3>
+      <p>{{sentence}}</p>
+    </div>
+  </div>
+
+  <p class="label"><code>mzp-t-columns-three</code></p>
+  <div class="mzp-l-columns mzp-t-columns-three">
+    <div>
+      <h3>Column One</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Two</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Three</h3>
+      <p>{{sentence}}</p>
+    </div>
+  </div>
+
+  <p class="label"><code>mzp-t-columns-four</code></p>
+  <div class="mzp-l-columns mzp-t-columns-four">
+    <div>
+      <h3>Column One</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Two</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Three</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Four</h3>
+      <p>{{sentence}}</p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="mzp-l-content mzp-t-content-lg display">
+  <h2 class="label">Large container</h2>
+
+  <p class="label"><code>mzp-t-columns-two</code></p>
+  <div class="mzp-l-columns mzp-t-columns-two">
+    <div>
+      <h3>Column One</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Two</h3>
+      <p>{{sentence}}</p>
+    </div>
+  </div>
+
+  <p class="label"><code>mzp-t-columns-three</code></p>
+  <div class="mzp-l-columns mzp-t-columns-three">
+    <div>
+      <h3>Column One</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Two</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Three</h3>
+      <p>{{sentence}}</p>
+    </div>
+  </div>
+
+  <p class="label"><code>mzp-t-columns-four</code></p>
+  <div class="mzp-l-columns mzp-t-columns-four">
+    <div>
+      <h3>Column One</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Two</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Three</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Four</h3>
+      <p>{{sentence}}</p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="mzp-l-content mzp-t-content-xl display">
+  <h2 class="label">Extra-large container</h2>
+
+  <p class="label"><code>mzp-t-columns-two</code></p>
+  <div class="mzp-l-columns mzp-t-columns-two">
+    <div>
+      <h3>Column One</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Two</h3>
+      <p>{{sentence}}</p>
+    </div>
+  </div>
+
+  <p class="label"><code>mzp-t-columns-three</code></p>
+  <div class="mzp-l-columns mzp-t-columns-three">
+    <div>
+      <h3>Column One</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Two</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Three</h3>
+      <p>{{sentence}}</p>
+    </div>
+  </div>
+
+  <p class="label"><code>mzp-t-columns-four</code></p>
+  <div class="mzp-l-columns mzp-t-columns-four">
+    <div>
+      <h3>Column One</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Two</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Three</h3>
+      <p>{{sentence}}</p>
+    </div>
+
+    <div>
+      <h3>Column Four</h3>
+      <p>{{sentence}}</p>
+    </div>
+  </div>
+</section>
+
+{{/with}}
