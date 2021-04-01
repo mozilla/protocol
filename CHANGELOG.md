@@ -2,7 +2,7 @@
 
 ## Features
 
-* **css:** Add Split component (#326)
+* **component:** Add Split component (#326)
 * **component:** New picto component, deprecating the previous picto card (#382)
 * **template:** New multi-column layout container with up to four even columns (#233)
 * **css:** Add a theme class for alt background colors

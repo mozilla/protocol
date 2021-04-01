@@ -14,10 +14,10 @@ styles:
     <p>In this demo background colours have been applied to the different parts of the component to show how they work together.</p>
     <p>Looking to configure something specific? Skip to that section:</p>
     <ul class="mzp-u-list-styled">
-      <li><a href="#body-layout">Body layout options</a></li>
-      <li><a href="#body-align">Body alignment</a></li>
-      <li><a href="#media-layout">Media layout options</a></li>
-      <li><a href="#media-align">Media alignment</a></li>
+      <li><a href="#layout">Layout options</a></li>
+      <li><a href="#body-align">Body positioning</a></li>
+      <li><a href="#media-sizing">Media sizing</a></li>
+      <li><a href="#media-align">Media positioning</a></li>
       <li><a href="#bg">Background colors</a></li>
       <li><a href="#mobile">Mobile layout &amp; source order</a></li>
     </ul>
@@ -34,7 +34,7 @@ styles:
     {{/content}}
   {{/embed}}
 
-  <h2 id="body-layout">Body layout options</h2>
+  <h2 id="layout">Layout options</h2>
 
   {{#embed "patterns.organisms.split.split" block_classes="" body_classes="" media_classes="" }}
     {{#content "content"}}
@@ -65,12 +65,12 @@ styles:
     {{/content}}
   {{/embed}}
 
-  <h3 id="body-align">Body alignment</h3>
+  <h3 id="body-align">Body positioning</h3>
 
   {{#embed "patterns.organisms.split.split"}}
     {{#content "content"}}
       <h2>default</h2>
-      <p>The body is <strong>top</strong> and <strong>centre</strong> aligned by default.</p>
+      <p>The body is vertically centered and horizontally left aligned by default.</p>
     {{/content}}
   {{/embed}}
 
@@ -102,12 +102,19 @@ styles:
     {{/content}}
   {{/embed}}
 
-  <h2 id="media-layout">Media layout options</h2>
+  <h2 id="media-sizing">Media sizing</h2>
+
+  {{#embed "patterns.organisms.split.split"  }}
+    {{#content "content"}}
+      <h3>Media constrained by width and height</h3>
+      <p>By default the media will be constrained by the width and height of the container.</p>
+    {{/content}}
+  {{/embed}}
 
   {{#embed "patterns.organisms.split.split" body_classes="" media_classes="mzp-l-split-media-constrain-height" }}
     {{#content "content"}}
       <h3>mzp-l-split-media-constrain-height</h3>
-      <p>The media will be constrained by the height of the media container, to the maximum of the media height.</p>
+      <p>The media and instead be constrained by the height of the media container, to the maximum of the media height.</p>
     {{/content}}
   {{/embed}}
 
@@ -122,12 +129,12 @@ styles:
   {{#embed "patterns.organisms.split.split" body_classes="" media_classes="mzp-l-split-media-overflow" }}
     {{#content "content"}}
     <h3>mzp-l-split-media-overflow</h3>
-    <p>The media will be it's natural height, pushing the container larger.</p>
+    <p>Or the media can be it's natural height, pushing the container larger.</p>
     <p>With wide media this means the media will overflow the container.</p>
     {{/content}}
   {{/embed}}
 
-  <h3 id="media-align">Media alignment</h3>
+  <h3 id="media-align">Media positioning</h3>
 
   {{#embed "patterns.organisms.split.split" img_src="add-ons.png" media_classes="" }}
     {{#content "content"}}

@@ -174,7 +174,7 @@
 /* -------------------------------------------------------------------------- */
 // side by side layout, grid based
 
-@supports( display:grid) {
+@supports(display:grid) {
     @media #{$mq-lg} {
         .mzp-c-split-container {
             // grid is all start/end based we don't need bidi declarations for RTL support \o/
@@ -244,9 +244,9 @@
 /* -------------------------------------------------------------------------- */
 // constraints on height or width of media
 
-.mzp-c-split-media {
+@supports(display:grid) {
     @media #{$mq-lg} {
-        @supports ( display:grid ) {
+        .mzp-c-split-media {
             &.mzp-l-split-media-overflow {
 
                 .mzp-c-split-media-asset {
