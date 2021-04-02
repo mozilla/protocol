@@ -1,0 +1,87 @@
+---
+title: Split Examples
+layout: blank
+styles:
+  - split
+---
+
+
+{{#embed "patterns.organisms.split.split" body_classes="" media_classes="mzp-l-split-media-overflow" }}
+  {{#content "content"}}
+    <h1>Heading</h1>
+    <p>Some fake text so you can see how it looks. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae finibus elit. Maecenas maximus sodales finibus. In at eros sit amet eros placerat vestibulum sed et nisl.</p>
+    <p>
+      <a class="mzp-c-button" href="#">Call to action</a>
+    </p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.split.split" block_classes="mzp-l-split-body-wide" body_classes="" media_classes="" }}
+  {{#content "content"}}
+    <p>{{#embed "patterns.atoms.logo.wordmark" size="sm" product="mozilla" label="Mozilla"}}{{/embed}}</p>
+    <h1 class="mzp-u-title-md">Small Heading</h1>
+    <p>Some fake text so you can see how it looks. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae finibus elit. Maecenas maximus sodales finibus. In at eros sit amet eros placerat vestibulum sed et nisl.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae finibus elit. Maecenas maximus sodales finibus. In at eros sit amet eros placerat vestibulum sed et nisl.</p>
+  {{/content}}
+{{/embed}}
+
+{{#embed "patterns.organisms.split.split" block_classes="mzp-l-split-reversed mzp-l-split-center-on-sm-md" body_classes="mzp-l-split-v-start" media_classes="" }}
+  {{#content "content"}}
+    <h2 class="mzp-u-title-md">Small Heading</h2>
+    <p>Some fake text so you can see how it looks. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae finibus elit. Maecenas maximus sodales finibus. In at eros sit amet eros placerat vestibulum sed et nisl.</p>
+    <p>
+      <a class="mzp-c-button" href="#">Call to action</a>
+    </p>
+    <h2 class="mzp-u-title-md">Small Heading</h2>
+    <p>Some fake text so you can see how it looks. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae finibus elit. Maecenas maximus sodales finibus. In at eros sit amet eros placerat vestibulum sed et nisl.</p>
+    <p>
+      <a class="mzp-c-button" href="#">Call to action</a>
+    </p>
+  {{/content}}
+{{/embed}}
+
+
+{{#embed "patterns.organisms.split.split" has_bg="mzp-t-dark" media_classes="mzp-l-split-media-constrain-height" }}
+  {{#content "content"}}
+    <h2>{{#embed "patterns.atoms.logo.logo" size="md" product="firefox" label="Firefox Browser"}}{{/embed}}</h2>
+    <h3>Your life is your business. Not ours.</h3>
+    <p class="mzp-u-title-sm">Firefox fights for you.</p>
+    <p>
+      <a class="mzp-c-button mzp-t-product" href="#">Download Firefox</a>
+    </p>
+  {{/content}}
+{{/embed}}
+
+<div class="mzp-l-content">
+  {{#embed "patterns.organisms.split.split" block_classes="mzp-l-split-pop-bottom" has_bg="mzp-t-dark mzp-t-background-alt" media_classes="mzp-l-split-v-end"}}
+    {{#content "content"}}
+      <h2>{{#embed "patterns.atoms.logo.wordmark" size="md" product="lockwise" label="Firefox Lockwise"}}{{/embed}}</h2>
+        <h2>Remember your passwords in Lockwise</h2>
+        <p>No more getting locked out of apps and websites. Lockbox secures all the passwords you’ve saved in Firefox and gives you easy access across all your iOS devices.</p>
+        <p><a href="#" class="mzp-c-cta-link">Get the lockwise app</a></p>
+    {{/content}}
+  {{/embed}}
+</div>
+
+
+{{#embed "patterns.organisms.split.split" block_classes="mzp-l-split-hide-media-on-sm-md" body_classes="mzp-l-split-h-end" img_src="image.png" }}
+  {{#content "content"}}
+    <h2 class="mzp-u-title-md">One log-in. Power and privacy everywhere.</h2>
+    <p><a href="#" class="mzp-c-cta-link">Create a Firefox Account</a></p>
+  {{/content}}
+{{/embed}}
+
+
+<div class="mzp-c-split mzp-l-split-reversed mzp-l-split-pop-top">
+  <div class="mzp-c-split-bg mzp-t-dark" style="background-color:#0a84ff;">
+    <div class="mzp-c-split-container">
+      <div class="mzp-c-split-media mzp-l-split-media-overflow">
+        <img class="mzp-c-split-media-asset" src="https://www.mozilla.org/media/img/firefox/whatsnew_63/wnp63-content-blocking.31a5c46e7f2a.png" height="374" width="649" style="background:transparent;">
+      </div>
+      <div class="mzp-c-split-body">
+        <h2 class="mzp-u-title-md">One log-in. Power and privacy everywhere.</h2>
+        <p><a href="#" class="mzp-c-cta-link">Create a Firefox Account</a></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+---
+name: Themes
+order: 2
+description: |
+  Theme the Split by wrapping a div with the class `mzp-c-split-bg` around the container.
+
+  Then add any of the theme classes: `mzp-t-background-alt`, `mzp-t-dark`, or `mzp-t-dark` & `mzp-t-background-alt`.
+---
+
+{{#embed "patterns.organisms.split.split" has_bg="mzp-t-dark"}}
+    {{#content "content"}}
+      <h1 class="mzp-u-title-md">A Headline With 30 Characters</h1>
+      <p>A description with a maximum of 140 characters and <a href="#">a link</a>. That means we usually only have room for one or two sentences. Like this.</p>
+      <p>
+        <a class="mzp-c-button mzp-t-dark" href="#">Call to action</a>
+      </p>
+  {{/content}}
+{{/embed}}

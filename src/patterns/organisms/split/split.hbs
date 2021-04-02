@@ -1,0 +1,44 @@
+---
+name: Split
+order: 1
+description: |
+  Split a row into text and a single piece of media (image or video).
+notes: |
+  - Highly customizable positioning options
+    - layout sizing classes: (50/50 even by default), `mzp-l-split-body-narrow`, `mzp-l-split-body-wide`
+    - layout positioning classes: `mzp-l-split-reversed`
+    - body positioning classes: (horizontally left aligned by default), `mzp-l-split-h-center`, `mzp-l-split-h-end`, `mzp-l-split-v-start`, (vertically centered by default), `mzp-l-split-v-end`
+    - media sizing classes: `mzp-l-split-media-overflow`, `mzp-l-split-media-constrain-height`
+    - media positioning classes: (horizontally left aligned by default), `mzp-l-split-h-center`, `mzp-l-split-h-end`, `mzp-l-split-v-start`, (vertically centered by default), `mzp-l-split-v-end`
+      - note that the media can only be positioned horizontally if it does not have a sizing class added
+      - "pop" the media out of the container with: `mzp-l-split-pop-top`, `mzp-l-split-pop-bottom`, `mzp-l-split-pop`
+    - mobile display classes: `mzp-l-split-center-on-sm-md`, `mzp-l-split-hide-media-on-sm-md`
+  - No default typography styles are applied to the body text; use atoms to achieve the desired content and appearance.
+  - [See the demo page](/demos/split.html) for more examples in a full window context.
+links:
+    Demo: /demos/split.html
+    Layout visualization: /demos/split-visual.html
+---
+
+<section class="mzp-c-split {{block_classes}}">
+  {{#if has_bg }}<div class="mzp-c-split-bg {{ has_bg }}">{{/if}}
+  <div class="mzp-c-split-container">
+    <div class="mzp-c-split-body {{body_classes}}">
+      {{#block "content"}}
+        <h1 class="mzp-u-title-md">A Headline With 30 Characters</h1>
+        <p>A description with a maximum of 140 characters and <a href="#">a link</a>. That means we usually only have room for one or two sentences. Like this.</p>
+        <p>
+          <a class="mzp-c-button" href="#">Call to action</a>
+        </p>
+      {{/block}}
+    </div>
+    <div class="mzp-c-split-media {{media_classes}}">
+      {{#if img_src }}
+        <img class="mzp-c-split-media-asset" src="{{@root.baseurl}}/static/img/split/{{img_src}}" alt="">
+      {{ else }}
+        <img class="mzp-c-split-media-asset" src="{{@root.baseurl}}/static/img/split/devices.png" alt="" srcset="{{@root.baseurl}}/static/img/split/devices-high-res.png 2x">
+      {{/if}}
+    </div>
+  </div>
+  {{#if has_bg }}</div>{{/if}}
+</section>
