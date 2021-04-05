@@ -40,22 +40,6 @@
             padding-top: 0;
         }
     }
-
-    > h1 {
-        @include text-title-lg;
-    }
-
-    > h2 {
-        @include text-title-md;
-    }
-
-    > h3 {
-        @include text-title-sm;
-    }
-
-    > h4 {
-        @include text-title-xs;
-    }
 }
 
 // Nav sidebar
