@@ -8,19 +8,6 @@
     width: $content-md;
     max-width: 100%;
 
-    // Step down the heading levels
-    h2 {
-        @include text-title-md;
-    }
-
-    h3 {
-        @include text-title-sm;
-    }
-
-    h4 {
-        @include text-title-xs;
-    }
-
     @media #{$mq-md} {
         // Float left when sidebar is on the left
         .mzp-l-sidebar-left .mzp-l-main & {
@@ -35,7 +22,7 @@
 }
 
 .mzp-c-article-title {
-    @include text-title-xl;
+    @include text-title-lg;
 }
 
 .mzp-c-article-intro {

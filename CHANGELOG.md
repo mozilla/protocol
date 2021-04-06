@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** Reduce base heading sizes
 * **component:** Add Split component (#326)
 * **component:** New picto component, deprecating the previous picto card (#382)
 * **template:** New multi-column layout container with up to four even columns (#233)
@@ -9,13 +10,9 @@
 * **css:** Add logo and wordmark components (#665)
 * **css:** Add support for mozilla, pocket, and vpn logos to hero and callout components (#663)
 * **assets:** (breaking) Update @mozilla-protocol/assets to 4.0.0
-* **css:** Add Section Heading component (Fix #664)
-* **css:** Add horizontal spacing tokens (#345)
-* **css:** Add vertical spacing tokens (#536)
-
-## Migration Tips
-
-* See notes for [Protocol Assets 4.0.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#migration-tips)
+* **css:** Add Section Heading component (#664)
+* **css:** Add horizontal spacing variables (#345)
+* **css:** Add vertical spacing variables (#536)
 
 ## Bug Fixes
 
@@ -23,8 +20,9 @@
 
 ## Migration Tips
 
-* The new spacing tokens increase vertical spacing at some breakpoints for `.mzp-l-content`. If you have custom components which match the padding around Protocol components you may wish to update those components to use the new spacing tokens.
-
+* Default sizes for heading elements (h1–h6) are smaller. Most components declare sizes explicitly but if you're relying on generic sizes for HTML headings you may need to adjust.
+* The new spacing variables increase top and bottom padding for `.mzp-l-content` at some breakpoints. If you have custom components which match the padding around Protocol components you may wish to update those components to use the new variables.
+* See notes for [Protocol Assets 4.0.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#migration-tips)
 
 # 13.0.1
 
