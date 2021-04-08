@@ -60,6 +60,13 @@
 }
 
 
+// Full width and no bottom margin in multi-column layout
+.mzp-l-columns .mzp-c-picto {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+
 // Change side picto to top when in four columns and a narrow container
 .mzp-t-content-lg .mzp-l-columns.mzp-t-columns-four.mzp-t-picto-side,
 .mzp-t-content-lg .mzp-l-columns.mzp-t-columns-four .mzp-t-picto-side,

@@ -49,16 +49,16 @@
     @include hidden;
 }
 
+
 // Form wrapper with image
 .mzp-c-newsletter {
     margin: 0 auto $spacing-lg;
     max-width: $content-sm;
-    padding: $spacing-lg 0;
 
     @media #{$mq-md} {
         & {
             @include clearfix;
-            padding: $spacing-lg;
+            padding: 0 $spacing-lg;
             max-width: none;
         }
 
@@ -105,7 +105,7 @@
 
     @media #{$mq-lg} {
         & {
-            padding: $layout-md $layout-xl;
+            padding: 0 $layout-xl;
         }
 
         .mzp-c-newsletter-form,
@@ -116,7 +116,7 @@
 
     @media #{$mq-xl} {
         & {
-            padding: $layout-md $layout-2xl;
+            padding: 0 $layout-2xl;
         }
     }
 }

@@ -14,14 +14,6 @@
     padding: get-theme('h-grid-xs') $layout-xs;
     position: relative;
 
-    @media #{$mq-md} {
-        padding: get-theme('h-grid-md') get-theme('v-grid-md');
-    }
-
-    @media #{$mq-xl} {
-        padding: get-theme('h-grid-xl') get-theme('v-grid-xl');
-    }
-
     &.mzp-t-content-sm {
         max-width: $content-sm;
     }
@@ -37,10 +29,25 @@
     &.mzp-t-content-xl {
         max-width: $content-xl;
     }
-}
 
-hr {
-    border: 0 solid $color-marketing-gray-20;
-    border-top-width: 4px;
-    margin: 1.25em 0;
+    // Remove vertical spacing
+    &.mzp-t-content-nospace {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    // No bottom margins on last child
+    // Note: this can cause problems if mzp-l-content
+    // is used as a grid or flex container.
+    & > :last-child {
+        margin-bottom: 0;
+    }
+
+    @media #{$mq-md} {
+        padding: get-theme('h-grid-md') get-theme('v-grid-md');
+    }
+
+    @media #{$mq-xl} {
+        padding: get-theme('h-grid-xl') get-theme('v-grid-xl');
+    }
 }

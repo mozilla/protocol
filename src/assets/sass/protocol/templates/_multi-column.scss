@@ -5,25 +5,29 @@
 @import '../includes/lib';
 
 
-// TODO: Replace column gaps with grid spacing theme variables. (PR #669)
-
 @media #{$mq-md} {
     .mzp-l-columns {
         display: grid;
-        grid-column-gap: get-theme('h-grid-md');
-        column-gap: get-theme('h-grid-md');
+        grid-gap: get-theme('v-grid-sm') get-theme('h-grid-md');
+        gap: get-theme('v-grid-sm') get-theme('h-grid-md');
 
         &.mzp-t-columns-two,
         &.mzp-t-columns-four {
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
+    // Remove standard bottom margin from multi-column lists
+    ul.mzp-l-columns,
+    ol.mzp-l-columns {
+        margin-bottom: 0;
+    }
 }
 
 @media #{$mq-lg} {
     .mzp-l-columns {
-        grid-column-gap: get-theme('h-grid-xl');
-        column-gap: get-theme('h-grid-xl');
+        grid-gap: get-theme('v-grid-lg') get-theme('h-grid-xl');
+        gap: get-theme('v-grid-lg') get-theme('h-grid-xl');
 
         &.mzp-t-columns-three {
             grid-template-columns: repeat(3, 1fr);

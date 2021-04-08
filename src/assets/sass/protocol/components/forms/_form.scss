@@ -15,11 +15,12 @@
 
 
 .mzp-c-form {
-    color: $form-text;
+    color: get-theme('body-text-color-alt');
     margin-bottom: $field-v-spacing;
 
-    &.mzp-t-dark {
-        color: get-theme('body-text-color-inverse');
+    &.mzp-t-dark,
+    .mzp-t-dark & {
+        color: get-theme('body-text-color-alt-inverse');
     }
 
     // if we're using the form component bottom spacing comes from `field` and `choice` components

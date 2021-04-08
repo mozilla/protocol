@@ -11,6 +11,11 @@
     margin: 0 auto $spacing-xl;
     text-align: center;
 
+    // No bottom margin when it's at the bottom of a container
+    .mzp-l-content > &:last-child {
+        margin-bottom: 0;
+    }
+
     // Preserve aspect ratio of images and avoid content jump when loading.
     &.mzp-has-aspect-16-9 .mzp-c-card-feature-media {
         @include aspect-ratio(16, 9);
