@@ -1,3 +1,9 @@
+# 14.0.1
+
+## Bug fixes
+
+* **css:** Fix import order for themes and functions (#653)
+
 # 14.0.0
 
 ## Features
