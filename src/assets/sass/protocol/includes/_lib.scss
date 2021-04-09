@@ -45,6 +45,6 @@ $type-scale: 'standard' !default;
 
 // Import all the things!
 @import './node_modules/@mozilla-protocol/tokens/dist/index.scss';
-@import 'themes';
 @import 'functions';
+@import 'themes';
 @import 'mixins';
