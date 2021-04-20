@@ -15,7 +15,7 @@
 
 
 .mzp-c-form {
-    color: get-theme('body-text-color-alt');
+    color: $form-text;
     margin-bottom: $field-v-spacing;
 
     &.mzp-t-dark,
