@@ -52,7 +52,7 @@
     margin-bottom: $spacing-xl;
 
     a {
-        background: url('#{$image-path}/logos/mozilla/white.svg') no-repeat;
+        background: url('#{$image-path}/logos/mozilla/logo-word-hor-white.svg') no-repeat;
         @include background-size(100px, 32px);
         @include image-replaced;
         display: inline-block;
