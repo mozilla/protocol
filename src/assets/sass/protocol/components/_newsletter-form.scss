@@ -54,6 +54,7 @@
 .mzp-c-newsletter {
     margin: 0 auto;
     max-width: $content-sm;
+    padding: $spacing-lg 0;
 
     // No top padding when it's at the top of a container
     .mzp-l-content > &:first-child {
