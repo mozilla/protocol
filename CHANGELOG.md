@@ -1,3 +1,10 @@
+# 14.0.3
+
+## Bug Fixes
+
+* **assets:** Fix Mozilla logo in footer component.
+
+
 # 14.0.2
 
 ## Features
