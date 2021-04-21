@@ -2,7 +2,7 @@
 
 ## Features
 
-* **css:** Add `.mzp-has-flush-bg` class to Split component, to remove vertical spacing.
+* **css:** Add `.mzp-t-split-nospace` class to Split component, to remove vertical spacing.
 * **css:** Add `.mzp-t-content-nospace` class to content container, to remove vertical spacing.
 * **css:** Renamed `_sections.scss` to `_containers.scss` for clarity.
 
@@ -10,6 +10,7 @@
 
 * **css:** Remove bottom margin from the last child of a content container.
 * **css:** Remove bottom margin from Feature Card when it's the last child of a content container.
+* **css:** Remove bottom margin from Newsletter Form when it's the last child of a content container.
 * **css:** Make Picto fill the column width when in multi-column layouts.
 * **css:** Remove bottom margins from lists used as multi-column containers.
 * **css:** Add vertical grid-gaps to multi-column layouts, for when content wraps to multiple rows.
