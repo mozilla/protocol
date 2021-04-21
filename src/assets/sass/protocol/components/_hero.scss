@@ -13,7 +13,6 @@
 // - Add the 'mzp-t-dark' class to invert text colors for dark backgrounds.
 
 .mzp-c-hero {
-    padding-bottom: $spacing-lg;
     position: relative;
     text-align: center;
 
@@ -183,25 +182,21 @@
 }
 
 @media #{$mq-lg} {
-    .mzp-c-hero {
-        padding: $spacing-2xl 0;
+    .mzp-c-hero.mzp-has-image {
+        .mzp-c-hero-body {
+            @include bidi((
+                (margin-right, calc(50% + #{$spacing-2xl}), 0),
+                (margin-left, 0, calc(50% + #{$spacing-2xl}))
+            ));
+            width: calc(50% - #{$spacing-2xl});
+        }
 
-        &.mzp-has-image {
+        &.mzp-l-reverse {
             .mzp-c-hero-body {
                 @include bidi((
-                    (margin-right, calc(50% + #{$spacing-2xl}), 0),
-                    (margin-left, 0, calc(50% + #{$spacing-2xl}))
+                    (margin-right, 0, calc(50% + #{$spacing-2xl})),
+                    (margin-left, calc(50% + #{$spacing-2xl}), 0)
                 ));
-                width: calc(50% - #{$spacing-2xl});
-            }
-
-            &.mzp-l-reverse {
-                .mzp-c-hero-body {
-                    @include bidi((
-                        (margin-right, 0, calc(50% + #{$spacing-2xl})),
-                        (margin-left, calc(50% + #{$spacing-2xl}), 0)
-                    ));
-                }
             }
         }
     }

@@ -46,7 +46,7 @@ $type-scale: 'condensed';
 
 ## Component themes
 
-In addition to the global themes for brand and type scale, we have a few standard component-level theming classes you can use.
+In addition to the global themes for brand and type scale, we have a few standard component-level theming classes you can use. Smaller components intended to appear in groups (like Cards and Pictos) shouldn't be themed individually, but can appear in a larger container with the theme class applied to the entire group.
 
 ### Dark theme
 
@@ -54,4 +54,4 @@ Many components have an inverse color variant that applies a dark background col
 
 ### Section backgrounds
 
-There's a basic `mzp-t-background-alt` class that applies a secondary background color to most elements or component, especially useful for alternating sections of a page.
+There's a basic `mzp-t-background-alt` class that applies a secondary background color to most elements or components, especially useful for alternating sections of a page.

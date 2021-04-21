@@ -80,7 +80,7 @@
     a {
         @include background-size(84px, 24px);
         @include image-replaced;
-        background-image: url('#{$image-path}/logos/mozilla/black.svg');
+        background-image: url('#{$image-path}/logos/mozilla/logo-word-hor.svg');
         background-repeat: no-repeat;
         display: block;
         height: 24px;

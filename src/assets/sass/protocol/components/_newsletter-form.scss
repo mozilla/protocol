@@ -49,18 +49,27 @@
     @include hidden;
 }
 
+
 // Form wrapper with image
 .mzp-c-newsletter {
-    margin: 0 auto $spacing-lg;
+    margin: 0 auto;
     max-width: $content-sm;
     padding: $spacing-lg 0;
 
+    // No top padding when it's at the top of a container
+    .mzp-l-content > &:first-child {
+        padding-top: 0;
+    }
+
+    // No bottom padding when it's at the bottom of a container
+    .mzp-l-content > &:last-child {
+        padding-bottom: 0;
+    }
+
     @media #{$mq-md} {
-        & {
-            @include clearfix;
-            padding: $spacing-lg;
-            max-width: none;
-        }
+        @include clearfix;
+        padding: get-theme('h-grid-md') get-theme('v-grid-lg');
+        max-width: none;
 
         .mzp-c-newsletter-image {
             @include grid-half;
@@ -75,14 +84,11 @@
         }
 
         @supports (display: grid) {
-            & {
-                @include grid-column-gap($spacing-xl);
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
 
-                &:after { // Remove the clearfix
-                    display: none;
-                }
+            &:after { // Remove the clearfix
+                display: none;
             }
 
             .mzp-c-newsletter-image,
@@ -104,9 +110,7 @@
     }
 
     @media #{$mq-lg} {
-        & {
-            padding: $layout-md $layout-xl;
-        }
+        padding: get-theme('h-grid-lg') $layout-2xl;
 
         .mzp-c-newsletter-form,
         .mzp-c-newsletter-thanks {
@@ -115,8 +119,6 @@
     }
 
     @media #{$mq-xl} {
-        & {
-            padding: $layout-md $layout-2xl;
-        }
+        padding: get-theme('h-grid-xl') $layout-2xl;
     }
 }
