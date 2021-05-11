@@ -3,8 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // create namespace
-if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
-    var Mzp = {};
+if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
+    window.Mzp = {};
 }
 
 (function() {

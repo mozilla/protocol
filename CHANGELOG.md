@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **js:** Set global `Mzp` namespace to default to `window` as root (#687).
+
 # 14.0.3
 
 ## Bug Fixes
