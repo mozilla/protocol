@@ -4,8 +4,8 @@
 
 
 // create namespace
-if (typeof Mzp === 'undefined') { // eslint-disable-line block-scoped-var
-    var Mzp = {};
+if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
+    window.Mzp = {};
 }
 
 (function() {
