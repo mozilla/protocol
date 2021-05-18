@@ -1,5 +1,9 @@
 # HEAD
 
+## Features
+
+* Migrate CI to GitHub actions
+
 ## Bug Fixes
 
 * **js:** Set global `Mzp` namespace to default to `window` as root (#687).
