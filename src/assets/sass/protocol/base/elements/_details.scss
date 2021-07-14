@@ -16,6 +16,15 @@ details .is-summary button,
     @include summary;
 }
 
+// Override styling the native element when the polyfill is applied (issue #658)
+summary.is-summary {
+    @include bidi(((padding-right, 0, padding-left, 0),));
+
+    &:before {
+        display: none;
+    }
+}
+
 details[open] summary:before,
 details .is-summary button[aria-expanded=true]:before,
 .mzp-c-details .is-summary button[aria-expanded=true]:before {
