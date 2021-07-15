@@ -3,14 +3,14 @@ name: Custom expand and collapse
 description: The functions driving the details and summary component can be called independently.
 order: 3
 notes: |
-    - Styling must be provided seperately
+    - Styling must be provided separately.
     - Details can be initialized using `Mzp.Details.init(selector, options)`, where `options` is an Object with the following properties:
       - `onDetailsOpen` [Function] callback when a details is opened (optional).
       - `onDetailsClosed` [Function] callback when a details is closed (optional).
 ---
 
 <style>
-  /* Styling must be provided seperately, don't use these ones they're intentionally bad */
+  /* Styling must be provided separately. Don't use these ones; they're intentionally bad. */
   .demo-section:before {
     color: #00A;
     content: 'Enlarge window to see Mzp.Details.destroy';

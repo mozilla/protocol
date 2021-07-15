@@ -6,7 +6,9 @@
 
 ## Bug Fixes
 
+* **css:** Override styling native summary element when it’s polyfilled in IE11 (#658)
 * **js:** Set global `Mzp` namespace to default to `window` as root (#687).
+
 
 # 14.0.3
 
