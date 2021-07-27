@@ -23,6 +23,8 @@ If you want to produce a Firefox-branded website you'll need to compile the Prot
 $brand-theme: 'firefox';
 ```
 
+(Note: SCSS variables do not cascade like CSS variables because they are compiled away in the build step. If you want to use a SCSS variable in multiple files, you need to re-declare it or import it to those files.)
+
 - [An example of the Mozilla theme](/demos/theme-mozilla.html)
 - [An example of the Firefox theme](/demos/theme-firefox.html)
 
