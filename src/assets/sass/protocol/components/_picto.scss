@@ -60,10 +60,12 @@
 }
 
 
-// Full width and no bottom margin in multi-column layout
-.mzp-l-columns .mzp-c-picto {
-    margin-bottom: 0;
-    width: 100%;
+// No bottom margins and full width in a multi-column layout
+@media #{$mq-md} {
+    .mzp-l-columns .mzp-c-picto {
+        margin-bottom: 0;
+        width: 100%;
+    }
 }
 
 
