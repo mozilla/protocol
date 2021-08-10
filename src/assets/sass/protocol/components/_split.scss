@@ -31,7 +31,6 @@
 
 .mzp-c-split-container {
     @include clearfix();
-    @include border-box;
     margin: 0 auto;
     max-width: $content-max;
     min-width: $content-xs;
@@ -87,15 +86,11 @@
 //* -------------------------------------------------------------------------- */
 // Mobile only rules
 
-@media all and (max-width:#{$screen-lg - 1}) {
+@media all and (max-width:#{$screen-md - 1}) {
 
     .mzp-c-split-body + .mzp-c-split-media,
     .mzp-c-split-media + .mzp-c-split-body {
         margin-top: get-theme('v-grid-xs');
-    }
-
-    .mzp-c-split-media {
-        max-width: $content-sm;
     }
 
     .mzp-l-split-center-on-sm-md {
@@ -123,21 +118,12 @@
 //* -------------------------------------------------------------------------- */
 // side by side layout, float based fall back
 
-@media #{$mq-lg} {
+@media #{$mq-md} {
     .mzp-c-split-body {
         @include border-box;
         @include bidi(((float, left, right),));
         width: 50%;
         padding: 0 (get-theme('h-grid-lg') / 2);
-
-        // right-third
-        .mzp-l-split-body-narrow & {
-            width: 33.33%;
-        }
-
-        .mzp-l-split-body-wide & {
-            width: 66.66%;
-        }
 
         .mzp-l-split-reversed & {
             @include bidi(((float, right, left),));
@@ -150,6 +136,24 @@
         width: 50%;
         padding: 0 (get-theme('h-grid-lg') / 2);
 
+        .mzp-l-split-reversed & {
+            @include bidi(((float, left, right),));
+        }
+    }
+}
+
+@media #{$mq-lg} {
+    .mzp-c-split-body {
+        .mzp-l-split-body-narrow & {
+            width: 33.33%;
+        }
+
+        .mzp-l-split-body-wide & {
+            width: 66.66%;
+        }
+    }
+
+    .mzp-c-split-media {
         .mzp-l-split-body-narrow & {
             width: 66.66%;
         }
@@ -157,12 +161,7 @@
         .mzp-l-split-body-wide & {
             width: 33.33%;
         }
-
-        .mzp-l-split-reversed & {
-            @include bidi(((float, left, right),));
-        }
     }
-
 }
 
 @media #{$mq-xl} {
@@ -180,7 +179,7 @@
 // side by side layout, grid based
 
 @supports(display:grid) {
-    @media #{$mq-lg} {
+    @media #{$mq-md} {
         .mzp-c-split-container {
             // grid is all start/end based we don't need bidi declarations for RTL support \o/
             align-items: center;
@@ -189,24 +188,8 @@
             grid-template-areas: "body media";
             grid-column-gap: get-theme('h-grid-lg');
 
-            .mzp-l-split-body-narrow & {
-                grid-template-columns: 1fr 2fr;
-            }
-
-            .mzp-l-split-body-wide & {
-                grid-template-columns: 2fr 1fr;
-            }
-
             .mzp-l-split-reversed & {
                 grid-template-areas: "media body";
-            }
-
-            .mzp-l-split-body-narrow.mzp-l-split-reversed & {
-                grid-template-columns: 2fr 1fr;
-            }
-
-            .mzp-l-split-body-wide.mzp-l-split-reversed & {
-                grid-template-columns: 1fr 2fr;
             }
         }
 
@@ -239,6 +222,26 @@
         }
     }
 
+    @media #{$mq-lg} {
+        .mzp-c-split-container {
+            .mzp-l-split-body-narrow & {
+                grid-template-columns: 1fr 2fr;
+            }
+
+            .mzp-l-split-body-wide & {
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .mzp-l-split-body-narrow.mzp-l-split-reversed & {
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .mzp-l-split-body-wide.mzp-l-split-reversed & {
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+    }
+
     @media #{$mq-xl} {
         .mzp-c-split-container {
             grid-column-gap: get-theme('h-grid-xl');
@@ -250,7 +253,7 @@
 // constraints on height or width of media
 
 @supports(display:grid) {
-    @media #{$mq-lg} {
+    @media #{$mq-md} {
         .mzp-c-split-media {
             &.mzp-l-split-media-overflow {
 
@@ -290,7 +293,7 @@
 
 
 @supports(display:grid) {
-    @media #{$mq-lg} {
+    @media #{$mq-md} {
         .mzp-l-split-pop-top,
         .mzp-l-split-pop {
 
@@ -412,7 +415,7 @@
 //* --------------------------------------------------------------------------- */
 // vertical and horizontal aligment for body or media
 
-@media #{$mq-lg} {
+@media #{$mq-md} {
     .mzp-c-split {
 
         // horizontal alignment works with float fallbacks.
