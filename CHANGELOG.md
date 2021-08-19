@@ -2,6 +2,8 @@
 
 ## Features
 
+* **css:** Add warning when compiling deprecated components (#709)
+
 * Migrate CI to GitHub actions
 
 ## Bug Fixes
