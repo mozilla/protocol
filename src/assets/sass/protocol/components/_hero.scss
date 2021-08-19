@@ -4,6 +4,8 @@
 
 @import '../includes/lib';
 
+@warn "Hero component is now deprecated. Please migrate to use Split: https://protocol.mozilla.org/patterns/organisms/split.html";
+
 // Page hero section - should usually appear at the top of a page
 
 // - The content is centered by default without a hero image.
