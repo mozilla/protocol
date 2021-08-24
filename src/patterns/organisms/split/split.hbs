@@ -5,7 +5,7 @@ description: |
   Split a row into text and a single piece of media (image or video).
 notes: |
   - Highly customizable positioning options
-    - layout sizing classes: (50/50 even by default), `mzp-l-split-body-narrow`, `mzp-l-split-body-wide`
+    - layout sizing classes: (50/50 even by default), `mzp-l-split-body-narrow`, `mzp-l-split-body-wide` (only in larger viewports; medium viewports will be 50/50, small viewports will stack)
     - layout positioning classes: `mzp-l-split-reversed`
     - body positioning classes: (horizontally left aligned by default), `mzp-l-split-h-center`, `mzp-l-split-h-end`, `mzp-l-split-v-start`, (vertically centered by default), `mzp-l-split-v-end`
     - media sizing classes: `mzp-l-split-media-overflow`, `mzp-l-split-media-constrain-height`
@@ -15,6 +15,8 @@ notes: |
     - mobile display classes: `mzp-l-split-center-on-sm-md`, `mzp-l-split-hide-media-on-sm-md`
   - No default typography styles are applied to the body text; use atoms to achieve the desired content and appearance.
   - [See the demo page](/demos/split.html) for more examples in a full window context.
+nonos: |
+  - This component already has an inner container, so don't place it inside the `mzp-l-content` container. The nested spacing will get weird.
 links:
     Demo: /demos/split.html
     Layout visualization: /demos/split-visual.html

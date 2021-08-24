@@ -11,7 +11,7 @@
     margin: 0 auto;
     max-width: $content-max;
     min-width: $content-xs - ($layout-xs * 2);
-    padding: get-theme('h-grid-xs') $layout-xs;
+    padding: get-theme('v-grid-xs') get-theme('h-grid-xs');
     position: relative;
 
     &.mzp-t-content-sm {
@@ -44,10 +44,10 @@
     }
 
     @media #{$mq-md} {
-        padding: get-theme('h-grid-md') get-theme('v-grid-md');
+        padding: get-theme('v-grid-md') get-theme('h-grid-md');
     }
 
     @media #{$mq-xl} {
-        padding: get-theme('h-grid-xl') get-theme('v-grid-xl');
+        padding: get-theme('v-grid-xl') get-theme('h-grid-xl');
     }
 }

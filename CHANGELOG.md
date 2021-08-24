@@ -2,13 +2,17 @@
 
 ## Features
 
+* **css:** Add warning when compiling deprecated components (#709)
+
 * Migrate CI to GitHub actions
 
 ## Bug Fixes
 
-* **docs** Update docs to clarify SCSS variable use (#697)
+* **css:** Enhancements/fixes to Split component (#702)
+* **css:** Let Picto retain its bottom margin in multi-column layouts in small viewports (#699)
 * **css:** Override styling native summary element when it’s polyfilled in IE11 (#658)
 * **js:** Set global `Mzp` namespace to default to `window` as root (#687).
+* **docs** Update docs to clarify SCSS variable use (#697)
 
 
 # 14.0.3
