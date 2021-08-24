@@ -42,3 +42,8 @@
     @include text-title-2xs;
     font-family: get-theme('title-font-family');
 }
+
+.mzp-u-title-3xs {
+    @include text-title-3xs;
+    font-family: get-theme('title-font-family');
+}

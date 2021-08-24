@@ -2,6 +2,9 @@
 
 ## Features
 
+* **css:** Add content width classes to Split component.
+* **css:** Add default bottom margins to Logo and Wordmark components (#712)
+* **css:** Add `.mzp-u-title-3xs` utility class.
 * **css:** Add warning when compiling deprecated components (#709)
 
 * Migrate CI to GitHub actions

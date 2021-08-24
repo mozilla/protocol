@@ -2,10 +2,15 @@
 name: Themes
 order: 2
 description: |
-  Theme the Split by wrapping an element with the class `mzp-c-split-bg` around the inner container.
+  Theme the Split by wrapping an element with the class `mzp-c-split-bg` around the inner container. This can carry a background color that fills the width of the window, but the split's inner container still defines the content width.
 tips: |
-  - Use any of the standard background theme classes: `mzp-t-background-alt`, `mzp-t-dark`, or both together `mzp-t-dark mzp-t-background-alt`, or apply a custom background color in your own CSS.
-  - To make the background butt against the content above or below the Split, without additional vertical spacing, add the class `mzp-t-split-nospace`. Note that images can't "pop out" of a Split without that additional space.
+  - Use any of the standard background theme classes:
+    - `mzp-t-background-alt`
+    - `mzp-t-dark`
+    - both together `mzp-t-dark mzp-t-background-alt`
+    - or apply a custom background color in your own CSS
+  - To make the background butt against the content above or below the Split, without additional vertical spacing, add the class `mzp-t-split-nospace` to the outer container (`mzp-c-split`). This is especially useful when using Split as a hero section at the very top of a page.
+  Note that images can't "pop out" of a Split without that additional space.
 ---
 
 {{#embed "patterns.organisms.split.split" has_bg="mzp-t-dark"}}

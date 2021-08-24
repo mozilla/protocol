@@ -14,17 +14,18 @@ $logo-sizes: (
     2xl: 'lg',
 );
 
-
 .mzp-c-logo {
     @include bidi(((background-position, top left, top right),));
     @include image-replaced;
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: contain;
     display: block;
+    margin-bottom: $layout-sm;
     margin-top: 0;
 
     &.mzp-t-logo-xs {
         height: $layout-xs;
+        margin-bottom: $layout-xs;
         width: $layout-xs;
     }
 
@@ -40,14 +41,17 @@ $logo-sizes: (
 
     &.mzp-t-logo-lg {
         height: $layout-lg;
+        margin-bottom: $layout-md;
         width: $layout-lg;
     }
 
     &.mzp-t-logo-xl {
         height: $layout-xl;
+        margin-bottom: $layout-lg;
         width: $layout-xl;
     }
 }
+
 @mixin logo($product, $dir, $layout-size, $logo-size) {
     $path : '#{$image-path}/logos/#{$dir}/logo-#{$logo-size}.png';
     $at2x_path: '#{$image-path}/logos/#{$dir}/logo-#{$logo-size}-high-res.png';
