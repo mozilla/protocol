@@ -20,11 +20,13 @@ $logo-sizes: (
     background-size: contain;
     background-repeat: no-repeat;
     display: block;
+    margin-bottom: $layout-sm;
     margin-top: 0;
     max-width: 100%;
 
     &.mzp-t-wordmark-xs {
         height: $layout-xs;
+        margin-bottom: $layout-xs;
         width: 130px;
     }
 
@@ -40,11 +42,13 @@ $logo-sizes: (
 
     &.mzp-t-wordmark-lg {
         height: $layout-lg;
+        margin-bottom: $layout-md;
         width: 347px;
     }
 
     &.mzp-t-wordmark-xl {
         height: $layout-xl;
+        margin-bottom: $layout-lg;
         width: 521px;
     }
 }

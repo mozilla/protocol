@@ -17,15 +17,15 @@
 
     @media #{$mq-md} {
         padding: get-theme('v-grid-md') 0;
+
+        &.mzp-t-split-nospace {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 
     @media #{$mq-xl} {
         padding: get-theme('v-grid-xl') 0;
-    }
-
-    &.mzp-t-split-nospace {
-        padding-top: 0;
-        padding-bottom: 0;
     }
 }
 
@@ -44,6 +44,18 @@
 
     @media #{$mq-xl} {
         padding: 0 get-theme('h-grid-xl');
+    }
+
+    .mzp-t-content-md & {
+        max-width: $content-md;
+    }
+
+    .mzp-t-content-lg & {
+        max-width: $content-lg;
+    }
+
+    .mzp-t-content-xl & {
+        max-width: $content-xl;
     }
 }
 
