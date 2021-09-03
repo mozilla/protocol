@@ -1,7 +1,7 @@
 # HEAD
 
 ## Features
-* **css:** Added overidding rules to the card component to enable dark mode with `.mzp-t-dark` class.
+* **css:** Add overidding rules to the card component to enable dark mode with `.mzp-t-dark` class.
 * **css:** Add content width classes to Split component.
 * **css:** Add default bottom margins to Logo and Wordmark components (#712)
 * **css:** Add `.mzp-u-title-3xs` utility class.
