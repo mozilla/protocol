@@ -25,6 +25,7 @@
         @include aspect-ratio(3, 2);
     }
 
+
     .mzp-c-card-media-wrapper {
         background-color: $color-marketing-gray-20;
         border-radius: $border-radius-xs;
@@ -132,6 +133,24 @@
     @media #{$mq-md} {
         margin-bottom: $spacing-xl;
     }
+}
+
+//* -------------------------------------------------------------------------- */
+// Dark mode styling
+
+.mzp-c-card.mzp-t-dark {
+    background-color: get-theme('background-color-inverse');
+    color: get-theme('body-text-color-inverse');
+
+     .mzp-c-card-block-link {
+        &:link, &:visited {
+            color: get-theme('body-text-color-inverse');
+
+            .mzp-c-card-cta-text {
+                color: get-theme('body-text-color-inverse');
+            }
+        }
+     }
 }
 
 //* -------------------------------------------------------------------------- */
