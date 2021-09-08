@@ -137,7 +137,8 @@
 //* -------------------------------------------------------------------------- */
 // Dark mode styling
 
-.mzp-c-card.mzp-t-dark {
+.mzp-c-card.mzp-t-dark,
+.mzp-t-dark .mzp-c-card {
     background-color: get-theme('background-color-inverse');
     color: get-theme('body-text-color-inverse');
 
