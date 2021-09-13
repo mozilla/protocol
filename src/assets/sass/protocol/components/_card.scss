@@ -135,6 +135,33 @@
 }
 
 //* -------------------------------------------------------------------------- */
+// Dark mode styling
+
+.mzp-c-card.mzp-t-dark,
+.mzp-t-dark .mzp-c-card {
+    background-color: get-theme('background-color-inverse');
+    color: get-theme('body-text-color-inverse');
+
+    .mzp-c-card-tag, .mzp-c-card-meta {
+        color: get-theme('body-text-color-inverse');
+    }
+
+    .mzp-c-card-block-link {
+        &:hover, &:active, &:focus {
+            box-shadow: 0 0 0 4px $color-marketing-gray-80;
+        }
+
+        &:link, &:visited {
+        color: get-theme('body-text-color-inverse');
+
+            .mzp-c-card-cta-text {
+                color: get-theme('body-text-color-inverse');
+            }
+        }
+    }
+}
+
+//* -------------------------------------------------------------------------- */
 // Medium sized card
 
 .mzp-c-card.mzp-c-card-medium {
