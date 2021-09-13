@@ -147,6 +147,10 @@
     }
 
     .mzp-c-card-block-link {
+        &:hover, &:active, &:focus {
+            box-shadow: 0 0 0 4px $color-marketing-gray-80;
+        }
+
         &:link, &:visited {
         color: get-theme('body-text-color-inverse');
 
