@@ -1,6 +1,6 @@
 {
   "name": "protocol",
-  "version": "14.0.3",
+  "version": "14.1.0",
   "private": true,
   "author": "Mozilla",
   "description": "A design system for Mozilla's websites.",
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@cloudfour/hbs-helpers": "^0.9.0",
-    "@mozilla-protocol/assets": "^4.0.0",
+    "@mozilla-protocol/assets": "^4.1.0",
     "@mozilla-protocol/tokens": "^5.0.5",
     "del": "^6.0.0",
     "drizzle-builder": "0.0.10",
@@ -47,13 +47,13 @@
     "prismjs": "^1.24.1",
     "require-dir": "^1.2.0",
     "stylelint": "^13.13.1",
-    "yargs": "^17.0.1"
+    "yargs": "^17.1.1"
   },
   "devDependencies": {
     "@mozilla-protocol/eslint-config": "^1.1.0",
-    "browser-sync": "^2.27.4",
+    "browser-sync": "^2.27.5",
     "doctoc": "^2.0.1",
-    "jasmine-core": "^3.8.0",
+    "jasmine-core": "^3.9.0",
     "karma": "^6.3.4",
     "karma-firefox-launcher": "^2.1.1",
     "karma-jasmine": "^4.0.1"
