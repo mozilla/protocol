@@ -1,6 +1,6 @@
 build-sync-stage:
   only:
-    - master
+    - main
     - gitlab-stage
   tags:
     - mozmeao
@@ -17,4 +17,4 @@ build-sync-prod:
   script:
     - bin/build.sh prod
     - cd dist
-    - aws s3 sync . s3://mozilla-protocol --acl public-read --delete 
+    - aws s3 sync . s3://mozilla-protocol --acl public-read --delete
