@@ -5,6 +5,7 @@ styles:
   - split
 ---
 
+
 {{#embed "patterns.organisms.split.split" body_classes="" media_classes="mzp-l-split-media-overflow" }}
   {{#content "content"}}
     <h1>Heading</h1>
@@ -99,6 +100,59 @@ styles:
     <p><a href="#" class="mzp-c-cta-link">Create a Firefox Account</a></p>
   {{/content}}
 {{/embed}}
+
+
+<div class="mzp-c-split" id="video">
+  <div class="mzp-c-split-bg mzp-t-background-alt">
+    <div class="mzp-c-split-container">
+      <div class="mzp-c-split-body">
+        <h2 class="mzp-u-title-md">Split With Video</h2>
+        <p>This split has an HTML5 video in it. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae finibus elit.</p>
+      </div>
+      <div class="mzp-c-split-media">
+        {{#embed "patterns.atoms.video.video"}}{{/embed}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mzp-c-split mzp-l-split-reversed mzp-l-split-pop">
+  <div class="mzp-c-split-bg mzp-t-dark">
+    <div class="mzp-c-split-container">
+      <div class="mzp-c-split-body">
+        <h2 class="mzp-u-title-md">Split With Video</h2>
+        <p>This split has an HTML5 video at a 4:3 aspect ratio and it pops out of its container.</p>
+      </div>
+      <div class="mzp-c-split-media">
+        {{#embed "patterns.atoms.video.video" class="mzp-has-aspect-4-3"}}
+        {{#content "content"}}
+          <video controls="controls" width="640" height="360" poster="{{@root.baseurl}}/static/img/video/feature.jpg">
+            <source src="{{@root.baseurl}}/static/video/feature.webm" type="video/webm">
+          </video>
+        {{/content}}
+      {{/embed}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mzp-c-split">
+  <div class="mzp-c-split-bg mzp-t-dark mzp-t-background-alt">
+    <div class="mzp-c-split-container">
+      <div class="mzp-c-split-body">
+        <h2 class="mzp-u-title-md">Split With YouTube Video</h2>
+        <p>This split has a YouTube embed in an iframe. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae finibus elit.</p>
+      </div>
+      <div class="mzp-c-split-media">
+      {{#embed "patterns.atoms.video.video"}}
+        {{#content "content"}}
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Xm5i5kbIXzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {{/content}}
+      {{/embed}}
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <div class="mzp-c-split mzp-l-split-reversed mzp-l-split-pop-top">

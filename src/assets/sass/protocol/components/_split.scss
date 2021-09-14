@@ -134,8 +134,8 @@
     .mzp-c-split-body {
         @include border-box;
         @include bidi(((float, left, right),));
-        width: 50%;
         padding: 0 (get-theme('h-grid-lg') / 2);
+        width: 50%;
 
         .mzp-l-split-reversed & {
             @include bidi(((float, right, left),));
@@ -145,8 +145,8 @@
     .mzp-c-split-media {
         @include border-box;
         @include bidi(((float, right, left),));
-        width: 50%;
         padding: 0 (get-theme('h-grid-lg') / 2);
+        width: 50%;
 
         .mzp-l-split-reversed & {
             @include bidi(((float, left, right),));
@@ -196,9 +196,9 @@
             // grid is all start/end based we don't need bidi declarations for RTL support \o/
             align-items: center;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: "body media";
             grid-column-gap: get-theme('h-grid-lg');
+            grid-template-areas: "body media";
+            grid-template-columns: 1fr 1fr;
 
             .mzp-l-split-reversed & {
                 grid-template-areas: "media body";
@@ -211,7 +211,7 @@
                 float: none;
                 min-width: 0; //because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
                 padding: 0;
-                width: auto;
+                width: 100%;
             }
         }
 

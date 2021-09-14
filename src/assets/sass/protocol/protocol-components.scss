@@ -14,7 +14,6 @@
 $image-path: '../img' !default;
 
 @import 'components/article';
-@import 'components/split';
 @import 'components/billboard';
 @import 'components/button';
 @import 'components/call-out';
@@ -39,11 +38,12 @@ $image-path: '../img' !default;
 @import 'components/picto-card';
 @import 'components/section-heading';
 @import 'components/sidebar-menu';
+@import 'components/split';
 @import 'components/sticky-promo';
+@import 'components/video';
 @import 'components/zap';
 @import 'templates/card-layout';
 @import 'templates/main-with-sidebar';
-
 @import 'templates/multi-column';
 
 // logos
