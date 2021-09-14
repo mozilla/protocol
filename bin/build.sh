@@ -7,5 +7,5 @@ docker run --rm --label=node \
     -v $(pwd)/.config:/.config \
     -v $(pwd)/.npm:/.npm \
     -v $(pwd):/app -w /app\
-    node:10-alpine \
+    node:14-alpine \
     npm run-script build
