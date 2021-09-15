@@ -53,17 +53,9 @@ $logo-sizes: (
 }
 
 @mixin logo($product, $dir, $layout-size, $logo-size) {
-    $path : '#{$image-path}/logos/#{$dir}/logo-#{$logo-size}.png';
-    $at2x_path: '#{$image-path}/logos/#{$dir}/logo-#{$logo-size}-high-res.png';
+    $path : '#{$image-path}/logos/#{$dir}/logo.svg';
 
     .mzp-c-logo.mzp-t-product-#{$product}.mzp-t-logo-#{$layout-size} {
         background-image: url('#{$path}');
-
-        // xs does not need high res version, it's shrunk for low-res
-        @if $layout-size != 'xs' {
-            @media #{$mq-high-res} {
-                background-image: url('#{$at2x_path}');
-            }
-        }
     }
 }
