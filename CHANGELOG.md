@@ -1,3 +1,8 @@
+# 14.2.0
+
+## Features
+* **assets** Refactored logo and wordmark mixins to use SVG assets instead of PNG
+
 # 14.1.0
 
 ## Features
