@@ -1,0 +1,451 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../protocol/includes/lib';
+
+
+.protosite-main {
+    padding: 20px 4vw;
+
+    @media #{$mq-md} {
+        padding-left: 24vw;
+    }
+
+    pre:not(.protosite-pattern-code) {
+        margin: 0 0 2em;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        caption {
+            @include bidi(((text-align, left, right),));
+            margin-bottom: .25em;
+            width: 100%;
+        }
+
+        th,
+        td {
+            @include bidi(((text-align, left, right),));
+            border-top: 1px solid rgba(0, 0, 0, .2);
+            padding: .5em 10px;
+            text-align: left;
+        }
+
+        thead th,
+        thead td {
+            border-top: 0;
+            padding-top: 0;
+        }
+    }
+}
+
+// Nav sidebar
+.protosite-nav-main {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+
+    :link,
+    :visited {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: #eee;
+            text-decoration: underline;
+        }
+
+        &:active {
+            background-color: transparent;
+        }
+    }
+
+    @media #{$mq-md} {
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+        display: block;
+        height: 100%;
+        left: 0;
+        min-width: 160px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        width: 20vw;
+        z-index: 1;
+    }
+
+    .protosite-js-nav-toggle {
+        cursor: pointer;
+        display: block;
+
+        @media #{$mq-md} {
+            display: none;
+        }
+    }
+}
+
+.protosite-pattern-desc ul {
+    list-style-type: disc;
+}
+
+.protosite-pattern-desc ol {
+    list-style-type: decimal;
+}
+
+.protosite-pattern-desc li li {
+    margin-left: $layout-sm;
+}
+
+.protosite-nav-main-head {
+    margin: 0 0 20px;
+}
+
+.protosite-nav-main-mozlogo {
+    float: right;
+
+    @media #{$mq-md} {
+        float: none;
+    }
+}
+
+.protosite-nav-menu-title {
+    @include text-title-xs;
+    color: #fff;
+}
+
+.protosite-nav-main-item {
+    margin: 0 0 .25em;
+}
+
+.js .protosite-nav-main-menu {
+    display: none;
+
+    @media #{$mq-md} {
+        display: block;
+    }
+}
+
+.js .protosite-nav-main.mzp-is-active .protosite-nav-main-menu {
+    display: block;
+}
+
+
+// Color swatches
+.protosite-swatch-gallery {
+    margin: 0 0 $spacing-lg;
+
+    .protosite-swatch {
+        margin: 0 0 1.5em;
+        min-height: 100px;
+        overflow: hidden;
+        padding-left: $layout-xl;
+        position: relative;
+
+        .protosite-swatch-values {
+            list-style: none;
+            margin: 0;
+
+            li {
+                margin: 0 0 .25em;
+            }
+        }
+    }
+
+    .protosite-swatch-image {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 64px;
+    }
+
+    .protosite-swatch-name {
+        @include font-base;
+        @include text-title-xs;
+    }
+
+    @media #{$mq-md} {
+        columns: 2 auto;
+        column-gap: $spacing-lg;
+    }
+
+    @media #{$mq-lg} {
+        columns: 3 auto;
+    }
+}
+
+.protosite-pattern-embed {
+    border-radius: $border-radius-md;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    padding: 10px 20px;
+    margin: 0 0 1.5em;
+    overflow-x: auto;
+
+    .protosite-pattern-code {
+        border-radius: 3px;
+        margin: -10px -20px;
+    }
+}
+
+.protosite-pattern-preview {
+    padding: 20px 0;
+
+    & + .protosite-pattern-code {
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        margin: 30px -20px -10px;
+    }
+}
+
+.protosite-pattern-code {
+    background: #f8f8f8;
+    padding: 10px 20px;
+    margin: -10px -20px;
+}
+
+.protosite-specimen {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    padding: 10px 20px;
+    margin: 0 0 1.5em;
+    overflow-x: auto;
+}
+
+.protosite-specimen-font {
+    @include text-title-md;
+}
+
+#specimen-zilla-slab {
+    @include font-mozilla;
+}
+
+#specimen-metropolis {
+    @include font-firefox;
+}
+
+#specimen-inter {
+    @include font-base;
+}
+
+.protosite-section {
+    margin: 0 auto 3em;
+}
+
+
+// Labels
+.protosite-label {
+    @include text-body-sm;
+    background-color: gray;
+    border-radius: .25em;
+    display: inline-block;
+    line-height: 1;
+    padding: .25em 8px;
+    vertical-align: inherit;
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.protosite-label-inprogress {
+    background-color: yellow;
+    color: #000;
+}
+
+.protosite-label-deprecated {
+    background-color: firebrick;
+    color: #fff;
+}
+
+.protosite-label-approved {
+    background-color: green;
+    color: #fff;
+}
+
+.protosite-label-prototype {
+    background-color: rebeccapurple;
+    color: #fff;
+}
+
+
+// Patterns
+.protosite-pattern {
+    margin-bottom: 40px;
+
+    @media #{$mq-lg} {
+        margin-bottom: 60px;
+    }
+
+    .protosite-pattern-links {
+        margin: 0 0 1.5em;
+        list-style: none;
+
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+    }
+}
+
+.protosite-page-title {
+    @include text-title-xl;
+}
+
+.protosite-pattern-title {
+    @include text-title-md;
+}
+
+.protosite-pattern-extra h3 {
+    @include text-title-sm;
+}
+
+.protosite-pattern-extra ul {
+    list-style: disc;
+    margin-left: 32px;
+
+    li {
+        margin-bottom: .5em;
+    }
+
+    ul {
+        margin-top: .5em;
+    }
+}
+
+.protosite-pattern-anchor {
+    color: $color-black;
+    text-decoration: none;
+    border: 0;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+        color: $color-black;
+        text-decoration: none;
+
+        &:after {
+            content: '#';
+            color: $color-link;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.protosite-pattern-links-link {
+    @include text-body-sm;
+
+    svg {
+        fill: currentColor;
+        height: 1em;
+        margin-top: -0.375em;
+        position: relative;
+        vertical-align: middle;
+        width: 1.5em;
+    }
+}
+
+// bidi controls
+.protosite-bidi-controls {
+    @include text-body-sm;
+
+    label {
+        font-weight: normal;
+        display: inline-block;
+    }
+
+    @media #{$mq-lg} {
+        float: right;
+        display: inline-block;
+        text-align: right;
+    }
+}
+
+.protosite-bidi-controls + .protosite-pattern-embed {
+    clear: right;
+}
+
+// token list
+.protosite-token-list {
+    margin: $spacing-lg 0;
+
+    td {
+        border-bottom: 1px solid $color-marketing-gray-20;
+        padding: $spacing-md $spacing-md $spacing-md 0;
+        vertical-align: top;
+    }
+
+    th {
+        border-bottom: 1px solid $color-marketing-gray-20;
+        padding: $spacing-md 0;
+        text-align: start;
+        vertical-align: top;
+    }
+
+    @media #{$mq-lg} {
+        td {
+            max-width: 40em;
+        }
+    }
+}
+
+// buttons
+#protosite-primary-dark-preview,
+#protosite-secondary-dark-preview,
+#protosite-product-dark-preview,
+#protosite-product-secondary-dark-preview,
+#protosite-neutral-dark-preview {
+  background: $color-black;
+  padding: $spacing-md;
+}
+
+
+// icons page
+
+.icons {
+    width: 60px;
+    padding:3px;
+    border-radius: 6px;
+    background-color: $color-light-gray-30;
+}
+h2.icon-title {
+    @include font-base;
+    @include text-display-lg;
+}
+.img-group {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 200px;
+    height: 120px;
+    padding: 10px;
+    cursor: pointer;
+
+    p.copied {
+        background-color: whitesmoke;
+        position: absolute;
+        width: 66px;
+        top: 30px;
+        left: 50%;
+        margin-left: -33px;
+        padding: 2px 0;
+        opacity: 0;
+        transition: opacity .25s ease-in-out;
+    }
+    p.copied.fade {
+        opacity: 1;
+    }
+}
+.icon-name {
+    margin-right: 10px;
+    padding-left: 4px;
+    white-space: nowrap;
+    overflow: auto;
+}
+.icon-title {
+    text-transform: capitalize;
+}
+

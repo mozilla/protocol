@@ -1,0 +1,45 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+
+// Base styles for heading elements
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: get-theme('title-font-family');
+    color: get-theme('title-text-color');
+    font-weight: bold;
+    margin: 0 0 .5em;
+
+    .mzp-t-dark & {
+        color: get-theme('title-text-color-inverse');
+    }
+}
+
+// Type scale mixins can be found in includes/mixins/_typography.scss
+// Sizes are defined in includes/_themes.scss
+h1 {
+    @include text-title-lg;
+}
+
+h2 {
+    @include text-title-md;
+}
+
+h3 {
+    @include text-title-sm;
+}
+
+h4 {
+    @include text-title-xs;
+}
+
+h5 {
+    @include text-title-2xs;
+}
+
+h6 {
+    @include text-title-3xs;
+}

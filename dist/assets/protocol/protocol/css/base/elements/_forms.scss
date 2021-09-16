@@ -1,0 +1,437 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+@import '../../includes/forms/lib';
+
+
+//* -------------------------------------------------------------------------- */
+// Resets
+// many from https://necolas.github.io/normalize.css/
+
+form,
+fieldset,
+legend {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+//  1. Correct the text wrapping in Edge and IE.
+//  2. Correct the color inheritance from `fieldset` elements in IE.
+//  3. Remove the padding so developers are not caught out when they zero out
+//    `fieldset` elements in all browsers.
+legend {
+    box-sizing: border-box; // 1
+    color: inherit; // 2
+    display: table; // 1
+    max-width: 100%; // 1
+    padding: 0; // 3
+    white-space: normal; // 1
+}
+
+button,
+input,
+select,
+optgroup,
+textarea {
+    @include font-base;
+    @include text-body-md;
+    line-height: 1.25;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+// Remove the default vertical scrollbar in IE 10+.
+textarea {
+    overflow: auto;
+}
+
+// 1. Correct the odd appearance in Chrome and Safari.
+// 2. Correct the outline style in Safari.
+[type="search"] {
+    -webkit-appearance: textfield; // 1
+    outline-offset: -2px; // 2
+}
+
+// Remove the inner padding in Chrome and Safari on macOS.
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+// 1. Correct the inability to style clickable types in iOS and Safari.
+// 2. Change font properties to `inherit` in Safari.
+::-webkit-file-upload-button {
+    -webkit-appearance: button; // 1
+    font: inherit; // 2
+}
+
+
+// 1. Add the correct box sizing in IE 10.
+// 2. Remove the padding in IE 10.
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box; // 1
+    padding: 0; // 2
+}
+
+
+//* -------------------------------------------------------------------------- */
+// Element styles
+
+fieldset {
+    margin-bottom: $field-v-spacing;
+    min-width: 0; // https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content
+    width: 100%;
+}
+
+legend {
+    @include text-body-lg;
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+    margin-bottom: $field-v-spacing;
+}
+
+label {
+    @include field-label();
+}
+
+
+// check boxes and radio buttons
+[type="checkbox"],
+[type="radio"] {
+    border-radius: $field-border-radius;
+}
+
+[type="radio"] {
+    border-radius: 100%;
+}
+
+
+//* -------------------------------------------------------------------------- */
+// Inputs & Textarea (excluding checkboxes and radio buttons)
+
+textarea,
+input[list],
+input[type='date'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'] {
+    @include form-input;
+
+    &::placeholder {
+        color: $color-marketing-gray-70;
+    }
+
+    &:hover {
+        border-color: $field-border-color-hover;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $color-link;
+        box-shadow: $field-focus-ring;
+
+        .mzp-t-dark & {
+            box-shadow: $field-focus-ring-dark;
+        }
+    }
+
+    .mzp-is-error & {
+        border-color: $field-border-color-error;
+        box-shadow: none;
+
+        &:hover {
+            border-color: $field-border-color-error-hover;
+        }
+
+        &:focus {
+            border-color: $form-red;
+            box-shadow: $field-focus-ring-error;
+        }
+    }
+
+    &:disabled,
+    &[aria-disabled=true] {
+        background: $color-marketing-gray-10;
+        border-color: $color-marketing-gray-30;
+        color: $color-marketing-gray-70;
+
+        &:focus {
+            border-color: $color-marketing-gray-80;
+        }
+    }
+}
+
+textarea,
+input[type='email'],
+input[list],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'] {
+    min-width: $field-min-width;
+    max-width: 100%;
+}
+
+textarea[cols],
+input[size] {
+    min-width: 0;
+}
+
+// size on HTML is not a good way to size things, this is most evident at small sizes
+input[size='2'] {
+    max-width: calc(2.5ch + #{$field-padding * 2});
+}
+
+input[size='3'] {
+    max-width: calc(3.5ch + #{$field-padding * 2});
+}
+
+input[size='4'] {
+    max-width: calc(4.5ch + #{$field-padding * 2});
+}
+
+input[size='5'] {
+    max-width: calc(5.5ch + #{$field-padding * 2});
+}
+
+input[type='search'] {
+    background-image: $url-image-search-form;
+    background-repeat: no-repeat;
+    background-position: left 8px top 50%;
+    padding: $field-padding $field-padding $field-padding calc(1.5em + #{$field-padding * 2});
+
+    &:hover {
+        background-image: $url-image-search-link-hover;
+    }
+
+    &:focus {
+        background-image: $url-image-search-link;
+    }
+
+    [dir="rtl"] & {
+        background-position: right 8px top 50%;
+        padding: $field-padding calc(1.5em + #{$field-padding * 2}) $field-padding $field-padding;
+    }
+}
+
+input[type='color'],
+input[type='file'] {
+    background: $color-white;
+    border-radius: $field-border-radius;
+    border: $field-border;
+    line-height: 1.25;
+    margin: 0 0 $field-v-spacing;
+
+    &:hover {
+        border-color: $field-border-color-hover;
+    }
+
+    &:focus {
+        border-color: $color-link;
+        box-shadow: $field-focus-ring;
+        outline: none;
+    }
+
+    .mzp-is-error & {
+        border-color: $field-border-color-error;
+        box-shadow: none;
+
+        &:hover {
+            border-color: $field-border-color-error-hover;
+        }
+
+        &:focus {
+            border-color: $form-red;
+            box-shadow: $field-focus-ring-error;
+        }
+    }
+
+    &:disabled,
+    &[aria-disabled=true] {
+        background: $color-marketing-gray-30;
+        border-color: $color-marketing-gray-30;
+        color: $color-marketing-gray-70;
+
+        &:focus {
+            border-color: $color-marketing-gray-80;
+        }
+    }
+}
+
+input[type='file'] {
+    padding: $field-padding;
+}
+
+textarea {
+    height: auto;
+}
+
+
+//* -------------------------------------------------------------------------- */
+// Select
+// with thanks to https://www.filamentgroup.com/lab/select-css.html
+
+select {
+    @include appearance(none);
+    @include border-box;
+    @include bidi((
+        (background-position, right 8px top 50%, left 8px top 50%),
+        (padding, $field-padding $symbol-spacing $field-padding $field-padding, $field-padding $field-padding $field-padding $symbol-spacing),
+    ));
+    @include form-input;
+    background-image: $url-image-arrow-down-form, $select-bg;
+    background-repeat: no-repeat, repeat;
+    background-size: 1.5em auto, 100%;
+    display: block;
+    font-weight: normal;
+    max-width: 100%;
+    min-width: $field-min-width;
+    text-overflow: ellipsis;
+
+    // no down arrow on multi selects
+    &[multiple] {
+        &,
+        &:hover,
+        &:focus {
+            background: $color-white;
+            padding: $field-padding;
+        }
+    }
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    &:hover {
+        border-color: $field-border-color-hover;
+        background-image: $url-image-arrow-down-link-hover, $select-bg;
+    }
+
+    &:focus {
+        border-color: $color-link;
+        background-image: $url-image-arrow-down-link, $select-bg;
+        box-shadow: $field-focus-ring;
+        color: #222;
+        outline: none;
+
+        .mzp-t-dark & {
+            box-shadow: $field-focus-ring-dark;
+        }
+    }
+
+    .mzp-is-error & {
+        border-color: $field-border-color-error;
+        box-shadow: none;
+
+        &:hover {
+            border-color: $field-border-color-error-hover;
+        }
+
+        &:focus {
+            border-color: $form-red;
+            box-shadow: $field-focus-ring-error;
+        }
+    }
+
+    &:disabled,
+    &[aria-disabled=true] {
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+                          $select-bg-disabled;
+        border-color: $color-marketing-gray-30;
+        color: $color-marketing-gray-70;
+
+        &:hover {
+            border-color: $color-marketing-gray-30;
+        }
+
+        &:focus {
+            border-color: $color-marketing-gray-80;
+        }
+    }
+
+    option {
+        font-weight: normal;
+    }
+}
+
+
+//* -------------------------------------------------------------------------- */
+// Basic utility classes
+
+fieldset {
+    &.mzp-u-inline {
+        margin-bottom: 0;
+    }
+}
+
+legend {
+    .mzp-u-inline & {
+        @include field-label();
+    }
+}
+
+label {
+    &.mzp-u-inline {
+        @include bidi(((padding, 0 $spacing-sm 0 0, 0 0 0 $spacing-sm),));
+        display: inline;
+    }
+}
+
+.mzp-c-fieldnote {
+    @include form-info;
+
+    .mzp-is-error & {
+        color: $form-red;
+    }
+
+    .mzp-c-button + & {
+        margin-top: $spacing-sm * -1;
+    }
+}
+
+
+//* -------------------------------------------------------------------------- */
+// Errors
+
+.mzp-c-form-errors {
+    @include white-links;
+    background-color: $form-red;
+    border-radius: $field-border-radius;
+    color: $color-white;
+    padding: $spacing-sm;
+    margin-bottom: $spacing-xl;
+
+    .mzp-c-form-header + & {
+        margin-top: $spacing-xl;
+    }
+
+    :last-child {
+        margin-bottom: 0;
+    }
+
+    li {
+        margin-bottom: $label-v-spacing;
+    }
+}
+
+.mzp-is-error {
+    input[type='checkbox'],
+    input[type='radio'] {
+        box-shadow: $field-focus-ring-error;
+    }
+}

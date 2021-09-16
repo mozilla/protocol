@@ -1,0 +1,67 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+
+$logo-sizes: (
+    xs: 'xs',
+    sm: 'xs',
+    md: 'xs',
+    lg: 'sm',
+    xl: 'md',
+    2xl: 'lg',
+);
+
+.mzp-c-wordmark {
+    @include bidi(((background-position, top left, top right),));
+    @include image-replaced;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin-bottom: $layout-sm;
+    margin-top: 0;
+    max-width: 100%;
+
+    &.mzp-t-wordmark-xs {
+        height: $layout-xs;
+        margin-bottom: $layout-xs;
+        width: 130px;
+    }
+
+    &.mzp-t-wordmark-sm {
+        height: $layout-sm;
+        width: 174px;
+    }
+
+    &.mzp-t-wordmark-md {
+        height: $layout-md;
+        width: 262px;
+    }
+
+    &.mzp-t-wordmark-lg {
+        height: $layout-lg;
+        margin-bottom: $layout-md;
+        width: 347px;
+    }
+
+    &.mzp-t-wordmark-xl {
+        height: $layout-xl;
+        margin-bottom: $layout-lg;
+        width: 521px;
+    }
+}
+
+@mixin wordmark($product, $dir, $layout-size, $logo-size) {
+    $path : '#{$image-path}/logos/#{$dir}/logo-word-hor.svg';
+    $path_white : '#{$image-path}/logos/#{$dir}/logo-word-hor-white.svg';
+
+    .mzp-c-wordmark.mzp-t-product-#{$product}.mzp-t-wordmark-#{$layout-size} {
+        background-image: url('#{$path}');
+
+        .mzp-t-dark & {
+            background-image: url('#{$path_white}');
+        }
+    }
+}

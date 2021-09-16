@@ -1,0 +1,289 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+@import '../includes/forms/lib';
+
+@mixin default-states {
+    &:focus {
+        border-color: $button-border-color-focus;
+        box-shadow: $field-focus-ring;
+    }
+
+    &:hover {
+        background-color: $color-marketing-gray-20;
+        border-color: $color-black;
+        box-shadow: none;
+        color: $color-black;
+    }
+
+    &:active {
+        background-color: $color-marketing-gray-20;
+        border-color: $color-marketing-gray-70;
+        color: $color-black;
+    }
+}
+
+@mixin default-states-dark {
+    &:focus {
+        border-color: $button-border-color-focus;
+        box-shadow: $field-focus-ring-dark;
+    }
+
+    &:hover {
+        background-color: $color-dark-gray-60;
+        border-color: $color-white;
+        box-shadow: none;
+        color: $color-white;
+    }
+
+    &:active {
+        background-color: $color-dark-gray-60;
+        border-color: $color-light-gray-50;
+        color: $color-white;
+    }
+}
+
+@mixin product-states {
+    &:focus {
+        border-color: $button-border-color-focus;
+        box-shadow: $field-focus-ring;
+    }
+
+    &:hover {
+        background-color: $color-blue-60;
+        border-color: transparent;
+        box-shadow: none;
+        color: $color-white;
+    }
+
+    &:active {
+        background-color: $color-blue-80;
+        border-color: transparent;
+        color: $color-white;
+    }
+}
+
+@mixin product-states-dark {
+    @include product-states;
+}
+
+//* -------------------------------------------------------------------------- */
+// Button shape and size
+
+.mzp-c-button,
+a.mzp-c-button {
+    @include border-box;
+    @include font-size(16px);
+    @include transition(background-color 100ms, box-shadow 100ms, color 100ms);
+    border-radius: $border-radius-sm;
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-family: get-theme('button-font-family');
+    font-weight: bold;
+    line-height: type-scale('body-line-height');
+    padding: 6px $spacing-lg;
+    text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
+
+    &:focus {
+        border-color: $button-border-color-focus;
+        box-shadow: $field-focus-ring;
+        color: $color-white;
+        outline: none;
+    }
+
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+}
+
+
+// Sizes
+
+.mzp-c-button.mzp-t-sm {
+    @include font-size(12px);
+    border-radius: $border-radius-xs;
+    padding: 1px $spacing-md;
+}
+
+.mzp-c-button.mzp-t-small, // backwards compatability
+.mzp-c-button.mzp-t-md {
+    @include font-size(14px);
+    padding: $spacing-xs $spacing-lg;
+}
+
+.mzp-c-button.mzp-t-lg {
+    @include font-size(16px);
+    padding: 6px $spacing-lg;
+}
+
+.mzp-c-button.mzp-t-xl {
+    @include font-size(16px);
+    padding: 10px $spacing-lg;
+}
+
+
+//* -------------------------------------------------------------------------- */
+// Primary
+
+.mzp-c-button,
+a.mzp-c-button {
+    background-color: $color-black;
+    border: 2px solid $color-black;
+    color: $color-white;
+
+    @include default-states;
+
+    // dark
+    &.mzp-t-dark {
+        background-color: $color-white;
+        border-color: $color-white;
+        color: $color-black;
+
+        @include default-states-dark;
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Secondary
+
+.mzp-c-button,
+a.mzp-c-button {
+    &.mzp-t-secondary {
+        background-color: transparent;
+        border-color: $color-black;
+        color: $color-black;
+
+        @include default-states;
+
+        // dark
+        &.mzp-t-dark {
+            background-color: transparent;
+            border-color: $color-white;
+            color: $color-white;
+
+            @include default-states-dark;
+        }
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Product Buttons
+
+.mzp-c-button.mzp-t-product,
+a.mzp-c-button.mzp-t-product {
+    background-color: $color-blue-50;
+    border-color: transparent;
+    color: $color-white;
+
+    @include product-states;
+
+    // dark is the same as light
+
+    // secondary
+    &.mzp-t-secondary {
+        background-color: transparent;
+        border-color: $color-blue-50;
+        color: $color-blue-50;
+
+        @include product-states;
+
+        // dark
+        &.mzp-t-dark {
+            background-color: rgba($color-white, .3);
+            border-color: transparent;
+            color: $color-white;
+
+            @include product-states;
+        }
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Neutral Buttons
+
+.mzp-c-button,
+a.mzp-c-button {
+    &.mzp-t-neutral {
+        background-color: transparent;
+        border-color: $color-marketing-gray-30;
+        color: $color-marketing-gray-70;
+
+        &:focus {
+            border-color: $button-border-color-focus;
+        }
+
+        &:hover {
+            background-color: $color-marketing-gray-20;
+            border-color: $color-marketing-gray-40;
+            color: $color-marketing-gray-70;
+        }
+
+        &:active {
+            background-color: $color-marketing-gray-20;
+            border-color: $color-marketing-gray-50;
+            color: $color-marketing-gray-70;
+        }
+
+         // dark
+         &.mzp-t-dark {
+            background-color: rgba($color-white, .1);
+            border-color: rgba($color-white, .6);
+            color: $color-white;
+
+            &:focus {
+                border-color: $button-border-color-focus;
+            }
+
+            &:hover {
+                background-color: rgba($color-white, .2);
+                border-color: rgba($color-white, .6);
+                color: $color-white;
+            }
+
+            &:active {
+                background-color: rgba($color-white, .2);
+                border-color: rgba($color-white, .4);
+                color: $color-white;
+            }
+        }
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Download Button Molecule
+
+.mzp-c-button-download-container {
+    text-align: center;
+    margin-bottom: $field-v-spacing;
+    display: inline-block;
+}
+
+.mzp-c-button-download-privacy-link {
+    @include text-body-xs;
+    display: block;
+    margin-top: $info-v-spacing;
+
+    a:link,
+    a:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+        text-decoration: underline;
+    }
+}

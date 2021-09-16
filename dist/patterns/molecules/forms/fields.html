@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js ">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="../../../static/img/favicon.png">
+      <title>Fields - Protocol Design System</title>
+      <script src="../../../assets/protocol/protocol/js/protocol-base.js"></script>
+      <script src="../../../assets/protocol/protocol/js/protocol-utils.js"></script>
+      <script src="../../../assets/protocol/protocol/js/protocol-supports.js"></script>
+      <link rel="stylesheet" href="../../../assets/docs/css/protocol.css">
+      <link rel="stylesheet" href="../../../assets/docs/css/protocol-components.css">
+      <link rel="stylesheet" href="../../../assets/docs/css/site.css">
+      <link rel="stylesheet" href="../../../assets/docs/css/prism.css">
+  </head>
+  <body class="">
+    <div class="protosite-page">
+    
+    <nav class="protosite-nav-main" id="protosite-nav-main">
+      <header class="protosite-nav-main-head">
+        <a href="https://www.mozilla.org">
+          <img class="protosite-nav-main-mozlogo" src="../../../assets/protocol/protocol/img/logos/mozilla/logo-word-hor-white.svg" width="100" alt="Mozilla">
+        </a>
+    
+        <a class="protosite-js-nav-toggle" href="#nav">Menu</a>
+      </header>
+    
+      <div class="protosite-nav-main-menu" id="protosite-nav-main-menu">
+        <ul>
+          <li class="protosite-nav-main-item">
+            <a href="../../..">Home</a>
+          </li>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../docs/index.html">
+                  Documentation
+                </a>
+          </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Fundamentals</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../fundamentals/principles.html">
+                  Design Principles
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../fundamentals/themes.html">
+                  Themes
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../fundamentals/typography.html">
+                  Typography
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../fundamentals/tokens.html">
+                  Tokens
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../fundamentals/color.html">
+                  Color
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../fundamentals/icons.html">
+                  
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Atoms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/atoms/typographic.html">
+                  Text
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/atoms/buttons.html">
+                  Buttons
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/atoms/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/atoms/links.html">
+                  Links
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/atoms/lists.html">
+                  Lists
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/atoms/logo.html">
+                  Logos &amp; Wordmarks
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/atoms/section-heading.html">
+                  Section Heading
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/atoms/zap.html">
+                  Zap
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Molecules</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/card.html">
+                  Cards
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/details.html">
+                  Details
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/download-button.html">
+                  Download Button
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/emphasis-box.html">
+                  Emphasis Box
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/feature-card.html">
+                  Feature Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/language-switcher.html">
+                  Language Switcher
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/menu-list.html">
+                  Menu List
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/menu.html">
+                  Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/notification-bar.html">
+                  Notification Bar
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/picto-card.html">
+                  Picto Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/picto.html">
+                  Picto
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/molecules/sticky-promo.html">
+                  Sticky Promo
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Organisms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/organisms/article.html">
+                  Article
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/organisms/billboard.html">
+                  Billboard
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/organisms/call-out.html">
+                  Call Out
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/organisms/footer.html">
+                  Footer
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/organisms/hero.html">
+                  Page Hero
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/organisms/modal.html">
+                  Modal
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/organisms/navigation.html">
+                  Navigation
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/organisms/newsletter.html">
+                  Newsletter
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/organisms/sidebar-menu.html">
+                  Sidebar Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/organisms/split.html">
+                  Split
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Templates</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/templates/card-layout.html">
+                  Card Layout
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/templates/columns.html">
+                  Columns
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/templates/content-container.html">
+                  Content Container
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/templates/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../patterns/templates/main-with-sidebar.html">
+                  Main With Sidebar
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Other Stuff</h4>
+        <ul>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../../demos/index.html">
+                  Demos
+                </a>
+          </li>
+          <li class="protosite-nav-main-item">
+            <a href="https://github.com/mozilla/protocol" target="_blank" rel="noopener noreferrer">
+              Repo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="protosite-main">
+      <header class="protosite-page-head">
+        <h1 class="protosite-page-title">
+          Fields
+        </h1>
+
+      </header>
+
+          <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="choice" class="protosite-pattern-title">
+    <a href="#choice" class="protosite-pattern-anchor">      Choice
+</a>
+</h2>
+  </header>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-choice-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-choice-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-choice-preview" dir="ltr">
+          <div class="mzp-c-choice ">
+  <input class="mzp-c-choice-control" type="" name="Choice" id="patterns.molecules.forms.fields.choice" value=""   >
+  <label class="mzp-c-choice-label " for="patterns.molecules.forms.fields.choice">Label</label>
+  
+  
+</div>
+
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;div class&#x3D;&quot;mzp-c-choice &quot;&gt;
+  &lt;input class&#x3D;&quot;mzp-c-choice-control&quot; type&#x3D;&quot;&quot; name&#x3D;&quot;Choice&quot;
+   id&#x3D;&quot;patterns.molecules.forms.fields.choice&quot; value&#x3D;&quot;&quot;&gt;
+  &lt;label class&#x3D;&quot;mzp-c-choice-label &quot;
+   for&#x3D;&quot;patterns.molecules.forms.fields.choice&quot;&gt;Label&lt;/label&gt;
+
+&lt;/div&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="input" class="protosite-pattern-title">
+    <a href="#input" class="protosite-pattern-anchor">      Input
+</a>
+</h2>
+  </header>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-input-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-input-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-input-preview" dir="ltr">
+          <div class="mzp-c-field ">
+  <label class="mzp-c-field-label" for="patterns.molecules.forms.fields.input">Label</label>
+  <input class="mzp-c-field-control " type="" id="patterns.molecules.forms.fields.input"   >
+  
+  
+</div>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;div class&#x3D;&quot;mzp-c-field &quot;&gt;
+  &lt;label class&#x3D;&quot;mzp-c-field-label&quot;
+   for&#x3D;&quot;patterns.molecules.forms.fields.input&quot;&gt;Label&lt;/label&gt;
+  &lt;input class&#x3D;&quot;mzp-c-field-control &quot; type&#x3D;&quot;&quot;
+   id&#x3D;&quot;patterns.molecules.forms.fields.input&quot;&gt;
+
+&lt;/div&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="list" class="protosite-pattern-title">
+    <a href="#list" class="protosite-pattern-anchor">      List
+</a>
+</h2>
+  </header>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-list-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-list-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-list-preview" dir="ltr">
+          <div class="mzp-c-field">
+  <label class="mzp-c-field-label" for="patterns.molecules.forms.fields.list">Label</label>
+  <input class="mzp-c-field-contol" list="patterns.molecules.forms.fields.list-options" name="list" id="patterns.molecules.forms.fields.list"  >
+  <datalist id="patterns.molecules.forms.fields.list-options">
+      <option value="Option 1">
+      <option value="Option 2">
+      <option value="Option 3">
+  </datalist>
+  
+  
+</div>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;div class&#x3D;&quot;mzp-c-field&quot;&gt;
+  &lt;label class&#x3D;&quot;mzp-c-field-label&quot;
+   for&#x3D;&quot;patterns.molecules.forms.fields.list&quot;&gt;Label&lt;/label&gt;
+  &lt;input class&#x3D;&quot;mzp-c-field-contol&quot;
+   list&#x3D;&quot;patterns.molecules.forms.fields.list-options&quot;
+   name&#x3D;&quot;list&quot; id&#x3D;&quot;patterns.molecules.forms.fields.list&quot;&gt;
+  &lt;datalist
+   id&#x3D;&quot;patterns.molecules.forms.fields.list-options&quot;&gt;
+    &lt;option value&#x3D;&quot;Option 1&quot;&gt;
+    &lt;option value&#x3D;&quot;Option 2&quot;&gt;
+    &lt;option value&#x3D;&quot;Option 3&quot;&gt;
+  &lt;/datalist&gt;
+
+&lt;/div&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="select" class="protosite-pattern-title">
+    <a href="#select" class="protosite-pattern-anchor">      Select
+</a>
+</h2>
+  </header>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-select-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-select-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-select-preview" dir="ltr">
+          <div class="mzp-c-field">
+  <label class="mzp-c-field-label" for="patterns.molecules.forms.fields.select">Label</label>
+  <select class="mzp-c-field-control" name="select" id="patterns.molecules.forms.fields.select"   >
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+  </select>
+  
+  
+</div>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;div class&#x3D;&quot;mzp-c-field&quot;&gt;
+  &lt;label class&#x3D;&quot;mzp-c-field-label&quot;
+   for&#x3D;&quot;patterns.molecules.forms.fields.select&quot;&gt;Label&lt;/label&gt;
+  &lt;select class&#x3D;&quot;mzp-c-field-control&quot; name&#x3D;&quot;select&quot;
+   id&#x3D;&quot;patterns.molecules.forms.fields.select&quot;&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+    &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;option&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+
+&lt;/div&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="textarea" class="protosite-pattern-title">
+    <a href="#textarea" class="protosite-pattern-anchor">      Textarea
+</a>
+</h2>
+  </header>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-textarea-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-textarea-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-textarea-preview" dir="ltr">
+          <div class="mzp-c-field">
+  <label class="mzp-c-field-label">Label</label>
+  <textarea class="mzp-c-field-control" name="textarea" id="patterns.molecules.forms.fields.textarea"   ></textarea>
+  
+  
+</div>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;div class&#x3D;&quot;mzp-c-field&quot;&gt;
+  &lt;label class&#x3D;&quot;mzp-c-field-label&quot;&gt;Label&lt;/label&gt;
+  &lt;textarea class&#x3D;&quot;mzp-c-field-control&quot; name&#x3D;&quot;textarea&quot;
+   id&#x3D;&quot;patterns.molecules.forms.fields.textarea&quot;&gt;&lt;/textarea&gt;
+
+&lt;/div&gt;</code></pre>
+      </div>
+
+
+
+</article>
+
+    </main>
+
+        <script src="../../../assets/docs/js/docs.js"></script>
+
+    </div>
+  </body>
+</html>

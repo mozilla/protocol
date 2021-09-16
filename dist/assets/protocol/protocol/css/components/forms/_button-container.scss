@@ -1,0 +1,75 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+@import '../../includes/forms/lib';
+
+.mzp-c-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: $field-v-spacing;
+    text-align: center;
+
+    .mzp-c-button {
+        max-width: $content-xs;
+        width: 100%;
+    }
+
+    // no bottom spacing if it's the last thing in the form
+    .mzp-c-form > .mzp-c-button-container:last-child {
+        margin-bottom: 0;
+    }
+
+    // align center
+    &.mzp-l-align-center {
+        justify-content: center;
+        text-align: center;
+    }
+
+    // put spacing between multiple buttons
+    .mzp-c-button + .mzp-c-button {
+        margin-top: $info-v-spacing;
+    }
+
+    &.mzp-l-stretch .mzp-c-button {
+        max-width: none;
+    }
+
+    @media #{$mq-sm} {
+        @include bidi(((text-align, left, right),));
+        align-items: start;
+        justify-content: start;
+
+        .mzp-c-button {
+            width: auto;
+        }
+
+        .mzp-c-button + .mzp-c-button {
+            @include bidi(((margin-left, $field-h-spacing, margin-right, 0),));
+            margin-top: 0;
+        }
+
+        // align end
+        &.mzp-l-align-end {
+            @include bidi(((text-align, right, left),));
+            justify-content: flex-end;
+        }
+
+        &.mzp-l-stretch {
+            align-items: stretch;
+
+            .mzp-c-button {
+                flex-grow: 1;
+            }
+        }
+    }
+}
+
+.mzp-c-button-info {
+    @include form-info;
+    @include text-body-xs;
+    padding-top: $info-v-spacing;
+    width: 100%;
+}

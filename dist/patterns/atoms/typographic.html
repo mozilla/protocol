@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js ">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="../../static/img/favicon.png">
+      <title>Text - Protocol Design System</title>
+      <script src="../../assets/protocol/protocol/js/protocol-base.js"></script>
+      <script src="../../assets/protocol/protocol/js/protocol-utils.js"></script>
+      <script src="../../assets/protocol/protocol/js/protocol-supports.js"></script>
+      <link rel="stylesheet" href="../../assets/docs/css/protocol.css">
+      <link rel="stylesheet" href="../../assets/docs/css/protocol-components.css">
+      <link rel="stylesheet" href="../../assets/docs/css/site.css">
+      <link rel="stylesheet" href="../../assets/docs/css/prism.css">
+  </head>
+  <body class="">
+    <div class="protosite-page">
+    
+    <nav class="protosite-nav-main" id="protosite-nav-main">
+      <header class="protosite-nav-main-head">
+        <a href="https://www.mozilla.org">
+          <img class="protosite-nav-main-mozlogo" src="../../assets/protocol/protocol/img/logos/mozilla/logo-word-hor-white.svg" width="100" alt="Mozilla">
+        </a>
+    
+        <a class="protosite-js-nav-toggle" href="#nav">Menu</a>
+      </header>
+    
+      <div class="protosite-nav-main-menu" id="protosite-nav-main-menu">
+        <ul>
+          <li class="protosite-nav-main-item">
+            <a href="../..">Home</a>
+          </li>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../docs/index.html">
+                  Documentation
+                </a>
+          </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Fundamentals</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/principles.html">
+                  Design Principles
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/themes.html">
+                  Themes
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/typography.html">
+                  Typography
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/tokens.html">
+                  Tokens
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/color.html">
+                  Color
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/icons.html">
+                  
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Atoms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/typographic.html">
+                  Text
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/buttons.html">
+                  Buttons
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/links.html">
+                  Links
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/lists.html">
+                  Lists
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/logo.html">
+                  Logos &amp; Wordmarks
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/section-heading.html">
+                  Section Heading
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/zap.html">
+                  Zap
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Molecules</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/card.html">
+                  Cards
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/details.html">
+                  Details
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/download-button.html">
+                  Download Button
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/emphasis-box.html">
+                  Emphasis Box
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/feature-card.html">
+                  Feature Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/language-switcher.html">
+                  Language Switcher
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/menu-list.html">
+                  Menu List
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/menu.html">
+                  Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/notification-bar.html">
+                  Notification Bar
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/picto-card.html">
+                  Picto Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/picto.html">
+                  Picto
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/sticky-promo.html">
+                  Sticky Promo
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Organisms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/article.html">
+                  Article
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/billboard.html">
+                  Billboard
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/call-out.html">
+                  Call Out
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/footer.html">
+                  Footer
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/hero.html">
+                  Page Hero
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/modal.html">
+                  Modal
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/navigation.html">
+                  Navigation
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/newsletter.html">
+                  Newsletter
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/sidebar-menu.html">
+                  Sidebar Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/split.html">
+                  Split
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Templates</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/card-layout.html">
+                  Card Layout
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/columns.html">
+                  Columns
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/content-container.html">
+                  Content Container
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/main-with-sidebar.html">
+                  Main With Sidebar
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Other Stuff</h4>
+        <ul>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../demos/index.html">
+                  Demos
+                </a>
+          </li>
+          <li class="protosite-nav-main-item">
+            <a href="https://github.com/mozilla/protocol" target="_blank" rel="noopener noreferrer">
+              Repo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="protosite-main">
+      <header class="protosite-page-head">
+        <h1 class="protosite-page-title">
+          Text
+        </h1>
+
+      </header>
+
+          <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="heading-elements" class="protosite-pattern-title">
+    <a href="#heading-elements" class="protosite-pattern-anchor">      Heading Elements
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>A heading acts as a title for the content that immediately follows it. We&#39;ve declared default sizes for headings in keeping with their standard ranking but this base size can be overridden with more context-specific styling.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="/patterns/atoms/section-heading.html">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            Section Heading component
+          </a>
+        </li>
+        <li>
+          <a class="protosite-pattern-links-link" href="/fundamentals/typography.html#type-scale">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            Type Scale
+          </a>
+        </li>
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/docs/Web/HTML/Element/Heading_Elements">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-heading-elements-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-heading-elements-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-heading-elements-preview" dir="ltr">
+          
+  <h1>Sphinx of black quartz, judge my vow!</h1>
+  <h2>Sphinx of black quartz, judge my vow!</h2>
+  <h3>Sphinx of black quartz, judge my vow!</h3>
+  <h4>Sphinx of black quartz, judge my vow!</h4>
+  <h5>Sphinx of black quartz, judge my vow!</h5>
+  <h6>Sphinx of black quartz, judge my vow!</h6>
+
+  <h1 class="mzp-u-title-xs">H1 with a utility class to make it an extra-small title</h1>
+  <h6 class="mzp-u-title-md">H6 with a utility class to make it a medium title</h6>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;h1&gt;Sphinx of black quartz, judge my vow!&lt;/h1&gt;
+&lt;h2&gt;Sphinx of black quartz, judge my vow!&lt;/h2&gt;
+&lt;h3&gt;Sphinx of black quartz, judge my vow!&lt;/h3&gt;
+&lt;h4&gt;Sphinx of black quartz, judge my vow!&lt;/h4&gt;
+&lt;h5&gt;Sphinx of black quartz, judge my vow!&lt;/h5&gt;
+&lt;h6&gt;Sphinx of black quartz, judge my vow!&lt;/h6&gt;
+
+&lt;h1 class&#x3D;&quot;mzp-u-title-xs&quot;&gt;H1 with a utility class to make it an extra-small title&lt;/h1&gt;
+&lt;h6 class&#x3D;&quot;mzp-u-title-md&quot;&gt;H6 with a utility class to make it a medium title&lt;/h6&gt;</code></pre>
+      </div>
+
+
+
+    <section class="protosite-pattern-extra protosite-pattern-extra-nonos">
+      <h3>No-nos</h3>
+      <ul>
+<li>Avoid breaking rank just for font sizing. The next heading after an <code>h1</code> should be an <code>h2</code> even if that <code>h2</code> is much smaller. Use HTML for meaning and CSS for styling. You can make that <code>h2</code> whatever size you need.</li>
+<li>Avoid &quot;stacking&quot; headings without any body content in between, eg. an <code>h2</code> immediately following an <code>h1</code>. If you need a subheading or tagline immediately after a title, chances are it should be a paragraph rather than a second heading.</li>
+<li>There are presentational utility classes available that you can apply to any heading, e.g. <code>mzp-u-title-sm</code>, but don&#39;t abuse them. Use the equivalent mixins in Sass/SCSS.</li>
+</ul>
+
+    </section>
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="paragraphs" class="protosite-pattern-title">
+    <a href="#paragraphs" class="protosite-pattern-anchor">      Paragraphs
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>You know what a parapgraph is. Here&#39;s an example of paragraphs with a heading.</p>
+
+    </div>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-paragraphs-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-paragraphs-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-paragraphs-preview" dir="ltr">
+          
+<h3>We’re building a better Internet</h3>
+
+<p>Our mission is to ensure the Internet is a global public resource, open and accessible to all. An Internet that truly puts people first, where individuals can shape their own experience and are empowered, safe and independent.</p>
+
+<p>At Mozilla, we’re a global community of technologists, thinkers and builders working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;h3&gt;We’re building a better Internet&lt;/h3&gt;
+
+&lt;p&gt;Our mission is to ensure the Internet is a global public
+  resource, open and accessible to all. An Internet that
+  truly puts people first, where individuals can shape their
+  own experience and are empowered, safe and independent.
+&lt;/p&gt;
+
+&lt;p&gt;At Mozilla, we’re a global community of technologists,
+  thinkers and builders working together to keep the
+  Internet alive and accessible, so people worldwide can be
+  informed contributors and creators of the Web. We believe
+  this act of human collaboration across an open platform is
+  essential to individual growth and our collective future.
+&lt;/p&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="data-tables" class="protosite-pattern-title">
+    <a href="#data-tables" class="protosite-pattern-anchor">      Data tables
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Tables have no base styling (apart from the browser defaults). Use the <code>.mzp-u-data-table</code> class to display tabular data with a bit more polish.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/docs/Learn/HTML/Tables">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-data-tables-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-data-tables-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-data-tables-preview" dir="ltr">
+          
+<table class="mzp-u-data-table">
+  <caption>Table caption</caption>
+  <thead>
+    <tr>
+      <td></td>
+      <th scope="col">Column</th>
+      <th scope="col">Column</th>
+      <th scope="col">Column</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Row</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <th scope="row">Row</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;table class&#x3D;&quot;mzp-u-data-table&quot;&gt;
+  &lt;caption&gt;Table caption&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;th scope&#x3D;&quot;col&quot;&gt;Column&lt;/th&gt;
+      &lt;th scope&#x3D;&quot;col&quot;&gt;Column&lt;/th&gt;
+      &lt;th scope&#x3D;&quot;col&quot;&gt;Column&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope&#x3D;&quot;row&quot;&gt;Row&lt;/th&gt;
+      &lt;td&gt;Cell&lt;/td&gt;
+      &lt;td&gt;Cell&lt;/td&gt;
+      &lt;td&gt;Cell&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope&#x3D;&quot;row&quot;&gt;Row&lt;/th&gt;
+      &lt;td&gt;Cell&lt;/td&gt;
+      &lt;td&gt;Cell&lt;/td&gt;
+      &lt;td&gt;Cell&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="quote-elements" class="protosite-pattern-title">
+    <a href="#quote-elements" class="protosite-pattern-anchor">      Quote Elements
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>A pull quote is an excerpt that has been pulled from a body of text used to highlight a key topic. A blockquote is a quotation that is set off from the main text typically used for long quotations.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/docs/Web/HTML/Element/blockquote">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;blockquote&gt;
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-quote-elements-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-quote-elements-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-quote-elements-preview" dir="ltr">
+          
+<blockquote>
+  <p>
+    "A peep at some distant orb has power to raise and purify our thoughts like a strain of sacred music, or a noble picture, or a passage from the grander poets."
+  </p>
+  <cite>A. Nonymous</cite>
+</blockquote>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;blockquote&gt;
+  &lt;p&gt;
+    &quot;A peep at some distant orb has power to raise and
+    purify our thoughts like a strain of sacred music, or a
+    noble picture, or a passage from the grander poets.&quot;
+  &lt;/p&gt;
+  &lt;cite&gt;A. Nonymous&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre>
+      </div>
+
+
+
+</article>
+
+    </main>
+
+        <script src="../../assets/docs/js/docs.js"></script>
+
+    </div>
+  </body>
+</html>

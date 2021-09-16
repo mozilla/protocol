@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js ">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="../../static/img/favicon.png">
+      <title>Details - Protocol Design System</title>
+      <script src="../../assets/protocol/protocol/js/protocol-base.js"></script>
+      <script src="../../assets/protocol/protocol/js/protocol-utils.js"></script>
+      <script src="../../assets/protocol/protocol/js/protocol-supports.js"></script>
+      <link rel="stylesheet" href="../../assets/docs/css/protocol.css">
+      <link rel="stylesheet" href="../../assets/docs/css/protocol-components.css">
+      <link rel="stylesheet" href="../../assets/docs/css/site.css">
+      <link rel="stylesheet" href="../../assets/docs/css/prism.css">
+  </head>
+  <body class="">
+    <div class="protosite-page">
+    
+    <nav class="protosite-nav-main" id="protosite-nav-main">
+      <header class="protosite-nav-main-head">
+        <a href="https://www.mozilla.org">
+          <img class="protosite-nav-main-mozlogo" src="../../assets/protocol/protocol/img/logos/mozilla/logo-word-hor-white.svg" width="100" alt="Mozilla">
+        </a>
+    
+        <a class="protosite-js-nav-toggle" href="#nav">Menu</a>
+      </header>
+    
+      <div class="protosite-nav-main-menu" id="protosite-nav-main-menu">
+        <ul>
+          <li class="protosite-nav-main-item">
+            <a href="../..">Home</a>
+          </li>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../docs/index.html">
+                  Documentation
+                </a>
+          </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Fundamentals</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/principles.html">
+                  Design Principles
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/themes.html">
+                  Themes
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/typography.html">
+                  Typography
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/tokens.html">
+                  Tokens
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/color.html">
+                  Color
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/icons.html">
+                  
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Atoms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/typographic.html">
+                  Text
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/buttons.html">
+                  Buttons
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/links.html">
+                  Links
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/lists.html">
+                  Lists
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/logo.html">
+                  Logos &amp; Wordmarks
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/section-heading.html">
+                  Section Heading
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/zap.html">
+                  Zap
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Molecules</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/card.html">
+                  Cards
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/details.html">
+                  Details
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/download-button.html">
+                  Download Button
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/emphasis-box.html">
+                  Emphasis Box
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/feature-card.html">
+                  Feature Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/language-switcher.html">
+                  Language Switcher
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/menu-list.html">
+                  Menu List
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/menu.html">
+                  Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/notification-bar.html">
+                  Notification Bar
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/picto-card.html">
+                  Picto Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/picto.html">
+                  Picto
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/sticky-promo.html">
+                  Sticky Promo
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Organisms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/article.html">
+                  Article
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/billboard.html">
+                  Billboard
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/call-out.html">
+                  Call Out
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/footer.html">
+                  Footer
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/hero.html">
+                  Page Hero
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/modal.html">
+                  Modal
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/navigation.html">
+                  Navigation
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/newsletter.html">
+                  Newsletter
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/sidebar-menu.html">
+                  Sidebar Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/split.html">
+                  Split
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Templates</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/card-layout.html">
+                  Card Layout
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/columns.html">
+                  Columns
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/content-container.html">
+                  Content Container
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/main-with-sidebar.html">
+                  Main With Sidebar
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Other Stuff</h4>
+        <ul>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../demos/index.html">
+                  Demos
+                </a>
+          </li>
+          <li class="protosite-nav-main-item">
+            <a href="https://github.com/mozilla/protocol" target="_blank" rel="noopener noreferrer">
+              Repo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="protosite-main">
+      <header class="protosite-page-head">
+        <h1 class="protosite-page-title">
+          Details
+        </h1>
+
+      </header>
+
+          <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="details-summary-elements" class="protosite-pattern-title">
+    <a href="#details-summary-elements" class="protosite-pattern-anchor">      Details / summary elements
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Native details and summary support.</p>
+
+    </div>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-details-summary-elements-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-details-summary-elements-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-details-summary-elements-preview" dir="ltr">
+          
+<section>
+  <details>
+    <summary>
+      <h3>Summary</h3>
+    </summary>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan neque ipsum. Nunc ligula eros, elementum sit amet blandit eu, egestas at justo.</p>
+  </details>
+  <details>
+    <summary>
+      <h3>Heading</h3>
+    </summary>
+    <p>Proin in dapibus nulla. Nam vitae est vitae tellus mollis eleifend in eu erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean feugiat ante porttitor purus elementum, eget vestibulum ex volutpat. Sed gravida convallis rutrum. Quisque pharetra eros eget malesuada vulputate.</p>
+    <h4>Sub Heading</h4>
+    <p>Cras maximus interdum interdum. Maecenas vitae ligula et eros porta feugiat. Nullam facilisis odio non ante varius tempor ut ac turpis.</p>
+  </details>
+</section>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;section&gt;
+  &lt;details&gt;
+    &lt;summary&gt;
+      &lt;h3&gt;Summary&lt;/h3&gt;
+    &lt;/summary&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Morbi accumsan neque ipsum. Nunc ligula eros,
+      elementum sit amet blandit eu, egestas at justo.&lt;/p&gt;
+  &lt;/details&gt;
+  &lt;details&gt;
+    &lt;summary&gt;
+      &lt;h3&gt;Heading&lt;/h3&gt;
+    &lt;/summary&gt;
+    &lt;p&gt;Proin in dapibus nulla. Nam vitae est vitae tellus
+      mollis eleifend in eu erat. Vestibulum ante ipsum
+      primis in faucibus orci luctus et ultrices posuere
+      cubilia Curae; Aenean feugiat ante porttitor purus
+      elementum, eget vestibulum ex volutpat. Sed gravida
+      convallis rutrum. Quisque pharetra eros eget malesuada
+      vulputate.&lt;/p&gt;
+    &lt;h4&gt;Sub Heading&lt;/h4&gt;
+    &lt;p&gt;Cras maximus interdum interdum. Maecenas vitae ligula
+      et eros porta feugiat. Nullam facilisis odio non ante
+      varius tempor ut ac turpis.&lt;/p&gt;
+  &lt;/details&gt;
+&lt;/section&gt;</code></pre>
+      </div>
+
+      <div class="protosite-pattern-extra protosite-pattern-extra-notes">
+        <h3>Notes</h3>
+        <ul>
+<li>Includes polyfill for older browsers</li>
+<li>Use with headings to convey hierarchy if appropriate.</li>
+</ul>
+
+      </div>
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="component" class="protosite-pattern-title">
+    <a href="#component" class="protosite-pattern-anchor">      Component
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Add <code>.mzp-c-details</code> to a section to collapse contents in to their headings.</p>
+
+    </div>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-component-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-component-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-component-preview" dir="ltr">
+          
+
+<section class="mzp-c-details">
+  <h3>Summary</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan neque ipsum. Nunc ligula eros, elementum sit amet blandit eu, egestas at justo.</p>
+  <h3>Heading</h3>
+  <p>Proin in dapibus nulla. Nam vitae est vitae tellus mollis eleifend in eu erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean feugiat ante porttitor purus elementum, eget vestibulum ex volutpat. Sed gravida convallis rutrum. Quisque pharetra eros eget malesuada vulputate.</p>
+  <h4>Sub Heading</h4>
+  <p>Cras maximus interdum interdum. Maecenas vitae ligula et eros porta feugiat. Nullam facilisis odio non ante varius tempor ut ac turpis.</p>
+</section>
+
+<script src="../../../assets/protocol/protocol/js/protocol-details.js"></script>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;section class&#x3D;&quot;mzp-c-details&quot;&gt;
+  &lt;h3&gt;Summary&lt;/h3&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit. Morbi accumsan neque ipsum. Nunc ligula eros,
+    elementum sit amet blandit eu, egestas at justo.&lt;/p&gt;
+  &lt;h3&gt;Heading&lt;/h3&gt;
+  &lt;p&gt;Proin in dapibus nulla. Nam vitae est vitae tellus
+    mollis eleifend in eu erat. Vestibulum ante ipsum primis
+    in faucibus orci luctus et ultrices posuere cubilia
+    Curae; Aenean feugiat ante porttitor purus elementum,
+    eget vestibulum ex volutpat. Sed gravida convallis
+    rutrum. Quisque pharetra eros eget malesuada vulputate.
+  &lt;/p&gt;
+  &lt;h4&gt;Sub Heading&lt;/h4&gt;
+  &lt;p&gt;Cras maximus interdum interdum. Maecenas vitae ligula
+    et eros porta feugiat. Nullam facilisis odio non ante
+    varius tempor ut ac turpis.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;script
+ src&#x3D;&quot;../../../assets/protocol/protocol/js/protocol-details.js&quot;&gt;
+&lt;/script&gt;</code></pre>
+      </div>
+
+      <div class="protosite-pattern-extra protosite-pattern-extra-notes">
+        <h3>Notes</h3>
+        <ul>
+<li>Assumes all content following a heading is intended to be hidden.</li>
+<li>Only collapses headings highest in the hierarchy.</li>
+</ul>
+
+      </div>
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="custom-expand-and-collapse" class="protosite-pattern-title">
+    <a href="#custom-expand-and-collapse" class="protosite-pattern-anchor">      Custom expand and collapse
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>The functions driving the details and summary component can be called independently.</p>
+
+    </div>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-custom-expand-and-collapse-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-custom-expand-and-collapse-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-custom-expand-and-collapse-preview" dir="ltr">
+          
+<style>
+  /* Styling must be provided separately. Don't use these ones; they're intentionally bad. */
+  .demo-section:before {
+    color: #00A;
+    content: 'Enlarge window to see Mzp.Details.destroy';
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 767px) {
+    .demo-section:before {
+      content: 'Shrink window to see Mzp.Details.init';
+    }
+  }
+
+  .demo-section button {
+    border: none;
+    background: #00A;
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .demo-section button[aria-expanded=false]:after {
+    content: " 👈";
+  }
+
+  .demo-section button[aria-expanded=true]:after {
+    content: " 👇";
+  }
+
+  .demo-section .is-closed[aria-hidden=true] {
+    display: none;
+  }
+</style>
+
+<section class="demo-section">
+  <h5 class="demo-heading">Heading</h5>
+  <p>Proin in dapibus nulla. Nam vitae est vitae tellus mollis eleifend in eu erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean feugiat ante porttitor purus elementum, eget vestibulum ex volutpat. Sed gravida convallis rutrum. Quisque pharetra eros eget malesuada vulputate.</p>
+  <p>Cras maximus interdum interdum. Maecenas vitae ligula et eros porta feugiat. Nullam facilisis odio non ante varius tempor ut ac turpis.</p>
+  <h5 class="demo-heading">Heading</h5>
+  <p>Proin in dapibus nulla. Nam vitae est vitae tellus mollis eleifend in eu erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean feugiat ante porttitor purus elementum, eget vestibulum ex volutpat. Sed gravida convallis rutrum. Quisque pharetra eros eget malesuada vulputate.</p>
+  <p>Cras maximus interdum interdum. Maecenas vitae ligula et eros porta feugiat. Nullam facilisis odio non ante varius tempor ut ac turpis.</p>
+</section>
+
+<script src="../../../assets/protocol/protocol/js/protocol-details.js"></script>
+<script>
+(function() {
+  'use strict';
+  var _mqWide = matchMedia('(max-width: 767px)');
+
+  if (_mqWide.matches) {
+    window.Mzp.Details.init('.demo-heading');
+  }
+
+  _mqWide.addListener(function(mq) {
+      if (mq.matches) {
+          window.Mzp.Details.init('.demo-heading');
+      } else {
+          window.Mzp.Details.destroy('.demo-heading');
+      }
+  });
+})();
+</script>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;style&gt;
+  /* Styling must be provided separately. Don&#x27;t use these ones; they&#x27;re intentionally bad. */
+  .demo-section:before {
+    color: #00A;
+    content: &#x27;Enlarge window to see Mzp.Details.destroy&#x27;;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 767px) {
+    .demo-section:before {
+      content: &#x27;Shrink window to see Mzp.Details.init&#x27;;
+    }
+  }
+
+  .demo-section button {
+    border: none;
+    background: #00A;
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .demo-section button[aria-expanded&#x3D;false]:after {
+    content: &quot; 👈&quot;;
+  }
+
+  .demo-section button[aria-expanded&#x3D;true]:after {
+    content: &quot; 👇&quot;;
+  }
+
+  .demo-section .is-closed[aria-hidden&#x3D;true] {
+    display: none;
+  }
+&lt;/style&gt;
+
+&lt;section class&#x3D;&quot;demo-section&quot;&gt;
+  &lt;h5 class&#x3D;&quot;demo-heading&quot;&gt;Heading&lt;/h5&gt;
+  &lt;p&gt;Proin in dapibus nulla. Nam vitae est vitae tellus
+    mollis eleifend in eu erat. Vestibulum ante ipsum primis
+    in faucibus orci luctus et ultrices posuere cubilia
+    Curae; Aenean feugiat ante porttitor purus elementum,
+    eget vestibulum ex volutpat. Sed gravida convallis
+    rutrum. Quisque pharetra eros eget malesuada vulputate.
+  &lt;/p&gt;
+  &lt;p&gt;Cras maximus interdum interdum. Maecenas vitae ligula
+    et eros porta feugiat. Nullam facilisis odio non ante
+    varius tempor ut ac turpis.&lt;/p&gt;
+  &lt;h5 class&#x3D;&quot;demo-heading&quot;&gt;Heading&lt;/h5&gt;
+  &lt;p&gt;Proin in dapibus nulla. Nam vitae est vitae tellus
+    mollis eleifend in eu erat. Vestibulum ante ipsum primis
+    in faucibus orci luctus et ultrices posuere cubilia
+    Curae; Aenean feugiat ante porttitor purus elementum,
+    eget vestibulum ex volutpat. Sed gravida convallis
+    rutrum. Quisque pharetra eros eget malesuada vulputate.
+  &lt;/p&gt;
+  &lt;p&gt;Cras maximus interdum interdum. Maecenas vitae ligula
+    et eros porta feugiat. Nullam facilisis odio non ante
+    varius tempor ut ac turpis.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;script
+ src&#x3D;&quot;../../../assets/protocol/protocol/js/protocol-details.js&quot;&gt;
+&lt;/script&gt;
+&lt;script&gt;
+  (function() {
+    &#x27;use strict&#x27;;
+    var _mqWide &#x3D; matchMedia(&#x27;(max-width: 767px)&#x27;);
+    if (_mqWide.matches) {
+      window.Mzp.Details.init(&#x27;.demo-heading&#x27;);
+    }
+    _mqWide.addListener(function(mq) {
+      if (mq.matches) {
+        window.Mzp.Details.init(&#x27;.demo-heading&#x27;);
+      } else {
+        window.Mzp.Details.destroy(&#x27;.demo-heading&#x27;);
+      }
+    });
+  })();
+&lt;/script&gt;</code></pre>
+      </div>
+
+      <div class="protosite-pattern-extra protosite-pattern-extra-notes">
+        <h3>Notes</h3>
+        <ul>
+<li>Styling must be provided separately.</li>
+<li>Details can be initialized using <code>Mzp.Details.init(selector, options)</code>, where <code>options</code> is an Object with the following properties:<ul>
+<li><code>onDetailsOpen</code> [Function] callback when a details is opened (optional).</li>
+<li><code>onDetailsClosed</code> [Function] callback when a details is closed (optional).</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+
+
+</article>
+
+    </main>
+
+        <script src="../../assets/docs/js/docs.js"></script>
+
+    </div>
+  </body>
+</html>

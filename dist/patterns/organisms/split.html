@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js ">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="../../static/img/favicon.png">
+      <title>Split - Protocol Design System</title>
+      <script src="../../assets/protocol/protocol/js/protocol-base.js"></script>
+      <script src="../../assets/protocol/protocol/js/protocol-utils.js"></script>
+      <script src="../../assets/protocol/protocol/js/protocol-supports.js"></script>
+      <link rel="stylesheet" href="../../assets/docs/css/protocol.css">
+      <link rel="stylesheet" href="../../assets/docs/css/protocol-components.css">
+      <link rel="stylesheet" href="../../assets/docs/css/site.css">
+      <link rel="stylesheet" href="../../assets/docs/css/prism.css">
+  </head>
+  <body class="">
+    <div class="protosite-page">
+    
+    <nav class="protosite-nav-main" id="protosite-nav-main">
+      <header class="protosite-nav-main-head">
+        <a href="https://www.mozilla.org">
+          <img class="protosite-nav-main-mozlogo" src="../../assets/protocol/protocol/img/logos/mozilla/logo-word-hor-white.svg" width="100" alt="Mozilla">
+        </a>
+    
+        <a class="protosite-js-nav-toggle" href="#nav">Menu</a>
+      </header>
+    
+      <div class="protosite-nav-main-menu" id="protosite-nav-main-menu">
+        <ul>
+          <li class="protosite-nav-main-item">
+            <a href="../..">Home</a>
+          </li>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../docs/index.html">
+                  Documentation
+                </a>
+          </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Fundamentals</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/principles.html">
+                  Design Principles
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/themes.html">
+                  Themes
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/typography.html">
+                  Typography
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/tokens.html">
+                  Tokens
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/color.html">
+                  Color
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/icons.html">
+                  
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Atoms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/typographic.html">
+                  Text
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/buttons.html">
+                  Buttons
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/links.html">
+                  Links
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/lists.html">
+                  Lists
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/logo.html">
+                  Logos &amp; Wordmarks
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/section-heading.html">
+                  Section Heading
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/zap.html">
+                  Zap
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Molecules</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/card.html">
+                  Cards
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/details.html">
+                  Details
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/download-button.html">
+                  Download Button
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/emphasis-box.html">
+                  Emphasis Box
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/feature-card.html">
+                  Feature Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/language-switcher.html">
+                  Language Switcher
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/menu-list.html">
+                  Menu List
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/menu.html">
+                  Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/notification-bar.html">
+                  Notification Bar
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/picto-card.html">
+                  Picto Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/picto.html">
+                  Picto
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/sticky-promo.html">
+                  Sticky Promo
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Organisms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/article.html">
+                  Article
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/billboard.html">
+                  Billboard
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/call-out.html">
+                  Call Out
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/footer.html">
+                  Footer
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/hero.html">
+                  Page Hero
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/modal.html">
+                  Modal
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/navigation.html">
+                  Navigation
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/newsletter.html">
+                  Newsletter
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/sidebar-menu.html">
+                  Sidebar Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/split.html">
+                  Split
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Templates</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/card-layout.html">
+                  Card Layout
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/columns.html">
+                  Columns
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/content-container.html">
+                  Content Container
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/main-with-sidebar.html">
+                  Main With Sidebar
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Other Stuff</h4>
+        <ul>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../demos/index.html">
+                  Demos
+                </a>
+          </li>
+          <li class="protosite-nav-main-item">
+            <a href="https://github.com/mozilla/protocol" target="_blank" rel="noopener noreferrer">
+              Repo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="protosite-main">
+      <header class="protosite-page-head">
+        <h1 class="protosite-page-title">
+          Split
+        </h1>
+
+      </header>
+
+          <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="split" class="protosite-pattern-title">
+    <a href="#split" class="protosite-pattern-anchor">      Split
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>A full-width page section with text on one side and a single piece of media (an image or video) on the other, hence &quot;split&quot; into two columns. It&#39;s highly customizable with a lot of optional classes to support different layout variations.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="/demos/split.html">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            Demo
+          </a>
+        </li>
+        <li>
+          <a class="protosite-pattern-links-link" href="/demos/split-visual.html">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            Layout visualization
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-split-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-split-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-split-preview" dir="ltr">
+          
+<section class="mzp-c-split ">
+  
+  <div class="mzp-c-split-container">
+    <div class="mzp-c-split-body ">
+        <h1 class="mzp-u-title-md">A Headline With 30 Characters</h1>
+        <p>A description with a maximum of 140 characters and <a href="#">a link</a>. That means we usually only have room for one or two sentences. Like this.</p>
+        <p>
+          <a class="mzp-c-button" href="#">Call to action</a>
+        </p>
+    </div>
+    <div class="mzp-c-split-media ">
+        <img class="mzp-c-split-media-asset" src="../../../static/img/split/devices.png" alt="" srcset="../../../static/img/split/devices-high-res.png 2x">
+    </div>
+  </div>
+  
+</section>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;section class&#x3D;&quot;mzp-c-split &quot;&gt;
+
+  &lt;div class&#x3D;&quot;mzp-c-split-container&quot;&gt;
+    &lt;div class&#x3D;&quot;mzp-c-split-body &quot;&gt;
+      &lt;h1 class&#x3D;&quot;mzp-u-title-md&quot;&gt;A Headline With 30 Characters&lt;/h1&gt;
+      &lt;p&gt;A description with a maximum of 140 characters and
+        &lt;a href&#x3D;&quot;#&quot;&gt;a link&lt;/a&gt;. That means we usually only
+        have room for one or two sentences. Like this.&lt;/p&gt;
+      &lt;p&gt;
+        &lt;a class&#x3D;&quot;mzp-c-button&quot; href&#x3D;&quot;#&quot;&gt;Call to action&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;mzp-c-split-media &quot;&gt;
+      &lt;img class&#x3D;&quot;mzp-c-split-media-asset&quot; src&#x3D;&quot;../../../static/img/split/devices.png&quot; alt&#x3D;&quot;&quot; srcset&#x3D;&quot;../../../static/img/split/devices-high-res.png 2x&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/section&gt;</code></pre>
+      </div>
+
+      <div class="protosite-pattern-extra protosite-pattern-extra-notes">
+        <h3>Notes</h3>
+        <ul>
+<li>No default typography styles are applied to the body text; use other components or CSS for text styling.</li>
+<li>The body and media will stack in small viewports, switching to the two-column split layout in larger viewports.</li>
+<li>You can choose your preferred source order, with the media before or after the body, to optimize how you&#39;d like it to stack in small viewports.</li>
+<li>Set the maximum content width by adding a class to the outermost containing block (<code>mzp-c-split</code>):<ul>
+<li><code>mzp-t-content-md</code></li>
+<li><code>mzp-t-content-lg</code></li>
+<li><code>mzp-t-content-xl</code></li>
+<li>Note the lack of a &quot;small&quot; option. Content in two columns in a narrow container is usually a bad idea so we&#39;re not providing it.</li>
+</ul>
+</li>
+<li>The Split is an even 50/50 by default, but you can adjust the body width (the part with the text) to make a 33/66 proportion. Add one of these classes to the body container (<code>mzp-c-split-body</code>):<ul>
+<li><code>mzp-l-split-body-narrow</code> - body is one third, media is two thirds.</li>
+<li><code>mzp-l-split-body-wide</code> - body is two thirds, media is one third.</li>
+<li>Note that the wide and narrow body variants only take effect in larger viewports; it will be 50/50 in medium viewports (mostly to preserve readable line lengths). It stacks in small viewports, as normal.</li>
+</ul>
+</li>
+<li>The orientation of the body and media changes automatically in right-to-left languages. By default, the body is on the left in left-to-right languages on the right in RTL. You can reverse the layout explicitly with a class on the main container (<code>mzp-c-split</code>):<ul>
+<li><code>mzp-l-split-reversed</code></li>
+<li>A reversed layout will <em>also</em> reverse automatically in right-to-left languages.</li>
+</ul>
+</li>
+<li>Align the body, horizontally and vertically (it&#39;s aligned left by default in LTR, and vertically centered). Apply these classes to the body container (<code>mzp-c-split-body</code>):<ul>
+<li><code>mzp-l-split-h-center</code> - horizontally centered.</li>
+<li><code>mzp-l-split-h-end</code> - aligned right in left-to-right languages, left in right-to-left.</li>
+<li><code>mzp-l-split-v-start</code> - vertically aligned to the top.</li>
+<li><code>mzp-l-split-v-end</code> - vertically aligned to the bottom.</li>
+</ul>
+</li>
+<li>Align the media in different positions, horizontally and vertically (it&#39;s aligned left by default on LTR, and vertically centered). Apply these classes to the media container (<code>mzp-c-split-media</code>):<ul>
+<li><code>mzp-l-split-h-center</code> - horizontally centered.</li>
+<li><code>mzp-l-split-h-end</code> - aligned right in left-to-right languages, left in right-to-left.</li>
+<li><code>mzp-l-split-v-start</code> - vertically aligned to the top.</li>
+<li><code>mzp-l-split-v-end</code> - vertically aligned to the bottom.</li>
+<li>Note that the media can only be positioned horizontally if it does <em>not</em> have a sizing class added, such as <code>mzp-l-split-media-overflow</code> or <code>mzp-l-split-media-constrain-height</code></li>
+</ul>
+</li>
+<li>You can control the behavior of the media with a class on the media container (<code>mzp-c-split-media</code>):<ul>
+<li><code>mzp-l-split-media-overflow</code> - the image can be larger than the Split container and will &quot;bleed&quot; past the edges. This means some of the image will be hidden, so choose images wisely.</li>
+<li><code>mzp-l-split-media-constrain-height</code> - the image will scale to fit the height of the container, which depends on the amount of content in the body.</li>
+</ul>
+</li>
+<li>The media can &quot;pop&quot; out of the container, protruding past the top and bottom edges. Apply these classes to the outer container (<code>mzp-c-split</code>):<ul>
+<li><code>mzp-l-split-pop-top</code> - protrude from the top.</li>
+<li><code>mzp-l-split-pop-bottom</code> - protrude from the bottom.</li>
+<li><code>mzp-l-split-pop</code> - both.</li>
+</ul>
+</li>
+<li>Choose how to treat the Split on small screens. Apply these classes to the outer container (<code>mzp-c-split</code>):<ul>
+<li><code>mzp-l-split-center-on-sm-md</code> - content is centered on small to medium screens.</li>
+<li><code>mzp-l-split-hide-media-on-sm-md</code> - media is hidden on small to medium screens.</li>
+</ul>
+</li>
+<li><a href="/demos/split.html">See the demo page</a> for more examples in a full window context.</li>
+</ul>
+
+      </div>
+
+
+    <section class="protosite-pattern-extra protosite-pattern-extra-nonos">
+      <h3>No-nos</h3>
+      <ul>
+<li><strong>Note:</strong> This component is intended to be a full-width section of a page, with an outer container that spans the width of the viewport and generous spacing above and below. Split has an inner container to define its content width, so don&#39;t place Split inside another <code>mzp-l-content</code> container. The nested spacing will get weird.</li>
+</ul>
+
+    </section>
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="themes" class="protosite-pattern-title">
+    <a href="#themes" class="protosite-pattern-anchor">      Themes
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Theme the Split by wrapping an element with the class <code>mzp-c-split-bg</code> around the inner container. This can carry a background color that fills the width of the window, but the split&#39;s inner container still defines the content width.</p>
+
+    </div>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-themes-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-themes-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-themes-preview" dir="ltr">
+          
+
+<section class="mzp-c-split ">
+  <div class="mzp-c-split-bg mzp-t-dark">
+  <div class="mzp-c-split-container">
+    <div class="mzp-c-split-body ">
+    <h1 class="mzp-u-title-md">A Headline With 30 Characters</h1>
+    <p>A description with a maximum of 140 characters and <a href="#">a link</a>. That means we usually only have room for one or two sentences. Like this.</p>
+    <p>
+      <a class="mzp-c-button mzp-t-dark" href="#">Call to action</a>
+    </p>
+    </div>
+    <div class="mzp-c-split-media ">
+        <img class="mzp-c-split-media-asset" src="../../../static/img/split/devices.png" alt="" srcset="../../../static/img/split/devices-high-res.png 2x">
+    </div>
+  </div>
+  </div>
+</section>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;section class&#x3D;&quot;mzp-c-split &quot;&gt;
+  &lt;div class&#x3D;&quot;mzp-c-split-bg mzp-t-dark&quot;&gt;
+    &lt;div class&#x3D;&quot;mzp-c-split-container&quot;&gt;
+      &lt;div class&#x3D;&quot;mzp-c-split-body &quot;&gt;
+        &lt;h1 class&#x3D;&quot;mzp-u-title-md&quot;&gt;A Headline With 30 Characters&lt;/h1&gt;
+        &lt;p&gt;A description with a maximum of 140 characters
+          and &lt;a href&#x3D;&quot;#&quot;&gt;a link&lt;/a&gt;. That means we usually
+          only have room for one or two sentences. Like
+          this.&lt;/p&gt;
+        &lt;p&gt;
+          &lt;a class&#x3D;&quot;mzp-c-button mzp-t-dark&quot; href&#x3D;&quot;#&quot;&gt;Call to action&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mzp-c-split-media &quot;&gt;
+        &lt;img class&#x3D;&quot;mzp-c-split-media-asset&quot; src&#x3D;&quot;../../../static/img/split/devices.png&quot; alt&#x3D;&quot;&quot; srcset&#x3D;&quot;../../../static/img/split/devices-high-res.png 2x&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+      </div>
+
+
+    <section class="protosite-pattern-extra protosite-pattern-extra-tips">
+      <h3>Tips</h3>
+      <ul>
+<li>Use any of the standard background theme classes:<ul>
+<li><code>mzp-t-background-alt</code></li>
+<li><code>mzp-t-dark</code></li>
+<li>both together <code>mzp-t-dark mzp-t-background-alt</code></li>
+<li>or apply a custom background color in your own CSS</li>
+</ul>
+</li>
+<li>To make the background butt against the content above or below the Split, without additional vertical spacing, add the class <code>mzp-t-split-nospace</code> to the outer container (<code>mzp-c-split</code>). This is especially useful when using Split as a hero section at the very top of a page.
+Note that images can&#39;t &quot;pop out&quot; of a Split without that additional space.</li>
+</ul>
+
+    </section>
+
+</article>
+
+    </main>
+
+        <script src="../../assets/docs/js/docs.js"></script>
+
+    </div>
+  </body>
+</html>

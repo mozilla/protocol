@@ -1,0 +1,222 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+@warn "Hero component is now deprecated. Please migrate to use Split: https://protocol.mozilla.org/patterns/organisms/split.html";
+
+// Page hero section - should usually appear at the top of a page
+
+// - The content is centered by default without a hero image.
+// - Add the 'mzp-has-image' class to adjust the layout for a hero image (body left, image right).
+// - Add the 'mzp-l-reverse' class to reverse the layout (image left, body right).
+// - With an image, content is still centered in small viewports, with the image below the body.
+// - Add the 'mzp-t-dark' class to invert text colors for dark backgrounds.
+
+.mzp-c-hero {
+    position: relative;
+    text-align: center;
+
+    // Product logos
+    &[class*='mzp-t-product-'] {
+        .mzp-c-hero-title {
+            @include background-size(80px 80px);
+            background-position: top center;
+            background-repeat: no-repeat;
+            padding: (80px + $spacing-lg) 0 0 0;
+        }
+    }
+
+    // Dark theme
+    &.mzp-t-dark,
+    .mzp-t-dark & {
+        background-color: get-theme('background-color-inverse');
+        color: get-theme('body-text-color-inverse');
+
+        .mzp-c-hero-desc {
+            color: get-theme('body-text-color-alt-inverse');
+        }
+    }
+}
+
+.mzp-c-hero-body {
+    margin: 0 auto;
+    max-width: $content-sm;
+}
+
+.mzp-c-hero-title {
+    @include text-title-lg;
+    margin-bottom: $spacing-md;
+
+    // Product logos
+    .mzp-t-product-firefox & {
+        @include at2x('#{$image-path}/logos/firefox/browser/logo-lg.png', 80px, 80px);
+    }
+
+    .mzp-t-product-beta & {
+        @include at2x('#{$image-path}/logos/firefox/browser/beta/logo-lg.png', 80px, 80px);
+    }
+
+    .mzp-t-product-developer & {
+        @include at2x('#{$image-path}/logos/firefox/browser/developer/logo-lg.png', 80px, 80px);
+    }
+
+    .mzp-t-product-nightly & {
+        @include at2x('#{$image-path}/logos/firefox/browser/nightly/logo-lg.png', 80px, 80px);
+    }
+
+    .mzp-t-product-focus & {
+        @include at2x('#{$image-path}/logos/firefox/browser/focus/logo-lg.png', 80px, 80px);
+    }
+
+    .mzp-t-product-mozilla & {
+        @include at2x('#{$image-path}/logos/mozilla/logo-lg.png', 80px, 80px);
+    }
+
+    .mzp-t-product-vpn & {
+        @include at2x('#{$image-path}/logos/mozilla/vpn/logo-lg.png', 80px, 80px);
+    }
+
+    .mzp-t-product-vpn.mzp-t-dark & {
+        background-image: url('#{$image-path}/logos/mozilla/vpn/logo-flat-white.svg');
+    }
+
+    .mzp-t-product-pocket & {
+        @include at2x('#{$image-path}/logos/pocket/logo-lg.png', 80px, 80px);
+    }
+}
+
+.mzp-c-hero-desc {
+    @include text-body-lg;
+    margin-bottom: $spacing-md;
+}
+
+.mzp-c-hero-tagline {
+    @include text-title-sm;
+}
+
+.mzp-c-hero-image {
+    padding: 0 $spacing-lg;
+    position: relative;
+    z-index: 2;
+}
+
+@media #{$mq-md} {
+    .mzp-c-hero {
+        // Change the layout when the hero section features an image
+        // Body on the left, image on the right
+        &.mzp-has-image {
+            @include bidi(((text-align, left, right),));
+            min-height: 300px;
+
+            .mzp-c-hero-body {
+                @include bidi((
+                    (margin-right, calc(50% + #{$spacing-xl}), 0),
+                    (margin-left, 0, calc(50% + #{$spacing-xl}))
+                ));
+                width: calc(50% - #{$spacing-xl});
+            }
+
+            .mzp-c-hero-cta {
+                @include bidi(((float, left, right),));
+                clear: both;
+            }
+
+            &[class*='mzp-t-product-'] {
+                .mzp-c-hero-title {
+                    @include bidi(((background-position, left top, right top),));
+                    padding-top: (80px + $spacing-2xl);
+                }
+            }
+
+            // Reverse layout (copy right, image left)
+            &.mzp-l-reverse {
+                .mzp-c-hero-body {
+                    @include bidi((
+                        (margin-right, 0, calc(50% + #{$spacing-xl})),
+                        (margin-left, calc(50% + #{$spacing-xl}), 0)
+                    ));
+                }
+
+                .mzp-c-hero-image {
+                    @include bidi((
+                        (right, 50%, auto),
+                        (left, auto, 50%)
+                    ));
+
+                    img {
+                        @include bidi((
+                            (left, auto, 0),
+                            (right, 0, auto)
+                        ));
+                    }
+                }
+            }
+        }
+    }
+
+    .mzp-c-hero-image {
+        @include bidi((
+            (left, 50%, auto),
+            (right, auto, 50%)
+        ));
+        height: calc(100% - #{$layout-lg});
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        top: $spacing-xl;
+        width: 50%;
+        z-index: 2;
+
+        img {
+            @include bidi((
+                (left, 0, auto),
+                (right, auto, 0)
+            ));
+            bottom: 0;
+            max-height: 100%;
+            max-width: none;
+            position: absolute;
+            width: auto;
+        }
+    }
+}
+
+@media #{$mq-lg} {
+    .mzp-c-hero.mzp-has-image {
+        .mzp-c-hero-body {
+            @include bidi((
+                (margin-right, calc(50% + #{$spacing-2xl}), 0),
+                (margin-left, 0, calc(50% + #{$spacing-2xl}))
+            ));
+            width: calc(50% - #{$spacing-2xl});
+        }
+
+        &.mzp-l-reverse {
+            .mzp-c-hero-body {
+                @include bidi((
+                    (margin-right, 0, calc(50% + #{$spacing-2xl})),
+                    (margin-left, calc(50% + #{$spacing-2xl}), 0)
+                ));
+            }
+        }
+    }
+
+    .mzp-c-hero-body {
+        max-width: 580px;
+    }
+
+    .mzp-c-hero-title {
+        margin-bottom: $spacing-xl;
+    }
+
+    .mzp-c-hero-desc {
+        margin-bottom: $spacing-2xl;
+    }
+
+    .mzp-c-hero-image {
+        height: calc(100% - #{$layout-xl});
+        top: $spacing-2xl;
+    }
+}

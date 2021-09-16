@@ -1,0 +1,217 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+//* -------------------------------------------------------------------------- */
+// Base card class
+
+.mzp-c-card {
+    @include border-box;
+    background: $color-white;
+    margin-bottom: $spacing-lg;
+
+    // Preserve aspect ratio of images and avoid content jump when loading.
+    &.mzp-has-aspect-1-1 .mzp-c-card-media-wrapper {
+         @include aspect-ratio(1, 1);
+    }
+
+    &.mzp-has-aspect-16-9 .mzp-c-card-media-wrapper {
+        @include aspect-ratio(16, 9);
+    }
+
+    &.mzp-has-aspect-3-2 .mzp-c-card-media-wrapper {
+        @include aspect-ratio(3, 2);
+    }
+
+    .mzp-c-card-media-wrapper {
+        background-color: $color-marketing-gray-20;
+        border-radius: $border-radius-xs;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .mzp-c-card-image,
+    .mzp-c-card-video {
+        display: block;
+        max-width: none;
+        width: 100%;
+    }
+
+    .mzp-c-card-content {
+        @include border-box;
+        padding: $spacing-sm;
+    }
+
+    .mzp-c-card-tag {
+        @include font-base;
+        @include text-body-sm;
+        color: $color-marketing-gray-80;
+        font-weight: normal;
+        margin-bottom: $spacing-xs;
+    }
+
+    &.mzp-has-video .mzp-c-card-tag,
+    &.mzp-has-audio .mzp-c-card-tag {
+        @include bidi((
+            (background-position, center left, center right),
+            (padding-left, $spacing-xl, padding-right, 0),
+        ));
+        background-repeat: no-repeat;
+        line-height: 1.8;
+        min-height: 25px;
+    }
+
+    &.mzp-has-video .mzp-c-card-tag {
+        background-image: url('#{$image-path}/icons/video-card.svg');
+    }
+
+    &.mzp-has-audio .mzp-c-card-tag {
+        background-image: url('#{$image-path}/icons/audio-card.svg');
+    }
+
+    .mzp-c-card-title {
+        @include text-title-xs;
+        display: inline;
+    }
+
+    .mzp-c-card-title,
+    .mzp-c-card-cta-text {
+        border-bottom: 2px solid transparent;
+    }
+
+    .mzp-c-card-desc {
+        margin: $spacing-xs 0 0;
+    }
+
+    .mzp-c-card-cta {
+        font-weight: bold;
+        margin: $spacing-xs 0 0;
+    }
+
+    .mzp-c-card-block-link {
+        border-radius: $border-radius-xs;
+        display: block;
+
+        &:link,
+        &:visited {
+            color: $color-black;
+            text-decoration: none;
+
+            .mzp-c-card-cta-text {
+                color: $color-link;
+            }
+        }
+
+
+        &:hover,
+        &:active,
+        &:focus {
+            @include transition(box-shadow .1s ease-in-out);
+            box-shadow: 0 0 0 4px $color-marketing-gray-20;
+
+            .mzp-c-card-title,
+            .mzp-c-card-cta-text  {
+                @include transition(border-bottom-color 100ms ease-in-out);
+                border-bottom: 2px solid;
+            }
+        }
+    }
+
+    .mzp-c-card-meta {
+        @include text-body-xs;
+        color: $color-marketing-gray-80;
+        margin: $spacing-lg 0 0;
+    }
+
+    @media #{$mq-sm} {
+        max-width: $content-sm;
+    }
+
+    @media #{$mq-md} {
+        margin-bottom: $spacing-xl;
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Dark mode styling
+
+.mzp-c-card.mzp-t-dark,
+.mzp-t-dark .mzp-c-card {
+    background-color: get-theme('background-color-inverse');
+    color: get-theme('body-text-color-inverse');
+
+    .mzp-c-card-tag, .mzp-c-card-meta {
+        color: get-theme('body-text-color-inverse');
+    }
+
+    .mzp-c-card-block-link {
+        &:hover, &:active, &:focus {
+            box-shadow: 0 0 0 4px $color-marketing-gray-80;
+        }
+
+        &:link, &:visited {
+        color: get-theme('body-text-color-inverse');
+
+            .mzp-c-card-cta-text {
+                color: get-theme('body-text-color-inverse');
+            }
+        }
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Medium sized card
+
+.mzp-c-card.mzp-c-card-medium {
+    @media #{$mq-sm} {
+        max-width: $content-md;
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Card with larger title
+
+.mzp-c-card.mzp-c-card-large {
+
+    .mzp-c-card-title {
+        @include text-title-md;
+    }
+
+    .mzp-c-card-desc {
+        @include text-body-lg;
+    }
+
+    @media #{$mq-sm} {
+        max-width: $content-lg;
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Card with extra small title and text
+
+.mzp-c-card.mzp-c-card-extra-small {
+
+    .mzp-c-card-tag,
+    .mzp-c-card-cta {
+        @include text-body-xs;
+    }
+
+    .mzp-c-card-title {
+        @include text-title-2xs;
+    }
+
+    .mzp-c-card-desc {
+        @include text-body-sm;
+    }
+
+    .mzp-c-card-block-link {
+        border-radius: $border-radius-xs;
+        height: 100%;
+    }
+
+    @media #{$mq-lg} {
+        max-width: $content-xs;
+    }
+}

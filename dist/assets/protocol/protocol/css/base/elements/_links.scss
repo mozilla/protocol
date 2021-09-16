@@ -1,0 +1,41 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+
+:link {
+    color: get-theme('link-color');
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: get-theme('link-color-hover');
+        text-decoration: none;
+    }
+
+    &:active {
+        background-color: rgba(0, 0, 0, .05);
+    }
+}
+
+:visited {
+    color: get-theme('link-color-visited');
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: get-theme('link-color-visited-hover');
+    }
+}
+
+.mzp-t-dark {
+    @include light-links;
+}
+
+.mzp-c-cta-link {
+    font-family: get-theme('button-font-family');
+    font-weight: bold;
+}

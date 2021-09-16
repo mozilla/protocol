@@ -1,0 +1,87 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+/* -------------------------------------------------------------------------- */
+// Split demo
+
+@import '../protocol/includes/lib';
+@import '../docs/protocol';
+@import '../docs/protocol-components';
+
+#config {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: $layout-md;
+
+    fieldset fieldset {
+        margin-bottom: $layout-sm;
+    }
+
+    legend {
+        @include font-size(16px);
+    }
+}
+
+#config-preset {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.demo {
+    .mzp-c-split,
+    .mzp-c-split-bg,
+    .mzp-c-split-container,
+    .mzp-c-split-media,
+    .mzp-c-split-body {
+        position: relative;
+
+        &:before {
+            content: attr(class);
+            background-color: #fff;
+            color: #000;
+            display: block;
+            font-family: monospace;
+            font-size: 12px;
+            left: 0;
+            padding: 0 2px;
+            position: absolute;
+            bottom: 100%;
+            z-index: 1;
+        }
+    }
+
+    .mzp-c-split:before {
+        top: 0;
+        bottom: auto;
+    }
+    .mzp-c-split {
+        outline: 1px solid red;
+    }
+
+    .mzp-c-split-container {
+        background-color: rgba(0, 0, 255, 0.1);
+    }
+
+    .mzp-c-split-media {
+        background-color: rgba(0, 255, 0, 0.1);
+    }
+
+    .mzp-c-split-body {
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+}
+
+.spacer {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    margin: 20px;
+}
+
+.mzp-l-split-h-center select {
+    margin: 0 auto;
+}

@@ -1,0 +1,111 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+// Import all the things!
+@import '../lib';
+
+// forms
+// use padding as much as possible, margins don't collapse on form elements
+
+// -------------------------------------------------------------------------- */
+// variables
+
+// colors
+$form-red: #D70022;
+$form-text: get-theme('body-text-color-alt');
+
+// fields
+$field-border-color: $color-marketing-gray-50;
+$field-border-color-hover: $color-link-hover;
+$field-border-color-error: $form-red;
+$field-border-color-error-hover: $color-red-80;
+$field-border-color-disabled: $color-marketing-gray-30;
+$field-border: 2px solid $field-border-color;
+$field-min-width: $content-xs - ($layout-xs * 2);
+$field-border-radius: $border-radius-sm;
+$field-padding: $spacing-sm;
+$field-h-spacing: $spacing-md;
+$field-v-spacing: $spacing-lg;
+$field-focus-ring: 0 0 0 2px rgba($color-blue-40, .5);
+$field-focus-ring-dark: 0 0 0 2px mix($color-blue-40, $color-white);
+$field-focus-ring-error: 0 0 0 2px rgba($color-red-50, .5);
+
+// buttons
+$button-border-color-focus: #008aea;
+
+// label
+$label-v-spacing: $spacing-sm;
+
+// info
+$info-v-spacing: $spacing-md;
+$symbol-spacing: calc(1.5em + #{$spacing-sm * 2});
+
+//select
+$select-bg: linear-gradient(to bottom, $color-white 0%, $color-white 100%); // must keep gradient to avoid bugs
+$select-bg-disabled: linear-gradient(to bottom, $color-marketing-gray-10 0%, $color-marketing-gray-10 100%);
+
+// choices
+$choice-height: remify(22px);
+$choice-spacing: remify(22px + $spacing-sm);
+$choice-fill: $color-link;
+$choice-fill-error: $form-red;
+$line-height-shim: 0.15em; // two elements with text appear to have more space between them than two block elements with solid edges, this shim is about equal to the distance between the top of the text and the edge of it's containing block
+
+
+//* -------------------------------------------------------------------------- */
+// mixins
+// use padding as much as possible, margins don't collapse on form elements
+
+@mixin field-label() {
+    @include text-body-sm;
+    display: block;
+    font-weight: bold;
+    line-height: $text-body-line-height;
+    margin: 0;
+    padding-bottom: $label-v-spacing;
+}
+
+@mixin form-info() {
+    @include text-body-sm;
+    display: block;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+@mixin form-input() {
+    @include border-box;
+    @include text-body-md;
+    background-color: $color-white;
+    border-radius: $field-border-radius;
+    border: $field-border;
+    line-height: 1.25;
+    margin: 0 0 $field-v-spacing;
+    padding: $field-padding;
+}
+
+@mixin form-msg() {
+    @include text-body-xs;
+    @include border-box;
+    background-color: $field-border-color-error-hover;
+    border-radius: $border-radius-sm;
+    box-shadow: $box-shadow-sm;
+    color: $color-white;
+    display: table; // make it behave like inline-block but still get a new line
+    margin: 2px 0 0;
+    max-width: 100%;
+    padding: $spacing-xs #{$spacing-sm + 2px};
+    position: relative;
+}
+
+@mixin form-msg-pointer() {
+    @include bidi(((left, 6px, right, auto),));
+    border: 7px solid transparent;
+    border-bottom: 8px solid $field-border-color-error-hover;
+    bottom: 100%;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0;
+    z-index: 1;
+}

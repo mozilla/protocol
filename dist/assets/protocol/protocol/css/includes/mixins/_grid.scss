@@ -1,0 +1,44 @@
+// Grid columns
+$column-width:  8.333%; // 100% / 12 columns
+$gutter-width:  $layout-sm;
+
+
+// Column spans for standard column widths
+// Usage:
+//  .foo { @include colspan(4); }
+@mixin colspan($columns) {
+    @include border-box;
+    width: $column-width * $columns;
+    padding-left: $gutter-width / 2;
+    padding-right: $gutter-width / 2;
+}
+
+@mixin span-all {
+    float: none;
+    width: auto;
+}
+
+@mixin grid-quarter {
+    @include border-box;
+    width: 25%;
+}
+
+@mixin grid-third {
+    @include border-box;
+    width: 33.333%;
+}
+
+@mixin grid-half {
+    @include border-box;
+    width: 50%;
+}
+
+@mixin grid-two-thirds {
+    @include border-box;
+    width: 66.666%;
+}
+
+@mixin grid-three-quarters {
+    @include border-box;
+    width: 75%;
+}

@@ -1,0 +1,36 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+@import '../../includes/mixins/details';
+
+.mzp-c-details,
+details {
+    @include details;
+}
+
+summary,
+details .is-summary button,
+.mzp-c-details .is-summary button {
+    @include summary;
+}
+
+// Override styling the native element when the polyfill is applied (issue #658)
+summary.is-summary {
+    @include bidi(((padding-right, 0, padding-left, 0),));
+
+    &:before {
+        display: none;
+    }
+}
+
+details[open] summary:before,
+details .is-summary button[aria-expanded=true]:before,
+.mzp-c-details .is-summary button[aria-expanded=true]:before {
+    @include summary-open;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}

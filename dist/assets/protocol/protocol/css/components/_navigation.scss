@@ -1,0 +1,251 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+//* -------------------------------------------------------------------------- */
+// Navigation styles
+
+.mzp-c-navigation {
+    background: $color-white;
+    color: $color-black;
+
+    .mzp-c-navigation-l-content {
+        @include clearfix;
+        padding: $layout-xs;
+        position: relative;
+
+        @media #{$mq-md} {
+            padding: 0 $layout-lg;
+        }
+
+        @media #{$mq-lg} {
+            padding: 0 $layout-xl;
+        }
+    }
+
+    .mzp-c-navigation-container {
+        @include clearfix;
+        margin: 0 auto;
+        max-width: $content-max;
+    }
+}
+
+.mzp-c-navigation-items {
+    clear: both;
+    padding-top: $spacing-sm;
+
+    @media #{$mq-md} {
+        clear: none;
+        padding-top: 0;
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Sticky navigation styles
+
+@supports (position: sticky) {
+    html.mzp-has-sticky-navigation {
+        .mzp-c-navigation.mzp-is-sticky {
+            @include transition(transform 300ms ease-in-out);
+            left: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            &.mzp-is-scrolling {
+                // Shadow colors are equivalent to $color-ink-90, $color-blue-90, $color-ink-90
+                box-shadow: 0 0 6px 1px rgba(29, 17, 51, .04), 0 0 8px 2px rgba(9, 32, 77, .12), 0 0 5px -3px rgba(29, 17, 51, .12);
+            }
+
+            &.mzp-is-hidden {
+                @include transform(translate(0, -110%));
+            }
+        }
+
+        // add scroll-offset for anchor links.
+        .mzp-is-anchor-link {
+            scroll-margin-top: 120px; /* stylelint-disable-line property-no-unknown */
+        }
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Mozilla Logo
+
+.mzp-c-navigation-logo {
+    @include bidi(((float, left, right),));
+
+    a {
+        @include background-size(84px, 24px);
+        @include image-replaced;
+        background-image: url('#{$image-path}/logos/mozilla/logo-word-hor.svg');
+        background-repeat: no-repeat;
+        display: block;
+        height: 24px;
+        margin: 0 auto;
+        width: 84px;
+    }
+
+    @media #{$mq-md} {
+        @include bidi(((margin, $spacing-lg ($spacing-sm * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-sm * 2)),));
+
+        a {
+            margin-top: $spacing-sm;
+        }
+    }
+
+    @media #{$mq-lg} {
+        @include bidi(((margin, $spacing-lg ($spacing-md * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-md * 2)),));
+
+        a {
+            @include background-size(112px, 32px);
+            height: 32px;
+            margin-top: $spacing-xs;
+            width: 112px;
+        }
+    }
+
+    @media #{$mq-xl} {
+        @include bidi(((margin, $spacing-lg ($spacing-lg * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-lg * 2)),));
+    }
+
+    .mzp-t-firefox & {
+        a {
+            @include background-size(81px, 27px);
+            background-image: url('#{$image-path}/logos/firefox/logo-word-hor-sm.png');
+            height: 27px;
+            width: 81px;
+        }
+
+        @media #{$mq-md} {
+            a {
+                margin-top: 7px;
+            }
+        }
+
+        @media #{$mq-lg} {
+            a {
+                @include at2x('#{$image-path}/logos/firefox/logo-word-hor-sm.png', 109px, 36px);
+                height: 36px;
+                margin-top: 1px;
+                width: 109px;
+            }
+        }
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Menu molecule
+
+.mzp-c-navigation-menu {
+    vertical-align: bottom;
+
+    @media #{$mq-md} {
+        @include bidi(((margin-left, -$spacing-sm, margin-right, 0),));
+        display: inline-block;
+        width: auto;
+    }
+
+    @media #{$mq-lg} {
+        @include bidi(((margin-left, -$spacing-md, margin-right, 0),));
+    }
+
+    @media #{$mq-xl} {
+        @include bidi(((margin-left, -$spacing-lg, margin-right, 0),));
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Download button
+
+.mzp-c-navigation-download {
+    margin: $spacing-xl 0 $spacing-lg;
+    text-align: center;
+
+    .mzp-c-button-download-container {
+        margin-bottom: 0;
+
+        // hide privacy link
+        .mzp-c-button-download-privacy-link {
+            display: none;
+        }
+    }
+
+    @media #{$mq-md} {
+        @include bidi((
+            (float, right, left),
+            (margin, $spacing-lg 0 $spacing-lg $spacing-sm, $spacing-lg $spacing-sm $spacing-lg 0)
+        ));
+        display: block;
+        margin: $spacing-lg 0;
+    }
+
+    @media #{$mq-lg} {
+        @include bidi(((margin, $spacing-lg 0 $spacing-lg $spacing-md, $spacing-lg $spacing-md $spacing-lg 0),));
+    }
+
+    @media #{$mq-xl} {
+        @include bidi(((margin, $spacing-lg 0 $spacing-lg $spacing-lg, $spacing-lg $spacing-lg $spacing-lg 0),));
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Mobile Navigation Icon
+
+.mzp-c-navigation-menu-button {
+    @include bidi(((background-position, right 6px center, left 6px center ),));
+    @include bidi(((float, right, left),));
+    @include bidi(((padding, 0 32px 0 6px, 0 6px 0 32px),));
+    background-color: transparent;
+    background-image: url('#{$image-path}/icons/menu.svg');
+    background-repeat: no-repeat;
+    border-radius: $border-radius-sm;
+    border: none;
+    display: none;
+    height: 32px;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.mzp-is-active  {
+        background-color: $color-marketing-gray-20;
+    }
+}
+
+.mzp-c-navigation-menu-button:not(.has-label) {
+    @include bidi(((background-position, center center, center center ),));
+    @include bidi(((padding, 0, 0),));
+    @include image-replaced;
+    cursor: pointer;
+    width: 32px;
+}
+
+
+.js .mzp-c-navigation-menu-button {
+    display: block;
+    margin: -4px 0;
+
+    @media #{$mq-md} {
+        display: none;
+    }
+}
+
+//* -------------------------------------------------------------------------- */
+// Mobile Navigation drawer
+
+.js .mzp-c-navigation-l-content {
+
+    .mzp-c-navigation-items {
+        display: none;
+
+        &.mzp-is-open {
+            display: block;
+        }
+
+        @media #{$mq-md} {
+            display: block;
+        }
+    }
+}

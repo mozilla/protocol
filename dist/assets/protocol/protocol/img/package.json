@@ -1,0 +1,48 @@
+{
+  "_from": "github:mozilla/protocol-assets#focus-svg",
+  "_id": "@mozilla-protocol/assets@4.1.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/@mozilla-protocol/assets",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "@mozilla-protocol/assets@github:mozilla/protocol-assets#focus-svg",
+    "name": "@mozilla-protocol/assets",
+    "escapedName": "@mozilla-protocol%2fassets",
+    "scope": "@mozilla-protocol",
+    "rawSpec": "github:mozilla/protocol-assets#focus-svg",
+    "saveSpec": "github:mozilla/protocol-assets#focus-svg",
+    "fetchSpec": null,
+    "gitCommittish": "focus-svg"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:mozilla/protocol-assets#90a410802af4d1864fbf17fcef9e702fed63faf9",
+  "_spec": "@mozilla-protocol/assets@github:mozilla/protocol-assets#focus-svg",
+  "_where": "/Users/maureenholland/silverorange/mozilla/forked/protocol",
+  "author": {
+    "name": "Mozilla"
+  },
+  "bugs": {
+    "url": "https://github.com/mozilla/protocol-assets/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Files for Mozilla's logos, icons, and other images",
+  "homepage": "https://github.com/mozilla/protocol-assets#readme",
+  "keywords": [
+    "mozilla",
+    "assets",
+    "svg"
+  ],
+  "license": "MPL-2.0",
+  "main": "icons/protocol-icons.scss",
+  "name": "@mozilla-protocol/assets",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla/protocol-assets.git"
+  },
+  "version": "4.1.0"
+}

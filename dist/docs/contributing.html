@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js ">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="../static/img/favicon.png">
+      <title>Contributing to Protocol - Protocol Design System</title>
+      <script src="../assets/protocol/protocol/js/protocol-base.js"></script>
+      <script src="../assets/protocol/protocol/js/protocol-utils.js"></script>
+      <script src="../assets/protocol/protocol/js/protocol-supports.js"></script>
+      <link rel="stylesheet" href="../assets/docs/css/protocol.css">
+      <link rel="stylesheet" href="../assets/docs/css/protocol-components.css">
+      <link rel="stylesheet" href="../assets/docs/css/site.css">
+      <link rel="stylesheet" href="../assets/docs/css/prism.css">
+  </head>
+  <body class="">
+    <div class="protosite-page">
+    
+    <nav class="protosite-nav-main" id="protosite-nav-main">
+      <header class="protosite-nav-main-head">
+        <a href="https://www.mozilla.org">
+          <img class="protosite-nav-main-mozlogo" src="../assets/protocol/protocol/img/logos/mozilla/logo-word-hor-white.svg" width="100" alt="Mozilla">
+        </a>
+    
+        <a class="protosite-js-nav-toggle" href="#nav">Menu</a>
+      </header>
+    
+      <div class="protosite-nav-main-menu" id="protosite-nav-main-menu">
+        <ul>
+          <li class="protosite-nav-main-item">
+            <a href="..">Home</a>
+          </li>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../docs/index.html">
+                  Documentation
+                </a>
+          </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Fundamentals</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/principles.html">
+                  Design Principles
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/themes.html">
+                  Themes
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/typography.html">
+                  Typography
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/tokens.html">
+                  Tokens
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/color.html">
+                  Color
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/icons.html">
+                  
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Atoms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/typographic.html">
+                  Text
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/buttons.html">
+                  Buttons
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/links.html">
+                  Links
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/lists.html">
+                  Lists
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/logo.html">
+                  Logos &amp; Wordmarks
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/section-heading.html">
+                  Section Heading
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/zap.html">
+                  Zap
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Molecules</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/card.html">
+                  Cards
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/details.html">
+                  Details
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/download-button.html">
+                  Download Button
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/emphasis-box.html">
+                  Emphasis Box
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/feature-card.html">
+                  Feature Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/language-switcher.html">
+                  Language Switcher
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/menu-list.html">
+                  Menu List
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/menu.html">
+                  Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/notification-bar.html">
+                  Notification Bar
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/picto-card.html">
+                  Picto Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/picto.html">
+                  Picto
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/sticky-promo.html">
+                  Sticky Promo
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Organisms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/article.html">
+                  Article
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/billboard.html">
+                  Billboard
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/call-out.html">
+                  Call Out
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/footer.html">
+                  Footer
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/hero.html">
+                  Page Hero
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/modal.html">
+                  Modal
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/navigation.html">
+                  Navigation
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/newsletter.html">
+                  Newsletter
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/sidebar-menu.html">
+                  Sidebar Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/split.html">
+                  Split
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Templates</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/templates/card-layout.html">
+                  Card Layout
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/templates/columns.html">
+                  Columns
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/templates/content-container.html">
+                  Content Container
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/templates/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/templates/main-with-sidebar.html">
+                  Main With Sidebar
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Other Stuff</h4>
+        <ul>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../demos/index.html">
+                  Demos
+                </a>
+          </li>
+          <li class="protosite-nav-main-item">
+            <a href="https://github.com/mozilla/protocol" target="_blank" rel="noopener noreferrer">
+              Repo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="protosite-main">
+      <header class="protosite-page-head">
+        <h1 class="protosite-page-title">
+          Contributing to Protocol
+        </h1>
+
+      </header>
+
+    <p>Protocol, like everything else Mozilla makes, is <a href="https://developer.mozilla.org/docs/Mozilla/Developer_guide/Introduction">open source</a>.
+We welcome contributions from people like you. Yes, you, whoever you are
+reading this, can do something to make Protocol better and more useful,
+no matter your skill level or area of interest.</p>
+<h3 id="reporting-bugs">Reporting Bugs</h3>
+<p>The easiest way to help is to report bugs. Let us know if something isn&#39;t
+doing what you think it should do and we can try to fix it.</p>
+<p>To report an error you’ve discovered in Protocol, <a href="https://github.com/mozilla/protocol/issues/new/choose/">submit an issue on Github</a>
+with a detailed description of the error and steps to reproduce. If possible,
+include a link to a live example and/or a screenshot of the bug in effect.
+Also be sure to mention the browser (and version) and operating system.</p>
+<p>You should search for similar issues in case it’s already been reported. In
+some cases a bug may have been fixed but the fix may not have been deployed,
+so it’s a good idea to search through <a href="https://github.com/mozilla/protocol/issues?q=is%3Aissue+is%3Aclosed">recently closed issues</a> as well.</p>
+<h3 id="requesting-new-features">Requesting New Features</h3>
+<p>If you would like to request changes to a component or a new component be
+added to Protocol, please <a href="https://github.com/mozilla/protocol/issues/new/choose/">submit an issue on Github</a>
+using the appropriate issue template. Please try to fill out this template
+as thoroughly as you can. This will help the team understand the request
+and triage issues more effectively.</p>
+<h2 id="contributing-code">Contributing code</h2>
+<p>Aside from reporting bugs or requesting features, an even more direct way to
+contribute to Protocol is to write code.</p>
+<p>Protocol is a design system, though the exact meaning of the term “design system” is
+hard to pin down. For our purposes, a design system comprises the entirety of
+guidelines, assets, and resources for producing websites in a specific style or
+brand identity. It includes a style guide, a pattern library of coded components,
+and the actual assets – fonts, graphics, CSS frameworks, JavaScript libraries –
+needed to create websites.</p>
+<p>The heart of Protocol is the pattern library – the HTML components that you can
+assemble into a web page, and its soul is the CSS framework that styles those
+components. We’re probably straining that metaphor but you get the point;
+Protocol is made of code.</p>
+<p>The Protocol design system comprises a CSS framework and a library of
+markup patterns for web page components. There&#39;s a bit of JavaScript for a few
+interactive things, but for the most part Protocol is static HTML and CSS.</p>
+<p>The pattern library lives at <a href="https://protocol.mozilla.org">protocol.mozilla.org</a>
+and its source code lives at <a href="https://github.com/mozilla/protocol/">github.com/mozilla/protocol</a>.
+That code repository is also where the Protocol CSS framework lives, as well as
+all the system documentation (including this page).</p>
+<p>To write code for Protocol you&#39;ll actually be working on the Protocol website itself.</p>
+<h3 id="installing-the-protocol-site-locally">Installing the Protocol site locally</h3>
+<p>We&#39;ve done our best to make the barrier of entry to contributing code to
+Protocol as low as possible. You can do some work directly through github
+without actually installing Protocol locally, but if you want to do any complex
+coding you&#39;ll need to set up a local development environment.</p>
+<ul class="mzp-u-list-styled">
+  <li>You&#39;ll need a GitHub account.
+    <ul>
+      <li><a href="https://github.com/join">https://github.com/join</a></li>
+      <li><a href="https://help.github.com/articles/set-up-git/">https://help.github.com/articles/set-up-git/</a></li>
+    </ul>
+  </li>
+  <li>You&#39;ll need to install Git.
+    <ul>
+      <li><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+      <li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></li>
+    </ul>
+  </li>
+  <li>You&#39;ll need to install Node and npm.
+    <ul>
+      <li><a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">https://docs.npmjs.com/downloading-and-installing-node-js-and-npm</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>With those prerequisites met:</p>
+<ol class="mzp-u-list-styled">
+  <li>Fork the <a href="https://github.com/mozilla/protocol/">Protocol GitHub repository</a>
+      to your personal account.
+    <ul>
+      <li><a href="https://help.github.com/articles/fork-a-repo/">https://help.github.com/articles/fork-a-repo/</a></li>
+    </ul>
+  </li>
+  <li>Clone that remote repo to your computer.
+    <ul>
+      <li><a href="https://help.github.com/articles/cloning-a-repository/">https://help.github.com/articles/cloning-a-repository/</a></li>
+    </ul>
+  </li>
+  <li>On your computer’s command line, navigate to the folder to which you just
+      cloned the Protocol repo.</li>
+  <li>Within that folder, run <code>npm start</code>. This will install all the dependencies
+      and launch a local server.</li>
+</ol>
+
+<p>You now have a local instance of the Protocol site running on your
+computer. You can load the site in a browser at <a href="http://localhost:3000">http://localhost:3000</a>.
+As you edit files they will update automatically and you can see your
+changes &quot;live&quot; on your local development environment.</p>
+<p>The pattern library uses <a href="https://gulpjs.com/">Gulp</a> to automate tasks.
+The <code>npm start</code> command is a shortcut to installing and starting up the
+site the first time, but you may not want to rerun the installation process
+every time you sit down to work on Protocol. Once you’ve got it installed
+you can skip the installation step and run <code>gulp</code> directly to build the
+site and start the server, or <code>gulp --dev</code> to start the server with file
+watching (so it rebuilds and refreshes automatically with every file change).</p>
+<ol class="mzp-u-list-styled">
+  <li>Make whatever edits you need to make, ideally in a fresh branch.
+    <ul>
+      <li><a href="https://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging">https://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging</a></li>
+      <li><a href="https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/">https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/</a></li>
+    </ul>
+  </li>
+  <li>When you&#39;re done, commit your changes and push them to your GitHub remote repository.
+    <ul>
+      <li><a href="https://help.github.com/articles/pushing-to-a-remote/">https://help.github.com/articles/pushing-to-a-remote/</a></li>
+    </ul>
+  </li>
+  <li>Submit a pull request from your fork to the Mozilla repo.
+    <ul>
+      <li><a href="https://help.github.com/articles/creating-a-pull-request-from-a-fork/">https://help.github.com/articles/creating-a-pull-request-from-a-fork/</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p>You can also <a href="https://help.github.com/en/articles/editing-files-in-another-users-repository">make some edits directly on github.com</a>
+without installing the site locally. For that you don&#39;t even have to install
+Git or Node, you just need a GitHub account. This is fine for updating docs or
+minor tweaks that don’t need extensive testing or review, but for any serious
+coding you really should have a local instance running so you can see your work
+as it progresses.</p>
+<h3 id="file-structure">File structure</h3>
+<p>Once you’ve cloned the Protocol repository, you should spend some time
+browsing through the folders in your local copy (or on Github) to
+familiarize yourself with the general structure of the project. You’ll
+have to drill down a bit to reach the really good stuff but the top-level
+root folder looks something like:</p>
+<pre><code>protocol
+├── bin (scripts that deploy the site to the server)
+├── dist (where source files are built locally for serving [not found in git])
+├── docs (documentation for Drizzle, the tool that drives the Protocol site)
+├── gulpfile.js (scripts that build and process the pattern library and CSS framework)
+├── src (the real source of the site; this is the meat of Protocol)
+└── tests (automated test scripts)
+</code></pre><p>There are a few other files in the project root, most of which are pretty
+boring, but the most interesting is <code>CHANGELOG.md</code> that contains a historical
+record of Protocol.</p>
+<p>The real meat of Protocol is in the <code>src</code> folder, and this is where you’ll do
+most of your work.</p>
+<pre><code>src
+├── assets (fonts, images, scripts, and styles)
+├── data (reference data used for examples)
+├── pages (content that supplements the pattern library such as demos and documents [including this one])
+├── patterns (the HTML components)
+├── static (media assets for display on the pattern library site, but not part of Protocol itself)
+└── templates (templates for the pattern library website)
+</code></pre><p>At this level the most interesting folders are probably <code>patterns</code> and <code>assets</code>,
+where the aforementioned heart and soul of Protocol can be found, respectively.
+Let’s start with <code>patterns</code>.</p>
+<p>We’ve chosen to organize our pattern library following the atomic design metaphor,
+which consists of breaking a web page down into its smallest component parts,
+which can then be combined and assembled in different configurations, adding
+more parts in increasing complexity to arrive at the complete page. In our
+<code>patterns</code> folder you’ll find separate folders for <code>atoms</code>, <code>molecules</code>, <code>organisms</code>,
+and <code>templates</code>.</p>
+<p>The files in these folders represent the actual Protocol components. They’re
+snippets of HTML that, when combined with the CSS that styles them, can be assembled
+to build a web page. All of the Protocol components can be found in the <code>patterns</code>
+folder, and all of the related CSS is in <code>assets</code> (we’ll do a deeper dive into that folder
+shortly).</p>
+<h2 id="component-patterns">Component patterns</h2>
+<p>The component pattern examples are built with <a href="https://handlebarsjs.com/guide/">Handlebars</a>,
+a simple templating language that is mostly plain HTML with some added enhancements.
+Each component resides in its own Handlebars template file (using the extension <code>.hbs</code>),
+which includes a bit of front matter in a YAML format along with the component
+markup. All of this is processed into plain HTML and rendered to show a live
+example of the component alongside the component markup and the front matter
+for added documentation.</p>
+<p>Here’s a minimal example of a Protocol component in Handlebars format:</p>
+<pre><code class="lang-hbs">---
+name: Button
+description: |
+  This is an example of a button.
+---
+
+&lt;button class=&quot;mzp-c-button&quot;&gt;Button&lt;/button&gt;
+</code></pre>
+<p>The top section between the <code>---</code> is the <em>front matter</em>, comprising at minimum
+a name but it can also include a description, links to examples or resources,
+notes, tips, no-nos (what not to do), component status, and sorting order.</p>
+<p>Below the front matter is the component markup, just a simple button in this case.
+When the website is built, these Handlebars templates are rendered into formatted web
+pages. Each pattern displays the rendered and styled component, the HTML snippet
+that produces it, and the front matter notes that document it. Browse around the
+Protocol site to see this for yourself.</p>
+<p>Handlebars does a bit more than plain HTML. Every component pattern becomes a
+reusable object that can be embedded into another Handlebars template as a <em>partial</em>:
+helper:</p>
+<pre><code class="lang-hbs">{{&gt; patterns.atoms.button}}
+</code></pre>
+<p>For more complex cases, we can also define patterns with content <em>blocks</em> allowing
+us to pass content into the pattern with the <code>{{#embed}}</code> helper. For example, our
+button might contain a block called <code>label</code>:</p>
+<pre><code class="lang-hbs">&lt;button class=&quot;mzp-c-button&quot;&gt;
+{{#block &quot;label&quot;}}
+  Button
+{{/block}}
+&lt;/button&gt;
+</code></pre>
+<p>When we embed that pattern in another template we can replace the block with
+different content:</p>
+<pre><code class="lang-hbs">{{#embed &quot;patterns.atoms.button&quot;}}
+  {{#content &quot;label&quot;}}Click Me!{{/content}}
+{{/embed}}
+</code></pre>
+<p>Each component occupies its own folder and some folders contain multiple
+components as a collection. The site automatically concatenates all the templates
+within a folder into a single page during the build process. A component folder
+can optionally contain a <code>collection.yaml</code> file with metadata about the collection.</p>
+<p>This is obviously an abbreviated introduction to our Handlebars components but
+hopefully it will help you get started. Look through the various patterns in Protocol
+for more robust examples and refer to the <a href="https://handlebarsjs.com/guide/">Handlebars documentation</a>
+to learn more about how it works.</p>
+<h2 id="the-protocol-css-framework">The Protocol CSS framework</h2>
+<p>Along with the HTML snippets that give Protocol components their structure,
+Protocol also comprises a CSS framework to give it style. Our framework is built
+with <a href="https://sass-lang.com">Sass</a> as a pre-processor, and we author Sass using
+the <a href="https://sass-lang.com/documentation/syntax#scss">SCSS</a> syntax.</p>
+<p>You can find our Sass files in the <code>assets/sass</code> folder. The <code>demos</code> and <code>docs</code> subfolders
+contain styles for Protocol demo pages and the Protocol website, respectively, but the
+real Protocol framework is in the <code>protocol</code> folder. This is where you’ll find all the
+CSS that styles Protocol components as well as the variables, mixins, and functions
+that make it all possible.</p>
+<pre><code>sass/protocol
+├── base
+│   ├── elements
+│   ├── includes
+│   └── utilities
+├── components
+├── includes
+│   ├── fonts
+│   ├── forms
+│   ├── mixins
+│   ├── _functions.scss
+│   ├── _themes.css
+│   └── _lib.scss
+├── _theme-config.scss
+├── protocol-components.scss
+└── protocol.scss
+</code></pre><p>As usual, it’s a good idea to explore the files and folders here to get the lay of
+the land. We try to include helpful comments in each .scss file to explain what all
+the different pieces do and how to use them so a lot of our documentation lives
+directly within the source code.</p>
+<p>Our styles are fragmented across numerous files in order to keep things more
+self-contained and organized, and to help prevent conflicts when several people
+work simultaneously on different things (when more than one person is trying to
+edit the same file at the same time they’ll inevitably step on each other’s work).</p>
+<p>The <code>base</code> folder has all the basic, general-purpose styling for common HTML elements.
+The <code>components</code> folder holds the styling for individual Protocol components. And
+the <code>includes</code> folder holds the supporting mixins and functions that power the entire
+framework. Each of these folders in turn hold other files that import and collect the
+smaller fragments. Almost all of our individual SCSS files are <a href="https://sass-lang.com/guide#topic-4">Sass partials</a>,
+prefixed with an underscore. They’re intended to be imported into another file when
+the Sass is compiled; they don’t all turn into separate CSS files of their own.</p>
+<h2 id="styling-a-component">Styling a component</h2>
+<p>All of the styling for a given component will typically be in a single <code>.scss</code> file
+named for that component. Here’s a bare-bones example that we’ll imagine is a file
+named <code>_item.scss</code> (this is not an actual Protocol component):</p>
+<pre><code class="lang-scss">@import &#39;../includes/lib&#39;;
+
+.mzp-c-item {
+    @include text-title-md;
+    color: $color-ink-80;
+    margin: $spacing-lg 0;
+}
+</code></pre>
+<p>Even in this minimal example there’s a lot happening, and almost none of it is plain
+CSS. If you’re familiar with Sass/SCSS already this will look more familiar, but if
+you’re not let’s dig a bit deeper.</p>
+<pre><code class="lang-scss">@import &#39;../includes/lib&#39;;
+</code></pre>
+<p>First, we import the Protocol library file, <code>includes/_lib.scss</code>. Since that file
+is a Sass partial we don’t need the underscore prefix or the file extension, just
+referencing the relative path and filename is enough. That library file in turn
+imports all of the functions, mixins, and variables Protocol needs to process the
+rest of this SCSS file. Almost every file you see in the Protocol framework will
+import that library at the very top.</p>
+<pre><code class="lang-scss">.mzp-c-item {
+</code></pre>
+<p>Next we get to the proper component styles, starting with a class selector. All of
+our classes follow a <a href="/docs/naming-convention.html">standard naming convention</a>.
+They’re namespaced with <code>mzp</code> to avoid conflicts with any other styling or libraries
+with which they may need to coexist, followed by a <code>c</code> prefix indicating that this
+is a component.</p>
+<pre><code class="lang-scss">    @include text-title-md;
+</code></pre>
+<p>The first style declaration is a Sass mixin that sets the font-size for the element.
+We use mixins for font sizes to maintain a standardized type scale, and the mixins
+also include media queries to make the sizes responsive to the viewport size; bigger
+screens get bigger text. These sizing mixins are defined in <code>includes/mixins/_typography.scss</code>.
+See <a href="/fundamentals/typography.html">our page on typography</a> for more about our type scale.</p>
+<p>Next we declare the text color using a variable. Protocol has an extensive color
+palette, all assigned to named variables so every occurance of a given color will
+always be the exact same value (<code>$color-ink-80</code> is a dark purplish black). You can
+see <a href="/fundamentals/color.html">our entire color palette</a> for all the different options.</p>
+<pre><code class="lang-scss">    margin: $spacing-lg 0;
+</code></pre>
+<p>The next line sets margins above and below the element, once again using a named
+variable instead of an explicit value. Assigning variables to spacing units means
+we ensure consistency throughout the system, and also lets us change the value of
+such a variable in one place and it will automatically propagate to every other part
+of Protocol. The <code>$spacing-lg</code> variable is <code>24px</code> but if we want to change that to
+<code>20px</code> we would only have to make that change once.</p>
+<h3 id="tokens">Tokens</h3>
+<p>The example above shows a Sass variable used as a margin value. We call variables
+like these <em>design tokens</em> and they’re more than just variables. Design tokens are
+a way to document the lowest level design attributes and share them throughout a
+complex system, and even across multiple systems. We use tokens as much as possible
+in place of hard-coded values, especially for colors and units of measure. Whenever
+you need a basic value in CSS, see if there’s already a token for it. You can see
+<a href="/fundamentals/tokens.html">a list of all the design tokens in Protocol</a>.</p>
+<p>Tokens are also a partial abstraction of the value they represent. Assigning a name
+to a token also implies a particular purpose a step removed from its specific value.
+A token like <code>$spacing-md</code> represents &quot;a medium unit of space&quot; and we don&#39;t necessarily
+need to think about exactly how many pixels that is, we only know it&#39;s a bit larger
+than small and a bit smaller than large. For now we&#39;ve decided that a medium space is
+<code>16px</code>, but that could easily change to <code>12px</code> or <code>20px</code> because &quot;medium&quot; is relative.
+Avoid misusing a token as an alias for its specific value since the whole point is
+that the value can change.</p>
+<p>Also avoid misusing a token to fill in a value for something it wasn&#39;t made for. For
+example, the token <code>$spacing-md</code> is intended for spacing within or between elements.
+Don&#39;t use it set the height of an image or width of a border or size of a font (unless
+there&#39;s a very good reason to do so).</p>
+<p>(Side note: The <code>$spacing-*</code> tokens are smaller units, mostly for interior spacing
+inside components or between close elements. The <code>$layout-*</code> tokens are larger,
+intended for wider gaps between components on the page.)</p>
+<p>Protocol&#39;s design tokens <a href="https://github.com/mozilla/protocol-tokens">reside in their own repository</a>
+and are <a href="https://www.npmjs.com/package/@mozilla-protocol/tokens">published as their own package</a>.</p>
+<h3 id="mixins">Mixins</h3>
+<p>Protocol relies on numerous <a href="https://sass-lang.com/documentation/at-rules/mixin">Sass mixins</a>
+to simplify and standardize repetitive code. Some are fairly simple shortcuts and
+others do more complex work. We won’t list them all here, but we’ll describe a few
+of the more notable ones. All our mixins are in <code>/includes/_mixins.scss</code> or in
+separate files in the <code>/includes/mixins/</code> folder. You’ll find even more documentation
+as comments directly in the source files.</p>
+<h4 id="text-sizes">Text sizes</h4>
+<p>Protocol uses a modular type scale with a range of predefined font sizes, and to
+maintain the consistency of that scale we rely on mixins for all of our text sizing.
+See <a href="/fundamentals/typography.html">our page on typography</a> for more info and examples.</p>
+<pre><code class="lang-scss">@include text-title-lg;
+</code></pre>
+<p>Different themes have slightly different type scales so this mixin draws its output
+from the defined brand theme. See <a href="/fundamentals/themes.html">our page on themes</a>
+for more info and examples.</p>
+<h4 id="bidi">bidi</h4>
+<p>The bidi mixin (short for “bi-directional”) is used to declare both left-to-right and
+right-to-left values for a CSS property together, and output appropriate declarations
+for each. This makes it easier to support right-to-left languages – such as Hebrew and
+Arabic – while keeping both styles in the same place. Whenever you’re floating or
+aligning something to one side, you might prefer to use the bidi mixin to reverse that
+direction for other languages. Refer to <code>/includes/mixins/_bidi.scss</code> for more
+documentation and usage.</p>
+<pre><code class="lang-scss">@include bidi(((float, left, right),));
+</code></pre>
+<h4 id="at2x">at2x</h4>
+<p>at2x is a helpful mixin for applying a high-resolution background image, for display
+on high definition screens (a.k.a. “retina”). It automatically outputs the standard
+resolution background image with the high-resolution version in a media query, along
+with the <code>background-size</code> property to scale it. Both image files should be in the same
+folder and have matching names, with the high resolution version suffixed with “high-res”,
+e.g. <code>example.png</code> and <code>example-high-res.png</code></p>
+<pre><code class="lang-scss">@include at2x(&#39;/img/example.png&#39;, 100px, 100px);
+</code></pre>
+<h4 id="light-links">light-links</h4>
+<p>The light-links mixin inverts link colors in elements/components with dark backgrounds.</p>
+<pre><code class="lang-scss">@include light-links;
+</code></pre>
+<h4 id="white-links">white-links</h4>
+<p>The white-links mixin explicitly sets link colors (in all pseudo-class states) to white.
+This is useful for some elements/components with dark backgrounds where the regular
+inverted link colors might be undesirable, typically for utilitarian components like a
+footer.</p>
+<pre><code class="lang-scss">@include white-links;
+</code></pre>
+<h3 id="themes">Themes</h3>
+<p>Protocol supports <a href="/fundamentals/typography.html">multiple brand themes</a>, namely the Mozilla
+and Firefox brands. Themes work by defining sets of variables in Sass maps in the
+<code>/includes/_themes.scss</code> file, and those variables are fetched via the <code>get-theme()</code> function.
+That function determines which set of variables to draw from based on the declared brand theme,
+thus any themable property in CSS can have different values for different brands.</p>
+<pre><code class="lang-scss">.mzp-c-my-component {
+    background-color: get-theme(&#39;background-color&#39;);
+    color: get-theme(&#39;body-text-color&#39;);
+
+    .mzp-c-my-component-title {
+        color: get-theme(&#39;title-text-color&#39;);
+        font-family: get-theme(&#39;title-font-family&#39;);
+    }
+}
+</code></pre>
+<p>Use the <code>get-theme()</code> function for any themeable properties, especially basic colors for
+foreground (text) and backgrounds. Note that most colors have an &quot;inverse&quot; counterpart
+to use in dark style variants. Refer to <code>/includes/_themes.scss</code> for the actual values
+for each brand theme, but here are the variable names in a handy list:</p>
+<pre><code>background-color
+background-color-alt
+background-color-alt-inverse
+background-color-inverse
+body-font-family
+body-text-color
+body-text-color-alt
+body-text-color-alt-inverse
+body-text-color-inverse
+button-font-family
+link-color
+link-color-hover
+link-color-hover-inverse
+link-color-inverse
+link-color-visited
+link-color-visited-hover
+link-color-visited-hover-inverse
+link-color-visited-inverse
+title-font-family
+title-text-color
+title-text-color-inverse
+</code></pre><p>Text sizes are also defined as theme variables, allowing different brands to have slightly
+different type scales. Don&#39;t use the <code>get-theme()</code> function for text sizing; use the text
+size mixins instead. The mixins already draw from the theme variables but come with baked-in
+responsive styling as well.</p>
+
+    </main>
+
+        <script src="../assets/docs/js/docs.js"></script>
+
+    </div>
+  </body>
+</html>

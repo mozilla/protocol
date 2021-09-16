@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js ">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="../../static/img/favicon.png">
+      <title>Form validation - Protocol Design System</title>
+        <link rel="stylesheet" href="../../assets/docs/css/forms.css">
+      <script src="../../assets/protocol/protocol/js/protocol-base.js"></script>
+      <script src="../../assets/protocol/protocol/js/protocol-utils.js"></script>
+      <script src="../../assets/protocol/protocol/js/protocol-supports.js"></script>
+  </head>
+  <body class="">
+    <div class="protosite-page">
+      <div class="mzp-l-content mzp-t-content-md">
+
+  <form id="form" class="mzp-c-form mzp-is-error">
+
+    <h1 class="mzp-c-form-heading">Form validaton demo</h1>
+
+    <p>For longer forms provide a list of errors at the top that need to be addressed:</p>
+
+    <div class="mzp-c-form-errors">
+      <ul class="mzp-u-list-styled">
+        <li>Birthdate: Use the order year, month, day.</li>
+        <li>Your email: This required field was left empty.</li>
+        <li>Username: Must be at least six characters.</li>
+        <li>Event Date: Please pick an event date in the future</li>
+        <li>You must agree to the privacy policy.</li>
+      </ul>
+    </div>
+
+    <fieldset class="mzp-c-field-set">
+      <h2 class="mzp-c-form-subheading">Note</h2>
+      <p>When a label includes a <a href="/patterns/atoms/forms.html#field-notes">field note</a>, adding mzp-is-error to a parent element will highlight it.</p>
+<div class="mzp-c-field ">
+  <label class="mzp-c-field-label" for="n_birth_date">Birthdate <span class="mzp-c-fieldnote">Use the order year, month, day. Like this: 1970-03-31</span></label>
+  <input class="mzp-c-field-control " type="text" id="n_birth_date" required aria-required="true"  value="March 3 '70" >
+  
+  
+</div>
+<div class="mzp-c-field ">
+  <label class="mzp-c-field-label" for="n_your_email">Your email <span class="mzp-c-fieldnote">Required</span></label>
+  <input class="mzp-c-field-control " type="email" id="n_your_email" required aria-required="true"  >
+  
+  
+</div>
+    </fieldset>
+
+    <fieldset class="mzp-c-field-set">
+      <h2 class="mzp-c-form-subheading">Message</h2>
+      <p>Use the <a href="/patterns/molecules/forms.html#message">message component</a> to add additonal information to the page help with form validation.</p>
+<div class="mzp-c-field ">
+  <label class="mzp-c-field-label" for="n_username">Username</label>
+  <input class="mzp-c-field-control " type="text" id="n_username" required aria-required="true"  value="Jim" aria-describedby="n_username-msg">
+  <div id="n_username-msg" class="mzp-c-field-msg" role="tooltip">Username must be at least 6 characters.</div>
+  
+</div>
+
+<div class="mzp-c-field ">
+  <label class="mzp-c-field-label" for="n_date">Event Date</label>
+  <input class="mzp-c-field-control " type="date" id="n_date" required aria-required="true"  value="2015-03-31" aria-describedby="n_date-msg">
+  <div id="n_date-msg" class="mzp-c-field-msg" role="tooltip">Please pick a date in the future</div>
+  
+</div>
+
+<div class="mzp-c-choice ">
+  <input class="mzp-c-choice-control" type="checkbox" name="" id="s-terms5" value=""   >
+  <label class="mzp-c-choice-label  mzp-t-sm" for="s-terms5">I agree to the <a href="#">privacy policy</a> </label>
+  <div class="mzp-c-choice-msg">You must agree to our privacy policy before we can add you to the newsletter.</div>
+  
+</div>
+
+    </fieldset>
+
+    <h2 class="mzp-c-form-subheading">Other components</h2>
+    <p>Examples of error messages with other components.</p>
+
+    <fieldset class="mzp-c-field-set">
+      <legend class="mzp-c-form-subheading">Fieldset</legend>
+      <div class="mzp-c-field ">
+  <label class="mzp-c-field-label" for="fs2">Label</label>
+  <input class="mzp-c-field-control " type="text" id="fs2"   aria-describedby="fs2-msg">
+  <div id="fs2-msg" class="mzp-c-field-msg" role="tooltip">Message for this field</div>
+  
+</div>
+
+      <div class="mzp-c-field ">
+  <label class="mzp-c-field-label" for="fs2">Label</label>
+  <input class="mzp-c-field-control " type="text" id="fs2"   >
+  
+  
+</div>
+
+      <div class="mzp-c-field-set-msg">Message for this field set.</div>
+      <p class="mzp-c-field-set-info">Details for this field set.</p>
+    </fieldset>
+
+    <fieldset class="mzp-c-field-set">
+      <legend class="mzp-c-field-label">Choices <span class="mzp-c-fieldnote">(in this case checkboxes)</span></legend>
+      <div class="mzp-c-choices">
+        <div class="mzp-c-choice ">
+  <input class="mzp-c-choice-control" type="checkbox" name="" id="s-check-1" value=""   >
+  <label class="mzp-c-choice-label " for="s-check-1">Option 1</label>
+  
+  
+</div>
+
+
+        <div class="mzp-c-choice ">
+  <input class="mzp-c-choice-control" type="checkbox" name="" id="s-check-2" value=""   >
+  <label class="mzp-c-choice-label " for="s-check-2">Option 2</label>
+  
+  
+</div>
+
+
+      </div>
+      <div class="mzp-c-field-set-msg">Message for this group of choices</div>
+      <p class="mzp-c-field-set-info">Details for this set of choices.</p>
+    </fieldset>
+
+    <fieldset class="mzp-c-field-set">
+      <div class="mzp-c-choice ">
+  <input class="mzp-c-choice-control" type="checkbox" name="" id="s-terms5" value=""   >
+  <label class="mzp-c-choice-label " for="s-terms5">Single checkbox</label>
+  <div class="mzp-c-choice-msg">Message for this single checkbox</div>
+  
+</div>
+
+
+      <div class="mzp-c-choice ">
+  <input class="mzp-c-choice-control" type="checkbox" name="" id="s-terms4" value=""   >
+  <label class="mzp-c-choice-label  mzp-t-sm" for="s-terms4">I agree to the <a href="#">privacy policy</a> <span class="mzp-c-fieldnote">You must agree to our privacy policy before we can add you to the newsletter.</span></label>
+  
+  
+</div>
+
+
+    </fieldset>
+
+    <div class="mzp-c-form-footer">
+      <div class="mzp-c-button-container">
+        <button type="button" class="mzp-c-button" disabled>Submit</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+
+
+    
+    </div>
+  </body>
+</html>

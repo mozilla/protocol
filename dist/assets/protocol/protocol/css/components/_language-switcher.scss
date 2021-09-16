@@ -1,0 +1,37 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+.mzp-c-language-switcher {
+    color: inherit;
+    font-weight: bold;
+
+    label,
+    .mzp-c-language-switcher-link {
+        @include bidi(((margin, 0 $spacing-lg $spacing-sm 0, 0 0 $spacing-sm $spacing-lg),));
+        @include text-body-sm;
+        display: inline-block;
+    }
+
+    // hide the <label> visually should a language link be shown instead.
+    .mzp-c-language-switcher-link + label {
+        @include visually-hidden;
+    }
+
+    select {
+        @include text-body-xs;
+        min-width: 0;
+    }
+
+    button {
+        @include text-body-sm;
+        margin-top: $spacing-sm;
+    }
+
+    // form submit button is shown when JS is not enabled.
+    .js & button {
+        display: none;
+    }
+}

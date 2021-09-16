@@ -1,0 +1,59 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+// Firefox brand theme example
+
+$brand-theme: 'firefox';
+
+@import '../protocol/includes/lib';
+@import '../docs/protocol';
+@import '../protocol/components/button';
+
+
+.title {
+    @include text-title-xl;
+}
+
+.background-alt {
+    background: get-theme('background-color-alt');
+    padding: $spacing-md;
+}
+
+.background-inverse {
+    @include light-links;
+    background: get-theme('background-color-inverse');
+    color: get-theme('body-text-color-inverse');
+    padding: $spacing-md;
+}
+
+.background-alt-inverse {
+    @include light-links;
+    background: get-theme('background-color-alt-inverse');
+    color: get-theme('body-text-color-alt-inverse');
+    padding: $spacing-md;
+}
+
+.text-alt {
+    color: get-theme('body-text-color-alt');
+}
+
+.body-xl {
+    @include text-body-xl;
+}
+
+.body-lg {
+    @include text-body-lg;
+}
+
+.body-md {
+    @include text-body-md;
+}
+
+.body-sm {
+    @include text-body-sm;
+}
+
+.body-xs {
+    @include text-body-xs;
+}

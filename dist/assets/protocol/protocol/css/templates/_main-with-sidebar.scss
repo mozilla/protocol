@@ -1,0 +1,66 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+// Template - main content with sidebar
+@media #{$mq-md} {
+    .mzp-has-sidebar {
+        .mzp-l-main {
+            @include grid-two-thirds;
+        }
+
+        .mzp-l-sidebar {
+            @include grid-third;
+        }
+
+        &.mzp-l-sidebar-left {
+            .mzp-l-main {
+                @include bidi((
+                    (float, right, left),
+                    (padding-left, $spacing-md, 0),
+                    (padding-right, 0, $spacing-md)
+                ));
+            }
+
+            .mzp-l-sidebar {
+                @include bidi((
+                    (float, left, right),
+                    (padding-right, $spacing-md, 0),
+                    (padding-left, 0, $spacing-md)
+                ));
+            }
+        }
+
+        &.mzp-l-sidebar-right {
+            .mzp-l-main {
+                @include bidi((
+                    (float, left, right),
+                    (padding-right, $spacing-md, 0),
+                    (padding-left, 0, $spacing-md)
+                ));
+            }
+
+            .mzp-l-sidebar {
+                @include bidi((
+                    (float, right, left),
+                    (padding-left, $spacing-md, 0),
+                    (padding-right, 0, $spacing-md)
+                ));
+            }
+        }
+    }
+}
+
+@media #{$mq-lg} {
+    .mzp-has-sidebar {
+        .mzp-l-main {
+            @include grid-three-quarters;
+        }
+
+        .mzp-l-sidebar {
+            @include grid-quarter;
+        }
+    }
+}

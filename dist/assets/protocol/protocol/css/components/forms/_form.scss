@@ -1,0 +1,106 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+@import '../../includes/forms/lib';
+
+
+// Basic atoms that make up a form:
+// - form
+//     - form
+//     - form-header
+//     - form-title
+//     - form-footer
+
+
+.mzp-c-form {
+    color: $form-text;
+    margin-bottom: $field-v-spacing;
+
+    &.mzp-t-dark,
+    .mzp-t-dark & {
+        color: get-theme('body-text-color-alt-inverse');
+    }
+
+    // if we're using the form component bottom spacing comes from `field` and `choice` components
+    fieldset {
+        margin-bottom: 0;
+    }
+}
+
+
+// Header
+.mzp-c-form-header {
+    margin-bottom: $spacing-lg;
+
+    > * {
+        margin-bottom: 0;
+
+        + * {
+            margin-top: $info-v-spacing;
+        }
+    }
+}
+
+
+// Footer
+.mzp-c-form-footer {
+    padding-top: $spacing-xl - $field-v-spacing;
+
+    > * {
+        margin-bottom: 0;
+
+        + * {
+            margin-top: $info-v-spacing;
+        }
+    }
+}
+
+
+// Title
+.mzp-c-form-title,
+legend.mzp-c-form-title {
+    @include text-title-xs;
+    color: get-theme('title-text-color');
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+    margin: 0 0 $spacing-lg 0;
+
+    .mzp-c-form-header > & {
+        margin-bottom: 0;
+    }
+
+    .mzp-t-dark & {
+        color: get-theme('title-text-color-inverse');
+    }
+}
+
+
+// Subtitle
+.mzp-c-form-subtitle,
+legend.mzp-c-form-subtitle {
+    @include text-body-lg;
+    font-weight: bold;
+    margin-bottom: $field-v-spacing;
+}
+
+legend.mzp-c-form-title,
+legend.mzp-c-form-subtitle {
+    float: left;
+    width: 100%;
+}
+
+
+// Info
+.mzp-c-form-info {
+    @include form-info;
+
+    &.mzp-t-xs {
+        @include text-body-xs;
+    }
+
+    .mzp-c-form-msg + & {
+        padding-top: $spacing-xs;
+    }
+}

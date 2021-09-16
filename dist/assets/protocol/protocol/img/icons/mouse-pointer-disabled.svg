@@ -1,0 +1,10 @@
+<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g transform="translate(1.000000, 1.000000)" stroke="#000000" stroke-width="2">
+            <path d="M22,4.05009359e-13 L1.7408297e-13,22" stroke-linejoin="round"></path>
+            <polyline stroke-linejoin="round" points="7.5 14 3 3 14 7.5"></polyline>
+            <polyline stroke-linejoin="round" points="9 17.5 10 20 13.5 13.5 20 10 17.5 9"></polyline>
+            <path d="M13.5,13.5 L19,19"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,128 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+html.mzp-is-noscroll {
+    overflow: hidden;
+    height: 100%;
+
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .mzp-c-modal {
+        position: absolute;
+    }
+
+    @media #{$mq-md} {
+        height: auto;
+
+        body {
+            height: auto;
+        }
+
+        .mzp-c-modal {
+            position: fixed;
+        }
+    }
+}
+
+.mzp-c-modal {
+    @include animation(mzp-a-fade-in 300ms ease-in 0ms 1 normal both);
+    background: $color-black;
+    background: rgba(0, 0, 0, .85);
+    bottom: 0;
+    height: 101%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+}
+
+.mzp-c-modal-window {
+    padding: $spacing-lg;
+}
+
+.mzp-c-modal-inner {
+    @include clearfix;
+    background: rgba(0, 0, 0, .9);
+    max-width: 1200px;
+    padding: $spacing-xl;
+    position: relative;
+
+    &> header {
+        @include bidi(((padding-right, $spacing-xl * 2, padding-left, 0),));
+
+        h2 {
+            @include text-title-xs;
+            @include font-base;
+            color: #fff;
+        }
+    }
+
+    @media #{$mq-lg} {
+        margin: $spacing-lg auto ($spacing-xl * 2);
+    }
+}
+
+.mzp-c-modal-close {
+    @include bidi(((right, $spacing-sm, left, auto),));
+    cursor: pointer;
+    position: absolute;
+    top: 9px;
+    z-index: 99;
+
+    .mzp-c-modal-button-close {
+        @include image-replaced;
+        background: transparent url('#{$image-path}/icons/close-white.svg') center center no-repeat;
+        @include background-size(20px 20px);
+        border: none;
+        height: 42px;
+        min-width: 0;
+        padding: 0;
+        width: 42px;
+
+        &:hover,
+        &:focus {
+            @include transition(transform .1s ease-in-out);
+            @include transform(scale(1.1));
+        }
+
+        &:focus {
+            outline: 1px dotted $color-white;
+        }
+    }
+}
+
+.mzp-c-modal-overlay-contents {
+    @include text-body-lg;
+    @include light-links;
+    background: transparent;
+    margin: 0 auto;
+    padding-top: $spacing-lg;
+    color: $color-white;
+}
+
+// Modifier for showing full content width media, such as images or video.
+.mzp-has-media .mzp-c-modal-overlay-contents {
+    img, video {
+        display: block;
+        width: 100%;
+        margin-bottom: $spacing-xl;
+    }
+}
+
+// Utility class for hiding content that is to be used in the modal.
+.js .mzp-u-modal-content {
+    display: none;
+}
+
+.js .mzp-c-modal-inner .mzp-u-modal-content {
+    display: block;
+}

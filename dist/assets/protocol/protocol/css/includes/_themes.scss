@@ -1,0 +1,223 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+// This file contains all the theme variables for both the Firefox and Mozilla
+// themes. Mixins and functions can draw from these variable maps, swapping to
+// a different map based on the value of the global $brand-theme variable.
+
+//* -------------------------------------------------------------------------- */
+// Vertical and Horizontal Spacing
+
+$theme-spacing: (
+    // xs
+    v-grid-xs: $layout-md,
+    h-grid-xs: $layout-xs,
+
+    // sm is the same as xs
+    v-grid-sm: $layout-md,
+    h-grid-sm: $layout-xs,
+
+    // md
+    v-grid-md: $layout-md,
+    h-grid-md: $layout-lg,
+
+    // lg is the same as md
+    v-grid-lg: $layout-md,
+    h-grid-lg: $layout-lg,
+
+    // xl
+    v-grid-xl: $layout-xl,
+    h-grid-xl: 80px,
+);
+
+
+//* -------------------------------------------------------------------------- */
+// Fonts
+
+$theme-fonts-firefox: (
+    body-font-family: $font-stack-base,
+    button-font-family: $font-stack-firefox,
+    title-font-family: $font-stack-firefox,
+);
+
+$theme-fonts-mozilla: (
+    body-font-family: $font-stack-base,
+    button-font-family: $font-stack-base,
+    title-font-family: $font-stack-mozilla,
+);
+
+
+//* -------------------------------------------------------------------------- */
+// Colors
+
+$theme-colors-firefox: (
+    background-color-alt-inverse: $color-ink-50,
+    background-color-alt: $color-light-gray-10,
+    background-color-inverse: $color-ink-80,
+    background-color: $color-white,
+    body-text-color-alt-inverse: $color-marketing-gray-30,
+    body-text-color-alt: $color-marketing-gray-70,
+    body-text-color-inverse: $color-white,
+    body-text-color: $color-marketing-gray-80,
+    link-color-hover-inverse: $color-blue-05,
+    link-color-hover: $color-link-hover,
+    link-color-inverse: $color-blue-10,
+    link-color-visited-hover-inverse: $color-violet-05,
+    link-color-visited-hover: $color-link-hover,
+    link-color-visited-inverse: $color-violet-10,
+    link-color-visited: $color-link-visited,
+    link-color: $color-link,
+    title-text-color-inverse: $color-white,
+    title-text-color: $color-marketing-gray-99,
+);
+
+$theme-colors-mozilla: (
+    background-color-alt-inverse: $color-dark-gray-60,
+    background-color-alt: $color-light-gray-10,
+    background-color-inverse: $color-black,
+    background-color: $color-white,
+    body-text-color-alt-inverse: $color-light-gray-30,
+    body-text-color-alt: $color-dark-gray-90,
+    body-text-color-inverse: $color-white,
+    body-text-color: $color-black,
+    link-color-hover-inverse: $color-blue-05,
+    link-color-hover: $color-link-hover,
+    link-color-inverse: $color-blue-10,
+    link-color-visited-hover-inverse: $color-violet-05,
+    link-color-visited-hover: $color-link-hover,
+    link-color-visited-inverse: $color-violet-10,
+    link-color-visited: $color-link-visited,
+    link-color: $color-link,
+    title-text-color-inverse: $color-white,
+    title-text-color: $color-black,
+);
+
+
+//* -------------------------------------------------------------------------- */
+// Type scale
+//
+// These values are used by the type-scale() function
+// defined in includes/functions/_typography.scss
+//
+// Avoid referencing these values directly; Use the function.
+
+$theme-type-scale-firefox: (
+    title-2xl-size: 64px,
+    title-2xl-line-height: 1.125,
+    title-xl-size: 56px,
+    title-xl-line-height: 1.143,
+    title-lg-size: 48px,
+    title-lg-line-height: 1.166,
+    title-md-size: 40px,
+    title-md-line-height: 1.1,
+    title-sm-size: 32px,
+    title-sm-line-height: 1.125,
+    title-xs-size: 24px,
+    title-xs-line-height: 1.166,
+    title-2xs-size: 20px,
+    title-2xs-line-height: 1.2,
+    title-3xs-size: 16px,
+    title-3xs-line-height: 1.25,
+    body-xl-size: 21px,
+    body-lg-size: 18px,
+    body-md-size: 16px,
+    body-sm-size: 14px,
+    body-xs-size: 12px,
+    body-line-height: 1.5,
+);
+
+$theme-type-scale-mozilla: (
+    title-2xl-size: 76px,
+    title-2xl-line-height: 1,
+    title-xl-size: 66px,
+    title-xl-line-height: 1,
+    title-lg-size: 56px,
+    title-lg-line-height: 1,
+    title-md-size: 48px,
+    title-md-line-height: 1,
+    title-sm-size: 38px,
+    title-sm-line-height: 1.05,
+    title-xs-size: 28px,
+    title-xs-line-height: 1.07,
+    title-2xs-size: 24px,
+    title-2xs-line-height: 1.08,
+    title-3xs-size: 18px,
+    title-3xs-line-height: 1.11,
+    body-xl-size: 21px,
+    body-lg-size: 18px,
+    body-md-size: 16px,
+    body-sm-size: 14px,
+    body-xs-size: 12px,
+    body-line-height: 1.5,
+);
+
+
+//* -------------------------------------------------------------------------- */
+// Condensed Type scale
+//
+// This smaller scale is primarily intended for web apps.
+// Use the standard type scale for marketing sites.
+
+// The type-scale() function draws from this map to output
+// different sizing based on the $type-scale variable.
+//
+// Avoid referencing these values directly.
+
+$theme-type-scale-condensed-firefox: (
+    title-2xl-size: 32px,
+    title-2xl-line-height: 1.125,
+    title-xl-size: 24px,
+    title-xl-line-height: 1.166,
+    title-lg-size: 21px,
+    title-lg-line-height: 1.2,
+    title-md-size: 18px,
+    title-md-line-height: 1.2,
+    title-sm-size: 16px,
+    title-sm-line-height: 1.25,
+    title-xs-size: 14px,
+    title-xs-line-height: 1.25,
+    title-2xs-size: 14px,
+    title-2xs-line-height: 1.25,
+    title-3xs-size: 14px,
+    title-3xs-line-height: 1.25,
+    body-xl-size: 18px,
+    body-lg-size: 16px,
+    body-md-size: 14px,
+    body-sm-size: 12px,
+    body-xs-size: 11px,
+    body-line-height: 1.5,
+);
+
+$theme-type-scale-condensed-mozilla: (
+    title-2xl-size: 34px,
+    title-2xl-line-height: 1,
+    title-xl-size: 26px,
+    title-xl-line-height: 1,
+    title-lg-size: 22px,
+    title-lg-line-height: 1,
+    title-md-size: 20px,
+    title-md-line-height: 1,
+    title-sm-size: 18px,
+    title-sm-line-height: 1,
+    title-xs-size: 16px,
+    title-xs-line-height: 1,
+    title-2xs-size: 14px,
+    title-2xs-line-height: 1,
+    title-3xs-size: 14px,
+    title-3xs-line-height: 1,
+    body-xl-size: 18px,
+    body-lg-size: 16px,
+    body-md-size: 14px,
+    body-sm-size: 12px,
+    body-xs-size: 11px,
+    body-line-height: 1.5,
+);
+
+
+// Collect the maps for easier reference, so you don't have to refer to a specific submap.
+// Usage:
+//    map-get($theme-firefox, 'background-color-alt');
+
+$theme-firefox: map-collect($theme-spacing, $theme-fonts-firefox, $theme-colors-firefox, $theme-type-scale-firefox);
+$theme-mozilla: map-collect($theme-spacing, $theme-fonts-mozilla, $theme-colors-mozilla, $theme-type-scale-mozilla);

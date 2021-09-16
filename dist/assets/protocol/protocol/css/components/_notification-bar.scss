@@ -1,0 +1,166 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import "../includes/lib";
+
+.mzp-c-notification-bar {
+    @include border-box;
+    @include clearfix;
+    @include text-body-sm;
+    background-color: $color-marketing-gray-20;
+    border-radius: $border-radius-sm;
+    border: 1px;
+    box-shadow: $box-shadow-md;
+    color: $color-ink-80;
+    font-weight: normal;
+    margin: $layout-xs $spacing-md 0;
+    padding: $spacing-md $spacing-2xl;
+    position: relative;
+    text-align: center;
+
+    @media #{$mq-sm} {
+        margin: $layout-xs auto 0;
+        max-width: $content-md;
+    }
+
+    p {
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    a:link,
+    a:visited {
+        color: inherit;
+        display: inline-block;
+        font-size: inherit;
+        font-weight: 700;
+        margin: 0 $spacing-sm;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    &.mzp-is-sticky {
+        left: $spacing-md;
+        margin: $spacing-md 0;
+        position: fixed;
+        right: $spacing-md;
+        z-index: 2;
+
+        @media #{$mq-sm} {
+            margin: $spacing-md auto;
+        }
+    }
+
+    .mzp-c-notification-bar-button {
+        @include bidi((
+            (right, 0, auto),
+            (left, auto, 0),
+        ));
+        @include image-replaced;
+        background: url("#{$image-path}/icons/close.svg") center center/20px 20px no-repeat;
+        border: 0;
+        height: 20px;
+        margin: $spacing-sm;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        width: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            border: 1px solid;
+        }
+
+        @media #{$mq-sm} {
+            @include bidi((
+                (float, right, left),
+                (border-radius, 0 $border-radius-sm $border-radius-sm 0, $border-radius-sm 0 0 $border-radius-sm),
+            ));
+            background-color: $color-marketing-gray-40;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 40px;
+            float: right;
+
+            &:hover,
+            &:focus {
+                background-color: $color-marketing-gray-50;
+                border: 0;
+            }
+        }
+    }
+
+    &.mzp-t-success {
+        background-color: $color-green-30;
+
+        @media #{$mq-sm} {
+            .mzp-c-notification-bar-button {
+                background-color: $color-green-60;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-green-70;
+                }
+            }
+        }
+    }
+
+    &.mzp-t-error {
+        background-color: $color-red-40;
+
+        @media #{$mq-sm} {
+            .mzp-c-notification-bar-button {
+                background-color: $color-red-60;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-red-70;
+                }
+            }
+        }
+    }
+
+    &.mzp-t-warning {
+        background-color: $color-yellow-20;
+
+        @media #{$mq-sm} {
+            .mzp-c-notification-bar-button {
+                background-color: $color-yellow-40;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-yellow-50;
+                }
+            }
+        }
+    }
+
+    &.mzp-t-click {
+        background-color: $color-blue-50;
+        color: $color-white;
+        font-weight: 600;
+
+        .mzp-c-notification-bar-button {
+            background-image: url("#{$image-path}/icons/close-white.svg");
+
+            @media #{$mq-sm} {
+                background-color: $color-blue-70;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-blue-80;
+                }
+            }
+        }
+    }
+}

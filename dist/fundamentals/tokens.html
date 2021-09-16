@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js ">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="../static/img/favicon.png">
+      <title>Tokens - Protocol Design System</title>
+      <script src="../assets/protocol/protocol/js/protocol-base.js"></script>
+      <script src="../assets/protocol/protocol/js/protocol-utils.js"></script>
+      <script src="../assets/protocol/protocol/js/protocol-supports.js"></script>
+      <link rel="stylesheet" href="../assets/docs/css/protocol.css">
+      <link rel="stylesheet" href="../assets/docs/css/protocol-components.css">
+      <link rel="stylesheet" href="../assets/docs/css/site.css">
+      <link rel="stylesheet" href="../assets/docs/css/prism.css">
+  </head>
+  <body class="">
+    <div class="protosite-page">
+    
+    <nav class="protosite-nav-main" id="protosite-nav-main">
+      <header class="protosite-nav-main-head">
+        <a href="https://www.mozilla.org">
+          <img class="protosite-nav-main-mozlogo" src="../assets/protocol/protocol/img/logos/mozilla/logo-word-hor-white.svg" width="100" alt="Mozilla">
+        </a>
+    
+        <a class="protosite-js-nav-toggle" href="#nav">Menu</a>
+      </header>
+    
+      <div class="protosite-nav-main-menu" id="protosite-nav-main-menu">
+        <ul>
+          <li class="protosite-nav-main-item">
+            <a href="..">Home</a>
+          </li>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../docs/index.html">
+                  Documentation
+                </a>
+          </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Fundamentals</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/principles.html">
+                  Design Principles
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/themes.html">
+                  Themes
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/typography.html">
+                  Typography
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/tokens.html">
+                  Tokens
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/color.html">
+                  Color
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../fundamentals/icons.html">
+                  
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Atoms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/typographic.html">
+                  Text
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/buttons.html">
+                  Buttons
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/links.html">
+                  Links
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/lists.html">
+                  Lists
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/logo.html">
+                  Logos &amp; Wordmarks
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/section-heading.html">
+                  Section Heading
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/atoms/zap.html">
+                  Zap
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Molecules</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/card.html">
+                  Cards
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/details.html">
+                  Details
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/download-button.html">
+                  Download Button
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/emphasis-box.html">
+                  Emphasis Box
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/feature-card.html">
+                  Feature Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/language-switcher.html">
+                  Language Switcher
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/menu-list.html">
+                  Menu List
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/menu.html">
+                  Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/notification-bar.html">
+                  Notification Bar
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/picto-card.html">
+                  Picto Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/picto.html">
+                  Picto
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/molecules/sticky-promo.html">
+                  Sticky Promo
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Organisms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/article.html">
+                  Article
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/billboard.html">
+                  Billboard
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/call-out.html">
+                  Call Out
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/footer.html">
+                  Footer
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/hero.html">
+                  Page Hero
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/modal.html">
+                  Modal
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/navigation.html">
+                  Navigation
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/newsletter.html">
+                  Newsletter
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/sidebar-menu.html">
+                  Sidebar Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/organisms/split.html">
+                  Split
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Templates</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/templates/card-layout.html">
+                  Card Layout
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/templates/columns.html">
+                  Columns
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/templates/content-container.html">
+                  Content Container
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/templates/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../patterns/templates/main-with-sidebar.html">
+                  Main With Sidebar
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Other Stuff</h4>
+        <ul>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../demos/index.html">
+                  Demos
+                </a>
+          </li>
+          <li class="protosite-nav-main-item">
+            <a href="https://github.com/mozilla/protocol" target="_blank" rel="noopener noreferrer">
+              Repo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="protosite-main">
+      <header class="protosite-page-head">
+        <h1 class="protosite-page-title">
+          Tokens
+        </h1>
+
+      </header>
+
+    <p>A complete list of Protocol tokens and their values. The source code for all tokens can be <a href="https://github.com/mozilla/protocol-tokens">found here</a>.</p>
+
+<table class="protosite-token-list">
+  <thead>
+    <tr>
+      <th scope="col"><strong>Name</strong></th>
+      <th scope="col"><strong>Value</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-scss">$border-radius-xs</code></td>
+      <td><code class="language-css">2px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$border-radius-sm</code></td>
+      <td><code class="language-css">4px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$border-radius-md</code></td>
+      <td><code class="language-css">8px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$border-radius-lg</code></td>
+      <td><code class="language-css">16px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$box-shadow-sm</code></td>
+      <td><code class="language-css">0 8px 12px 1px rgba(29, 17, 51, .04), 0 3px 16px 2px rgba(9, 32, 77, .12), 0 5px 10px -3px rgba(29, 17, 51, .12)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$box-shadow-md</code></td>
+      <td><code class="language-css">0 16px 24px 2px rgba(29, 17, 51, .04), 0 6px 32px 4px rgba(9, 32, 77, .12), 0 8px 12px -5px rgba(29, 17, 51, .12)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$box-shadow-lg</code></td>
+      <td><code class="language-css">0 24px 38px 3px rgba(29, 17, 51, .04), 0 10px 48px 8px rgba(9, 32, 77, .12), 0 12px 16px -6px rgba(29, 17, 51, .12)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-green-05</code></td>
+      <td><code class="language-css">#e3fff3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-green-10</code></td>
+      <td><code class="language-css">#d1ffee</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-green-20</code></td>
+      <td><code class="language-css">#b3ffe3</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-green-30</code></td>
+      <td><code class="language-css">#88ffd1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-green-40</code></td>
+      <td><code class="language-css">#54ffbd</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-green-50</code></td>
+      <td><code class="language-css">#3fe1b0</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-green-60</code></td>
+      <td><code class="language-css">#2ac3a2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-green-70</code></td>
+      <td><code class="language-css">#008787</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-green-80</code></td>
+      <td><code class="language-css">#005e5e</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-green-90</code></td>
+      <td><code class="language-css">#08403f</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-blue-05</code></td>
+      <td><code class="language-css">#aaf2ff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-blue-10</code></td>
+      <td><code class="language-css">#80ebff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-blue-20</code></td>
+      <td><code class="language-css">#00ddff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-blue-30</code></td>
+      <td><code class="language-css">#00b3f4</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-blue-40</code></td>
+      <td><code class="language-css">#0090ed</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-blue-50</code></td>
+      <td><code class="language-css">#0060df</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-blue-60</code></td>
+      <td><code class="language-css">#0250bb</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-blue-70</code></td>
+      <td><code class="language-css">#054096</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-blue-80</code></td>
+      <td><code class="language-css">#073072</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-blue-90</code></td>
+      <td><code class="language-css">#09204d</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-violet-05</code></td>
+      <td><code class="language-css">#e7dfff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-violet-10</code></td>
+      <td><code class="language-css">#d9bfff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-violet-20</code></td>
+      <td><code class="language-css">#cb9eff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-violet-30</code></td>
+      <td><code class="language-css">#c689ff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-violet-40</code></td>
+      <td><code class="language-css">#ab71ff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-violet-50</code></td>
+      <td><code class="language-css">#9059ff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-violet-60</code></td>
+      <td><code class="language-css">#7542e5</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-violet-70</code></td>
+      <td><code class="language-css">#592acb</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-violet-80</code></td>
+      <td><code class="language-css">#45278d</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-violet-90</code></td>
+      <td><code class="language-css">#321c64</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-purple-05</code></td>
+      <td><code class="language-css">#f7e2ff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-purple-10</code></td>
+      <td><code class="language-css">#f6b8ff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-purple-20</code></td>
+      <td><code class="language-css">#f68fff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-purple-30</code></td>
+      <td><code class="language-css">#f770ff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-purple-40</code></td>
+      <td><code class="language-css">#d74cf0</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-purple-50</code></td>
+      <td><code class="language-css">#b833e1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-purple-60</code></td>
+      <td><code class="language-css">#952bb9</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-purple-70</code></td>
+      <td><code class="language-css">#722291</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-purple-80</code></td>
+      <td><code class="language-css">#4e1a69</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-purple-90</code></td>
+      <td><code class="language-css">#2b1141</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-pink-05</code></td>
+      <td><code class="language-css">#ffdef0</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-pink-10</code></td>
+      <td><code class="language-css">#ffb4db</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-pink-20</code></td>
+      <td><code class="language-css">#ff8ac5</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-pink-30</code></td>
+      <td><code class="language-css">#ff6bba</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-pink-40</code></td>
+      <td><code class="language-css">#ff4aa2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-pink-50</code></td>
+      <td><code class="language-css">#ff298a</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-pink-60</code></td>
+      <td><code class="language-css">#e31587</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-pink-70</code></td>
+      <td><code class="language-css">#c60084</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-pink-80</code></td>
+      <td><code class="language-css">#7f145b</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-pink-90</code></td>
+      <td><code class="language-css">#50134b</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-red-05</code></td>
+      <td><code class="language-css">#ffdfe7</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-red-10</code></td>
+      <td><code class="language-css">#ffbdc5</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-red-20</code></td>
+      <td><code class="language-css">#ff9aa2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-red-30</code></td>
+      <td><code class="language-css">#ff848b</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-red-40</code></td>
+      <td><code class="language-css">#ff6a75</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-red-50</code></td>
+      <td><code class="language-css">#ff4f5e</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-red-60</code></td>
+      <td><code class="language-css">#e22850</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-red-70</code></td>
+      <td><code class="language-css">#c50042</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-red-80</code></td>
+      <td><code class="language-css">#810220</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-red-90</code></td>
+      <td><code class="language-css">#440306</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-orange-05</code></td>
+      <td><code class="language-css">#fff4de</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-orange-10</code></td>
+      <td><code class="language-css">#ffd5b2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-orange-20</code></td>
+      <td><code class="language-css">#ffb587</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-orange-30</code></td>
+      <td><code class="language-css">#ffa266</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-orange-40</code></td>
+      <td><code class="language-css">#ff8a50</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-orange-50</code></td>
+      <td><code class="language-css">#ff7139</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-orange-60</code></td>
+      <td><code class="language-css">#e25920</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-orange-70</code></td>
+      <td><code class="language-css">#cc3d00</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-orange-80</code></td>
+      <td><code class="language-css">#9e280b</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-orange-90</code></td>
+      <td><code class="language-css">#7c1504</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-yellow-05</code></td>
+      <td><code class="language-css">#ffffcc</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-yellow-10</code></td>
+      <td><code class="language-css">#ffff98</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-yellow-20</code></td>
+      <td><code class="language-css">#ffea80</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-yellow-30</code></td>
+      <td><code class="language-css">#ffd567</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-yellow-40</code></td>
+      <td><code class="language-css">#ffbd4f</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-yellow-50</code></td>
+      <td><code class="language-css">#ffa436</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-yellow-60</code></td>
+      <td><code class="language-css">#e27f2e</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-yellow-70</code></td>
+      <td><code class="language-css">#c45a27</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-yellow-80</code></td>
+      <td><code class="language-css">#a7341f</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-yellow-90</code></td>
+      <td><code class="language-css">#960e18</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-light-gray-05</code></td>
+      <td><code class="language-css">#ffffff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-light-gray-10</code></td>
+      <td><code class="language-css">#f9f9fb</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-light-gray-20</code></td>
+      <td><code class="language-css">#f0f0f4</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-light-gray-30</code></td>
+      <td><code class="language-css">#e0e0e6</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-light-gray-40</code></td>
+      <td><code class="language-css">#cfcfd8</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-light-gray-50</code></td>
+      <td><code class="language-css">#bfbfc9</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-light-gray-60</code></td>
+      <td><code class="language-css">#afafba</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-light-gray-70</code></td>
+      <td><code class="language-css">#9f9fad</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-light-gray-80</code></td>
+      <td><code class="language-css">#8f8f9e</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-light-gray-90</code></td>
+      <td><code class="language-css">#80808f</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-dark-gray-05</code></td>
+      <td><code class="language-css">#5b5b66</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-dark-gray-10</code></td>
+      <td><code class="language-css">#52525e</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-dark-gray-20</code></td>
+      <td><code class="language-css">#4a4a55</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-dark-gray-30</code></td>
+      <td><code class="language-css">#42414d</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-dark-gray-40</code></td>
+      <td><code class="language-css">#3a3944</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-dark-gray-50</code></td>
+      <td><code class="language-css">#32313c</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-dark-gray-60</code></td>
+      <td><code class="language-css">#2b2a33</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-dark-gray-70</code></td>
+      <td><code class="language-css">#23222b</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-dark-gray-80</code></td>
+      <td><code class="language-css">#1c1b22</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-dark-gray-90</code></td>
+      <td><code class="language-css">#15141a</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-marketing-gray-10</code></td>
+      <td><code class="language-css">#f9f9fa</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-marketing-gray-20</code></td>
+      <td><code class="language-css">#ededf0</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-marketing-gray-30</code></td>
+      <td><code class="language-css">#cdcdd4</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-marketing-gray-40</code></td>
+      <td><code class="language-css">#b1b1bc</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-marketing-gray-50</code></td>
+      <td><code class="language-css">#9595a2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-marketing-gray-60</code></td>
+      <td><code class="language-css">#7a7a8b</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-marketing-gray-70</code></td>
+      <td><code class="language-css">#5e5e72</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-marketing-gray-80</code></td>
+      <td><code class="language-css">#42425a</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-marketing-gray-90</code></td>
+      <td><code class="language-css">#1f2033</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-marketing-gray-99</code></td>
+      <td><code class="language-css">#20123a</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-ink-05</code></td>
+      <td><code class="language-css">#393473</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-ink-10</code></td>
+      <td><code class="language-css">#342f6d</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-ink-20</code></td>
+      <td><code class="language-css">#312a64</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-ink-30</code></td>
+      <td><code class="language-css">#2e255d</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-ink-40</code></td>
+      <td><code class="language-css">#2b2156</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-ink-50</code></td>
+      <td><code class="language-css">#291d4f</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-ink-60</code></td>
+      <td><code class="language-css">#271948</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-ink-70</code></td>
+      <td><code class="language-css">#241541</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-ink-80</code></td>
+      <td><code class="language-css">#20123a</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-ink-90</code></td>
+      <td><code class="language-css">#1d1133</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-black</code></td>
+      <td><code class="language-css">#000000</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-white</code></td>
+      <td><code class="language-css">#ffffff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-link</code></td>
+      <td><code class="language-css">#0060df</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-link-hover</code></td>
+      <td><code class="language-css">#0250bb</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-link-visited</code></td>
+      <td><code class="language-css">#b833e1</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-link-visited-hover</code></td>
+      <td><code class="language-css">#952bb9</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-moz-neon-blue</code></td>
+      <td><code class="language-css">#00ffff</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-moz-lemon-yellow</code></td>
+      <td><code class="language-css">#fff44f</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-moz-warm-red</code></td>
+      <td><code class="language-css">#ff4f5e</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-moz-neon-green</code></td>
+      <td><code class="language-css">#54ffbd</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-moz-dark-purple</code></td>
+      <td><code class="language-css">#6e008b</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-moz-dark-green</code></td>
+      <td><code class="language-css">#005e5e</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-moz-dark-blue</code></td>
+      <td><code class="language-css">#00458b</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-moz-dark-gray</code></td>
+      <td><code class="language-css">#959595</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$color-moz-light-gray</code></td>
+      <td><code class="language-css">#e7e5e2</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$content-xs</code></td>
+      <td><code class="language-css">304px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$content-sm</code></td>
+      <td><code class="language-css">432px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$content-md</code></td>
+      <td><code class="language-css">688px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$content-lg</code></td>
+      <td><code class="language-css">928px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$content-xl</code></td>
+      <td><code class="language-css">1152px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$content-max</code></td>
+      <td><code class="language-css">1440px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$screen-xs</code></td>
+      <td><code class="language-css">320px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$screen-sm</code></td>
+      <td><code class="language-css">480px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$screen-md</code></td>
+      <td><code class="language-css">768px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$screen-lg</code></td>
+      <td><code class="language-css">1024px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$screen-xl</code></td>
+      <td><code class="language-css">1312px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$font-stack-base</code></td>
+      <td><code class="language-css">Inter, X-LocaleSpecific, sans-serif</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$font-stack-firefox</code></td>
+      <td><code class="language-css">Metropolis, Inter, X-LocaleSpecific, sans-serif</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$font-stack-mozilla</code></td>
+      <td><code class="language-css">&amp;#x27;Zilla Slab&amp;#x27;, Inter, X-LocaleSpecific, sans-serif</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$font-stack-mono</code></td>
+      <td><code class="language-css">Consolas, Monaco, &amp;#x27;Andale Mono&amp;#x27;, &amp;#x27;Ubuntu Mono&amp;#x27;, monospace</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$gradient-warm</code></td>
+      <td><code class="language-css">linear-gradient(45deg, #F5156C, #FF3750, #FF4F5E, #FF7139, #FF980E)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$gradient-cool</code></td>
+      <td><code class="language-css">linear-gradient(90deg, #3A8EE6, #9059FF, #C139E6)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$gradient-highlight</code></td>
+      <td><code class="language-css">linear-gradient(90deg, #FFFFFF, #FFF44F)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$mq-xs</code></td>
+      <td><code class="language-css">(min-width: 320px)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$mq-sm</code></td>
+      <td><code class="language-css">(min-width: 480px)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$mq-md</code></td>
+      <td><code class="language-css">(min-width: 768px)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$mq-lg</code></td>
+      <td><code class="language-css">(min-width: 1024px)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$mq-xl</code></td>
+      <td><code class="language-css">(min-width: 1312px)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$mq-short</code></td>
+      <td><code class="language-css">(max-height: 599px)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$mq-tall</code></td>
+      <td><code class="language-css">(min-height: 600px)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$mq-high-res</code></td>
+      <td><code class="language-css">only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$spacing-xs</code></td>
+      <td><code class="language-css">4px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$spacing-sm</code></td>
+      <td><code class="language-css">8px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$spacing-md</code></td>
+      <td><code class="language-css">16px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$spacing-lg</code></td>
+      <td><code class="language-css">24px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$spacing-xl</code></td>
+      <td><code class="language-css">32px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$spacing-2xl</code></td>
+      <td><code class="language-css">48px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$layout-2xs</code></td>
+      <td><code class="language-css">16px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$layout-xs</code></td>
+      <td><code class="language-css">24px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$layout-sm</code></td>
+      <td><code class="language-css">32px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$layout-md</code></td>
+      <td><code class="language-css">48px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$layout-lg</code></td>
+      <td><code class="language-css">64px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$layout-xl</code></td>
+      <td><code class="language-css">96px</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-scss">$layout-2xl</code></td>
+      <td><code class="language-css">192px</code></td>
+    </tr>
+  </tbody>
+</table>
+
+    </main>
+
+        <script src="../assets/docs/js/docs.js"></script>
+
+    </div>
+  </body>
+</html>

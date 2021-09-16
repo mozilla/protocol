@@ -1,0 +1,65 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+//* -------------------------------------------------------------------------- */
+// Link styles demo
+
+@import '../protocol/includes/lib';
+@import '../docs/protocol';
+@import '../docs/protocol-components';
+
+
+span[class^='link'],
+span[class^='visited'] {
+    cursor: pointer;
+}
+
+.link {
+    color: get-theme('link-color');
+    text-decoration: underline;
+
+    &:hover {
+        color: get-theme('link-color-hover');
+    }
+
+    &:active {
+        background-color: $color-light-gray-30;
+    }
+}
+
+.visited {
+    color: get-theme('link-color-visited');
+    text-decoration: underline;
+
+    &:hover {
+        color: get-theme('link-color-visited-hover');
+    }
+}
+
+.link-hover {
+    color: get-theme('link-color-visited');
+    text-decoration: underline;
+}
+
+.link-active {
+    color: get-theme('link-color');
+    background-color: rgba(0, 0, 0, .05);
+    text-decoration: underline;
+}
+
+.visited {
+    color: get-theme('link-color-visited');
+    text-decoration: underline;
+}
+
+.visited-hover {
+    color: get-theme('link-color-visited-hover');
+    text-decoration: underline;
+}
+
+.visited-active {
+    background-color: rgba(0, 0, 0, .05);
+    color: get-theme('link-color-visited');
+    text-decoration: underline;
+}

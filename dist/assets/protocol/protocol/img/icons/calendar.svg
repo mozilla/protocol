@@ -1,0 +1,18 @@
+<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g transform="translate(2.000000, 1.000000)" stroke="#000000" stroke-width="2">
+            <rect stroke-linejoin="round" x="0" y="2" width="20" height="20" rx="2"></rect>
+            <path d="M5,0 L5,4"></path>
+            <path d="M15,0 L15,4"></path>
+            <path d="M4,9 L6,9"></path>
+            <path d="M9,9 L11,9"></path>
+            <path d="M14,9 L16,9"></path>
+            <path d="M4,13 L6,13"></path>
+            <path d="M9,13 L11,13"></path>
+            <path d="M14,13 L16,13"></path>
+            <path d="M4,17 L6,17"></path>
+            <path d="M9,17 L11,17"></path>
+            <path d="M14,17 L16,17"></path>
+        </g>
+    </g>
+</svg>

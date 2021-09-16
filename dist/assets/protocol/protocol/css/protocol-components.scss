@@ -1,0 +1,78 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+// This file imports all Protocol components, compiled to protocol-components.css
+// You probably shouldn't use this, and should instead compile Protocol
+// yourself and only import the components you need. But this makes all
+// components available if you don't have the ability to compile Protocol
+// from source.
+
+
+// Default media paths can be overwritten globally.
+$image-path: '../img' !default;
+
+@import 'components/article';
+@import 'components/split';
+@import 'components/billboard';
+@import 'components/button';
+@import 'components/call-out';
+@import 'components/emphasis-box';
+@import 'components/feature-card';
+@import 'components/forms/button-container';
+@import 'components/forms/choice';
+@import 'components/forms/field';
+@import 'components/forms/form';
+@import 'components/forms/msg';
+@import 'components/forms/set';
+@import 'components/forms/status';
+@import 'components/hero';
+@import 'components/inline-list';
+@import 'components/logos/logo';
+@import 'components/logos/wordmark';
+@import 'components/menu-list';
+@import 'components/modal';
+@import 'components/newsletter-form';
+@import 'components/notification-bar';
+@import 'components/picto';
+@import 'components/picto-card';
+@import 'components/section-heading';
+@import 'components/sidebar-menu';
+@import 'components/sticky-promo';
+@import 'components/zap';
+@import 'templates/card-layout';
+@import 'templates/main-with-sidebar';
+
+@import 'templates/multi-column';
+
+// logos
+@import 'components/logos/logo-product-firefox';
+@import 'components/logos/logo-product-beta';
+@import 'components/logos/logo-product-developer';
+@import 'components/logos/logo-product-nightly';
+@import 'components/logos/logo-product-focus';
+
+@import 'components/logos/logo-product-family';
+@import 'components/logos/logo-product-lockwise';
+@import 'components/logos/logo-product-monitor';
+
+@import 'components/logos/logo-product-mozilla';
+@import 'components/logos/logo-product-vpn';
+@import 'components/logos/logo-product-pocket';
+
+// wordmarks
+
+@import 'components/logos/wordmark-product-firefox';
+@import 'components/logos/wordmark-product-beta';
+@import 'components/logos/wordmark-product-developer';
+@import 'components/logos/wordmark-product-nightly';
+@import 'components/logos/wordmark-product-focus';
+
+@import 'components/logos/wordmark-product-family';
+@import 'components/logos/wordmark-product-lockwise';
+@import 'components/logos/wordmark-product-monitor';
+
+@import 'components/logos/wordmark-product-mozilla';
+@import 'components/logos/wordmark-product-vpn';
+@import 'components/logos/wordmark-product-pocket';

@@ -1,0 +1,124 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+// Form
+.mzp-c-newsletter-form {
+    input[type='email'],
+    select {
+        width: 100%;
+    }
+
+    .mzp-c-form-submit {
+        text-align: center;
+    }
+
+    .mzp-c-button {
+        margin-bottom: $spacing-sm;
+        width: 100%;
+    }
+
+    // Hide errors
+    .mzp-c-form-errors {
+        @include hidden;
+    }
+}
+
+.mzp-c-newsletter-title {
+    @include text-title-md;
+    margin-bottom: .25em;
+}
+
+.mzp-c-newsletter-image {
+    margin-bottom: $spacing-lg;
+    text-align: center;
+}
+
+
+// Hide thank you message
+.mzp-c-newsletter-thanks {
+    @include hidden;
+}
+
+
+// hide details for JS users
+// (displayed when email field is focused)
+.js .mzp-c-newsletter-details {
+    @include hidden;
+}
+
+
+// Form wrapper with image
+.mzp-c-newsletter {
+    margin: 0 auto;
+    max-width: $content-sm;
+    padding: $spacing-lg 0;
+
+    // No top padding when it's at the top of a container
+    .mzp-l-content > &:first-child {
+        padding-top: 0;
+    }
+
+    // No bottom padding when it's at the bottom of a container
+    .mzp-l-content > &:last-child {
+        padding-bottom: 0;
+    }
+
+    @media #{$mq-md} {
+        @include clearfix;
+        padding: get-theme('h-grid-md') get-theme('v-grid-lg');
+        max-width: none;
+
+        .mzp-c-newsletter-image {
+            @include grid-half;
+            float: left;
+        }
+
+        .mzp-c-newsletter-form,
+        .mzp-c-newsletter-thanks {
+            @include grid-half;
+            float: right;
+            padding-top: $layout-md;
+        }
+
+        @supports (display: grid) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &:after { // Remove the clearfix
+                display: none;
+            }
+
+            .mzp-c-newsletter-image,
+            .mzp-c-newsletter-form,
+            .mzp-c-newsletter-thanks {
+                width: auto;
+                float: none;
+            }
+
+            .mzp-c-newsletter-image {
+                grid-column: 1;
+            }
+
+            .mzp-c-newsletter-form,
+            .mzp-c-newsletter-thanks {
+                grid-column: 2;
+            }
+        }
+    }
+
+    @media #{$mq-lg} {
+        padding: get-theme('h-grid-lg') $layout-2xl;
+
+        .mzp-c-newsletter-form,
+        .mzp-c-newsletter-thanks {
+            padding-top: $layout-lg;
+        }
+    }
+
+    @media #{$mq-xl} {
+        padding: get-theme('h-grid-xl') $layout-2xl;
+    }
+}

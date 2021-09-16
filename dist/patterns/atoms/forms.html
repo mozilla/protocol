@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js ">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="../../static/img/favicon.png">
+      <title>Forms - Protocol Design System</title>
+      <script src="../../assets/protocol/protocol/js/protocol-base.js"></script>
+      <script src="../../assets/protocol/protocol/js/protocol-utils.js"></script>
+      <script src="../../assets/protocol/protocol/js/protocol-supports.js"></script>
+      <link rel="stylesheet" href="../../assets/docs/css/protocol.css">
+      <link rel="stylesheet" href="../../assets/docs/css/protocol-components.css">
+      <link rel="stylesheet" href="../../assets/docs/css/site.css">
+      <link rel="stylesheet" href="../../assets/docs/css/prism.css">
+  </head>
+  <body class="">
+    <div class="protosite-page">
+    
+    <nav class="protosite-nav-main" id="protosite-nav-main">
+      <header class="protosite-nav-main-head">
+        <a href="https://www.mozilla.org">
+          <img class="protosite-nav-main-mozlogo" src="../../assets/protocol/protocol/img/logos/mozilla/logo-word-hor-white.svg" width="100" alt="Mozilla">
+        </a>
+    
+        <a class="protosite-js-nav-toggle" href="#nav">Menu</a>
+      </header>
+    
+      <div class="protosite-nav-main-menu" id="protosite-nav-main-menu">
+        <ul>
+          <li class="protosite-nav-main-item">
+            <a href="../..">Home</a>
+          </li>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../docs/index.html">
+                  Documentation
+                </a>
+          </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Fundamentals</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/principles.html">
+                  Design Principles
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/themes.html">
+                  Themes
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/typography.html">
+                  Typography
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/tokens.html">
+                  Tokens
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/color.html">
+                  Color
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../fundamentals/icons.html">
+                  
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Atoms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/typographic.html">
+                  Text
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/buttons.html">
+                  Buttons
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/links.html">
+                  Links
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/lists.html">
+                  Lists
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/logo.html">
+                  Logos &amp; Wordmarks
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/section-heading.html">
+                  Section Heading
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/atoms/zap.html">
+                  Zap
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Molecules</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/card.html">
+                  Cards
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/details.html">
+                  Details
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/download-button.html">
+                  Download Button
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/emphasis-box.html">
+                  Emphasis Box
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/feature-card.html">
+                  Feature Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/language-switcher.html">
+                  Language Switcher
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/menu-list.html">
+                  Menu List
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/menu.html">
+                  Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/notification-bar.html">
+                  Notification Bar
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/picto-card.html">
+                  Picto Card
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/picto.html">
+                  Picto
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/molecules/sticky-promo.html">
+                  Sticky Promo
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Organisms</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/article.html">
+                  Article
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/billboard.html">
+                  Billboard
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/call-out.html">
+                  Call Out
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/footer.html">
+                  Footer
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/hero.html">
+                  Page Hero
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/modal.html">
+                  Modal
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/navigation.html">
+                  Navigation
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/newsletter.html">
+                  Newsletter
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/sidebar-menu.html">
+                  Sidebar Menu
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/organisms/split.html">
+                  Split
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Templates</h4>
+        <ul>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/card-layout.html">
+                  Card Layout
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/columns.html">
+                  Columns
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/content-container.html">
+                  Content Container
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/forms.html">
+                  Forms
+                </a>
+            </li>
+            <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../patterns/templates/main-with-sidebar.html">
+                  Main With Sidebar
+                </a>
+            </li>
+        </ul>
+    
+        <h4 class="protosite-nav-menu-title">Other Stuff</h4>
+        <ul>
+          <li class="protosite-nav-main-item">
+                <a class="protosite-nav-main-link" href="../../demos/index.html">
+                  Demos
+                </a>
+          </li>
+          <li class="protosite-nav-main-item">
+            <a href="https://github.com/mozilla/protocol" target="_blank" rel="noopener noreferrer">
+              Repo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="protosite-main">
+      <header class="protosite-page-head">
+        <h1 class="protosite-page-title">
+          Forms
+        </h1>
+
+      </header>
+
+          <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="base" class="protosite-pattern-title">
+    <a href="#base" class="protosite-pattern-anchor">      Base
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Protocol core contains some basic form styles which include:</p>
+<ul>
+<li>normalization of display between browsers</li>
+<li>styles for fieldset, legend, input, select</li>
+<li>utility classes for errors and error messages</li>
+</ul>
+<p>Depending on what you&#39;re doing this might be enough. For more complex layouts, status information, and custom UI options see the form components.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="/patterns/molecules/forms.html">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            Form components
+          </a>
+        </li>
+    </ul>
+
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="text-input" class="protosite-pattern-title">
+    <a href="#text-input" class="protosite-pattern-anchor">      Text input
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Form inputs should always (or almost always) be paired with a <code>label</code> element.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/docs/Web/HTML/Element/input">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;input&gt;
+          </a>
+        </li>
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/docs/Web/HTML/Element/label">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;label&gt;
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-text-input-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-text-input-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-text-input-preview" dir="ltr">
+          
+<label for="text">Text</label>
+<input type="text" name="text" id="text">
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;label for&#x3D;&quot;text&quot;&gt;Text&lt;/label&gt;
+&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;text&quot; id&#x3D;&quot;text&quot;&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="input-with-placeholder" class="protosite-pattern-title">
+    <a href="#input-with-placeholder" class="protosite-pattern-anchor">      Input with placeholder
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Field placeholders should show an example of the expected input, such as suggested search terms or a demonstration of a correctly formatted email address.</p>
+
+    </div>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-input-with-placeholder-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-input-with-placeholder-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-input-with-placeholder-preview" dir="ltr">
+          
+<label for="email">E-mail</label>
+<input type="email" name="email" id="email" placeholder="you@example.com">
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;label for&#x3D;&quot;email&quot;&gt;E-mail&lt;/label&gt;
+&lt;input type&#x3D;&quot;email&quot; name&#x3D;&quot;email&quot; id&#x3D;&quot;email&quot;
+ placeholder&#x3D;&quot;you@example.com&quot;&gt;</code></pre>
+      </div>
+
+
+
+    <section class="protosite-pattern-extra protosite-pattern-extra-nonos">
+      <h3>No-nos</h3>
+      <ul>
+<li>Don&#39;t use the placeholder attribute as a substitute for a label. It&#39;s a misuse of the attribute and leaves you with an inaccessible, unlabeled field.</li>
+</ul>
+
+    </section>
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="other-input-types" class="protosite-pattern-title">
+    <a href="#other-input-types" class="protosite-pattern-anchor">      Other Input Types
+</a>
+</h2>
+  </header>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;input type&#x3D;file&gt;
+          </a>
+        </li>
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/search">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;input type&#x3D;search&gt;
+          </a>
+        </li>
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;input type&#x3D;email&gt;
+          </a>
+        </li>
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;input type&#x3D;date&gt;
+          </a>
+        </li>
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;input type&#x3D;password&gt;
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-other-input-types-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-other-input-types-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-other-input-types-preview" dir="ltr">
+          
+
+<label for="file">File</label>
+<input type="file" name="file" id="file">
+
+<label for="search">Search</label>
+<input type="search" name="search" id="search">
+
+<label for="email">Email</label>
+<input type="email" name="email" id="email">
+
+<label for="date">Date</label>
+<input type="date" name="date" id="date">
+
+<label for="password">Password</label>
+<input type="password" name="password" id="password">
+
+
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;label for&#x3D;&quot;file&quot;&gt;File&lt;/label&gt;
+&lt;input type&#x3D;&quot;file&quot; name&#x3D;&quot;file&quot; id&#x3D;&quot;file&quot;&gt;
+
+&lt;label for&#x3D;&quot;search&quot;&gt;Search&lt;/label&gt;
+&lt;input type&#x3D;&quot;search&quot; name&#x3D;&quot;search&quot; id&#x3D;&quot;search&quot;&gt;
+
+&lt;label for&#x3D;&quot;email&quot;&gt;Email&lt;/label&gt;
+&lt;input type&#x3D;&quot;email&quot; name&#x3D;&quot;email&quot; id&#x3D;&quot;email&quot;&gt;
+
+&lt;label for&#x3D;&quot;date&quot;&gt;Date&lt;/label&gt;
+&lt;input type&#x3D;&quot;date&quot; name&#x3D;&quot;date&quot; id&#x3D;&quot;date&quot;&gt;
+
+&lt;label for&#x3D;&quot;password&quot;&gt;Password&lt;/label&gt;
+&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot;&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="checkboxes" class="protosite-pattern-title">
+    <a href="#checkboxes" class="protosite-pattern-anchor">      Checkboxes
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Checkboxes represent a set of options where multiple selections are allowed.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="/patterns/molecules/forms.html#custom-checkboxes-and-radio-buttons">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            See the choices component for styled checkboxes
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-checkboxes-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-checkboxes-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-checkboxes-preview" dir="ltr">
+          
+<label for="checkbox-1" class="mzp-u-inline">
+  <input type="checkbox" name="checkboxes" id="checkbox-1"> Option 1
+</label>
+<label for="checkbox-2" class="mzp-u-inline">
+  <input type="checkbox" name="checkboxes" id="checkbox-2"> Option 2
+</label>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;label for&#x3D;&quot;checkbox-1&quot; class&#x3D;&quot;mzp-u-inline&quot;&gt;
+  &lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkboxes&quot; id&#x3D;&quot;checkbox-1&quot;&gt;
+  Option 1
+&lt;/label&gt;
+&lt;label for&#x3D;&quot;checkbox-2&quot; class&#x3D;&quot;mzp-u-inline&quot;&gt;
+  &lt;input type&#x3D;&quot;checkbox&quot; name&#x3D;&quot;checkboxes&quot; id&#x3D;&quot;checkbox-2&quot;&gt;
+  Option 2
+&lt;/label&gt;</code></pre>
+      </div>
+
+
+    <section class="protosite-pattern-extra protosite-pattern-extra-tips">
+      <h3>Tips</h3>
+      <ul>
+<li>Wrap the <code>label</code> element around both the control and its text label. This gives a bigger target for clicking.</li>
+<li>Use the <code>mzp-u-inline</code> class to override the base block-level label styling.</li>
+<li>Use a single checkbox for a binary choice (such as a yes or no question) rather than two radio buttons, especially if the field isn’t required. A checked radio button can’t be unchecked, whereas a single checkbox behaves as a switch to let a user toggle between the two states (you can uncheck a checked checkbox).</li>
+</ul>
+
+    </section>
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="radio-buttons" class="protosite-pattern-title">
+    <a href="#radio-buttons" class="protosite-pattern-anchor">      Radio Buttons
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Radio buttons represent a set of options where only one may be selected.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="/patterns/molecules/forms.html#custom-checkboxes-and-radio-buttons">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            See the choices component for styled radio buttons
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-radio-buttons-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-radio-buttons-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-radio-buttons-preview" dir="ltr">
+          
+<label for="radio-1" class="mzp-u-inline">
+  <input type="radio" name="radios" id="radio-1"> Option 1
+</label>
+<label for="radio-2" class="mzp-u-inline">
+  <input type="radio" name="radios" id="radio-2"> Option 2
+</label>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;label for&#x3D;&quot;radio-1&quot; class&#x3D;&quot;mzp-u-inline&quot;&gt;
+  &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;radios&quot; id&#x3D;&quot;radio-1&quot;&gt; Option 1
+&lt;/label&gt;
+&lt;label for&#x3D;&quot;radio-2&quot; class&#x3D;&quot;mzp-u-inline&quot;&gt;
+  &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;radios&quot; id&#x3D;&quot;radio-2&quot;&gt; Option 2
+&lt;/label&gt;</code></pre>
+      </div>
+
+
+    <section class="protosite-pattern-extra protosite-pattern-extra-tips">
+      <h3>Tips</h3>
+      <ul>
+<li>Wrap the <code>label</code> element around both the control and its text label. This gives a bigger target for clicking.</li>
+<li>Use the <code>mzp-u-inline</code> class to override the base block-level label styling.</li>
+</ul>
+
+    </section>
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="select" class="protosite-pattern-title">
+    <a href="#select" class="protosite-pattern-anchor">      Select
+</a>
+</h2>
+  </header>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/docs/Web/HTML/Element/select">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;select&gt;
+          </a>
+        </li>
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/docs/Web/HTML/Element/option">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;option&gt;
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-select-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-select-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-select-preview" dir="ltr">
+          
+<label for="language">Language</label>
+<select name="language" id="language">
+  <option value="en-US">English (US)</option>
+  <option value="de">Deutsch</option>
+  <option value="fr">Français</option>
+  <option value="es-ES">Español</option>
+  <option value="ja">日本語</option>
+</select>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;label for&#x3D;&quot;language&quot;&gt;Language&lt;/label&gt;
+&lt;select name&#x3D;&quot;language&quot; id&#x3D;&quot;language&quot;&gt;
+  &lt;option value&#x3D;&quot;en-US&quot;&gt;English (US)&lt;/option&gt;
+  &lt;option value&#x3D;&quot;de&quot;&gt;Deutsch&lt;/option&gt;
+  &lt;option value&#x3D;&quot;fr&quot;&gt;Français&lt;/option&gt;
+  &lt;option value&#x3D;&quot;es-ES&quot;&gt;Español&lt;/option&gt;
+  &lt;option value&#x3D;&quot;ja&quot;&gt;日本語&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="textarea" class="protosite-pattern-title">
+    <a href="#textarea" class="protosite-pattern-anchor">      Textarea
+</a>
+</h2>
+  </header>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/docs/Web/HTML/Element/textarea">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;textarea&gt;
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-textarea-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-textarea-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-textarea-preview" dir="ltr">
+          
+<label for="textarea">Text area</label>
+<textarea name="textarea" id="textarea" rows="3" cols="40"></textarea>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;label for&#x3D;&quot;textarea&quot;&gt;Text area&lt;/label&gt;
+&lt;textarea name&#x3D;&quot;textarea&quot; id&#x3D;&quot;textarea&quot; rows&#x3D;&quot;3&quot;
+ cols&#x3D;&quot;40&quot;&gt;&lt;/textarea&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="fieldset-with-legend" class="protosite-pattern-title">
+    <a href="#fieldset-with-legend" class="protosite-pattern-anchor">      Fieldset with legend
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Use <code>fieldset</code> to group related fields together. Include a <code>legend</code> as a title.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/docs/Web/HTML/Element/fieldset">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;fieldset&gt;
+          </a>
+        </li>
+        <li>
+          <a class="protosite-pattern-links-link" href="https://developer.mozilla.org/docs/Web/HTML/Element/legend">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            MDN &lt;legend&gt;
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-fieldset-with-legend-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-fieldset-with-legend-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-fieldset-with-legend-preview" dir="ltr">
+          
+<fieldset>
+  <legend>Log into your account</legend>
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username">
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password">
+</fieldset>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;fieldset&gt;
+  &lt;legend&gt;Log into your account&lt;/legend&gt;
+  &lt;label for&#x3D;&quot;username&quot;&gt;Username&lt;/label&gt;
+  &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;username&quot; name&#x3D;&quot;username&quot;&gt;
+  &lt;label for&#x3D;&quot;password&quot;&gt;Password&lt;/label&gt;
+  &lt;input type&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot;&gt;
+&lt;/fieldset&gt;</code></pre>
+      </div>
+
+
+    <section class="protosite-pattern-extra protosite-pattern-extra-tips">
+      <h3>Tips</h3>
+      <ul>
+<li>Use meaningful elements like lists and paragraphs to give forms structure.</li>
+</ul>
+
+    </section>
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="title" class="protosite-pattern-title">
+    <a href="#title" class="protosite-pattern-anchor">      Title
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>There are two classes for styling titles (aka headings) that appear in forms: <code>mzp-c-form-title</code> and <code>mzp-c-form-subtitle</code></p>
+
+    </div>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-title-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-title-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-title-preview" dir="ltr">
+          
+<h2 class="mzp-c-form-title">Title</h2>
+<h3 class="mzp-c-form-subtitle">Subtitle</h3>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;h2 class&#x3D;&quot;mzp-c-form-title&quot;&gt;Title&lt;/h2&gt;
+&lt;h3 class&#x3D;&quot;mzp-c-form-subtitle&quot;&gt;Subtitle&lt;/h3&gt;</code></pre>
+      </div>
+
+
+    <section class="protosite-pattern-extra protosite-pattern-extra-tips">
+      <h3>Tips</h3>
+      <ul>
+<li>Make sure the html content is semantic and communicates the heirarchy before you apply these classes</li>
+<li>You will get the subtitle styles automatically when using a <code>&lt;legend&gt;</code> element</li>
+</ul>
+
+    </section>
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="field-notes" class="protosite-pattern-title">
+    <a href="#field-notes" class="protosite-pattern-anchor">      Field notes
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>A note to provide added context or instructions to supplement the field label. It should be inside the <code>label</code> element, after the label text.</p>
+<p>If the class <code>mzp-is-error</code> is added to a parent the field note will be highlighted.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="/demos/forms/validation.html">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            Form validation demo
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-field-notes-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-field-notes-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-field-notes-preview" dir="ltr">
+          
+<label for="password">Password
+  <span class="mzp-c-fieldnote">Must be at least 8 characters and contain at least one numeral. Passwords are case sensitive.</span>
+</label>
+<input type="password" id="password" name="password">
+
+<label for="password" class="mzp-is-error">Password
+  <span class="mzp-c-fieldnote">Must be at least 8 characters and contain at least one numeral. Passwords are case sensitive.</span>
+</label>
+<input type="password" id="password" name="password">
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;label for&#x3D;&quot;password&quot;&gt;Password
+  &lt;span class&#x3D;&quot;mzp-c-fieldnote&quot;&gt;Must be at least 8
+    characters and contain at least one numeral. Passwords
+    are case sensitive.&lt;/span&gt;
+&lt;/label&gt;
+&lt;input type&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot;&gt;
+
+&lt;label for&#x3D;&quot;password&quot; class&#x3D;&quot;mzp-is-error&quot;&gt;Password
+  &lt;span class&#x3D;&quot;mzp-c-fieldnote&quot;&gt;Must be at least 8
+    characters and contain at least one numeral. Passwords
+    are case sensitive.&lt;/span&gt;
+&lt;/label&gt;
+&lt;input type&#x3D;&quot;password&quot; id&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot;&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="required-field" class="protosite-pattern-title">
+    <a href="#required-field" class="protosite-pattern-anchor">      Required field
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>Inputs that are required to submit the form should carry both the <code>required</code> and <code>aria-required</code> attributes and their labels should include a readable note.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="https://www.w3.org/TR/wai-aria/#aria-required">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            WAI aria-required
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-required-field-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-required-field-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-required-field-preview" dir="ltr">
+          
+<label for="email">
+  E-mail
+  <em class="mzp-c-fieldnote">Required</em>
+</label>
+<input type="email" name="email" id="email" placeholder="you@example.com">
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;label for&#x3D;&quot;email&quot;&gt;
+  E-mail
+  &lt;em class&#x3D;&quot;mzp-c-fieldnote&quot;&gt;Required&lt;/em&gt;
+&lt;/label&gt;
+&lt;input type&#x3D;&quot;email&quot; name&#x3D;&quot;email&quot; id&#x3D;&quot;email&quot;
+ placeholder&#x3D;&quot;you@example.com&quot;&gt;</code></pre>
+      </div>
+
+
+
+</article>
+      <article class="protosite-pattern">
+  <header class="protosite-pattern-head">
+<h2 id="error-list" class="protosite-pattern-title">
+    <a href="#error-list" class="protosite-pattern-anchor">      Error list
+</a>
+</h2>
+  </header>
+    <div class="protosite-pattern-desc">
+      <p>For long forms when there is an error display a summary list of form errors at the top of the form.</p>
+
+    </div>
+    <ul class="protosite-pattern-links">
+        <li>
+          <a class="protosite-pattern-links-link" href="/demos/forms/validation.html">
+            <svg viewBox="0 0 11 12">
+              <path d="M8.29289322,8.29289322 C8.11192881,8.47385763 8,8.72385763 8,9 L8,9.99895656 C8,10.5497993 7.55127164,11 7.0026083,11 L1.9973917,11 C1.44746825,11 1,10.5527784 1,10.0026083 L1,4.9973917 C1,4.44787731 1.44844877,4 2.00104344,4 L3,4 C3.27614237,4 3.52614237,3.88807119 3.70710678,3.70710678 L3,3 L2.00104344,3 C0.895897664,3 0,3.89585781 0,4.9973917 L0,10.0026083 C0,11.1057373 0.895857811,12 1.9973917,12 L7.0026083,12 C8.10573727,12 9,11.0999011 9,9.99895656 L9,9 L8.29289322,8.29289322 L8.29289322,8.29289322 Z"></path>
+              <path d="M6.9505215,3.81444077 L4.21751445,0.98959236 L11.0000001,0.999999934 L10.9999997,7.99999974 L8.34122783,5.2518811 L4.68908982,8.72467594 C4.28886233,9.10524972 3.65589784,9.08931724 3.27532406,8.68908975 C2.89475028,8.28886226 2.91068276,7.65589777 3.31091025,7.27532399 L6.9505215,3.81444077 L6.9505215,3.81444077 Z"></path>
+            </svg>
+            Form validation demo
+          </a>
+        </li>
+    </ul>
+
+<form class="protosite-bidi-controls">
+  <fieldset>
+    <label>LTR: <input class="protosite-bidi-toggle" type="radio" value="ltr" name="protosite-error-list-preview" checked /></label>
+    <label>RTL: <input class="protosite-bidi-toggle" type="radio" value="rtl" name="protosite-error-list-preview" /></label>
+  </fieldset>
+</form>
+
+      <div class="protosite-pattern-embed">
+        <div class="protosite-pattern-preview " id="protosite-error-list-preview" dir="ltr">
+          
+<div class="mzp-c-form-errors">
+  <ul class="mzp-u-list-styled">
+    <li>You must provide an e-mail address.</li>
+    <li>You must select a language.</li>
+    <li>Your username must be at least six characters.</li>
+    <li>You must accept the terms and conditions.</li>
+  </ul>
+</div>
+
+        </div>
+          <pre class="protosite-pattern-code"><code class="language-markup">&lt;div class&#x3D;&quot;mzp-c-form-errors&quot;&gt;
+  &lt;ul class&#x3D;&quot;mzp-u-list-styled&quot;&gt;
+    &lt;li&gt;You must provide an e-mail address.&lt;/li&gt;
+    &lt;li&gt;You must select a language.&lt;/li&gt;
+    &lt;li&gt;Your username must be at least six characters.&lt;/li&gt;
+    &lt;li&gt;You must accept the terms and conditions.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+
+
+</article>
+
+    </main>
+
+        <script src="../../assets/docs/js/docs.js"></script>
+
+    </div>
+  </body>
+</html>

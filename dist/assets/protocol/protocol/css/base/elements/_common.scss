@@ -1,0 +1,30 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+
+// Basic styling for some common elements
+
+p,
+ul,
+ol,
+dl,
+table {
+    margin: 0 0 1.25em;
+}
+
+code {
+    font-size: inherit;
+}
+
+hr {
+    border: 0 solid $color-marketing-gray-20;
+    border-top-width: 4px;
+    margin: $layout-md 0;
+
+    @media #{$mq-lg} {
+        margin: $layout-lg 0;
+    }
+}

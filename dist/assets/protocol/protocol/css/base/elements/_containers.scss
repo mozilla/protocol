@@ -1,0 +1,53 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
+
+// This wrapper element sets the content width
+.mzp-l-content {
+    @include clearfix;
+    margin: 0 auto;
+    max-width: $content-max;
+    min-width: $content-xs - ($layout-xs * 2);
+    padding: get-theme('v-grid-xs') get-theme('h-grid-xs');
+    position: relative;
+
+    &.mzp-t-content-sm {
+        max-width: $content-sm;
+    }
+
+    &.mzp-t-content-md {
+        max-width: $content-md;
+    }
+
+    &.mzp-t-content-lg {
+        max-width: $content-lg;
+    }
+
+    &.mzp-t-content-xl {
+        max-width: $content-xl;
+    }
+
+    // Remove vertical spacing
+    &.mzp-t-content-nospace {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    // No bottom margins on last child
+    // Note: this can cause problems if mzp-l-content
+    // is used as a grid or flex container.
+    & > :last-child {
+        margin-bottom: 0;
+    }
+
+    @media #{$mq-md} {
+        padding: get-theme('v-grid-md') get-theme('h-grid-md');
+    }
+
+    @media #{$mq-xl} {
+        padding: get-theme('v-grid-xl') get-theme('h-grid-xl');
+    }
+}
