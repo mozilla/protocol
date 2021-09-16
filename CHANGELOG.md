@@ -1,4 +1,4 @@
-HEAD
+# HEAD
 
 ## Features
 * **assets** Refactored logo and wordmark mixins to use SVG assets instead of PNG
