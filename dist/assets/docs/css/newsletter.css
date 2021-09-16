@@ -6694,64 +6694,34 @@ html.mzp-is-noscroll {
     width: 96px; }
 
 .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-xs {
-  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-xs.png"); }
+  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack.svg"); }
   .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-xs {
-    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-xs.png"); }
+    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white.svg"); }
 
 .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-sm {
-  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-xs.png"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
-    .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-sm {
-      background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-xs-high-res.png"); } }
+  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack.svg"); }
   .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-sm {
-    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-xs.png"); }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
-      .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-sm {
-        background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-xs-high-res.png"); } }
+    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white.svg"); }
 
 .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-md {
-  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-xs.png"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
-    .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-md {
-      background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-xs-high-res.png"); } }
+  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack.svg"); }
   .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-md {
-    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-xs.png"); }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
-      .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-md {
-        background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-xs-high-res.png"); } }
+    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white.svg"); }
 
 .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-lg {
-  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-sm.png"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
-    .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-lg {
-      background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-sm-high-res.png"); } }
+  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack.svg"); }
   .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-lg {
-    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-sm.png"); }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
-      .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-lg {
-        background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-sm-high-res.png"); } }
+    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white.svg"); }
 
 .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-xl {
-  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-md.png"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
-    .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-xl {
-      background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-md-high-res.png"); } }
+  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack.svg"); }
   .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-xl {
-    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-md.png"); }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
-      .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-xl {
-        background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-md-high-res.png"); } }
+    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white.svg"); }
 
 .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-2xl {
-  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-lg.png"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
-    .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-2xl {
-      background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-lg-high-res.png"); } }
+  background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack.svg"); }
   .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-2xl {
-    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-lg.png"); }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
-      .mzp-t-dark .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-2xl {
-        background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white-lg-high-res.png"); } }
+    background-image: url("/assets/protocol/protocol/img/logos/mozilla/vpn/logo-word-hor-stack-white.svg"); }
 
 .mzp-c-logo {
   direction: ltr;
