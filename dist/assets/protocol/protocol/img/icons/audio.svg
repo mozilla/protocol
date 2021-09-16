@@ -1,8 +1,0 @@
-<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g transform="translate(2.000000, 4.000000)" stroke="#000000" stroke-width="2">
-            <polygon points="9 1 4 5 0 5 0 11 4 11 9 15"></polygon>
-            <path d="M17.07,0.93 C20.9738194,4.83499851 20.9738194,11.1650015 17.07,15.07 M13.54,4.46 C15.4919097,6.41249926 15.4919097,9.57750074 13.54,11.53"></path>
-        </g>
-    </g>
-</svg>

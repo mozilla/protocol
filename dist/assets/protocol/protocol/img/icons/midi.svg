@@ -1,9 +1,0 @@
-<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g transform="translate(3.000000, 3.000000)" stroke="#000000" stroke-width="2">
-            <polyline points="6 15 6 2 18 0 18 13"></polyline>
-            <circle cx="3" cy="15" r="3"></circle>
-            <circle cx="15" cy="13" r="3"></circle>
-        </g>
-    </g>
-</svg>

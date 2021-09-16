@@ -1,9 +1,0 @@
-<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g transform="translate(3.000000, 2.000000)" stroke="#000000" stroke-width="2">
-            <path d="M5,19 L2,19 C0.8954305,19 -1.49159469e-13,18.1045695 -3.33733041e-13,17 L8.1313437e-13,14 C2,14 3,13.1666667 3,11.5 C3,9.83333333 2,9 8.1313437e-13,9 L7.77600206e-13,6 C7.76974408e-13,4.8954305 0.8954305,4 2,4 L5.5,4 C5.16666667,3.33333333 5,2.66666667 5,2 C5,1 6,2.32682812e-16 7.5,0 C9,0 10,1 10,2 C10,2.66666667 9.83333333,3.33333333 9.5,4 L15,4"></path>
-            <polyline points="18 15 14 19 10 15"></polyline>
-            <path d="M14,19 L14,11"></path>
-        </g>
-    </g>
-</svg>
