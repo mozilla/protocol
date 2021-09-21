@@ -6,6 +6,7 @@
 
 ## Bug Fixes
 
+* **css:** Replace deprecated `/` division operator with `math.div()` (#722)
 * **css:** Set Split media width to 100% to accommodate responsive video (#711)
 
 # 14.1.0

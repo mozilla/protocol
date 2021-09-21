@@ -283,7 +283,7 @@
             &> ul {
                 @include bidi(((float, left, right),));
                 margin-bottom: 0;
-                width: calc(50% - (#{$spacing-lg} / 2));
+                width: calc(50% - (#{$spacing-lg} * 0.5));
 
                 &:first-child {
                     @include bidi(((margin-right, $spacing-lg * 0.5, margin-left, 0),));
