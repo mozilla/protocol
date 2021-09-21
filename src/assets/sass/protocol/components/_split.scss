@@ -136,6 +136,7 @@
         @include bidi(((float, left, right),));
         padding: 0 (get-theme('h-grid-lg') / 2);
         width: 50%;
+        padding: 0 (get-theme('h-grid-lg') * 0.5);
 
         .mzp-l-split-reversed & {
             @include bidi(((float, right, left),));
@@ -145,8 +146,8 @@
     .mzp-c-split-media {
         @include border-box;
         @include bidi(((float, right, left),));
-        padding: 0 (get-theme('h-grid-lg') / 2);
         width: 50%;
+        padding: 0 (get-theme('h-grid-lg') * 0.5);
 
         .mzp-l-split-reversed & {
             @include bidi(((float, left, right),));
@@ -178,11 +179,11 @@
 
 @media #{$mq-xl} {
     .mzp-c-split-body {
-        padding: 0 (get-theme('h-grid-xl') / 2);
+        padding: 0 (get-theme('h-grid-xl') * 0.5);
     }
 
     .mzp-c-split-media {
-        padding: 0 (get-theme('h-grid-xl') / 2);
+        padding: 0 (get-theme('h-grid-xl') * 0.5);
     }
 }
 

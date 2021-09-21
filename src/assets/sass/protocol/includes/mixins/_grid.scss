@@ -1,3 +1,8 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
 // Grid columns
 $column-width:  8.333%; // 100% / 12 columns
 $gutter-width:  $layout-sm;
@@ -9,8 +14,8 @@ $gutter-width:  $layout-sm;
 @mixin colspan($columns) {
     @include border-box;
     width: $column-width * $columns;
-    padding-left: $gutter-width / 2;
-    padding-right: $gutter-width / 2;
+    padding-left: $gutter-width * 0.5;
+    padding-right: $gutter-width * 0.5;
 }
 
 @mixin span-all {
