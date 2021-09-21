@@ -1,0 +1,38 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+
+//* -------------------------------------------------------------------------- */
+// A container for responsive video embeds.
+// Can contain either HTML5 video or iframe (e.g. YouTube).
+// The video scales dynamically to the container's width and maintains
+// its aspect ratio.
+
+.mzp-c-video {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &::after {
+        content: '';
+        display: block;
+        padding-top: 56.25%; // 16:9 aspect ratio
+    }
+
+    &.mzp-has-aspect-4-3::after {
+        padding-top: 75%; // 4:3 aspect ratio
+    }
+
+    video,
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
