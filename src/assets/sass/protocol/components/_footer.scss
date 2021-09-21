@@ -111,7 +111,6 @@
 }
 
 @media #{$mq-lg} {
-
     .mzp-c-footer-section {
         @include bidi(((float, left, right),));
         padding: 0 ($layout-md * 0.5);
@@ -126,11 +125,13 @@
     }
 
     @for $cols from 2 through 6 {
-        $width: math.div(100%, $cols);
+        $width: math.div(100%, $cols); // each width is the total width divided by number of columns
+        $gutter: math.div($layout-md, $cols); // each gutter is the base gutter divided by number of columns
+
         // http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/
         .mzp-c-footer-section:first-child:nth-last-child(n+#{$cols}),
         .mzp-c-footer-section:first-child:nth-last-child(n+#{$cols}) ~ .mzp-c-footer-section:nth-child(1n-1) {
-            width: calc(#{$width} - (#{$layout-md} - (#{$layout-md} / #{$cols})));
+            width: calc($width - ($layout-md - $gutter));
         }
     }
 }
