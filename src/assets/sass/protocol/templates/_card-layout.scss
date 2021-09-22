@@ -23,7 +23,7 @@
                 (margin-left, 0, $spacing-xl),
                 (margin-right, $spacing-xl, 0),
             ));
-            width: calc(50% - (#{$spacing-xl} / 2));
+            width: calc(50% - (#{$spacing-xl} * 0.5));
 
             &.mzp-c-card-extra-small,
             &,
@@ -45,7 +45,7 @@
 
     @media #{$mq-lg} {
         .mzp-c-card {
-            width: calc(33.3% - (#{$spacing-xl} - (#{$spacing-xl} / 3)));
+            width: calc(33.3% - (#{$spacing-xl} - (#{$spacing-xl} * 0.33)));
 
             &:nth-child(odd) {
                 @include bidi((
@@ -65,7 +65,7 @@
         }
 
         .mzp-c-card.mzp-c-card-large {
-            width: calc(66.6% - (#{$spacing-xl} / 3));
+            width: calc(66.6% - (#{$spacing-xl} * 0.33));
         }
     }
 }
@@ -86,7 +86,7 @@
                 (margin-left, 0, $spacing-xl),
                 (margin-right, $spacing-xl, 0),
             ));
-            width: calc(50% - (#{$spacing-xl} / 2));
+            width: calc(50% - (#{$spacing-xl} * 0.5));
 
             &.mzp-c-card-extra-small,
             &,
@@ -108,7 +108,7 @@
                 (margin-left, 0, $spacing-xl),
                 (margin-right, $spacing-xl, 0),
             ));
-            width: calc(25% - (#{$spacing-xl} - (#{$spacing-xl} / 4)));
+            width: calc(25% - (#{$spacing-xl} - (#{$spacing-xl} * 0.25)));
 
             &:nth-child(even) {
                 @include bidi((
@@ -139,7 +139,7 @@
         @include clearfix;
 
         .mzp-c-card {
-            width: calc(50% - (#{$spacing-xl} / 2));
+            width: calc(50% - (#{$spacing-xl} * 0.5));
             @include bidi((
                 (float, left, right),
                 (margin-left, 0, $spacing-xl),
@@ -162,7 +162,7 @@
 
     @media #{$mq-lg} {
         .mzp-c-card {
-            width: calc(33.3% - (#{$spacing-xl} - (#{$spacing-xl} / 3)));
+            width: calc(33.3% - (#{$spacing-xl} - (#{$spacing-xl} * 0.33)));
 
             &:nth-child(even) {
                 @include bidi((
@@ -235,7 +235,7 @@
     }
 
     .mzp-l-card-half .mzp-c-card {
-        width: calc(50% - (#{$spacing-xl} - (#{$spacing-xl} / 2)));
+        width: calc(50% - (#{$spacing-xl} - (#{$spacing-xl} * 0.5)));
     }
 }
 

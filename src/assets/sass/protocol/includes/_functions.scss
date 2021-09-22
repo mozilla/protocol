@@ -2,13 +2,15 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+@use 'sass:math';
+
 
 // Convert pixel units to rems, assuming a 16px base size
 // Usage:
 //    remify(24px)
 
 @function remify($pixels) {
-    $rems: $pixels / 16px;
+    $rems: math.div($pixels, 16px);
     @return #{$rems}rem;
 }
 

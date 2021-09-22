@@ -97,7 +97,7 @@
         &.mzp-l-card-feature-right-half {
             .mzp-c-card-feature-content,
             .mzp-c-card-feature-media-wrapper {
-                width: calc(50% - (#{$spacing-xl} / 2));
+                width: calc(50% - (#{$spacing-xl} * 0.5));
             }
         }
 
