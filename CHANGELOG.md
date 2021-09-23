@@ -1,12 +1,20 @@
 # HEAD
 
 ## Features
+
 * **assets** Refactored logo and wordmark mixins to use SVG assets instead of PNG
+* **component:** New responsive video container.
+
+## Bug Fixes
+
+* **css:** Replace deprecated `/` division operator with `math.div()` (#722)
+* **css:** Set Split media width to 100% to accommodate responsive video (#711)
 
 # 14.1.0
 
 ## Features
-* **css:** Add overidding rules to the card component to enable dark mode with `.mzp-t-dark` class. (#714)
+
+* **css:** Add overiding rules to the card component to enable dark mode with `.mzp-t-dark` class. (#714)
 * **css:** Add content width classes to Split component.
 * **css:** Add default bottom margins to Logo and Wordmark components (#712)
 * **css:** Add `.mzp-u-title-3xs` utility class.

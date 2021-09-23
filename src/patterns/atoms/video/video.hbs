@@ -1,0 +1,18 @@
+---
+name: Video
+description: A responsive container for embedded video. The video is scaled to the width of its container and maintains its aspect ratio.
+order: 7
+notes: |
+    - Supports either inline video with the HTML5 `video` element or an `iframe` for services like YouTube.
+    - Supports either a 16:9 aspect ratio (the default) or a 4:3 aspect ratio with an additional class:
+      - `mzp-has-aspect-4-3`
+    - See [additional examples in a Split component](/demos/split.html#video)
+---
+
+<div class="mzp-c-video {{#if class}}{{class}}{{/if}}">
+  {{#block "content"}}
+  <video controls="controls" width="640" height="360" poster="{{@root.baseurl}}/static/img/video/video.jpg">
+    <source src="{{@root.baseurl}}/static/video/video.webm" type="video/webm">
+  </video>
+  {{/block}}
+</div>

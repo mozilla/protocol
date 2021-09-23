@@ -27,7 +27,7 @@
 //     .test {
 //         @include bidi((
 //             (float, left, right),
-//             (margin-right, ($grid-spacing / 2), margin-left, 0),
+//             (margin-right, ($grid-spacing * 0.5), margin-left, 0),
 //         ));
 //     }
 //     Example output:
