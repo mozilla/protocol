@@ -53,7 +53,7 @@ $logo-sizes: (
 }
 
 @mixin logo($product, $dir, $layout-size, $logo-size) {
-    $path : '#{$image-path}/logos/#{$dir}/logo-#{$logo-size}.svg';
+    $path : '#{$image-path}/logos/#{$dir}/logo.svg';
 
     .mzp-c-logo.mzp-t-product-#{$product}.mzp-t-logo-#{$layout-size} {
         background-image: url('#{$path}');

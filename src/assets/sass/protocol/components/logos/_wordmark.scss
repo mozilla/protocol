@@ -54,8 +54,8 @@ $logo-sizes: (
 }
 
 @mixin wordmark($product, $dir, $layout-size, $logo-size) {
-    $path : '#{$image-path}/logos/#{$dir}/logo-word-hor-#{$logo-size}.svg';
-    $path_white : '#{$image-path}/logos/#{$dir}/logo-word-hor-white-#{$logo-size}.svg';
+    $path : '#{$image-path}/logos/#{$dir}/logo-word-hor.svg';
+    $path_white : '#{$image-path}/logos/#{$dir}/logo-word-hor-white.svg';
 
     .mzp-c-wordmark.mzp-t-product-#{$product}.mzp-t-wordmark-#{$layout-size} {
         background-image: url('#{$path}');
