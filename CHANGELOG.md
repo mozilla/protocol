@@ -2,6 +2,7 @@
 
 ## Features
 
+* **assets** Refactored logo and wordmark mixins to use SVG assets instead of PNG
 * **component:** New responsive video container.
 
 ## Bug Fixes

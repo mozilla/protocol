@@ -54,31 +54,14 @@ $logo-sizes: (
 }
 
 @mixin wordmark($product, $dir, $layout-size, $logo-size) {
-    $path : '#{$image-path}/logos/#{$dir}/logo-word-hor-#{$logo-size}.png';
-    $at2x_path: '#{$image-path}/logos/#{$dir}/logo-word-hor-#{$logo-size}-high-res.png';
-    $path_white : '#{$image-path}/logos/#{$dir}/logo-word-hor-white-#{$logo-size}.png';
-    $at2x_path_white: '#{$image-path}/logos/#{$dir}/logo-word-hor-white-#{$logo-size}-high-res.png';
+    $path : '#{$image-path}/logos/#{$dir}/logo-word-hor-#{$logo-size}.svg';
+    $path_white : '#{$image-path}/logos/#{$dir}/logo-word-hor-white-#{$logo-size}.svg';
 
     .mzp-c-wordmark.mzp-t-product-#{$product}.mzp-t-wordmark-#{$layout-size} {
         background-image: url('#{$path}');
 
-        // xs does not need high res version, it's shrunk for low-res
-        @if $layout-size != 'xs' {
-            @media #{$mq-high-res} {
-                background-image: url('#{$at2x_path}');
-            }
-        }
-
         .mzp-t-dark & {
             background-image: url('#{$path_white}');
-
-            // xs does not need high res version, it's shrunk for low-res
-            @if $layout-size != 'xs' {
-                @media #{$mq-high-res} {
-                    background-image: url('#{$at2x_path_white}');
-                }
-            }
-
         }
     }
 }
