@@ -1,0 +1,36 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+.mzp-c-breadcrumb {
+    background-color: #f3f3f3;
+    margin-bottom: 0;
+    padding: 8px 18px;
+
+    .mzp-c-breadcrumb-item {
+        display: inline;
+        font-weight: 400;
+
+        .mzp-c-breadcrumb-item-link {
+            text-decoration: none;
+        }
+
+        &:not(.mzp-c-breadcrumb-title) {
+            font-weight: bold;
+            &:before {
+                content: ">";
+                font-weight: normal;
+                margin: 0 2px;
+            }
+        }
+    }
+    &.mzp-t-dark {
+        background-color: $color-black;
+    }
+    @media #{$mq-md} {
+        padding: 8px 80px;
+    }
+
+}
