@@ -16,10 +16,12 @@ $logos: (
 @each $name, $value in $logos {
     .mzp-c-sticky-promo-title {
         .mzp-t-dark.mzp-t-product-#{$name} & {
-            @include at2x('#{$value}-white-lg.png', auto, 40px);
+            background-image: url('#{$value}-white.svg');
+            background-size: auto, 40px;
         }
         .mzp-t-product-#{$name} & {
-            @include at2x('#{$value}-lg.png', auto, 40px);
+            background-image: url('#{$value}.svg');
+            background-size: auto, 40px;
         }
     }
 }

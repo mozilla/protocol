@@ -2,6 +2,7 @@
 
 ## Features
 
+* **assets:** (breaking) Update @mozilla-protocol/assets to 5.0.0
 * **assets** Refactored logo and wordmark mixins to use SVG assets instead of PNG
 * **component:** New responsive video container.
 
@@ -9,6 +10,10 @@
 
 * **css:** Replace deprecated `/` division operator with `math.div()` (#722)
 * **css:** Set Split media width to 100% to accommodate responsive video (#711)
+
+## Migration Tips
+
+* See notes for [Protocol Assets 5.0.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#migration-tips)
 
 # 14.1.0
 
