@@ -7,6 +7,7 @@
 
 ## Bug Fixes
 
+* **js** when navigation has `mzp-is-sticky` class, respect user preference for reduced motion (#733)
 * **css:** Replace deprecated `/` division operator with `math.div()` (#722)
 * **css:** Set Split media width to 100% to accommodate responsive video (#711)
 

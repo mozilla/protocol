@@ -91,5 +91,15 @@ describe('protocol-navigation.js', function() {
             Mzp.Navigation.init();
             expect(Mzp.Navigation.createSticky).not.toHaveBeenCalled();
         });
+
+        it('should not create sticky behaviour for users who prefer reduced motion', function() {
+            var nav = document.querySelector('.mzp-c-navigation');
+            nav.classList.add('mzp-is-sticky');
+            spyOn(window, 'matchMedia').withArgs('(prefers-reduced-motion)').and.returnValue({ matches: true });
+            spyOn(Mzp.Navigation, 'initSticky');
+            Mzp.Navigation.init();
+            expect(Mzp.Navigation.initSticky).not.toHaveBeenCalled();
+            expect(nav.classList.contains('mzp-is-sticky')).toBeFalse();
+        });
     });
 });
