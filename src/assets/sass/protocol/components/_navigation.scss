@@ -114,7 +114,7 @@
     .mzp-t-firefox & {
         a {
             @include background-size(81px, 27px);
-            background-image: url('#{$image-path}/logos/firefox/logo-word-hor-sm.png');
+            background-image: url('#{$image-path}/logos/firefox/logo-word-hor.svg');
             height: 27px;
             width: 81px;
         }
@@ -127,7 +127,7 @@
 
         @media #{$mq-lg} {
             a {
-                @include at2x('#{$image-path}/logos/firefox/logo-word-hor-sm.png', 109px, 36px);
+                background-image: url('#{$image-path}/logos/firefox/logo-word-hor.svg');
                 height: 36px;
                 margin-top: 1px;
                 width: 109px;

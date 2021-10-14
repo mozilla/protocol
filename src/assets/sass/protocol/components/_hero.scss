@@ -51,31 +51,31 @@
 
     // Product logos
     .mzp-t-product-firefox & {
-        @include at2x('#{$image-path}/logos/firefox/browser/logo-lg.png', 80px, 80px);
+        background-image: url('#{$image-path}/logos/firefox/browser/logo.svg');
     }
 
     .mzp-t-product-beta & {
-        @include at2x('#{$image-path}/logos/firefox/browser/beta/logo-lg.png', 80px, 80px);
+        background-image: url('#{$image-path}/logos/firefox/browser/beta/logo.svg');
     }
 
     .mzp-t-product-developer & {
-        @include at2x('#{$image-path}/logos/firefox/browser/developer/logo-lg.png', 80px, 80px);
+        background-image: url('#{$image-path}/logos/firefox/browser/developer/logo.svg');
     }
 
     .mzp-t-product-nightly & {
-        @include at2x('#{$image-path}/logos/firefox/browser/nightly/logo-lg.png', 80px, 80px);
+        background-image: url('#{$image-path}/logos/firefox/browser/nightly/logo.svg');
     }
 
     .mzp-t-product-focus & {
-        @include at2x('#{$image-path}/logos/firefox/browser/focus/logo-lg.png', 80px, 80px);
+        background-image: url('#{$image-path}/logos/firefox/browser/focus/logo.svg');
     }
 
     .mzp-t-product-mozilla & {
-        @include at2x('#{$image-path}/logos/mozilla/logo-lg.png', 80px, 80px);
+        background-image: url('#{$image-path}/logos/mozilla/logo.svg');
     }
 
     .mzp-t-product-vpn & {
-        @include at2x('#{$image-path}/logos/mozilla/vpn/logo-lg.png', 80px, 80px);
+        background-image: url('#{$image-path}/logos/mozilla/vpn/logo.svg');
     }
 
     .mzp-t-product-vpn.mzp-t-dark & {
@@ -83,7 +83,7 @@
     }
 
     .mzp-t-product-pocket & {
-        @include at2x('#{$image-path}/logos/pocket/logo-lg.png', 80px, 80px);
+        background-image: url('#{$image-path}/logos/pocket/logo.svg');
     }
 }
 
