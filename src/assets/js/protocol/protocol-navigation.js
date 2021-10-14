@@ -213,13 +213,20 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
          * If there are multiple navigation organisms on a single page,
          * assume only the first (and hence top-most) instance can and
          * will be sticky.
+         *
+         * Do not init sticky navigation if user prefers reduced motion
          */
-        _navElem = document.querySelector('.mzp-c-navigation');
 
-        if (_navElem && _navElem.classList.contains('mzp-is-sticky')) {
-            if (Navigation.supportsSticky()) {
-                Navigation.initSticky();
-            }
+        _navElem = document.querySelector('.mzp-c-navigation');
+        var _navIsSticky =
+            _navElem &&
+            _navElem.classList.contains('mzp-is-sticky') &&
+            Navigation.supportsSticky();
+
+        if (_navIsSticky && matchMedia('(prefers-reduced-motion)').matches) {
+            _navElem.classList.remove('mzp-is-sticky');
+        } else if (_navIsSticky) {
+            Navigation.initSticky();
         }
     };
 
