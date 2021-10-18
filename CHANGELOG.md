@@ -1,4 +1,4 @@
-# HEAD
+# 15.0.0
 
 ## Features
 
@@ -14,7 +14,7 @@
 
 ## Migration Tips
 
-* See notes for [Protocol Assets 5.0.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#migration-tips)
+* This version updates the included assets, removing the PNG versions of logos and wordmarks. If you're relying on those assets via Protocol, you'll need to update or find alternative sources. See notes for [Protocol Assets 5.0.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#500)
 
 # 14.1.0
 
