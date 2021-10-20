@@ -5,24 +5,23 @@
 @import '../includes/lib';
 
 .mzp-c-breadcrumb {
-    background-color: $color-light-gray-20;
+    background-color: get-theme('background-color-alt');
     margin-bottom: 0;
     padding: $spacing-sm $spacing-md;
 
     .mzp-c-breadcrumb-item {
         display: inline-block;
+        font-weight: 400;
 
-        &:first-child {
-            font-weight: 400;
+        &:last-child {
+            font-weight: bold;
         }
 
         + .mzp-c-breadcrumb-item {
-            font-weight: bold;
-
             &:before {
-                @include bidi(((content, "\003E", "\003C"),));
+                @include bidi(((content, "\2192", "\2190"),));
                 font-weight: normal;
-                margin: 0 0.25em;
+                margin: 0 .25em;
             }
         }
 
@@ -31,10 +30,8 @@
         }
     }
 
-
-
     &.mzp-t-dark {
-        background-color: $color-black;
+        background-color: get-theme('background-color-alt');
     }
 
     @media #{$mq-md} {
@@ -44,5 +41,4 @@
     @media #{$mq-lg} {
         padding: $spacing-sm $layout-xl - $spacing-md;
     }
-
 }

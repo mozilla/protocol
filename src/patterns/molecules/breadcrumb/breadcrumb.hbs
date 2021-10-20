@@ -1,19 +1,19 @@
 ---
 name: Breadcrumb
-description: A type of navigation menu used to provide a list of links based on current page within the site heirarchy, allowing users to visit previous pages from the current page.
+description: A type of navigation menu used to provide a list of links based on current page within the site hierarchy, allowing users to visit previous pages from the current page.
 order: 1
 notes: |
-    - Current implementation was designed for only one child item. Additional items have not been tested.
     - Use the `.mzp-t-dark` options to use dark mode.
     - Use a `<ol>` to use semantic HTML and structure.
+    - Using the `nav` element is optional, but reccomended.
 ---
 <nav aria-label="breadcrumb">
-  <ol class="mzp-c-breadcrumb mzp-u-list-styled">
+  <ol class="mzp-c-breadcrumb">
     <li class="mzp-c-breadcrumb-item">
       <a class="mzp-c-breadcrumb-item-link" href="#">Parent page</a>
     </li>
     <li aria-current="page" class="mzp-c-breadcrumb-item">
-      <a class="mzp-c-breadcrumb-item-link" href="#">Child page</a>
+      Child page
     </li>
   </ol>
 </nav>
