@@ -1,3 +1,9 @@
+# HEAD
+
+## Features
+
+* **assets** Add Firefox Relay logos and wordmarks
+
 # 15.0.0
 
 ## Features
