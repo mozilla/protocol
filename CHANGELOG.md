@@ -1,20 +1,21 @@
-# HEAD
+# 15.1.0
 
 ## Features
 
-* **assets** Add Firefox Relay logos and wordmarks
+* **component:** Add Firefox Relay logos and wordmarks
+* **assets:** Update @mozilla-protocol/assets to 5.1.0
 
 # 15.0.0
 
 ## Features
 
 * **assets:** (breaking) Update @mozilla-protocol/assets to 5.0.0
-* **assets** Refactored logo and wordmark mixins to use SVG assets instead of PNG
+* **assets:** Refactored logo and wordmark mixins to use SVG assets instead of PNG
 * **component:** New responsive video container.
 
 ## Bug Fixes
 
-* **js** when navigation has `mzp-is-sticky` class, respect user preference for reduced motion (#733)
+* **js:** when navigation has `mzp-is-sticky` class, respect user preference for reduced motion (#733)
 * **css:** Replace deprecated `/` division operator with `math.div()` (#722)
 * **css:** Set Split media width to 100% to accommodate responsive video (#711)
 
@@ -40,7 +41,7 @@
 * **css:** Let Picto retain its bottom margin in multi-column layouts in small viewports (#699)
 * **css:** Override styling native summary element when it’s polyfilled in IE11 (#658)
 * **js:** Set global `Mzp` namespace to default to `window` as root (#687).
-* **docs** Update docs to clarify SCSS variable use (#697)
+* **docs:** Update docs to clarify SCSS variable use (#697)
 
 
 # 14.0.3
