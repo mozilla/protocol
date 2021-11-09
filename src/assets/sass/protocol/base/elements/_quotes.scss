@@ -17,7 +17,7 @@ blockquote {
 
     cite {
         @include text-title-xs;
-        color: get-theme('body-text-color-alt');
+        color: get-theme('body-text-color-secondary');
 
         &:before {
             content: '— ';

@@ -15,27 +15,14 @@ $brand-theme: 'firefox';
     @include text-title-xl;
 }
 
-.background-alt {
-    background: get-theme('background-color-alt');
+.mzp-t-background-secondary,
+.mzp-t-background-tertiary,
+.mzp-t-dark:not(.mzp-c-button) {
     padding: $spacing-md;
 }
 
-.background-inverse {
-    @include light-links;
-    background: get-theme('background-color-inverse');
-    color: get-theme('body-text-color-inverse');
-    padding: $spacing-md;
-}
-
-.background-alt-inverse {
-    @include light-links;
-    background: get-theme('background-color-alt-inverse');
-    color: get-theme('body-text-color-alt-inverse');
-    padding: $spacing-md;
-}
-
-.text-alt {
-    color: get-theme('body-text-color-alt');
+.text-secondary {
+    color: get-theme('body-text-color-secondary');
 }
 
 .body-xl {
