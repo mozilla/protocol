@@ -1,3 +1,7 @@
+## Features
+
+* **component:** New breadcrumb component.
+
 # 15.1.0
 
 ## Features

@@ -1,0 +1,46 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+.mzp-c-breadcrumb {
+    background-color: get-theme('background-color-alt');
+
+    .mzp-c-breadcrumb-list {
+        margin-bottom: 0;
+        padding: $spacing-sm $spacing-md;
+
+        .mzp-c-breadcrumb-item {
+            display: inline-block;
+
+            &:last-child {
+                font-weight: bold;
+            }
+
+            + .mzp-c-breadcrumb-item {
+                &:before {
+                    @include bidi(((content, "\2192", "\2190"),));
+                    font-weight: normal;
+                    margin: 0 .25em;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        @media #{$mq-md} {
+            padding: $spacing-sm $layout-sm;
+        }
+
+        @media #{$mq-lg} {
+            padding: $spacing-sm $layout-xl - $spacing-md;
+        }
+    }
+
+    &.mzp-t-dark {
+        background-color: get-theme('background-color-alt-inverse');
+    }
+}
