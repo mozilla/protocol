@@ -6,6 +6,10 @@
 * **css:** (breaking) Rename "alt" theme colors to "secondary."
 * **component:** New breadcrumb component.
 
+## Bug Fixes
+
+* **css:** Fix image overlapping content in a reversed Split with media overflow.
+
 ## Migration Tips
 
 * Update any uses of the theme variable `background-color-alt` (in the `get-theme()` function) to `background-color-secondary`.
