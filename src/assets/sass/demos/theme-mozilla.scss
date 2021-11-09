@@ -15,34 +15,9 @@ $brand-theme: 'mozilla';
     @include text-title-xl;
 }
 
-.background-secondary {
-    background: get-theme('background-color-secondary');
-    padding: $spacing-md;
-}
-
-.background-accent {
-    background: get-theme('background-color-accent');
-    padding: $spacing-md;
-}
-
-.background-inverse {
-    @include light-links;
-    background: get-theme('background-color-inverse');
-    color: get-theme('body-text-color-inverse');
-    padding: $spacing-md;
-}
-
-.background-secondary-inverse {
-    @include light-links;
-    background: get-theme('background-color-secondary-inverse');
-    color: get-theme('body-text-color-secondary-inverse');
-    padding: $spacing-md;
-}
-
-.background-accent-inverse {
-    @include light-links;
-    background: get-theme('background-color-accent-inverse');
-    color: get-theme('body-text-color-inverse');
+.mzp-t-background-secondary,
+.mzp-t-background-tertiary,
+.mzp-t-dark:not(.mzp-c-button) {
     padding: $spacing-md;
 }
 

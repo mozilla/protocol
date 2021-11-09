@@ -20,7 +20,7 @@
 
     &.mzp-t-dark,
     .mzp-t-dark & {
-        color: get-theme('body-text-color-alt-inverse');
+        color: get-theme('body-text-color-secondary-inverse');
     }
 
     // if we're using the form component bottom spacing comes from `field` and `choice` components
