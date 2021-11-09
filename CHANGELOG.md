@@ -1,6 +1,15 @@
+# HEAD
+
 ## Features
 
+* **css:** Add tertiary theme colors.
+* **css:** (breaking) Rename "alt" theme colors to "secondary."
 * **component:** New breadcrumb component.
+
+## Migration Tips
+
+* Update any uses of the theme variable `background-color-alt` (in the `get-theme()` function) to `background-color-secondary`.
+* Update any uses of the `mzp-t-background-alt` class to `mzp-t-background-secondary`.
 
 # 15.1.0
 

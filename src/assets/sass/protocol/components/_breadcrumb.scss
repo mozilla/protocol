@@ -5,7 +5,7 @@
 @import '../includes/lib';
 
 .mzp-c-breadcrumb {
-    background-color: get-theme('background-color-alt');
+    background-color: get-theme('background-color-secondary');
 
     .mzp-c-breadcrumb-list {
         margin-bottom: 0;
@@ -41,6 +41,6 @@
     }
 
     &.mzp-t-dark {
-        background-color: get-theme('background-color-alt-inverse');
+        background-color: get-theme('background-color-secondary-inverse');
     }
 }

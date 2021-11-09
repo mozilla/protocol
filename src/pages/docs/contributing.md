@@ -502,13 +502,15 @@ for each brand theme, but here are the variable names in a handy list:
 
 ```
 background-color
-background-color-alt
-background-color-alt-inverse
+background-color-tertiary
+background-color-tertiary-inverse
+background-color-secondary
+background-color-secondary-inverse
 background-color-inverse
 body-font-family
 body-text-color
-body-text-color-alt
-body-text-color-alt-inverse
+body-text-color-secondary
+body-text-color-secondary-inverse
 body-text-color-inverse
 button-font-family
 link-color

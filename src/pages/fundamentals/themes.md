@@ -57,3 +57,4 @@ Many components have an inverse color variant that applies a dark background col
 ### Section backgrounds
 
 There's a basic `mzp-t-background-alt` class that applies a secondary background color to most elements or components, especially useful for alternating sections of a page.
+

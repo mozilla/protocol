@@ -52,12 +52,14 @@ $theme-fonts-mozilla: (
 // Colors
 
 $theme-colors-firefox: (
-    background-color-alt-inverse: $color-ink-50,
-    background-color-alt: $color-light-gray-10,
+    background-color-tertiary-inverse: $color-ink-20,
+    background-color-tertiary: $color-marketing-gray-20,
+    background-color-secondary-inverse: $color-ink-50,
+    background-color-secondary: $color-light-gray-10,
     background-color-inverse: $color-ink-80,
     background-color: $color-white,
-    body-text-color-alt-inverse: $color-marketing-gray-30,
-    body-text-color-alt: $color-marketing-gray-70,
+    body-text-color-secondary-inverse: $color-marketing-gray-30,
+    body-text-color-secondary: $color-marketing-gray-70,
     body-text-color-inverse: $color-white,
     body-text-color: $color-marketing-gray-80,
     link-color-hover-inverse: $color-blue-05,
@@ -73,12 +75,14 @@ $theme-colors-firefox: (
 );
 
 $theme-colors-mozilla: (
-    background-color-alt-inverse: $color-dark-gray-60,
-    background-color-alt: $color-light-gray-10,
+    background-color-tertiary-inverse: $color-dark-gray-40,
+    background-color-tertiary: $color-light-gray-30,
+    background-color-secondary-inverse: $color-dark-gray-60,
+    background-color-secondary: $color-light-gray-10,
     background-color-inverse: $color-black,
     background-color: $color-white,
-    body-text-color-alt-inverse: $color-light-gray-30,
-    body-text-color-alt: $color-dark-gray-90,
+    body-text-color-secondary-inverse: $color-light-gray-30,
+    body-text-color-secondary: $color-dark-gray-90,
     body-text-color-inverse: $color-white,
     body-text-color: $color-black,
     link-color-hover-inverse: $color-blue-05,
@@ -217,7 +221,7 @@ $theme-type-scale-condensed-mozilla: (
 
 // Collect the maps for easier reference, so you don't have to refer to a specific submap.
 // Usage:
-//    map-get($theme-firefox, 'background-color-alt');
+//    map-get($theme-firefox, 'background-color-secondary');
 
 $theme-firefox: map-collect($theme-spacing, $theme-fonts-firefox, $theme-colors-firefox, $theme-type-scale-firefox);
 $theme-mozilla: map-collect($theme-spacing, $theme-fonts-mozilla, $theme-colors-mozilla, $theme-type-scale-mozilla);

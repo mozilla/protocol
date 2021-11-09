@@ -15,8 +15,13 @@ $brand-theme: 'mozilla';
     @include text-title-xl;
 }
 
-.background-alt {
-    background: get-theme('background-color-alt');
+.background-secondary {
+    background: get-theme('background-color-secondary');
+    padding: $spacing-md;
+}
+
+.background-accent {
+    background: get-theme('background-color-accent');
     padding: $spacing-md;
 }
 
@@ -27,15 +32,22 @@ $brand-theme: 'mozilla';
     padding: $spacing-md;
 }
 
-.background-alt-inverse {
+.background-secondary-inverse {
     @include light-links;
-    background: get-theme('background-color-alt-inverse');
-    color: get-theme('body-text-color-alt-inverse');
+    background: get-theme('background-color-secondary-inverse');
+    color: get-theme('body-text-color-secondary-inverse');
     padding: $spacing-md;
 }
 
-.text-alt {
-    color: get-theme('body-text-color-alt');
+.background-accent-inverse {
+    @include light-links;
+    background: get-theme('background-color-accent-inverse');
+    color: get-theme('body-text-color-inverse');
+    padding: $spacing-md;
+}
+
+.text-secondary {
+    color: get-theme('body-text-color-secondary');
 }
 
 .body-xl {
