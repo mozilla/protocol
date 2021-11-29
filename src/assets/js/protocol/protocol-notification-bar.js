@@ -33,7 +33,7 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
 
         if (typeof opts === 'object') {
             for (var i in opts) {
-                if (opts.hasOwnProperty(i)) {
+                if (Object.prototype.hasOwnProperty.call(opts, i)) {
                     options[i] = opts[i];
                 }
             }

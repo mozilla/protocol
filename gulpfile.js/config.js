@@ -9,12 +9,6 @@ module.exports = {
     clean: {
         dest: './dist/'
     },
-    lintCss: {
-        src: `${src}/sass/**/*.scss`
-    },
-    lintJS: {
-        src: ['**/*.js', '!dist/**', '!src/assets/js/docs/vendor/**', '!node_modules/**']
-    },
     compressCss: {
         tasks: {
             protocol: {

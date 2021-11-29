@@ -2,6 +2,11 @@
 
 ## Features
 
+* **linting:** Updated ESLint and Stylelint, moved to NPM scripts (#745).
+* **node:** Bumped Node.js to v16 (#745).
+
+## Features
+
 * **css:** Add tertiary theme colors.
 * **css:** (breaking) Rename "alt" theme colors to "secondary."
 * **component:** New breadcrumb component.

@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
-    extends: "@mozilla-protocol/eslint-config/index-node",
+    extends: '@mozilla-protocol/eslint-config/index-node',
 };

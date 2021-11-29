@@ -2,8 +2,6 @@
 
 const gulp = require('gulp');
 const clean = require('./clean');
-const lintCSS = require('./lint-css');
-const lintJS = require('./lint-js');
 const copyStaticFiles = require('./copy-static');
 const drizzleTask = require('./drizzle');
 const compileSass = require('./compile-sass');
@@ -28,7 +26,6 @@ const generateIconData = require('./generate-icon-data');
 
 const build = gulp.series(
     clean,
-    gulp.parallel(lintCSS, lintJS),
     generateIconData,
     copyStaticFiles,
     drizzleTask,
