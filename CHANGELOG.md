@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **js:** use more robust polyfill for `e.matches` (#736)
+
 # 16.0.0
 
 ## Features

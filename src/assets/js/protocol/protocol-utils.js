@@ -13,9 +13,24 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
 
     var Utils = {};
 
-    // matches() vendorfill, used by nextUntil
+    /**
+     * Element.matches() polyfill (IE8 support)
+     * https://developer.mozilla.org/en-US/docs/Web/API/Element/matches
+     * - https://vanillajstoolkit.com/polyfills/matches-ie8/
+     */
     if (!Element.prototype.matches) {
-        Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+        Element.prototype.matches =
+            Element.prototype.matchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.oMatchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            function (s) {
+                var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                    i = matches.length;
+                while (--i >= 0 && matches.item(i) !== this) { } // eslint-disable-line no-empty
+                return i > -1;
+            };
     }
 
     /**
