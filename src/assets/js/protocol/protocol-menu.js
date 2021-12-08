@@ -326,7 +326,7 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     Menu.init = function(options) {
         if (typeof options === 'object') {
             for (var i in options) {
-                if (options.hasOwnProperty(i)) {
+                if (Object.prototype.hasOwnProperty.call(options, i)) {
                     _options[i] = options[i];
                 }
             }
