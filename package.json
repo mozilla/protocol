@@ -19,8 +19,8 @@
     "build": "npm run prestart && gulp build",
     "lint-css": "./node_modules/.bin/stylelint \"src/assets/sass/**/*.scss\" ",
     "lint-js": "./node_modules/.bin/eslint \"src/assets/js/**/*.js\" \"gulpfile.js/**/*.js\" ",
-    "lint": "npm run lint-js && npm run lint-css ",
-    "test": "gulp test",
+    "lint": "npm run lint-js && npm run lint-css",
+    "test": "./node_modules/.bin/karma start ./tests/karma.conf.js",
     "pretest": "npm run build",
     "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
     "prepublishOnly": "gulp build"

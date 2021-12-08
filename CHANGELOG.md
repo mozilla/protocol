@@ -8,6 +8,7 @@
 
 ## Features
 
+* **js:**  Move Karma test command to NPM script (#748).
 * **linting:** Updated ESLint and Stylelint, moved to NPM scripts (#745).
 * **node:** Bumped Node.js to v16 (#745).
 
