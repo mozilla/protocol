@@ -1,6 +1,7 @@
 ---
 title: Contributing to Protocol
 label: Overview
+status: outdated
 ---
 
 Protocol, like everything else Mozilla makes, is [open source](https://developer.mozilla.org/docs/Mozilla/Developer_guide/Introduction).

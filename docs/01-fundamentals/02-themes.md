@@ -1,7 +1,6 @@
 ---
 title: Brand Themes
 name: Brand Themes
-order: 2
 ---
 
 Protocol supports two distinct brands: Mozilla and Firefox.
