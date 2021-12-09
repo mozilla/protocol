@@ -9,10 +9,10 @@ const merge = require('merge-stream');
 
 // Concatenate docs JS files.
 function concatJS() {
-    let tasks = [];
+    const tasks = [];
 
     Object.keys(config).forEach((key) => {
-        let val = config[key];
+        const val = config[key];
         tasks.push(gulp.src(val.src)
             .pipe(plumber({ errorHandler: handleErrors }))
             .pipe(concat(key + '.js'))

@@ -1,5 +1,11 @@
 # HEAD
 
+## Features
+
+* **node:**  Create a standalone Webpack config for compiling the Protocol NPM package (#746).
+* **js:**  Update protocol to extend standard ESLint configs (#753)
+* **js:**  Move Karma test command to NPM script (#748).
+
 ## Bug Fixes
 
 * **js:** use more robust polyfill for `e.matches` (#736)
@@ -8,7 +14,6 @@
 
 ## Features
 
-* **js:**  Move Karma test command to NPM script (#748).
 * **linting:** Updated ESLint and Stylelint, moved to NPM scripts (#745).
 * **node:** Bumped Node.js to v16 (#745).
 

@@ -10,10 +10,10 @@ const merge = require('merge-stream');
 
 // Create minified versions of all JS assets.
 function compressJS() {
-    let tasks = [];
+    const tasks = [];
 
     Object.keys(config.tasks).forEach((key) => {
-        let val = config.tasks[key];
+        const val = config.tasks[key];
         tasks.push(gulp.src(val.src)
             .pipe(plumber({ errorHandler: handleErrors }))
             .pipe(uglify())

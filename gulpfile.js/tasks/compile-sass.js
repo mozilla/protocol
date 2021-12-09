@@ -10,10 +10,10 @@ const merge = require('merge-stream');
 
 // Compile the main Protocol Sass file(s) to CSS.
 function compileSass() {
-    let tasks = [];
+    const tasks = [];
 
     Object.keys(config).forEach((key) => {
-        let val = config[key];
+        const val = config[key];
         tasks.push(gulp.src(val.src)
             .pipe(plumber({ errorHandler: handleErrors }))
             .pipe(sourcemaps.init())

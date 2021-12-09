@@ -8,52 +8,6 @@ module.exports = {
     clean: {
         dest: './dist/'
     },
-    compressCss: {
-        tasks: {
-            protocol: {
-                src: [
-                    `${dest}/protocol/protocol/css/*.css`,
-                    `!${dest}/protocol/protocol/css/*.min.css`
-                ],
-                dest: `${dest}/protocol/protocol/css/`,
-            },
-            docs: {
-                src: [
-                    `${dest}/docs/css/*.css`,
-                    `!${dest}/docs/css/*.min.css`
-                ],
-                dest: `${dest}/docs/css/`,
-            }
-        },
-        rename: {
-            suffix: '.min'
-        }
-    },
-    compressJS: {
-        tasks: {
-            protocol: {
-                src: [
-                    `${dest}/protocol/protocol/js/**/*.js`,
-                    `!${dest}/protocol/protocol/js/*.min.js`
-                ],
-                dest: `${dest}/protocol/protocol/js/`,
-            },
-            docs: {
-                src: [
-                    `${dest}/docs/js/**/*.js`,
-                    `${dest}/docs/js/*.min.js`,
-                ],
-                dest: `${dest}/docs/js/`,
-            }
-        },
-        rename: {
-            suffix: '.min'
-        },
-        settings: {
-            errLogToConsole: true,
-            sourceComments: true
-        }
-    },
     concatJS: {
         docs: {
             src: [
@@ -79,20 +33,12 @@ module.exports = {
         }
     },
     sassCopy: {
-        protocol: {
-            src: `${src}/sass/protocol/**/*.scss`,
-            dest: `${dest}/protocol/protocol/css/`
-        },
         docs: {
             src: [
                 `${src}/sass/docs/**/*.scss`,
                 `${src}/sass/demos/**/*.scss`
             ],
             dest: `${dest}/docs/css/`
-        },
-        includes: {
-            src: `./node_modules/@mozilla-protocol/**/*.scss`,
-            dest: `${dest}/protocol/protocol/css/includes/`
         }
     },
     jsCopy: {
@@ -113,14 +59,10 @@ module.exports = {
         dest: './src/data/icons.json'
     },
     staticCopy: {
-        package: {
-            src: `${src}/package/*`,
-            dest: `${dest}/protocol`
-        },
         img: {
             src: [
                 `${src}/img/**/*`,
-                `./node_modules/@mozilla-protocol/assets/**/*`
+                './node_modules/@mozilla-protocol/assets/**/*'
             ],
             dest: `${dest}/protocol/protocol/img/`
         },
@@ -133,12 +75,12 @@ module.exports = {
             dest: './dist/static'
         },
         colorData: {
-            src: `./node_modules/@mozilla-protocol/tokens/dist/colors/colors.json`,
-            dest: `./src/data`
+            src: './node_modules/@mozilla-protocol/tokens/dist/colors/colors.json',
+            dest: './src/data'
         },
         tokenData: {
-            src: `./node_modules/@mozilla-protocol/tokens/dist/index.json`,
-            dest: `./src/data`
+            src: './node_modules/@mozilla-protocol/tokens/dist/index.json',
+            dest: './src/data'
         }
     },
     serve: {
@@ -155,10 +97,7 @@ module.exports = {
     },
     watch: {
         watchers: {
-            static: [
-                './src/static/**/*',
-                `${src}/package/*`
-            ],
+            static: ['./src/static/**/*'],
             js: [`${src}/js/**/*.js`],
             css: `${src}/sass/**/*.scss`,
             drizzle: [

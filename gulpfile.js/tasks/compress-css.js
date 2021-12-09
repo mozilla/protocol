@@ -8,10 +8,10 @@ const merge = require('merge-stream');
 
 // Create minified versions of all CSS assets.
 function compressCSS() {
-    let tasks = [];
+    const tasks = [];
 
     Object.keys(config.tasks).forEach((key) => {
-        let val = config.tasks[key];
+        const val = config.tasks[key];
         tasks.push(gulp.src(val.src)
             .pipe(cleanCSS({processImport: false}))
             .pipe(rename(config.rename))

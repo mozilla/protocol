@@ -13,6 +13,7 @@
 [releases]: https://github.com/mozilla/protocol/releases/latest
 [readme]: https://github.com/mozilla/protocol/blob/master/src/assets/package/README.md
 [changelog]: https://github.com/mozilla/protocol/blob/master/CHANGELOG.md
+[webpack]: https://webpack.js.org/
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -484,19 +485,29 @@ dist/assets
 │         └── protocol-sidemenu.js
 ```
 
-# Build Process
+# Building the docs
 
-The build sequence consists of a small set of [Gulp][gulp] tasks. While you'll probably only need `gulp` and `gulp --dev` most of the time, the other tasks can be called independently to process only a subset of your source files:
+The build sequence for the docs consists of a small set of [Gulp][gulp] tasks. While you'll probably only need `gulp` and `gulp --dev` most of the time, the other tasks can be called independently to process only a subset of your source files:
 
 | Task         | Description
 | ---          | ---
-| `gulp`       | Build everything and start the development server.
+| `gulp`       | Build the docs and start the development server.
 | `gulp --dev` | Do everything `gulp` does, but with file watching.
-| `gulp build` | Just build everything.
+| `gulp build` | Just build the docs.
+
+# Building the NPM package
+
+We use a Webpack[webpack] configuration for building the contents of the NPM package ready for publishing. To build the package, run:
+
+```
+npm run build
+```
+
+This will install dependencies, lint CSS/JS files, and then build the package content in the `./package/` directory.
 
 # Running tests
 
-To start the build process and then run front-end JS tests against the processed files:
+To perform the package build process above and then run front-end JS tests against the processed files:
 
 ```
 npm test
@@ -512,8 +523,8 @@ Protocol is published to NPM under the `@mozilla-protocol/core` namespace/packag
 4. Run `npm install` to update the package-lock.json file.
 5. Submit a pull request with your changes (or commit directly to `master` if you have permission). Once the changes have been merged to master:
 6. Tag a new release. You can do this either using [Git tag][git-tag], or directly on the [GitHub website][releases].
-7. Run `npm test` to run the build script and front-end tests. The package contents will be located in `./dist/assets/protocol/`.
-8. If the build is successful and all tests pass, publish to NPM using `npm publish ./dist/assets/protocol/`.
+7. Run `npm test` to run the build script and front-end tests. The package contents will be located in `./package/`.
+8. If the build is successful and all tests pass, publish to NPM using `npm publish ./package/`.
 
 # Deployment
 

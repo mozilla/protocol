@@ -5,7 +5,7 @@ const path = require('path');
 
 
 function readDirRecursive(dir, subdir='', key='general icons') {
-    let output = {
+    const output = {
         [key]:{
             files:[],
             subsets:[]

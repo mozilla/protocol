@@ -8,8 +8,6 @@ const compileSass = require('./compile-sass');
 const copySass = require('./copy-sass');
 const copyJS = require('./copy-js');
 const concatJS = require('./concat-js');
-const compressCSS = require('./compress-css');
-const compressJS = require('./compress-js');
 const generateIconData = require('./generate-icon-data');
 
 /*
@@ -29,8 +27,7 @@ const build = gulp.series(
     generateIconData,
     copyStaticFiles,
     drizzleTask,
-    gulp.parallel(compileSass, copySass, copyJS, concatJS),
-    gulp.parallel(compressCSS, compressJS)
+    gulp.parallel(compileSass, copySass, copyJS, concatJS)
 );
 
 // Register build task (for continuous deployment via Netlify)
