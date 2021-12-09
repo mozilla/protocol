@@ -5,7 +5,7 @@
   "author": "Mozilla",
   "description": "A design system for Mozilla's websites.",
   "homepage": "https://github.com/mozilla/protocol",
-  "license": "MIT",
+  "license": "MPL",
   "repository": {
     "type": "git",
     "url": "https://github.com/mozilla/protocol.git"
@@ -14,58 +14,13 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "prestart": "npm install && npm run lint",
-    "start": "gulp --dev",
-    "build": "npm run prestart && gulp build",
-    "lint-css": "./node_modules/.bin/stylelint \"src/assets/sass/**/*.scss\" ",
-    "lint-js": "./node_modules/.bin/eslint \"src/assets/js/**/*.js\" \"gulpfile.js/**/*.js\" ",
-    "lint": "npm run lint-js && npm run lint-css ",
-    "test": "gulp test",
-    "pretest": "npm run build",
-    "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
-    "prepublishOnly": "gulp build"
+    "start": "ENV=development fractal start --sync",
+    "build": "fractal build"
   },
   "dependencies": {
-    "@cloudfour/hbs-helpers": "^0.9.0",
+    "@frctl/fractal": "^1.5.11",
+    "@frctl/mandelbrot": "^1.9.4",
     "@mozilla-protocol/assets": "^5.1.0",
-    "@mozilla-protocol/tokens": "^5.0.5",
-    "del": "^6.0.0",
-    "drizzle-builder": "0.0.10",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-cli": "^2.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-notify": "^4.0.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-replace": "^1.1.3",
-    "gulp-sass": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp-util": "^3.0.8",
-    "merge-stream": "^2.0.0",
-    "prismjs": "^1.25.0",
-    "require-dir": "^1.2.0",
-    "sass": "^1.41.1",
-    "yargs": "^17.1.1"
-  },
-  "devDependencies": {
-    "@mozilla-protocol/eslint-config": "^1.1.0",
-    "ansi-regex": ">=6.0.1",
-    "axios": ">=0.21.2",
-    "browser-sync": "^2.27.5",
-    "deep-extend": ">=0.5.1",
-    "doctoc": "^2.0.1",
-    "eslint": "^8.3.0",
-    "jasmine-core": "^3.9.0",
-    "karma": "^6.3.4",
-    "karma-firefox-launcher": "^2.1.1",
-    "karma-jasmine": "^4.0.1",
-    "postcss-scss": "^4.0.2",
-    "set-value": ">=4.0.1",
-    "stylelint": "^14.1.0",
-    "tar": ">=4.4.18",
-    "trim": ">=0.0.3",
-    "trim-newlines": ">=3.0.1"
+    "@mozilla-protocol/tokens": "^5.0.5"
   }
 }

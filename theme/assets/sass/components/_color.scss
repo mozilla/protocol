@@ -1,0 +1,49 @@
+// Color swatches
+.docs-swatch-gallery {
+    margin: 0 0 $spacing-lg;
+
+    .docs-swatch {
+        margin: 0 0 1.5em;
+
+        .docs-swatch-values {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+                margin: 0 0 .15em;
+                padding: 0;
+            }
+        }
+    }
+
+    .docs-palette-title {
+        @include text-title-md;
+        clear: both;
+        margin: 0 0 1em;
+    }
+
+    .docs-swatch-image {
+        display: block;
+        height: 64px;
+        margin: 0 auto .5em;
+        width: 100%;
+    }
+
+    .docs-swatch-name {
+        @include font-base;
+        @include text-body-lg;
+        margin: 0 0 .25em;
+    }
+
+    @media #{$mq-md} {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: $layout-xs;
+    }
+
+    @media #{$mq-lg} {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

@@ -1,0 +1,11 @@
+title: Typography
+label: Typography
+context:
+    specimens:
+        alphabet: AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
+        characters: ÅåÂâÀàÁáÄäÃãĄąẢảĆćÇçĈĉĐđÉéÏïÎîŁłÑñØøÖöÕõÜüÛû
+        digits: 0123456789
+        punctuation: ". … , · • : ; ¡ ! ¿ ? { } [ ] ( ) / — – - _ * ‹ › « » ‚ ‘ ’ „ “ ” '"
+        special: "| ¦ @ & † ‡ ❡ ¶ § ◊ ^ ~ © ® ℗ ™"
+        math: ≈ ~ = ≠ ∙ ÷ ¬ − + ± × ∕ > ≥ ∞ < ≤ % ‰ ∫ ∂ ∆ ∏ ∑ √
+        heading: Sphinx of black quartz, judge my vow!
