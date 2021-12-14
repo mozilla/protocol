@@ -6,9 +6,9 @@ const merge = require('merge-stream');
 
 // Copy across all static assets for both Protocol and docs.
 function copyStaticFiles() {
-    let tasks = [];
+    const tasks = [];
     Object.keys(config).forEach((key) => {
-        let val = config[key];
+        const val = config[key];
         tasks.push(gulp.src(val.src).pipe(gulp.dest(val.dest)));
     });
 

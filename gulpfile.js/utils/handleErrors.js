@@ -3,7 +3,7 @@
 const notify = require('gulp-notify');
 
 module.exports = function() {
-    let args = Array.prototype.slice.call(arguments);
+    const args = Array.prototype.slice.call(arguments);
 
     // Send error to notification center with gulp-notify
     notify.onError({

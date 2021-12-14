@@ -20,14 +20,14 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             // library
-            '../dist/assets/protocol/protocol/js/protocol-supports.js',
-            '../dist/assets/protocol/protocol/js/protocol-utils.js',
+            '../package/protocol/js/protocol-supports.js',
+            '../package/protocol/js/protocol-utils.js',
             // js files
-            '../dist/assets/protocol/protocol/js/protocol-details.js',
-            '../dist/assets/protocol/protocol/js/protocol-lang-switcher.js',
-            '../dist/assets/protocol/protocol/js/protocol-menu.js',
-            '../dist/assets/protocol/protocol/js/protocol-navigation.js',
-            '../dist/assets/protocol/protocol/js/protocol-notification-bar.js',
+            '../package/protocol/js/protocol-details.js',
+            '../package/protocol/js/protocol-lang-switcher.js',
+            '../package/protocol/js/protocol-menu.js',
+            '../package/protocol/js/protocol-navigation.js',
+            '../package/protocol/js/protocol-notification-bar.js',
             // tests
             'unit/protocol-details.js',
             'unit/protocol-lang-switcher.js',

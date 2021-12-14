@@ -7,9 +7,9 @@ const replace = require('gulp-replace');
 
 // Copy across all original Sass source files for distribution.
 function copySass() {
-    let tasks = [];
+    const tasks = [];
     Object.keys(config).forEach((key) => {
-        let val = config[key];
+        const val = config[key];
         tasks.push(gulp.src(val.src)
             .pipe(replace('./node_modules/@mozilla-protocol/', ''))
             .pipe(gulp.dest(val.dest))
