@@ -1,10 +1,13 @@
 # HEAD
 
+## Bug Fixes
+* **js:** Fix keyboard focus capture on modal open animation (#749).
+
 ## Features
 
-* **node:**  Create a standalone Webpack config for compiling the Protocol NPM package (#746).
-* **js:**  Update protocol to extend standard ESLint configs (#753)
-* **js:**  Move Karma test command to NPM script (#748).
+* **node:** Create a standalone Webpack config for compiling the Protocol NPM package (#746).
+* **js:** Update protocol to extend standard ESLint configs (#753).
+* **js:** Move Karma test command to NPM script (#748).
 
 ## Bug Fixes
 

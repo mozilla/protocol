@@ -88,7 +88,11 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
             }
         }, false);
 
-        modal.focus();
+        // add a short delay is need before calling focus() to give
+        // time for the fade-in animation to complete (issue #749).
+        setTimeout(function() {
+            modal.focus();
+        }, 300);
 
         // close with escape key
         document.addEventListener('keyup', _onDocumentKeyUp, false);
