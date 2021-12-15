@@ -8,4 +8,4 @@ docker run --rm --label=node \
     -v $(pwd)/.npm:/.npm \
     -v $(pwd):/app -w /app\
     node:16-alpine \
-    npm run-script build
+    npm run-script build-docs
