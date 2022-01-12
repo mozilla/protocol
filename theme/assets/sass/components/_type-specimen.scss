@@ -27,20 +27,73 @@
     margin: 0 0 .25em;
 }
 
-.docs-scale-sample-title-2xl { @include text-title-2xl; font-family: get-theme('title-font-family'); font-weight: bold; }
-.docs-scale-sample-title-xl { @include text-title-xl; font-family: get-theme('title-font-family'); font-weight: bold; }
-.docs-scale-sample-title-lg { @include text-title-lg; font-family: get-theme('title-font-family'); font-weight: bold; }
-.docs-scale-sample-title-md { @include text-title-md; font-family: get-theme('title-font-family'); font-weight: bold; }
-.docs-scale-sample-title-sm { @include text-title-sm; font-family: get-theme('title-font-family'); font-weight: bold; }
-.docs-scale-sample-title-xs { @include text-title-xs; font-family: get-theme('title-font-family'); font-weight: bold; }
-.docs-scale-sample-title-2xs { @include text-title-2xs; font-family: get-theme('title-font-family'); font-weight: bold; }
-.docs-scale-sample-title-3xs { @include text-title-3xs; font-family: get-theme('title-font-family'); font-weight: bold; }
-.docs-scale-sample-body-xl { @include text-body-xl; }
-.docs-scale-sample-body-lg { @include text-body-lg; }
-.docs-scale-sample-body-md { @include text-body-md; }
-.docs-scale-sample-body-sm { @include text-body-sm; }
-.docs-scale-sample-body-xs { @include text-body-xs; }
+.docs-scale-sample-title-2xl {
+    @include text-title-2xl;
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+}
 
+.docs-scale-sample-title-xl {
+    @include text-title-xl;
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+}
+
+.docs-scale-sample-title-lg {
+    @include text-title-lg;
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+}
+
+.docs-scale-sample-title-md {
+    @include text-title-md;
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+}
+
+.docs-scale-sample-title-sm {
+    @include text-title-sm;
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+}
+
+.docs-scale-sample-title-xs {
+    @include text-title-xs;
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+}
+
+.docs-scale-sample-title-2xs {
+    @include text-title-2xs;
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+}
+
+.docs-scale-sample-title-3xs {
+    @include text-title-3xs;
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+}
+
+.docs-scale-sample-body-xl {
+    @include text-body-xl;
+}
+
+.docs-scale-sample-body-lg {
+    @include text-body-lg;
+}
+
+.docs-scale-sample-body-md {
+    @include text-body-md;
+}
+
+.docs-scale-sample-body-sm {
+    @include text-body-sm;
+}
+
+.docs-scale-sample-body-xs {
+    @include text-body-xs;
+}
 
 #specimen-type-scale-condensed {
     .docs-scale-sample-title-2xl {
