@@ -26,6 +26,7 @@ fractal.web.set("debug", true);
 fractal.components.engine(nunjucks);
 fractal.components.set('ext', '.html');
 fractal.components.set('path', path.join(__dirname, 'components'));
+fractal.components.set('default.status', null);
 fractal.components.set('statuses', {
     deprecated: {
         label: "Deprecated",

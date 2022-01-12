@@ -277,6 +277,10 @@ mark {
   border-width: 3px;
 }
 
+.Status-label {
+  font-weight: bold;
+}
+
 .Tree {
   white-space: normal;
 }
