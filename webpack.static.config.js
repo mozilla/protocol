@@ -14,7 +14,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     // main.js serves as an entrypoint for Webpack, but is not required
     // directly by any Protocol components.
-    entry: path.resolve(__dirname, 'src/main.js'),
+    entry: path.resolve(__dirname, 'main.js'),
     output: {
         path: path.resolve(__dirname, 'package')
     },
@@ -28,7 +28,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/assets/sass/protocol'),
+                    from: path.resolve(__dirname, 'assets/sass/protocol'),
                     to: 'protocol/css/',
                     transform: (content) => {
                         // This is required so that _lib.scss can load the tokens package
@@ -38,11 +38,11 @@ module.exports = {
                     }
                 },
                 {
-                    from: path.resolve(__dirname, 'src/assets/fonts/'),
+                    from: path.resolve(__dirname, 'assets/fonts/'),
                     to: 'protocol/fonts/'
                 },
                 {
-                    from: path.resolve(__dirname, 'src/assets/package/')
+                    from: path.resolve(__dirname, 'assets/package/')
                 },
                 {
                     from: path.resolve(__dirname, 'node_modules/@mozilla-protocol/tokens/dist/'),

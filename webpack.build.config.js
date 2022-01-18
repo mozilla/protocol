@@ -16,7 +16,7 @@ const path = require('path');
 // Create both uncompressed and minified JS assets for each file in directory.
 const jsConfig = {
     devtool: false,
-    entry: glob.sync('./src/assets/js/protocol/*.js').reduce((obj, el) => {
+    entry: glob.sync('./assets/js/protocol/*.js').reduce((obj, el) => {
         const name = path.parse(el).name;
         obj[name] = el;
         obj[`${name}.min`] = el;
@@ -44,10 +44,10 @@ const jsConfig = {
 // Create both uncompressed and minified CSS assets for standard Protocol libraries.
 const cssConfig = {
     entry: {
-        'protocol': path.resolve(__dirname, 'src/assets/sass/protocol/protocol.scss'),
-        'protocol.min': path.resolve(__dirname, 'src/assets/sass/protocol/protocol.scss'),
-        'protocol-components': path.resolve(__dirname, 'src/assets/sass/protocol/protocol-components.scss'),
-        'protocol-components.min': path.resolve(__dirname, 'src/assets/sass/protocol/protocol-components.scss'),
+        'protocol': path.resolve(__dirname, 'assets/sass/protocol/protocol.scss'),
+        'protocol.min': path.resolve(__dirname, 'assets/sass/protocol/protocol.scss'),
+        'protocol-components': path.resolve(__dirname, 'assets/sass/protocol/protocol-components.scss'),
+        'protocol-components.min': path.resolve(__dirname, 'assets/sass/protocol/protocol-components.scss'),
     },
     output: {
         filename: 'temp/[name].js',
@@ -66,7 +66,7 @@ const cssConfig = {
         rules: [
             {
                 test: /\.scss$/,
-                include: path.resolve(__dirname, 'src/assets/sass/protocol'),
+                include: path.resolve(__dirname, 'assets/sass/protocol'),
                 use: [
                     MiniCssExtractPlugin.loader,
                     {

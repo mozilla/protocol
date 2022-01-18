@@ -14,17 +14,15 @@
     "node": ">=16.0.0"
   },
   "scripts": {
+    "build": "npm run prestart && npm run webpack",
+    "fractal-build": "fractal build",
+    "lint-css": "./node_modules/.bin/stylelint \"assets/sass/**/*.scss\" \"theme/assets/sass/**/*.scss\" ",
+    "lint-js": "./node_modules/.bin/eslint \"assets/js/**/*.js\" \"webpack.static.config.js\" \"webpack.build.config.js\" ",
+    "lint": "npm run lint-js && npm run lint-css",
+    "prepublishOnly": "npm run webpack",
     "prestart": "npm install && npm run lint",
-    "start": "gulp --dev",
-    "build": "npm run prestart && gulp build",
-    "build-fractal": "fractal build",
-    "lint-css": "./node_modules/.bin/stylelint \"src/assets/sass/**/*.scss\" ",
-    "lint-js": "./node_modules/.bin/eslint \"src/assets/js/**/*.js\" \"gulpfile.js/**/*.js\" ",
-    "lint": "npm run lint-js && npm run lint-css ",
-    "test": "gulp test",
-    "pretest": "npm run build",
-    "docs": "doctoc --title \"### Contents\" --maxlevel 2 docs/README.md",
-    "prepublishOnly": "gulp build"
+    "start": "ENV=development fractal start --sync",
+    "webpack": "webpack --config webpack.static.config.js --mode development && webpack --config webpack.build.config.js --mode development"
   },
   "dependencies": {
     "@frctl/fractal": "^1.5.11",
@@ -36,37 +34,15 @@
     "copy-webpack-plugin": "^10.0.0",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.2.0",
-    "del": "^6.0.0",
-    "merge-stream": "^2.0.0",
     "mini-css-extract-plugin": "^2.4.5",
-    "require-dir": "^1.2.0",
     "sass": "^1.41.1",
     "sass-loader": "^12.4.0",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
-    "webpack-remove-empty-scripts": "^0.7.1",
-    "yargs": "^17.1.1"
+    "webpack-remove-empty-scripts": "^0.7.1"
   },
   "devDependencies": {
-    "ansi-regex": ">=6.0.1",
-    "axios": ">=0.21.2",
-    "browser-sync": "^2.27.5",
-    "deep-extend": ">=0.5.1",
-    "doctoc": "^2.0.1",
     "eslint": "^8.3.0",
-    "jasmine-core": "^3.9.0",
-    "karma": "^6.3.4",
-    "karma-firefox-launcher": "^2.1.1",
-    "karma-jasmine": "^4.0.1",
-    "postcss-scss": "^4.0.2",
-    "set-value": ">=4.0.1",
-    "stylelint": "^14.1.0",
-    "tar": ">=4.4.18",
-    "trim": ">=0.0.3",
-    "trim-newlines": ">=3.0.1"
-  },
-  "browserslist": [
-    "defaults",
-    "IE 10"
-  ]
+    "stylelint": "^14.1.0"
+  }
 }
