@@ -1,5 +1,4 @@
 title: Picto
-status: ready
 context:
     heading: "A headline with 30 characters"
     body: "A short description, just a sentence or two. Don’t use this component for long-form content; it’s only for blurbs."

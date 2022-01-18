@@ -1,5 +1,4 @@
 title: Button
-status: ready
 context:
     label: "Primary Button"
 default: Primary

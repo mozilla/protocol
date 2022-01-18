@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link media="all" rel="stylesheet" href="{{ path '/css/docs/preview.css' }}">
+    <link media="all" rel="stylesheet" href="{{ '/css/docs/preview.css' | path }}">
     <title>Preview Layout</title>
 </head>
 <body>
     <div class="site-preview">
 
-    {{{ yield }}}
+    {{ yield | safe }}
 
     </div>
 </body>

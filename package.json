@@ -29,6 +29,7 @@
   "dependencies": {
     "@frctl/fractal": "^1.5.11",
     "@frctl/mandelbrot": "^1.9.4",
+    "@frctl/nunjucks": "^2.0.13",
     "@mozilla-protocol/assets": "^5.1.0",
     "@mozilla-protocol/tokens": "^5.0.5",
     "clean-webpack-plugin": "^4.0.0",
