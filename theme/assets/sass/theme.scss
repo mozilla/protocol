@@ -1,0 +1,40 @@
+
+$brand-theme: 'mozilla';
+$font-path:  '/fonts';
+
+
+@import '../../../node_modules/@mozilla-protocol/tokens/dist/index';
+@import '../../../assets/sass/protocol/includes/lib';
+
+@import '../../../assets/sass/protocol/includes/fonts/inter';
+@import '../../../assets/sass/protocol/includes/fonts/metropolis';
+@import '../../../assets/sass/protocol/includes/fonts/zilla-slab';
+
+// Settings
+@import 'settings/settings';
+
+// Base
+@import 'base/typography';
+
+// Helpers
+@import 'helpers/text';
+
+// Components
+@import 'components/browser';
+@import 'components/document';
+@import 'components/frame';
+@import 'components/header';
+@import 'components/meta';
+@import 'components/navigation';
+@import 'components/pen';
+@import 'components/preview';
+@import 'components/prose';
+@import 'components/search';
+@import 'components/status';
+@import 'components/tree';
+@import 'components/type-specimen';
+
+// Custom components for the docs
+@import 'components/grid-list';
+@import 'components/color';
+@import 'components/icon';

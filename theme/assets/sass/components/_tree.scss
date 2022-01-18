@@ -1,0 +1,88 @@
+.Tree {
+  white-space: normal;
+}
+
+.Tree-header {
+  padding-left: 1.25rem;
+}
+
+.Tree-title {
+  @include text-body-md;
+  color: $color-white;
+  letter-spacing: normal;
+}
+
+.Tree-collectionLabel {
+  color: $color-white;
+  padding-top: .15em;
+  padding-bottom: .15em;
+
+  span::before {
+    width: 0.5rem;
+    top: 0.4rem;
+  }
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-dark-gray-50;
+  }
+
+  &::before {
+    background-image: url('../img/icon-navigation-opened.svg');
+    opacity: .9;
+    top: .6em;
+  }
+
+}
+
+[dir="ltr"] {
+  .Tree-depth-1 .Tree-entityLink,
+  .Tree-depth-2 .Tree-collectionLabel {
+    padding-left: 1.25rem;
+  }
+
+  .Tree-depth-2 .Tree-entityLink {
+    padding-left: 1.75rem;
+  }
+
+  .Tree-collection.is-closed .Tree-collectionLabel::before {
+    background-image: url('../img/icon-navigation-closed-ltr.svg');
+  }
+}
+
+[dir="rtl"] .Tree-collection.is-closed .Tree-collectionLabel::before {
+  background-image: url('../img/icon-navigation-closed-rtl.svg');
+}
+
+.Tree-depth-2 {
+  > h4 {
+    font-weight: bold;
+  }
+}
+
+.Tree-item {
+  @include text-body-sm;
+
+  .Tree-entityLink {
+    color: $color-white;
+    padding-top: .25em;
+    padding-bottom: .25em;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-dark-gray-50;
+    }
+  }
+
+  &.is-current {
+    background-color: $color-dark-gray-60;
+  }
+}
+
+.Tree-aside {
+  color: $color-white;
+}
+
+.Tree-collapse {
+  color: $color-white;
+}

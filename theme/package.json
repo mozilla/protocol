@@ -1,0 +1,10 @@
+{
+    "name": "protocol-fractal",
+    "version": "0.0.1",
+    "description": "Fractal theme for Mozilla Protocol, based on Mandelbrot.",
+    "main": "index.js",
+    "dependencies": {
+        "@frctl/mandelbrot": "^1.9.4"
+    }
+}
+

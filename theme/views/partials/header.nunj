@@ -1,0 +1,27 @@
+<div class="Header">
+  <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+      <div class="Header-navToggleIcon Header-navToggleIcon--open">
+          {% include 'icons/close.svg' %}
+      </div>
+      <div class="Header-navToggleIcon Header-navToggleIcon--closed">
+          {% include 'icons/burger.svg' %}
+      </div>
+  </button>
+
+  <a href="{{ path('/') }}" class="Header-title" data-pjax>
+    {{ frctl.get('project.title') | default('Mozilla Protocol') }}
+  </a>
+
+  <ul class="Header-menu">
+  {% if frctl.get('project.version') %}
+    <li class="Header-version">
+      {{ frctl.get('project.version') }}
+    </li>
+  {% endif %}
+    <li>
+      <a href="https://github.com/mozilla/protocol" title="Protocol on Github">
+        <img src="{{ path('/theme/img/github.svg') }}" height="30">
+      </a>
+    </li>
+  </ul>
+</div>
