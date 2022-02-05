@@ -2,7 +2,7 @@
 
 ## Bug Fixes
 * **js:** Fix keyboard focus capture on modal open animation (#749).
-
+* **docs:** Fix URL to heading elements in docs(#763). 
 ## Features
 
 * **node:** Create a standalone Webpack config for compiling the Protocol NPM package (#746).
