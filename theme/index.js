@@ -3,10 +3,10 @@
 const mandelbrot = require('@frctl/mandelbrot');
 
 // Show these panels in production:
-var panels = ['notes', 'html', 'resources'];
+const panels = ['notes', 'html', 'resources'];
 // Add these panels for dev only
-if (process.env.ENV == "development") {
-  panels.push('info', 'view', 'context');
+if (process.env.ENV === 'development') {
+    panels.push('info', 'view', 'context');
 }
 
 // Configure the theme

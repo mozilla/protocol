@@ -1,5 +1,3 @@
-/* global describe, beforeEach, afterEach, it, expect, spyOn */
-
 describe('protocol-menu.js', function() {
 
     'use strict';

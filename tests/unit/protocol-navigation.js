@@ -1,5 +1,3 @@
-/* global describe, beforeEach, afterEach, it, expect, spyOn */
-
 describe('protocol-navigation.js', function() {
 
     'use strict';

@@ -1,5 +1,3 @@
-/* global describe, beforeEach, it, spyOn */
-
 describe('protocol-notification.js', function() {
 
     'use strict';

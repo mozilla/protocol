@@ -14,15 +14,16 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "build": "npm run prestart && npm run webpack",
-    "fractal-build": "fractal build",
-    "lint-css": "./node_modules/.bin/stylelint \"assets/sass/**/*.scss\" \"theme/assets/sass/**/*.scss\" ",
-    "lint-js": "./node_modules/.bin/eslint \"assets/js/**/*.js\" \"webpack.static.config.js\" \"webpack.build.config.js\" ",
+    "build-package": "npm install && npm run lint && npm run webpack-package",
+    "build-docs": "webpack --config webpack.docs.static.config.js --mode production && webpack --config webpack.docs.build.config.js --mode production && fractal build",
+    "lint-css": "./node_modules/.bin/stylelint \"**/*.scss\"",
+    "lint-js": "./node_modules/.bin/eslint .",
     "lint": "npm run lint-js && npm run lint-css",
-    "prepublishOnly": "npm run webpack",
-    "prestart": "npm install && npm run lint",
+    "test": "npm run build-package && ./node_modules/.bin/karma start ./tests/karma.conf.js",
+    "prepublishOnly": "npm run webpack-package",
     "start": "ENV=development fractal start --sync",
-    "webpack": "webpack --config webpack.static.config.js --mode development && webpack --config webpack.build.config.js --mode development"
+    "webpack-docs": "npm run lint && webpack --config webpack.docs.static.config.js --mode development && webpack --config webpack.docs.build.config.js --watch --mode development",
+    "webpack-package": "webpack --config webpack.package.static.config.js --mode development && webpack --config webpack.package.build.config.js --mode development"
   },
   "dependencies": {
     "@frctl/fractal": "^1.5.11",
@@ -44,6 +45,10 @@
   },
   "devDependencies": {
     "eslint": "^8.3.0",
+    "jasmine-core": "^4.0.1",
+    "karma": "^6.3.16",
+    "karma-firefox-launcher": "^2.1.2",
+    "karma-jasmine": "^4.0.1",
     "stylelint": "^14.1.0"
   }
 }
