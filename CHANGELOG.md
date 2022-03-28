@@ -1,5 +1,8 @@
 # HEAD
 
+## Features
+* **node:** Create a Webpack config for compiling docs using Fractal.
+
 ## Bug Fixes
 * **js:** Fix keyboard focus capture on modal open animation (#749).
 

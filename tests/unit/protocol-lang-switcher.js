@@ -1,5 +1,3 @@
-/* global describe, beforeEach, afterEach, it, expect, spyOn */
-
 describe('protocol-lang-switcher.js', function() {
 
     'use strict';
