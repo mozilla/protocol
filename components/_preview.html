@@ -2,16 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link media="all" rel="stylesheet" href="{{ '/docs/css/preview.css' | path }}">
+    <link media="all" rel="stylesheet" href="{{ '/theme/css/preview.css' | path }}">
     <link media="all" rel="stylesheet" href="{{ '/protocol/css/protocol.css' | path }}">
     <link media="all" rel="stylesheet" href="{{ '/protocol/css/protocol-components.css' | path }}">
     <title>Preview Layout</title>
 </head>
-<body>
-    <div class="site-preview">
+<body class="site-preview">
 
     {{ yield | safe }}
 
-    </div>
 </body>
 </html>
