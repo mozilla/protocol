@@ -143,4 +143,53 @@ const fractalCSSConfig = {
     ]
 };
 
-module.exports = [protocolCSSConfig, protocolJsConfig, fractalCSSConfig];
+const previewCSSConfig = {
+    entry: {
+        'preview': path.resolve(__dirname, 'assets/sass/docs/preview.scss'),
+    },
+    output: {
+        path: path.resolve(__dirname, 'static/docs/css'),
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new CssMinimizerPlugin({
+                include: /\.min\.css$/
+            }),
+        ],
+    },
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                include: path.resolve(__dirname, 'assets/sass/docs'),
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false,
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ]
+            }
+        ]
+    },
+    performance: {
+        hints: 'warning'
+    },
+    plugins: [
+        // Remove empty JS files that are left over once CSS has been extracted.
+        new RemoveEmptyScriptsPlugin(),
+        new MiniCssExtractPlugin()
+    ]
+};
+
+module.exports = [protocolCSSConfig, protocolJsConfig, fractalCSSConfig, previewCSSConfig];

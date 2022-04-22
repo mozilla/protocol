@@ -2,19 +2,16 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-
 // This example file sets up a basic Protocol site, with general styles
 // and components that occur on every page such as the navigation and
 // footer. You can customize this file for your project, importing only
 // the fonts, includes, and global components you actually need.
 // Individual style sheets can import additional components as needed.
 
-
 // Relative media paths tell Protocol where to find images and fonts in your
 // installation. These defaults can be overwritten as needed in other style sheets.
 $image-path: '../img' !default;
 $font-path: '../fonts' !default;
-
 
 // Inter is our general-purpose font for body text in both Firefox and
 // Mozilla brands.
