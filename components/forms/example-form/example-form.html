@@ -1,0 +1,51 @@
+<div class="mzp-l-content">
+  <form class="mzp-c-form">
+    <div class="mzp-c-form-header">
+      <h2 class="mzp-c-form-title">Speaker request form</h2>
+      <p>Please complete and submit the form below to request a speaker from Mozilla for your upcoming event.</p>
+    </div>
+
+    <fieldset class="mzp-c-field-set">
+      <legend class="mzp-c-form-subtitle">Event Information</legend>
+      {% render '@input-field', { type: 'text', id: 'event_name', name: 'event_name', required: true, note: 'Required', note: 'Required', label: 'Event Name' } %}
+      {% render '@input-field', { type: 'url', id: 'event_url', name: 'event_url', required: true, note: 'Required', label: 'Event URL', placeholder: 'https://' } %}
+      {% render '@input-field', { type: 'date', id: 'event_date', name: 'event_date', required: true, note: 'Required', label: 'Event Date', info: 'If the event is sooner than 20 business days we are unlikely to be able to provide a speaker' } %}
+      {% render '@input-field', { type: 'time', id: 'event_time', name: 'event_time', required: true, note: 'Required', label: 'Event Time' } %}
+    </fieldset>
+
+    <fieldset class="mzp-c-field-set">
+      <legend class="mzp-c-form-subtitle">Your Contact Information</legend>
+      {% render '@input-field', { type: 'text', id: 'contact_company', name: 'contact_company', required: true, note: 'Required', label: 'Company' } %}
+      {% render '@input-field', { type: 'text', id: 'contact_name', name: 'contact_name', required: true, note: 'Required', label: 'Name' } %}
+      {% render '@input-field', { type: 'email', id: 'contact_email', name: 'contact_email', required: true, note: 'Required', label: 'E-mail' } %}
+      {% render '@input-field', { type: 'tel', id: 'contact_phone', name: 'contact_phone', required: true, note: 'Required', label: 'Phone' } %}
+    </fieldset>
+
+    <fieldset class="mzp-c-field-set">
+      <legend class="mzp-c-form-subtitle">Event Details</legend>
+      {% render '@textarea-field', { id: 'event_details', name: 'event_details', rows: 5, cols: 60,  note: 'Theme, venue, audience demographics, confirmed speakers…', label: 'Tell us about your event' } %}
+    </fieldset>
+
+    <fieldset class="mzp-c-field-set">
+      <legend class="mzp-c-form-subtitle">Speaker Request</legend>
+      {% render '@input-field', { type: 'text', id: 'guest_1', name: 'guest_1', label: 'Guest Speaker Choice #1' } %}
+      {% render '@input-field', { type: 'text', id: 'guest_2', name: 'guest_2', label: 'Guest Speaker Choice #2' } %}
+      {% render '@input-field', { type: 'text', id: 'guest_topic', name: 'guest_topic', label: 'Topic of Presentation' } %}
+      {% render '@select-field', { id: 'guest_lang', name: 'guest_lang', label: 'Presentation Language', msg: '', info: '', options: '@select.options' }, true %}
+      {% render '@input-field', { type: 'number', id: 'guest_length', name: 'guest_length', label: 'Presentation Length', note: 'Hours', placeholder: '1', attrs: 'min="0.5" max="4" step="0.5" size="5"' } %}
+      <div class="mzp-c-choices">
+        {% render '@choice', { type: 'checkbox', name: 'guest_travel_covered', id: 'guest_travel_covered', value: 'yes', label: 'Travel expenses will be paid by the requester.' } %}
+      </div>
+    </fieldset>
+
+    <footer class="mzp-c-form-footer">
+      <div class="mzp-c-button-container mzp-l-h-between">
+        {% render '@button', { type: 'submit', label: 'Submit Request' } %}
+        {% render '@button', { type: 'reset', label: 'Clear', class: 'mzp-t-secondary' } %}
+        <p class="mzp-c-button-info">
+          Expect a response in 2-3 business days.
+        </p>
+      </div>
+    </footer>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+title: Choice
+context:
+    type: "checkbox"
+    name: "checkbox"
+    id: "checkbox"
+    value: "Yes"
+    label: "Label"
+    msg: "Optional message"
+    info: "Optional additional information"

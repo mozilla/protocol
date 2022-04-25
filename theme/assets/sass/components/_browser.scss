@@ -3,6 +3,19 @@
   border-bottom: 1px solid rgba(70,81,94,0.25);
 }
 
+.Browser-tab {
+  a:hover {
+    background: #f1f1f1;
+    border-bottom: 2px solid rgba(70,81,94,0.25);
+  }
+
+  a:focus {
+    outline: none;
+    background: #f1f1f1;
+    border-bottom: 2px solid #738497;
+  }
+}
+
 .Browser-tab.is-active a {
   border-bottom-color: #738497;
 }

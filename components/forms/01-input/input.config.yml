@@ -1,0 +1,58 @@
+title: Input
+context:
+  label: Label
+  id: text
+  name: text
+default: Text
+variants:
+  - name: Date
+    notes: |
+      ### Links
+      - [MDN `input type="date"`](https://developer.mozilla.org/docs/Web/HTML/Element/input/date)
+    context:
+      label: Date
+      type: date
+      id: date
+  - name: Email
+    notes: |
+      ### Links
+      - [MDN `input type="email"`](https://developer.mozilla.org/docs/Web/HTML/Element/input/email)
+    context:
+      label: E-mail address
+      type: email
+      id: email
+  - name: Placeholder
+    notes: |
+      Field placeholders should show an example of the expected input, such as suggested search terms or a demonstration of a correctly formatted email address.
+
+      ### No-nos
+      - Don't use the `placeholder` attribute as a substitute for a `<label>`. It's a misuse of the attribute and leaves you with an inaccessible, unlabeled field.
+    context:
+      label: E-mail address
+      type: email
+      id: email
+      placeholder: you@example.com
+  - name: Password
+    notes: |
+      ### Links
+      - [MDN `input type="password"`](https://developer.mozilla.org/docs/Web/HTML/Element/input/password)
+    context:
+      label: Password
+      type: password
+      id: password
+  - name: File
+    notes: |
+      ### Links
+      - [MDN `input type="file"`](https://developer.mozilla.org/docs/Web/HTML/Element/input/file)
+    context:
+      label: Upload a file
+      type: file
+      id: file
+  - name: Search
+    notes: |
+      ### Links
+      - [MDN `input type="search"`](https://developer.mozilla.org/docs/Web/HTML/Element/input/search)
+    context:
+      label: Search
+      type: search
+      id: search

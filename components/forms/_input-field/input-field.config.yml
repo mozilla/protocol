@@ -1,0 +1,9 @@
+title: Input Field
+context:
+    # type: "text"
+    # name: "field"
+    # id: "field"
+    value: ""
+    # label: "Label"
+    msg: "Error message"
+    info: "Optional additional information"

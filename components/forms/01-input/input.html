@@ -1,0 +1,3 @@
+{# @text-input #}
+<label for="{{ id }}">{{ label|default('Label') }}</label>
+<input type="{{ type|default('text') }}" name="{% if name %}{{ name }}{% else %}{{ id }}{% endif %}" id="{{ id }}"{% if attrs %} {{ attrs|safe }}{% endif %}{% if placeholder %} placeholder="{{ placeholder }}"{% endif %}>

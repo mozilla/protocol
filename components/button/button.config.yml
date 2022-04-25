@@ -1,71 +1,71 @@
 title: Button
 context:
-    label: "Primary Button"
+  label: Primary Button
 default: Primary
 variants:
   - name: Primary Dark
     preview: '@preview-dark'
     notes: Add the class `mzp-t-dark` for use on dark backgrounds (the button itself is light).
     context:
-        class: 'mzp-t-dark'
+      class: 'mzp-t-dark'
   - name: Secondary
     notes: A less prominent button with a hollow, transparent background. Use this for any additional actions someone can take on any given page that is different from the primary action.
     context:
-        class: 'mzp-t-secondary'
-        label: "Secondary Button"
+      class: 'mzp-t-secondary'
+      label: Secondary Button
   - name: Secondary Dark
     preview: '@preview-dark'
     notes: A light variation of the secondary button for dark backgrounds, adding the class `mzp-t-dark` (the button itself is light).
     context:
-        class: mzp-t-secondary mzp-t-dark
-        label: "Secondary Button"
+      class: mzp-t-secondary mzp-t-dark
+      label: Secondary Button
   - name: Product
     notes: Use this theme style for product-related transactions, such as downloading software or creating an account.
     context:
-        class: mzp-t-product
-        label: "Download Firefox"
+      class: mzp-t-product
+      label: Download Firefox
   - name: Product Secondary
     notes: This secondary product button theme should be used when the CTA is a product-related transaction, but not the main action a person should take on a page.
     context:
-        class: mzp-t-product mzp-t-secondary
-        label: "Download Firefox"
+      class: mzp-t-product mzp-t-secondary
+      label: Download Firefox
   - name: Product Secondary Dark
     preview: '@preview-dark'
     notes: A light variation of the secondary product button for use on dark backgrounds. Add the class `mzp-t-dark` (the button itself is light).
     context:
-        class: mzp-t-product mzp-t-secondary mzp-t-dark
-        label: "Download Firefox"
+      class: mzp-t-product mzp-t-secondary mzp-t-dark
+      label: Download Firefox
   - name: Neutral
     notes: A neutral button for less important actions.
     context:
-        class: mzp-t-neutral
-        label: "Neutral Button"
+      class: mzp-t-neutral
+      label: Neutral Button
   - name: Neutral Dark
     preview: '@preview-dark'
     notes: A light variation of the neutral button for use on dark backgrounds. Add the class `mzp-t-dark` (the button itself is light).
     context:
-        class: mzp-t-neutral mzp-t-dark
-        label: "Neutral Button"
+      class: mzp-t-neutral mzp-t-dark
+      label: Neutral Button
   - name: Size small
     notes: A small button. Use this size with caution because small buttons are harder to read and present smaller targets for pointing devices (clicks and taps).
     context:
-        class: mzp-t-sm
-        label: "Small Button"
+      class: mzp-t-sm
+      label: Small Button
   - name: Size medium
     notes: A medium button.
     context:
-        class: mzp-t-md
-        label: "Medium Button"
+      class: mzp-t-md
+      label: Medium Button
   - name: Size large
     notes: This is the default size if no size class is provided.
     context:
-        class: mzp-t-lg
-        label: "Large Button"
+      class: mzp-t-lg
+      label: Large Button
   - name: Size Extra Large
     notes: An extra large button. Use this sparingly.
     context:
-        class: mzp-t-xl
-        label: "Extra Large Button"
+      class: mzp-t-xl
+      label: Extra Large Button
   - name: Disabled
     notes: |
       This is an example of a disabled button. The `disabled` property is added on submit to
@@ -73,4 +73,4 @@ variants:
       Or it can be removed dynamically when a form is completed, to prevent a user from
       submitting before they've filled out all required fields.
     context:
-        label: "Disabled Button"
+      label: Disabled Button

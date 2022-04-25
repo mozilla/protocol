@@ -1,0 +1,25 @@
+{# @select-field
+#
+# parameters:
+# id            - string, required
+# name          - string, required
+# label         - string, required
+# note          - string
+# multiple      - boolean
+# fieldClass    - string
+# controlClass  - string
+# required      - boolean
+# disabled      - boolean
+# msg           - string
+# info          - string
+#}
+<div class="mzp-c-field{% if fieldClass %} {{ fieldClass }}{% endif %}">
+  <label class="mzp-c-field-label" for="{{ id }}">{{ label|safe }}{% if note %} <span class="mzp-c-fieldnote">{{ note|safe }}</span>{% endif %}</label>
+  <select class="mzp-c-field-control{% if controlClass %} {{ controlClass }}{% endif %}" name="{{ name }}" id="{{ id }}"{% if multiple %} multiple{% endif %}{% if disabled %} disabled{% endif %}{% if required %} required aria-required="true"{% endif %}{% if msg %} aria-describedby="{{ id }}-msg"{% endif %}>
+    {%- for option in options -%}
+    <option value="{{ option.value }}">{{ option.text }}</option>
+    {%- endfor -%}
+  </select>
+  {%- if msg -%}<div id="{{ id }}-msg" class="mzp-c-field-msg" role="tooltip">{{ msg }}</div>{%- endif -%}
+  {%- if info -%}<p class="mzp-c-field-info">{{ info }}</p>{%- endif -%}
+</div>
