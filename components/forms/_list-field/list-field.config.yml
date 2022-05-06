@@ -1,11 +1,11 @@
 context:
   type: text
-  label: Label
+  label: Text with datalist
   name: list
   id: list
   options:
     - value: Option 1
     - value: Option 2
     - value: Option 3
-  msg: "Error message"
-  info: "Optional additional information"
+  msg: Error message
+  info: Optional additional information

@@ -2,7 +2,7 @@ title: Input
 context:
   label: Label
   id: text
-  name: text
+  disabled: False
 default: Text
 variants:
   - name: Date
@@ -56,3 +56,10 @@ variants:
       label: Search
       type: search
       id: search
+  - name: Disabled
+    notes: |
+      Disabled controls should have both the `disabled` attribute and `aria-disabled="true"`
+
+      ### Links
+      - [MDN `disabled`](https://developer.mozilla.org/docs/Web/HTML/Attributes/disabled)
+      - [MDN `aria-disabled`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)

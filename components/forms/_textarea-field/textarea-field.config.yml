@@ -4,5 +4,5 @@ context:
   name: textarea
   rows: 4
   cols: 30
-  msg: "Error message"
-  info: "Optional additional information"
+  msg: Error message
+  info: Optional additional information
