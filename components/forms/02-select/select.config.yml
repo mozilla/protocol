@@ -1,0 +1,32 @@
+title: Select
+notes: |
+  ### Links
+    - [MDN `select`](https://developer.mozilla.org/docs/Web/HTML/Element/select)
+    - [MDN `option`](https://developer.mozilla.org/docs/Web/HTML/Element/option)
+context:
+  label: Language
+  name: language
+  id: language
+  options:
+    - text: Deutsch
+      value: de
+    - text: English
+      value: en
+    - text: Español
+      value: es
+    - text: Francais
+      value: fr
+    - text: हिन्दी (भारत)
+      value: hi-IN
+    - text: 日本語
+      value: ja
+variants:
+  - name: Disabled
+    notes: |
+      Disabled controls should have both the `disabled` attribute and `aria-disabled="true"`
+
+      ### Links
+      - [MDN `disabled`](https://developer.mozilla.org/docs/Web/HTML/Attributes/disabled)
+      - [MDN `aria-disabled`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
+    context:
+      disabled: 'True'

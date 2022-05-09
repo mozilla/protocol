@@ -10,11 +10,11 @@ Use an emphasis box:
 
 A dark theme is also available using the theme class `mzp-t-dark`.
 
-## Tips
+### Tips
 - In smaller, responsive views, make sure your layout accommodates some margins around the emphasis box.
 - Try to limit text to around 70 characters per line. The emphasis box doesn't have any internal layout of its own so you may need to limit its total width or add some other inner container.
 
-## Nonos
+### No-nos
 - Emphasis boxes should be used sparingly. In general, limit one per page. If you use two they should be far apart (e.g. one at the top and another at the bottom of a long page).
 - Do not use Emphasis Boxes in a list or grid. If you want a group of boxes, use Cards.
 - Do not let emphasis boxes collide with browser or device window edges. Ensure there is some outer margin to accommodate the shadow.

@@ -32,7 +32,6 @@
     opacity: .9;
     top: .6em;
   }
-
 }
 
 [dir="ltr"] {
@@ -45,6 +44,18 @@
     padding-left: 1.75rem;
   }
 
+  .Tree-depth-3 .Tree-collectionLabel {
+    padding-left: 1.75rem;
+
+    &::before {
+      left: .75rem;
+    }
+  }
+
+  .Tree-depth-3 .Tree-entityLink {
+    padding-left: 2.5rem;
+  }
+
   .Tree-collection.is-closed .Tree-collectionLabel::before {
     background-image: url('../img/icon-navigation-closed-ltr.svg');
   }
@@ -54,7 +65,8 @@
   background-image: url('../img/icon-navigation-closed-rtl.svg');
 }
 
-.Tree-depth-2 {
+.Tree-depth-2,
+.Tree-depth-3 {
   > h4 {
     font-weight: bold;
   }

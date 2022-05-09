@@ -1,0 +1,24 @@
+{# @input-field
+#
+# parameters:
+# type          - string, required, ['text', 'email', 'password', 'date', 'search', 'file']
+# id            - string, required
+# name          - string, required
+# label         - string, required
+# note          - string
+# value         - string
+# placeholder   - string
+# attrs         - string
+# fieldClass    - string
+# controlClass  - string
+# required      - boolean
+# disabled      - boolean
+# msg           - string
+# info          - string
+#}
+<div class="mzp-c-field{% if fieldClass %} {{ fieldClass }}{% endif %}">
+  <label class="mzp-c-field-label" for="{{ id }}">{{ label|safe | default('Label') }}{% if note %} <span class="mzp-c-fieldnote">{{ note|safe }}</span>{% endif %}</label>
+  <input class="mzp-c-field-control{% if controlClass %} {{ controlClass }}{% endif %}" type="{{ type | default('text') }}" name="{{ name | default('field') }}" id="{{ id | default('field') }}" value="{{ value }}"{% if attrs %} {{ attrs|safe }}{% endif %}{% if disabled %} disabled aria-disabled="true"{% endif %}{% if required %} required aria-required="true"{% endif %}{% if msg %} aria-describedby="{{ id }}-msg"{% endif %}{% if placeholder %} placeholder="{{ placeholder }}"{% endif %}>
+  {%- if msg -%}<div id="{{ id }}-msg" class="mzp-c-field-msg" role="tooltip">{{ msg|safe }}</div>{%- endif -%}
+  {%- if info -%}<p class="mzp-c-field-info">{{ info|safe }}</p>{%- endif -%}
+</div>

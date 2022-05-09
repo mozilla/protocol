@@ -1,0 +1,17 @@
+{# @select
+#
+# parameters:
+# id            - string, required
+# name          - string, required
+# label         - string, required
+# class         - string
+# required      - boolean
+# disabled      - boolean
+# selected      - boolean
+#}
+<label for="{{ id }}">{{ label|safe }}</label>
+<select name="{{ name }}" id="{{ id }}"{% if class %} class="{{ class }}"{% endif %}{% if required %} required aria-required="true"{% endif %}{% if disabled %} disabled{% endif %}>
+  {%- for option in options -%}
+  <option value="{{ option.value }}">{{ option.text }}</option>
+  {%- endfor -%}
+</select>

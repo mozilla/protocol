@@ -1,0 +1,16 @@
+<form class="mzp-c-form">
+  <div class="mzp-c-form-header">
+    <h2 class="mzp-c-form-title">Form Title</h2>
+    <p>The title and this introduction are inside a form-header.</p>
+  </div>
+
+  {% render '@input-field', { type: 'text', label: 'Username', id: 'user', name: 'user' } %}
+  {% render '@input-field', { type: 'password', label: 'Password', id: 'pass', name: 'pass' } %}
+
+  <div class="mzp-c-form-footer">
+    <p>This paragraph and the elements below are in a form-footer</p>
+    {% render '@button', { label: 'Sign in', type: 'submit' } %}
+    <p class="mzp-c-form-info">A button container component is optional - use it for button alignment options if you need them.</p>
+  </div>
+</form>
+
