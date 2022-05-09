@@ -26,9 +26,9 @@
     "webpack-package": "webpack --config webpack.package.static.config.js --mode development && webpack --config webpack.package.build.config.js --mode development"
   },
   "dependencies": {
-    "@frctl/fractal": "^1.5.11",
-    "@frctl/mandelbrot": "^1.9.4",
-    "@frctl/nunjucks": "^2.0.13",
+    "@frctl/fractal": "^1.5.13",
+    "@frctl/mandelbrot": "^1.10.1",
+    "@frctl/nunjucks": "^2.0.14",
     "@mozilla-protocol/assets": "^5.1.0",
     "@mozilla-protocol/tokens": "^5.0.5",
     "clean-webpack-plugin": "^4.0.0",
