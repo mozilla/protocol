@@ -15,6 +15,7 @@ const subTheme = mandelbrot({
     skin: 'black',
     format: 'yaml',
     panels: panels,
+    navigation: 'split',
     nav: ['docs', 'components', 'information'],
     favicon: '/theme/favicon.png',
     labels: {
