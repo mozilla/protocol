@@ -4,13 +4,13 @@ variants:
   - name: End Aligned
     notes: The `mzp-l-align-end` class aligns buttons opposite to the text (right in LTR languages, left in RTL languages).
     context:
-        class: 'mzp-l-align-end'
+      class: 'mzp-l-align-end'
   - name: Center Aligned
     notes: The `mzp-l-align-center` class aligns buttons in the center.
     context:
-        class: 'mzp-l-align-center'
+      class: 'mzp-l-align-center'
   - name: Stretched
     notes: The `mzp-l-stretch` class makes buttons fill the width of the container. Multiple buttons will be stacked and full-width in smaller viewports, and appear inline and stretched in larger viewports. This option is best suited to narrow forms.
     context:
-        class: 'mzp-l-stretch'
+      class: 'mzp-l-stretch'
 

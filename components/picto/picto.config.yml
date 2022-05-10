@@ -1,7 +1,6 @@
-title: Picto
 context:
-    heading: A headline with 30 characters
-    body: A short description, just a sentence or two. Don't use this component for long-form content; it's only for blurbs.
+  heading: A headline with 30 characters
+  body: A short description, just a sentence or two. Don’t use this component for long-form content; it’s only for blurbs.
 default: Default
 variants:
   - name: Centered

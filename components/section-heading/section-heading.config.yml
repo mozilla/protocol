@@ -1,7 +1,2 @@
-title: Section Heading
-notes: |
-  Use section headings to help organize your page content into sections. Section headings are centered and get more space around them than a plain heading element.
-  - often first thing inside a `mzp-l-content`
-  - works well with [zap](/demos/zap.html)
 context:
   heading: Sphinx of black quartz, judge my vow!
