@@ -5,7 +5,8 @@
     <link media="all" rel="stylesheet" href="{{ '/theme/css/preview.css' | path }}">
     <link media="all" rel="stylesheet" href="{{ '/protocol/css/protocol.css' | path }}">
     <link media="all" rel="stylesheet" href="{{ '/protocol/css/protocol-components.css' | path }}">
-    <title>Preview Layout</title>
+    <link rel="shortcut icon" href="{{ '/theme/favicon.png' | path }}" type="image/ico">
+    <title>{% if _target.title %}{{ _target.title }} | {% endif %}Mozilla Protocol</title>
 </head>
 <body class="site-preview">
 

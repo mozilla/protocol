@@ -1,0 +1,134 @@
+variants:
+  - name: Reversed
+    notes: |
+      Add the class `mzp-l-split-reversed` to the outer container (`mzp-c-split`) to orient the
+      body on the right and media on the left (the reverse of the default). It’s automatically
+      reversed in Right-To-Left (RTL) languages.
+    context:
+      block_class: mzp-l-split-reversed
+  - name: Narrow Body
+    notes: |
+      Add the class `mzp-l-split-body-narrow` to the outer container (`mzp-c-split`) to make the
+      body 1/3rd width and the media 2/3rds.
+
+      Note these proportions only appear in wider viewports. It will still be 50/50 in medium
+      viewports and stacked in narrow viewports.
+    context:
+      block_class: mzp-l-split-body-narrow
+  - name: Wide Body
+    notes: |
+      Add the class `mzp-l-split-body-wide` to the outer container (`mzp-c-split`) to make the
+      body 2/3rds width and the media 1/3rd.
+
+      Note these proportions only appear in wider viewports. It will still be 50/50 in medium
+      viewports and stacked in narrow viewports.
+    context:
+      block_class: mzp-l-split-body-wide
+  - name: Background
+    notes: |
+      The Split component can include an extra inner wrapper element to carry a background (it
+      needs this inner container to allow the media to overflow beyond the background area while
+      preserving vertical spacing. See the [Pop-out Media variation](split--pop-out-media)).
+
+      The wrapper element has the class `mzp-c-split-bg` and you can add any of the standard
+      background classes or apply your own CSS:
+        - Secondary: `mzp-t-background-secondary`
+        - Tertiary: `mzp-t-background-tertiary`
+        - Dark: `mzp-t-dark`
+        - Secondary dark: `mzp-t-dark mzp-t-background-secondary`
+        - Tertiary dark: `mzp-t-dark mzp-t-background-tertiary`
+
+      To make the background butt against the content above or below the Split, without additional
+      vertical spacing, add the class `mzp-t-split-nospace` to the outer container (`mzp-c-split`).
+      This is especially useful when using Split as a hero section at the very top of a page, or
+      if you have a stack of splits with alternating background colors. Note that images can’t
+      “pop out” of a Split without that additional space, so the nospace and pop variations are
+      incompatible.
+    context:
+      background_class: mzp-t-dark mzp-t-background-secondary
+      content: |
+        <h1 class="mzp-u-title-md">Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, amet dolores tincidunt te sea. His aliquid epicuri detraxit in, cum tantas populo periculis te. Ei vix idque noster.</p>
+        <p><a class="mzp-c-button mzp-t-dark">Call to Action</a></p>
+  - name: Media Overflow
+    notes: |
+      Add the class `mzp-l-split-media-overflow` to the media container (`mzp-c-split-media`) to
+      allow a large image to “bleed” horizontally past the edge of the component (and the viewport).
+      This means some of the image will be hidden so choose your images wisely.
+
+      ### No-nos:
+      Don’t use this option with videos. Not only will part of the video be hidden, some of the
+      controls would be hidden as well.
+    context:
+      background_class: mzp-t-background-tertiary
+      media_class: mzp-l-split-media-overflow
+  - name: Constrained Media
+    notes: |
+      The class `mzp-l-split-media-constrain-height` added to the `mzp-c-split-media` wrapper will
+      make the media scale to fit the height of the container, determined by the amount of content
+      in the body. It will shrink to fit a short container or expand to fit a tall one (but won’t
+      be upscaled beyond the image’s native dimensions).
+
+      As with the [media overflow option](split--media-overflow), height-constrained media can overflow
+      if the container is tall, causing part of the image to be hidden, so choose wisely.
+    context:
+      img_src: '/img/image-1-1.jpg'
+      media_class: mzp-l-split-media-constrain-height
+  - name: Pop-out Media
+    notes: |
+      Ordinarily the top and bottom edges of the media align with the body text. Alternatively, the
+      media can “pop” out of its container in larger viewports, protruding a fixed distance beyond
+      the top and/or bottom edges of the body. The protrusion corresponds to the vertical padding
+      of the outer container so the media won’t overlap adjacent content. Note that images can’t
+      “pop out” of a Split without that additional space so this is incompatible with the
+      `mzp-t-split-nospace` class.
+
+      Apply these classes to the outer container (`mzp-c-split`):
+      - `mzp-l-split-pop-top` - protrude past the top.
+      - `mzp-l-split-pop-bottom` - protrude past the bottom.
+      - `mzp-l-split-pop` - both.
+
+      ### Tips:
+      - The media only protrudes if it exceeds the height of the body.
+      - This only takes effect in larger viewports. The media will fit within the container in medium
+        viewports and will stack in smaller viewports.
+    context:
+      block_class: mzp-l-split-pop
+      background_class: mzp-t-background-tertiary
+      img_src: '/img/image-1-1.jpg'
+  - name: Body Alignment
+    notes: |
+      Align the body in different positions, horizontally and vertically (it’s aligned left by default
+      in LTR languages, and vertically centered).
+
+      Apply these classes to the body container (`mzp-c-split-body`):
+      - `mzp-l-split-h-center` - horizontally centered.
+      - `mzp-l-split-h-end` - aligned right in left-to-right languages, left in right-to-left.
+      - `mzp-l-split-v-start` - vertically aligned to the top.
+      - `mzp-l-split-v-end` - vertically aligned to the bottom.
+
+      ### Tips:
+      - The horizontal position does _not_ reverse in a reversed layout (` mzp-l-split-reversed`).
+      - The vertical position is only effective if the body’s height is less than the media height.
+    context:
+      body_class: mzp-l-split-h-end mzp-l-split-v-end
+      img_src: '/img/image-portrait.jpg'
+  - name: Media Alignment
+    notes: |
+      Align the media in different positions, horizontally and vertically (it’s aligned left by default
+      in LTR languages, and vertically centered).
+
+      Apply these classes to the media container (`mzp-c-split-media`):
+      - `mzp-l-split-h-center` - horizontally centered.
+      - `mzp-l-split-h-end` - aligned right in left-to-right languages, left in right-to-left.
+      - `mzp-l-split-v-start` - vertically aligned to the top.
+      - `mzp-l-split-v-end` - vertically aligned to the bottom.
+
+      ### Tips:
+      - The media can only be positioned horizontally if it is _not_ allowed to overflow by an
+        `mzp-l-split-media-overflow` or `mzp-l-split-media-constrain-height` class.
+      - The vertical position is only effective if the media’s height is less than the body height. Taller
+        images will scale to fit.
+    context:
+      media_class: mzp-l-split-h-end mzp-l-split-v-end
+      img_src: '/img/image-1-1-sm.jpg'

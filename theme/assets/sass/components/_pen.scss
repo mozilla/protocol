@@ -18,6 +18,13 @@
 
     svg {
         fill: currentColor;
-        vertical-align: middle;
+        vertical-align: bottom;
     }
+}
+
+.Pen-previewButton {
+    @include bidi(((margin-left, $spacing-lg, margin-right, $spacing-lg),));
+    @include text-body-sm;
+    font-family: get-theme('body-font-family');
+    font-weight: bold;
 }

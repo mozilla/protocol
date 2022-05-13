@@ -1,3 +1,5 @@
-<button class="mzp-c-button{% if class %} {{ class }}{% endif %}" type="{% if type %}{{ type }}{% else %}button{% endif %}">
-  {{ label }}
-</button>
+{%- if href -%}
+<a class="mzp-c-button{% if class %} {{ class }}{% endif %}" href="{{ href }}">{{ label }}</a>
+{%- else -%}
+<button class="mzp-c-button{% if class %} {{ class }}{% endif %}" type="{% if type %}{{ type }}{% else %}button{% endif %}"{{ " disabled" if disabled }}>{{ label }}</button>
+{%- endif -%}

@@ -4,7 +4,7 @@
     "description": "Fractal theme for Mozilla Protocol, based on Mandelbrot.",
     "main": "index.js",
     "dependencies": {
-        "@frctl/mandelbrot": "^1.9.4"
+        "@frctl/mandelbrot": "^1.10.1"
     }
 }
 
