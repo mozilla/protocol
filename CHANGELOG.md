@@ -1,6 +1,7 @@
-# HEAD
+# 16.0.1
 
 ## Bug Fixes
+* **css:** Fix repeating background on disabled search field (#767)
 * **js:** Fix keyboard focus capture on modal open animation (#749).
 
 ## Features
