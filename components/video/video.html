@@ -1,0 +1,9 @@
+<div class="mzp-c-video{% if class %}{{ class }}{% endif %}">
+{% if content -%}
+  {{ content | safe }}
+{% else -%}
+  <video controls="controls" width="640" height="360" poster="{{ '/img/video-poster.jpg' | path }}">
+    <source src="{{ '/video/video.webm' | path }}" type="video/webm">
+  </video>
+{%- endif %}
+</div>
