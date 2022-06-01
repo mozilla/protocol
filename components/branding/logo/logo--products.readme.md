@@ -1,0 +1,13 @@
+Product classes:
+- `mzp-t-product-family`
+- `mzp-t-product-firefox`
+- `mzp-t-product-beta`
+- `mzp-t-product-developer`
+- `mzp-t-product-nightly`
+- `mzp-t-product-focus`
+- `mzp-t-product-lockwise`
+- `mzp-t-product-monitor`
+- `mzp-t-product-mozilla`
+- `mzp-t-product-vpn`
+- `mzp-t-product-pocket`
+- `mzp-t-product-relay`
