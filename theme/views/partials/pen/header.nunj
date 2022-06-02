@@ -6,7 +6,17 @@
         </a>
     </h1>
 
-    <span class="Pen-preview-size" data-role="preview-size"></span>
+    <div class="Pen-utils">
 
-    {{ status.tag(entity.status) }}
+        <form class="Pen-bidi-controls">
+            <fieldset>
+                <label><abbr title="Left to Right">LTR</abbr>: <input class="Pen-bidi-toggle" type="radio" value="ltr" name="preview-{{ entity.id }}" checked></label>
+                <label><abbr title="Right to Left">RTL</abbr>: <input class="Pen-bidi-toggle" type="radio" value="rtl" name="preview-{{ entity.id }}"></label>
+            </fieldset>
+        </form>
+
+        <span class="Pen-preview-size" data-role="preview-size"></span>
+
+        {{ status.tag(entity.status) }}
+    </div>
 </div>

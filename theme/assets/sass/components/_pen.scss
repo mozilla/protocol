@@ -34,3 +34,22 @@
         color: get-theme('link-color-hover');
     }
 }
+
+.Pen-utils {
+    display: flex;
+    margin-inline-start: auto;
+    min-width: 20vw;
+}
+
+.Pen-bidi-controls {
+    padding: 0 $spacing-md;
+
+    label {
+        display: inline-block;
+        padding: 0 $spacing-xs;
+    }
+
+    abbr {
+        text-decoration: none;
+    }
+}

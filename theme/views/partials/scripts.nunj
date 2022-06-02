@@ -1,3 +1,4 @@
 {% for script in frctl.theme.get('scripts') %}
 <script src="{{ path(script) }}?cachebust={{ frctl.theme.get('version') }}"></script>
 {% endfor %}
+<script src="{{ path('/theme/js/bidi.js') }}"></script>
