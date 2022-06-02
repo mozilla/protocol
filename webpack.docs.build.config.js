@@ -13,7 +13,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const glob = require('glob');
 const path = require('path');
 
-const protocolJsConfig = {
+const protocolJSConfig = {
     devtool: false,
     entry: glob.sync('./assets/js/protocol/*.js').reduce((obj, el) => {
         const name = path.parse(el).name;
@@ -144,4 +144,21 @@ const fractalCSSConfig = {
     ]
 };
 
-module.exports = [protocolCSSConfig, protocolJsConfig, fractalCSSConfig];
+const fractalJSConfig = {
+    devtool: false,
+    entry: {
+        'bidi': path.resolve(__dirname, 'theme/assets/js/bidi.js'),
+    },
+    output: {
+        path: path.resolve(__dirname, 'theme/static/js'),
+        filename: '[name].js'
+    },
+    performance: {
+        hints: 'warning'
+    },
+    optimization: {
+        minimize: true
+    }
+};
+
+module.exports = [protocolCSSConfig, protocolJSConfig, fractalCSSConfig, fractalJSConfig];
