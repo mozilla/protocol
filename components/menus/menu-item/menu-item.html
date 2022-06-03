@@ -1,0 +1,38 @@
+{# @select
+#
+# parameters:
+# id            - string, required
+# name          - string, required
+# label         - string, required
+# icon          - string
+# url           - string
+# class         - string
+# required      - boolean
+# disabled      - boolean
+# selected      - boolean
+#}
+<section class="mzp-c-menu-item {% if icon %}mzp-has-icon{% endif %} {% if class %}{{ class }}{% endif %}">
+  {% if url %}<a class="mzp-c-menu-item-link" href="{{url}}">{% else %}<div class="mzp-c-menu-item-head">{% endif %}
+    {% if icon %}
+      {% block icon %}
+        <img src="{{@root.baseurl}}{% if image %}{{ image }}{% else %}/static/img/navigation/icons/accounts.svg{% endif %}" class="mzp-c-menu-item-icon" width="24" height="24" alt="">
+      {% endblock %}
+    {% endif %}
+    <h4 class="mzp-c-menu-item-title">{% block title %}A headline with 30 characters{% endblock %}</h4>
+    {% block desc %}
+    <p class="mzp-c-menu-item-desc">
+      This is a short description with only a single sentence and no more.
+    </p>
+    {% endblock %}
+  {% if url %}</a>{% else %}</div>{% endif %}
+  {% block list %}
+  <ul class="mzp-c-menu-item-list">
+    <li><a href="#">Secondary link</a></li>
+    <li><a href="#">Secondary link</a></li>
+    <li><a href="#">Secondary link</a></li>
+    <li><a href="#">Secondary link</a></li>
+    <li><a href="#">Secondary link</a></li>
+    <li><a href="#">Secondary link</a></li>
+  </ul>
+  {% endblock %}
+</section>
