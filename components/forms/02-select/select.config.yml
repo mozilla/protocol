@@ -9,7 +9,7 @@ context:
       value: en
     - text: Español
       value: es
-    - text: Francais
+    - text: Français
       value: fr
     - text: हिन्दी (भारत)
       value: hi-IN

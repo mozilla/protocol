@@ -1,0 +1,15 @@
+context:
+  label: Language
+  name: language
+  id: language
+  options:
+    - text: Deutsch
+      value: de
+    - text: English
+      value: en
+    - text: Español
+      value: es
+    - text: Français
+      value: fr
+    - text: 日本語
+      value: ja
