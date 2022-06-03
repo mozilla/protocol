@@ -1,1 +1,0 @@
-An expandable menu used in the [Navigation](/patterns/organisms/navigation.html) organism, consisting of [Menu Items](/patterns/molecules/menu.html#menu-item) and an optional [Card](/patterns/molecules/card.html#extra-small-card) molecule.
