@@ -3,67 +3,67 @@ context:
     Green:
       colors:
         Green 05:
-          token: "$color-green-05"
-          value: "#e3fff3"
+          token: '$color-green-05'
+          value: '#e3fff3'
         Green 10:
-          token: "$color-green-10"
-          value: "#d1ffee"
+          token: '$color-green-10'
+          value: '#d1ffee'
         Green 20:
-          token: "$color-green-20"
-          value: "#b3ffe3"
+          token: '$color-green-20'
+          value: '#b3ffe3'
         Green 30:
-          token: "$color-green-30"
-          value: "#88ffd1"
+          token: '$color-green-30'
+          value: '#88ffd1'
         Green 40:
-          token: "$color-green-40"
-          value: "#54ffbd"
+          token: '$color-green-40'
+          value: '#54ffbd'
         Green 50:
-          token: "$color-green-50"
-          value: "#3fe1b0"
+          token: '$color-green-50'
+          value: '#3fe1b0'
         Green 60:
-          token: "$color-green-60"
-          value: "#2ac3a2"
+          token: '$color-green-60'
+          value: '#2ac3a2'
         Green 70:
-          token: "$color-green-70"
-          value: "#008787"
+          token: '$color-green-70'
+          value: '#008787'
         Green 80:
-          token: "$color-green-80"
-          value: "#005e5e"
+          token: '$color-green-80'
+          value: '#005e5e'
         Green 90:
-          token: "$color-green-90"
-          value: "#08403f"
+          token: '$color-green-90'
+          value: '#08403f'
     Blue:
       colors:
         Blue 05:
-          token: "$color-blue-05"
-          value: "#aaf2ff"
+          token: '$color-blue-05'
+          value: '#aaf2ff'
         Blue 10:
-          token: "$color-blue-10"
-          value: "#80ebff"
+          token: '$color-blue-10'
+          value: '#80ebff'
         Blue 20:
-          token: "$color-blue-20"
-          value: "#00ddff"
+          token: '$color-blue-20'
+          value: '#00ddff'
         Blue 30:
-          token: "$color-blue-30"
-          value: "#00b3f4"
+          token: '$color-blue-30'
+          value: '#00b3f4'
         Blue 40:
-          token: "$color-blue-40"
-          value: "#0090ed"
+          token: '$color-blue-40'
+          value: '#0090ed'
         Blue 50:
-          token: "$color-blue-50"
-          value: "#0060df"
+          token: '$color-blue-50'
+          value: '#0060df'
         Blue 60:
-          token: "$color-blue-60"
-          value: "#0250bb"
+          token: '$color-blue-60'
+          value: '#0250bb'
         Blue 70:
-          token: "$color-blue-70"
-          value: "#054096"
+          token: '$color-blue-70'
+          value: '#054096'
         Blue 80:
-          token: "$color-blue-80"
-          value: "#073072"
+          token: '$color-blue-80'
+          value: '#073072'
         Blue 90:
-          token: "$color-blue-90"
-          value: "#09204d"
+          token: '$color-blue-90'
+          value: '#09204d'
     Violet:
       colors:
         Violet 05:
@@ -96,3 +96,340 @@ context:
         Violet 90:
           token: '$color-violet-90'
           value: '#321c64'
+    Purple:
+      colors:
+        Purple 05:
+          token: '$color-purple-05'
+          value: '#f7e2ff'
+        Purple 10:
+          token: '$color-purple-10'
+          value: '#f6b8ff'
+        Purple 20:
+          token: '$color-purple-20'
+          value: '#f68fff'
+        Purple 30:
+          token: '$color-purple-30'
+          value: '#f770ff'
+        Purple 40:
+          token: '$color-purple-40'
+          value: '#d74cf0'
+        Purple 50:
+          token: '$color-purple-50'
+          value: '#b833e1'
+        Purple 60:
+          token: '$color-purple-60'
+          value: '#952bb9'
+        Purple 70:
+          token: '$color-purple-70'
+          value: '#722291'
+        Purple 80:
+          token: '$color-purple-80'
+          value: '#4e1a69'
+        Purple 90:
+          token: '$color-purple-90'
+          value: '#2b1141'
+    Pink:
+      colors:
+        Pink 05:
+          token: '$color-pink-05'
+          value: '#ffdef0'
+        Pink 10:
+          token: '$color-pink-10'
+          value: '#ffb4db'
+        Pink 20:
+          token: '$color-pink-20'
+          value: '#ff8ac5'
+        Pink 30:
+          token: '$color-pink-30'
+          value: '#ff6bba'
+        Pink 40:
+          token: '$color-pink-40'
+          value: '#ff4aa2'
+        Pink 50:
+          token: '$color-pink-50'
+          value: '#ff298a'
+        Pink 60:
+          token: '$color-pink-60'
+          value: '#e31587'
+        Pink 70:
+          token: '$color-pink-70'
+          value: '#c60084'
+        Pink 80:
+          token: '$color-pink-80'
+          value: '#7f145b'
+        Pink 90:
+          token: '$color-pink-90'
+          value: '#50134b'
+    Red:
+      colors:
+        Red 05:
+          token: '$color-red-05'
+          value: '#ffdfe7'
+        Red 10:
+          token: '$color-red-10'
+          value: '#ffbdc5'
+        Red 20:
+          token: '$color-red-20'
+          value: '#ff9aa2'
+        Red 30:
+          token: '$color-red-30'
+          value: '#ff848b'
+        Red 40:
+          token: '$color-red-40'
+          value: '#ff6a75'
+        Red 50:
+          token: '$color-red-50'
+          value: '#ff4f5e'
+        Red 60:
+          token: '$color-red-60'
+          value: '#e22850'
+        Red 70:
+          token: '$color-red-70'
+          value: '#c50042'
+        Red 80:
+          token: '$color-red-80'
+          value: '#810220'
+        Red 90:
+          token: '$color-red-90'
+          value: '#440306'
+    Orange:
+      colors:
+        Orange 05:
+          token: '$color-orange-05'
+          value: '#fff4de'
+        Orange 10:
+          token: '$color-orange-10'
+          value: '#ffd5b2'
+        Orange 20:
+          token: '$color-orange-20'
+          value: '#ffb587'
+        Orange 30:
+          token: '$color-orange-30'
+          value: '#ffa266'
+        Orange 40:
+          token: '$color-orange-40'
+          value: '#ff8a50'
+        Orange 50:
+          token: '$color-orange-50'
+          value: '#ff7139'
+        Orange 60:
+          token: '$color-orange-60'
+          value: '#e25920'
+        Orange 70:
+          token: '$color-orange-70'
+          value: '#cc3d00'
+        Orange 80:
+          token: '$color-orange-80'
+          value: '#9e280b'
+        Orange 90:
+          token: '$color-orange-90'
+          value: '#7c1504'
+    Yellow:
+      colors:
+        Yellow 05:
+          token: '$color-yellow-05'
+          value: '#ffffcc'
+        Yellow 10:
+          token: '$color-yellow-10'
+          value: '#ffff98'
+        Yellow 20:
+          token: '$color-yellow-20'
+          value: '#ffea80'
+        Yellow 30:
+          token: '$color-yellow-30'
+          value: '#ffd567'
+        Yellow 40:
+          token: '$color-yellow-40'
+          value: '#ffbd4f'
+        Yellow 50:
+          token: '$color-yellow-50'
+          value: '#ffa436'
+        Yellow 60:
+          token: '$color-yellow-60'
+          value: '#e27f2e'
+        Yellow 70:
+          token: '$color-yellow-70'
+          value: '#c45a27'
+        Yellow 80:
+          token: '$color-yellow-80'
+          value: '#a7341f'
+        Yellow 90:
+          token: '$color-yellow-90'
+          value: '#960e18'
+    Light Gray:
+      colors:
+        Light Gray 05:
+          token: '$color-light-gray-05'
+          value: '#ffffff'
+        Light Gray 10:
+          token: '$color-light-gray-10'
+          value: '#f9f9fb'
+        Light Gray 20:
+          token: '$color-light-gray-20'
+          value: '#f0f0f4'
+        Light Gray 30:
+          token: '$color-light-gray-30'
+          value: '#e0e0e6'
+        Light Gray 40:
+          token: '$color-light-gray-40'
+          value: '#cfcfd8'
+        Light Gray 50:
+          token: '$color-light-gray-50'
+          value: '#bfbfc9'
+        Light Gray 60:
+          token: '$color-light-gray-60'
+          value: '#afafba'
+        Light Gray 70:
+          token: '$color-light-gray-70'
+          value: '#9f9fad'
+        Light Gray 80:
+          token: '$color-light-gray-80'
+          value: '#8f8f9e'
+        Light Gray 90:
+          token: '$color-light-gray-90'
+          value: '#80808f'
+    Dark Gray:
+      colors:
+        Dark Gray 05:
+          token: '$color-dark-gray-05'
+          value: '#5b5b66'
+        Dark Gray 10:
+          token: '$color-dark-gray-10'
+          value: '#52525e'
+        Dark Gray 20:
+          token: '$color-dark-gray-20'
+          value: '#4a4a55'
+        Dark Gray 30:
+          token: '$color-dark-gray-30'
+          value: '#42414d'
+        Dark Gray 40:
+          token: '$color-dark-gray-40'
+          value: '#3a3944'
+        Dark Gray 50:
+          token: '$color-dark-gray-50'
+          value: '#32313c'
+        Dark Gray 60:
+          token: '$color-dark-gray-60'
+          value: '#2b2a33'
+        Dark Gray 70:
+          token: '$color-dark-gray-70'
+          value: '#23222b'
+        Dark Gray 80:
+          token: '$color-dark-gray-80'
+          value: '#1c1b22'
+        Dark Gray 90:
+          token: '$color-dark-gray-90'
+          value: '#15141a'
+    Marketing Gray:
+      colors:
+        Marketing Gray 10:
+          token: '$color-marketing-gray-10'
+          value: '#f9f9fa'
+        Marketing Gray 20:
+          token: '$color-marketing-gray-20'
+          value: '#ededf0'
+        Marketing Gray 30:
+          token: '$color-marketing-gray-30'
+          value: '#cdcdd4'
+        Marketing Gray 40:
+          token: '$color-marketing-gray-40'
+          value: '#b1b1bc'
+        Marketing Gray 50:
+          token: '$color-marketing-gray-50'
+          value: '#9595a2'
+        Marketing Gray 60:
+          token: '$color-marketing-gray-60'
+          value: '#7a7a8b'
+        Marketing Gray 70:
+          token: '$color-marketing-gray-70'
+          value: '#5e5e72'
+        Marketing Gray 80:
+          token: '$color-marketing-gray-80'
+          value: '#42425a'
+        Marketing Gray 90:
+          token: '$color-marketing-gray-90'
+          value: '#1f2033'
+        Marketing Gray 99:
+          token: '$color-marketing-gray-99'
+          value: '#20123a'
+    Ink:
+      colors:
+        Ink 05:
+          token: '$color-ink-05'
+          value: '#393473'
+        Ink 10:
+          token: '$color-ink-10'
+          value: '#342f6d'
+        Ink 20:
+          token: '$color-ink-20'
+          value: '#312a64'
+        Ink 30:
+          token: '$color-ink-30'
+          value: '#2e255d'
+        Ink 40:
+          token: '$color-ink-40'
+          value: '#2b2156'
+        Ink 50:
+          token: '$color-ink-50'
+          value: '#291d4f'
+        Ink 60:
+          token: '$color-ink-60'
+          value: '#271948'
+        Ink 70:
+          token: '$color-ink-70'
+          value: '#241541'
+        Ink 80:
+          token: '$color-ink-80'
+          value: '#20123a'
+        Ink 90:
+          token: '$color-ink-90'
+          value: '#1d1133'
+    Utility Colors:
+      colors:
+        Black:
+          token: '$color-black'
+          value: '#000000'
+        White:
+          token: '$color-white'
+          value: '#ffffff'
+        Link:
+          token: '$color-link'
+          value: '#0060df'
+        Link:Hover:
+          token: '$color-link-hover'
+          value: '#0250bb'
+        Link:Visited:
+          token: '$color-link-visited'
+          value: '#b833e1'
+        Link:Visited:Hover:
+          token: '$color-link-visited-hover'
+          value: '#952bb9'
+    Mozilla Brand Colors:
+      colors:
+        Mozilla Neon Blue:
+          token: '$color-moz-neon-blue'
+          value: '#00ffff'
+        Mozilla Lemon Yellow:
+          token: '$color-moz-lemon-yellow'
+          value: '#fff44f'
+        Mozilla Warm Red:
+          token: '$color-moz-warm-red'
+          value: '#ff4f5e'
+        Mozilla Neon Green:
+          token: '$color-moz-neon-green'
+          value: '#54ffbd'
+        Mozilla Dark Purple:
+          token: '$color-moz-dark-purple'
+          value: '#6e008b'
+        Mozilla Dark Green:
+          token: '$color-moz-dark-green'
+          value: '#005e5e'
+        Mozilla Dark Blue:
+          token: '$color-moz-dark-blue'
+          value: '#00458b'
+        Mozilla Dark Gray:
+          token: '$color-moz-dark-gray'
+          value: '#959595'
+        Mozilla Light Gray:
+          token: '$color-moz-light-gray'
+          value: '#e7e5e2'

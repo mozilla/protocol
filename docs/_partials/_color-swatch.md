@@ -10,4 +10,3 @@
     </ul>
   </figcaption>
 </figure>
-
