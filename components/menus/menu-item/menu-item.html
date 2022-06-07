@@ -15,7 +15,7 @@
   {% if url %}<a class="mzp-c-menu-item-link" href="{{url}}">{% else %}<div class="mzp-c-menu-item-head">{% endif %}
     {% if icon %}
       {% block icon %}
-        <img src="{{@root.baseurl}}{% if image %}{{ image }}{% else %}/static/img/navigation/icons/accounts.svg{% endif %}" class="mzp-c-menu-item-icon" width="24" height="24" alt="">
+      <img src="{{ image | default {% if image %}{{ image }}{% else %}('/img/navigation/icons/accounts.svg'){% endif %} | path }}" width="{{ image_width | default('64') }}" alt="">
       {% endblock %}
     {% endif %}
     <h4 class="mzp-c-menu-item-title">{% block title %}A headline with 30 characters{% endblock %}</h4>
