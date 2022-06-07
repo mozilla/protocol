@@ -1,0 +1,41 @@
+<p>{% render '@button', { class: 'mzp-js-notification-trigger', label: 'Open Notification' } %}</p>
+
+<script src="{{ '/protocol/js/protocol-notification-bar.js' | path }}"></script>
+
+<script>
+  (function () {
+    'use strict';
+
+    var dissmissButtons = document.querySelectorAll('.mzp-c-notification-bar-button');
+
+    for (var i = 0; i < dissmissButtons.length; i++) {
+      dissmissButtons[i].addEventListener('click', function(e) {
+        e.currentTarget.parentNode.remove();
+      }, false);
+    }
+
+    var notificationButton = document.querySelector('.mzp-js-notification-trigger');
+
+    notificationButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      Mzp.Notification.init(e.target, {
+        title: 'This is the title.',
+        cta: {
+          text: "And this is a CTA link.",
+          url: "https://www.mozilla.org",
+          attrs: {"target": "_blank", "rel": "noopener"}
+        },
+        className: 'mzp-t-warning',
+        closeText: 'Close notification',
+        hasDismiss: true,
+        isSticky: true,
+        onNotificationOpen: function () {
+          console.log('Notification opened');
+        },
+        onNotificationClose: function () {
+          console.log('Notification closed');
+        }
+      });
+    }, false);
+  })();
+</script>
