@@ -1,6 +1,6 @@
 A small block of content featuring a pictographic icon, a headline, and body.
 
-- Pictos are best suited for a [multi-column layout](/patterns/templates/columns.html) but will otherwise stack in a single column.
+- Pictos are best suited for a [multi-column layout](#TODO) but will otherwise stack in a single column.
 - Without any other constraints, a Picto has a maximum width of 688px (equal to the "medium" content width).
 - The image should usually be a small icon (hence "picto") but larger images or even videos can be accommodated in some layouts.
 - Three variants are available:
