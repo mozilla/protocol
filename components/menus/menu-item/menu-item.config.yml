@@ -1,7 +1,6 @@
-
-variants:
-
-  - name: Menu Item
+context:
+  label: Menu Item
+variants: Menu Item
     notes: A menu item with link, title, description, icon and a list of secondary links.
       |
       - Each Menu Item should have a link destination.

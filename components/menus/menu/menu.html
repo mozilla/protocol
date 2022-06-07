@@ -12,13 +12,36 @@
             <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-example">Close Firefox menu</button>
             <div class="mzp-c-menu-panel-content">
               <ul>
-                {% render "@menu-item" %}
+                <li>
+                  {% render "@menu-item" %}
+                </li>
+                <li>
+                  {% render "@menu-item" %}
+                </li>
               </ul>
               <ul>
-                {% render "@menu-item" %}
+                <li class="mzp-c-menu-item">
+                  <h4 class="mzp-c-menu-item-title">A headline with 30 characters</h4>
+                  <p class="mzp-c-menu-item-desc">
+                    This is a short description with only a single sentence and no more.
+                  </p>
+                </li>
+                <li class="mzp-c-menu-item">
+                  <h4 class="mzp-c-menu-item-title">A headline with 30 characters</h4>
+                  <p class="mzp-c-menu-item-desc">
+                    This is a short description with only a single sentence and no more.
+                  </p>
+                </li>
+                <li class="mzp-c-menu-item">
+                  <h4 class="mzp-c-menu-item-title">A headline with 30 characters</h4>
+                  <p class="mzp-c-menu-item-desc">
+                    This is a short description with only a single sentence and no more.
+                  </p>
+                </li>
               </ul>
             </div>
             <div class="mzp-c-menu-panel-card">
+              <!-- Waiting on card component to be built -->
               {#
               {% block content %}
               {{#embed "patterns.molecules.card.extra-small-card"}}{{/embed}}
