@@ -1,0 +1,14 @@
+context:
+  label: Menu list
+default: default
+variants:
+  - name: Download
+    notes: |
+      - Customized with `mzp-t-download` class to display download icon on hover.
+      - You should place a link leading to a download page when using this variant inside the anchor tag.
+
+    context:
+      class: 'mzp-t-download'
+
+
+

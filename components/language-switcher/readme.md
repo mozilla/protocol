@@ -1,4 +1,4 @@
-A UI molecule for changing the language of the current page.
+A component for changing the language of the current page.
 
 ### Notes
 - Assumes the first path in the page URL immediately after hostname is a valid locale code e.g. https://www.mozilla.org/en-US/firefox/.
