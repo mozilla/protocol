@@ -1,0 +1,70 @@
+context:
+  class: 'mzp-has-aspect-3-2'
+  link: https://example.com
+  image: '/img/image-3-2.jpg'
+  tag: Card tag
+  title: Card title with about 30-40 characters
+  desc: A description of about 150 characters, give or take. That means we usually only have room for one or two sentences. Here is what that looks like.
+  cta: Call to action
+  meta: Card meta info
+variants:
+  - name: Extra-small
+    context:
+      class: 'mzp-c-card-extra-small has-aspect-3-2'
+      image: '/img/image-3-2.jpg'
+      tag: Card tag
+      title: A slightly longer card title with about 55 characters
+      desc: false
+      cta: false
+      meta: 6 hours ago
+    notes: |
+      - The card in this example has a slightly longer title and no description.
+      - Optional card meta data is also displayed to show the time an article was published.
+      - Extra small sized cards should contain images with either 16:9, 3:2 aspect ratios.
+      - Recommended image width is 450px width (low-res), 900px (high-res).
+        - high-res examples: 16:9 = 900 x 506, 3:2 = 900 x 600, 1:1 = 900 x 900
+      - Headlines should be a maximum of 50 characters, and descriptions a maximum of 150 characters.
+  - name: Small
+    context:
+      class: 'mzp-has-aspect-1-1 mzp-has-audio'
+      link: https://example.com
+      image: '/img/image-1-1.jpg'
+      tag: Audio
+      title: Card title with about 30-40 characters
+      desc: A description of about 150 characters, give or take. That means we usually only have room for one or two sentences. Here is what that looks like.
+      cta: This call to action is 37 characters
+      meta: false
+    notes: |
+      - Small sized cards can contain images with 16:9, 3:2 or 1:1 aspect ratios.
+      - The card in this example displays an icon next to the card tag name, to indicate
+        the media type that may be played on click.
+      - Recommended image width is 450px width (low-res), 900px (high-res).
+        - high-res examples: 16:9 = 900 x 506, 3:2 = 900 x 600, 1:1 = 900 x 900
+      - Headlines should be a maximum of 50 characters, and descriptions a maximum of 150 characters.
+  - name: Medium
+    context:
+      class: 'mzp-c-card-medium mzp-has-aspect-3-2 mzp-has-video'
+      image: '/img/image-3-2.jpg'
+      tag: Video
+      meta: false
+    notes: |
+      - Medium sized cards contain larger images but the same sized text as regular cards.
+      - Medium sized cards can contain images with 16:9, 3:2 or 1:1 aspect ratios.
+      - The card in this example displays an icon next to the card tag name, to indicate the media type that may be played on click.
+      - The card in this example includes an optional inline call to action. Inline CTAs should only be used with a description.
+      - Recommended image width is 600px (low-res), 1200px (high-res).
+        - high-res examples: 16:9 = 1200 x 676, 3:2 = 1200 x 800, 1:1 = 1200 x 1200
+      - Headlines should be a maximum of 50 characters, and descriptions a maximum of 150 characters.
+  - name: Large
+    context:
+      class: 'mzp-c-card-large mzp-has-aspect-16-9'
+      image: '/img/image-16-9.jpg'
+      tag: false
+      cta: false
+      meta: false
+    notes: |
+      - Large sized cards display larger text to other card types, as well as larger images.
+      - Large sized cards should contain images with 16:9 or 3:2 aspect ratios only.
+      - Recommended image width is 930px (low-res), 1860px (high-res).
+        - high-res examples: 16:9 = 1860 x 1046, 3:2 = 1860 x 1240, 1:1 = a bad idea
+      - Headlines should be a maximum of 50 characters, and descriptions a maximum of 150 characters.

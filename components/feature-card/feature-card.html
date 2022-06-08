@@ -1,0 +1,25 @@
+{# @feature-card
+#
+# parameters:
+# class         - string
+# image         - path
+# title         - string
+# title_el      - HTML heading element (h1, h2, h3, h4, h5, h6)
+# desc          - string
+# cta           - string
+# cta_link      - url
+#}
+<section class="mzp-c-card-feature{% if class %} {{ class }}{% endif %}">
+  <div class="mzp-c-card-feature-media-wrapper">
+    <div class="mzp-c-card-feature-media">
+      <img class="mzp-c-card-image" src="{{ image | default('/img/image-3-2.jpg') | path }}" alt="">
+    </div>
+  </div>
+  <div class="mzp-c-card-feature-content">
+    <div class="mzp-c-card-feature-content-container">
+      {% if title %}<{{ title_el | default('h2') }} class="mzp-c-card-feature-title">{{ title | default('Feature Card title') }}</{{ title_el | default('h2') }}>{% endif %}
+      {% if desc %}<p class="mzp-c-card-feature-desc">{{ desc }}</p>{% endif %}
+      {% if cta %}<a href="{{ cta_link }}" class="mzp-c-cta-link">{{ cta }}</a>{% endif %}
+    </div>
+  </div>
+</section>
