@@ -4,25 +4,32 @@ context:
 default: Default
 variants:
   - name: Success
-    notes: Use the class `mzp-t-success` for a positive notification, to indicate a successful action. This example also features a close button.
+    notes: Use the class `mzp-t-success` for a positive notification, to
+      indicate a successful action. This example also features a close
+      button (the button isn’t functional, it’s just for demonstration).
     context:
       close_button: True
       class: mzp-t-success
       content: Success! Celebrate small victories.
   - name: Warning
-    notes: Use the class `mzp-t-warning` for a cautionary notification, to indicate something may be risky but the user can choose to proceed. This example also features a close button.
+    notes: Use the class `mzp-t-warning` for a cautionary notification, to
+      indicate something may be risky but the user can choose to proceed.
+      This example also features a close button (the button isn’t functional,
+      it’s just for demonstration).
     context:
       class: mzp-t-warning
       close_button: True
       content: Warning! It's dangerous to go alone.
   - name: Error
-    notes: Use the class `mzp-t-error` for a negative notification, to indicate an unsuccessful action. This example also features an action link.
+    notes: Use the class `mzp-t-error` for a negative notification, to indicate
+      an unsuccessful action. This example also features an action link.
     context:
       class: mzp-t-error
       close_button: False
       content: Error! Something has gone horribly wrong. <a href="#" class="mzp-c-notification-bar-cta">Undo?</a>
   - name: Click
-    notes: Use the class `mzp-t-click` to call attention to some action the user should take.
+    notes: Use the class `mzp-t-click` to call attention to some action the
+      user should take.
     context:
       class: mzp-t-click
       close_button: False
