@@ -5,6 +5,7 @@
 
 ## Bug Fixes
 * **js:** Fix keyboard focus capture on modal open animation (#749).
+* **node:** Make sure to build NPM package using production mode.
 
 ## Features
 

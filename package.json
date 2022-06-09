@@ -23,7 +23,7 @@
     "prepublishOnly": "npm run webpack-package",
     "start": "ENV=development fractal start --sync",
     "webpack-docs": "npm run lint && webpack --config webpack.docs.static.config.js --mode development && webpack --config webpack.docs.build.config.js --watch --mode development",
-    "webpack-package": "webpack --config webpack.package.static.config.js --mode development && webpack --config webpack.package.build.config.js --mode development"
+    "webpack-package": "webpack --config webpack.package.static.config.js --mode production && webpack --config webpack.package.build.config.js --mode production"
   },
   "dependencies": {
     "@frctl/fractal": "^1.5.13",
