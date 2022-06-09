@@ -1,22 +1,24 @@
-<div class="mzp-l-content mzp-has-sidebar mzp-l-sidebar-{{ layout }}">
-  <main class="mzp-l-main">
-    <p>Main content.</p>
-    <p>The sidebar comes <strong>after</strong> the main section in the source order.</p>
-  </main>
+<div class="mzp-l-content mzp-has-sidebar mzp-l-sidebar-{% if layout %}{{ layout }}{% else %}left{% endif %}">
+  {% block content %}
+    <main class="mzp-l-main">
+      <p>Main content.</p>
+      <p>The sidebar comes <strong>after</strong> the main section in the source order.</p>
+    </main>
 
-  <aside class="mzp-l-sidebar">
-    <p>Sidebar content.</p>
-  </aside>
+    <aside class="mzp-l-sidebar">
+      <p>Sidebar content.</p>
+    </aside>
+  {% endblock %}
 </div>
 
 <!-- Inline styles are for demo purposes only. Prefer external stylesheet in production. -->
 <style>
   .mzp-l-main {
-    background-color: papayawhip;
+    border: 3px solid papayawhip;
   }
 
   .mzp-l-sidebar {
-    background-color: lavender;
+    border: 3px solid lavender;
   }
 </style>
 
