@@ -1,4 +1,4 @@
-The Details component converts a section of content into a collapsable accordion, turning
+The Details component converts a section of content into a collapsible accordion, turning
 each heading into a control to expand or collapse all the content that comes after it.
 This simulates the functionality of the [native `<details>` element](details), but can
 apply to any element.
