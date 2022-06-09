@@ -2,4 +2,6 @@ Local navigation for a subset of pages or section of a website, intended to appe
 
 The menu summary reflects the current page, shown when the menu is collapsed in small viewports. The menu label should be the title of the site section.
 
+### Tips
+
 - Indicate the current page with the `mzp-is-current` class.
