@@ -38,6 +38,7 @@
 
   <h5 class="demo-heading">Heading Two</h5>
   <p>Proin in dapibus nulla. Nam vitae est vitae tellus mollis eleifend in eu erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean feugiat ante porttitor purus elementum, eget vestibulum ex volutpat. Sed gravida convallis rutrum. Quisque pharetra eros eget malesuada vulputate.</p>
+  <h6>Sub-heading</h6>
   <p>Cras maximus interdum interdum. Maecenas vitae ligula et eros porta feugiat. Nullam facilisis odio non ante varius tempor ut ac turpis.</p>
 </section>
 
@@ -49,15 +50,29 @@
   var _mqWide = matchMedia('(max-width: 767px)');
 
   if (_mqWide.matches) {
-    window.Mzp.Details.init('.demo-heading');
+    window.Mzp.Details.init('.demo-heading', {
+      onDetailsOpen: function(){
+        console.log('open');
+      },
+      onDetailsClose: function(){
+        console.log('close');
+      }
+    });
   }
 
   _mqWide.addListener(function(mq) {
-      if (mq.matches) {
-          window.Mzp.Details.init('.demo-heading');
-      } else {
-          window.Mzp.Details.destroy('.demo-heading');
-      }
+    if (mq.matches) {
+      window.Mzp.Details.init('.demo-heading', {
+        onDetailsOpen: function(){
+          console.log('open');
+        },
+        onDetailsClose: function(){
+          console.log('close');
+        }
+      });
+    } else {
+      window.Mzp.Details.destroy('.demo-heading');
+    }
   });
 })();
 </script>
