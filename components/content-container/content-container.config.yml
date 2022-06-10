@@ -1,0 +1,24 @@
+context:
+  label: Content container
+default: default
+variants:
+  - name: Small container
+    notes: |
+      A small container of `mzp-t-content-sm` class with `max-width: 432px`
+    context:
+      class: 'mzp-t-content-sm'
+  - name: Medium container
+    notes: |
+      A medium container of `mzp-t-content-md` with `max-width: 688px`
+    context:
+      class: 'mzp-t-content-md'
+  - name: Large container
+    notes: |
+      A large container of `mzp-t-content-lg` with `max-width: 928px`
+    context:
+      class: 'mzp-t-content-lg'
+  - name: Extra large container
+    notes: |
+      An extra large container of `mzp-t-content-xl` with `max-width: 1152px`
+    context:
+      class: 'mzp-t-content-xl'
