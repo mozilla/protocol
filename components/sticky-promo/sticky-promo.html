@@ -1,0 +1,19 @@
+<aside class="mzp-c-sticky-promo {{ class }}">
+  <button class="mzp-c-sticky-promo-close" type="button">Close</button>
+  {% if title %}<h3 class="mzp-c-sticky-promo-title">{{ title }}</h3>{% endif %}
+  {% if content %}{{ content | safe }}{% endif %}
+</aside>
+
+<button id="showSticky" class="mzp-c-button" type="button">Show Sticky Promo</button>
+
+<script src="{{ '/protocol/js/protocol-sticky-promo.js' | path }}"></script>
+
+<script>
+(function() {
+  'use strict';
+
+  var showStickyBtn = document.getElementById("showSticky");
+
+  showStickyBtn.addEventListener('click', Mzp.StickyPromo.open, false);
+})();
+</script>
