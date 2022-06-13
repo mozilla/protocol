@@ -1,21 +1,14 @@
-{# @select
-#
-# parameters:
-# id            - string, required
-# name          - string, required
-# label         - string, required
-# class         - string
-#}
-<form class="mzp-c-language-switcher {% if class %}{{ class }}{% endif %}" method="get" action="#">
-  <a class="mzp-c-language-switcher-link" href="https://www.mozilla.org/locales/" target="_blank" external="noopener noreferrer">Language</a>
-  <label for="mzp-c-language-switcher-select">Language</label>
-  <select id="mzp-c-language-switcher-select" class="mzp-js-language-switcher-select" name="{{ name }}">
-    {%- for option in options -%}
-      <option value="{{ option.value }}">{{ option.text }}</option>
-    {%- endfor -%}
-  </select>
+<form class="mzp-c-language-switcher" method="get" action="#">
+  {% render '@select', {
+    id: 'mzp-c-language-switcher-select',
+    class: 'mzp-js-language-switcher-select',
+    name: 'language',
+    label: 'Language',
+    options: '@select.options'
+  } %}
+
   <!-- form submit button is shown when JavaScript is not enabled -->
-  <button type="submit">Go</button>
+<button type="submit">Go</button>
 </form>
 
 <script src="{{ '/protocol/js/protocol-lang-switcher.js' | path }}">
