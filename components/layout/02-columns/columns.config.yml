@@ -1,0 +1,16 @@
+default: Overview
+variants:
+  - name: Two
+    notes: |
+      The class `mzp-t-columns-two` sets up a two-column layout. Contents
+      will stack in a single column in narrow viewports or containers.
+  - name: Three
+    notes: |
+      The class `mzp-t-columns-three` sets up a three-column layout. Contents
+      will stack in a single column in medium viewports or containers.
+  - name: Four
+    notes: |
+      The class `mzp-t-columns-four` sets up a four-column layout. Contents will
+      form two columns in medium viewports or containers, with the third and fourth
+      columns wrapping under the first and second. They will stack in a single column
+      in narrow viewports or containers.
