@@ -1,0 +1,10 @@
+context:
+  layout: left
+variants:
+  - name: Sidebar Right
+    context:
+      layout: right
+    notes: |
+      This example uses `mzp-l-sidebar-right` layout class.  The sidebar will appear on the left for right-to-left (RTL) languages.
+
+      Colored borders are for demonstration only. They are not part of the component styles.
