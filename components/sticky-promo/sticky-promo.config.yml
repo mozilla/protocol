@@ -1,0 +1,13 @@
+context:
+  title: A headline with 30 characters
+  content: |
+    <p>Some body content, but keep it short. Just a sentence or two. Maybe three at the most.</p>
+variants:
+  - name: Dark Theme
+    notes: |
+      A dark theme can be a good contrast on a light-themed page. This example
+      also features a product logo and button.
+    context:
+      class: 'mzp-t-dark mzp-t-product-developer'
+      title: Get the browser made for developers
+      content: <p><a href="#" class="mzp-c-button mzp-t-product mzp-t-lg">Download Now</a></p>
