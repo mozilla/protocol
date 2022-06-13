@@ -4,6 +4,8 @@ The columns will stack in small viewports, form a 1/3-2/3 split in medium sized 
 
 This layout template only sets up the basic columns. The main content column is quite wide in large viewports and can result in uncomfortably long lines of text. You may want to use other nested elements to limit line lengths.
 
+Colored borders are for demonstration only. They are not part of the component styles.
+
 ### Tips
 
 - Layout class `mzp-l-sidebar-left` or `mzp-l-sidebar-right` is required.
