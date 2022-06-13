@@ -1,0 +1,27 @@
+{# @card
+#
+# parameters:
+# class         - string
+# link          - url
+# image         - path
+# tag           - string
+# title         - string
+# title_el      - HTML heading element (h1, h2, h3, h4, h5, h6)
+# desc          - string
+# cta           - string
+# meta          - string
+#}
+<section class="mzp-c-card {{ class }}">
+  <a class="mzp-c-card-block-link" href="{{ link }}">
+    <div class="mzp-c-card-media-wrapper">
+      <img class="mzp-c-card-image" src="{{ image | default('/img/image-3-2.jpg') | path }}" alt="">
+    </div>
+    <div class="mzp-c-card-content">
+      {% if tag %}<div class="mzp-c-card-tag">{{ tag }}</div>{% endif %}
+      {% if title %}<{{ title_el | default('h2') }} class="mzp-c-card-title">{{ title }}</{{ title_el | default('h2') }}>{% endif %}
+      {% if desc %}<p class="mzp-c-card-desc">{{ desc }}</p>{% endif %}
+      {% if cta %}<p class="mzp-c-card-cta"><span class="mzp-c-card-cta-text">{{ cta }}</span></p>{% endif %}
+      {% if meta %}<p class="mzp-c-card-meta">{{ meta }}</p>{% endif %}
+    </div>
+  </a>
+</section>
