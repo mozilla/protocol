@@ -1,0 +1,14 @@
+<div class="mzp-c-billboard {% if class %} {{ class }}{% else %}mzp-l-billboard-right{% endif %}">
+  <div class="mzp-c-billboard-image-container">
+    <img class="mzp-c-billboard-image" src="{{ image | default('/img/billboard-image.png') | path }}" alt="">
+  </div>
+  <div class="mzp-c-billboard-content">
+    <div class="mzp-c-billboard-content-container">
+      <div class="mzp-c-billboard-content-inner">
+        <h2 class="mzp-c-billboard-title">Example headline with 35 characters</h2>
+        <p class="mzp-c-billboard-desc">A description with a maximum of 100 characters. That usually means only one or two sentences.</p>
+        <a class="mzp-c-cta-link" href="#">Learn more about us</a>
+      </div>
+    </div>
+  </div>
+</div>
