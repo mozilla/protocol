@@ -17,4 +17,4 @@ Inline JavaScript in this example is for demo purposes only. Use external files 
 - You can use the utility class `mzp-u-modal-content` to hide content (when JS is enabled) that is intended to be shown only once a modal is displayed.
 - You can pass an additional `className` of `mzp-has-media` to the modal to indicate that if the modal contains an image or video, those elements should be displayed full width.
 - Any HTML content you wish can be displayed within a modal.
-- Media content such as video should occupy the full width of the modal dialog, and be at least 1200px wide.
+- Media content such as video should occupy the full width of the modal dialog, and be at least `1200px` wide.
