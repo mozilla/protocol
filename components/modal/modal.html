@@ -1,0 +1,42 @@
+<button class="mzp-c-button" type="button">Open Modal</button>
+
+<div class="mzp-u-modal-content">
+  <figure>
+    <!-- media could be an image or video -->
+    <img class="mzp-c-card-image" src="{{ image | default('/img/image-3-2.jpg') | path }}" alt="">
+    <figcaption>
+      A description with a maximum of 100 characters.
+      That usually means only one or two sentences. <a href="#">Learn more.</a>
+    </figcaption>
+  </figure>
+</div>
+
+
+<script src="{{ '/protocol/js/protocol-modal.js' | path }}">
+</script>
+
+
+<script>
+(function() {
+    'use strict';
+
+    var content = document.querySelector('.mzp-u-modal-content');
+    var button = document.querySelector('.mzp-c-button');
+
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        Mzp.Modal.createModal(e.target, content, {
+            title: 'Example headline with 35 characters',
+            className: 'mzp-has-media',
+            closeText: 'Close modal',
+            onCreate: function() {
+                console.log('Modal opened');
+            },
+            onDestroy: function() {
+                console.log('Modal closed');
+            }
+        });
+    }, false);
+})();
+</script>
