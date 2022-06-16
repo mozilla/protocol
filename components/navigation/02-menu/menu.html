@@ -1,0 +1,63 @@
+<nav class="mzp-c-menu mzp-is-basic">
+  <ul class="mzp-c-menu-category-list">
+    <li class="mzp-c-menu-category">
+      <a class="mzp-c-menu-title" href="https://www.mozilla.org/">Sample Link</a>
+    </li>
+    <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
+      <a class="mzp-c-menu-title" href="#" aria-haspopup="true"
+        aria-controls="mzp-c-menu-panel-example">Sample Link with Popup</a>
+      <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-example">
+        <div class="mzp-c-menu-panel-container">
+          <button
+            class="mzp-c-menu-button-close"
+            type="button"
+            aria-controls="mzp-c-menu-panel-example"
+          >
+            Close menu
+          </button>
+          <div class="mzp-c-menu-panel-content">
+            <ul>
+              <li>
+                {% render '@menu-item', { link: '' }, merge=True %}
+              </li>
+              <li>
+                {% render '@menu-item', { link: '' }, merge=True %}
+              </li>
+            </ul>
+            <ul>
+              <li>
+                {% render '@menu-item', { description: 'This is a short description with only a single sentence and no more.' } %}
+              </li>
+              <li>
+                {% render '@menu-item', { description: 'This is a short description with only a single sentence and no more.' } %}
+              </li>
+              <li>
+                {% render '@menu-item', { description: 'This is a short description with only a single sentence and no more.' } %}
+              </li>
+            </ul>
+          </div>
+          <div class="mzp-c-menu-panel-card">
+            {% render '@card--extra-small', { class: 'mzp-c-card-extra-small mzp-has-aspect-3-2', image: '/img/image-3-2.jpg', link: '#', title: 'A short title', desc: 'This is an optional card included in the menu. Only visible on wide viewports.' } %}
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<script src="{{ '/protocol/js/protocol-menu.js' | path }}"></script>
+
+<script>
+  Mzp.Menu.init({
+    onMenuOpen: function () {
+      console.log('Menu opened');
+    },
+    onMenuClose: function () {
+      console.log('Menu closed');
+    },
+    onMenuButtonClose: function () {
+      console.log(
+        'Menu close button clicked');
+    }
+  });
+</script>

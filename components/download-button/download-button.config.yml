@@ -3,4 +3,6 @@ context:
   include_privacy_link: True
 variants:
   - name: Secondary
-    notes: A more compact, hollow Download Button used as a secondary CTA in the Navigation component.
+    notes: A more compact, hollow Download Button used as a secondary CTA in the [Navigation](/components/detail/navigation) component.
+    context:
+      show_both: True

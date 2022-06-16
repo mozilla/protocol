@@ -1,0 +1,18 @@
+<section class="mzp-c-menu-item  {% if icon %}mzp-has-icon{% endif %}">
+  {% if link %}<a class="mzp-c-menu-item-link" href="{{ link }}">{% else %}<div class="mzp-c-menu-item-head">{% endif %}
+    {% if icon %}<img class="mzp-c-menu-item-icon" src="{{ icon }}" alt="Useful alt text where appropriate">{% endif %}
+    <h4 class="mzp-c-menu-item-title">A headline with 30 characters</h4>
+    {% if description %}
+    <p class="mzp-c-menu-item-desc">{{ description }}</p>
+    {% endif %}
+  {% if link %}</a>{% else %}</div>{% endif %}
+  {% if list %}
+  <ul class="mzp-c-menu-item-list">
+    {% for item in list %}
+    <li>
+      <a href="#">{{ item }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</section>

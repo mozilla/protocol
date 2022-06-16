@@ -1,0 +1,11 @@
+context:
+  link: '#'
+  icon: '/protocol/img/icons/image.svg'
+  description: This is a short description with only a single sentence and no more.
+  list:
+    - Secondary link
+    - Secondary link
+    - Secondary link
+    - Secondary link
+    - Secondary link
+    - Secondary link

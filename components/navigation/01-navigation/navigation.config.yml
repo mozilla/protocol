@@ -1,0 +1,8 @@
+context:
+  is_sticky: True
+  is_firefox: False
+  label:
+variants:
+  - name: Firefox
+    context:
+      is_firefox: True
