@@ -1,0 +1,11 @@
+<section class="mzp-c-call-out{% if class %} {{ class }}{% endif %}">
+  <div class="mzp-l-content{% if content_class %}{{ content_class }}{% endif %}">
+    <h2 class="mzp-c-call-out-title">{{ title }}</h2>
+  {%- if desc %}
+    <div class="mzp-c-call-out-desc"><p>{{ desc }}</p></div>
+  {% endif -%}
+  {%- if cta %}
+    <p>{% render '@button', { label: cta, href: cta_link, class: cta_class } %}</p>
+  {% endif -%}
+  </div>
+</section>
