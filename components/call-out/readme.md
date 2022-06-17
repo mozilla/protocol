@@ -1,4 +1,4 @@
-A Call Out is a prominent section of a page that contains at minimum a headline,
+A Call-Out is a prominent section of a page that contains at minimum a headline,
 but also may feature a logo, description, and a call-to-action button. Content
 is centered.
 

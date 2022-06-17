@@ -3,7 +3,7 @@ context:
   desc: A description of about 150 characters, give or take. That means we usually only have room for one or two sentences. Here is what that looks like.
   cta: Call to Action
   cta_link: '#'
-  cta_class: ''
+  cta_class: False
 variants:
   - name: Branded
     notes: |
@@ -21,7 +21,7 @@ variants:
       cta: Download Firefox
       cta_class: mzp-t-product mzp-t-xl
   - name: Dark theme
-    notes: A dark theme is available with the `mzp-t-dark` theme class. This example also omits any description.
+    notes: A dark theme is available with the `mzp-t-dark` theme class. This example omits any description.
     context:
       class: mzp-t-dark
       desc: False
