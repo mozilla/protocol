@@ -1,0 +1,16 @@
+context:
+  options:
+    - text: Germany
+      value: DE
+    - text: France
+      value: FR
+    - text: India
+      value: IN
+    - text: Japan
+      value: JP
+    - text: Spain
+      value: ES
+    - text: United States
+      value: US
+    - text: And so on…
+      value: ''
