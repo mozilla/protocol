@@ -8,9 +8,8 @@ The optional elements are:
 
 This demo includes all optional elements and six footer sections (footer sections will be evenly spaced across component width whatever number you use).
 
-See Example Basic for a simpler demo.
+See [Example Basic](/components/detail/example-basic) for a simpler demo.
 
 ### Tips
 
 - Add Details Component script and Footer script to collapse footer sections into expandable titles on mobile screens.
-
