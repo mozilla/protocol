@@ -1,3 +1,11 @@
+<style>
+/* Styles for visual demo only. Ordinarily these styles would be applied by a validation script. */
+.mzp-c-newsletter .mzp-c-form-errors,
+.mzp-c-newsletter .mzp-c-newsletter-details {
+    display: block;
+}
+</style>
+
 <aside class="mzp-c-newsletter">
   <div class="mzp-c-newsletter-image">
     <img src="{{ '/img/newsletter-image.png' | path }}" width="346" height="346" alt="">
@@ -10,9 +18,16 @@
     </header>
 
     <fieldset class="mzp-c-newsletter-content">
+      <div class="mzp-c-form-errors" id="newsletter-errors">
+        <ul class="mzp-u-list-styled">
+          <li>Please enter a valid email address.</li>
+          <li>You must agree to the privacy notice.</li>
+        </ul>
+      </div>
+
       <div>
         <label for="email">Your email address</label>
-        <input type="email" class="mzp-js-email-field" id="email" name="email" placeholder="yourname@example.com" required aria-required="true">
+        <input type="email" class="mzp-js-email-field" id="email" name="email" placeholder="yourname@example.com" required aria-required="true" value="not-an-email">
       </div>
 
       <div id="newsletter-details" class="mzp-c-newsletter-details">
