@@ -1,0 +1,21 @@
+context:
+  options:
+    - text: Germany
+      value: DE
+    - text: France
+      value: FR
+    - text: India
+      value: IN
+    - text: Japan
+      value: JP
+    - text: Spain
+      value: ES
+    - text: United States
+      value: US
+    - text: And so on…
+      value: ''
+variants:
+  - name: Errors
+    notes: An error summary can be shown at the top of the form.
+  - name: Success
+    notes: On a successful submission the form is hidden and a “thank you” message is shown in its place.
