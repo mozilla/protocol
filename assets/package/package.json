@@ -1,0 +1,26 @@
+{
+  "name": "@mozilla-protocol/core",
+  "version": "16.0.1",
+  "description": "A design system for Mozilla's websites.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla/protocol.git"
+  },
+  "keywords": [
+    "mozilla",
+    "design system",
+    "website",
+    "css",
+    "js"
+  ],
+  "author": "Mozilla",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/mozilla/protocol/issues"
+  },
+  "homepage": "https://github.com/mozilla/protocol",
+  "main": "protocol/css/protocol.min.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

@@ -1,6 +1,6 @@
 node_modules
 dist
-package
+/package
 static/protocol
 theme/static
 .netlify

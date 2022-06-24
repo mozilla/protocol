@@ -1,11 +1,17 @@
 # HEAD
 
 ## Features
+* **docs:** Migrate Protocol documentation site to Fractal.
 * **node:** Create a Webpack config for compiling docs using Fractal.
 
 ## Bug Fixes
-* **js:** Fix keyboard focus capture on modal open animation (#749).
 * **node:** Make sure to build NPM package using production mode.
+
+# 16.0.1
+
+## Bug Fixes
+* **css:** Fix repeating background on disabled search field (#767)
+* **js:** Fix keyboard focus capture on modal open animation (#749).
 
 ## Features
 
