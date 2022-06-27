@@ -1,0 +1,51 @@
+context:
+  borders:
+    $border-radius-xs: '2px'
+    $border-radius-sm: '4px'
+    $border-radius-md: '8px'
+    $border-radius-lg: '16px'
+  shadows:
+    $box-shadow-sm: '0 8px 12px 1px rgba(29, 17, 51, .04), 0 3px 16px 2px rgba(9, 32, 77, .12), 0 5px 10px -3px rgba(29, 17, 51, .12)'
+    $box-shadow-md: '0 16px 24px 2px rgba(29, 17, 51, .04), 0 6px 32px 4px rgba(9, 32, 77, .12), 0 8px 12px -5px rgba(29, 17, 51, .12)'
+    $box-shadow-lg: '0 24px 38px 3px rgba(29, 17, 51, .04), 0 10px 48px 8px rgba(9, 32, 77, .12), 0 12px 16px -6px rgba(29, 17, 51, .12)'
+  spaces:
+    $spacing-xs: '4px'
+    $spacing-sm: '8px'
+    $spacing-md: '16px'
+    $spacing-lg: '24px'
+    $spacing-xl: '32px'
+    $spacing-2xl: '48px'
+    $layout-2xs: '16px'
+    $layout-xs: '24px'
+    $layout-sm: '32px'
+    $layout-md: '48px'
+    $layout-lg: '64px'
+    $layout-xl: '96px'
+    $layout-2xl: '192px'
+  contents:
+    $content-xs: '304px'
+    $content-sm: '432px'
+    $content-md: '688px'
+    $content-lg: '928px'
+    $content-xl: '1152px'
+    $content-max: '1440px'
+  screens:
+    $screen-xs: '320px' # content-xs + 16px
+    $screen-sm: '480px' # content-sm + 48px
+    $screen-md: '768px' # content-md + 80px
+    $screen-lg: '1024px' # content-lg + 128px
+    $screen-xl: '1312px' # content-xl + 128px
+  queries:
+    $mq-xs: '(min-width: $screen-xs)'
+    $mq-sm: '(min-width: $screen-sm)'
+    $mq-md: '(min-width: $screen-md)'
+    $mq-lg: '(min-width: $screen-lg)'
+    $mq-xl: '(min-width: $screen-xl)'
+    $mq-short: '(max-height: 599px)'
+    $mq-tall: '(min-height: 600px)'
+    $mq-high-res: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)'
+  fonts:
+    $font-stack-base: "Inter, X-LocaleSpecific, sans-serif"
+    $font-stack-firefox: "Metropolis, Inter, X-LocaleSpecific, sans-serif"
+    $font-stack-mono: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace"
+    $font-stack-mozilla: "'Zilla Slab', Inter, X-LocaleSpecific, sans-serif"
