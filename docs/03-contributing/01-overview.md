@@ -4,19 +4,18 @@ label: Overview
 ---
 
 Protocol, like everything else Mozilla makes, is [open source](https://developer.mozilla.org/docs/Mozilla/Developer_guide/Introduction).
-We welcome contributions from people like you. Yes, you, whoever you are
-reading this, can do something to make Protocol better and more useful,
-no matter your skill level or area of interest.
+We welcome contributions from people like you. Yes, you, dear reader, can help us
+make Protocol better and more useful, no matter your skill level or area of interest.
 
 ### Reporting Bugs
 
-The easiest way to help is to report bugs. Let us know if something isn't
-doing what you think it should do and we can try to fix it.
+The easiest way to help is to report bugs. Let us know if something isn’t doing
+what you think it should do and we can try to fix it.
 
 To report an error you’ve discovered in Protocol, [submit an issue on Github](https://github.com/mozilla/protocol/issues/new/choose/)
 with a detailed description of the error and steps to reproduce. If possible,
-include a link to a live example and/or a screenshot of the bug in effect.
-Also be sure to mention the browser (and version) and operating system.
+include a link to a live example and/or a screenshot of the bug in effect. Also
+be sure to mention the browser (and version) and operating system.
 
 You should search for similar issues in case it’s already been reported. In
 some cases a bug may have been fixed but the fix may not have been deployed,
@@ -30,7 +29,7 @@ using the appropriate issue template. Please try to fill out this template
 as thoroughly as you can. This will help the team understand the request
 and triage issues more effectively.
 
-## Contributing code
+## Contributing Code
 
 Aside from reporting bugs or requesting features, an even more direct way to
 contribute to Protocol is to write code.
@@ -47,17 +46,17 @@ assemble into a web page, and its soul is the CSS framework that styles those
 components. We’re probably straining that metaphor but you get the point;
 Protocol is made of code.
 
-The Protocol design system comprises a CSS framework and a library of
-markup patterns for web page components. There’s a bit of JavaScript for a few
-interactive things, but for the most part Protocol is static HTML and CSS.
+The Protocol design system comprises a CSS framework and a library of markup
+patterns for web page components. There’s a bit of JavaScript for a few interactive
+things, but for the most part Protocol is static HTML and CSS.
 
 The pattern library lives at [protocol.mozilla.org](https://protocol.mozilla.org)
 and its source code lives at [github.com/mozilla/protocol](https://github.com/mozilla/protocol/).
 That code repository is also where the Protocol CSS framework lives, as well as
 all the system documentation (including this page).
 
-To write code for Protocol you’ll actually be working on the Protocol website itself.
-
+To write code for Protocol you’ll actually be working on the Protocol website
+itself.
 
 ### Installing the Protocol site locally
 
@@ -85,9 +84,9 @@ With those prerequisites met:
 3. On your computer’s command line, navigate to the folder to which you just
     cloned the Protocol repo.
 4. Within that folder, run `npm install`. This will install all the dependencies.
-5. Next run `npm run webpack-docs`. This will compile the SCSS and copy assets
+5. Next run `npm run webpack-docs`. This will compile the Sass and copy assets
     into a local folder in preparation to run the server. It also starts a “watch”
-    process that will watch those files and automatically recompile if they change.
+    process that will watch those files and automatically recompile when they change.
 6. In another command line console (and still within the Protocol folder), run
     `npm start`. This will start your local server.
 
@@ -125,11 +124,11 @@ reach the really good stuff but the top-level root folder looks something like:
 
 ```text
 protocol
-├── assets (SCSS, JavaScript, and fonts; this is what gets published with the package)
+├── assets (Sass, JavaScript, and font files; this is what gets published with the package)
 ├── bin (scripts that deploy the site to the server)
 ├── components (the HTML components)
 ├── docs (documentation pages [including this one])
-├── static (media assets for display on the pattern library site, but not part of Protocol itself)
+├── static (media assets for display on the Protocol website, but not part of Protocol itself)
 ├── tests (automated test scripts)
 └── theme (the custom theme for the Protocol website)
 ```
@@ -195,12 +194,13 @@ started. Look through the various components in Protocol for more robust example
 and refer to the [Fractal documentation](https://fractal.build/guide/components/)
 for more about how components and component variants are created and configured.
 
-## The Protocol CSS framework
+## The Protocol CSS Framework
 
 Along with the HTML snippets that give Protocol components their structure,
-Protocol also comprises a CSS framework to give it style. Our framework is built
-with [Sass](https://sass-lang.com) as a pre-processor, and we author Sass using
-the [SCSS](https://sass-lang.com/documentation/syntax#scss) syntax.
+Protocol also comprises a [CSS framework](/docs/usage/framework) to give it style.
+Our framework is built with [Sass](https://sass-lang.com) as a pre-processor, and
+we author Sass using the [SCSS](https://sass-lang.com/documentation/syntax#scss)
+syntax.
 
 You can find our Sass files in the `assets/sass/protocol` folder. This is where
 you’ll find all the CSS that styles Protocol components as well as the variables,
@@ -226,9 +226,9 @@ sass/protocol
 └── protocol.scss
 ```
 
-As usual, it’s a good idea to explore the files and folders here to get the lay of
-the land. We try to include helpful comments in each `.scss` file to explain what all
-the different pieces do and how to use them so a lot of our documentation lives
+It’s a good idea to explore the files and folders here to get the lay of the land.
+We try to include helpful comments in each `.scss` file to explain what all the
+different pieces do and how to use them so a lot of our documentation lives
 directly within the source code.
 
 Our styles are fragmented across numerous files in order to keep things more
@@ -236,10 +236,11 @@ self-contained and organized, and to help prevent conflicts when several people
 work simultaneously on different things (when more than one person is trying to
 edit the same file at the same time they’ll inevitably step on each other’s work).
 
-The `base` folder has all the basic, general-purpose styling for common HTML elements.
-The `components` folder holds the styling for individual Protocol components. The
-`templates` folder holds styling for page and component layouts. And the `includes`
-folder holds the supporting mixins and functions that power the entire framework.
+The `base` folder has all the basic, general-purpose styling for common HTML
+elements. The `components` folder holds the styling for individual Protocol
+components. The `templates` folder holds styling for page and component layouts.
+And the `includes` folder holds the supporting mixins and functions that power
+the entire framework.
 
 Each of these folders in turn hold other files that import and collect the smaller
 fragments. Almost all of our individual SCSS files are [Sass partials](https://sass-lang.com/guide#topic-4),
@@ -315,7 +316,7 @@ such a variable in one place and it will automatically propagate to every other
 part of Protocol. The `$spacing-lg` variable is `24px` but if we want to change
 that to `20px` we would only have to make that change once.
 
-### Tokens
+### Design Tokens
 
 The example above shows a Sass variable used as a margin value. We call variables
 like these _design tokens_ and they’re more than just variables. Design tokens
@@ -345,126 +346,3 @@ intended for wider gaps between components on the page.)
 
 Protocol’s design tokens [reside in their own repository](https://github.com/mozilla/protocol-tokens)
 and are [published as their own package](https://www.npmjs.com/package/@mozilla-protocol/tokens).
-
-### Mixins
-
-Protocol relies on numerous [Sass mixins](https://sass-lang.com/documentation/at-rules/mixin)
-to simplify and standardize repetitive code. Some are fairly simple shortcuts and
-others do more complex work. We won’t list them all here, but we’ll describe a
-few of the more notable ones. All our mixins are in `/includes/_mixins.scss` or
-in separate files in the `/includes/mixins/` folder. You’ll find even more
-documentation as comments directly in the source files.
-
-#### Text sizes
-Protocol uses a modular type scale with a range of predefined font sizes, and to
-maintain the consistency of that scale we rely on mixins for all of our text
-sizing. See [our page on typography](/docs/fundamentals/typography) for more info
-and examples.
-
-```scss
-@include text-title-lg;
-```
-
-Different themes have slightly different type scales so this mixin draws its
-output from the defined brand theme. See [our page on themes](/docs/fundamentals/brand-themes)
-for more info and examples.
-
-#### bidi
-The bidi mixin (short for “bi-directional”) is used to declare both left-to-right
-and right-to-left values for a CSS property together, and output appropriate
-declarations for each. This makes it easier to support right-to-left languages –
-such as Hebrew and Arabic – while keeping both styles in the same place. Whenever
-you’re floating or aligning something to one side, you might prefer to use the
-bidi mixin to reverse that direction for other languages. Refer to
-`/includes/mixins/_bidi.scss` for more documentation and usage.
-
-```scss
-@include bidi(((float, left, right),));
-```
-
-#### at2x
-at2x is a helpful mixin for applying a high-resolution background image, for
-display on high definition screens (a.k.a. “retina”). It automatically outputs
-the standard resolution background image with the high-resolution version in a
-media query, along with the `background-size` property to scale it. Both image
-files should be in the same folder and have matching names, with the high
-resolution version suffixed with “high-res”, e.g. `example.png` and
-`example-high-res.png`
-
-```scss
-@include at2x('/img/example.png', 100px, 100px);
-```
-
-#### light-links
-The light-links mixin inverts link colors in elements/components with dark
-backgrounds.
-
-```scss
-@include light-links;
-```
-
-#### white-links
-The white-links mixin explicitly sets link colors (in all pseudo-class states) to
-white. This is useful for some elements/components with dark backgrounds where
-the regular inverted link colors might be undesirable, typically for utilitarian
-components like a footer.
-
-```scss
-@include white-links;
-```
-
-### Themes
-
-Protocol supports [multiple brand themes](/docs/fundamentals/typography), namely
-the Mozilla and Firefox brands. Themes work by defining sets of variables in Sass
-maps in the `/includes/_themes.scss` file, and those variables are fetched via
-the `get-theme()` function. That function determines which set of variables to
-draw from based on the declared brand theme, thus any themable property in CSS
-can have different values for different brands.
-
-```scss
-.mzp-c-my-component {
-    background-color: get-theme('background-color');
-    color: get-theme('body-text-color');
-
-    .mzp-c-my-component-title {
-        color: get-theme('title-text-color');
-        font-family: get-theme('title-font-family');
-    }
-}
-```
-
-Use the `get-theme()` function for any themeable properties, especially basic
-colors for foreground (text) and backgrounds. Note that most colors have an
-“inverse” counterpart to use in dark style variants. Refer to `/includes/_themes.scss`
-for the actual values for each brand theme, but here are the variable names in a
-handy list:
-
-```
-background-color
-background-color-alt
-background-color-alt-inverse
-background-color-inverse
-body-font-family
-body-text-color
-body-text-color-alt
-body-text-color-alt-inverse
-body-text-color-inverse
-button-font-family
-link-color
-link-color-hover
-link-color-hover-inverse
-link-color-inverse
-link-color-visited
-link-color-visited-hover
-link-color-visited-hover-inverse
-link-color-visited-inverse
-title-font-family
-title-text-color
-title-text-color-inverse
-```
-
-Text sizes are also defined as theme variables, allowing different brands to have
-slightly different type scales. Don’t use the `get-theme()` function for text
-sizing; use the text size mixins instead. The mixins already draw from the theme
-variables but come with baked-in responsive styling as well.
