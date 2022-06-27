@@ -55,7 +55,7 @@ equivalent to the tokens `$color-ink-90`, `$color-blue-90`, and `$color-ink-90`.
 ## Spacing units
 
 Protocol has two types of tokens used for spacing units (margins and padding). The `$spacing-*`
-tokens are smaller and generally intended for tigher spacing within components. The `$layout-*`
+tokens are smaller and generally intended for tighter spacing within components. The `$layout-*`
 tokens are larger and intended for more generous spaces between components.
 
 <table class="docs-tokens-table">
