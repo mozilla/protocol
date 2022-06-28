@@ -1,4 +1,10 @@
-<div class="mzp-c-video{% if class %}{{ class }}{% endif %}">
+{# @video
+#
+# parameters:
+# class         - string
+# content       - markup
+#}
+<div class="mzp-c-video{% if class %} {{ class }}{% endif %}">
 {% if content -%}
   {{ content | safe }}
 {% else -%}

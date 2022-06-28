@@ -7,6 +7,7 @@ variants:
   - name: Date
     notes: |
       ### Links
+
       - [MDN `input type="date"`](https://developer.mozilla.org/docs/Web/HTML/Element/input/date)
     context:
       label: Date
@@ -15,6 +16,7 @@ variants:
   - name: Email
     notes: |
       ### Links
+
       - [MDN `input type="email"`](https://developer.mozilla.org/docs/Web/HTML/Element/input/email)
     context:
       label: E-mail address
@@ -25,7 +27,8 @@ variants:
       Field placeholders should show an example of the expected input, such as suggested search terms or a demonstration of a correctly formatted email address.
 
       ### No-nos
-      - Don't use the `placeholder` attribute as a substitute for a `<label>`. It's a misuse of the attribute and leaves you with an inaccessible, unlabeled field.
+
+      - Don’t use the `placeholder` attribute as a substitute for a `<label>`. It’s a misuse of the attribute and leaves you with an inaccessible, unlabeled field.
     context:
       label: E-mail address
       type: email
@@ -34,6 +37,7 @@ variants:
   - name: Password
     notes: |
       ### Links
+
       - [MDN `input type="password"`](https://developer.mozilla.org/docs/Web/HTML/Element/input/password)
     context:
       label: Password
@@ -42,6 +46,7 @@ variants:
   - name: File
     notes: |
       ### Links
+
       - [MDN `input type="file"`](https://developer.mozilla.org/docs/Web/HTML/Element/input/file)
     context:
       label: Upload a file
@@ -50,6 +55,7 @@ variants:
   - name: Search
     notes: |
       ### Links
+
       - [MDN `input type="search"`](https://developer.mozilla.org/docs/Web/HTML/Element/input/search)
     context:
       label: Search
@@ -60,5 +66,6 @@ variants:
       Disabled controls should have both the `disabled` attribute and `aria-disabled="true"`
 
       ### Links
+
       - [MDN `disabled`](https://developer.mozilla.org/docs/Web/HTML/Attributes/disabled)
       - [MDN `aria-disabled`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)

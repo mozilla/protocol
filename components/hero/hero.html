@@ -1,3 +1,16 @@
+{# @hero
+#
+# parameters:
+# image           - path
+# class           - string
+# content_class   - string
+# title           - string
+# tagline         - string
+# desc            - string
+# cta             - string
+# cta_link        - URL
+# cta_class       - string
+#}
 <section class="mzp-c-hero{% if image %} mzp-has-image{% endif %}{% if class %} {{ class}}{% endif %}">
   <div class="mzp-l-content{% if content_class %} {{ content_class }}{% endif %}">
     <div class="mzp-c-hero-body">
@@ -15,7 +28,7 @@
 
     {%- if cta %}
       <p class="mzp-c-hero-cta">
-        {% render '@button', { label: cta, href: cta_link, class: cta_class } %}
+        {% render '@button', { label: cta, link: cta_link, class: cta_class } %}
       </p>
     {% endif -%}
     </div>

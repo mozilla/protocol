@@ -1,22 +1,22 @@
 {# @textarea-field
 #
 # parameters:
-# type          - string, required, ['text', 'email', 'password', 'date', 'search', 'file']
-# id            - string, required
-# name          - string, required
-# label         - string, required
-# note          - string
-# fieldClass    - string
-# controlClass  - string
-# required      - boolean
-# disabled      - boolean
-# value         - string
-# msg           - string
-# info          - string
+# type            - string, required, ['text', 'email', 'password', 'date', 'search', 'file']
+# id              - string, required
+# name            - string, required
+# label           - string, required
+# note            - string
+# field_class     - string
+# control_class   - string
+# required        - boolean
+# disabled        - boolean
+# value           - string
+# msg             - string
+# info            - string
 #}
-<div class="mzp-c-field{% if fieldClass %} {{ fieldClass }}{% endif %}">
+<div class="mzp-c-field{% if field_class %} {{ field_class }}{% endif %}">
   <label class="mzp-c-field-label" for="{{ id }}">{{ label|safe }}{% if note %} <span class="mzp-c-fieldnote">{{ note|safe }}</span>{% endif %}</label>
-  <textarea class="mzp-c-field-control{% if controlClass %} {{ controlClass }}{% endif %}" id="{{ id }}" rows="{{ rows }}" cols="{{ cols }}" {% if required %} required aria-required="true"{% endif %}{% if msg %} aria-describedby="{{ id }}-msg"{% endif %}{% if disabled %} disabled aria-disabled="true"{% endif %}>
+  <textarea class="mzp-c-field-control{% if control_class %} {{ control_class }}{% endif %}" id="{{ id }}" rows="{{ rows }}" cols="{{ cols }}" {% if required %} required aria-required="true"{% endif %}{% if msg %} aria-describedby="{{ id }}-msg"{% endif %}{% if disabled %} disabled aria-disabled="true"{% endif %}>
     {%- if value %}{{ value }}{% endif -%}
   </textarea>
   {%- if msg -%}<div id="{{ id }}-msg" class="mzp-c-field-msg" role="tooltip">{{ msg|safe }}</div>{%- endif -%}

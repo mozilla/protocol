@@ -21,6 +21,7 @@ variants:
       Disabled controls should have both the `disabled` attribute and `aria-disabled="true"`
 
       ### Links
+
       - [MDN `disabled`](https://developer.mozilla.org/docs/Web/HTML/Attributes/disabled)
       - [MDN `aria-disabled`](https://developer.mozilla.org/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
     context:
