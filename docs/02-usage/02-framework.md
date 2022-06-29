@@ -102,7 +102,7 @@ colors for foreground (text) and backgrounds. Note that most colors have an
 for the actual values for each brand theme, but here are the variable names in a
 handy list:
 
-```
+```text
 background-color
 background-color-alt
 background-color-alt-inverse
