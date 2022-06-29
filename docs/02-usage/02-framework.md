@@ -81,7 +81,7 @@ Protocol supports [multiple brand themes](/docs/fundamentals/brand-themes), name
 the Mozilla and Firefox brands. Themes work by defining sets of variables in Sass
 maps in the `/includes/_themes.scss` file, and those variables are fetched via
 the `get-theme()` function. That function determines which set of variables to
-draw from based on the declared brand theme, thus any themable property in CSS
+draw from based on the declared brand theme, thus any themeable property in CSS
 can have different values for different brands.
 
 ```scss
