@@ -11,14 +11,25 @@ After that, we follow a [SMACSS](https://smacss.com/book/categorizing)-based
 naming convention with a set of prefixes to put rules into a few different
 categories:
 
-* `c-` for component names. Expect a lot of this one, e.g. `.mzp-c-card`, `.mzp-c-button`.
-* `t-` for theme styles, when a component has one or more alternative styles, e.g. `.mzp-t-dark`, `.mzp-t-product-firefox`.
-* `l-` for layout-related styles, e.g. `.mzp-l-content`, `.mzp-l-grid-third`. These are essentially presentational names, mostly used for container elements.
-* `u-` for utility styles, which have a broad scope and can be powerful overrides, e.g. `.mzp-u-inline`, `.mzp-u-title-md`. These are presentational so should be rare. Prefer mixins in a style sheet over classes in HTML.
-* `qa-` used as selector hooks for tests (unit tests, integration tests, etc.). These classes are not meant as styling hooks; no CSS should be applied to any `qa-` classes!
-* `is-` to indicate a current state, e.g. `.mzp-is-active`, `.mzp-is-collapsed` (typically assigned by JS and not hard-coded).
-* `has-` to indicate that a component contains some other component, when the parent gets some styling to accommodate the child, e.g. `.mzp-has-submenu`, `.mzp-has-image`.
-* `js-` used as a behavior hook for JavaScript, e.g. `.mzp-js-sticky`, `.mzp-js-collapsible`, `.mzp-js-toggle`. Indicates potential for a change of state and usually shouldn’t have any styling.
+* `c-` for component names. Expect a lot of this one, e.g. `.mzp-c-card`,
+  `.mzp-c-button`.
+* `t-` for theme styles, when a component has one or more alternative styles,
+  e.g. `.mzp-t-dark`, `.mzp-t-product-firefox`.
+* `l-` for layout-related styles, e.g. `.mzp-l-content`, `.mzp-l-grid-third`.
+  These are essentially presentational names, mostly used for container elements.
+* `u-` for utility styles, which have a broad scope and can be powerful overrides,
+  e.g. `.mzp-u-inline`, `.mzp-u-title-md`. These are presentational so should be
+  rare. Prefer mixins in a style sheet over classes in HTML.
+* `qa-` used as selector hooks for tests (unit tests, integration tests, etc.).
+  These classes are not meant as styling hooks; no CSS should be applied to any
+  `qa-` classes!
+* `is-` to indicate a current state, e.g. `.mzp-is-active`, `.mzp-is-collapsed`
+  (typically assigned by JS and not hard-coded).
+* `has-` to indicate that a component contains some other component, when the
+  parent gets some styling to accommodate the child, e.g. `.mzp-has-submenu`, `.mzp-has-image`.
+* `js-` used as a behavior hook for JavaScript, e.g. `.mzp-js-sticky`,
+  `.mzp-js-collapsible`, `.mzp-js-toggle`. Indicates potential for a change of
+  state and usually shouldn’t have any styling.
 * `a-` for CSS animation names, e.g. `mzp-a-fade-in`, `mzp-a-slide-from-right`.
 
 Our names are all lowercase and hyphen-separated or “kebab-case,” e.g.
@@ -43,8 +54,8 @@ Example:
 </div>
 ```
 
-Component names should be semantically meaningful, descriptive of the element's content,
-purpose, or function, not only its presentation.
+Component names should be semantically meaningful, descriptive of the element’s
+content, purpose, or function, not only its presentation.
 
 ```scss
 // NO - Presentational
@@ -63,9 +74,9 @@ adding presentational classes in your markup.
 
 ### Sizes
 
-We use a "T-shirt" convention when we need to describe sizes, e.g. "lg" for large
-and "sm" for small. In this t-shirt scale system, the default should be the medium
-"md" size and you can scale up or down from there.
+We use a “T-shirt” convention when we need to describe sizes, e.g. “lg” for large
+and “sm” for small. In this t-shirt scale system, the default should be the medium
+“md” size and you can scale up or down from there.
 
 ```scss
 .mzp-t-size-2xl { ... }
@@ -77,10 +88,9 @@ and "sm" for small. In this t-shirt scale system, the default should be the medi
 .mzp-t-size-2xs { ... }
 ```
 
-Note that when we need multiple Xes we opt for a numeral. This avoids confusion or
-ambuguity in the event we need to reference some extreme size. "5xl" is more readable
-than "xxxxxl".
-
+Note that when we need multiple Xes we opt for a numeral. This avoids confusion
+or ambuguity in the event we need to reference some extreme size. “5xl” is more
+readable than “xxxxxl”.
 
 ### Resources
 

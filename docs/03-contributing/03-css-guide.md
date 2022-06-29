@@ -3,17 +3,17 @@ title: CSS Coding Guide
 label: CSS Guide
 ---
 
-Coding style can be really personal and everyone has their own opinions
-and preferences. But when we work as a team on a shared codebase it's
-invaluable to agree to some basic rules. The CSS in Protocol should be
-written consistently no matter who wrote it.
+Coding style can be really personal and everyone has their own opinions and
+preferences. But when we work as a team on a shared codebase it’s invaluable to
+agree to some basic rules. The CSS in Protocol should be written consistently
+no matter who wrote it.
 
 ## Terminology
 
-Just so we all know what we’re talking about, a CSS *rule* comprises one
-or more *selectors* followed by a *declaration block* consisting of one
-or more *declarations*. A declaration comprises a *property* and a *value*
-(some properties accept multiple values).
+Just so we all know what we’re talking about, a CSS *rule* comprises one or more
+*selectors* followed by a *declaration block* consisting of one or more
+*declarations*. A declaration comprises a *property* and a *value* (some
+properties accept multiple values).
 
 A rule in CSS looks like:
 
@@ -27,29 +27,28 @@ selector {
 
 Use the shortest, least specific selector required to do the job.
 
-Favor classes over IDs. IDs in CSS aren’t expressly forbidden, just
-strongly discouraged. Using ID selectors can lead to specificity wars
-requiring ever more powerful selectors to override previous styling. A
-better option is an attribute selector like `[id='widget']` which selects
-the element by its ID but has the same specificity as a class. Everybody
-wins.
+Favor classes over IDs. IDs in CSS aren’t expressly forbidden, just strongly
+discouraged. Using ID selectors can lead to specificity wars requiring ever more
+powerful selectors to override previous styling. A better option is an attribute
+selector like `[id='widget']` which selects the element by its ID but has the
+same specificity as a class. Everybody wins.
 
-Avoid qualifying classes with type selectors. It slows down performance
-and makes classes less portable. E.g. `.widget` is better than `div.widget`.
+Avoid qualifying classes with type selectors. It slows down performance and makes
+classes less portable. E.g. `.widget` is better than `div.widget`.
 
 ### Minimal nesting
 
-We use SCSS as a pre-processor. Nested rules are converted into descendent
-selectors in the generated style sheet. The deeper the nesting, the more
-complex and specific the final selector will be. Don’t nest rules unless
-necessary for context and specificity, and don’t nest rules just to group
-them together (use comments to label sections of the style sheet for grouping).
+We use Sass as a pre-processor. Nested rules are converted into descendent
+selectors in the generated style sheet. The deeper the nesting, the more complex
+and specific the final selector will be. Don’t nest rules unless necessary for
+context and specificity, and don’t nest rules just to group them together (use
+comments to label sections of the style sheet for grouping).
 
-All the style declarations for the parent element should come before any
-nested rules.
+All the style declarations for the parent element should come before any nested
+rules.
 
-Include a blank line before each nested rule to separate it from the
-rule or declaration above it.
+Include a blank line before each nested rule to separate it from the rule or
+declaration above it.
 
 ```scss
 // NO - This is horrible
@@ -119,14 +118,14 @@ rule or declaration above it.
 ```
 
 When possible, limit line lengths to 80 characters. It improves readability,
-minimizes horizontal scrolling, makes it possible to view files side by side,
-and produces more useful diffs with meaningful line numbers. There will be
-exceptions such as long URLs or gradient syntax but most declarations should
-fit well within 80 characters even with indentation.
+minimizes horizontal scrolling, makes it possible to view files side by side, and
+produces more useful diffs with meaningful line numbers. There will be exceptions
+such as long URLs or gradient syntax but most declarations should fit well within
+80 characters even with indentation.
 
 Long, comma-separated property values – such as multiple background images,
-gradients, transforms, transitions, webfonts, or text and box shadows – can
-be arranged across multiple lines (indented one level from their property).
+gradients, transforms, transitions, webfonts, or text and box shadows – can be
+arranged across multiple lines (indented one level from their property).
 
 ```scss
 .selector {
@@ -144,10 +143,11 @@ be arranged across multiple lines (indented one level from their property).
 
 ### Comments
 
-Use `//` for comments in Sass instead of `/* */`, including multi-line comment blocks.
-Our configuration is set to strip `//` comments when the CSS is compiled and minified,
-but will allow `/* */` comments to pass through. There's usually no need to include
-developer comments in minified CSS sent to browsers, so it just adds extra bytes.
+Use `//` for comments in Sass instead of `/* */`, including multi-line comment
+blocks. Our configuration is set to strip `//` comments when the CSS is compiled
+and minified, but will allow `/* */` comments to pass through. There’s usually
+no need to include developer comments in minified CSS sent to browsers, so it
+just adds extra bytes.
 
 An exception is special comments to override linting rules, which require the
 `/* */` formatting.
@@ -160,7 +160,7 @@ An exception is special comments to override linting rules, which require the
 }
 ```
 
-In a long style sheet it's not a bad idea to add dividing lines (with two blank
+In a long style sheet it’s not a bad idea to add dividing lines (with two blank
 lines before it) to help set sections apart visually.
 
 ```scss
@@ -188,5 +188,6 @@ lines before it) to help set sections apart visually.
 * Use percentages for fluid-width elements.
 * Use rems for `font-size` because it respects user preferences.
 * Use [unitless `line-height`](http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/)
-  in conjunction with `font-size`; it acts as a multiplier of font size. E.g. `line-height: 1.5`.
+  in conjunction with `font-size`; it acts as a multiplier of font size. E.g.
+  `line-height: 1.5`.
 * Use milliseconds for timing, e.g. `500ms` not `.5s`.

@@ -21,7 +21,7 @@
 }
 
 .Browser-panel .Prose {
-  code:not([class='hljs']) {
+  code:not([class*="hljs"]) {
     background-color: #f8f8f8;
     border-radius: $border-radius-xs;
     color: #000080;
