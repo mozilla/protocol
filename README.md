@@ -6,7 +6,7 @@ level guidelines for content and accessibility.
 
 https://protocol.mozilla.org/
 
-Protocol is still an evolving project. Currently it’s used primarily by the
+Protocol is still an evolving project. Currently, it’s used primarily by the
 Mozilla Marketing Websites team as the front-end for [www.mozilla.org](https://www.mozilla.org).
 The long term goal is to provide a robust, unified design system that anyone at
 Mozilla can use to build an on-brand website.
