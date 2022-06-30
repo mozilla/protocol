@@ -33,7 +33,7 @@ variants:
 
       ### Tips
 
-      - We recommend hero images at least 800px by 600px. A 16:9 aspect ratio works well,
+      - We recommend hero images at least `800px` by `600px`. A 16:9 aspect ratio works well,
       though more of it can be hidden when the hero section is tall. Plan for this and
       choose your image wisely.
       - Choose your image wisely.

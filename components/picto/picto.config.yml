@@ -16,7 +16,7 @@ variants:
 
       - The class `mzp-t-picto-side` on a container element will apply this
         styling to all the pictos in the set.
-      - In this orientation the image has a maximum width of 64px, so it’s best
+      - In this orientation the image has a maximum width of `64px`, so it’s best
         suited for simple icons.
       - The image will be on the left in left-to-right languages and on the right
         in right-to-left.

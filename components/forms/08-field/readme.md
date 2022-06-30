@@ -6,7 +6,7 @@ spacing, especially when using other layout options.
 
 ### Tips
 
-- The field wrapper can also contain an optional field-info component for added
+- The Field wrapper can also contain an optional field-info component for added
   notes or instructions.
 - The Field layout features are most useful in larger forms. They may not be
   needed for a small or simple form, like a single search box or a login form.

@@ -1,8 +1,15 @@
+{# @navigation
+#
+# parameters:
+# is_sticky     - boolean
+# is_firefox    - boolean
+# label         - string
+#}
 <div class="mzp-c-navigation {% if is_sticky %}mzp-is-sticky{% endif %}">
   <div class="mzp-c-navigation-l-content">
     <div class="mzp-c-navigation-container">
       <button class="mzp-c-navigation-menu-button" type="button" aria-controls="navigation-demo">
-        {%if label %}{{ label }}{% else %}Menu{% endif %}
+        {% if label %}{{ label }}{% else %}Menu{% endif %}
       </button>
 
       {% if is_firefox %}
