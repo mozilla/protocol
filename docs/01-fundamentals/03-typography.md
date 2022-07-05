@@ -176,7 +176,7 @@ gets bigger as the viewport gets bigger. You can resize your window to see this
 in action on the samples above or on most of our components.
 
 The sizing mixins in turn use another mixin to convert a pixel size to `rem` for
-output, assuming a 16px root size (the default in graphical browsers). Because
+output, assuming a `16px` root size (the default in graphical browsers). Because
 we use `rem` for font sizing all of our declared sizes are really just suggestions
 and the end user can resize as they see fit. Text sizes are always variable so
 design accordingly.

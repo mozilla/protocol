@@ -2,9 +2,10 @@ status: deprecated
 variants:
   - name: Compact
     notes: |
-      **This component is deprecated. Use the new [Picto component](/components/detail/picto--side/).**
+      **This component is deprecated. Use the [Picto component](picto--side).**
 
-      A more compact version of a Picto Card with a horizontally aligned icon. Horizontally aligned icon
-      allows for a larger title and slightly longer description (about 100 characters max).
+      A more compact version of a Picto Card with a horizontally aligned icon.
+      Horizontally aligned icon allows for a larger title and slightly longer
+      description (about 100 characters max).
     context:
       class: mzp-c-card-picto-compact

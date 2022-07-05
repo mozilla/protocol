@@ -1,9 +1,20 @@
+{# @picto
+#
+# parameters:
+# image         - path
+# image_width   - string
+# title_el      - HTML heading element (h1, h2, h3, h4, h5, h6)
+# title         - string
+# body          - string
+#}
 <section class="mzp-c-picto">
   <div class="mzp-c-picto-image">
     <img src="{{ image | default('/protocol/img/icons/image.svg') | path }}" width="{{ image_width | default('64') }}" alt="">
   </div>
-  <h3 class="mzp-c-picto-heading">{{ heading }}</h3>
+  <{{ title_el | default('h3') }} class="mzp-c-picto-heading">{{ title }}</{{ title_el | default('h3') }}>
+  {%- if body %}
   <div class="mzp-c-picto-body">
     <p>{{ body }}</p>
   </div>
+  {% endif -%}
 </section>

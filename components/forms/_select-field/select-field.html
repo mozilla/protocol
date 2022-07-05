@@ -1,21 +1,21 @@
 {# @select-field
 #
 # parameters:
-# id            - string, required
-# name          - string, required
-# label         - string, required
-# note          - string
-# multiple      - boolean
-# fieldClass    - string
-# controlClass  - string
-# required      - boolean
-# disabled      - boolean
-# msg           - string
-# info          - string
+# id              - string, required
+# name            - string, required
+# label           - string, required
+# note            - string
+# multiple        - boolean
+# field_class     - string
+# control_class   - string
+# required        - boolean
+# disabled        - boolean
+# msg             - string
+# info            - string
 #}
-<div class="mzp-c-field{% if fieldClass %} {{ fieldClass }}{% endif %}">
+<div class="mzp-c-field{% if field_class %} {{ field_class }}{% endif %}">
   <label class="mzp-c-field-label" for="{{ id }}">{{ label|safe }}{% if note %} <span class="mzp-c-fieldnote">{{ note|safe }}</span>{% endif %}</label>
-  <select class="mzp-c-field-control{% if controlClass %} {{ controlClass }}{% endif %}" name="{{ name }}" id="{{ id }}"{% if multiple %} multiple{% endif %}{% if disabled %} disabled aria-disabled="true"{% endif %}{% if required %} required aria-required="true"{% endif %}{% if msg %} aria-describedby="{{ id }}-msg"{% endif %}>
+  <select class="mzp-c-field-control{% if control_class %} {{ control_class }}{% endif %}" name="{{ name }}" id="{{ id }}"{% if multiple %} multiple{% endif %}{% if disabled %} disabled aria-disabled="true"{% endif %}{% if required %} required aria-required="true"{% endif %}{% if msg %} aria-describedby="{{ id }}-msg"{% endif %}>
     {%- for option in options -%}
     <option value="{{ option.value }}">{{ option.text }}</option>
     {%- endfor -%}

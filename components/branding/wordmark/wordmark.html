@@ -1,3 +1,10 @@
+{# @wordmark
+#
+# parameters:
+# size          - Size class suffix (xs, sm, md, lg, xl)
+# product       - Product class suffix
+# label         - string
+#}
 <div class="mzp-c-wordmark mzp-t-wordmark-{% if size %}{{ size }}{% else %}md{% endif %} mzp-t-product-{% if product %}{{ product }}{% else %}firefox{%  endif %}">
   {%- if label %}{{ label }}{% else %}Firefox Browser{% endif -%}
 </div>

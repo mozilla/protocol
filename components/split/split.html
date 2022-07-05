@@ -1,3 +1,12 @@
+{# @split
+#
+# parameters:
+# block_class         - string
+# background_class    - string
+# body_class          - string
+# content             - string, markup
+# image               - path
+#}
 <section class="mzp-c-split {{ block_class }}">
   {%- if background_class -%}<div class="mzp-c-split-bg {{ background_class }}">{%- endif -%}
   <div class="mzp-c-split-container">
@@ -7,12 +16,12 @@
     {% else %}
       <h1 class="mzp-u-title-md">Lorem ipsum dolor sit amet</h1>
       <p>Lorem ipsum dolor sit amet, amet dolores tincidunt te sea. His aliquid epicuri detraxit in, cum tantas populo periculis te. Ei vix idque noster.</p>
-      <p>{% render '@button', { href: '#', label: 'Call to action' } %}</p>
+      <p>{% render '@button', { link: '#', label: 'Call to action' } %}</p>
     {% endif %}
     </div>
     <div class="mzp-c-split-media {{ media_class }}">
-    {% if img_src -%}
-      <img class="mzp-c-split-media-asset" src="{{ img_src | path }}" alt="">
+    {% if image -%}
+      <img class="mzp-c-split-media-asset" src="{{ image | path }}" alt="">
     {% else -%}
       <img class="mzp-c-split-media-asset" src="{{ '/img/image-16-9.jpg' | path }}" alt="" srcset="{{ '/img/image-16-9-high-res.jpg' | path }} 2x">
     {%- endif -%}

@@ -16,7 +16,7 @@ variants:
       at some screen sizes. This is by design and this component was intended for decorative,
       editorial-style images not essential content. If you expect the entire hero image to
       be visible, this isn’t the right component to use. It’s one reason this component has
-      been **deprecated in favor of the [Split component](/components/detail/split)**.
+      been **deprecated in favor of the [Split component](split)**.
 
       - By default the copy is on the left and image on the right. Reverse the layout
         with an `mzp-l-reverse` class.
@@ -32,7 +32,8 @@ variants:
       - Page heroes are intended to span the entire viewport.
 
       ### Tips
-      - We recommend hero images at least 800px by 600px. A 16:9 aspect ratio works well,
+
+      - We recommend hero images at least `800px` by `600px`. A 16:9 aspect ratio works well,
       though more of it can be hidden when the hero section is tall. Plan for this and
       choose your image wisely.
       - Choose your image wisely.
@@ -55,14 +56,14 @@ variants:
   - name: Branded
     notes: |
       A product logo can be displayed using an additional theme class:
-        - `mzp-t-product-firefox`
-        - `mzp-t-product-beta`
-        - `mzp-t-product-developer`
-        - `mzp-t-product-nightly`
-        - `mzp-t-product-focus`
-        - `mzp-t-product-mozilla`
-        - `mzp-t-product-vpn`
-        - `mzp-t-product-pocket`
+      - `mzp-t-product-firefox`
+      - `mzp-t-product-beta`
+      - `mzp-t-product-developer`
+      - `mzp-t-product-nightly`
+      - `mzp-t-product-focus`
+      - `mzp-t-product-mozilla`
+      - `mzp-t-product-vpn`
+      - `mzp-t-product-pocket`
     context:
       class: mzp-t-product-firefox
       cta_class: mzp-t-product mzp-t-lg

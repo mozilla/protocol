@@ -16,6 +16,7 @@ This component spans the full width of the viewport. It has a secondary backgrou
 color by default and a dark theme is available with the class `mzp-t-dark`.
 
 ### No-nos
+
 This component already has an inner container, so don’t place it inside
-the `mzp-l-content` [container](/components/detail/content-container). The nested
-spacing will get weird.
+the `mzp-l-content` [container](content-container). The nested spacing will get
+weird.

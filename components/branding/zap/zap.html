@@ -1,1 +1,8 @@
-<{{ base_el | default('h1') }} class="mzp-has-zap-{{ zap_number | default('1') }}">{{ content | safe }}</{{ base_el }}>
+{# @zap
+#
+# parameters:
+# title_el      - HTML heading (h1, h2, h3, h4, h5, h6)
+# zap_number    - Zap class suffix (1—18)
+# title         - string
+#}
+<{{ title_el | default('h1') }} class="mzp-has-zap-{{ zap_number | default('1') }}">{{ title | safe }}</{{ title_el }}>

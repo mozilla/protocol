@@ -1,3 +1,8 @@
+{# @button-container
+#
+# parameters:
+# class           - string
+#}
 <div class="mzp-c-button-container{% if class %} {{ class }}{% endif %}">
   {% render '@button', { label: 'Primary' } %}
   {% render '@button', { label: 'Secondary', class: 'mzp-t-secondary' } %}

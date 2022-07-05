@@ -1,8 +1,16 @@
-A Wordmark component displays a wordmark image (logo with text) in a range of sizes, with a standard bottom margin. It's similar to the Logo component but also inverts the color of the wordmark text when it appears in a container with an `mzp-t-dark` class.
+A Wordmark component displays a wordmark image (logo with text) in a range of
+sizes, with a standard bottom margin. It's similar to the Logo component but
+also inverts the color of the wordmark text when it appears in a container with
+an `mzp-t-dark` class.
 
-This component requires two SCSS files: one for the component itself and one for the particular product to display (to avoid loading unused styles for all the different products). You’ll need to include both in your compiled Sass/SCSS to display a wordmark.
+This component requires two SCSS files: one for the component itself and one for
+the particular product to display (to avoid loading unused styles for all the
+different products). You’ll need to include both in your compiled Sass/SCSS to
+display a wordmark.
 
-Add the component class `mzp-c-wordmark`, the size class (eg: `mzp-t-wordmark-md`), and the product class (eg: `mzp-t-product-firefox`) to your markup. All three are necessary to display a logo.
+Add the component class `mzp-c-wordmark`, the size class (eg: `mzp-t-wordmark-md`),
+and the product class (eg: `mzp-t-product-firefox`) to your markup. All three
+are necessary to display a logo.
 
 Size classes:
 - `mzp-t-wordmark-xs`
@@ -26,5 +34,8 @@ Product classes:
 - `mzp-t-product-relay`
 
 ### Tips
-This component uses CSS image replacement to display a background image in place of the element’s text content. If you use the wordmark as meaningful content like a title or heading, include the product name as accessible text. Leave the element empty if the wordmark is strictly decorative.
+This component uses CSS image replacement to display a background image in place
+of the element’s text content. If you use the wordmark as meaningful content like
+a title or heading, include the product name as accessible text. Leave the element
+empty if the wordmark is strictly decorative.
 
