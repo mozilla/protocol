@@ -1,3 +1,4 @@
+preview: '@preview-unpadded'
 default: Overview
 variants:
   - name: Two
