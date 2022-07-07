@@ -17,6 +17,30 @@ few of the more notable ones. All our mixins are in `/includes/_mixins.scss` or
 in separate files in the `/includes/mixins/` folder. You’ll find even more
 documentation as comments directly in the source files.
 
+### Font stacks and variable fonts
+
+Protocol supports [variable font](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+formats for type faces such as Inter. In order to maintain compatibility with
+older web browsers, the `font-family-variable` mixin can be used to specify a
+fallback font stack.
+
+```scss
+@include font-family-variable($font-stack-base-variable, $font-stack-base);
+```
+
+There are also several font family/theme mixins available that will
+automatically include variable font support:
+
+```scss
+@include font-base;
+@include font-firefox;
+@include font-mozilla;
+
+@include font-theme-body;
+@include font-theme-title;
+@include font-theme-button;
+```
+
 ### Text sizes
 Protocol uses a modular type scale with a range of predefined font sizes, and to
 maintain the consistency of that scale we rely on mixins for all of our text
@@ -90,8 +114,8 @@ can have different values for different brands.
     color: get-theme('body-text-color');
 
     .mzp-c-my-component-title {
+        @include font-theme-title;
         color: get-theme('title-text-color');
-        font-family: get-theme('title-font-family');
     }
 }
 ```
@@ -108,11 +132,13 @@ background-color-alt
 background-color-alt-inverse
 background-color-inverse
 body-font-family
+body-font-family-variable
 body-text-color
 body-text-color-alt
 body-text-color-alt-inverse
 body-text-color-inverse
 button-font-family
+button-font-family-variable
 link-color
 link-color-hover
 link-color-hover-inverse
@@ -122,6 +148,7 @@ link-color-visited-hover
 link-color-visited-hover-inverse
 link-color-visited-inverse
 title-font-family
+title-font-family-variable
 title-text-color
 title-text-color-inverse
 ```

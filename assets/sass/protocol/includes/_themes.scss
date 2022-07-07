@@ -37,14 +37,20 @@ $theme-spacing: (
 
 $theme-fonts-firefox: (
     body-font-family: $font-stack-base,
+    body-font-family-variable: $font-stack-base-variable,
     button-font-family: $font-stack-firefox,
+    button-font-family-variable: $font-stack-firefox-variable,
     title-font-family: $font-stack-firefox,
+    title-font-family-variable: $font-stack-firefox-variable,
 );
 
 $theme-fonts-mozilla: (
     body-font-family: $font-stack-base,
+    body-font-family-variable: $font-stack-base-variable,
     button-font-family: $font-stack-base,
+    button-font-family-variable: $font-stack-base-variable,
     title-font-family: $font-stack-mozilla,
+    title-font-family-variable: $font-stack-mozilla-variable,
 );
 
 

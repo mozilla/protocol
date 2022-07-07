@@ -42,6 +42,10 @@ $brand-theme: 'mozilla' !default;
 
 $type-scale: 'standard' !default;
 
+// TODO add to protocol/tokens
+$font-stack-base-variable: 'Inter VF', X-LocaleSpecific, sans-serif;
+$font-stack-firefox-variable: Metropolis, 'Inter VF', X-LocaleSpecific, sans-serif;
+$font-stack-mozilla-variable: 'Zilla Slab', 'Inter VF', X-LocaleSpecific, sans-serif;
 
 // Import all the things!
 @import './node_modules/@mozilla-protocol/tokens/dist/index.scss';

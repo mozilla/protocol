@@ -61,9 +61,9 @@
 // Title
 .mzp-c-form-title,
 legend.mzp-c-form-title {
+    @include font-theme-title;
     @include text-title-xs;
     color: get-theme('title-text-color');
-    font-family: get-theme('title-font-family');
     font-weight: bold;
     margin: 0 0 $spacing-lg 0;
 

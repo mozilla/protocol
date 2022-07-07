@@ -36,6 +36,6 @@
 }
 
 .mzp-c-cta-link {
-    font-family: get-theme('button-font-family');
+    @include font-theme-button;
     font-weight: bold;
 }

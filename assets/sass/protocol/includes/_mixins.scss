@@ -292,3 +292,13 @@
     grid-column-gap: $value;
     column-gap: $value;
 }
+
+
+// Mixin for variable fonts with fallback for older browsers
+@mixin font-family-variable($font-family-variable, $font-family-fallback) {
+    font-family: $font-family-fallback;
+
+    @supports (font-variation-settings: normal) {
+        font-family: $font-family-variable;
+    }
+}

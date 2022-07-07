@@ -3,8 +3,8 @@
 }
 
 .Pen-title {
+    @include font-theme-title;
     @include text-title-xs;
-    font-family: get-theme('title-font-family');
     color: get-theme('title-text-color');
 }
 
@@ -25,8 +25,8 @@
 .Pen-previewButton {
     @include bidi(((margin-left, $spacing-lg, margin-right, $spacing-lg),));
     @include text-body-sm;
+    @include font-theme-body;
     color: get-theme('link-color');
-    font-family: get-theme('body-font-family');
     font-weight: bold;
 
     &:hover,

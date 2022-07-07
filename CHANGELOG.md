@@ -1,6 +1,7 @@
 # HEAD
 
 ## Features
+* **css:** Use Inter variable font for supporting browsers (#805)
 * **docs:** Migrate Protocol documentation site to Fractal.
 * **node:** Create a Webpack config for compiling docs using Fractal.
 

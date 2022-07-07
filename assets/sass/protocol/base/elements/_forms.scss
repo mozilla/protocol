@@ -92,8 +92,8 @@ fieldset {
 }
 
 legend {
+    @include font-theme-title;
     @include text-body-lg;
-    font-family: get-theme('title-font-family');
     font-weight: bold;
     margin-bottom: $field-v-spacing;
 }

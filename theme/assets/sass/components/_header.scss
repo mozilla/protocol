@@ -8,8 +8,8 @@
 }
 
 .Header-title {
+  @include font-mozilla;
   font-size: 1.6rem;
-  font-family: $font-stack-mozilla;
   font-weight: bold;
   padding-top: 0;
   padding-bottom: 0;

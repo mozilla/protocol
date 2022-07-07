@@ -76,12 +76,12 @@
 a.mzp-c-button {
     @include border-box;
     @include font-size(16px);
+    @include font-theme-button;
     @include transition(background-color 100ms, box-shadow 100ms, color 100ms);
     border-radius: $border-radius-sm;
     border: 2px solid transparent;
     cursor: pointer;
     display: inline-block;
-    font-family: get-theme('button-font-family');
     font-weight: bold;
     line-height: type-scale('body-line-height');
     padding: 6px $spacing-lg;

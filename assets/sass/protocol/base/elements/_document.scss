@@ -11,10 +11,10 @@ html {
 }
 
 body {
+    @include font-theme-body;
     @include text-body-md;
     background: get-theme('background-color');
     color: get-theme('body-text-color');
-    font-family: get-theme('body-font-family');
     line-height: type-scale('body-line-height');
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;

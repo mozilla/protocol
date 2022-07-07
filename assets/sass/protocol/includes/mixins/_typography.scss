@@ -6,17 +6,30 @@
 //* -------------------------------------------------------------------------- */
 // Font families
 @mixin font-base {
-    font-family: $font-stack-base;
+    @include font-family-variable($font-stack-base-variable, $font-stack-base);
 }
 
 @mixin font-mozilla {
-    font-family: $font-stack-mozilla;
+    @include font-family-variable($font-stack-mozilla-variable, $font-stack-mozilla);
 }
 
 @mixin font-firefox {
-    font-family: $font-stack-firefox;
+    @include font-family-variable($font-stack-firefox-variable, $font-stack-firefox);
 }
 
+//* -------------------------------------------------------------------------- */
+// Font theme mixins
+@mixin font-theme-body {
+    @include font-family-variable(get-theme('body-font-family-variable'), get-theme('body-font-family'));
+}
+
+@mixin font-theme-title {
+    @include font-family-variable(get-theme('title-font-family-variable'), get-theme('title-font-family'));
+}
+
+@mixin font-theme-button {
+    @include font-family-variable(get-theme('button-font-family-variable'), get-theme('button-font-family'));
+}
 
 //* -------------------------------------------------------------------------- */
 // A mixin to output font-size in rems with a px fallback for old browsers.

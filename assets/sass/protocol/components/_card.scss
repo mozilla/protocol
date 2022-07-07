@@ -45,7 +45,6 @@
     }
 
     .mzp-c-card-tag {
-        @include font-base;
         @include text-body-sm;
         color: $color-marketing-gray-80;
         font-weight: normal;

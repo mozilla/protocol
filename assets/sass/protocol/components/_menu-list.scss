@@ -9,7 +9,7 @@
 }
 
 .mzp-c-menu-list-title {
-    font-family: get-theme('button-font-family');
+    @include font-theme-button;
     font-size: inherit;
     font-weight: bold;
 }
