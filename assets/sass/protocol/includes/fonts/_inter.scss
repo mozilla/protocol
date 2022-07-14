@@ -7,8 +7,8 @@
     font-display: swap;
     font-family: 'Inter VF';
     font-weight: 300 800;
-    src: url('#{$font-path}/Inter.var.woff2') format('woff2-variations'),
-         url('#{$font-path}/Inter.var.woff22') format('woff2');
+    src: url('#{$font-path}/Inter.var.woff2') format('woff2 supports variations'),
+         url('#{$font-path}/Inter.var.woff2') format('woff2-variations');
 }
 
 @font-face {
