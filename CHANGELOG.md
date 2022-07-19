@@ -6,6 +6,7 @@
 
 ## Bug Fixes
 * **node:** Make sure to build NPM package using production mode.
+* **html:** Added accessible attributes to menu bar (#815).
 
 # 16.0.1
 

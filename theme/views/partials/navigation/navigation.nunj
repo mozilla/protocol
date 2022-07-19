@@ -1,0 +1,27 @@
+{% set isVariantPanelVisible = false %}
+{% if entity and (entity.isComponent or entity.isVariant) %}
+    {% set item = entity.parent if entity.isVariant else entity %}
+    {% if item.variants().filter('isHidden', false).size > 1 and frctl.theme.get('navigation') == 'split' %}
+        {% set isVariantPanelVisible = true %}
+    {% endif %}
+{% endif %}
+
+<nav class="Navigation{% if isVariantPanelVisible %} in-variants-panel{% endif %}" data-behaviour="navigation">
+    <div class="Navigation-panel Navigation-panel--main" data-role="main-panel" id="navigation">
+    {% for navPartial in frctl.theme.get('nav') %}
+        {% include 'partials/navigation/' + navPartial + '.nunj' %}
+    {% endfor %}
+    </div>
+
+    {% if frctl.theme.get('navigation') == 'split' %}
+    <div class="Navigation-panel Navigation-panel--variants{% if isVariantPanelVisible %} is-visible{% endif %}" data-role="variant-panel">
+        <div class="Navigation-backButtonWrapper">
+            <button class="Navigation-backButton" data-role="back" type="button">
+                {% include 'icons/arrow-left.svg' %}
+                {{ frctl.theme.get('labels.navigation.back') }}
+            </button>
+        </div>
+        {% include 'partials/navigation/variants.nunj' %}
+    </div>
+    {% endif %}
+</nav>

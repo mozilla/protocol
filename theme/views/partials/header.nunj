@@ -1,7 +1,7 @@
 <div class="Header">
-  <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+  <button class="Header-button Header-navToggle" data-action="toggle-sidebar" aria-label="Toggle menu" aria-controls="navigation">
       <div class="Header-navToggleIcon Header-navToggleIcon--open">
-          {% include 'icons/close.svg' %}
+          {% include 'icons/close.svg'%}
       </div>
       <div class="Header-navToggleIcon Header-navToggleIcon--closed">
           {% include 'icons/burger.svg' %}
@@ -20,7 +20,7 @@
   {% endif %}
     <li>
       <a href="https://github.com/mozilla/protocol" title="Protocol on Github">
-        <img src="{{ path('/theme/img/github.svg') }}" height="30">
+        <img src="{{ path('/theme/img/github.svg') }}" height="30" alt="">
       </a>
     </li>
   </ul>
