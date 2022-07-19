@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Font families
 @mixin font-base {
     font-family: $font-stack-base;
@@ -16,7 +16,7 @@
     font-family: $font-stack-firefox;
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // A mixin to output font-size in rems with a px fallback for old browsers.
 // Declare sizes in pixels for ease and clarity, the mixin does the math.
 // Requires: remify(), pixify() - defined in includes/functions.scss.
@@ -36,12 +36,12 @@
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Consistent font sizes. Avoid sizing text arbitrarily and use this
 // set of predefined sizes. Sizes adapt at common breakpoints, and
 // there's some redundancy at smaller sizes because we don't want things
 // getting too tiny.
-//
+
 // Example usage:
 //  .title { @include text-title-xl; }
 //  .subtitle { @include text-title-lg; }

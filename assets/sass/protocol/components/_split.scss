@@ -4,7 +4,7 @@
 
 @import '../includes/lib';
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Basic vertical alignment
 
 .mzp-c-split {
@@ -92,7 +92,7 @@
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Mobile only rules
 
 @media all and (max-width: #{$screen-md - 1}) {
@@ -122,7 +122,7 @@
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // side by side layout, float based fall back
 
 @media #{$mq-md} {
@@ -178,7 +178,7 @@
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // side by side layout, grid based
 
 @supports (display:grid) {
@@ -200,7 +200,7 @@
         .mzp-c-split-media {
             .mzp-c-split-container & { // extra specificitly to over-ride the styles that make the float fall-back work
                 float: none;
-                min-width: 0; //because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+                min-width: 0; // because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
                 padding: 0;
                 width: 100%;
             }
@@ -252,7 +252,7 @@
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // constraints on height or width of media
 
 @supports (display:grid) {
@@ -296,7 +296,7 @@
     }
 }
 
-//* --------------------------------------------------------------------------- */
+// * --------------------------------------------------------------------------- */
 // vertical spacing for body or media
 
 @supports (display:grid) {
@@ -413,7 +413,7 @@
     }
 }
 
-//* --------------------------------------------------------------------------- */
+// * --------------------------------------------------------------------------- */
 // vertical and horizontal aligment for body or media
 
 @media #{$mq-md} {

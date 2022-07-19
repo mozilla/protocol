@@ -41,7 +41,7 @@ $label-v-spacing: $spacing-sm;
 $info-v-spacing: $spacing-md;
 $symbol-spacing: calc(1.5em + #{$spacing-sm * 2});
 
-//select
+// select
 $select-bg: linear-gradient(to bottom, $color-white 0%, $color-white 100%); // must keep gradient to avoid bugs
 $select-bg-disabled: linear-gradient(to bottom, $color-marketing-gray-10 0%, $color-marketing-gray-10 100%);
 
@@ -52,7 +52,7 @@ $choice-fill: $color-link;
 $choice-fill-error: $form-red;
 $line-height-shim: 0.15em; // two elements with text appear to have more space between them than two block elements with solid edges, this shim is about equal to the distance between the top of the text and the edge of it's containing block
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // mixins
 // use padding as much as possible, margins don't collapse on form elements
 
