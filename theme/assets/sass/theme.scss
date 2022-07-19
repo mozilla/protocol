@@ -3,11 +3,10 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 $brand-theme: 'mozilla';
-$font-path:  '/protocol/fonts';
+$font-path: '/protocol/fonts';
 
 @import '../../../node_modules/@mozilla-protocol/tokens/dist/index';
 @import '../../../assets/sass/protocol/includes/lib';
-
 @import '../../../assets/sass/protocol/includes/fonts/inter';
 @import '../../../assets/sass/protocol/includes/fonts/metropolis';
 @import '../../../assets/sass/protocol/includes/fonts/zilla-slab';

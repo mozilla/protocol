@@ -5,14 +5,12 @@
 @import '../../includes/lib';
 @import '../../includes/forms/lib';
 
-
 // Basic atoms that make up a form:
 // - form
 //     - form
 //     - form-header
 //     - form-title
 //     - form-footer
-
 
 .mzp-c-form {
     color: $form-text;
@@ -29,7 +27,6 @@
     }
 }
 
-
 // Header
 .mzp-c-form-header {
     margin-bottom: $spacing-lg;
@@ -43,7 +40,6 @@
     }
 }
 
-
 // Footer
 .mzp-c-form-footer {
     padding-top: $spacing-xl - $field-v-spacing;
@@ -56,7 +52,6 @@
         }
     }
 }
-
 
 // Title
 .mzp-c-form-title,
@@ -76,7 +71,6 @@ legend.mzp-c-form-title {
     }
 }
 
-
 // Subtitle
 .mzp-c-form-subtitle,
 legend.mzp-c-form-subtitle {
@@ -90,7 +84,6 @@ legend.mzp-c-form-subtitle {
     float: left;
     width: 100%;
 }
-
 
 // Info
 .mzp-c-form-info {

@@ -2,35 +2,37 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-
 //* -------------------------------------------------------------------------- */
 //  Function to create an optimized svg url
 //  Version: 1.0.6
 // https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
 // https://codepen.io/jakob-e/pen/doMoML?editors=0100
-@use "sass:math";
+@use 'sass:math';
 
-@function svg-url($svg){
+@function svg-url($svg) {
     //
     //  Add missing namespace
     //
     @if not str-index($svg,xmlns) {
-        $svg: str-replace($svg, '<svg','<svg xmlns="http://www.w3.org/2000/svg"');
+        $svg: str-replace($svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
     }
+
     //
     //  Chunk up string in order to avoid
     //  "stack level too deep" error
     //
-    $encoded:'';
+    $encoded: '';
     $slice: 2000;
     $index: 0;
     $loops: ceil(math.div(str-length($svg), $slice));
+
     @for $i from 1 through $loops {
         $chunk: str-slice($svg, $index, $index + $slice - 1);
+
         //
         //   Encode
         //
-        $chunk: str-replace($chunk, '"', '\'');
+        $chunk: str-replace($chunk, '"', "\'");
         $chunk: str-replace($chunk, '%', '%25');
         $chunk: str-replace($chunk, '#', '%23');
         $chunk: str-replace($chunk, '{', '%7B');
@@ -59,17 +61,19 @@
         $encoded: #{$encoded}#{$chunk};
         $index: $index + $slice;
     }
-    @return url("data:image/svg+xml,#{$encoded}");
+
+    @return url('data:image/svg+xml,#{$encoded}');
 }
 
 //  Helper function to replace characters in a string
 @function str-replace($string, $search, $replace: '') {
     $index: str-index($string, $search);
+
     @return if($index,
-        str-slice($string, 1, $index - 1) + $replace +
-        str-replace(str-slice($string, $index +
-        str-length($search)), $search, $replace),
-        $string);
+    str-slice($string, 1, $index - 1) + $replace +
+    str-replace(str-slice($string, $index +
+    str-length($search)), $search, $replace),
+    $string);
 }
 
 //* -------------------------------------------------------------------------- */
@@ -78,14 +82,18 @@
 // SVGs - xmlns attribute must be first
 // https://github.com/mozilla/protocol-assets/blob/master/icons/expand-white.svg
 $svg-expand-white: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M12 3.515v16.97M3.515 12h16.97"/></g></svg>';
+
 // https://github.com/mozilla/protocol-assets/blob/master/icons/expand.svg
 $svg-expand-black: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M12 3.515v16.97M3.515 12h16.97"/></g></svg>';
+
 // https://github.com/mozilla/protocol-assets/blob/master/icons/arrow-down.svg
 $svg-arrow-down-form: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><polyline stroke="#9595a3" stroke-width="2" points="5 9 12 16 19 9"></polyline></g></svg>';
 $svg-arrow-down-link: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><polyline stroke="#0060df" stroke-width="2" points="5 9 12 16 19 9"></polyline></g></svg>';
 $svg-arrow-down-link-hover: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><polyline stroke="#0250bb" stroke-width="2" points="5 9 12 16 19 9"></polyline></g></svg>';
+
 // https://github.com/mozilla/protocol-assets/blob/master/icons/download.svg
 $svg-download-link-hover: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"><g transform="translate(6.000000, 3.000000)" stroke="#0250bb" stroke-width="2"><path d="M0,18 L12,18"></path><polyline stroke-linejoin="round" points="0 8 6 14 12 8"></polyline><path d="M6,0 L6,14"></path></g></g></svg>';
+
 // https://github.com/mozilla/protocol-assets/blob/master/icons/search.svg
 $svg-search-form: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(3.000000, 3.000000)" stroke="#9595a3" stroke-width="2"><circle cx="7" cy="7" r="7"></circle><path d="M12,12 L18,18" stroke-linecap="round"></path></g></g></svg>';
 $svg-search-link: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(3.000000, 3.000000)" stroke="#0060df" stroke-width="2"><circle cx="7" cy="7" r="7"></circle><path d="M12,12 L18,18" stroke-linecap="round"></path></g></g></svg>';

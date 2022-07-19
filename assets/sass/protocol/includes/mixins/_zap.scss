@@ -8,7 +8,7 @@
 @mixin zap($img) {
     position: relative;
 
-    &:after {
+    &::after {
         background-image: url('#{$img}');
         background-repeat: no-repeat;
         background-size: 100% 100%;

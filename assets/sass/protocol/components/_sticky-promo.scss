@@ -2,16 +2,16 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import "../includes/lib";
+@import '../includes/lib';
 
 // Product logos
 $logo-word: 'logo-word-hor';
 $logos: (
-    "firefox": '#{$image-path}/logos/firefox/browser/#{$logo-word}',
-    "beta": '#{$image-path}/logos/firefox/browser/beta/#{$logo-word}',
-    "developer": '#{$image-path}/logos/firefox/browser/developer/#{$logo-word}',
-    "nightly": '#{$image-path}/logos/firefox/browser/nightly/#{$logo-word}'
-         );
+    'firefox': '#{$image-path}/logos/firefox/browser/#{$logo-word}',
+    'beta': '#{$image-path}/logos/firefox/browser/beta/#{$logo-word}',
+    'developer': '#{$image-path}/logos/firefox/browser/developer/#{$logo-word}',
+    'nightly': '#{$image-path}/logos/firefox/browser/nightly/#{$logo-word}'
+);
 
 @each $name, $value in $logos {
     .mzp-c-sticky-promo-title {
@@ -97,7 +97,7 @@ $logos: (
         (left, auto, 0),
     ));
     @include image-replaced;
-    background: transparent url("#{$image-path}/icons/close.svg") center center no-repeat;
+    background: transparent url('#{$image-path}/icons/close.svg') center center no-repeat;
     background-size: 20px 20px;
     border: none;
     height: 20px;
@@ -113,6 +113,6 @@ $logos: (
     }
 
     .mzp-t-dark & {
-        background: transparent url("#{$image-path}/icons/close-white.svg") center center no-repeat;
+        background: transparent url('#{$image-path}/icons/close-white.svg') center center no-repeat;
     }
 }

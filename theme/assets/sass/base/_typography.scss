@@ -1,8 +1,8 @@
 body {
-  @include font-base;
-  color: get-theme('body-text-color');
+    @include font-base;
+    color: get-theme('body-text-color');
 }
 
 mark {
-  background-color: #ffe77e;
+    background-color: #ffe77e;
 }

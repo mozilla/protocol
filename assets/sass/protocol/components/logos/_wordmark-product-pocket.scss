@@ -10,4 +10,3 @@ $dir: 'pocket';
 @each $layout-size, $logo-size in $logo-sizes {
     @include wordmark($class, $dir, $layout-size, $logo-size);
 }
-

@@ -12,7 +12,7 @@
 // variables
 
 // colors
-$form-red: #D70022;
+$form-red: #d70022;
 $form-text: get-theme('body-text-color-secondary');
 
 // fields
@@ -27,9 +27,9 @@ $field-border-radius: $border-radius-sm;
 $field-padding: $spacing-sm;
 $field-h-spacing: $spacing-md;
 $field-v-spacing: $spacing-lg;
-$field-focus-ring: 0 0 0 2px rgba($color-blue-40, .5);
+$field-focus-ring: 0 0 0 2px rgba($color-blue-40, 0.5);
 $field-focus-ring-dark: 0 0 0 2px mix($color-blue-40, $color-white);
-$field-focus-ring-error: 0 0 0 2px rgba($color-red-50, .5);
+$field-focus-ring-error: 0 0 0 2px rgba($color-red-50, 0.5);
 
 // buttons
 $button-border-color-focus: #008aea;
@@ -51,7 +51,6 @@ $choice-spacing: remify(22px + $spacing-sm);
 $choice-fill: $color-link;
 $choice-fill-error: $form-red;
 $line-height-shim: 0.15em; // two elements with text appear to have more space between them than two block elements with solid edges, this shim is about equal to the distance between the top of the text and the edge of it's containing block
-
 
 //* -------------------------------------------------------------------------- */
 // mixins

@@ -18,7 +18,6 @@ input[type='time'],
 input[type='url'],
 select,
 textarea {
-
     .mzp-is-error & {
         border-color: $field-border-color-error;
         box-shadow: none;

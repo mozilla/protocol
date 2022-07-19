@@ -9,6 +9,7 @@
 .mzp-c-field-set-msg,
 .mzp-c-choice-msg {
     @include form-msg;
+
     /* for now these only come in red but they could be updated to have other colours */
 }
 
@@ -25,8 +26,8 @@
     }
 }
 
-.mzp-c-field-control + .mzp-c-field-msg:after,
-.mzp-c-choice-label + .mzp-c-choice-msg:after {
+.mzp-c-field-control + .mzp-c-field-msg::after,
+.mzp-c-choice-label + .mzp-c-choice-msg::after {
     @include form-msg-pointer;
     margin-top: $field-v-spacing * -1 + $label-v-spacing;
 }

@@ -21,7 +21,6 @@
     margin-bottom: $layout-xs;
 }
 
-
 // Center aligned
 .mzp-t-picto-center {
     .mzp-c-picto {
@@ -32,7 +31,6 @@
         margin: 0 auto $layout-xs;
     }
 }
-
 
 // Image on the side
 @media #{$mq-sm} {
@@ -59,7 +57,6 @@
     }
 }
 
-
 // No bottom margins and full width in a multi-column layout
 @media #{$mq-md} {
     .mzp-l-columns .mzp-c-picto {
@@ -67,7 +64,6 @@
         width: 100%;
     }
 }
-
 
 // Change side picto to top when in four columns and a narrow container
 .mzp-t-content-lg .mzp-l-columns.mzp-t-columns-four.mzp-t-picto-side,
@@ -85,7 +81,6 @@
         width: auto;
     }
 }
-
 
 // Change side picto to top when in four columns and a narrow viewport
 @media #{$mq-lg} {

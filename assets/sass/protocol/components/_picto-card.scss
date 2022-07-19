@@ -3,8 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @import '../includes/lib';
-
-@warn "Picto Card component is now deprecated. Please migrate to use Picto: https://protocol.mozilla.org/patterns/molecules/picto.html";
+@warn 'Picto Card component is now deprecated. Please migrate to use Picto: https://protocol.mozilla.org/patterns/molecules/picto.html';
 
 //* -------------------------------------------------------------------------- */
 // A small card with an icon and no link.
@@ -18,7 +17,7 @@
         padding-top: 56px + $spacing-lg;
         position: relative;
 
-        &:before {
+        &::before {
             background: $color-marketing-gray-20;
             content: '';
             height: 56px;
@@ -75,7 +74,7 @@
         padding-top: 0;
         position: relative;
 
-        &:before {
+        &::before {
             @include bidi((
                 (left, 0, auto),
                 (right, auto, 0),

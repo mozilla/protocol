@@ -2,8 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@use "sass:math";
-
+@use 'sass:math';
 @import '../includes/lib';
 
 //* -------------------------------------------------------------------------- */
@@ -32,7 +31,6 @@
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Footer primary section, contains logo and sections with links
 
@@ -55,6 +53,7 @@
 
     a {
         background: url('#{$image-path}/logos/mozilla/logo-word-hor-white.svg') no-repeat;
+
         @include background-size(100px, 32px);
         @include image-replaced;
         display: inline-block;
@@ -62,7 +61,6 @@
         width: 100px;
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Footer section containing list and heading
@@ -159,8 +157,9 @@
             outline: 1px dotted #fff;
         }
 
-        button:before {
+        button::before {
             background: $url-image-expand-white top left no-repeat;
+
             @include background-size(24px, 24px);
             @include bidi(((right, 8px, left, auto),));
             @include transition(transform 100ms ease-in-out);
@@ -172,7 +171,7 @@
             width: 24px;
         }
 
-        button[aria-expanded=true]:before {
+        button[aria-expanded='true']::before {
             @include transform(rotate(45deg));
         }
     }
@@ -204,15 +203,13 @@
         }
     }
 
-    &.is-closed[aria-hidden="true"] {
+    &.is-closed[aria-hidden='true'] {
         display: none;
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Footer secondary contains langauge selector, social icons, legal, and lisence
-
 
 .mzp-c-footer-secondary {
     @include text-body-xs;
@@ -286,8 +283,6 @@
     }
 }
 
-
-
 //* -------------------------------------------------------------------------- */
 // Footer license and terms
 
@@ -302,7 +297,6 @@
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Footer license
 
@@ -314,12 +308,10 @@
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Footer license
 
 .mzp-c-footer-terms {
-
     @media #{$mq-md} {
         max-width: 66%; // don't over lap with social links
     }

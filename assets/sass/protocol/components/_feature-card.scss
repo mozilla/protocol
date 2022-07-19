@@ -145,7 +145,7 @@
         }
     }
 
-    @supports(display: grid) {
+    @supports (display: grid) {
         @media #{$mq-md} {
             &.mzp-l-card-feature-left-half,
             &.mzp-l-card-feature-right-half,

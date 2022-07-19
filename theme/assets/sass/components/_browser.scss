@@ -1,31 +1,31 @@
 .Browser-tabs {
-  background-color: white;
-  border-bottom: 1px solid rgba(70,81,94,0.25);
+    background-color: white;
+    border-bottom: 1px solid rgb(70 81 94 / 0.25);
 }
 
 .Browser-tab {
-  a:hover {
-    background: #f1f1f1;
-    border-bottom: 2px solid rgba(70,81,94,0.25);
-  }
+    a:hover {
+        background: #f1f1f1;
+        border-bottom: 2px solid rgb(70 81 94 / 0.25);
+    }
 
-  a:focus {
-    outline: none;
-    background: #f1f1f1;
-    border-bottom: 2px solid #738497;
-  }
+    a:focus {
+        outline: none;
+        background: #f1f1f1;
+        border-bottom: 2px solid #738497;
+    }
 }
 
 .Browser-tab.is-active a {
-  border-bottom-color: #738497;
+    border-bottom-color: #738497;
 }
 
 .Browser-panel .Prose {
-  code:not([class*="hljs"]) {
-    background-color: #f8f8f8;
-    border-radius: $border-radius-xs;
-    color: #000080;
-    outline: 1px solid rgba(0, 0, 0, .05);
-    padding: 0 .5ch;
-  }
+    code:not([class*='hljs']) {
+        background-color: #f8f8f8;
+        border-radius: $border-radius-xs;
+        color: #000080;
+        outline: 1px solid rgb(0 0 0 / 0.05);
+        padding: 0 0.5ch;
+    }
 }

@@ -4,7 +4,6 @@
 
 @import '../../includes/lib';
 
-
 $logo-sizes: (
     xs: 'xs',
     sm: 'xs',
@@ -54,8 +53,8 @@ $logo-sizes: (
 }
 
 @mixin wordmark($product, $dir, $layout-size, $logo-size) {
-    $path : '#{$image-path}/logos/#{$dir}/logo-word-hor.svg';
-    $path_white : '#{$image-path}/logos/#{$dir}/logo-word-hor-white.svg';
+    $path: '#{$image-path}/logos/#{$dir}/logo-word-hor.svg';
+    $path_white: '#{$image-path}/logos/#{$dir}/logo-word-hor-white.svg';
 
     .mzp-c-wordmark.mzp-t-product-#{$product}.mzp-t-wordmark-#{$layout-size} {
         background-image: url('#{$path}');

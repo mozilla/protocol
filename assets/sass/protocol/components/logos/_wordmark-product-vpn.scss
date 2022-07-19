@@ -4,11 +4,10 @@
 
 @import 'logo';
 
-
 // can't re-use wordmark mixin because VPN uses the "stack" version by default
 @each $layout-size, $logo-size in $logo-sizes {
-    $path : '#{$image-path}/logos/mozilla/vpn/logo-word-hor-stack.svg';
-    $path_white : '#{$image-path}/logos/mozilla/vpn/logo-word-hor-stack-white.svg';
+    $path: '#{$image-path}/logos/mozilla/vpn/logo-word-hor-stack.svg';
+    $path_white: '#{$image-path}/logos/mozilla/vpn/logo-word-hor-stack-white.svg';
 
     .mzp-c-wordmark.mzp-t-product-vpn.mzp-t-wordmark-#{$layout-size} {
         background-image: url('#{$path}');
@@ -17,5 +16,4 @@
             background-image: url('#{$path_white}');
         }
     }
-
 }

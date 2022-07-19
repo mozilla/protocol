@@ -5,14 +5,12 @@
 @import '../../includes/lib';
 @import '../../includes/forms/lib';
 
-
 // a form field component has a label and a control
 // it may also optionally have:
 // - field
 // - field-label
 // - field-control
 // - field-info
-
 
 // field
 .mzp-c-field {
@@ -42,7 +40,6 @@
     }
 }
 
-
 // labels
 .mzp-c-field-label {
     @include field-label;
@@ -53,16 +50,13 @@ legend.mzp-c-field-label {
     width: 100%;
 }
 
-
 // control
 .mzp-c-field-control {
-
     .mzp-l-stretch & {
         width: 100%;
         max-width: 100%;
     }
 }
-
 
 // info
 .mzp-c-field-info {

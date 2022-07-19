@@ -4,7 +4,6 @@
 
 @import '../includes/lib';
 
-
 //* -------------------------------------------------------------------------- */
 // Basic vertical alignment
 
@@ -30,7 +29,7 @@
 }
 
 .mzp-c-split-container {
-    @include clearfix();
+    @include clearfix;
     margin: 0 auto;
     max-width: $content-max;
     min-width: $content-xs;
@@ -59,11 +58,10 @@
     }
 }
 
-
 .mzp-c-split-body {
     position: relative;
 
-     > :last-child {
+    > :last-child {
         margin-bottom: 0;
 
         > :last-child {
@@ -94,12 +92,10 @@
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // Mobile only rules
 
-@media all and (max-width:#{$screen-md - 1}) {
-
+@media all and (max-width: #{$screen-md - 1}) {
     .mzp-c-split-body + .mzp-c-split-media,
     .mzp-c-split-media + .mzp-c-split-body {
         margin-top: get-theme('v-grid-xs');
@@ -125,7 +121,6 @@
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // side by side layout, float based fall back
@@ -183,22 +178,21 @@
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // side by side layout, grid based
 
-@supports(display:grid) {
+@supports (display:grid) {
     @media #{$mq-md} {
         .mzp-c-split-container {
             // grid is all start/end based we don't need bidi declarations for RTL support \o/
             align-items: center;
             display: grid;
             grid-column-gap: get-theme('h-grid-lg');
-            grid-template-areas: "body media";
+            grid-template-areas: 'body media';
             grid-template-columns: 1fr 1fr;
 
             .mzp-l-split-reversed & {
-                grid-template-areas: "media body";
+                grid-template-areas: 'media body';
             }
         }
 
@@ -261,11 +255,10 @@
 //* -------------------------------------------------------------------------- */
 // constraints on height or width of media
 
-@supports(display:grid) {
+@supports (display:grid) {
     @media #{$mq-md} {
         .mzp-c-split-media {
             &.mzp-l-split-media-overflow {
-
                 .mzp-c-split-media-asset {
                     max-width: none;
 
@@ -306,12 +299,10 @@
 //* --------------------------------------------------------------------------- */
 // vertical spacing for body or media
 
-
-@supports(display:grid) {
+@supports (display:grid) {
     @media #{$mq-md} {
         .mzp-l-split-pop-top,
         .mzp-l-split-pop {
-
             &.mzp-c-split {
                 padding-top: get-theme('v-grid-lg') * 2;
             }
@@ -329,7 +320,6 @@
 
         .mzp-l-split-pop-bottom,
         .mzp-l-split-pop {
-
             &.mzp-c-split {
                 padding-bottom: get-theme('v-grid-lg') * 2;
             }
@@ -350,9 +340,9 @@
             .mzp-l-split-pop-bottom & {
                 height: calc(100% + #{get-theme('v-grid-lg')});
             }
+
             .mzp-l-split-pop & {
                 height: calc(100% + #{get-theme('v-grid-lg') * 2});
-
             }
 
             .mzp-l-split-pop-top .mzp-c-split-bg &,
@@ -360,9 +350,8 @@
                 height: calc(100% + #{get-theme('v-grid-lg') * 2});
             }
 
-            .mzp-l-split-pop .mzp-c-split-bg  & {
+            .mzp-l-split-pop .mzp-c-split-bg & {
                 height: calc(100% + #{get-theme('v-grid-lg') * 4});
-
             }
         }
     }
@@ -370,7 +359,6 @@
     @media #{$mq-xl} {
         .mzp-l-split-pop-top,
         .mzp-l-split-pop {
-
             &.mzp-c-split {
                 padding-top: get-theme('v-grid-xl') * 2;
             }
@@ -388,7 +376,6 @@
 
         .mzp-l-split-pop-bottom,
         .mzp-l-split-pop {
-
             &.mzp-c-split {
                 padding-bottom: get-theme('v-grid-xl') * 2;
             }
@@ -409,9 +396,9 @@
             .mzp-l-split-pop-bottom & {
                 height: calc(100% + #{get-theme('v-grid-xl')});
             }
+
             .mzp-l-split-pop & {
                 height: calc(100% + #{get-theme('v-grid-xl') * 2});
-
             }
 
             .mzp-l-split-pop-top .mzp-c-split-bg &,
@@ -421,7 +408,6 @@
 
             .mzp-l-split-pop .mzp-c-split-bg & {
                 height: calc(100% + #{get-theme('v-grid-xl') * 4});
-
             }
         }
     }
@@ -432,7 +418,6 @@
 
 @media #{$mq-md} {
     .mzp-c-split {
-
         // horizontal alignment works with float fallbacks.
         // horizontal alignment does not apply to constrain-height or overflow because it could expand and obscure the text
         // there's an !important in the contrain-height definitions to enforce this
@@ -461,7 +446,6 @@
                 ));
             }
         }
-
 
         // vertical alignment relies on grid so don't work for float fallbacks
         .mzp-l-split-v-start {

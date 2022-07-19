@@ -1,100 +1,100 @@
 .Tree {
-  white-space: normal;
+    white-space: normal;
 }
 
 .Tree-header {
-  padding-left: 1.25rem;
+    padding-left: 1.25rem;
 }
 
 .Tree-title {
-  @include text-body-md;
-  color: $color-white;
-  letter-spacing: normal;
+    @include text-body-md;
+    color: $color-white;
+    letter-spacing: normal;
 }
 
 .Tree-collectionLabel {
-  color: $color-white;
-  padding-top: .15em;
-  padding-bottom: .15em;
-
-  span::before {
-    width: 0.5rem;
-    top: 0.4rem;
-  }
-
-  &:hover {
     color: $color-white;
-    background-color: $color-dark-gray-50;
-  }
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
 
-  &::before {
-    background-image: url('../img/icon-navigation-opened.svg');
-    opacity: .9;
-    top: .6em;
-  }
-}
+    span::before {
+        width: 0.5rem;
+        top: 0.4rem;
+    }
 
-[dir="ltr"] {
-  .Tree-depth-1 .Tree-entityLink,
-  .Tree-depth-2 .Tree-collectionLabel {
-    padding-left: 1.25rem;
-  }
-
-  .Tree-depth-2 .Tree-entityLink {
-    padding-left: 1.75rem;
-  }
-
-  .Tree-depth-3 .Tree-collectionLabel {
-    padding-left: 1.75rem;
+    &:hover {
+        color: $color-white;
+        background-color: $color-dark-gray-50;
+    }
 
     &::before {
-      left: .75rem;
+        background-image: url('../img/icon-navigation-opened.svg');
+        opacity: 0.9;
+        top: 0.6em;
     }
-  }
-
-  .Tree-depth-3 .Tree-entityLink {
-    padding-left: 2.5rem;
-  }
-
-  .Tree-collection.is-closed .Tree-collectionLabel::before {
-    background-image: url('../img/icon-navigation-closed-ltr.svg');
-  }
 }
 
-[dir="rtl"] .Tree-collection.is-closed .Tree-collectionLabel::before {
-  background-image: url('../img/icon-navigation-closed-rtl.svg');
+[dir='ltr'] {
+    .Tree-depth-1 .Tree-entityLink,
+    .Tree-depth-2 .Tree-collectionLabel {
+        padding-left: 1.25rem;
+    }
+
+    .Tree-depth-2 .Tree-entityLink {
+        padding-left: 1.75rem;
+    }
+
+    .Tree-depth-3 .Tree-collectionLabel {
+        padding-left: 1.75rem;
+
+        &::before {
+            left: 0.75rem;
+        }
+    }
+
+    .Tree-depth-3 .Tree-entityLink {
+        padding-left: 2.5rem;
+    }
+
+    .Tree-collection.is-closed .Tree-collectionLabel::before {
+        background-image: url('../img/icon-navigation-closed-ltr.svg');
+    }
+}
+
+[dir='rtl'] .Tree-collection.is-closed .Tree-collectionLabel::before {
+    background-image: url('../img/icon-navigation-closed-rtl.svg');
 }
 
 .Tree-depth-2,
 .Tree-depth-3 {
-  > h4 {
-    font-weight: bold;
-  }
+    > h4 {
+        font-weight: bold;
+    }
 }
 
 .Tree-item {
-  @include text-body-sm;
+    @include text-body-sm;
 
-  .Tree-entityLink {
-    color: $color-white;
-    padding-top: .25em;
-    padding-bottom: .25em;
+    .Tree-entityLink {
+        color: $color-white;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
 
-    &:hover {
-      color: $color-white;
-      background-color: $color-dark-gray-50;
+        &:hover {
+            color: $color-white;
+            background-color: $color-dark-gray-50;
+        }
     }
-  }
 
-  &.is-current {
-    background-color: $color-dark-gray-60;
-  }
+    &.is-current {
+        background-color: $color-dark-gray-60;
+    }
 }
 
 .Tree-aside {
-  color: $color-white;
+    color: $color-white;
 }
 
 .Tree-collapse {
-  color: $color-white;
+    color: $color-white;
 }

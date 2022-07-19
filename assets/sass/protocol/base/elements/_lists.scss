@@ -4,7 +4,6 @@
 
 @import '../../includes/lib';
 
-
 // We most frequently use lists for semantic structure and don't actually
 // want to display them as lists. It's simpler to reset lists globally
 // and only display them as lists in text when needed with the .mzp-u-list-styled class.
@@ -18,7 +17,7 @@ ul.mzp-u-list-styled {
     list-style: disc;
 
     li {
-        margin-bottom: .25em;
+        margin-bottom: 0.25em;
     }
 
     ul {
@@ -39,7 +38,7 @@ ol.mzp-u-list-styled {
     list-style: decimal;
 
     li {
-        margin-bottom: .25em;
+        margin-bottom: 0.25em;
     }
 
     ol {
@@ -63,18 +62,19 @@ dl.mzp-u-list-styled {
 
     dd {
         @include bidi(((margin-left, $layout-xs, margin-right, 0),));
-        margin-bottom: .25em;
+        margin-bottom: 0.25em;
     }
 
-    ul, ol {
+    ul,
+    ol {
         @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         margin-bottom: 0;
     }
+
     ul {
         list-style: circle;
     }
 }
-
 
 /* !important required to trump specificity and print stylesheet overrides */
 .mzp-u-list-unstyled {

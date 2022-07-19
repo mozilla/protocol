@@ -2,14 +2,12 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-
 // Bidi / l10n
 // - The bidi mixins are used to declare both the LTR and RTL values for
 //   a property together and output appropriate declarations
 // - This makes it easier to maintain the RTL version since you only have
 //   to update values in one place.
 // ======================================================================
-
 
 //     @mixin bidi
 //     accepts: a list of lists - each list must have 3 or 4 values
@@ -41,7 +39,6 @@
 //         margin-left: 10px;
 //     }
 
-
 @mixin bidi($list) {
     & {
         @each $property, $ltr-value, $inverse-val-or-prop, $inverse-value in $list {
@@ -53,7 +50,6 @@
                 // - Check that you have the right number of nested (((parentheses)))
                 // - Check that there is a trailing comma:
                 //   @include bidi(((float, left, right),));
-
             }
             #{$property}: $ltr-value;
         }
@@ -64,8 +60,7 @@
             @if $inverse-value {
                 #{$property}: $inverse-value;
                 #{$inverse-val-or-prop}: $ltr-value;
-            }
-            @else {
+            } @else {
                 #{$property}: $inverse-val-or-prop;
             }
         }

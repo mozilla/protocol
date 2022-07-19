@@ -1,14 +1,12 @@
 .grid-list {
-  display: grid;
-  grid-template-columns: repeat(5, 20%);
-  grid-gap: 2px;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-gap: 2px;
 }
 
 .grid-list__item {
-  display: flex;
-  flex-direction: column;
-
-  text-align: center;
-
-  background-color: #F7F7F5;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f7f7f5;
 }

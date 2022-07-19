@@ -2,7 +2,6 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-
 //* -------------------------------------------------------------------------- */
 // Font families
 @mixin font-base {
@@ -17,7 +16,6 @@
     font-family: $font-stack-firefox;
 }
 
-
 //* -------------------------------------------------------------------------- */
 // A mixin to output font-size in rems with a px fallback for old browsers.
 // Declare sizes in pixels for ease and clarity, the mixin does the math.
@@ -27,7 +25,7 @@
 
 @mixin font-size($size) {
     // When unit is pixels, pass it through and convert to rem
-    @if (unit($size) == 'px') {
+    @if unit($size) == 'px' {
         font-size: $size;
         font-size: remify($size);
     }
@@ -37,7 +35,6 @@
         @error 'This mixin only accepts sizes in pixels. You declared `font-size(#{$size})`.';
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // Consistent font sizes. Avoid sizing text arbitrarily and use this
@@ -125,7 +122,6 @@
     line-height: type-scale('title-3xs-line-height');
 }
 
-
 // body copy
 @mixin text-body-xl {
     @include font-size(type-scale('body-xl-size'));
@@ -152,18 +148,23 @@
     line-height: type-scale('body-line-height');
 }
 
-
 // Aliases for backwards compatibility
 $text-body-line-height: type-scale('body-line-height');
 $text-title-line-height: type-scale('title-md-line-height');
 $text-display-line-height: $text-title-line-height;
+
 @mixin text-display-xxl { @include text-title-2xl; }
+
 @mixin text-display-xl { @include text-title-xl; }
+
 @mixin text-display-lg { @include text-title-lg; }
+
 @mixin text-display-md { @include text-title-md; }
+
 @mixin text-display-sm { @include text-title-sm; }
+
 @mixin text-display-xs { @include text-title-xs; }
+
 @mixin text-display-xxs { @include text-title-2xs; }
+
 @mixin text-body-cta { @include text-body-md; }
-
-

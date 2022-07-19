@@ -2,7 +2,6 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-
 // A helper mixin for applying high-resolution background images (based on http://www.retinajs.com)
 // File-names should follow:
 //  example.png
@@ -29,17 +28,18 @@
     // is always lower than the start point s the loop always
     // increments (10 is an arbitrary number).
     @for $i from $length through $length - 10 {
-      @if $position == -1 {
-          $char : str-slice($strpath, $i, $i);
+        @if $position == -1 {
+            $char: str-slice($strpath, $i, $i);
+
             @if str-index($char, '.') == 1 {
                 $position: $i;
             }
         }
     }
 
-   // If we were able to figure out where the extension is,
-   // slice the path into a base and an extension. Use that to
-   // produce urls for different density environments.
+    // If we were able to figure out where the extension is,
+    // slice the path into a base and an extension. Use that to
+    // produce urls for different density environments.
     @if $position != -1 {
         $base: str-slice($strpath, 1, $position - 1);
         $ext: str-slice($strpath, $position + 1, $length);

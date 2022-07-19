@@ -82,7 +82,6 @@
         background-image: url('#{$image-path}/logos/pocket/logo.svg');
     }
 
-
     @media #{$mq-md} {
         .mzp-l-content {
             margin: 0 auto;
@@ -222,9 +221,8 @@
         }
     }
 
-    @supports(display: grid) {
+    @supports (display: grid) {
         @media #{$mq-md} {
-
             .mzp-l-content {
                 @include grid-column-gap($spacing-xl);
                 display: grid;

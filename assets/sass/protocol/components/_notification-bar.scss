@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import "../includes/lib";
+@import '../includes/lib';
 
 .mzp-c-notification-bar {
     @include border-box;
@@ -63,7 +63,7 @@
             (left, auto, 0),
         ));
         @include image-replaced;
-        background: url("#{$image-path}/icons/close.svg") center center/20px 20px no-repeat;
+        background: url('#{$image-path}/icons/close.svg') center center/20px 20px no-repeat;
         border: 0;
         height: 20px;
         margin: $spacing-sm;
@@ -151,7 +151,7 @@
         font-weight: 600;
 
         .mzp-c-notification-bar-button {
-            background-image: url("#{$image-path}/icons/close-white.svg");
+            background-image: url('#{$image-path}/icons/close-white.svg');
 
             @media #{$mq-sm} {
                 background-color: $color-blue-70;

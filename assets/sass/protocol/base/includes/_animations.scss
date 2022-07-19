@@ -2,12 +2,12 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-
-@-webkit-keyframes mzp-a-fade-in {
+@keyframes mzp-a-fade-in {
     0% {
         visibility: hidden;
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         visibility: visible;
@@ -19,17 +19,19 @@
         visibility: hidden;
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         visibility: visible;
     }
 }
 
-@-webkit-keyframes mzp-a-fade-out {
+@keyframes mzp-a-fade-out {
     0% {
         opacity: 1;
         visibility: visible;
     }
+
     100% {
         opacity: 0;
         visibility: hidden;
@@ -41,17 +43,19 @@
         opacity: 1;
         visibility: visible;
     }
+
     100% {
         opacity: 0;
         visibility: hidden;
     }
 }
 
-@-webkit-keyframes mzp-a-slide-in-right {
+@keyframes mzp-a-slide-in-right {
     0% {
         opacity: 0;
         transform: translateX(60px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -63,17 +67,7 @@
         opacity: 0;
         transform: translateX(60px);
     }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
-@-webkit-keyframes mzp-a-slide-in-left {
-    0% {
-        opacity: 0;
-        transform: translateX(-60px);
-    }
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -85,9 +79,21 @@
         opacity: 0;
         transform: translateX(-60px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
+@keyframes mzp-a-slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

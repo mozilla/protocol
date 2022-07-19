@@ -7,7 +7,6 @@
 //* -------------------------------------------------------------------------- */
 // Card grid layout classes.
 
-
 //* -------------------------------------------------------------------------- */
 // 5 card hero
 // On small screens cards stack vertically and span full container width.
@@ -70,7 +69,6 @@
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // 4 card layout
 // On small screens cards stack vertically and span full container width.
@@ -128,7 +126,6 @@
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // 3 card layout
 // On small screens cards stack vertically and span full container width.
@@ -140,6 +137,7 @@
 
         .mzp-c-card {
             width: calc(50% - (#{$spacing-xl} * 0.5));
+
             @include bidi((
                 (float, left, right),
                 (margin-left, 0, $spacing-xl),
@@ -182,7 +180,6 @@
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // 3 picto card layout
 // On small screens cards stack vertically and span full container width.
@@ -193,13 +190,13 @@
 
         .mzp-c-card-picto {
             width: 33.3%;
+
             @include bidi((
                 (float, left, right),
             ));
         }
     }
 }
-
 
 //* -------------------------------------------------------------------------- */
 // 2 card layout
@@ -239,7 +236,6 @@
     }
 }
 
-
 //* -------------------------------------------------------------------------- */
 // 2 picto card layout
 // On small screens cards stack vertically and span full container width.
@@ -250,11 +246,10 @@
 
         .mzp-c-card-picto {
             width: 50%;
+
             @include bidi((
                 (float, left, right),
             ));
         }
     }
 }
-
-

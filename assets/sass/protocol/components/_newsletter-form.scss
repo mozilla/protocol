@@ -28,7 +28,7 @@
 
 .mzp-c-newsletter-title {
     @include text-title-md;
-    margin-bottom: .25em;
+    margin-bottom: 0.25em;
 }
 
 .mzp-c-newsletter-image {
@@ -36,19 +36,16 @@
     text-align: center;
 }
 
-
 // Hide thank you message
 .mzp-c-newsletter-thanks {
     @include hidden;
 }
-
 
 // hide details for JS users
 // (displayed when email field is focused)
 .js .mzp-c-newsletter-details {
     @include hidden;
 }
-
 
 // Form wrapper with image
 .mzp-c-newsletter {
@@ -87,7 +84,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
 
-            &:after { // Remove the clearfix
+            &::after { // Remove the clearfix
                 display: none;
             }
 

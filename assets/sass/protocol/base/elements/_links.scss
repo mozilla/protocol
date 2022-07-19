@@ -4,7 +4,6 @@
 
 @import '../../includes/lib';
 
-
 :link {
     color: get-theme('link-color');
     text-decoration: underline;
@@ -17,7 +16,7 @@
     }
 
     &:active {
-        background-color: rgba(0, 0, 0, .05);
+        background-color: rgb(0 0 0 / 0.05);
     }
 }
 

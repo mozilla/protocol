@@ -1,29 +1,21 @@
 $font-family-monospace: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace !default;
 $font-family-sans-serif: $font-stack-base !default;
-
 $color-link: #66f;
 $color-text: #000;
 $color-heading: #000;
-
 $color-background: #fff;
 $color-background-offset: #f7f7f7;
-
 $color-ui-hover: rgba($color-text, 0.05);
 $color-ui-active: rgba($color-text, 0.075);
-
-$color-header-background: #000000;
+$color-header-background: #000;
 $color-header-content: #fff;
-
 $color-frame-border: rgba($color-text, 0.25);
-
 $color-sidebar-heading: white;
-
 $width-sidebar: 240px;
 $handle-size: 0.625rem;
-
 $mq-breakpoints: (
-  navCollapse: 500px,
-  small: 450px,
-  medium: 600px,
-  large: 800px,
+    navcollapse: 500px,
+    small: 450px,
+    medium: 600px,
+    large: 800px,
 );
