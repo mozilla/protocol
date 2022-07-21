@@ -1,4 +1,5 @@
 status: deprecated
+preview: '@preview-unpadded'
 context:
   title: A Headline With 30 Characters
   tagline: A short tagline.

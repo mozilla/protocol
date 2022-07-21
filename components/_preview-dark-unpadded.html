@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html dir="ltr" class="no-js mzp-t-dark">
+<head>
+  <meta charset="utf-8">
+  <script src="{{ '/protocol/js/protocol-base.js' | path }}"></script>
+  <script src="{{ '/protocol/js/protocol-utils.js' | path }}"></script>
+  <script src="{{ '/protocol/js/protocol-supports.js' | path }}"></script>
+  <link media="all" rel="stylesheet" href="{{ '/theme/css/preview.css' | path }}">
+  <link media="all" rel="stylesheet" href="{{ '/protocol/css/protocol.css' | path }}">
+  <link media="all" rel="stylesheet" href="{{ '/protocol/css/protocol-components.css' | path }}">
+  <link rel="shortcut icon" href="{{ '/theme/favicon.png' | path }}" type="image/ico">
+  <title>{% if _target.title %}{{ _target.title }} | {% endif %}Mozilla Protocol</title>
+</head>
+<body class="site-preview-unpadded mzp-t-dark">
+
+  {{ yield | safe }}
+
+</body>
+</html>

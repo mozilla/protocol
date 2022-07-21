@@ -1,3 +1,4 @@
+preview: '@preview-unpadded'
 context:
   title: A Headline With 30 Characters
   desc: A description of about 150 characters, give or take. That means we usually only have room for one or two sentences. Here is what that looks like.
