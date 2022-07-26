@@ -4,14 +4,15 @@
 
 @use 'sass:math';
 
-@import
-    'mixins/at2x',
-    'mixins/gradients',
-    'mixins/grid',
-    'mixins/images',
-    'mixins/bidi',
-    'mixins/zap',
-    'mixins/typography';
+@use 'mixins/at2x';
+@use 'mixins/gradients';
+@use 'mixins/grid';
+@use 'mixins/images';
+@use 'mixins/bidi';
+@use 'mixins/zap';
+@use 'mixins/typography';
+@use "../../../../node_modules/@mozilla-protocol/tokens/dist";
+@use "functions";
 
 // Clear floats
 @mixin clearfix {
@@ -231,23 +232,23 @@
 // Light color links for dark backgrounds.
 @mixin light-links {
     a:link {
-        color: get-theme('link-color-inverse');
+        color: functions.get-theme('link-color-inverse');
     }
 
     a:visited {
-        color: get-theme('link-color-visited-inverse');
+        color: functions.get-theme('link-color-visited-inverse');
     }
 
     a:hover,
     a:focus,
     a:active {
-        color: get-theme('link-color-hover-inverse');
+        color: functions.get-theme('link-color-hover-inverse');
     }
 
     a:visited:hover,
     a:visited:focus,
     a:visited:active {
-        color: get-theme('link-color-visited-hover-inverse');
+        color: functions.get-theme('link-color-visited-hover-inverse');
     }
 }
 
@@ -255,12 +256,12 @@
 @mixin white-links {
     a:link,
     a:visited {
-        color: $color-white;
+        color: dist.$color-white;
 
         &:hover,
         &:focus,
         &:active {
-            color: $color-white;
+            color: dist.$color-white;
         }
     }
 }

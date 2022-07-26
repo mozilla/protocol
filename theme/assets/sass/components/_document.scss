@@ -1,6 +1,10 @@
+@use '../../../../assets/sass/protocol/includes/functions';
+@use '../../../../assets/sass/protocol/includes/mixins/typography';
+
 /* stylelint-disable selector-class-pattern */
+
 .Document-title {
-    @include text-title-lg;
-    font-family: get-theme('title-font-family');
-    color: get-theme('title-text-color');
+    @include typography.text-title-lg;
+    font-family: functions.get-theme('title-font-family');
+    color: functions.get-theme('title-text-color');
 }

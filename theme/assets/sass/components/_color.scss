@@ -1,6 +1,9 @@
+@use '../../../../assets/sass/protocol/includes/mixins/typography';
+@use '../../../../node_modules/@mozilla-protocol/tokens/dist';
+
 // Color swatches
 .docs-swatch-gallery {
-    margin: 0 0 $spacing-lg;
+    margin: 0 0 dist.$spacing-lg;
 
     .docs-swatch {
         margin: 0 0 1.5em;
@@ -19,7 +22,7 @@
     }
 
     .docs-palette-title {
-        @include text-title-md;
+        @include typography.text-title-md;
         clear: both;
         margin: 0 0 1em;
     }
@@ -32,18 +35,18 @@
     }
 
     .docs-swatch-name {
-        @include font-base;
-        @include text-body-lg;
+        @include typography.font-base;
+        @include typography.text-body-lg;
         margin: 0 0 0.25em;
     }
 
-    @media #{$mq-md} {
+    @media #{dist.$mq-md} {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: $layout-xs;
+        grid-gap: dist.$layout-xs;
     }
 
-    @media #{$mq-lg} {
+    @media #{dist.$mq-lg} {
         grid-template-columns: repeat(5, 1fr);
     }
 }

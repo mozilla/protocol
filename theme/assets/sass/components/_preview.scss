@@ -1,9 +1,12 @@
+@use '../../../../node_modules/@mozilla-protocol/tokens/dist';
+
 /* stylelint-disable selector-class-pattern */
+
 .Preview {
     background-color: transparent;
 }
 
 .Preview-iframe,
 .Preview-resizer {
-    background-color: $color-light-gray-20;
+    background-color: dist.$color-light-gray-20;
 }

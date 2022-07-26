@@ -1,6 +1,9 @@
+@use '../../../../assets/sass/protocol/includes/functions';
+@use '../../../../assets/sass/protocol/includes/mixins/typography';
+
 body {
-    @include font-base;
-    color: get-theme('body-text-color');
+    @include typography.font-base;
+    color: functions.get-theme('body-text-color');
 }
 
 mark {

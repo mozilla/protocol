@@ -1,3 +1,6 @@
+@use '../../../../assets/sass/protocol/includes/mixins/typography';
+@use '../../../../node_modules/@mozilla-protocol/tokens/dist';
+
 /* stylelint-disable selector-class-pattern */
 .Tree {
     white-space: normal;
@@ -8,13 +11,13 @@
 }
 
 .Tree-title {
-    @include text-body-md;
-    color: $color-white;
+    @include typography.text-body-md;
+    color: dist.$color-white;
     letter-spacing: normal;
 }
 
 .Tree-collectionLabel {
-    color: $color-white;
+    color: dist.$color-white;
     padding-top: 0.15em;
     padding-bottom: 0.15em;
 
@@ -24,8 +27,8 @@
     }
 
     &:hover {
-        color: $color-white;
-        background-color: $color-dark-gray-50;
+        color: dist.$color-white;
+        background-color: dist.$color-dark-gray-50;
     }
 
     &::before {
@@ -74,28 +77,28 @@
 }
 
 .Tree-item {
-    @include text-body-sm;
+    @include typography.text-body-sm;
 
     .Tree-entityLink {
-        color: $color-white;
+        color: dist.$color-white;
         padding-top: 0.25em;
         padding-bottom: 0.25em;
 
         &:hover {
-            color: $color-white;
-            background-color: $color-dark-gray-50;
+            color: dist.$color-white;
+            background-color: dist.$color-dark-gray-50;
         }
     }
 
     &.is-current {
-        background-color: $color-dark-gray-60;
+        background-color: dist.$color-dark-gray-60;
     }
 }
 
 .Tree-aside {
-    color: $color-white;
+    color: dist.$color-white;
 }
 
 .Tree-collapse {
-    color: $color-white;
+    color: dist.$color-white;
 }

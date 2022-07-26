@@ -2,38 +2,38 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-$brand-theme: 'mozilla';
 $font-path: '/protocol/fonts';
 
-@import '../../../node_modules/@mozilla-protocol/tokens/dist/index';
-@import '../../../assets/sass/protocol/includes/lib';
-@import '../../../assets/sass/protocol/includes/fonts/inter';
-@import '../../../assets/sass/protocol/includes/fonts/metropolis';
-@import '../../../assets/sass/protocol/includes/fonts/zilla-slab';
+@use '../../../node_modules/@mozilla-protocol/tokens/dist/index';
+@use '../../../assets/sass/protocol/includes/lib' with ($brand-theme: 'mozilla');
+
+@use '../../../assets/sass/protocol/includes/fonts/inter';
+@use '../../../assets/sass/protocol/includes/fonts/metropolis';
+@use '../../../assets/sass/protocol/includes/fonts/zilla-slab';
 
 // Settings
-@import 'settings/settings';
+@use 'settings/settings';
 
 // Base
-@import 'base/typography';
+@use 'base/typography';
 
 // Helpers
-@import 'helpers/text';
+@use 'helpers/text';
 
 // Components
-@import 'components/browser';
-@import 'components/document';
-@import 'components/frame';
-@import 'components/header';
-@import 'components/meta';
-@import 'components/navigation';
-@import 'components/pen';
-@import 'components/preview';
-@import 'components/prose';
-@import 'components/search';
-@import 'components/status';
-@import 'components/tree';
-@import 'components/type-specimen';
+@use 'components/browser';
+@use 'components/document';
+@use 'components/frame';
+@use 'components/header';
+@use 'components/meta';
+@use 'components/navigation';
+@use 'components/pen';
+@use 'components/preview';
+@use 'components/prose';
+@use 'components/search';
+@use 'components/status';
+@use 'components/tree';
+@use 'components/type-specimen';
 
 // Custom components for the docs
 @import 'components/grid-list';

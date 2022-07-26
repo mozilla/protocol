@@ -1,6 +1,8 @@
-/* stylelint-disable selector-class-pattern */
+@use '../../../../node_modules/@mozilla-protocol/tokens/dist';
+
+/* stylelint-disable-next-line selector-class-pattern */
 .Search-input {
     color: white;
     border: none;
-    background-color: $color-dark-gray-50;
+    background-color: dist.$color-dark-gray-50;
 }
