@@ -2,13 +2,13 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../includes/lib';
-@import '../includes/forms/lib';
+@use '../includes/lib' as *;
+@use '../includes/forms';
 
 @mixin default-states {
     &:focus {
-        border-color: $button-border-color-focus;
-        outline: $field-focus-ring-outline;
+        border-color: forms.$button-border-color-focus;
+        box-shadow: forms.$field-focus-ring;
         outline-offset: 1px;
     }
 
@@ -28,10 +28,10 @@
 
 @mixin default-states-dark {
     &:focus {
-        border-color: $button-border-color-focus;
-        box-shadow: $field-focus-ring-white;
-        outline: $field-focus-ring-outline;
         outline-offset: 1px;
+        border-color: forms.$button-border-color-focus;
+        box-shadow: forms.$field-focus-ring-dark;
+        outline: forms.$field-focus-ring-outline;
     }
 
     &:hover {
@@ -50,8 +50,8 @@
 
 @mixin product-states {
     &:focus {
-        border-color: $button-border-color-focus-product;
-        outline: $field-focus-ring-outline;
+        border-color: forms.$button-border-color-focus;
+        box-shadow: forms.$field-focus-ring;
         outline-offset: 1px;
     }
 
@@ -87,7 +87,7 @@ a.mzp-c-button {
     display: inline-block;
     font-family: get-theme('button-font-family');
     font-weight: bold;
-    line-height: type-scale('body-line-height');
+    line-height: theme-type-scale('body-line-height');
     padding: 6px $spacing-lg;
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
 
@@ -219,7 +219,7 @@ a.mzp-c-button {
         color: $color-marketing-gray-70;
 
         &:focus {
-            border-color: $button-border-color-focus;
+            border-color: forms.$button-border-color-focus;
         }
 
         &:hover {
@@ -241,7 +241,7 @@ a.mzp-c-button {
             color: $color-white;
 
             &:focus {
-                border-color: $button-border-color-focus;
+                border-color: forms.$button-border-color-focus;
             }
 
             &:hover {
@@ -264,14 +264,14 @@ a.mzp-c-button {
 
 .mzp-c-button-download-container {
     text-align: center;
-    margin-bottom: $field-v-spacing;
+    margin-bottom: forms.$field-v-spacing;
     display: inline-block;
 }
 
 .mzp-c-button-download-privacy-link {
     @include text-body-xs;
     display: block;
-    margin-top: $info-v-spacing;
+    margin-top: forms.$info-v-spacing;
 
     a:link,
     a:visited {

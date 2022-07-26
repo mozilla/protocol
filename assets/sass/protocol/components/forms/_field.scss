@@ -2,8 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../includes/lib';
-@import '../../includes/forms/lib';
+@use '../../includes/lib' as *;
+@use '../../includes/forms';
 
 // a form field component has a label and a control
 // it may also optionally have:
@@ -16,7 +16,7 @@
 .mzp-c-field {
     margin: 0;
     max-width: 100%;
-    padding-bottom: $field-v-spacing;
+    padding-bottom: forms.$field-v-spacing;
 
     button {
         margin-bottom: 0;
@@ -42,7 +42,7 @@
 
 // labels
 .mzp-c-field-label {
-    @include field-label;
+    @include forms.field-label;
 }
 
 legend.mzp-c-field-label {
@@ -60,11 +60,11 @@ legend.mzp-c-field-label {
 
 // info
 .mzp-c-field-info {
-    @include form-info;
+    @include forms.form-info;
     margin: 0; // remove default element margin (eg paragraph)
 
     .mzp-c-field-control + & {
-        padding-top: $info-v-spacing;
+        padding-top: forms.$info-v-spacing;
     }
 
     .mzp-c-field-msg + & {

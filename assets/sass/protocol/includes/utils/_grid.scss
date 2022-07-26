@@ -1,9 +1,16 @@
+@use '../../../../../node_modules/@mozilla-protocol/tokens/dist';
+@use '../mixins';
+
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@use '../../../../../node_modules/@mozilla-protocol/tokens/dist';
-@use '../mixins';
+// Bit of repetition to avoid the loop, copied from "mixins", there's definitely a better solution to find here
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 // Grid columns
 $column-width: 8.333%; // 100% / 12 columns

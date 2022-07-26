@@ -42,5 +42,7 @@ $brand-theme: 'mozilla' !default;
 
 $type-scale: 'standard' !default;
 
-$font-path: 'fonts' !default;
-$image-path: 'images' !default;
+// Relative media paths tell Protocol where to find images and fonts in your
+// installation. These defaults can be overwritten as needed in other style sheets.
+$image-path: '../img' !default;
+$font-path: '../fonts' !default;

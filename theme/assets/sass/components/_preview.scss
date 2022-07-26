@@ -1,4 +1,4 @@
-@use '../../../../node_modules/@mozilla-protocol/tokens/dist';
+@use '../../../../assets/sass/protocol/includes/lib' as *;
 
 /* stylelint-disable selector-class-pattern */
 
@@ -8,5 +8,5 @@
 
 .Preview-iframe,
 .Preview-resizer {
-    background-color: dist.$color-light-gray-20;
+    background-color: $color-light-gray-20;
 }

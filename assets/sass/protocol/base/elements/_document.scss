@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../includes/lib';
+@use '../../includes/lib' as *;
 
 html {
     font-size: 100%;
@@ -14,7 +14,7 @@ body {
     background: get-theme('background-color');
     color: get-theme('body-text-color');
     font-family: get-theme('body-font-family');
-    line-height: type-scale('body-line-height');
+    line-height: theme-type-scale('body-line-height');
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }

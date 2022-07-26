@@ -2,36 +2,37 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../includes/lib';
+@use '../../includes/lib' as *;
+@use '../../includes/forms';
 
 .mzp-c-form-msg,
 .mzp-c-field-msg,
 .mzp-c-field-set-msg,
 .mzp-c-choice-msg {
-    @include form-msg;
+    @include forms.form-msg;
 
     /* for now these only come in red but they could be updated to have other colours */
 }
 
 .mzp-c-field-msg {
     .mzp-c-field + & {
-        margin-top: $field-v-spacing * -1 + $label-v-spacing;
+        margin-top: forms.$field-v-spacing * -1 + forms.$label-v-spacing;
     }
 }
 
 .mzp-c-choice-msg {
     .mzp-c-choice + &,
     .mzp-c-choices + & {
-        margin-top: $field-v-spacing * -1 + $label-v-spacing;
+        margin-top: forms.$field-v-spacing * -1 + forms.$label-v-spacing;
     }
 }
 
 .mzp-c-field-control + .mzp-c-field-msg::after,
 .mzp-c-choice-label + .mzp-c-choice-msg::after {
-    @include form-msg-pointer;
-    margin-top: $field-v-spacing * -1 + $label-v-spacing;
+    @include forms.form-msg-pointer;
+    margin-top: forms.$field-v-spacing * -1 + forms.$label-v-spacing;
 }
 
 .mzp-c-field-set > .mzp-c-form-msg:last-child {
-    margin-bottom: $field-v-spacing;
+    margin-bottom: forms.$field-v-spacing;
 }

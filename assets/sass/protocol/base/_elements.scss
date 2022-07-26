@@ -3,16 +3,16 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 // Reset first
-@import 'elements/reset';
+@use 'elements/reset';
 
 // Sorted alphabetically
-@import 'elements/common';
-@import 'elements/containers';
-@import 'elements/details';
-@import 'elements/document';
-@import 'elements/forms';
-@import 'elements/links';
-@import 'elements/lists';
-@import 'elements/quotes';
-@import 'elements/tables';
-@import 'elements/titles';
+@use 'elements/common';
+@use 'elements/containers';
+@use 'elements/details';
+@use 'elements/document';
+@use 'elements/forms';
+@use 'elements/links';
+@use 'elements/lists';
+@use 'elements/quotes';
+@use 'elements/tables';
+@use 'elements/titles';

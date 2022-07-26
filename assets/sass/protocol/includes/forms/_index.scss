@@ -4,7 +4,7 @@
 
 // Import all the things!
 @use 'sass:color';
-@import '../lib';
+@use '../lib' as *;
 
 // forms
 // use padding as much as possible, margins don't collapse on form elements

@@ -1,7 +1,6 @@
-@use '../../../../node_modules/@mozilla-protocol/tokens/dist';
+@use '../../../../assets/sass/protocol/includes/lib' as *;
 
 /* stylelint-disable selector-class-pattern */
-
 .Browser-tabs {
     background-color: white;
     border-bottom: 1px solid rgba(70, 81, 94, 0.25);
@@ -27,7 +26,7 @@
 .Browser-panel .Prose {
     code:not([class*='hljs']) {
         background-color: #f8f8f8;
-        border-radius: dist.$border-radius-xs;
+        border-radius: $border-radius-xs;
         color: #000080;
         outline: 1px solid rgba(0, 0, 0, 0.05);
         padding: 0 0.5ch;

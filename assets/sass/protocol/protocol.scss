@@ -8,37 +8,37 @@
 // the fonts, includes, and global components you actually need.
 // Individual style sheets can import additional components as needed.
 
-// Relative media paths tell Protocol where to find images and fonts in your
-// installation. These defaults can be overwritten as needed in other style sheets.
-$image-path: '../img' !default;
-$font-path: '../fonts' !default;
+// // Relative media paths tell Protocol where to find images and fonts in your
+// // installation. These defaults can be overwritten as needed in other style sheets.
+// $image-path: '../img' !default;
+// $font-path: '../fonts' !default;
 
 // Inter is our general-purpose font for body text in both Firefox and
 // Mozilla brands.
-@import 'includes/fonts/inter';
+@use 'includes/fonts/inter';
 
 // Zilla Slab is used with the Mozilla brand. Remove this import if
 // your site uses the Firefox brand exclusively.
-@import 'includes/fonts/zilla-slab';
+@use 'includes/fonts/zilla-slab';
 
 // Metropolis is used with the Firefox brand. Uncomment this import if
 // your site uses the Firefox brand.
 // @import 'includes/fonts/metropolis';
 
 // Base elements - general HTML elements
-@import 'base/elements';
+@use 'base/elements';
 
 // Base utilities
-@import 'base/utilities/backgrounds';
-@import 'base/utilities/titles';
+@use 'base/utilities/backgrounds';
+@use 'base/utilities/titles';
 
 // Base includes - animations
-@import 'base/includes';
+@use 'base/includes';
 
 // Global components
-@import 'components/card';
-@import 'components/footer';
-@import 'components/language-switcher';
-@import 'components/menu';
-@import 'components/menu-item';
-@import 'components/navigation';
+@use 'components/card';
+@use 'components/footer';
+@use 'components/language-switcher';
+@use 'components/menu';
+@use 'components/menu-item';
+@use 'components/navigation';

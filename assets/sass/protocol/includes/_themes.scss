@@ -4,9 +4,11 @@
 
 @use '../../../../node_modules/@mozilla-protocol/tokens/dist';
 @use 'functions';
+@use 'config';
+@use 'sass:map';
 
 // This file contains all the theme variables for both the Firefox and Mozilla
-// themes. Mixins and functions can draw from these variable maps, swapping to
+//  Mixins and functions can draw from these variable maps, swapping to
 // a different map based on the value of the global $brand-theme variable.
 
 // * -------------------------------------------------------------------------- */
@@ -209,9 +211,52 @@ $theme-type-scale-condensed-mozilla: (
     body-line-height: 1.5,
 );
 
+@function type-scale($scale) {
+    // Default to Firefox brand scale
+    $scale-map: $theme-type-scale-firefox;
+
+    // Firefox condensed
+    @if config.$type-scale == 'condensed' {
+        $scale-map: $theme-type-scale-condensed-firefox;
+    }
+
+    // Switch to Mozilla brand scale
+    @if config.$brand-theme == 'mozilla' {
+        $scale-map: $theme-type-scale-mozilla;
+    }
+
+    // Mozilla condensed
+    @if config.$brand-theme == 'mozilla' and config.$type-scale == 'condensed' {
+        $scale-map: $theme-type-scale-condensed-mozilla;
+    }
+
+    @if not map.has-key($scale-map, $scale) {
+        @error '`#{$scale}` is not a valid type scale variable name. ' + 'Valid variable names: #{map.keys($scale-map)}';
+    }
+
+    @return map.get($scale-map, $scale);
+}
+
 // Collect the maps for easier reference, so you don't have to refer to a specific submap.
 // Usage:
-//    map-get($theme-firefox, 'background-color-secondary');
+//    map-get(lib.$theme-firefox, 'background-color-secondary');
 
 $theme-firefox: functions.map-collect($theme-spacing, $theme-fonts-firefox, $theme-colors-firefox, $theme-type-scale-firefox);
 $theme-mozilla: functions.map-collect($theme-spacing, $theme-fonts-mozilla, $theme-colors-mozilla, $theme-type-scale-mozilla);
+
+// this can just be "get" and will import with theme- so we have theme-get and theme-type-scale
+@function get-theme($var) {
+    // Default to Firefox theme
+    $theme-map: $theme-firefox;
+
+    // Switch to Mozilla theme
+    @if config.$brand-theme == 'mozilla' {
+        $theme-map: $theme-mozilla;
+    }
+
+    @if not map.has-key($theme-map, $var) {
+        @error '`#{$var}` is not a valid theme variable. ' + 'Valid theme variable names: #{map.keys($theme-map)}';
+    }
+
+    @return map.get($theme-map, $var);
+}

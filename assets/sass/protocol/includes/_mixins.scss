@@ -4,15 +4,8 @@
 
 @use 'sass:math';
 
-@use 'mixins/at2x';
-@use 'mixins/gradients';
-@use 'mixins/grid';
-@use 'mixins/images';
-@use 'mixins/bidi';
-@use 'mixins/zap';
-@use 'mixins/typography';
 @use "../../../../node_modules/@mozilla-protocol/tokens/dist";
-@use "functions";
+@use "themes";
 
 // Clear floats
 @mixin clearfix {
@@ -232,23 +225,23 @@
 // Light color links for dark backgrounds.
 @mixin light-links {
     a:link {
-        color: functions.get-theme('link-color-inverse');
+        color: themes.get-theme('link-color-inverse');
     }
 
     a:visited {
-        color: functions.get-theme('link-color-visited-inverse');
+        color: themes.get-theme('link-color-visited-inverse');
     }
 
     a:hover,
     a:focus,
     a:active {
-        color: functions.get-theme('link-color-hover-inverse');
+        color: themes.get-theme('link-color-hover-inverse');
     }
 
     a:visited:hover,
     a:visited:focus,
     a:visited:active {
-        color: functions.get-theme('link-color-visited-hover-inverse');
+        color: themes.get-theme('link-color-visited-hover-inverse');
     }
 }
 

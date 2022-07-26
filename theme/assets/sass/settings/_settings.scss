@@ -1,10 +1,8 @@
-@use '../../../../node_modules/@mozilla-protocol/tokens/dist';
+@use '../../../../assets/sass/protocol/includes/lib' as *;
 
 $font-family-monospace: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace !default;
-$font-family-sans-serif: dist.$font-stack-base !default;
-
-dist.$color-link: #66f;
-
+$font-family-sans-serif: $font-stack-base !default;
+$color-link: #66f;
 $color-text: #000;
 $color-heading: #000;
 $color-background: #fff;

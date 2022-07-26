@@ -3,6 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use '../../../../../theme/assets/sass/theme';
+@use '../config';
 
 @font-face {
     font-display: swap;
@@ -10,8 +11,8 @@
     font-style: normal;
     font-weight: normal;
     src:
-        url('#{theme.$font-path}/Inter-Regular.woff2') format('woff2'),
-        url('#{theme.$font-path}/Inter-Regular.woff') format('woff');
+        url('#{config.$font-path}/Inter-Regular.woff2') format('woff2'),
+        url('#{config.$font-path}/Inter-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -20,8 +21,8 @@
     font-style: normal;
     font-weight: bold;
     src:
-        url('#{theme.$font-path}/Inter-Bold.woff2') format('woff2'),
-        url('#{theme.$font-path}/Inter-Bold.woff') format('woff');
+        url('#{config.$font-path}/Inter-Bold.woff2') format('woff2'),
+        url('#{config.$font-path}/Inter-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -30,8 +31,8 @@
     font-style: italic;
     font-weight: normal;
     src:
-        url('#{theme.$font-path}/Inter-Italic.woff2') format('woff2'),
-        url('#{theme.$font-path}/Inter-Italic.woff') format('woff');
+        url('#{config.$font-path}/Inter-Italic.woff2') format('woff2'),
+        url('#{config.$font-path}/Inter-Italic.woff') format('woff');
 }
 
 @font-face {
@@ -40,6 +41,6 @@
     font-style: italic;
     font-weight: bold;
     src:
-        url('#{theme.$font-path}/Inter-BoldItalic.woff2') format('woff2'),
-        url('#{theme.$font-path}/Inter-BoldItalic.woff') format('woff');
+        url('#{config.$font-path}/Inter-BoldItalic.woff2') format('woff2'),
+        url('#{config.$font-path}/Inter-BoldItalic.woff') format('woff');
 }

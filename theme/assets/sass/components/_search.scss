@@ -1,8 +1,8 @@
-@use '../../../../node_modules/@mozilla-protocol/tokens/dist';
+@use '../../../../assets/sass/protocol/includes/lib' as *;
 
 /* stylelint-disable-next-line selector-class-pattern */
 .Search-input {
     color: white;
     border: none;
-    background-color: dist.$color-dark-gray-50;
+    background-color: $color-dark-gray-50;
 }

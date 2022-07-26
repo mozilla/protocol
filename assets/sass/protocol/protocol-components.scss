@@ -9,67 +9,71 @@
 // from source.
 
 // Default media paths can be overwritten globally.
-$image-path: '../img' !default;
+// $image-path: '../img' !default;
 
-@import 'components/article';
-@import 'components/billboard';
-@import 'components/button';
-@import 'components/breadcrumb';
-@import 'components/call-out';
-@import 'components/emphasis-box';
-@import 'components/feature-card';
-@import 'components/forms/button-container';
-@import 'components/forms/choice';
-@import 'components/forms/field';
-@import 'components/forms/form';
-@import 'components/forms/msg';
-@import 'components/forms/set';
-@import 'components/forms/status';
-@import 'components/hero';
-@import 'components/inline-list';
-@import 'components/logos/logo';
-@import 'components/logos/wordmark';
-@import 'components/menu-list';
-@import 'components/modal';
-@import 'components/newsletter-form';
-@import 'components/notification-bar';
-@import 'components/picto';
-@import 'components/picto-card';
-@import 'components/section-heading';
-@import 'components/sidebar-menu';
-@import 'components/split';
-@import 'components/sticky-promo';
-@import 'components/video';
-@import 'components/zap';
-@import 'templates/card-layout';
-@import 'templates/main-with-sidebar';
-@import 'templates/multi-column';
+@use 'components/article';
+@use 'components/billboard';
+@use 'components/button';
+@use 'components/breadcrumb';
+@use 'components/call-out';
+@use 'components/emphasis-box';
+@use 'components/feature-card';
+@use 'components/forms/button-container';
+@use 'components/forms/choice';
+@use 'components/forms/field';
+@use 'components/forms/form';
+@use 'components/forms/msg';
+@use 'components/forms/set';
+@use 'components/forms/status';
+@use 'components/hero';
+@use 'components/inline-list';
+@use 'components/logos/logo';
+@use 'components/logos/wordmark';
+@use 'components/menu-list';
+@use 'components/modal';
+@use 'components/newsletter-form';
+@use 'components/notification-bar';
+@use 'components/picto';
+@use 'components/picto-card';
+@use 'components/section-heading';
+@use 'components/sidebar-menu';
+@use 'components/split';
+@use 'components/sticky-promo';
+@use 'components/video';
+@use 'components/zap';
+@use 'templates/card-layout';
+@use 'templates/main-with-sidebar';
+@use 'templates/multi-column';
 
 // logos
-@import 'components/logos/logo-product-firefox';
-@import 'components/logos/logo-product-beta';
-@import 'components/logos/logo-product-developer';
-@import 'components/logos/logo-product-nightly';
-@import 'components/logos/logo-product-focus';
-@import 'components/logos/logo-product-family';
-@import 'components/logos/logo-product-lockwise';
-@import 'components/logos/logo-product-monitor';
-@import 'components/logos/logo-product-relay';
-@import 'components/logos/logo-product-mozilla';
-@import 'components/logos/logo-product-vpn';
-@import 'components/logos/logo-product-pocket';
+@use 'components/logos/logo-product-firefox';
+@use 'components/logos/logo-product-beta';
+@use 'components/logos/logo-product-developer';
+@use 'components/logos/logo-product-nightly';
+@use 'components/logos/logo-product-focus';
+
+@use 'components/logos/logo-product-family';
+@use 'components/logos/logo-product-lockwise';
+@use 'components/logos/logo-product-monitor';
+@use 'components/logos/logo-product-relay';
+
+@use 'components/logos/logo-product-mozilla';
+@use 'components/logos/logo-product-vpn';
+@use 'components/logos/logo-product-pocket';
 
 // wordmarks
 
-@import 'components/logos/wordmark-product-firefox';
-@import 'components/logos/wordmark-product-beta';
-@import 'components/logos/wordmark-product-developer';
-@import 'components/logos/wordmark-product-nightly';
-@import 'components/logos/wordmark-product-focus';
-@import 'components/logos/wordmark-product-family';
-@import 'components/logos/wordmark-product-lockwise';
-@import 'components/logos/wordmark-product-monitor';
-@import 'components/logos/wordmark-product-relay';
-@import 'components/logos/wordmark-product-mozilla';
-@import 'components/logos/wordmark-product-vpn';
-@import 'components/logos/wordmark-product-pocket';
+@use 'components/logos/wordmark-product-firefox';
+@use 'components/logos/wordmark-product-beta';
+@use 'components/logos/wordmark-product-developer';
+@use 'components/logos/wordmark-product-nightly';
+@use 'components/logos/wordmark-product-focus';
+
+@use 'components/logos/wordmark-product-family';
+@use 'components/logos/wordmark-product-lockwise';
+@use 'components/logos/wordmark-product-monitor';
+@use 'components/logos/wordmark-product-relay';
+
+@use 'components/logos/wordmark-product-mozilla';
+@use 'components/logos/wordmark-product-vpn';
+@use 'components/logos/wordmark-product-pocket';
