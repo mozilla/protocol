@@ -31,6 +31,14 @@ Product classes:
 - `mzp-t-product-pocket`
 - `mzp-t-product-relay`
 
+Logos are aligned with text by default (either left or right, depending on text
+direction). Some additional layout classes are available to center the logo on
+all viewports or only in small viewports.
+
+Layout classes:
+- `mzp-l-logo-center`
+- `mzp-l-logo-center-on-sm-md`
+
 ### Tips
 This component uses CSS image replacement to display a background image in place
 of the element’s text content. If you use the logo as meaningful content like a

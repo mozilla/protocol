@@ -50,6 +50,24 @@ $logo-sizes: (
         margin-bottom: $layout-lg;
         width: $layout-xl;
     }
+
+    &.mzp-l-logo-center {
+        background-position: center top;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.mzp-l-logo-center-on-sm-md {
+        background-position: center top;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media #{$mq-md} {
+            @include bidi(((background-position, top left, top right),));
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
 }
 
 @mixin logo($product, $dir, $layout-size, $logo-size) {

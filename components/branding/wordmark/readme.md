@@ -33,6 +33,14 @@ Product classes:
 - `mzp-t-product-pocket`
 - `mzp-t-product-relay`
 
+Wordmarks are aligned with text by default (either left or right, depending on
+text direction). Some additional layout classes are available to center the
+wordmark on all viewports or only in small viewports.
+
+Layout classes:
+- `mzp-l-wordmark-center`
+- `mzp-l-wordmark-center-on-sm-md`
+
 ### Tips
 This component uses CSS image replacement to display a background image in place
 of the element’s text content. If you use the wordmark as meaningful content like
