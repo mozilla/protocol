@@ -4,7 +4,8 @@
 # size          - Size class suffix (xs, sm, md, lg, xl)
 # product       - Product class suffix
 # label         - string
+# layout        - layout class (mzp-l-wordmark-center, mzp-l-wordmark-center-on-sm-md)
 #}
-<div class="mzp-c-wordmark mzp-t-wordmark-{% if size %}{{ size }}{% else %}md{% endif %} mzp-t-product-{% if product %}{{ product }}{% else %}firefox{%  endif %}">
+<div class="mzp-c-wordmark mzp-t-wordmark-{% if size %}{{ size }}{% else %}md{% endif %} mzp-t-product-{% if product %}{{ product }}{% else %}firefox{%  endif %}{% if layout %} {{ layout }}{% endif %}">
   {%- if label %}{{ label }}{% else %}Firefox Browser{% endif -%}
 </div>

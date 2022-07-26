@@ -1,0 +1,13 @@
+variants:
+  - name: Centered
+    notes: Add the class `mzp-l-logo-center` for a centered logo.
+    context:
+      layout: 'mzp-l-logo-center'
+      size: 'lg'
+  - name: Centered on Mobile
+    notes: Add the class `mzp-l-logo-center-on-sm-md` for a centered logo only
+      in small to medium viewports, changing to the standard alignment (with the
+      text direction) in larger viewports.
+    context:
+      layout: 'mzp-l-logo-center-on-sm-md'
+      size: 'lg'
