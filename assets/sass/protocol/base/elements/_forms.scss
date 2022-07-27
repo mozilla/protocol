@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-colon-newline-after */
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -5,7 +6,7 @@
 @import '../../includes/lib';
 @import '../../includes/forms/lib';
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Resets
 // many from https://necolas.github.io/normalize.css/
 
@@ -28,6 +29,13 @@ legend {
     max-width: 100%; // 1
     padding: 0; // 3
     white-space: normal; // 1
+    .mzp-u-inline & {
+        @include field-label;
+    }
+    @include text-body-lg;
+    font-family: get-theme('title-font-family');
+    font-weight: bold;
+    margin-bottom: $field-v-spacing;
 }
 
 button,
@@ -50,6 +58,7 @@ button,
 // Remove the default vertical scrollbar in IE 10+.
 textarea {
     overflow: auto;
+    height: auto;
 }
 
 // 1. Correct the odd appearance in Chrome and Safari.
@@ -79,37 +88,34 @@ textarea {
     padding: 0; // 2
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Element styles
 
 fieldset {
     margin-bottom: $field-v-spacing;
-    min-width: 0; // https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content
+    min-width: 0;// https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content
     width: 100%;
-}
 
-legend {
-    @include text-body-lg;
-    font-family: get-theme('title-font-family');
-    font-weight: bold;
-    margin-bottom: $field-v-spacing;
+    &.mzp-u-inline {
+        margin-bottom: 0;
+    }
 }
 
 label {
     @include field-label;
+
+    &.mzp-u-inline {
+        @include bidi(((padding, 0 $spacing-sm 0 0, 0 0 0 $spacing-sm),));
+        display: inline;
+    }
 }
 
-// check boxes and radio buttons
-[type='checkbox'],
 [type='radio'] {
     border-radius: $field-border-radius;
-}
-
-[type='radio'] {
     border-radius: 100%;
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Inputs & Textarea (excluding checkboxes and radio buttons)
 
 textarea,
@@ -283,11 +289,7 @@ input[type='file'] {
     padding: $field-padding;
 }
 
-textarea {
-    height: auto;
-}
-
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Select
 // with thanks to https://www.filamentgroup.com/lab/select-css.html
 
@@ -356,11 +358,7 @@ select {
     &:disabled,
     &[aria-disabled='true'] {
         background-image:
-
-
-
-
-
+            /* stylelint-disable-next-line declaration-colon-newline-after */
             url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
             $select-bg-disabled;
         border-color: $color-marketing-gray-30;
@@ -380,27 +378,8 @@ select {
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Basic utility classes
-
-fieldset {
-    &.mzp-u-inline {
-        margin-bottom: 0;
-    }
-}
-
-legend {
-    .mzp-u-inline & {
-        @include field-label;
-    }
-}
-
-label {
-    &.mzp-u-inline {
-        @include bidi(((padding, 0 $spacing-sm 0 0, 0 0 0 $spacing-sm),));
-        display: inline;
-    }
-}
 
 .mzp-c-fieldnote {
     @include form-info;
@@ -414,7 +393,7 @@ label {
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Errors
 
 .mzp-c-form-errors {
@@ -442,5 +421,6 @@ label {
     input[type='checkbox'],
     input[type='radio'] {
         box-shadow: $field-focus-ring-error;
+        border-radius: $field-border-radius;
     }
 }

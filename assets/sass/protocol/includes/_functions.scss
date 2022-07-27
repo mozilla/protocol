@@ -49,11 +49,9 @@
 // Get a type scale value from the scale map
 // Usage:
 //    type-scale('scale-value');
-//
 // Size values are define in pixels. Use the font-size() mixin
 // to convert to rem with px fallback. Example:
 //    @include font-size(type-scale('title-xl-size'));
-//
 // An alternative, condensed type scale is defined in a separate
 // map. When the $type-scale variable is set to 'condensed' this
 // function will draw its values from that alternative map.
@@ -78,8 +76,7 @@
     }
 
     @if not map-has-key($scale-map, $scale) {
-        @error '`#{$scale}` is not a valid type scale variable name. '
-            + 'Valid variable names: #{map-keys($scale-map)}';
+        @error '`#{$scale}` is not a valid type scale variable name. ' + 'Valid variable names: #{map-keys($scale-map)}';
     }
 
     @return map-get($scale-map, $scale);
@@ -99,8 +96,7 @@
     }
 
     @if not map-has-key($theme-map, $var) {
-        @error '`#{$var}` is not a valid theme variable. '
-            + 'Valid theme variable names: #{map-keys($theme-map)}';
+        @error '`#{$var}` is not a valid theme variable. ' + 'Valid theme variable names: #{map-keys($theme-map)}';
     }
 
     @return map-get($theme-map, $var);

@@ -6,7 +6,7 @@
 // themes. Mixins and functions can draw from these variable maps, swapping to
 // a different map based on the value of the global $brand-theme variable.
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Vertical and Horizontal Spacing
 
 $theme-spacing: (
@@ -20,7 +20,7 @@ $theme-spacing: (
     -grid-xl: 80px,
 );
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Fonts
 
 $theme-fonts-firefox: (
@@ -34,7 +34,7 @@ $theme-fonts-mozilla: (
     title-font-family: $font-stack-mozilla,
 );
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Colors
 
 $theme-colors-firefox: (
@@ -82,12 +82,12 @@ $theme-colors-mozilla: (
     title-text-color: $color-black,
 );
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Type scale
-//
+
 // These values are used by the type-scale() function
 // defined in includes/functions/_typography.scss
-//
+
 // Avoid referencing these values directly; Use the function.
 
 $theme-type-scale-firefox: (
@@ -139,15 +139,15 @@ $theme-type-scale-mozilla: (
     body-line-height: 1.5,
 );
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Condensed Type scale
-//
+
 // This smaller scale is primarily intended for web apps.
 // Use the standard type scale for marketing sites.
 
 // The type-scale() function draws from this map to output
 // different sizing based on the $type-scale variable.
-//
+
 // Avoid referencing these values directly.
 
 $theme-type-scale-condensed-firefox: (

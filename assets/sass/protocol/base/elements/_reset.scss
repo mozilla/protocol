@@ -75,7 +75,7 @@ img,
 video,
 object,
 embed {
-    interpolation-mode: bicubic;
+    -ms-interpolation-mode: bicubic;
     height: auto;
     max-width: 100%;
 }
