@@ -1,12 +1,14 @@
 # HEAD
 
 ## Features
+* **component:** Add centering classes for Logo and Wordmark. (#718)
 * **docs:** Migrate Protocol documentation site to Fractal.
 * **node:** Create a Webpack config for compiling docs using Fractal.
 
 ## Bug Fixes
 * **node:** Make sure to build NPM package using production mode.
 * **html:** Added accessible attributes to menu bar (#815).
+* **css:** Add style rule for the hidden attribute in global reset (#783).
 
 # 16.0.1
 

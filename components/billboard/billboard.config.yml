@@ -1,3 +1,4 @@
+preview: '@preview-unpadded'
 context:
   title: Example headline with 35 characters
   desc: A description with a maximum of 100 characters. That usually means only one or two sentences.

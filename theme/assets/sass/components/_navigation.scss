@@ -1,3 +1,9 @@
 [dir='ltr'] .Navigation-panel {
     border-right-color: #000;
 }
+
+.Navigation-backButton {
+    padding: 0;
+    border: 0;
+    color: $color-white;
+}

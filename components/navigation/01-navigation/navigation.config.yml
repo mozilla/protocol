@@ -1,3 +1,4 @@
+preview: '@preview-unpadded'
 context:
   is_sticky: True
   is_firefox: False

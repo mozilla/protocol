@@ -1,3 +1,4 @@
+preview: '@preview-unpadded'
 context:
   layout: left
 variants:
