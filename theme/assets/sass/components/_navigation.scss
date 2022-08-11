@@ -1,3 +1,5 @@
+@use '/assets/sass/protocol/includes/lib' as *;
+
 /* stylelint-disable selector-class-pattern */
 [dir='ltr'] .Navigation-panel {
     border-right-color: #000;

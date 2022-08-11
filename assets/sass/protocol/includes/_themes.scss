@@ -2,33 +2,33 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@use '../../../../node_modules/@mozilla-protocol/tokens/dist';
-@use 'functions';
-@use 'config';
-@use 'sass:map';
-
 // This file contains all the theme variables for both the Firefox and Mozilla
 //  Mixins and functions can draw from these variable maps, swapping to
 // a different map based on the value of the global $brand-theme variable.
+
+@use 'sass:map';
+@use 'tokens';
+@use 'config';
+@use 'functions';
 
 // * -------------------------------------------------------------------------- */
 // Vertical and Horizontal Spacing
 
 $theme-spacing: (
     // xs
-    v-grid-xs: dist.$layout-md,
-    h-grid-xs: dist.$layout-xs,
+    v-grid-xs: tokens.$layout-md,
+    h-grid-xs: tokens.$layout-xs,
     // sm is the same as xs
-    v-grid-sm: dist.$layout-md,
-    h-grid-sm: dist.$layout-xs,
+    v-grid-sm: tokens.$layout-md,
+    h-grid-sm: tokens.$layout-xs,
     // md
-    v-grid-md: dist.$layout-md,
-    h-grid-md: dist.$layout-lg,
+    v-grid-md: tokens.$layout-md,
+    h-grid-md: tokens.$layout-lg,
     // lg is the same as md
-    v-grid-lg: dist.$layout-md,
-    h-grid-lg: dist.$layout-lg,
+    v-grid-lg: tokens.$layout-md,
+    h-grid-lg: tokens.$layout-lg,
     // xl
-    v-grid-xl: dist.$layout-xl,
+    v-grid-xl: tokens.$layout-xl,
     h-grid-xl: 80px,
 );
 
@@ -36,62 +36,62 @@ $theme-spacing: (
 // Fonts
 
 $theme-fonts-firefox: (
-    body-font-family: dist.$font-stack-base,
-    button-font-family: dist.$font-stack-firefox,
-    title-font-family: dist.$font-stack-firefox,
+    body-font-family: tokens.$font-stack-base,
+    button-font-family: tokens.$font-stack-firefox,
+    title-font-family: tokens.$font-stack-firefox,
 );
 $theme-fonts-mozilla: (
-    body-font-family: dist.$font-stack-base,
-    button-font-family: dist.$font-stack-base,
-    title-font-family: dist.$font-stack-mozilla,
+    body-font-family: tokens.$font-stack-base,
+    button-font-family: tokens.$font-stack-base,
+    title-font-family: tokens.$font-stack-mozilla,
 );
 
 // * -------------------------------------------------------------------------- */
 // Colors
 
 $theme-colors-firefox: (
-    background-color-tertiary-inverse: dist.$color-ink-20,
-    background-color-tertiary: dist.$color-marketing-gray-20,
-    background-color-secondary-inverse: dist.$color-ink-50,
-    background-color-secondary: dist.$color-light-gray-10,
-    background-color-inverse: dist.$color-ink-80,
-    background-color: dist.$color-white,
-    body-text-color-secondary-inverse: dist.$color-marketing-gray-30,
-    body-text-color-secondary: dist.$color-marketing-gray-70,
-    body-text-color-inverse: dist.$color-white,
-    body-text-color: dist.$color-marketing-gray-80,
-    link-color-hover-inverse: dist.$color-blue-05,
-    link-color-hover: dist.$color-link-hover,
-    link-color-inverse: dist.$color-blue-10,
-    link-color-visited-hover-inverse: dist.$color-violet-05,
-    link-color-visited-hover: dist.$color-link-hover,
-    link-color-visited-inverse: dist.$color-violet-10,
-    link-color-visited: dist.$color-link-visited,
-    link-color: dist.$color-link,
-    title-text-color-inverse: dist.$color-white,
-    title-text-color: dist.$color-marketing-gray-99,
+    background-color-tertiary-inverse: tokens.$color-ink-20,
+    background-color-tertiary: tokens.$color-marketing-gray-20,
+    background-color-secondary-inverse: tokens.$color-ink-50,
+    background-color-secondary: tokens.$color-light-gray-10,
+    background-color-inverse: tokens.$color-ink-80,
+    background-color: tokens.$color-white,
+    body-text-color-secondary-inverse: tokens.$color-marketing-gray-30,
+    body-text-color-secondary: tokens.$color-marketing-gray-70,
+    body-text-color-inverse: tokens.$color-white,
+    body-text-color: tokens.$color-marketing-gray-80,
+    link-color-hover-inverse: tokens.$color-blue-05,
+    link-color-hover: tokens.$color-link-hover,
+    link-color-inverse: tokens.$color-blue-10,
+    link-color-visited-hover-inverse: tokens.$color-violet-05,
+    link-color-visited-hover: tokens.$color-link-hover,
+    link-color-visited-inverse: tokens.$color-violet-10,
+    link-color-visited: tokens.$color-link-visited,
+    link-color: tokens.$color-link,
+    title-text-color-inverse: tokens.$color-white,
+    title-text-color: tokens.$color-marketing-gray-99,
 );
 $theme-colors-mozilla: (
-    background-color-tertiary-inverse: dist.$color-dark-gray-40,
-    background-color-tertiary: dist.$color-light-gray-30,
-    background-color-secondary-inverse: dist.$color-dark-gray-60,
-    background-color-secondary: dist.$color-light-gray-10,
-    background-color-inverse: dist.$color-black,
-    background-color: dist.$color-white,
-    body-text-color-secondary-inverse: dist.$color-light-gray-30,
-    body-text-color-secondary: dist.$color-dark-gray-90,
-    body-text-color-inverse: dist.$color-white,
-    body-text-color: dist.$color-black,
-    link-color-hover-inverse: dist.$color-blue-05,
-    link-color-hover: dist.$color-link-hover,
-    link-color-inverse: dist.$color-blue-10,
-    link-color-visited-hover-inverse: dist.$color-violet-05,
-    link-color-visited-hover: dist.$color-link-hover,
-    link-color-visited-inverse: dist.$color-violet-10,
-    link-color-visited: dist.$color-link-visited,
-    link-color: dist.$color-link,
-    title-text-color-inverse: dist.$color-white,
-    title-text-color: dist.$color-black,
+    background-color-tertiary-inverse: tokens.$color-dark-gray-40,
+    background-color-tertiary: tokens.$color-light-gray-30,
+    background-color-secondary-inverse: tokens.$color-dark-gray-60,
+    background-color-secondary: tokens.$color-light-gray-10,
+    background-color-inverse: tokens.$color-black,
+    background-color: tokens.$color-white,
+    body-text-color-secondary-inverse: tokens.$color-light-gray-30,
+    body-text-color-secondary: tokens.$color-dark-gray-90,
+    body-text-color-inverse: tokens.$color-white,
+    body-text-color: tokens.$color-black,
+    link-color-hover-inverse: tokens.$color-blue-05,
+    link-color-hover: tokens.$color-link-hover,
+    link-color-inverse: tokens.$color-blue-10,
+    link-color-visited-hover-inverse: tokens.$color-violet-05,
+    link-color-visited-hover: tokens.$color-link-hover,
+    link-color-visited-inverse: tokens.$color-violet-10,
+    link-color-visited: tokens.$color-link-visited,
+    link-color: tokens.$color-link,
+    title-text-color-inverse: tokens.$color-white,
+    title-text-color: tokens.$color-black,
 );
 
 // * -------------------------------------------------------------------------- */
@@ -239,7 +239,7 @@ $theme-type-scale-condensed-mozilla: (
 
 // Collect the maps for easier reference, so you don't have to refer to a specific submap.
 // Usage:
-//    map-get(lib.$theme-firefox, 'background-color-secondary');
+//    map-get($theme-firefox, 'background-color-secondary');
 
 $theme-firefox: functions.map-collect($theme-spacing, $theme-fonts-firefox, $theme-colors-firefox, $theme-type-scale-firefox);
 $theme-mozilla: functions.map-collect($theme-spacing, $theme-fonts-mozilla, $theme-colors-mozilla, $theme-type-scale-mozilla);

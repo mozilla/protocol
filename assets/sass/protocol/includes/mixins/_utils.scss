@@ -4,8 +4,8 @@
 
 @use 'sass:math';
 
-@use "../../../../node_modules/@mozilla-protocol/tokens/dist";
-@use "themes";
+@use '../tokens';
+@use '../themes';
 
 // Clear floats
 @mixin clearfix {
@@ -249,12 +249,12 @@
 @mixin white-links {
     a:link,
     a:visited {
-        color: dist.$color-white;
+        color: tokens.$color-white;
 
         &:hover,
         &:focus,
         &:active {
-            color: dist.$color-white;
+            color: tokens.$color-white;
         }
     }
 }

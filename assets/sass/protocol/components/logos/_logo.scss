@@ -3,7 +3,9 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use '../../includes/lib' as *;
-@forward '../../includes/lib';
+
+// by forwarding this file as well - the individual logo files have access to the variables in lib
+// @forward '../../includes/lib';
 
 $logo-sizes: (
     xs: 'xs',

@@ -3,22 +3,22 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use 'sass:math';
-@use '../../../../../node_modules/@mozilla-protocol/tokens/dist';
-@use '../functions';
+@use '../tokens';
 @use '../themes';
+@use '../functions';
 
 // * -------------------------------------------------------------------------- */
 // Font families
 @mixin font-base {
-    font-family: dist.$font-stack-base;
+    font-family: tokens.$font-stack-base;
 }
 
 @mixin font-mozilla {
-    font-family: dist.$font-stack-mozilla;
+    font-family: tokens.$font-stack-mozilla;
 }
 
 @mixin font-firefox {
-    font-family: dist.$font-stack-firefox;
+    font-family: tokens.$font-stack-firefox;
 }
 
 // * -------------------------------------------------------------------------- */
@@ -56,7 +56,7 @@
     @include font-size(themes.type-scale('title-xl-size'));
     line-height: themes.type-scale('title-xl-line-height');
 
-    @media #{dist.$mq-md} {
+    @media #{tokens.$mq-md} {
         @include font-size(themes.type-scale('title-2xl-size'));
         line-height: themes.type-scale('title-2xl-line-height');
     }
@@ -66,7 +66,7 @@
     @include font-size(themes.type-scale('title-lg-size'));
     line-height: themes.type-scale('title-lg-line-height');
 
-    @media #{dist.$mq-md} {
+    @media #{tokens.$mq-md} {
         @include font-size(themes.type-scale('title-xl-size'));
         line-height: themes.type-scale('title-xl-line-height');
     }
@@ -76,7 +76,7 @@
     @include font-size(themes.type-scale('title-md-size'));
     line-height: themes.type-scale('title-md-line-height');
 
-    @media #{dist.$mq-md} {
+    @media #{tokens.$mq-md} {
         @include font-size(themes.type-scale('title-lg-size'));
         line-height: themes.type-scale('title-lg-line-height');
     }
@@ -86,7 +86,7 @@
     @include font-size(themes.type-scale('title-sm-size'));
     line-height: themes.type-scale('title-sm-line-height');
 
-    @media #{dist.$mq-md} {
+    @media #{tokens.$mq-md} {
         @include font-size(themes.type-scale('title-md-size'));
         line-height: themes.type-scale('title-md-line-height');
     }
@@ -96,7 +96,7 @@
     @include font-size(themes.type-scale('title-xs-size'));
     line-height: themes.type-scale('title-xs-line-height');
 
-    @media #{dist.$mq-md} {
+    @media #{tokens.$mq-md} {
         @include font-size(themes.type-scale('title-sm-size'));
         line-height: themes.type-scale('title-sm-line-height');
     }
@@ -106,7 +106,7 @@
     @include font-size(themes.type-scale('title-2xs-size'));
     line-height: themes.type-scale('title-2xs-line-height');
 
-    @media #{dist.$mq-md} {
+    @media #{tokens.$mq-md} {
         @include font-size(themes.type-scale('title-xs-size'));
         line-height: themes.type-scale('title-xs-line-height');
     }
@@ -116,7 +116,7 @@
     @include font-size(themes.type-scale('title-3xs-size'));
     line-height: themes.type-scale('title-3xs-line-height');
 
-    @media #{dist.$mq-md} {
+    @media #{tokens.$mq-md} {
         @include font-size(themes.type-scale('title-2xs-size'));
         line-height: themes.type-scale('title-2xs-line-height');
     }

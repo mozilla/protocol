@@ -32,7 +32,7 @@ legend {
         @include forms.field-label;
     }
     @include text-body-lg;
-    font-family: lib.get-theme('title-font-family');
+    font-family: get-theme('title-font-family');
     font-weight: bold;
     margin-bottom: forms.$field-v-spacing;
 }
@@ -107,7 +107,7 @@ label {
     @include forms.field-label;
 
     &.mzp-u-inline {
-        @include lib.bidi(((padding, 0 lib.$spacing-sm 0 0, 0 0 0 lib.$spacing-sm),));
+        @include bidi(((padding, 0 $spacing-sm 0 0, 0 0 0 $spacing-sm),));
         display: inline;
     }
 }

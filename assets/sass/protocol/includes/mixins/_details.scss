@@ -2,10 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@use '@mozilla-protocol/tokens/dist';
+@use '../tokens';
 @use 'bidi';
 @use 'images';
-@use '../mixins';
+@use 'utils';
 
 @mixin details {
     .is-summary {
@@ -30,13 +30,13 @@
 
 @mixin summary {
     position: relative;
-    @include bidi.bidi(((padding-right, dist.$layout-md, padding-left, 0),));
+    @include bidi.bidi(((padding-right, tokens.$layout-md, padding-left, 0),));
 
     &::before {
         background: images.$url-image-expand-black top left no-repeat;
-        @include mixins.background-size(20px, 20px);
+        @include utils.background-size(20px, 20px);
         @include bidi.bidi(((right, 8px, left, auto),));
-        @include mixins.transition(transform 100ms ease-in-out);
+        @include utils.transition(transform 100ms ease-in-out);
         content: '';
         height: 20px;
         margin-top: -8px;
@@ -47,5 +47,5 @@
 }
 
 @mixin summary-open {
-    @include mixins.transform(rotate(45deg));
+    @include utils.transform(rotate(45deg));
 }

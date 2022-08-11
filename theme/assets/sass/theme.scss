@@ -2,12 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@use '../../../node_modules/@mozilla-protocol/tokens/dist/index';
-@use '../../../assets/sass/protocol/includes/lib' with ($brand-theme: 'mozilla', $font-path: '/protocol/fonts');
+@use '/assets/sass/protocol/includes/lib' with ($font-path: '/protocol/fonts');
 
-@use '../../../assets/sass/protocol/includes/fonts/inter';
-@use '../../../assets/sass/protocol/includes/fonts/metropolis';
-@use '../../../assets/sass/protocol/includes/fonts/zilla-slab';
+@use '/assets/sass/protocol/includes/fonts/inter';
+@use '/assets/sass/protocol/includes/fonts/metropolis';
+@use '/assets/sass/protocol/includes/fonts/zilla-slab';
 
 // Settings
 @use 'settings/settings';

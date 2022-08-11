@@ -3,6 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use 'logo' as *;
+@use '../../includes/lib' as *;
 
 // can't re-use wordmark mixin because VPN uses the "stack" version by default
 @each $layout-size, $logo-size in $logo-sizes {

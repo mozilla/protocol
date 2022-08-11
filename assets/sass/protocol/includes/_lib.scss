@@ -5,11 +5,8 @@
 // Forward user-configurable variables
 @forward 'config';
 
-// Namespace theme functions
-@forward 'themes';
-
 // Import all the things!
-@forward '../../../../node_modules/@mozilla-protocol/tokens/dist/index.scss';
+@forward 'tokens';
+@forward 'themes';
 @forward 'functions';
-@forward 'mixins';
-@forward 'utils' hide str-replace;
+@forward 'mixins' hide str-replace;
