@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .Document-title {
     @include text-title-lg;
     font-family: get-theme('title-font-family');

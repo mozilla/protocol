@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .Prose {
     width: 100%;
 
@@ -17,7 +18,7 @@
         }
 
         &:active {
-            background-color: rgb(0 0 0 / 0.05);
+            background-color: rgb(0, 0, 0 / 0.05);
         }
     }
 
@@ -70,7 +71,7 @@
         background-color: #f8f8f8;
         border-radius: $border-radius-xs;
         color: #000080;
-        outline: 1px solid rgb(0 0 0 / 0.05);
+        outline: 1px solid rgb(0, 0, 0 / 0.05);
         padding: 0 0.5ch;
     }
 }

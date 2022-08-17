@@ -20,6 +20,7 @@
 //    str-replace($string, ' ', '-')
 
 @function str-replace($string, $search, $replace: '') {
+    /* stylelint-disable-next-line scss/no-global-function-names */
     $index: str-index($string, $search);
 
     @if $index {
@@ -40,6 +41,7 @@
     $collection: ();
 
     @each $map in $maps {
+        /* stylelint-disable-next-line scss/no-global-function-names */
         $collection: map-merge($collection, $map);
     }
 

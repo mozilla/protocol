@@ -1,12 +1,13 @@
+/* stylelint-disable selector-class-pattern */
 .Browser-tabs {
     background-color: white;
-    border-bottom: 1px solid rgb(70 81 94 / 0.25);
+    border-bottom: 1px solid rgb(70, 81, 94 / 0.25);
 }
 
 .Browser-tab {
     a:hover {
         background: #f1f1f1;
-        border-bottom: 2px solid rgb(70 81 94 / 0.25);
+        border-bottom: 2px solid rgb(70, 81, 94 / 0.25);
     }
 
     a:focus {
@@ -25,7 +26,7 @@
         background-color: #f8f8f8;
         border-radius: $border-radius-xs;
         color: #000080;
-        outline: 1px solid rgb(0 0 0 / 0.05);
+        outline: 1px solid rgb(0, 0, 0 / 0.05);
         padding: 0 0.5ch;
     }
 }
