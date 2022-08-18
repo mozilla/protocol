@@ -5,8 +5,8 @@
     "rules": {
         "indentation": 4,
         "string-quotes": "single",
-        "declaration-empty-line-before": "never", 
-        "declaration-no-important": true, 
+        "declaration-empty-line-before": "never",
+        "declaration-no-important": true,
         "color-function-notation": "legacy",
         "alpha-value-notation": "number",
         "property-no-vendor-prefix": null,
@@ -33,31 +33,8 @@
                 ]
             }
         ],
-        "font-family-name-quotes": "always-where-recommended",
-        "function-name-case": "lower",
         "function-url-no-scheme-relative": true,
-        "function-url-quotes": "always",
-        "number-no-trailing-zeros": true,
-        "length-zero-no-unit": true,
-        "unit-case": "lower",
-        "property-case": "lower",
-        "declaration-block-single-line-max-declarations": 1,
-        "declaration-block-trailing-semicolon": "always",
-        "declaration-block-semicolon-newline-after": "always-multi-line",
-        "selector-pseudo-element-case": "lower",
-        "selector-type-case": "lower",
-        "selector-max-empty-lines": 0,
-        "media-feature-name-case": "lower",
-        "media-feature-name-no-unknown": [
-            true,
-            {
-                "ignoreMediaFeatureNames": ["min--moz-device-pixel-ratio"]
-            }
-        ],
         "max-nesting-depth": 5,
-        "no-unknown-animations": true,
-        "no-extra-semicolons": true,
-        "no-missing-end-of-source-newline": true,
-        "no-eol-whitespace": true
+        "no-unknown-animations": true
     }
 }
