@@ -1,7 +1,5 @@
 {
     "extends": "stylelint-config-standard-scss",
-    "files": ["**/*.scss"],
-    "customSyntax": "postcss-scss",
     "rules": {
         "indentation": 4,
         "string-quotes": "single",
