@@ -2,8 +2,6 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-/* stylelint-disable no-duplicate-selectors */
-
 @import '../includes/lib';
 @import '../includes/forms/lib';
 
@@ -74,7 +72,7 @@
 // * -------------------------------------------------------------------------- */
 // Button shape and size
 
-.mzp-c-button,
+.mzp-c-button, /* stylelint-disable-line no-duplicate-selectors */
 a.mzp-c-button {
     @include border-box;
     @include font-size(16px);
@@ -137,6 +135,7 @@ a.mzp-c-button {
 // * -------------------------------------------------------------------------- */
 // Primary
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .mzp-c-button,
 a.mzp-c-button {
     background-color: $color-black;
@@ -158,6 +157,7 @@ a.mzp-c-button {
 // * -------------------------------------------------------------------------- */
 // Secondary
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .mzp-c-button,
 a.mzp-c-button {
     &.mzp-t-secondary {
@@ -213,6 +213,7 @@ a.mzp-c-button.mzp-t-product {
 // * -------------------------------------------------------------------------- */
 // Neutral Buttons
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .mzp-c-button,
 a.mzp-c-button {
     &.mzp-t-neutral {

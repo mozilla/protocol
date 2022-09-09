@@ -68,7 +68,7 @@ textarea {
 }
 
 // Remove the inner padding in Chrome and Safari on macOS.
-/* stylelint-disable-next-line value-no-vendor-prefix */
+/* stylelint-disable-line value-no-vendor-prefix */
 [type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
 }

@@ -2,8 +2,6 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-/* stylelint-disable declaration-block-no-duplicate-properties */
-
 @use 'sass:math';
 @import
     'mixins/at2x',
@@ -30,68 +28,52 @@
 // Mixins for CSS3 properties that still need prefixes in some browsers.
 @mixin transition($transition...) {
     transition: $transition;
-    transition: $transition;
 }
 
 @mixin transform($transform...) {
-    transform: $transform;
     transform: $transform;
 }
 
 @mixin transform-origin($transform-origin...) {
     transform-origin: $transform-origin;
-    transform-origin: $transform-origin;
 }
 
 @mixin transform-style($transform-style...) {
-    transform-style: $transform-style;
     transform-style: $transform-style;
 }
 
 // Extra mixins for fine-tuned transitions
 @mixin transition-property($transition-property...) {
     transition-property: $transition-property;
-    transition-property: $transition-property;
 }
 
 @mixin transition-duration($transition-duration...) {
-    transition-duration: $transition-duration;
     transition-duration: $transition-duration;
 }
 
 @mixin transition-timing-function($transition-timing-function...) {
     transition-timing-function: $transition-timing-function;
-    transition-timing-function: $transition-timing-function;
 }
 
 @mixin transition-delay($transition-delay...) {
-    transition-delay: $transition-delay;
     transition-delay: $transition-delay;
 }
 
 @mixin animation($parameters...) {
     animation: $parameters;
-    animation: $parameters;
 }
 
 @mixin border-box {
     box-sizing: border-box;
-    box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 @mixin flexbox {
-    display: box;
-    display: box;
-    display: flexbox;
-    display: flex;
     display: flex;
 }
 
 @mixin flex($values: auto) {
     -webkit-box-flex: $values;
     -moz-box-flex: $values;
-    flex: $values;
     flex: $values;
 }
 
@@ -101,7 +83,6 @@
 }
 
 @mixin flex-wrap($value: wrap) {
-    flex-wrap: $value;
     flex-wrap: $value;
 }
 
@@ -117,17 +98,13 @@
 
 @mixin background-size($sizes...) {
     background-size: $sizes;
-    background-size: $sizes;
 }
 
 @mixin box-decoration-break($value: slice) {
     box-decoration-break: $value;
-    box-decoration-break: $value;
 }
 
 @mixin appearance($value) {
-    appearance: $value;
-    appearance: $value;
     appearance: $value;
 }
 
@@ -192,14 +169,7 @@
 
 // Multiple columns
 @mixin multi-column($width: auto, $count: auto, $gap: normal) {
-    column-width: $width;
-    column-width: $width;
-    column-width: $width;
-    column-count: $count;
-    column-count: $count;
-    column-count: $count;
-    column-gap: $gap;
-    column-gap: $gap;
+    columns: $width $count;
     column-gap: $gap;
 }
 

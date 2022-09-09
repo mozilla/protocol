@@ -184,8 +184,8 @@
 // 3 picto card layout
 // On small screens cards stack vertically and span full container width.
 // On medium screens cards span 1 third width.
-/* stylelint-disable-next-line no-duplicate-selectors */
-.mzp-l-card-third {
+
+.mzp-l-card-third { /* stylelint-disable-line no-duplicate-selectors */
     @media #{$mq-md} {
         @include clearfix;
 
@@ -232,8 +232,7 @@
         }
     }
 
-    /* stylelint-disable-next-line no-duplicate-selectors */
-    .mzp-l-card-half .mzp-c-card {
+    .mzp-l-card-half .mzp-c-card { /* stylelint-disable-line no-duplicate-selectors */
         width: calc(50% - (#{$spacing-xl} - (#{$spacing-xl} * 0.5)));
     }
 }

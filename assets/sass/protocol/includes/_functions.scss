@@ -3,6 +3,8 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use 'sass:math';
+@use 'sass:string';
+@use 'sass:map';
 
 // Convert pixel units to rems, assuming a 16px base size
 // Usage:
@@ -20,11 +22,10 @@
 //    str-replace($string, ' ', '-')
 
 @function str-replace($string, $search, $replace: '') {
-    /* stylelint-disable-next-line scss/no-global-function-names */
-    $index: str-index($string, $search);
+    $index: string.index($string, $search);
 
     @if $index {
-        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+        @return string.slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
     }
 
     @return $string;
@@ -41,8 +42,7 @@
     $collection: ();
 
     @each $map in $maps {
-        /* stylelint-disable-next-line scss/no-global-function-names */
-        $collection: map-merge($collection, $map);
+        $collection: map.merge($collection, $map);
     }
 
     @return $collection;

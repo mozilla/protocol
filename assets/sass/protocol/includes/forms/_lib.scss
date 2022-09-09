@@ -2,9 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-/* stylelint-disable scss/no-global-function-names */
-
 // Import all the things!
+@use 'sass:color';
 @import '../lib';
 
 // forms
@@ -30,7 +29,7 @@ $field-padding: $spacing-sm;
 $field-h-spacing: $spacing-md;
 $field-v-spacing: $spacing-lg;
 $field-focus-ring: 0 0 0 2px rgba($color-blue-40, 0.5);
-$field-focus-ring-dark: 0 0 0 2px mix($color-blue-40, $color-white);
+$field-focus-ring-dark: 0 0 0 2px color.mix($color-blue-40, $color-white);
 $field-focus-ring-error: 0 0 0 2px rgba($color-red-50, 0.5);
 
 // buttons
