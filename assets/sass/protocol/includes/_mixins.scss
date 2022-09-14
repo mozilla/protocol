@@ -3,6 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use 'sass:math';
+
 @import
     'mixins/at2x',
     'mixins/gradients',
@@ -27,53 +28,69 @@
 
 // Mixins for CSS3 properties that still need prefixes in some browsers.
 @mixin transition($transition...) {
+    -webkit-transition: $transition;
     transition: $transition;
 }
 
 @mixin transform($transform...) {
+    -webkit-transform: $transform;
     transform: $transform;
 }
 
 @mixin transform-origin($transform-origin...) {
+    -webkit-transform-origin: $transform-origin;
     transform-origin: $transform-origin;
 }
 
 @mixin transform-style($transform-style...) {
+    -webkit-transform-style: $transform-style;
     transform-style: $transform-style;
 }
 
 // Extra mixins for fine-tuned transitions
 @mixin transition-property($transition-property...) {
+    -webkit-transition-property: $transition-property;
     transition-property: $transition-property;
 }
 
 @mixin transition-duration($transition-duration...) {
+    -webkit-transition-duration: $transition-duration;
     transition-duration: $transition-duration;
 }
 
 @mixin transition-timing-function($transition-timing-function...) {
+    -webkit-transition-timing-function: $transition-timing-function;
     transition-timing-function: $transition-timing-function;
 }
 
 @mixin transition-delay($transition-delay...) {
+    -webkit-transition-delay: $transition-delay;
     transition-delay: $transition-delay;
 }
 
 @mixin animation($parameters...) {
+    -webkit-animation: $parameters;
     animation: $parameters;
 }
 
 @mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 @mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
 }
 
 @mixin flex($values: auto) {
     -webkit-box-flex: $values;
     -moz-box-flex: $values;
+    -webkit-flex: $values;
     flex: $values;
 }
 
@@ -83,6 +100,7 @@
 }
 
 @mixin flex-wrap($value: wrap) {
+    -ms-flex-wrap: $value;
     flex-wrap: $value;
 }
 
@@ -97,14 +115,18 @@
 }
 
 @mixin background-size($sizes...) {
+    -webkit-background-size: $sizes;
     background-size: $sizes;
 }
 
 @mixin box-decoration-break($value: slice) {
+    -webkit-box-decoration-break: $value;
     box-decoration-break: $value;
 }
 
 @mixin appearance($value) {
+    -webkit-appearance: $value;
+    -moz-appearance: $value;
     appearance: $value;
 }
 
@@ -162,14 +184,17 @@
     &::before {
         content: '\25B8\00A0'; // triangle+space
         white-space: nowrap;
-
         @include transform(rotate(180deg));
     }
 }
 
 // Multiple columns
 @mixin multi-column($width: auto, $count: auto, $gap: normal) {
+    -webkit-columns: $width $count;
+    -moz-columns: $width $count;
     columns: $width $count;
+    -webkit-column-gap: $gap;
+    -moz-column-gap: $gap;
     column-gap: $gap;
 }
 
