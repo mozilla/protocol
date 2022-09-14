@@ -4,7 +4,6 @@
 
 @import '../../includes/lib';
 
-
 // We so rarely use tables that it's best not to give them any
 // base styling and instead use a modifier class for those few
 // times we need to display tabular data.
@@ -14,15 +13,15 @@
 
     caption {
         @include bidi(((text-align, left, right),));
-        margin-bottom: .25em;
+        margin-bottom: 0.25em;
         width: 100%;
     }
 
     th,
     td {
         @include bidi(((text-align, left, right),));
-        border-top: 1px solid rgba(0, 0, 0, .2);
-        padding: .5em 10px;
+        border-top: 1px solid rgb(0, 0, 0 / 0.2);
+        padding: 0.5em 10px;
         text-align: left;
     }
 

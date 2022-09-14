@@ -4,7 +4,7 @@
 
 @import '../includes/lib';
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // A single large feature card with media, headline & description.
 
 .mzp-c-card-feature {
@@ -30,7 +30,7 @@
         position: relative;
     }
 
-    .mzp-c-card-feature-media {
+    .mzp-c-card-feature-media { /* stylelint-disable-line no-duplicate-selectors */
         img,
         video {
             height: auto;
@@ -145,7 +145,7 @@
         }
     }
 
-    @supports(display: grid) {
+    @supports (display: grid) {
         @media #{$mq-md} {
             &.mzp-l-card-feature-left-half,
             &.mzp-l-card-feature-right-half,

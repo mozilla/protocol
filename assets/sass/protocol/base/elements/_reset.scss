@@ -3,31 +3,61 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 // Set new HTML5 elements to block or inline-block for older browsers
-article, aside, details, figcaption, figure, footer, header,
-hgroup, main, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
     display: block;
 }
 
-audio, video, canvas {
+audio,
+video,
+canvas {
     display: inline-block;
 }
 
-html, body,
-h1, h2, h3, h4, h5, h6, hr,
-p, pre, blockquote, figure, figcaption,
-table, ul, ol, li, dl, dt, dd {
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre,
+blockquote,
+figure,
+figcaption,
+table,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
     margin: 0;
     padding: 0;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
     content: '';
 }
 
-blockquote, q {
+blockquote,
+q {
     quotes: '' '';
 }
 
@@ -36,11 +66,15 @@ table {
     border-spacing: 0;
 }
 
-iframe, a img {
+iframe,
+a img {
     border: 0;
 }
 
-img, video, object, embed {
+img,
+video,
+object,
+embed {
     -ms-interpolation-mode: bicubic;
     height: auto;
     max-width: 100%;

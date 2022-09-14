@@ -4,6 +4,7 @@
 * **component:** Add centering classes for Logo and Wordmark. (#718)
 * **docs:** Migrate Protocol documentation site to Fractal.
 * **node:** Create a Webpack config for compiling docs using Fractal.
+* **css:** Updated stylelint ruleset to match Bedrock's linting pattern. (#814)
 
 ## Bug Fixes
 * **node:** Make sure to build NPM package using production mode.

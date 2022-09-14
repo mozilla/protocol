@@ -4,7 +4,6 @@
 
 @import '../includes/lib';
 
-
 @media #{$mq-md} {
     .mzp-l-columns {
         display: grid;
@@ -53,7 +52,7 @@
 
 // Smaller gutters in medium containers
 .mzp-t-content-md .mzp-l-columns,
-.mzp-t-content-md.mzp-l-columns{
+.mzp-t-content-md.mzp-l-columns {
     grid-column-gap: get-theme('h-grid-md');
     column-gap: get-theme('h-grid-md');
 }
@@ -70,5 +69,5 @@
 .mzp-t-content-lg .mzp-l-columns.mzp-t-columns-four,
 .mzp-t-content-lg.mzp-l-columns.mzp-t-columns-four {
     grid-column-gap: get-theme('h-grid-md');
-    column-gap:get-theme('h-grid-md');
+    column-gap: get-theme('h-grid-md');
 }

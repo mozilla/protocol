@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Brand theme
 
 // Protocol supports two distinct brands - Firefox and Mozilla
@@ -20,8 +20,7 @@
 
 $brand-theme: 'mozilla' !default;
 
-
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Type scale
 
 // Protocol uses a modular type scale with a range of predefined
@@ -42,9 +41,8 @@ $brand-theme: 'mozilla' !default;
 
 $type-scale: 'standard' !default;
 
-
 // Import all the things!
-@import './node_modules/@mozilla-protocol/tokens/dist/index.scss';
+@import './node_modules/@mozilla-protocol/tokens/dist/index';
 @import 'functions';
 @import 'themes';
 @import 'mixins';

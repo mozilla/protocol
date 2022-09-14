@@ -1,38 +1,38 @@
+/* stylelint-disable selector-class-pattern */
 .Header {
-  background-color: get-theme('background-color-inverse');
+    background-color: get-theme('background-color-inverse');
 }
 
 .Header-button {
-  width: 4rem;
-  height: 4rem;
+    width: 4rem;
+    height: 4rem;
 }
 
 .Header-title {
-  font-size: 1.6rem;
-  font-family: $font-stack-mozilla;
-  font-weight: bold;
-  padding-top: 0;
-  padding-bottom: 0;
+    font-size: 1.6rem;
+    font-family: $font-stack-mozilla;
+    font-weight: bold;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .Header-logo {
-  display: block;
-  height: 32px;
+    display: block;
+    height: 32px;
 }
 
 .Header-version {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .Header-menu {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1rem;
+    list-style: none;
 
-  list-style: none;
-
-  li + li {
-    margin-left: 1rem;
-  }
+    li + li {
+        margin-left: 1rem;
+    }
 }

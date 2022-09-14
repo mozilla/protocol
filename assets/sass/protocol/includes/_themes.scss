@@ -6,33 +6,28 @@
 // themes. Mixins and functions can draw from these variable maps, swapping to
 // a different map based on the value of the global $brand-theme variable.
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Vertical and Horizontal Spacing
 
 $theme-spacing: (
     // xs
     v-grid-xs: $layout-md,
     h-grid-xs: $layout-xs,
-
     // sm is the same as xs
     v-grid-sm: $layout-md,
     h-grid-sm: $layout-xs,
-
     // md
     v-grid-md: $layout-md,
     h-grid-md: $layout-lg,
-
-    // lg is the same as md
+    // lg is the same as medium
     v-grid-lg: $layout-md,
     h-grid-lg: $layout-lg,
-
     // xl
     v-grid-xl: $layout-xl,
     h-grid-xl: 80px,
 );
 
-
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Fonts
 
 $theme-fonts-firefox: (
@@ -40,15 +35,13 @@ $theme-fonts-firefox: (
     button-font-family: $font-stack-firefox,
     title-font-family: $font-stack-firefox,
 );
-
 $theme-fonts-mozilla: (
     body-font-family: $font-stack-base,
     button-font-family: $font-stack-base,
     title-font-family: $font-stack-mozilla,
 );
 
-
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Colors
 
 $theme-colors-firefox: (
@@ -73,7 +66,6 @@ $theme-colors-firefox: (
     title-text-color-inverse: $color-white,
     title-text-color: $color-marketing-gray-99,
 );
-
 $theme-colors-mozilla: (
     background-color-tertiary-inverse: $color-dark-gray-40,
     background-color-tertiary: $color-light-gray-30,
@@ -97,13 +89,12 @@ $theme-colors-mozilla: (
     title-text-color: $color-black,
 );
 
-
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Type scale
-//
+
 // These values are used by the type-scale() function
 // defined in includes/functions/_typography.scss
-//
+
 // Avoid referencing these values directly; Use the function.
 
 $theme-type-scale-firefox: (
@@ -130,7 +121,6 @@ $theme-type-scale-firefox: (
     body-xs-size: 12px,
     body-line-height: 1.5,
 );
-
 $theme-type-scale-mozilla: (
     title-2xl-size: 76px,
     title-2xl-line-height: 1,
@@ -156,16 +146,15 @@ $theme-type-scale-mozilla: (
     body-line-height: 1.5,
 );
 
-
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Condensed Type scale
-//
+
 // This smaller scale is primarily intended for web apps.
 // Use the standard type scale for marketing sites.
 
 // The type-scale() function draws from this map to output
 // different sizing based on the $type-scale variable.
-//
+
 // Avoid referencing these values directly.
 
 $theme-type-scale-condensed-firefox: (
@@ -192,7 +181,6 @@ $theme-type-scale-condensed-firefox: (
     body-xs-size: 11px,
     body-line-height: 1.5,
 );
-
 $theme-type-scale-condensed-mozilla: (
     title-2xl-size: 34px,
     title-2xl-line-height: 1,
@@ -217,7 +205,6 @@ $theme-type-scale-condensed-mozilla: (
     body-xs-size: 11px,
     body-line-height: 1.5,
 );
-
 
 // Collect the maps for easier reference, so you don't have to refer to a specific submap.
 // Usage:

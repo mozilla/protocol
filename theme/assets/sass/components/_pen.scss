@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .Pen {
     background-color: $color-marketing-gray-10;
 }
@@ -15,7 +16,7 @@
     @include text-title-xs;
     color: get-theme('title-text-color');
     font-family: get-theme('title-font-family');
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 
     @media #{$mq-md} {
         margin-bottom: 0;

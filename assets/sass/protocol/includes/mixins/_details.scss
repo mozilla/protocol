@@ -20,17 +20,19 @@
         }
     }
 
-    .is-closed[aria-hidden="true"] {
+    .is-closed[aria-hidden='true'] {
         display: none;
     }
 }
 
 @mixin summary {
     position: relative;
+
     @include bidi(((padding-right, $layout-md, padding-left, 0),));
 
-    &:before {
+    &::before {
         background: $url-image-expand-black top left no-repeat;
+
         @include background-size(20px, 20px);
         @include bidi(((right, 8px, left, auto),));
         @include transition(transform 100ms ease-in-out);

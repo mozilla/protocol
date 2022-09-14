@@ -20,14 +20,14 @@ details .is-summary button,
 summary.is-summary {
     @include bidi(((padding-right, 0, padding-left, 0),));
 
-    &:before {
+    &::before {
         display: none;
     }
 }
 
-details[open] summary:before,
-details .is-summary button[aria-expanded=true]:before,
-.mzp-c-details .is-summary button[aria-expanded=true]:before {
+details[open] summary::before,
+details .is-summary button[aria-expanded='true']::before,
+.mzp-c-details .is-summary button[aria-expanded='true']::before {
     @include summary-open;
 }
 

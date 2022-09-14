@@ -69,10 +69,10 @@
     @include product-states;
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Button shape and size
 
-.mzp-c-button,
+.mzp-c-button, /* stylelint-disable-line no-duplicate-selectors */
 a.mzp-c-button {
     @include border-box;
     @include font-size(16px);
@@ -108,7 +108,6 @@ a.mzp-c-button {
     }
 }
 
-
 // Sizes
 
 .mzp-c-button.mzp-t-sm {
@@ -133,10 +132,10 @@ a.mzp-c-button {
     padding: 10px $spacing-lg;
 }
 
-
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Primary
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .mzp-c-button,
 a.mzp-c-button {
     background-color: $color-black;
@@ -155,9 +154,10 @@ a.mzp-c-button {
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Secondary
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .mzp-c-button,
 a.mzp-c-button {
     &.mzp-t-secondary {
@@ -178,7 +178,7 @@ a.mzp-c-button {
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Product Buttons
 
 .mzp-c-button.mzp-t-product,
@@ -201,7 +201,7 @@ a.mzp-c-button.mzp-t-product {
 
         // dark
         &.mzp-t-dark {
-            background-color: rgba($color-white, .3);
+            background-color: rgba($color-white, 0.3);
             border-color: transparent;
             color: $color-white;
 
@@ -210,9 +210,10 @@ a.mzp-c-button.mzp-t-product {
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Neutral Buttons
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .mzp-c-button,
 a.mzp-c-button {
     &.mzp-t-neutral {
@@ -236,10 +237,10 @@ a.mzp-c-button {
             color: $color-marketing-gray-70;
         }
 
-         // dark
-         &.mzp-t-dark {
-            background-color: rgba($color-white, .1);
-            border-color: rgba($color-white, .6);
+        // dark
+        &.mzp-t-dark {
+            background-color: rgba($color-white, 0.1);
+            border-color: rgba($color-white, 0.6);
             color: $color-white;
 
             &:focus {
@@ -247,21 +248,21 @@ a.mzp-c-button {
             }
 
             &:hover {
-                background-color: rgba($color-white, .2);
-                border-color: rgba($color-white, .6);
+                background-color: rgba($color-white, 0.2);
+                border-color: rgba($color-white, 0.6);
                 color: $color-white;
             }
 
             &:active {
-                background-color: rgba($color-white, .2);
-                border-color: rgba($color-white, .4);
+                background-color: rgba($color-white, 0.2);
+                border-color: rgba($color-white, 0.4);
                 color: $color-white;
             }
         }
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Download Button Molecule
 
 .mzp-c-button-download-container {

@@ -19,7 +19,7 @@ blockquote {
         @include text-title-xs;
         color: get-theme('body-text-color-secondary');
 
-        &:before {
+        &::before {
             content: '— ';
         }
     }

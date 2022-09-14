@@ -33,7 +33,7 @@ html.mzp-is-noscroll {
 .mzp-c-modal {
     @include animation(mzp-a-fade-in 300ms ease-in 0ms 1 normal both);
     background: $color-black;
-    background: rgba(0, 0, 0, .85);
+    background: rgb(0, 0, 0 / 0.85);
     bottom: 0;
     height: 101%;
     left: 0;
@@ -51,12 +51,12 @@ html.mzp-is-noscroll {
 
 .mzp-c-modal-inner {
     @include clearfix;
-    background: rgba(0, 0, 0, .9);
+    background: rgb(0, 0, 0 / 0.9);
     max-width: 1200px;
     padding: $spacing-xl;
     position: relative;
 
-    &> header {
+    & > header {
         @include bidi(((padding-right, $spacing-xl * 2, padding-left, 0),));
 
         h2 {
@@ -81,6 +81,7 @@ html.mzp-is-noscroll {
     .mzp-c-modal-button-close {
         @include image-replaced;
         background: transparent url('#{$image-path}/icons/close-white.svg') center center no-repeat;
+
         @include background-size(20px 20px);
         border: none;
         height: 42px;
@@ -90,7 +91,7 @@ html.mzp-is-noscroll {
 
         &:hover,
         &:focus {
-            @include transition(transform .1s ease-in-out);
+            @include transition(transform 0.1s ease-in-out);
             @include transform(scale(1.1));
         }
 
@@ -111,7 +112,8 @@ html.mzp-is-noscroll {
 
 // Modifier for showing full content width media, such as images or video.
 .mzp-has-media .mzp-c-modal-overlay-contents {
-    img, video {
+    img,
+    video {
         display: block;
         width: 100%;
         margin-bottom: $spacing-xl;

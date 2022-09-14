@@ -27,7 +27,7 @@
         color: $color-marketing-gray-80;
         display: inline-block;
 
-        &:after {
+        &::after {
             @include bidi((
                 (margin-left, $spacing-xs, margin-right, 0),
                 (transform, none, translateY(3px) rotate(180deg)),
@@ -36,7 +36,7 @@
             display: inline-block;
         }
 
-        &:last-child:after {
+        &:last-child::after {
             content: '';
             margin: 0;
         }
@@ -53,20 +53,20 @@
     }
 
     li {
-        margin-bottom: .25em;
+        margin-bottom: 0.25em;
     }
 
     a {
         border-radius: $border-radius-xs;
         display: block;
-        padding: .35em $spacing-lg;
+        padding: 0.35em $spacing-lg;
         text-decoration: none;
         transition: background-color 100ms ease-in;
 
         &:hover,
         &:focus,
         &:active {
-            background-color: rgba(0, 0, 0, .05);
+            background-color: rgb(0, 0, 0 / 0.05);
             text-decoration: underline;
         }
     }
@@ -85,7 +85,7 @@
     ));
     position: relative;
 
-    &:after {
+    &::after {
         @include bidi((
             (right, 0, left, auto),
         ));
@@ -102,10 +102,10 @@
     @include font-base;
     @include text-body-lg;
     line-height: 1.5;
-    margin-bottom: .25em;
+    margin-bottom: 0.25em;
 
     a {
-        padding: .35em $spacing-md;
+        padding: 0.35em $spacing-md;
     }
 }
 
@@ -120,12 +120,12 @@
         display: none;
     }
 
-    .mzp-c-sidemenu-label:after {
+    .mzp-c-sidemenu-label::after {
         content: '\25B8'; // right pointing triangle
     }
 
     .mzp-is-active {
-        .mzp-c-sidemenu-label:after {
+        .mzp-c-sidemenu-label::after {
             transform: rotate(-90deg);
         }
 

@@ -4,7 +4,7 @@
 
 @import '../includes/lib';
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Base card class
 
 .mzp-c-card {
@@ -14,7 +14,7 @@
 
     // Preserve aspect ratio of images and avoid content jump when loading.
     &.mzp-has-aspect-1-1 .mzp-c-card-media-wrapper {
-         @include aspect-ratio(1, 1);
+        @include aspect-ratio(1, 1);
     }
 
     &.mzp-has-aspect-16-9 .mzp-c-card-media-wrapper {
@@ -104,15 +104,14 @@
             }
         }
 
-
         &:hover,
         &:active,
         &:focus {
-            @include transition(box-shadow .1s ease-in-out);
+            @include transition(box-shadow 0.1s ease-in-out);
             box-shadow: 0 0 0 4px $color-marketing-gray-20;
 
             .mzp-c-card-title,
-            .mzp-c-card-cta-text  {
+            .mzp-c-card-cta-text {
                 @include transition(border-bottom-color 100ms ease-in-out);
                 border-bottom: 2px solid;
             }
@@ -134,7 +133,7 @@
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Dark mode styling
 
 .mzp-c-card.mzp-t-dark,
@@ -142,17 +141,21 @@
     background-color: get-theme('background-color-inverse');
     color: get-theme('body-text-color-inverse');
 
-    .mzp-c-card-tag, .mzp-c-card-meta {
+    .mzp-c-card-tag,
+    .mzp-c-card-meta {
         color: get-theme('body-text-color-inverse');
     }
 
     .mzp-c-card-block-link {
-        &:hover, &:active, &:focus {
+        &:hover,
+        &:active,
+        &:focus {
             box-shadow: 0 0 0 4px $color-marketing-gray-80;
         }
 
-        &:link, &:visited {
-        color: get-theme('body-text-color-inverse');
+        &:link,
+        &:visited {
+            color: get-theme('body-text-color-inverse');
 
             .mzp-c-card-cta-text {
                 color: get-theme('body-text-color-inverse');
@@ -161,7 +164,7 @@
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Medium sized card
 
 .mzp-c-card.mzp-c-card-medium {
@@ -170,11 +173,10 @@
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Card with larger title
 
 .mzp-c-card.mzp-c-card-large {
-
     .mzp-c-card-title {
         @include text-title-md;
     }
@@ -188,11 +190,10 @@
     }
 }
 
-//* -------------------------------------------------------------------------- */
+// * -------------------------------------------------------------------------- */
 // Card with extra small title and text
 
 .mzp-c-card.mzp-c-card-extra-small {
-
     .mzp-c-card-tag,
     .mzp-c-card-cta {
         @include text-body-xs;

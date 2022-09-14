@@ -2,6 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+@use 'sass:string';
 
 // A helper mixin for applying high-resolution background images (based on http://www.retinajs.com)
 // File-names should follow:
@@ -21,7 +22,7 @@
     // Set a counter and get the length of the image path.
     $position: -1;
     $strpath: '#{$path}';
-    $length: str-length($strpath);
+    $length: string.length($strpath);
 
     // Loop through the image path and find the position of
     // the dot to determine the file extension.
@@ -29,21 +30,22 @@
     // is always lower than the start point s the loop always
     // increments (10 is an arbitrary number).
     @for $i from $length through $length - 10 {
-      @if $position == -1 {
-          $char : str-slice($strpath, $i, $i);
-            @if str-index($char, '.') == 1 {
+        @if $position == -1 {
+            $char: string.slice($strpath, $i, $i);
+
+            @if string.index($char, '.') == 1 {
                 $position: $i;
             }
         }
     }
 
-   // If we were able to figure out where the extension is,
-   // slice the path into a base and an extension. Use that to
-   // produce urls for different density environments.
+    // If we were able to figure out where the extension is,
+    // slice the path into a base and an extension. Use that to
+    // produce urls for different density environments.
     @if $position != -1 {
-        $base: str-slice($strpath, 1, $position - 1);
-        $ext: str-slice($strpath, $position + 1, $length);
-        $at2x_path: '#{$base}#{$hr-suffix}.#{$ext}';
+        $base: string.slice($strpath, 1, $position - 1);
+        $ext: string.slice($strpath, $position + 1, $length);
+        $at2x_path: '#{$base}#{$hr-suffix}.#{$ext}'; /* stylelint-disable-line scss/dollar-variable-pattern */
 
         // Regular image for most screens.
         background-image: url('#{$path}');
