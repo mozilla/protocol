@@ -20,7 +20,7 @@
     th,
     td {
         @include bidi(((text-align, left, right),));
-        border-top: 1px solid rgb(0, 0, 0 / 0.2);
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
         padding: 0.5em 10px;
         text-align: left;
     }
