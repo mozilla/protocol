@@ -1,6 +1,6 @@
 Size classes:
-- `mzp-t-wordmark-xs`
-- `mzp-t-wordmark-sm`
-- `mzp-t-wordmark-md`
-- `mzp-t-wordmark-lg`
-- `mzp-t-wordmark-xl`
+- `mzp-t-logo-xs`
+- `mzp-t-logo-sm`
+- `mzp-t-logo-md`
+- `mzp-t-logo-lg`
+- `mzp-t-logo-xl`
