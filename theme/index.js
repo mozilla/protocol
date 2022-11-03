@@ -32,7 +32,7 @@ const subTheme = mandelbrot({
             value: new Date(),
             type: 'time', // Outputs a <time /> HTML tag
             format: (value) => {
-                return value.toLocaleDateString('en');
+                return value.toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'});
             }
         }
     ],
