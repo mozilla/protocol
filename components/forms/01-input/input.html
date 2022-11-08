@@ -12,4 +12,4 @@
 # disabled        - boolean
 #}
 <label for="{{ id }}">{{ label|default('Label') }}</label>
-<input type="{{ type|default('text') }}" id="{{ id }}" name="{% if name %}{{ name }}{% else %}{{ id }}{% endif %}"{% if class %} class="{{ class }}"{% endif %}{% if attrs %} {{ attrs|safe }}{% endif %}{% if placeholder %} placeholder="{{ placeholder }}"{% endif %}{% if required %} required aria-required="true"{% endif %}{% if disabled %} disabled aria-disabled="true"{% endif %}>
+<input type="{{ type|default('text') }}" id="{{ id }}" name="{% if name %}{{ name }}{% else %}{{ id }}{% endif %}"{% if class %} class="{{ class }}"{% endif %}{% if attrs %} {{ attrs|safe }}{% endif %}{% if placeholder %} placeholder="{{ placeholder }}"{% endif %}{% if required %} required aria-required="true"{% endif %}{% if disabled %} disabled{% endif %}>

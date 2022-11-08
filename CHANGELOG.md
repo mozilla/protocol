@@ -11,6 +11,7 @@
 * **html:** Added accessible attributes to menu bar (#815).
 * **css:** Add style rule for the hidden attribute in global reset (#783).
 * **html:** Use unambiguous date format in sidebar.
+* **docs:** Remove aria-disabled from disabled form inputs.
 
 # 16.0.1
 
