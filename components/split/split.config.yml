@@ -80,7 +80,7 @@ variants:
       media can overflow if the container is tall, causing part of the image to
       be hidden, so choose wisely.
     context:
-      img_src: '/img/image-1-1.jpg'
+      image: '/img/image-1-1.jpg'
       media_class: mzp-l-split-media-constrain-height
   - name: Pop-out Media
     notes: |
@@ -105,7 +105,7 @@ variants:
     context:
       block_class: mzp-l-split-pop
       background_class: mzp-t-background-tertiary
-      img_src: '/img/image-1-1.jpg'
+      image: '/img/image-1-1.jpg'
   - name: Body Alignment
     notes: |
       Align the body in different positions, horizontally and vertically (it’s
@@ -125,7 +125,7 @@ variants:
         than the media height.
     context:
       body_class: mzp-l-split-h-end mzp-l-split-v-end
-      img_src: '/img/image-portrait.jpg'
+      image: '/img/image-portrait.jpg'
   - name: Media Alignment
     notes: |
       Align the media in different positions, horizontally and vertically (it’s
@@ -146,4 +146,4 @@ variants:
         than the body height. Taller images will scale to fit.
     context:
       media_class: mzp-l-split-h-end mzp-l-split-v-end
-      img_src: '/img/image-1-1-sm.jpg'
+      image: '/img/image-1-1-sm.jpg'

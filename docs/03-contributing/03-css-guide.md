@@ -107,12 +107,12 @@ declaration above it.
     // This is a comment
     background: #333 url('img/icon.png') center no-repeat;
     color: #bada55;
-    margin: 0 auto .75em;
+    margin: 0 auto 0.75em;
 }
 
 .selector-a,
 .selector-b {
-    background: rgba(255, 255, 255, .25);
+    background: rgba(255, 255, 255, 0.25);
     padding: 20px;
 }
 ```
