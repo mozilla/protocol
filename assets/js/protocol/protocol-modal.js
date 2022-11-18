@@ -76,6 +76,12 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
 
         content.classList.add('mzp-c-modal-overlay-contents');
 
+        // ensure focus is moved to the modal only after CSS animation completes.
+        // issue: https://github.com/mozilla/protocol/issues/829
+        modal.addEventListener('animationend', function () {
+            modal.focus();
+        }, false);
+
         // close modal on clicking close button or background.
         var closeButton = document.querySelector('.mzp-c-modal-button-close');
         closeButton.addEventListener('click', Modal.closeModal, false);
@@ -87,12 +93,6 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
                 Modal.closeModal();
             }
         }, false);
-
-        // add a short delay is need before calling focus() to give
-        // time for the fade-in animation to complete (issue #749).
-        setTimeout(function() {
-            modal.focus();
-        }, 300);
 
         // close with escape key
         document.addEventListener('keyup', _onDocumentKeyUp, false);

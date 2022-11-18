@@ -7,6 +7,7 @@
 * **css:** Updated stylelint ruleset to match Bedrock's linting pattern. (#814)
 
 ## Bug Fixes
+* **js:** Ensure focus is moved to modal after animation completes (#829)
 * **node:** Make sure to build NPM package using production mode.
 * **html:** Added accessible attributes to menu bar (#815).
 * **css:** Add style rule for the hidden attribute in global reset (#783).
