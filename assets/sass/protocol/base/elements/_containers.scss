@@ -13,6 +13,18 @@
     padding: get-theme('v-grid-xs') get-theme('h-grid-xs');
     position: relative;
 
+    @supports (--css: variable) {
+        padding: var(--v-grid-xs) var(--h-grid-xs);
+
+        @media #{$mq-md} {
+            padding: var(--v-grid-md) var(--h-grid-md);
+        }
+
+        @media #{$mq-xl} {
+            padding: var(--v-grid-xl) var(--h-grid-xl);
+        }
+    }
+
     &.mzp-t-content-sm {
         max-width: $content-sm;
     }

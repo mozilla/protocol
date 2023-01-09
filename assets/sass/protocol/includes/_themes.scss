@@ -10,6 +10,45 @@
 @use 'tokens';
 @use 'config';
 @use 'functions';
+@use 'mozilla';
+@use 'firefox';
+
+:root {
+    --v-grid-xs: #{mozilla.$layout-md};
+    --h-grid-xs: #{mozilla.$layout-xs};
+
+    // sm is the same as xs
+    --v-grid-sm: #{mozilla.$layout-md};
+    --h-grid-sm: #{mozilla.$layout-xs};
+
+    // md
+    --v-grid-md: #{mozilla.$layout-md};
+    --h-grid-md: #{mozilla.$layout-lg};
+
+    // lg is the same as medium
+    --v-grid-lg: #{mozilla.$layout-md};
+    --h-grid-lg: #{mozilla.$layout-lg};
+
+    // xl
+    --v-grid-xl: #{mozilla.$layout-xl};
+    --h-grid-xl: 80px;
+
+    @if $brand-theme == 'mozilla' {
+        @extend mozilla.%mozilla-theme;
+        @extend mozilla.%mozilla-type-scale;
+
+        @if $type-scale == 'condensed' {
+            @extend mozilla.%mozilla-type-scale-condensed;
+        }
+    } @else if $brand-theme == 'firefox' {
+        @extend firefox.%firefox-theme;
+        @extend firefox.%firefox-type-scale;
+
+        @if $type-scale == 'condensed' {
+            @extend firefox.%firefox-type-scale-condensed;
+        }
+    }
+}
 
 // * -------------------------------------------------------------------------- */
 // Vertical and Horizontal Spacing

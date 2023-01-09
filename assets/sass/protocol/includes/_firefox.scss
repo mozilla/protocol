@@ -1,0 +1,58 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+%firefox-theme {
+    // fonts
+    --body-font-family: #{$font-stack-base};
+    --button-font-family: #{$font-stack-firefox};
+    --title-font-family: #{$font-stack-firefox};
+
+    // colors
+    --background-color-tertiary-inverse: #{$color-ink-20};
+    --background-color-tertiary: #{$color-marketing-gray-20};
+    --background-color-secondary-inverse: #{$color-ink-50};
+    --background-color-secondary: #{$color-light-gray-10};
+    --background-color-inverse: #{$color-ink-80};
+    --background-color: #{$color-white};
+    --body-text-color-secondary-inverse: #{$color-marketing-gray-30};
+    --body-text-color-secondary: #{$color-marketing-gray-70};
+    --body-text-color-inverse: #{$color-white};
+    --body-text-color: #{$color-marketing-gray-80};
+    --link-color-hover-inverse: #{$color-blue-05};
+    --link-color-hover: #{$color-link-hover};
+    --link-color-inverse: #{$color-blue-10};
+    --link-color-visited-hover-inverse: #{$color-violet-05};
+    --link-color-visited-hover: #{$color-link-hover};
+    --link-color-visited-inverse: #{$color-violet-10};
+    --link-color-visited: #{$color-link-visited};
+    --link-color: #{$color-link};
+    --title-text-color-inverse: #{$color-white};
+    --title-text-color: #{$color-marketing-gray-99};
+}
+
+%firefox-type-scale {
+    // typescale
+    --title-2xl-size: 64px;
+    --title-2xl-line-height: 1.125;
+    --title-xl-size: 56px;
+    --title-xl-line-height: 1.143;
+    --title-lg-size: 48px;
+    --title-lg-line-height: 1.166;
+    --title-md-size: 40px;
+    --title-md-line-height: 1.1;
+    --title-sm-size: 32px;
+    --title-sm-line-height: 1.125;
+    --title-xs-size: 24px;
+    --title-xs-line-height: 1.166;
+    --title-2xs-size: 20px;
+    --title-2xs-line-height: 1.2;
+    --title-3xs-size: 16px;
+    --title-3xs-line-height: 1.25;
+    --body-xl-size: 21px;
+    --body-lg-size: 18px;
+    --body-md-size: 16px;
+    --body-sm-size: 14px;
+    --body-xs-size: 12px;
+    --body-line-height: 1.5;
+}

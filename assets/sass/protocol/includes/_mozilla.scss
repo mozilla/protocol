@@ -1,0 +1,84 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@use 'sass:meta';
+
+%mozilla-theme {
+    // fonts
+    --body-font-family: #{$font-stack-base};
+    --button-font-family: #{$font-stack-base};
+    --title-font-family: #{$font-stack-mozilla};
+
+    // colors
+    --background-color-tertiary-inverse: #{$color-dark-gray-40};
+    --background-color-secondary-inverse: #{$color-dark-gray-60};
+    --background-color-secondary: #{$color-light-gray-10};
+    --background-color-inverse: #{$color-black};
+    --background-color: #{$color-white};
+    --body-text-color-secondary-inverse: #{$color-light-gray-30};
+    --body-text-color-secondary: #{$color-dark-gray-90};
+    --body-text-color-inverse: #{$color-white};
+    --body-text-color: #{$color-black};
+    --link-color-hover-inverse: #{$color-blue-05};
+    --link-color-hover: #{$color-link-hover};
+    --link-color-inverse: #{$color-blue-10};
+    --link-color-visited-hover-inverse: #{$color-violet-05};
+    --link-color-visited-hover: #{$color-link-hover};
+    --link-color-visited-inverse: #{$color-violet-10};
+    --link-color-visited: #{$color-link-visited};
+    --link-color: #{$color-link};
+    --title-text-color-inverse: #{$color-white};
+    --title-text-color: #{$color-black};
+}
+
+%mozilla-type-scale {
+    // type scale
+    --title-2xl-size: 76px;
+    --title-2xl-line-height: 1;
+    --title-xl-size: 66px;
+    --title-xl-line-height: 1;
+    --title-lg-size: 56px;
+    --title-lg-line-height: 1;
+    --title-md-size: 48px;
+    --title-md-line-height: 1;
+    --title-sm-size: 38px;
+    --title-sm-line-height: 1.05;
+    --title-xs-size: 28px;
+    --title-xs-line-height: 1.07;
+    --title-2xs-size: 24px;
+    --title-2xs-line-height: 1.08;
+    --title-3xs-size: 18px;
+    --title-3xs-line-height: 1.11;
+    --body-xl-size: 21px;
+    --body-lg-size: 18px;
+    --body-md-size: 16px;
+    --body-sm-size: 14px;
+    --body-xs-size: 12px;
+    --body-line-height: 1.5;
+}
+
+%mozilla-type-scale-condensed {
+    --title-2xl-size: 34px;
+    --title-2xl-line-height: 1;
+    --title-xl-size: 26px;
+    --title-xl-line-height: 1;
+    --title-lg-size: 22px;
+    --title-lg-line-height: 1;
+    --title-md-size: 20px;
+    --title-md-line-height: 1;
+    --title-sm-size: 18px;
+    --title-sm-line-height: 1;
+    --title-xs-size: 16px;
+    --title-xs-line-height: 1;
+    --title-2xs-size: 14px;
+    --title-2xs-line-height: 1;
+    --title-3xs-size: 14px;
+    --title-3xs-line-height: 1;
+    --body-xl-size: 18px;
+    --body-lg-size: 16px;
+    --body-md-size: 14px;
+    --body-sm-size: 12px;
+    --body-xs-size: 11px;
+    --body-line-height: 1.5;
+}
