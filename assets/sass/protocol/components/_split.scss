@@ -12,10 +12,10 @@
     position: relative;
 
     // vertical spacing should match mzp-l-content's vertical spacing
-    padding: get-theme('v-grid-xs') 0;
+    padding: $v-grid-xs 0;
 
     @media #{$mq-md} {
-        padding: get-theme('v-grid-md') 0;
+        padding: $v-grid-md 0;
 
         &.mzp-t-split-nospace {
             padding-top: 0;
@@ -24,7 +24,19 @@
     }
 
     @media #{$mq-xl} {
-        padding: get-theme('v-grid-xl') 0;
+        padding: var(--v-grid-xl) 0;
+    }
+
+    @supports (--css: variables) {
+        padding: var(--v-grid-xs) 0;
+
+        @media #{$mq-md} {
+            padding: var(--v-grid-md) 0;
+        }
+
+        @media #{$mq-xl} {
+            padding: var(--v-grid-xl) 0;
+        }
     }
 }
 
@@ -34,14 +46,26 @@
     max-width: $content-max;
 
     // horizontal spacing should match mzp-l-content's horizontal spacing
-    padding: 0 get-theme('h-grid-xs');
+    padding: 0 $h-grid-xs;
 
     @media #{$mq-md} {
-        padding: 0 get-theme('h-grid-md');
+        padding: 0 $h-grid-md;
     }
 
     @media #{$mq-xl} {
-        padding: 0 get-theme('h-grid-xl');
+        padding: 0 $h-grid-xl;
+    }
+
+    @supports (--css: variables) {
+        padding: 0 var(--h-grid-xs);
+
+        @media #{$mq-md} {
+            padding: 0 var(--h-grid-md);
+        }
+
+        @media #{$mq-xl} {
+            padding: 0 var(--h-grid-xl);
+        }
     }
 
     .mzp-t-content-md & {
@@ -80,14 +104,26 @@
 
 .mzp-c-split-bg {
     // vertical spacing should match mzp-l-content's vertical spacing
-    padding: get-theme('v-grid-xs') 0;
+    padding: $v-grid-xs 0;
 
     @media #{$mq-md} {
-        padding: get-theme('v-grid-md') 0;
+        padding: $v-grid-md 0;
     }
 
     @media #{$mq-xl} {
-        padding: get-theme('v-grid-xl') 0;
+        padding: $v-grid-xl 0;
+    }
+
+    @supports (--css: variables) {
+        padding: var(--v-grid-xs) 0;
+
+        @media #{$mq-md} {
+            padding: var(--v-grid-md) 0;
+        }
+
+        @media #{$mq-xl} {
+            padding: var(--v-grid-xl) 0;
+        }
     }
 }
 
@@ -97,7 +133,11 @@
 @media all and (max-width: #{$screen-md - 1}) {
     .mzp-c-split-body + .mzp-c-split-media,
     .mzp-c-split-media + .mzp-c-split-body {
-        margin-top: get-theme('v-grid-xs');
+        margin-top: $v-grid-xs;
+
+        @supports (--css: variables) {
+            margin-top: var(--v-grid-xs);
+        }
     }
 
     .mzp-l-split-center-on-sm-md {
@@ -136,7 +176,7 @@
     .mzp-c-split-body {
         @include border-box;
         @include bidi(((float, left, right),));
-        padding: 0 (get-theme('h-grid-lg') * 0.5);
+        padding: 0 ($h-grid-lg * 0.5);
         width: 50%;
 
         .mzp-l-split-reversed & {
@@ -147,11 +187,21 @@
     .mzp-c-split-media {
         @include border-box;
         @include bidi(((float, right, left),));
-        padding: 0 (get-theme('h-grid-lg') * 0.5);
+        padding: 0 ($h-grid-lg * 0.5);
         width: 50%;
 
         .mzp-l-split-reversed & {
             @include bidi(((float, left, right),));
+        }
+    }
+
+    @supports (--css: variables) {
+        .mzp-c-split-body {
+            padding: 0 calc(var(--h-grid-lg) * 0.5);
+        }
+
+        .mzp-c-split-media {
+            padding: 0 calc(var(--h-grid-lg) * 0.5);
         }
     }
 }
@@ -181,7 +231,11 @@
 @media #{$mq-xl} {
     .mzp-c-split-body,
     .mzp-c-split-media {
-        padding: 0 (get-theme('h-grid-xl') * 0.5);
+        padding: 0 ($h-grid-xl * 0.5);
+
+        @supports (--css: variables) {
+            padding: 0 calc(var(--h-grid-lg) * 0.5);
+        }
     }
 }
 
@@ -194,12 +248,16 @@
             // grid is all start/end based we don't need bidi declarations for RTL support \o/
             align-items: center;
             display: grid;
-            grid-column-gap: get-theme('h-grid-lg');
+            grid-column-gap: $h-grid-lg;
             grid-template-areas: 'body media';
             grid-template-columns: 1fr 1fr;
 
             .mzp-l-split-reversed & {
                 grid-template-areas: 'media body';
+            }
+
+            @supports (--css: variables) {
+                grid-column-gap: var(--h-grid-lg);
             }
         }
 
@@ -254,7 +312,11 @@
 
     @media #{$mq-xl} {
         .mzp-c-split-container {
-            grid-column-gap: get-theme('h-grid-xl');
+            grid-column-gap: $h-grid-xl;
+
+            @supports (--css: variables) {
+                grid-column-gap: var(--h-grid-xl);
+            }
         }
     }
 }
@@ -311,16 +373,28 @@
         .mzp-l-split-pop-top,
         .mzp-l-split-pop {
             &.mzp-c-split {
-                padding-top: get-theme('v-grid-lg') * 2;
+                padding-top: $v-grid-lg * 2;
+
+                @supports (--css: variables) {
+                    padding-top: calc(var(--v-grid-lg) * 2);
+                }
             }
 
             .mzp-c-split-media {
-                margin-top: get-theme('v-grid-lg') * -1;
+                margin-top: $v-grid-lg * -1;
+
+                @supports (--css: variables) {
+                    margin-top: calc(var(--v-grid-lg) * -1);
+                }
             }
 
             .mzp-c-split-bg & {
                 .mzp-c-split-media {
-                    margin-top: get-theme('v-grid-lg') * -2;
+                    margin-top: $v-grid-lg * -2;
+
+                    @supports (--css: variables) {
+                        margin-top: calc(var(--v-grid-lg) * -2);
+                    }
                 }
             }
         }
@@ -328,16 +402,28 @@
         .mzp-l-split-pop-bottom,
         .mzp-l-split-pop {
             &.mzp-c-split {
-                padding-bottom: get-theme('v-grid-lg') * 2;
+                padding-bottom: $v-grid-lg * 2;
+
+                @supports (--css: variables) {
+                    padding-bottom: calc(var(--v-grid-lg) * 2);
+                }
             }
 
             .mzp-c-split-media {
-                margin-bottom: get-theme('v-grid-lg') * -1;
+                margin-bottom: $v-grid-lg * -1;
+
+                @supports (--css: variables) {
+                    margin-bottom: calc(var(--v-grid-lg) * -1);
+                }
             }
 
             .mzp-c-split-bg & {
                 .mzp-c-split-media {
-                    margin-bottom: get-theme('v-grid-lg') * -2;
+                    margin-bottom: $v-grid-lg * -2;
+
+                    @supports (--css: variables) {
+                        margin-bottom: calc(var(--v-grid-lg) * -2);
+                    }
                 }
             }
         }
@@ -345,20 +431,36 @@
         .mzp-l-split-media-constrain-height {
             .mzp-l-split-pop-top &,
             .mzp-l-split-pop-bottom & {
-                height: calc(100% + #{get-theme('v-grid-lg')});
+                height: calc(100% + #{$v-grid-lg});
+
+                @supports (--css: variables) {
+                    height: calc(100% + var(--v-grid-lg));
+                }
             }
 
             .mzp-l-split-pop & {
-                height: calc(100% + #{get-theme('v-grid-lg') * 2});
+                height: calc(100% + #{$v-grid-lg * 2});
+
+                @supports (--css: variables) {
+                    height: calc(100% + var(--v-grid-lg) * 2);
+                }
             }
 
             .mzp-l-split-pop-top .mzp-c-split-bg &,
             .mzp-l-split-pop-bottom .mzp-c-split-bg & {
-                height: calc(100% + #{get-theme('v-grid-lg') * 2});
+                height: calc(100% + #{$v-grid-lg * 2});
+
+                @supports (--css: variables) {
+                    height: calc(100% + var(--v-grid-lg) * 2);
+                }
             }
 
             .mzp-l-split-pop .mzp-c-split-bg & {
-                height: calc(100% + #{get-theme('v-grid-lg') * 4});
+                height: calc(100% + #{$v-grid-lg * 4});
+
+                @supports (--css: variables) {
+                    height: calc(100% + var(--v-grid-lg) * 4);
+                }
             }
         }
     }
@@ -367,16 +469,28 @@
         .mzp-l-split-pop-top,
         .mzp-l-split-pop {
             &.mzp-c-split {
-                padding-top: get-theme('v-grid-xl') * 2;
+                padding-top: $v-grid-xl * 2;
+
+                @supports (--css: variables) {
+                    padding-top: calc(var(--v-grid-xl) * 2);
+                }
             }
 
             .mzp-c-split-media {
-                margin-top: get-theme('v-grid-xl') * -1;
+                margin-top: $v-grid-xl * -1;
+
+                @supports (--css: variables) {
+                    margin-top: calc(var(--v-grid-xl) * -1);
+                }
             }
 
             & .mzp-c-split-bg {
                 .mzp-c-split-media {
-                    margin-top: get-theme('v-grid-xl') * -2;
+                    margin-top: $v-grid-xl * -2;
+
+                    @supports (--css: variables) {
+                        margin-top: calc(var(--v-grid-xl) * -2);
+                    }
                 }
             }
         }
@@ -384,16 +498,28 @@
         .mzp-l-split-pop-bottom,
         .mzp-l-split-pop {
             &.mzp-c-split {
-                padding-bottom: get-theme('v-grid-xl') * 2;
+                padding-bottom: $v-grid-xl * 2;
+
+                @supports (--css: variables) {
+                    padding-bottom: calc(var(--v-grid-xl) * 2);
+                }
             }
 
             .mzp-c-split-media {
-                margin-bottom: get-theme('v-grid-xl') * -1;
+                margin-bottom: $v-grid-xl * -1;
+
+                @supports (--css: variables) {
+                    margin-bottom: calc(var(--v-grid-xl) * -1);
+                }
             }
 
             & .mzp-c-split-bg {
                 .mzp-c-split-media {
-                    margin-bottom: get-theme('v-grid-xl') * -2;
+                    margin-bottom: $v-grid-xl * -2;
+
+                    @supports (--css: variables) {
+                        margin-bottom: calc(var(--v-grid-xl) * -2);
+                    }
                 }
             }
         }
@@ -401,20 +527,36 @@
         .mzp-l-split-media-constrain-height {
             .mzp-l-split-pop-top &,
             .mzp-l-split-pop-bottom & {
-                height: calc(100% + #{get-theme('v-grid-xl')});
+                height: calc(100% + #{$v-grid-xl});
+
+                @supports (--css: variables) {
+                    height: calc(100% + var(--v-grid-xl));
+                }
             }
 
             .mzp-l-split-pop & {
-                height: calc(100% + #{get-theme('v-grid-xl') * 2});
+                height: calc(100% + #{$v-grid-xl * 2});
+
+                @supports (--css: variables) {
+                    height: calc(100% + calc(var(--v-grid-xl) * 2));
+                }
             }
 
             .mzp-l-split-pop-top .mzp-c-split-bg &,
             .mzp-l-split-pop-bottom .mzp-c-split-bg & {
-                height: calc(100% + #{get-theme('v-grid-xl') * 2});
+                height: calc(100% + #{v-grid-xl * 2});
+
+                @supports (--css: variables) {
+                    height: calc(100% + calc(var(--v-grid-xl) * 2));
+                }
             }
 
             .mzp-l-split-pop .mzp-c-split-bg & {
-                height: calc(100% + #{get-theme('v-grid-xl') * 4});
+                height: calc(100% + #{v-grid-xl * 4});
+
+                @supports (--css: variables) {
+                    height: calc(100% + calc(var(--v-grid-xl) * 4));
+                }
             }
         }
     }

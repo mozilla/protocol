@@ -8,15 +8,15 @@
 // Call Out component
 
 .mzp-c-call-out {
-    background-color: get-theme('background-color-secondary');
+    background-color: $background-color-secondary;
     text-align: center;
 
     &.mzp-t-dark {
-        background-color: get-theme('background-color-secondary-inverse');
-        color: get-theme('body-text-color-inverse');
+        background-color: $background-color-secondary-inverse;
+        color: $body-text-color-inverse;
 
         .mzp-c-call-out-desc {
-            color: get-theme('body-text-color-inverse');
+            color: $body-text-color-inverse;
         }
     }
 
@@ -90,20 +90,33 @@
             padding-top: $spacing-2xl;
         }
     }
+
+    @supports (--css: variables) {
+        background-color: var(--background-color-secondary);
+
+        &.mzp-t-dark {
+            background-color: var(--background-color-secondary-inverse);
+            color: var(--body-text-color-inverse);
+
+            .mzp-c-call-out-desc {
+                color: var(--body-text-color-inverse);
+            }
+        }
+    }
 }
 
 // * -------------------------------------------------------------------------- */
 // Compact Call Out component
 
 .mzp-c-call-out-compact {
-    background-color: get-theme('background-color-secondary');
+    background-color: $background-color-secondary;
 
     &.mzp-t-dark {
-        background-color: get-theme('background-color-secondary-inverse');
-        color: get-theme('body-text-color-inverse');
+        background-color: $background-color-secondary-inverse;
+        color: $body-text-color-inverse;
 
         .mzp-c-call-out-desc {
-            color: get-theme('body-text-color-inverse');
+            color: $body-text-color-inverse;
         }
     }
 
@@ -240,6 +253,19 @@
                 align-items: center;
                 justify-content: flex-end;
                 width: auto;
+            }
+        }
+    }
+
+    @supports (--css: variables) {
+        background-color: var(--background-color-secondary);
+
+        &.mzp-t-dark {
+            background-color: var(--background-color-secondary-inverse);
+            color: var(--body-text-color-inverse);
+
+            .mzp-c-call-out-desc {
+                color: var(--body-text-color-inverse);
             }
         }
     }

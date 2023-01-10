@@ -19,7 +19,11 @@
 
     &.mzp-t-dark,
     .mzp-t-dark & {
-        color: get-theme('body-text-color-secondary-inverse');
+        color: $body-text-color-secondary-inverse;
+
+        @supports (--css: variables) {
+            color: var(--body-text-color-secondary-inverse);
+        }
     }
 
     // if we're using the form component bottom spacing comes from `field` and `choice` components
@@ -58,8 +62,8 @@
 .mzp-c-form-title,
 legend.mzp-c-form-title {
     @include text-title-xs;
-    color: get-theme('title-text-color');
-    font-family: get-theme('title-font-family');
+    color: $title-text-color;
+    font-family: $title-font-family;
     font-weight: bold;
     margin: 0 0 $spacing-lg 0;
 
@@ -68,7 +72,16 @@ legend.mzp-c-form-title {
     }
 
     .mzp-t-dark & {
-        color: get-theme('title-text-color-inverse');
+        color: $title-text-color-inverse;
+    }
+
+    @supports (--css: variables) {
+        color: var(--title-text-color);
+        font-family: var(--title-font-family);
+
+        .mzp-t-dark & {
+            color: var(--title-text-color-inverse);
+        }
     }
 }
 

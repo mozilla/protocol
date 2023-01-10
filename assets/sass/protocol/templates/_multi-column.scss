@@ -7,12 +7,17 @@
 @media #{$mq-md} {
     .mzp-l-columns {
         display: grid;
-        grid-gap: get-theme('v-grid-sm') get-theme('h-grid-md');
-        gap: get-theme('v-grid-sm') get-theme('h-grid-md');
+        grid-gap: $v-grid-sm $h-grid-md;
+        gap: $v-grid-sm $h-grid-md;
 
         &.mzp-t-columns-two,
         &.mzp-t-columns-four {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        @supports (--css: variables) {
+            grid-gap: var(--v-grid-sm) var(--h-grid-md);
+            gap: var(--v-grid-sm) var(--h-grid-md);
         }
     }
 
@@ -25,8 +30,8 @@
 
 @media #{$mq-lg} {
     .mzp-l-columns {
-        grid-gap: get-theme('v-grid-lg') get-theme('h-grid-xl');
-        gap: get-theme('v-grid-lg') get-theme('h-grid-xl');
+        grid-gap: $v-grid-lg $h-grid-xl;
+        gap: $v-grid-lg $h-grid-xl;
 
         &.mzp-t-columns-three {
             grid-template-columns: repeat(3, 1fr);
@@ -34,6 +39,11 @@
 
         &.mzp-t-columns-four {
             grid-template-columns: repeat(4, 1fr);
+        }
+
+        @supports (--css: variables) {
+            grid-gap: var(--v-grid-lg) var(--h-grid-xl);
+            gap: var(--v-grid-lg) var(--h-grid-xl);
         }
     }
 }
@@ -53,8 +63,13 @@
 // Smaller gutters in medium containers
 .mzp-t-content-md .mzp-l-columns,
 .mzp-t-content-md.mzp-l-columns {
-    grid-column-gap: get-theme('h-grid-md');
-    column-gap: get-theme('h-grid-md');
+    grid-column-gap: $h-grid-md;
+    column-gap: $h-grid-md;
+
+    @supports (--css: variables) {
+        grid-column-gap: var(--h-grid-md);
+        column-gap: var(--h-grid-md);
+    }
 }
 
 // Change four columns to two in medium containers, plus smaller gutters
@@ -68,6 +83,11 @@
 .mzp-t-content-lg.mzp-l-columns.mzp-t-columns-three,
 .mzp-t-content-lg .mzp-l-columns.mzp-t-columns-four,
 .mzp-t-content-lg.mzp-l-columns.mzp-t-columns-four {
-    grid-column-gap: get-theme('h-grid-md');
-    column-gap: get-theme('h-grid-md');
+    grid-column-gap: $h-grid-md;
+    column-gap: $h-grid-md;
+
+    @supports (--css: variables) {
+        grid-column-gap: var(--h-grid-md);
+        column-gap: var(--h-grid-md);
+    }
 }

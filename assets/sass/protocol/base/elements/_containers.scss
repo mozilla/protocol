@@ -10,7 +10,7 @@
     margin: 0 auto;
     max-width: $content-max;
     min-width: $content-xs - ($layout-xs * 2);
-    padding: get-theme('v-grid-xs') get-theme('h-grid-xs');
+    padding: $v-grid-xs $h-grid-xs;
     position: relative;
 
     @supports (--css: variable) {
@@ -55,10 +55,10 @@
     }
 
     @media #{$mq-md} {
-        padding: get-theme('v-grid-md') get-theme('h-grid-md');
+        padding: $v-grid-md $h-grid-md;
     }
 
     @media #{$mq-xl} {
-        padding: get-theme('v-grid-xl') get-theme('h-grid-xl');
+        padding: $v-grid-xl $h-grid-xl;
     }
 }

@@ -7,14 +7,23 @@
 // * -------------------------------------------------------------------------- */
 // Base emphasis Box class
 .mzp-c-emphasis-box {
-    background-color: get-theme('background-color');
+    background-color: $background-color;
     border-radius: $border-radius-md;
     box-shadow: $box-shadow-sm;
     margin: $spacing-md;
     padding: $spacing-xl;
 
     &.mzp-t-dark {
-        background-color: get-theme('background-color-inverse');
-        color: get-theme('body-text-color-inverse');
+        background-color: $background-color-inverse;
+        color: $body-text-color-inverse;
+    }
+
+    @supports (--css: variables) {
+        background-color: var(--background-color);
+
+        &.mzp-t-dark {
+            background-color: var(--background-color-inverse);
+            color: var(--body-text-color-inverse);
+        }
     }
 }
