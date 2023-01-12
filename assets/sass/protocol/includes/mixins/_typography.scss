@@ -238,8 +238,8 @@
     line-height: themes.$body-line-height;
 
     @supports (--css: variables) {
-        font-size: var(--title-xl-size);
-        line-height: var(--title-xl-line-height);
+        font-size: var(--body-sm-size);
+        line-height: var(--body-line-height);
     }
 }
 

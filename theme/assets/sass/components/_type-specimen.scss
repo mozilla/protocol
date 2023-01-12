@@ -132,122 +132,106 @@
 
 #specimen-type-scale-condensed {
     .docs-scale-sample-title-2xl {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'title-xl-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'title-xl-line-height');
+        font-size: 24px;
+        line-height: 1.166;
 
         @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'title-2xl-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'title-2xl-line-height');
+            font-size: 32px;
+            line-height: 1.125;
         }
     }
 
     .docs-scale-sample-title-xl {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'title-lg-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'title-lg-line-height');
+        font-size: 21px;
+        line-height: 1.2;
 
         @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'title-xl-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'title-xl-line-height');
+            font-size: 24px;
+            line-height: 1.166;
         }
     }
 
     .docs-scale-sample-title-lg {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'title-md-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'title-md-line-height');
+        font-size: 18px;
+        line-height: 1.2;
 
         @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'title-lg-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'title-lg-line-height');
+            font-size: 21px;
         }
     }
 
     .docs-scale-sample-title-md {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'title-sm-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'title-sm-line-height');
+        font-size: 16px;
+        line-height: 1.25;
 
         @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'title-md-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'title-md-line-height');
+            font-size: 18px;
+            line-height: 1.2;
         }
     }
 
     .docs-scale-sample-title-sm {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'title-xs-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'title-xs-line-height');
+        font-size: 14px;
+        line-height: 1.25;
 
         @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'title-sm-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'title-sm-line-height');
+            font-size: 16px;
         }
     }
 
     .docs-scale-sample-title-xs {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'title-2xs-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'title-2xs-line-height');
-
-        @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'title-xs-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'title-xs-line-height');
-        }
+        font-size: 14px;
+        line-height: 1.25;
     }
 
     .docs-scale-sample-title-2xs {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'title-3xs-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'title-3xs-line-height');
-
-        @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'title-2xs-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'title-2xs-line-height');
-        }
+        font-size: 14px;
+        line-height: 1.25;
     }
 
     .docs-scale-sample-title-3xs {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'title-3xs-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'title-3xs-line-height');
+        font-size: 14px;
+        line-height: 1.25;
     }
 
     .docs-scale-sample-body-xl {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'body-lg-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'body-lg-line-height');
+        font-size: 16px;
+        line-height: 1.5;
 
         @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'body-xl-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'body-xl-line-height');
+            font-size: 18px;
         }
     }
 
     .docs-scale-sample-body-lg {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'body-md-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'body-md-line-height');
+        font-size: 14px;
+        line-height: 1.5;
 
         @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'body-lg-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'body-lg-line-height');
+            font-size: 16px;
         }
     }
 
     .docs-scale-sample-body-md {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'body-sm-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'body-sm-line-height');
+        font-size: 12px;
+        line-height: 1.5;
 
         @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'body-md-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'body-md-line-height');
+            font-size: 14px;
         }
     }
 
     .docs-scale-sample-body-sm {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'body-xs-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'body-xs-line-height');
+        font-size: 11px;
+        line-height: 1.5;
 
         @media #{$mq-md} {
-            font-size: map.get($theme-type-scale-condensed-firefox, 'body-sm-size');
-            line-height: map.get($theme-type-scale-condensed-firefox, 'body-sm-line-height');
+            font-size: 12px;
         }
     }
 
     .docs-scale-sample-body-xs {
-        font-size: map.get($theme-type-scale-condensed-firefox, 'body-xs-size');
-        line-height: map.get($theme-type-scale-condensed-firefox, 'body-xs-line-height');
+        font-size: 11px;
+        line-height: 1.5;
     }
 }
