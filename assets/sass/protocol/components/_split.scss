@@ -544,7 +544,7 @@
 
             .mzp-l-split-pop-top .mzp-c-split-bg &,
             .mzp-l-split-pop-bottom .mzp-c-split-bg & {
-                height: calc(100% + #{v-grid-xl * 2});
+                height: calc(100% + #{$v-grid-xl * 2});
 
                 @supports (--css: variables) {
                     height: calc(100% + calc(var(--v-grid-xl) * 2));
@@ -552,7 +552,7 @@
             }
 
             .mzp-l-split-pop .mzp-c-split-bg & {
-                height: calc(100% + #{v-grid-xl * 4});
+                height: calc(100% + #{$v-grid-xl * 4});
 
                 @supports (--css: variables) {
                     height: calc(100% + calc(var(--v-grid-xl) * 4));
