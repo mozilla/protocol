@@ -1,6 +1,7 @@
 # HEAD
 
 ## Features
+* **css:** Replace `get-theme`, `type-scale` functions and theme and type-scale maps with CSS Custom Properties. Sass variables added for legacy support
 * **css:** Migrates the sass `@import` with `@use` and `@forward` (#755).
 
 ## Migration Tips
