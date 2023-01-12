@@ -78,25 +78,36 @@ components like a footer.
 ### Themes
 
 Protocol supports [multiple brand themes](/docs/fundamentals/brand-themes), namely
-the Mozilla and Firefox brands. Themes work by defining sets of variables in Sass
-maps in the `/includes/_themes.scss` file, and those variables are fetched via
-the `get-theme()` function. That function determines which set of variables to
-draw from based on the declared brand theme, thus any themeable property in CSS
-can have different values for different brands.
+the Mozilla and Firefox brands. Themes work by declaring a set of CSS Custom Properties
+on the documents root element (`:root`) in `/includes/_themes.scss` and are retreived
+using the `var()` function. The customproperties will be updated depending on what theme is declared.
+
+If you need to support legacy browsers, it is recommended to use the `@supports` decorator
+while using the sass variable as a fall back.
 
 ```scss
 .mzp-c-my-component {
-    background-color: get-theme('background-color');
-    color: get-theme('body-text-color');
+    background-color: $background-color;
+    color: $body-text-color;
 
     .mzp-c-my-component-title {
-        color: get-theme('title-text-color');
-        font-family: get-theme('title-font-family');
+        color: $title-text-color;
+        font-family: $title-font-family;
+    }
+
+    @supports (--css: variables) {
+        background-color: var(--background-color);
+        color: var(--body-text-color);
+
+        .mzp-c-my-component-title {
+            color: var(--title-text-color);
+            font-family: var(--title-font-family);
+        }
     }
 }
 ```
 
-Use the `get-theme()` function for any themeable properties, especially basic
+Use CSS Custom Properties for any themeable properties, especially basic
 colors for foreground (text) and backgrounds. Note that most colors have an
 “inverse” counterpart to use in dark style variants. Refer to `/includes/_themes.scss`
 for the actual values for each brand theme, but here are the variable names in a
@@ -127,6 +138,6 @@ title-text-color-inverse
 ```
 
 Text sizes are also defined as theme variables, allowing different brands to have
-slightly different type scales. Don’t use the `get-theme()` function for text
+slightly different type scales. Don’t use CSS Custom Properties for text
 sizing; use the text size mixins instead. The mixins already draw from the theme
 variables but come with baked-in responsive styling as well.
