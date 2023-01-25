@@ -79,11 +79,11 @@ components like a footer.
 
 Protocol supports [multiple brand themes](/docs/fundamentals/brand-themes), namely
 the Mozilla and Firefox brands. Themes work by declaring a set of CSS Custom Properties
-on the documents root element (`:root`) in `/includes/_themes.scss` and are retreived
-using the `var()` function. The customproperties will be updated depending on what theme is declared.
+on the document's root element (`:root`) in `/includes/_themes.scss` and are retrieved
+using the `var()` function. The custom properties will be updated depending on what theme is declared.
 
 If you need to support legacy browsers, it is recommended to use the `@supports` decorator
-while using the sass variable as a fall back.
+while using the Sass variable as a fall back.
 
 ```scss
 .mzp-c-my-component {

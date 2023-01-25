@@ -10,20 +10,20 @@ palette, mostly black and white. The Firefox brand uses the Metropolis typeface
 and is generally more colorful overall.
 
 Our CSS framework achieves the different themes by using [CSS Custom properties](https://developer.mozilla.org/docs/Web/CSS/--*)
-set on the root element, and these custom properties will be changed depending on
+set on the root element using the `:root`pseudo-class, and these custom properties will be changed depending on
 which brand is represented on the page.
 
-```scss
-$brand-theme: 'mozilla';
-```
-
-(Note: Since CSS Custom Properties aren't suppoorted by legacy browsers,
+(Note: Since CSS Custom Properties aren't supported by legacy browsers,
 Protocol still uses a default theme with Sass variables for those browsers.)
 
 Protocol defaults to the Mozilla brand “out of the box.” If you use the packaged,
 pre-compiled CSS, you’ll have everything you need for a Mozilla-branded website
 without needing to compile the Sass yourself. We still recommend doing your own
 compiling so you can import just the components you need.
+
+```scss
+$brand-theme: 'mozilla';
+```
 
 If you want to produce a Firefox-branded website you’ll need to compile the
 Protocol Sass and change the `$brand-theme` variable:
