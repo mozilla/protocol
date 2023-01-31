@@ -1,3 +1,201 @@
 [build]
   publish = "dist"
   command = "npm run build-docs"
+
+# redirects for older pages:
+# Fundementals
+[[redirects]]
+  from = "/fundementals/principles*"
+  to = "/docs/fundamentals/principles"
+
+[[redirects]]
+  from = "/fundementals/themes*"
+  to = "/docs/fundamentals/brand-themes"
+
+[[redirects]]
+  from = "/fundementals/typography*"
+  to = "/docs/fundamentals/typography"
+
+[[redirects]]
+  from = "/fundementals/color*"
+  to = "/docs/fundamentals/color"
+
+[[redirects]]
+  from = "/fundementals/tokens*"
+  to = "/docs/fundamentals/design-tokens"
+
+[[redirects]]
+  from = "/docs/contributing*"
+  to = "/docs/contributing/overview"
+
+[[redirects]]
+  from = "/docs/naming*"
+  to = "/docs/contributing/naming"
+
+[[redirects]]
+  from = "/docs/css-guide*"
+  to = "/docs/contributing/css-guide"
+
+# Components - Atoms
+[[redirects]]
+  from = "/patterns/atoms/typographic*"
+  to = "/"
+
+[[redirects]]
+  from = "/patterns/atoms/buttons*"
+  to = "/components/detail/button"
+
+[[redirects]]
+  from = "/patterns/atoms/forms*"
+  to = "/components/detail/input"
+
+[[redirects]]
+  from = "/patterns/atoms/links*"
+  to = "/components/detail/links"
+
+[[redirects]]
+  from = "/patterns/atoms/lists*"
+  to = "/components/detail/lists"
+
+[[redirects]]
+  from = "/patterns/atoms/logo*"
+  to = "/components/detail/logo"
+
+[[redirects]]
+  from = "/patterns/atoms/section-heading*"
+  to = "/components/detail/section-heading"
+
+[[redirects]]
+  from = "/patterns/atoms/video*"
+  to = "/components/detail/video"
+
+[[redirects]]
+  from = "/patterns/atoms/zap*"
+  to = "/components/detail/zap"
+
+# Components - Molecules
+[[redirects]]
+  from = "/patterns/molecules/breadcrumb*"
+  to = "/components/detail/breadcrumb"
+
+[[redirects]]
+  from = "/patterns/molecules/card*"
+  to = "/components/detail/card"
+
+[[redirects]]
+  from = "/patterns/molecules/details*"
+  to = "/components/detail/details"
+
+[[redirects]]
+  from = "patterns/molecules/download-button*"
+  to = "/components/detail/download-button"
+
+[[redirects]]
+  from = "/patterns/molecules/emphasis-box*"
+  to = "components/detail/emphasis-box"
+
+[[redirects]]
+  from = "/patterns/molecules/feature-card*"
+  to = "/components/detail/feature-card"
+
+# not sure where this should go to?
+[[redirects]]
+  from = "/patterns/molecules/forms*"
+  to = "/components/detail/input"
+
+[[redirects]]
+  from = "/patterns/molecules/language-switcher*"
+  to = "/components/detail/language-switcher"
+
+[[redirects]]
+  from = "/patterns/molecules/menu-list*"
+  to = "/components/detail/menu-list"
+
+[[redirects]]
+  from = "/patterns/molecules/menu*"
+  to = "components/detail/menu"
+
+[[redirects]]
+  from = "/patterns/molecules/notification-bar*"
+  to = "components/detail/notification-bar"
+
+# depreciated
+[[redirects]]
+  from = "/patterns/molecules/picto-card*"
+  to = "/components/detail/picto-card"
+
+[[redirects]]
+  from = "/patterns/molecules/picto*"
+  to = "/components/detail/picto"
+
+[[redirects]]
+  from = "/patterns/molecules/sticky-promo*"
+  to = "/components/detail/sticky-promo"
+
+# Components - Organisms
+[[redirects]]
+  from = "/patterns/organisms/article*"
+  to = "/components/detail/article"
+
+[[redirects]]
+  from = "/patterns/organisms/billboard*"
+  to = "/components/detail/billboard"
+
+[[redirects]]
+  from = "/patterns/organisms/call-out*"
+  to = ""
+
+[[redirects]]
+  from = "/patterns/organisms/footer*"
+  to = "components/detail/call-out"
+
+# depreciated
+[[redirects]]
+  from = "/patterns/organisms/hero*"
+  to = "/components/detail/hero"
+
+[[redirects]]
+  from = "/patterns/organisms/modal*"
+  to = "/components/detail/modal"
+
+[[redirects]]
+  from = "/patterns/organisms/navigation*"
+  to = "/components/detail/navigation"
+
+[[redirects]]
+  from = "/patterns/organisms/newsletter*"
+  to = "/components/detail/newsletter"
+
+[[redirects]]
+  from = "/patterns/organisms/sidebar-menu*"
+  to = "/components/detail/sidebar-menu"
+
+[[redirects]]
+  from = "/patterns/organisms/split*"
+  to = "/components/detail/split"
+
+# Components - Templates
+[[redirects]]
+  from = "/patterns/templates/card-layout*"
+  to = "/components/detail/card-layout"
+
+[[redirects]]
+  from = "/patterns/templates/columns*"
+  to = "/components/detail/columns"
+
+[[redirects]]
+  from = "/patterns/templates/content-container*"
+  to = "/components/detail/content-container"
+
+[[redirects]]
+  from = "/patterns/templates/forms*"
+  to = "/components/detail/input"
+
+[[redirects]]
+  from = "/patterns/templates/main-with-sidebar*"
+  to = "/components/detail/main-with-sidebar"
+
+# Other stuff
+[[redirects]]
+  from = "/demos/index*"
+  to="/"
