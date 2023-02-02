@@ -14,20 +14,20 @@
 @use 'firefox';
 
 :root {
-    --v-grid-xs: #{mozilla.$layout-md};
-    --h-grid-xs: #{mozilla.$layout-xs};
+    --v-grid-xs: #{tokens.$layout-md};
+    --h-grid-xs: #{tokens.$layout-xs};
 
     // sm is the same as xs
-    --v-grid-sm: #{mozilla.$layout-md};
-    --h-grid-sm: #{mozilla.$layout-xs};
+    --v-grid-sm: #{tokens.$layout-md};
+    --h-grid-sm: #{tokens.$layout-xs};
 
     // md
-    --v-grid-md: #{mozilla.$layout-md};
-    --h-grid-md: #{mozilla.$layout-lg};
+    --v-grid-md: #{tokens.$layout-md};
+    --h-grid-md: #{tokens.$layout-lg};
 
     // lg is the same as medium
-    --v-grid-lg: #{mozilla.$layout-md};
-    --h-grid-lg: #{mozilla.$layout-lg};
+    --v-grid-lg: #{tokens.$layout-md};
+    --h-grid-lg: #{tokens.$layout-lg};
 
     // xl
     --v-grid-xl: #{mozilla.$layout-xl};
@@ -112,6 +112,7 @@ $body-md-size: 16px;
 $body-sm-size: 14px;
 $body-xs-size: 12px;
 $body-line-height: 1.5;
+
 
 // * -------------------------------------------------------------------------- */
 // Vertical and Horizontal Spacing
