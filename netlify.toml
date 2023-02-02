@@ -3,25 +3,25 @@
   command = "npm run build-docs"
 
 # redirects for older pages:
-# Fundementals
+# Fundamentals
 [[redirects]]
-  from = "/fundementals/principles*"
+  from = "/fundamentals/principles*"
   to = "/docs/fundamentals/principles"
 
 [[redirects]]
-  from = "/fundementals/themes*"
+  from = "/fundamentals/themes*"
   to = "/docs/fundamentals/brand-themes"
 
 [[redirects]]
-  from = "/fundementals/typography*"
+  from = "/fundamentals/typography*"
   to = "/docs/fundamentals/typography"
 
 [[redirects]]
-  from = "/fundementals/color*"
+  from = "/fundamentals/color*"
   to = "/docs/fundamentals/color"
 
 [[redirects]]
-  from = "/fundementals/tokens*"
+  from = "/fundamentals/tokens*"
   to = "/docs/fundamentals/design-tokens"
 
 [[redirects]]
@@ -197,5 +197,5 @@
 
 # Other stuff
 [[redirects]]
-  from = "/demos/index*"
+  from = "/demos/*"
   to="/"
