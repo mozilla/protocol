@@ -1,4 +1,4 @@
-# HEAD
+# 16.1.0
 
 ## Features
 * **component:** Add centering classes for Logo and Wordmark. (#718)
