@@ -26,30 +26,30 @@
     "webpack-package": "webpack --config webpack.package.static.config.js --mode production && webpack --config webpack.package.build.config.js --mode production"
   },
   "dependencies": {
-    "@frctl/fractal": "^1.5.13",
-    "@frctl/mandelbrot": "^1.10.1",
-    "@frctl/nunjucks": "^2.0.14",
+    "@frctl/fractal": "^1.5.14",
+    "@frctl/mandelbrot": "^1.10.2",
+    "@frctl/nunjucks": "^2.0.15",
     "@mozilla-protocol/assets": "^5.1.0",
     "@mozilla-protocol/tokens": "^5.0.5",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^10.0.0",
-    "css-loader": "^6.5.1",
-    "css-minimizer-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^2.4.5",
-    "postcss-scss": "^4.0.2",
-    "sass": "^1.41.1",
-    "sass-loader": "^12.4.0",
-    "webpack": "^5.65.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-remove-empty-scripts": "^0.7.1"
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss-scss": "^4.0.6",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-remove-empty-scripts": "^1.0.1"
   },
   "devDependencies": {
-    "eslint": "^8.3.0",
-    "jasmine-core": "^4.0.1",
-    "karma": "^6.3.16",
+    "eslint": "^8.31.0",
+    "jasmine-core": "^4.5.0",
+    "karma": "^6.4.1",
     "karma-firefox-launcher": "^2.1.2",
-    "karma-jasmine": "^4.0.1",
-    "stylelint": "^14.1.0",
-    "stylelint-config-standard-scss": "^4.0.0"
+    "karma-jasmine": "^5.1.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard-scss": "^6.1.0"
   }
 }
