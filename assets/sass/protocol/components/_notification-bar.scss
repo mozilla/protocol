@@ -12,7 +12,7 @@
     border-radius: $border-radius-sm;
     border: 1px;
     box-shadow: $box-shadow-md;
-    color: $color-ink-80;
+    color: $color-black;
     font-weight: normal;
     margin: $layout-xs $spacing-md 0;
     padding: $spacing-md $spacing-2xl;
@@ -116,7 +116,7 @@
     }
 
     &.mzp-t-error {
-        background-color: $color-red-40;
+        background-color: $color-red-30;
 
         @media #{$mq-sm} {
             .mzp-c-notification-bar-button {

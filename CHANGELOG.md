@@ -13,6 +13,7 @@
 * **css:** Add style rule for the hidden attribute in global reset (#783).
 * **html:** Use unambiguous date format in sidebar.
 * **docs:** Remove aria-disabled from disabled form inputs.
+* **css:** Update font color for Notification Bar variants to black and error-variant background color to a lighter red for better visual accessibility (#848).
 
 # 16.0.1
 
