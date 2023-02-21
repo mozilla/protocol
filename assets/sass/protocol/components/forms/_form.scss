@@ -20,8 +20,13 @@
     &.mzp-t-dark,
     .mzp-t-dark & {
         color: $body-text-color-secondary-inverse;
+    }
 
-        @supports (--css: variables) {
+    @supports (--css: variables) {
+        color: var(--body-text-color-secondary);
+
+        &.mzp-t-dark,
+        .mzp-t-dark & {
             color: var(--body-text-color-secondary-inverse);
         }
     }

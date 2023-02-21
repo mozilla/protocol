@@ -13,6 +13,14 @@
     padding: $v-grid-xs $h-grid-xs;
     position: relative;
 
+    @media #{$mq-md} {
+        padding: $v-grid-md $h-grid-md;
+    }
+
+    @media #{$mq-xl} {
+        padding: $v-grid-xl $h-grid-xl;
+    }
+
     @supports (--css: variable) {
         padding: var(--v-grid-xs) var(--h-grid-xs);
 
@@ -52,13 +60,5 @@
     // is used as a grid or flex container.
     & > :last-child {
         margin-bottom: 0;
-    }
-
-    @media #{$mq-md} {
-        padding: $v-grid-md $h-grid-md;
-    }
-
-    @media #{$mq-xl} {
-        padding: $v-grid-xl $h-grid-xl;
     }
 }

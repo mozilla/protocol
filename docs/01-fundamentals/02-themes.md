@@ -10,7 +10,7 @@ palette, mostly black and white. The Firefox brand uses the Metropolis typeface
 and is generally more colorful overall.
 
 Our CSS framework achieves the different themes by using [CSS Custom properties](https://developer.mozilla.org/docs/Web/CSS/--*)
-set on the root element using the `:root`pseudo-class, and these custom properties will be changed depending on
+set on the root element using the `:root` pseudo-class, and these custom properties will be changed depending on
 which brand is represented on the page.
 
 (Note: Since CSS Custom Properties aren't supported by legacy browsers,

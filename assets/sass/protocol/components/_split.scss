@@ -176,7 +176,7 @@
     .mzp-c-split-body {
         @include border-box;
         @include bidi(((float, left, right),));
-        padding: 0 ($h-grid-lg * 0.5);
+        padding: 0 calc($h-grid-lg * 0.5);
         width: 50%;
 
         .mzp-l-split-reversed & {
