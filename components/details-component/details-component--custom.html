@@ -2,7 +2,7 @@
   /* Styling must be provided separately. Don't use these ones; they're intentionally bad. */
   .demo-section:before {
     color: #00A;
-    content: 'Enlarge window to see Mzp.Details.destroy';
+    content: 'Enlarge window to see MzpDetails.destroy';
     display: block;
     font-weight: bold;
     margin-bottom: 20px;
@@ -10,7 +10,7 @@
 
   @media (min-width: 767px) {
     .demo-section:before {
-      content: 'Shrink window to see Mzp.Details.init';
+      content: 'Shrink window to see MzpDetails.init';
     }
   }
 
@@ -52,7 +52,7 @@
     Nullam facilisis odio non ante varius tempor ut ac turpis.</p>
 </section>
 
-<script src="{{ '/protocol/js/protocol-details.js' | path }}"></script>
+<script src="{{ '/protocol/js/details.js' | path }}"></script>
 
 <script>
 (function() {
@@ -60,7 +60,7 @@
   var _mqWide = matchMedia('(max-width: 767px)');
 
   if (_mqWide.matches) {
-    window.Mzp.Details.init('.demo-heading', {
+    window.MzpDetails.init('.demo-heading', {
       onDetailsOpen: function(){
         console.log('open');
       },
@@ -72,7 +72,7 @@
 
   _mqWide.addListener(function(mq) {
     if (mq.matches) {
-      window.Mzp.Details.init('.demo-heading', {
+      window.MzpDetails.init('.demo-heading', {
         onDetailsOpen: function(){
           console.log('open');
         },
@@ -81,7 +81,7 @@
         }
       });
     } else {
-      window.Mzp.Details.destroy('.demo-heading');
+      window.MzpDetails.destroy('.demo-heading');
     }
   });
 })();

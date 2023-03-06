@@ -1,8 +1,37 @@
 The standard newsletter subscription form.
 
-This example only provides the essentials of the form component. Making this
-subscription form fully functional requires some additional functionality.
-See the [Basket example](https://github.com/mozilla/basket-example/) for more.
+This component only provides the essentials for form display. Making this
+newsletter form fully functional requires additional functionality. See
+the [Basket example](https://github.com/mozilla/basket-example/) for more.
 
+### Usage
+
+Import using Webpack as an ES module:
+
+```
+import MzpNewsletter from '@mozilla-protocol/core/protocol/js/newsletter';
+```
+
+Import using Webpack as CommonJS:
+
+```
+const MzpNewsletter = require('@mozilla-protocol/core/protocol/js/newsletter');
+```
+
+Import as a global variable via a `<script>` tag:
+
+```
+const MzpNewsletter = window.MzpNewsletter;
+```
+
+You can then initialize the component using `init()`.
+
+```
+MzpNewsletter.init();
+```
+
+### Tips
+
+- Make sure to initialize the component *after* the DOM has loaded.
 - Some newsletters are only available in one language, so don’t require a
   language selection.

@@ -1,6 +1,6 @@
 <p>{% render '@button', { class: 'mzp-js-notification-trigger', label: 'Open Notification' } %}</p>
 
-<script src="{{ '/protocol/js/protocol-notification-bar.js' | path }}"></script>
+<script src="{{ '/protocol/js/notification-bar.js' | path }}"></script>
 
 <script>
   (function () {
@@ -18,7 +18,7 @@
 
     notificationButton.addEventListener('click', function (e) {
       e.preventDefault();
-      Mzp.Notification.init(e.target, {
+      window.MzpNotification.init(e.target, {
         title: 'This is the title.',
         cta: {
           text: "And this is a CTA link.",

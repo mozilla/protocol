@@ -12,7 +12,7 @@
 
 <button id="showSticky" class="mzp-c-button" type="button">Show Sticky Promo</button>
 
-<script src="{{ '/protocol/js/protocol-sticky-promo.js' | path }}"></script>
+<script src="{{ '/protocol/js/sticky-promo.js' | path }}"></script>
 
 <script>
 (function() {
@@ -20,6 +20,6 @@
 
   var showStickyBtn = document.getElementById("showSticky");
 
-  showStickyBtn.addEventListener('click', Mzp.StickyPromo.open, false);
+  showStickyBtn.addEventListener('click', MzpStickyPromo.open, false);
 })();
 </script>

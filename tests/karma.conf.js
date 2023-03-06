@@ -9,44 +9,64 @@ module.exports = function(config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: '',
+        basePath: '../',
 
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine', 'webpack'],
 
 
         // list of files / patterns to load in the browser
         files: [
-            // library
-            '../package/protocol/js/protocol-supports.js',
-            '../package/protocol/js/protocol-utils.js',
-            // js files
-            '../package/protocol/js/protocol-details.js',
-            '../package/protocol/js/protocol-lang-switcher.js',
-            '../package/protocol/js/protocol-menu.js',
-            '../package/protocol/js/protocol-navigation.js',
-            '../package/protocol/js/protocol-notification-bar.js',
+            // globals
+            'tests/globals.js',
             // tests
-            'unit/protocol-details.js',
-            'unit/protocol-lang-switcher.js',
-            'unit/protocol-menu.js',
-            'unit/protocol-navigation.js',
-            'unit/protocol-notification-bar.js'
+            'tests/unit/details.js',
+            'tests/unit/lang-switcher.js',
+            'tests/unit/menu.js',
+            'tests/unit/navigation.js',
+            'tests/unit/notification-bar.js'
         ],
 
 
         // list of files / patterns to exclude
-        exclude: [
-        ],
+        exclude: [],
 
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
+            'assets/js/protocol/*.js': ['webpack', 'sourcemap'],
+            'tests/**/*.js': ['webpack', 'sourcemap']
         },
 
+        webpack: {
+            devtool: 'inline-source-map',
+            module: {
+                rules: [
+                    {
+                        test: /\.js$/,
+                        exclude: /node_modules/,
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: [
+                                    [
+                                        '@babel/preset-env',
+                                        {
+                                            targets: {
+                                                ie: '10'
+                                            }
+                                        }
+                                    ]
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
