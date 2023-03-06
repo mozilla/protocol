@@ -37,7 +37,8 @@ const protocolStatic = {
                 {
                     from: path.resolve(__dirname, 'node_modules/@mozilla-protocol/assets/'),
                     to: 'img/'
-                }
+                },
+
             ]
         })
     ]
@@ -67,6 +68,10 @@ const fractalStatic = {
                     from: path.resolve(__dirname, 'theme/assets/favicon.png'),
                     to: 'favicon.png'
                 },
+                // {
+                //     from: path.resolve(__dirname, 'docs/404.html'),
+                //     to: 'docs/404.html'
+                // }
             ]
         })
     ]
