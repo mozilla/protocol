@@ -13,7 +13,6 @@ $font-path: '/protocol/fonts';
 
 // Settings
 @import 'settings/settings';
-@import 'components/404';
 
 // Base
 @import 'base/typography';
@@ -41,3 +40,4 @@ $font-path: '/protocol/fonts';
 @import 'components/color';
 @import 'components/icon';
 @import 'components/tokens';
+@import 'components/404';
