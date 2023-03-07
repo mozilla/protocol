@@ -1,0 +1,11 @@
+/* stylelint-disable selector-class-pattern */
+.Tree-items {
+    .Tree-item {
+        // Hide 404 page from sidebar in production, since it has a different URL after Webpack build
+        a[href='/docs/404'],
+        a[href='./docs/404.html'],
+        a[href='./404.html'] {
+            display: none;
+        }
+    }
+}

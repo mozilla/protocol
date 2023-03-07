@@ -4,13 +4,9 @@
 
 # 404 status
 [[redirects]]
-  from = "/broken-link*"
-  to = "/docs/404"
-
-[[redirects]]
   from = "/*"
   to = "/docs/404"
-
+  status = 404
 
 # redirects for older pages:
 # Fundamentals
