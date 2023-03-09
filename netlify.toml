@@ -2,12 +2,6 @@
   publish = "dist"
   command = "npm run build-docs"
 
-# 404 status
-[[redirects]]
-  from = "/*"
-  to = "/docs/404"
-  status = 404
-
 # redirects for older pages:
 # Fundamentals
 [[redirects]]
@@ -206,3 +200,8 @@
   from = "/demos/*"
   to="/"
 
+# 404 status
+[[redirects]]
+  from = "/*"
+  to = "/docs/404"
+  status = 404
