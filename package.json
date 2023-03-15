@@ -51,5 +51,9 @@
     "karma-jasmine": "^5.1.0",
     "stylelint": "^14.16.1",
     "stylelint-config-standard-scss": "^6.1.0"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "IE 8"
+  ]
 }
