@@ -1,3 +1,8 @@
+# HEAD
+
+## Bug Fixes
+* **js:** Fix syntax error in legacy IE when compiling JS (#861)
+
 # 16.1.0
 
 ## Features
