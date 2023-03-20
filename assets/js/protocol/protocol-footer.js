@@ -32,7 +32,7 @@
                 }
 
                 if (window.matchMedia('all').addEventListener) {
-                    _mqWide.addEventListener('change', screenChange);
+                    _mqWide.addEventListener('change', screenChange, false);
                 } else if (window.matchMedia('all').addListener) {
                     _mqWide.addListener(screenChange);
                 }

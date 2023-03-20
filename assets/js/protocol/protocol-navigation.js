@@ -104,7 +104,7 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
         }
 
         if (window.matchMedia('all').addEventListener) {
-            _mqLargeNav.addEventListener('change', makeStickyNav);
+            _mqLargeNav.addEventListener('change', makeStickyNav, false);
         } else if (window.matchMedia('all').addListener) {
             _mqLargeNav.addListener(makeStickyNav);
         }

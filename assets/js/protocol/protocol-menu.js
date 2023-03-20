@@ -210,7 +210,7 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
         }
 
         if (window.matchMedia('all').addEventListener) {
-            _mqWideNav.addEventListener('change', menuBind);
+            _mqWideNav.addEventListener('change', menuBind, false);
         } else if (window.matchMedia('all').addListener) {
             _mqWideNav.addListener(menuBind);
         }
