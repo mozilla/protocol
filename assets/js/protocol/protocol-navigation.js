@@ -95,13 +95,19 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     Navigation.initSticky = function() {
         _mqLargeNav = matchMedia('(min-width: ' + _wideBreakpoint + ') and (min-height: ' + _tallBreakpoint + ')');
 
-        _mqLargeNav.addListener(function(mq) {
+        function makeStickyNav(mq) {
             if (mq.matches) {
                 Navigation.createSticky();
             } else {
                 Navigation.destroySticky();
             }
-        });
+        }
+
+        if (window.matchMedia('all').addEventListener) {
+            _mqLargeNav.addEventListener('change', makeStickyNav, false);
+        } else if (window.matchMedia('all').addListener) {
+            _mqLargeNav.addListener(makeStickyNav);
+        }
 
         if (Navigation.isLargeViewport()) {
             Navigation.createSticky();

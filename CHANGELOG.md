@@ -10,6 +10,7 @@
 * **docs:** Migrate Protocol documentation site to Fractal.
 * **node:** Create a Webpack config for compiling docs using Fractal.
 * **css:** Updated stylelint ruleset to match Bedrock's linting pattern. (#814)
+* **js** Updated `addListener` method, which is now deprecated, to be replaced by `addEventListener`. `addListener` will be used as a fallback for older browsers.
 
 ## Bug Fixes
 * **js:** Ensure focus is moved to modal after animation completes (#829)

@@ -187,7 +187,7 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
      * Convenience function for checking `matchMedia` state.
      * @return {Boolean}
      */
-    Menu.isWideViewport = function() {
+    Menu.isWideViewport = function () {
         return _mqWideNav.matches;
     };
 
@@ -197,7 +197,7 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
     Menu.handleState = function() {
         _mqWideNav = matchMedia('(min-width: ' + _wideBreakpoint + ')');
 
-        _mqWideNav.addListener(function(mq) {
+        function menuBind(mq) {
             Menu.close();
 
             if (mq.matches) {
@@ -207,7 +207,13 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
                 Menu.unbindEventsWide();
                 Menu.bindEventsSmall();
             }
-        });
+        }
+
+        if (window.matchMedia('all').addEventListener) {
+            _mqWideNav.addEventListener('change', menuBind, false);
+        } else if (window.matchMedia('all').addListener) {
+            _mqWideNav.addListener(menuBind);
+        }
 
         if (Menu.isWideViewport()) {
             Menu.bindEventsWide();
@@ -228,7 +234,6 @@ if (typeof window.Mzp === 'undefined') { // eslint-disable-line block-scoped-var
             items[i].addEventListener('mouseenter', Menu.onMouseEnter, false);
             items[i].addEventListener('mouseleave', Menu.onMouseLeave, false);
             items[i].addEventListener('focusout', Menu.onFocusOut, false);
-
             link = items[i].querySelector('.mzp-c-menu-title');
             link.addEventListener('click', Menu.onClickWide, false);
 

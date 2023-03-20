@@ -5,6 +5,15 @@
 (function() {
     'use strict';
 
+    // removes Details component if screen size is big
+    function screenChange(mq) {
+        if (mq.matches) {
+            Mzp.Details.init(footerHeadings);
+        } else {
+            Mzp.Details.destroy(footerHeadings);
+        }
+    }
+
     // check we have global variable
     if (typeof window.Mzp !== 'undefined') {
         var Mzp = window.Mzp;
@@ -14,7 +23,7 @@
         if (typeof Mzp.Supports !== 'undefined' && typeof Mzp.Details !== 'undefined') {
 
             // check browser supports matchMedia
-            if(Mzp.Supports.matchMedia) {
+            if (Mzp.Supports.matchMedia) {
                 var _mqWide = matchMedia('(max-width: 479px)');
 
                 // initialize details if screen is small
@@ -22,14 +31,11 @@
                     Mzp.Details.init(footerHeadings);
                 }
 
-                // remove details if screen is big
-                _mqWide.addListener(function(mq) {
-                    if (mq.matches) {
-                        Mzp.Details.init(footerHeadings);
-                    } else {
-                        Mzp.Details.destroy(footerHeadings);
-                    }
-                });
+                if (window.matchMedia('all').addEventListener) {
+                    _mqWide.addEventListener('change', screenChange, false);
+                } else if (window.matchMedia('all').addListener) {
+                    _mqWide.addListener(screenChange);
+                }
             }
         }
     }
