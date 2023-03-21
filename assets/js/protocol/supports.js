@@ -67,4 +67,12 @@ MzpSupports.details = (function() {
     return diff;
 }());
 
+MzpSupports.intersectionObserver = (function () {
+    return (
+        'IntersectionObserver' in window &&
+        'IntersectionObserverEntry' in window &&
+        'intersectionRatio' in window.IntersectionObserverEntry.prototype
+    );
+})();
+
 module.exports = MzpSupports;

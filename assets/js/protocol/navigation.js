@@ -5,9 +5,10 @@
 const MzpNavigation = {};
 let _navElem;
 let _navItemsLists;
+let _navMenuButtons;
 const _options = {
     onNavOpen: null,
-    onNavClose: null
+    onNavClose: null,
 };
 let _ticking = false;
 let _lastKnownScrollPosition = 0;
@@ -33,11 +34,13 @@ MzpNavigation.isLargeViewport = () => {
  */
 MzpNavigation.supportsSticky = () => {
     if (typeof MzpSupports !== 'undefined') {
-        return MzpSupports.matchMedia &&
-                MzpSupports.classList &&
-                MzpSupports.requestAnimationFrame &&
-                MzpSupports.cssFeatureQueries &&
-                CSS.supports('position', 'sticky');
+        return (
+            MzpSupports.matchMedia &&
+            MzpSupports.classList &&
+            MzpSupports.requestAnimationFrame &&
+            MzpSupports.cssFeatureQueries &&
+            CSS.supports('position', 'sticky')
+        );
     } else {
         return false;
     }
@@ -50,7 +53,9 @@ MzpNavigation.supportsSticky = () => {
  */
 MzpNavigation.onScroll = () => {
     if (!_ticking) {
-        _animationFrameID = window.requestAnimationFrame(MzpNavigation.checkScrollPosition);
+        _animationFrameID = window.requestAnimationFrame(
+            MzpNavigation.checkScrollPosition
+        );
         _ticking = true;
     }
 };
@@ -60,7 +65,9 @@ MzpNavigation.onScroll = () => {
  */
 MzpNavigation.createSticky = () => {
     _viewport.classList.add('mzp-has-sticky-navigation');
-    _animationFrameID = window.requestAnimationFrame(MzpNavigation.checkScrollPosition);
+    _animationFrameID = window.requestAnimationFrame(
+        MzpNavigation.checkScrollPosition
+    );
     window.addEventListener('scroll', MzpNavigation.onScroll, false);
 };
 
@@ -85,7 +92,9 @@ MzpNavigation.destroySticky = () => {
  * for sticky navigation are satisfied.
  */
 MzpNavigation.initSticky = () => {
-    _mqLargeNav = matchMedia(`(min-width: ${_wideBreakpoint}) and (min-height: ${_tallBreakpoint})`);
+    _mqLargeNav = matchMedia(
+        `(min-width: ${_wideBreakpoint}) and (min-height: ${_tallBreakpoint})`
+    );
 
     function makeStickyNav(mq) {
         if (mq.matches) {
@@ -143,7 +152,9 @@ MzpNavigation.checkScrollPosition = () => {
  * Event handler for navigation menu button `click` events.
  */
 MzpNavigation.onClick = (e) => {
-    const thisNavItemList = e.target.parentNode.querySelector('.mzp-c-navigation-items');
+    const thisNavItemList = e.target.parentNode.querySelector(
+        '.mzp-c-navigation-items'
+    );
 
     e.preventDefault();
 
@@ -154,8 +165,10 @@ MzpNavigation.onClick = (e) => {
     thisNavItemList.classList.toggle('mzp-is-open');
 
     // Update aria-expended state on menu.
-    const expanded = thisNavItemList.classList.contains('mzp-is-open') ? true : false;
-    thisNavItemList.setAttribute('aria-expanded', expanded);
+    const expanded = thisNavItemList.classList.contains('mzp-is-open')
+        ? true
+        : false;
+    e.target.setAttribute('aria-expanded', expanded);
 
     if (expanded) {
         if (typeof _options.onNavOpen === 'function') {
@@ -169,13 +182,52 @@ MzpNavigation.onClick = (e) => {
 };
 
 /**
- * Set initial ARIA navigation states.
+ * use Intersection Observer API to keep track of when the mobile
+ * nav menu is displayed to handle aria roles better
  */
-MzpNavigation.setAria = () => {
-    for (let i = 0; i < _navItemsLists.length; i++) {
-        _navItemsLists[i].setAttribute('aria-expanded', false);
+(MzpNavigation.menuButtonVisible = (callback) => {
+    // check if Intersection observer is supported
+    if (MzpSupports !== 'undefined' && MzpSupports.intersectionObserver) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    callback(entry.intersectionRatio > 0, entry.target);
+                });
+            },
+            { root: document.documentElement }
+        );
+        _navMenuButtons.forEach((button) => {
+            observer.observe(button);
+        });
     }
-};
+}),
+/**
+     * Set initial ARIA navigation states.
+     */
+(MzpNavigation.setAria = () => {
+    if (MzpSupports !== 'undefined' && MzpSupports.intersectionObserver) {
+        MzpNavigation.menuButtonVisible((isVisible, menuButton) => {
+            if (isVisible) {
+                // if the menu button is visible -  set the 'aria-expanded' role based on whether the menu is open or not
+                const isActive =
+                        !!menuButton.classList.contains('mzp-is-active');
+                menuButton.setAttribute('aria-expanded', isActive);
+            } else {
+                // if the menu is not visible - remove the aria role, since elements
+                // with `display: none` are not read to screen readers
+                menuButton.removeAttribute('aria-expanded');
+            }
+        });
+    } else {
+        for (let index = 0; index < _navMenuButtons.length; index++) {
+            const menuButton = _navMenuButtons[index];
+            const isActive =
+                    menuButton.classList.contains('mzp-is-active') &&
+                    getComputedStyle(menuButton).display !== 'none';
+            menuButton.setAttribute('aria-expanded', isActive);
+        }
+    }
+});
 
 /**
  * Bind navigation event handlers.
@@ -183,9 +235,12 @@ MzpNavigation.setAria = () => {
 MzpNavigation.bindEvents = () => {
     _navItemsLists = document.querySelectorAll('.mzp-c-navigation-items');
     if (_navItemsLists.length > 0) {
-        const navButtons = document.querySelectorAll('.mzp-c-navigation-menu-button');
-        for (let i = 0; i < navButtons.length; i++) {
-            navButtons[i].addEventListener('click', MzpNavigation.onClick, false);
+        _navMenuButtons = document.querySelectorAll(
+            '.mzp-c-navigation-menu-button'
+        );
+        for (let index = 0; index < _navMenuButtons.length; index++) {
+            const menuButton = _navMenuButtons[index];
+            menuButton.addEventListener('click', MzpNavigation.onClick, false);
         }
         MzpNavigation.setAria();
     }
