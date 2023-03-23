@@ -7,10 +7,8 @@
 
 @mixin default-states {
     &:focus {
-        // border-color: $button-border-color-focus;
-        // box-shadow: $field-focus-ring;
-        border: 2px solid #008AEA;
-        outline: $field-focus-ring-dark;
+        border-color: $button-border-color-focus;
+        outline: $field-focus-ring-outline;
         outline-offset: 1px;
     }
 
@@ -30,11 +28,9 @@
 
 @mixin default-states-dark {
     &:focus {
-        // border-color: $button-border-color-focus;
-        // box-shadow: $field-focus-ring-dark;
-        // outline-offset: 2px;
-        border: 2px solid #008AEA;
-        outline: $field-focus-ring-dark;
+        border-color: $button-border-color-focus;
+        box-shadow: $field-focus-ring-white;
+        outline: $field-focus-ring-outline;
         outline-offset: 1px;
     }
 
@@ -54,10 +50,8 @@
 
 @mixin product-states {
     &:focus {
-        // border-color: $button-border-color-focus;
-        // box-shadow: $field-focus-ring;
-        border: 2px solid #008AEA;
-        outline: $field-focus-ring-dark;
+        border-color: $button-border-color-focus-product;
+        outline: $field-focus-ring-outline;
         outline-offset: 1px;
     }
 
@@ -96,17 +90,6 @@ a.mzp-c-button {
     line-height: type-scale('body-line-height');
     padding: 6px $spacing-lg;
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
-
-    &:focus {
-        // border-color: $button-border-color-focus;
-        // box-shadow: $field-focus-ring;
-        // color: $color-white;
-        // outline: none;
-        // box-shadow: 0 0 0 3px green;
-        border: 2px solid #008AEA;
-        outline: $field-focus-ring-dark;
-        outline-offset: 1px;
-    }
 
     &::-moz-focus-inner {
         border: 0;

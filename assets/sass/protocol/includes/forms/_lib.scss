@@ -29,11 +29,14 @@ $field-padding: $spacing-sm;
 $field-h-spacing: $spacing-md;
 $field-v-spacing: $spacing-lg;
 $field-focus-ring: 0 0 0 2px rgba($color-blue-40, 0.5);
-$field-focus-ring-dark: 2px solid #afccf3;
+$field-focus-ring-dark: 0 0 0 2px color.mix($color-blue-40, $color-white);
+$field-focus-ring-white: 0 0 0 2px $color-white;
+$field-focus-ring-outline: 2px solid #afccf3;
 $field-focus-ring-error: 0 0 0 2px rgba($color-red-50, 0.5);
 
 // buttons
-$button-border-color-focus: #008aea;
+$button-border-color-focus: $color-blue-50;
+$button-border-color-focus-product: $color-blue-40;
 
 // label
 $label-v-spacing: $spacing-sm;
