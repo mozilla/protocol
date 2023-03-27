@@ -142,6 +142,7 @@ a.mzp-c-button {
     border: 2px solid $color-black;
     color: $color-white;
 
+    // need to re-declare to give higher specificity than the theme styles
     @include default-states;
 
     // dark
@@ -221,10 +222,6 @@ a.mzp-c-button {
         border-color: $color-marketing-gray-30;
         color: $color-marketing-gray-70;
 
-        &:focus {
-            border-color: $button-border-color-focus;
-        }
-
         &:hover {
             background-color: $color-marketing-gray-20;
             border-color: $color-marketing-gray-40;
@@ -242,10 +239,6 @@ a.mzp-c-button {
             background-color: rgba($color-white, 0.1);
             border-color: rgba($color-white, 0.6);
             color: $color-white;
-
-            &:focus {
-                border-color: $button-border-color-focus;
-            }
 
             &:hover {
                 background-color: rgba($color-white, 0.2);
