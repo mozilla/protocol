@@ -199,3 +199,9 @@
 [[redirects]]
   from = "/demos/*"
   to="/"
+
+# 404 status
+[[redirects]]
+  from = "/*"
+  to = "/docs/404"
+  status = 404
