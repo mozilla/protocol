@@ -1,0 +1,33 @@
+{# @callout
+#
+# parameters:
+# class           - string
+# content_class   - string
+# title           - string
+# title_el        - HTML heading element (h1, h2, h3, h4, h5, h6)
+# title_class     - string
+# desc            - string
+# cta             - string
+# cta_link        - url
+# cta_class       - string
+#}
+<section class="mzp-c-callout{% if class %} {{ class }}{% endif %}">
+  <div class="mzp-l-content{% if content_class %} {{ content_class }}{% endif %}">
+    <div class="mzp-c-callout-content">
+      <{{ title_el | default('h2') }} class="mzp-c-callout-title{% if title_class %} {{ title_class }}{% endif %}">{{ title }}</{{ title_el | default('h2') }}>
+    {%- if desc %}
+      <div class="mzp-c-callout-desc">
+        <p>{{ desc }}</p>
+      </div>
+    {% endif -%}
+    {%- if image %}
+      <img class="mzp-c-callout-media" src="{{ image | default('/img/image-3-2.jpg') | path }}" alt="">
+    {% endif -%}
+    </div>
+  {%- if cta %}
+    <div class="mzp-c-callout-cta">
+      {% render '@button', { label: cta, link: cta_link, class: cta_class } %}
+    </div>
+  {% endif -%}
+  </div>
+</section>

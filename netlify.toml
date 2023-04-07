@@ -143,11 +143,15 @@
 
 [[redirects]]
   from = "/patterns/organisms/call-out*"
-  to = ""
+  to = "components/detail/callout"
+
+[[redirects]]
+  from = "/components/detail/compact-call-out*"
+  to = "/components/detail/callout--compact"
 
 [[redirects]]
   from = "/patterns/organisms/footer*"
-  to = "components/detail/call-out"
+  to = "components/detail/footer"
 
 # depreciated
 [[redirects]]

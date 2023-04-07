@@ -1,0 +1,60 @@
+preview: '@preview-unpadded'
+context:
+  title: A Headline With 30 Characters
+  title_el: h1
+  desc: A description of about 150 characters, give or take. Because this text is centered it works best with a tagline or brief intro, just a sentence or two.
+  cta: False
+  image: False
+variants:
+  - name: Dark theme
+    notes: A dark theme is available with the `mzp-t-dark` theme class. This example omits a description and includes a CTA button.
+    context:
+      class: mzp-t-dark
+      desc: False
+      cta: Call to Action
+      cta_link: '#'
+      cta_class: mzp-t-dark
+  - name: Content width
+    notes: |
+      Adding one of our standard content width classes to the inner container
+      (`mzp-l-content`) will apply that width constraint, though the outer
+      component still spans the viewport.
+
+      - `mzp-t-content-sm`
+      - `mzp-t-content-md`
+      - `mzp-t-content-lg`
+      - `mzp-t-content-xl`
+
+      This example also has a tertiary background color and an image.
+    context:
+      class: mzp-t-background-tertiary
+      content_class: mzp-t-content-sm
+      desc: A description of about 150 characters, give or take. Because this text is centered it works best with a tagline or brief intro, just a sentence or two.
+      cta: False
+      image: '/img/image-3-2.jpg'
+  - name: Compact
+    notes: |
+      An alternative compact layout can be applied with the `mzp-l-compact`
+      class. This is intended for supplemental callouts or promotional blocks.
+      A Compact Callout places the content and CTA in two columns, aligned left
+      in LTR languages and aligned right for RTL languages. Technically the CTA
+      is still optional in a compact layout, but it leaves empty whitespace.
+
+      A Compact Callout spans the full viewport and can result in long line-lengths
+      of the text. It’s often advisable to constrain the width with one of the content
+      width classes (this example uses `mzp-t-content-lg`).
+
+      This example also applies a secondary background color and uses a secondary
+      product themed CTA button.
+
+      ### Notes
+      The previous Compact Call-out used its own class name, `mzp-c-call-out-compact`.
+      This is now a variant layout of the Callout component, rather than a separate
+      component with its own name. It uses the modifier class `mzp-l-compact`.
+    context:
+      class: mzp-l-compact mzp-t-background-secondary
+      content_class: mzp-t-content-lg
+      cta: Call to Action
+      cta_class: mzp-t-product mzp-t-secondary
+      desc: A description of about 150 characters, give or take. This text is left- or right-aligned but should still be short, only a sentence or two.
+

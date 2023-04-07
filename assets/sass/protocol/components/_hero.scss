@@ -4,7 +4,7 @@
 
 @use '../includes/lib' as *;
 
-@warn 'Hero component is now deprecated. Please migrate to use Split: https://protocol.mozilla.org/patterns/organisms/split.html';
+@warn 'Hero component is now deprecated. Please migrate to use Split or Callout: https://protocol.mozilla.org/components/detail/split--default https://protocol.mozilla.org/components/detail/callout--default';
 
 // Page hero section - should usually appear at the top of a page
 
