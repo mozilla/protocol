@@ -34,7 +34,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
-    "css-minimizer-webpack-plugin": "^4.2.2",
+    "css-minimizer-webpack-plugin": "^5.0.0",
     "mini-css-extract-plugin": "^2.7.2",
     "postcss-scss": "^4.0.6",
     "sass": "^1.57.1",
@@ -49,8 +49,8 @@
     "karma": "^6.4.1",
     "karma-firefox-launcher": "^2.1.2",
     "karma-jasmine": "^5.1.0",
-    "stylelint": "^14.16.1",
-    "stylelint-config-standard-scss": "^6.1.0"
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard-scss": "^9.0.0"
   },
   "browserslist": [
     "defaults",
