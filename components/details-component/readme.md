@@ -33,8 +33,8 @@ and DOM traversal. It is recommended that both are included in your page and acc
 object before loading your Details component script.
 
 ```
-import MzpSupports from '@mozilla-protocol/core/protocol/js/supports');
-import MzpUtils from '@mozilla-protocol/core/protocol/js/utils');
+import MzpSupports from '@mozilla-protocol/core/protocol/js/supports';
+import MzpUtils from '@mozilla-protocol/core/protocol/js/utils';
 
 window.MzpSupports = MzpSupports;
 window.MzpUtils = MzpUtils;
