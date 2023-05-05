@@ -1,11 +1,19 @@
 # HEAD
 
+## Features
+
+* **js:** Protocol JS components are now written using modern JS and published as ES5/UMD format (#255).
+* **js:** Removed pre-minified JS files from the published package. Consuming sites should handle their own minification.
+* **css:** Removed pre-minified CSS files from the published package Consuming sites should handle their own minification.
+
 ## Bug Fixes
+
 * **js:** Fix syntax error in legacy IE when compiling JS (#861)
 
 # 16.1.0
 
 ## Features
+
 * **component:** Add centering classes for Logo and Wordmark. (#718)
 * **docs:** Migrate Protocol documentation site to Fractal.
 * **node:** Create a Webpack config for compiling docs using Fractal.
@@ -15,6 +23,7 @@
 *  **docs:** Added 404 page
 
 ## Bug Fixes
+
 * **js:** Ensure focus is moved to modal after animation completes (#829)
 * **node:** Make sure to build NPM package using production mode.
 * **html:** Added accessible attributes to menu bar (#815).
@@ -26,6 +35,7 @@
 # 16.0.1
 
 ## Bug Fixes
+
 * **css:** Fix repeating background on disabled search field (#767)
 * **js:** Fix keyboard focus capture on modal open animation (#749).
 

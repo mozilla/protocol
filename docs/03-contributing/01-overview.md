@@ -84,7 +84,7 @@ With those prerequisites met:
 3. On your computer’s command line, navigate to the folder to which you just
     cloned the Protocol repo.
 4. Within that folder, run `npm install`. This will install all the dependencies.
-5. Next run `npm run webpack-docs`. This will compile the Sass and copy assets
+5. Next run `npm run webpack`. This will compile the Sass and copy assets
     into a local folder in preparation to run the server. It also starts a “watch”
     process that will watch those files and automatically recompile when they change.
 6. In another command line console (and still within the Protocol folder), run

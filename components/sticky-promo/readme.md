@@ -4,21 +4,43 @@ the page – always visible within the viewport no matter a user’s scroll posi
 It can be dismissed with a click.
 
 Sticky Promos can be used to promote a product and provide a call to action, or
-potentially for some other kind of dismissable information (not to be confused
+potentially for some other kind of dismissible information (not to be confused
 with the [Notification Bar](notification-bar)).
 
 The Sticky Promo container itself is both content and context agnostic. Content
 should be short and succinct, ideally just a few lines. Too much content will
 make the promo excessively tall and cover too much of the page.
 
-This component requires `protocol-sticky-promo.js`. The promo is hidden by default
-and made visible by the `Mzp.StickyPromo.open()` function. As a helper, you can
-set the sticky promo to automatically once the page is loaded by adding
-`mzp-js-show-on-load` to the class list.
+### Usage
+
+Import using Webpack as an ES module:
+
+```
+import MzpStickyPromo from '@mozilla-protocol/core/protocol/js/sticky-promo';
+```
+
+Import using Webpack as CommonJS:
+
+```
+const MzpStickyPromo = require('@mozilla-protocol/core/protocol/js/sticky-promo');
+```
+
+Import as a global variable via a `<script>` tag:
+
+```
+const MzpStickyPromo = window.MzpStickyPromo;
+```
+
+You can then show the component using `open()`.
+
+```
+MzpStickyPromo.open();
+```
 
 ### Tips
 
 - Use only one Sticky Promo per page.
+- Make initialize the component *after* the DOM has loaded.
 - The Sticky Promo is positioned in the lower right corner in LTR languages
   and in the lower left corner in RTL languages.
 - Add one of these product theme classes to include a logo above the title:
@@ -27,3 +49,5 @@ set the sticky promo to automatically once the page is loaded by adding
   - `mzp-t-product-developer`
   - `mzp-t-product-nightly`
 - A dark theme is also available with the theme class `mzp-t-dark`.
+-  you can set the sticky promo to automatically once the page is loaded by adding
+  `mzp-js-show-on-load` to the class list.

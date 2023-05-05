@@ -9,18 +9,12 @@
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const TerserPlugin = require('terser-webpack-plugin');
-const glob = require('glob');
+const jsEntryPoints = require('./webpack.entrypoints.js');
 const path = require('path');
 
 const protocolJSConfig = {
     devtool: false,
-    entry: glob.sync('./assets/js/protocol/*.js').reduce((obj, el) => {
-        const name = path.parse(el).name;
-        obj[name] = el;
-        obj[`${name}.min`] = el;
-        return obj;
-    }, {}),
+    entry: jsEntryPoints,
     output: {
         path: path.resolve(__dirname, 'static/protocol/js'),
         filename: '[name].js'
@@ -28,15 +22,29 @@ const protocolJSConfig = {
     performance: {
         hints: 'warning'
     },
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                parallel: true,
-                include: /\.min\.js$/,
-                extractComments: false
-            }),
-        ],
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                include: path.resolve(__dirname, 'assets/js/protocol'),
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            [
+                                '@babel/preset-env',
+                                {
+                                    targets: {
+                                        ie: '10'
+                                    }
+                                }
+                            ]
+                        ]
+                    }
+                }
+            },
+        ]
     }
 };
 
@@ -51,11 +59,8 @@ const protocolCSSConfig = {
     },
     devtool: 'source-map',
     optimization: {
-        minimize: true,
         minimizer: [
-            new CssMinimizerPlugin({
-                include: /\.min\.css$/
-            }),
+            new CssMinimizerPlugin()
         ],
     },
     module: {
@@ -103,11 +108,8 @@ const fractalCSSConfig = {
     },
     devtool: 'source-map',
     optimization: {
-        minimize: true,
         minimizer: [
-            new CssMinimizerPlugin({
-                include: /\.min\.css$/
-            }),
+            new CssMinimizerPlugin()
         ],
     },
     module: {
@@ -147,7 +149,7 @@ const fractalCSSConfig = {
 const fractalJSConfig = {
     devtool: false,
     entry: {
-        'bidi': path.resolve(__dirname, 'theme/assets/js/bidi.js'),
+        'bidi': path.resolve(__dirname, 'theme/assets/js/bidi.js')
     },
     output: {
         path: path.resolve(__dirname, 'theme/static/js'),
@@ -156,8 +158,29 @@ const fractalJSConfig = {
     performance: {
         hints: 'warning'
     },
-    optimization: {
-        minimize: true
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                include: path.resolve(__dirname, 'theme/assets/js'),
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            [
+                                '@babel/preset-env',
+                                {
+                                    targets: {
+                                        ie: '10'
+                                    }
+                                }
+                            ]
+                        ]
+                    }
+                }
+            },
+        ]
     }
 };
 

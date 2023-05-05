@@ -3,7 +3,29 @@ container element. It won’t receive any styling without the Protocol classes s
 you’ll have to style it separately (styles in this demonstration are intentionally
 tacky).
 
-Initialized using `Mzp.Details.init(selector, options)`, where `options` is an
-Object with the following properties:
-- `onDetailsOpen` [Function] callback when a details is opened (optional).
-- `onDetailsClosed` [Function] callback when a details is closed (optional).
+### Usage
+
+You can initiate using a custom class name like so:
+
+```
+MzpDetails.init('.demo-heading');
+```
+
+Callbacks are supported for open and close events:
+
+```
+MzpDetails.init('.demo-heading', {
+  onDetailsOpen: function(){
+    console.log('open');
+  },
+  onDetailsClose: function(){
+    console.log('close');
+  }
+})
+```
+
+A custom component can also be destroyed using:
+
+```
+MzpDetails.destroy('.demo-heading');
+```

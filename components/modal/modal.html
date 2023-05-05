@@ -16,7 +16,7 @@
   </figure>
 </div>
 
-<script src="{{ '/protocol/js/protocol-modal.js' | path }}"></script>
+<script src="{{ '/protocol/js/modal.js' | path }}"></script>
 
 <script>
 (function() {
@@ -28,7 +28,7 @@
     button.addEventListener('click', function(e) {
         e.preventDefault();
 
-        Mzp.Modal.createModal(e.target, content, {
+        MzpModal.createModal(e.target, content, {
             title: 'Example headline with 35 characters',
             className: 'mzp-has-media',
             closeText: 'Close modal',

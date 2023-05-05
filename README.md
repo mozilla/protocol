@@ -68,7 +68,7 @@ $ npm install
 Running `npm install` will install dependencies. Then:
 
 ```
-$ npm run webpack-docs
+$ npm run webpack
 ```
 
 This will compile the Sass and copy assets into a local folder in preparation to

@@ -9,19 +9,13 @@
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const TerserPlugin = require('terser-webpack-plugin');
-const glob = require('glob');
 const path = require('path');
+const jsEntryPoints = require('./webpack.entrypoints.js');
 
-// Create both uncompressed and minified JS assets for each file in directory.
+// Create UMD formatted scripts from ES source modules.
 const jsConfig = {
     devtool: false,
-    entry: glob.sync('./assets/js/protocol/*.js').reduce((obj, el) => {
-        const name = path.parse(el).name;
-        obj[name] = el;
-        obj[`${name}.min`] = el;
-        return obj;
-    }, {}),
+    entry: jsEntryPoints,
     output: {
         path: path.resolve(__dirname, 'package/protocol/js'),
         filename: '[name].js'
@@ -30,14 +24,31 @@ const jsConfig = {
         hints: 'warning'
     },
     optimization: {
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                parallel: true,
-                include: /\.min\.js$/,
-                extractComments: false
-            }),
-        ],
+        minimize: false
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                include: path.resolve(__dirname, 'assets/js/protocol'),
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            [
+                                '@babel/preset-env',
+                                {
+                                    targets: {
+                                        ie: '10'
+                                    }
+                                }
+                            ]
+                        ]
+                    }
+                }
+            },
+        ]
     }
 };
 
@@ -45,9 +56,7 @@ const jsConfig = {
 const cssConfig = {
     entry: {
         'protocol': path.resolve(__dirname, 'assets/sass/protocol/protocol.scss'),
-        'protocol.min': path.resolve(__dirname, 'assets/sass/protocol/protocol.scss'),
         'protocol-components': path.resolve(__dirname, 'assets/sass/protocol/protocol-components.scss'),
-        'protocol-components.min': path.resolve(__dirname, 'assets/sass/protocol/protocol-components.scss'),
     },
     output: {
         filename: 'temp/[name].js',
@@ -55,11 +64,8 @@ const cssConfig = {
     },
     devtool: 'source-map',
     optimization: {
-        minimize: true,
         minimizer: [
-            new CssMinimizerPlugin({
-                include: /\.min\.css$/
-            }),
+            new CssMinimizerPlugin(),
         ],
     },
     module: {

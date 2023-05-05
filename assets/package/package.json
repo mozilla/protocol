@@ -19,7 +19,7 @@
     "url": "https://github.com/mozilla/protocol/issues"
   },
   "homepage": "https://github.com/mozilla/protocol",
-  "main": "protocol/css/protocol.min.css",
+  "main": "protocol/css/protocol.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }

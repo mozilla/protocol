@@ -1,7 +1,57 @@
 Protocol also provides a JavaScript library to invoke and dismiss a notification
 bar.
 
-The script provides the following options:
+### Usage
+
+Import using Webpack as an ES module:
+
+```
+import MzpNotification from '@mozilla-protocol/core/protocol/js/notification-bar';
+```
+
+Import using Webpack as CommonJS:
+
+```
+const MzpNotification = require('@mozilla-protocol/core/protocol/js/notification-bar');
+```
+
+Import as a global variable via a `<script>` tag:
+
+```
+const MzpNotification = window.MzpNotification;
+```
+
+You can then initialize the component using `init()`. For the notification to work it is required that you pass
+a reference to the DOM element that triggered the modal, as well as a title to display.
+
+```
+MzpNotification.init(origin, options);
+```
+
+You can also pass a range of configuration options:
+
+```
+MzpNotification.init(origin, {
+  title: 'This is the title.',
+  cta: {
+    text: "And this is a CTA link.",
+    url: "https://www.mozilla.org",
+    attrs: {"target": "_blank", "rel": "noopener"}
+  },
+  className: 'mzp-t-warning',
+  closeText: 'Close notification',
+  hasDismiss: true,
+  isSticky: true,
+  onNotificationOpen: function () {
+    console.log('Notification opened');
+  },
+  onNotificationClose: function () {
+    console.log('Notification closed');
+  }
+});
+```
+
+Notification options are as follows:
 
 - `origin` [DOM Element] element that triggered the notification
 - `options` [Object] object of params
@@ -20,3 +70,7 @@ The script provides the following options:
   - `closeText` [String] text to use for close button a11y.
   - `isSticky` [Boolean] determines if notification is absolutely positioned
     and sticky.
+
+### Tips
+
+- Make sure to initialize the component *after* the DOM has loaded.
