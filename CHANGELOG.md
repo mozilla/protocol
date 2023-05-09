@@ -1,6 +1,7 @@
 # HEAD
 
 ## Features
+* **css:** Moves the aria-expanded attribute to the mzp-c-navigation-menu-button (#860).
 * **css:** Remove default mobile padding on nospace split component
 * **css:** Removed min-width on the .mzp-c-split-container class on the split component
 * **js:** Protocol JS components are now written using modern JS and published as ES5/UMD format (#255).
