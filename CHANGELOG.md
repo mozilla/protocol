@@ -2,6 +2,7 @@
 
 ## Features
 * **css:** Remove default mobile padding on nospace split component
+* **css:** Removed min-width on the .mzp-c-split-container class on the split component
 * **js:** Protocol JS components are now written using modern JS and published as ES5/UMD format (#255).
 * **js:** Removed pre-minified JS files from the published package. Consuming sites should handle their own minification.
 * **css:** Removed pre-minified CSS files from the published package Consuming sites should handle their own minification.
