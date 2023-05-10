@@ -32,7 +32,6 @@
     @include clearfix;
     margin: 0 auto;
     max-width: $content-max;
-    min-width: $content-xs;
 
     // horizontal spacing should match mzp-l-content's horizontal spacing
     padding: 0 get-theme('h-grid-xs');
