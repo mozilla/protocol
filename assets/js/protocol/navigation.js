@@ -8,7 +8,7 @@ let _navItemsLists;
 let _navMenuButtons;
 const _options = {
     onNavOpen: null,
-    onNavClose: null,
+    onNavClose: null
 };
 let _ticking = false;
 let _lastKnownScrollPosition = 0;
@@ -185,26 +185,28 @@ MzpNavigation.onClick = (e) => {
  * use Intersection Observer API to keep track of when the mobile
  * nav menu is displayed to handle aria roles better
  */
-(MzpNavigation.menuButtonVisible = (callback) => {
+MzpNavigation.menuButtonVisible = (callback) => {
     // check if Intersection observer is supported
     if (MzpSupports !== 'undefined' && MzpSupports.intersectionObserver) {
         const observer = new IntersectionObserver(
             (entries) => {
-                entries.forEach((entry) => {
+                for (let index = 0; index < entries.length; index++) {
+                    const entry = entries[index];
                     callback(entry.intersectionRatio > 0, entry.target);
-                });
+                }
             },
             { root: document.documentElement }
         );
-        _navMenuButtons.forEach((button) => {
+        for (let index = 0; index < _navMenuButtons.length; index++) {
+            const button = _navMenuButtons[index];
             observer.observe(button);
-        });
+        }
     }
-}),
+},
 /**
-     * Set initial ARIA navigation states.
-     */
-(MzpNavigation.setAria = () => {
+ * Set initial ARIA navigation states.
+ */
+MzpNavigation.setAria = () => {
     if (MzpSupports !== 'undefined' && MzpSupports.intersectionObserver) {
         MzpNavigation.menuButtonVisible((isVisible, menuButton) => {
             if (isVisible) {
@@ -227,7 +229,7 @@ MzpNavigation.onClick = (e) => {
             menuButton.setAttribute('aria-expanded', isActive);
         }
     }
-});
+};
 
 /**
  * Bind navigation event handlers.
