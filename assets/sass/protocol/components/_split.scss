@@ -122,6 +122,14 @@
     }
 }
 
+// Issue 779 - Remove default mobile padding on nospace split component
+@media screen and (max-width: $screen-md) {
+    .mzp-t-split-nospace {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
 // * -------------------------------------------------------------------------- */
 // side by side layout, float based fall back
 
