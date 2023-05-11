@@ -1,6 +1,6 @@
 {
   "name": "protocol",
-  "version": "16.1.0",
+  "version": "17.0.0",
   "private": true,
   "author": "Mozilla",
   "description": "A design system for Mozilla's websites.",
@@ -19,7 +19,7 @@
     "lint": "npm run lint-js && npm run lint-css",
     "lint-css": "./node_modules/.bin/stylelint \"**/*.scss\"",
     "lint-js": "./node_modules/.bin/eslint .",
-    "prepublishOnly": "npm run webpack-package",
+    "prepublishOnly": "npm run build-package",
     "start": "ENV=development fractal start --sync",
     "test": "npm run lint && ./node_modules/.bin/karma start ./tests/karma.conf.js",
     "webpack": "npm run lint && webpack --config webpack.docs.static.config.js --mode development && webpack --config webpack.docs.build.config.js --watch --mode development"
