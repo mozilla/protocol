@@ -129,7 +129,7 @@ name. To publish a release to NPM, use the following steps:
     have permission). Once the changes have been merged to main:
 6. Tag a new release. You can do this either using [Git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging),
     or directly on the [GitHub website](https://github.com/mozilla/protocol/releases/latest).
-7. Run `npm test` to run the build script and front-end tests. The package contents
+7. Run `npm run build-package && npm test` to run the build script and front-end tests. The package contents
     will be located in `./package/`.
 8. If the build is successful and all tests pass, publish to NPM using `npm publish ./package/`.
 
