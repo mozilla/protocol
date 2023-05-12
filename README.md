@@ -143,7 +143,7 @@ called `origin`.
 Each time an updated package is published to NPM, https://protocol.mozilla.org/
 should also be updated so the documentation site matches the NPM package features.
 
-1. Verify all is good on the [staging site](https://protocol-stage.moz.works/).
+1. Verify all is good on the [staging site](https://main--mozilla-protocol.netlify.app/).
 2. Make sure your local `main` branch is up to date.
 3. Push the `main` branch to the `prod` branch: `git push origin main:prod`.
 
