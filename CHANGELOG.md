@@ -1,3 +1,8 @@
+# HEAD
+
+## Features
+* **css:** Migrates the sass `@import` with `@use` and `@forward` (#755).
+
 # 17.0.1
 
 ## Bug Fixes
