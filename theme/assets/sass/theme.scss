@@ -33,8 +33,10 @@
 @use 'components/type-specimen';
 
 // Custom components for the docs
-@import 'components/grid-list';
-@import 'components/color';
-@import 'components/icon';
-@import 'components/tokens';
-@import 'components/404';
+@use 'components/grid-list';
+@use 'components/color';
+@use 'components/icon';
+@use 'components/tokens';
+
+// change namespace to avoid numeric-only namespace, which isn't allowed
+@use 'components/404' as styles-404;
