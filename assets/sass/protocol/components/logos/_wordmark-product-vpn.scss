@@ -2,11 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@use 'logo' as *;
+@use 'logo';
 @use '../../includes/lib' as *;
 
 // can't re-use wordmark mixin because VPN uses the "stack" version by default
-@each $layout-size, $logo-size in $logo-sizes {
+@each $layout-size, $logo-size in logo.$logo-sizes {
     $path: '#{$image-path}/logos/mozilla/vpn/logo-word-hor-stack.svg';
     $path_white: '#{$image-path}/logos/mozilla/vpn/logo-word-hor-stack-white.svg'; /* stylelint-disable-line scss/dollar-variable-pattern */
 

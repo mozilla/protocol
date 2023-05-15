@@ -2,11 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@use 'logo' as *;
+@use 'logo';
 
 $class: 'pocket';
 $dir: 'pocket';
 
-@each $layout-size, $logo-size in $logo-sizes {
-    @include logo($class, $dir, $layout-size, $logo-size);
+@each $layout-size, $logo-size in logo.$logo-sizes {
+    @include logo.logo($class, $dir, $layout-size, $logo-size);
 }
