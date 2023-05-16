@@ -4,6 +4,7 @@
 
 @use '../../includes/lib' as *;
 @use '../../includes/forms';
+@forward "../../includes/forms";
 
 // Basic atoms that make up a form:
 // - form
