@@ -5,31 +5,31 @@ Main site Navigation, containing [Menu](menu) and
 
 Import using Webpack as an ES module:
 
-```
+```javascript
 import MzpNavigation from '@mozilla-protocol/core/protocol/js/navigation';
 ```
 
 Import using Webpack as CommonJS:
 
-```
+```javascript
 const MzpNavigation = require('@mozilla-protocol/core/protocol/js/navigation');
 ```
 
 Import as a global variable via a `<script>` tag:
 
-```
+```javascript
 const MzpNavigation = window.MzpNavigation;
 ```
 
 You can then initialize the component using `init()`.
 
-```
+```javascript
 MzpNavigation.init();
 ```
 
 You can also pass custom callbacks for nav open and close events as a configuration object like so:
 
-```
+```javascript
 MzpNavigation.init({
   onNavOpen: function () {
     console.log('Navigation opened');
@@ -43,12 +43,14 @@ MzpNavigation.init({
 ### Dependencies
 
 The Menu component is a child of the Navigation component, and is therefore a dependency. You need to
-import and initialize the `MzpMenu` component when also initializing `MzpNavigation`.
+import the `MzpMenu` component as a global variable and initialize it along side `MzpNavigation`.
 
-```
+```javascript
 import MzpMenu from '@mozilla-protocol/core/protocol/js/menu');
 
-MzpMenu.init();
+window.MzpMenu = MzpMenu;
+
+window.MzpMenu.init();
 ```
 
 ### Tips

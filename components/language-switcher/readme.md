@@ -4,31 +4,31 @@ A component for changing the language of the current page.
 
 Import using Webpack as an ES module:
 
-```
+```javascript
 import MzpLangSwitcher from '@mozilla-protocol/core/protocol/js/lang-switcher';
 ```
 
 Import using Webpack as CommonJS:
 
-```
+```javascript
 const MzpLangSwitcher = require('@mozilla-protocol/core/protocol/js/lang-switcher');
 ```
 
 Import as a global variable via a `<script>` tag:
 
-```
+```javascript
 const MzpLangSwitcher = window.MzpLangSwitcher;
 ```
 
 You can then initialize the component using `init()`.
 
-```
+```javascript
 MzpLangSwitcher.init();
 ```
 
 You can also pass a custom callback for when a language selection takes place:
 
-```
+```javascript
 MzpLangSwitcher.init((previousLanguage, newLanguage) => {
   console.log('Previous language:', previousLanguage);
   console.log('New language:', newLanguage)

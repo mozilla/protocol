@@ -5,19 +5,19 @@ a title, image/video, and description.
 
 Import using Webpack as an ES module:
 
-```
+```javascript
 import MzpModal from '@mozilla-protocol/core/protocol/js/modal';
 ```
 
 Import using Webpack as CommonJS:
 
-```
+```javascript
 const MzpModal = require('@mozilla-protocol/core/protocol/js/modal');
 ```
 
 Import as a global variable via a `<script>` tag:
 
-```
+```javascript
 const MzpModal = window.MzpModal;
 ```
 
@@ -25,13 +25,13 @@ You can then initialize the component using `createModal()`. For the modal to wo
 references to the DOM element that triggered the modal, and a DOM element containing the content you wish to
 display.
 
-```
+```javascript
 MzpModal.createModal(origin, content, options);
 ```
 
 You can also pass a range of configuration options:
 
-```
+```javascript
 MzpModal.createModal(origin, content, {
   title: 'Example headline with 35 characters',
   className: 'mzp-has-media',

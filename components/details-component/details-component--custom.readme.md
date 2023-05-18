@@ -7,13 +7,13 @@ tacky).
 
 You can initiate using a custom class name like so:
 
-```
+```javascript
 MzpDetails.init('.demo-heading');
 ```
 
 Callbacks are supported for open and close events:
 
-```
+```javascript
 MzpDetails.init('.demo-heading', {
   onDetailsOpen: function(){
     console.log('open');
@@ -26,6 +26,6 @@ MzpDetails.init('.demo-heading', {
 
 A custom component can also be destroyed using:
 
-```
+```javascript
 MzpDetails.destroy('.demo-heading');
 ```

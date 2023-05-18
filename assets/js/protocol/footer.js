@@ -10,22 +10,22 @@ MzpFooter.init = () => {
     // removes Details component if screen size is big
     function screenChange(mq) {
         if (mq.matches) {
-            MzpDetails.init(footerHeadings);
+            window.MzpDetails.init(footerHeadings);
         } else {
-            MzpDetails.destroy(footerHeadings);
+            window.MzpDetails.destroy(footerHeadings);
         }
     }
 
     // check we have global Supports and Details library
-    if (typeof MzpSupports !== 'undefined' && typeof MzpDetails !== 'undefined') {
+    if (typeof window.MzpSupports !== 'undefined' && typeof window.MzpDetails !== 'undefined') {
 
         // check browser supports matchMedia
-        if (MzpSupports.matchMedia) {
+        if (window.MzpSupports.matchMedia) {
             const _mqWide = matchMedia('(max-width: 479px)');
 
             // initialize details if screen is small
             if (_mqWide.matches) {
-                MzpDetails.init(footerHeadings);
+                window.MzpDetails.init(footerHeadings);
             }
 
             if (window.matchMedia('all').addEventListener) {

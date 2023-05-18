@@ -5,31 +5,31 @@ An expandable menu used in the [Navigation](navigation) component, consisting of
 
 Import using Webpack as an ES module:
 
-```
+```javascript
 import MzpMenu from '@mozilla-protocol/core/protocol/js/menu';
 ```
 
 Import using Webpack as CommonJS:
 
-```
+```javascript
 const MzpMenu = require('@mozilla-protocol/core/protocol/js/menu');
 ```
 
 Import as a global variable via a `<script>` tag:
 
-```
+```javascript
 const MzpMenu = window.MzpMenu;
 ```
 
 You can then initialize the component using `init()`.
 
-```
+```javascript
 MzpMenu.init();
 ```
 
 You can also pass custom callbacks for menu open and close events as a configuration object like so:
 
-```
+```javascript
 MzpMenu.init({
   onMenuOpen: function () {
     console.log('Menu opened');

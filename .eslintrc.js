@@ -74,11 +74,5 @@ module.exports = {
         // Disallow the use of `console`
         // https://eslint.org/docs/rules/no-console
         'no-console': 'error'
-    },
-    globals: {
-        'MzpDetails': 'readable',
-        'MzpMenu': 'readable',
-        'MzpSupports': 'readable',
-        'MzpUtils': 'readable',
     }
 };

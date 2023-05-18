@@ -5,32 +5,32 @@ bar.
 
 Import using Webpack as an ES module:
 
-```
+```javascript
 import MzpNotification from '@mozilla-protocol/core/protocol/js/notification-bar';
 ```
 
 Import using Webpack as CommonJS:
 
-```
+```javascript
 const MzpNotification = require('@mozilla-protocol/core/protocol/js/notification-bar');
 ```
 
 Import as a global variable via a `<script>` tag:
 
-```
+```javascript
 const MzpNotification = window.MzpNotification;
 ```
 
 You can then initialize the component using `init()`. For the notification to work it is required that you pass
 a reference to the DOM element that triggered the modal, as well as a title to display.
 
-```
+```javascript
 MzpNotification.init(origin, options);
 ```
 
 You can also pass a range of configuration options:
 
-```
+```javascript
 MzpNotification.init(origin, {
   title: 'This is the title.',
   cta: {

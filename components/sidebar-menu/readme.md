@@ -10,25 +10,25 @@ small viewports. The menu label should be the title of the site section.
 
 Import using Webpack as an ES module:
 
-```
+```javascript
 import MzpSideMenu from '@mozilla-protocol/core/protocol/js/sidemenu';
 ```
 
 Import using Webpack as CommonJS:
 
-```
+```javascript
 const MzpSideMenu = require('@mozilla-protocol/core/protocol/js/sidemenu');
 ```
 
 Import as a global variable via a `<script>` tag:
 
-```
+```javascript
 const MzpSideMenu = window.MzpSideMenu;
 ```
 
 You can then initialize the component using `init()`.
 
-```
+```javascript
 MzpSideMenu.init();
 ```
 

@@ -7,24 +7,40 @@ apply to any element.
 
 Import using Webpack as an ES module:
 
-```
+```javascript
 import MzpDetails from '@mozilla-protocol/core/protocol/js/details';
 ```
 
 Import using Webpack as CommonJS:
 
-```
+```javascript
 const MzpDetails = require('@mozilla-protocol/core/protocol/js/details');
 ```
 
 Import as a global variable via a `<script>` tag:
 
-```
+```javascript
 const MzpDetails = window.MzpDetails;
 ```
 
-The Details component will be automatically initialized in a page for any HTML elements that contain
-a `.mzp-c-details` class name and a child `h2` to `h6` heading element.
+Then initialize the component:
+
+```javascript
+// check if details is supported, if not, init this as a polyfill
+if (typeof window.MzpSupports !== 'undefined') {
+    // not supported, add support
+    if(!window.MzpSupports.details) {
+        window.MzpDetails.init('summary');
+    }
+}
+
+// init generic class indicating headings should be made into open/close component
+window.MzpDetails.init('.mzp-c-details > h2');
+window.MzpDetails.init('.mzp-c-details > h3');
+window.MzpDetails.init('.mzp-c-details > h4');
+window.MzpDetails.init('.mzp-c-details > h5');
+window.MzpDetails.init('.mzp-c-details > h6');
+```
 
 ### Dependencies
 
@@ -32,7 +48,7 @@ The Details component depends on both the `MzpSupports` and `MzpUtils` libraries
 and DOM traversal. It is recommended that both are included in your page and accessible via a global
 object before loading your Details component script.
 
-```
+```javascript
 import MzpSupports from '@mozilla-protocol/core/protocol/js/supports';
 import MzpUtils from '@mozilla-protocol/core/protocol/js/utils';
 
