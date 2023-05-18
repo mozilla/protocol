@@ -15,25 +15,25 @@ make the promo excessively tall and cover too much of the page.
 
 Import using Webpack as an ES module:
 
-```
+```javascript
 import MzpStickyPromo from '@mozilla-protocol/core/protocol/js/sticky-promo';
 ```
 
 Import using Webpack as CommonJS:
 
-```
+```javascript
 const MzpStickyPromo = require('@mozilla-protocol/core/protocol/js/sticky-promo');
 ```
 
 Import as a global variable via a `<script>` tag:
 
-```
+```javascript
 const MzpStickyPromo = window.MzpStickyPromo;
 ```
 
 You can then show the component using `open()`.
 
-```
+```javascript
 MzpStickyPromo.open();
 ```
 

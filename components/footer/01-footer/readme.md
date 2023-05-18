@@ -6,25 +6,25 @@ as it’s meant to take up the full width of the page.
 
 Import using Webpack as an ES module:
 
-```
+```javascript
 import MzpFooter from '@mozilla-protocol/core/protocol/js/footer';
 ```
 
 Import using Webpack as CommonJS:
 
-```
+```javascript
 const MzpFooter = require('@mozilla-protocol/core/protocol/js/footer');
 ```
 
 Import as a global variable via a `<script>` tag:
 
-```
+```javascript
 const MzpFooter = window.MzpFooter;
 ```
 
 You can then initialize the component using `init()`.
 
-```
+```javascript
 MzpFooter.init();
 ```
 
@@ -33,7 +33,7 @@ MzpFooter.init();
 The Footer component depends on the Details component in order to support expandable sections on small viewports.
 It is recommended to include `MzpDetails` in your page as a global object before loading your Footer component script.
 
-```
+```javascript
 import MzpDetails from '@mozilla-protocol/core/protocol/js/details');
 
 window.MzpDetails = MzpDetails;

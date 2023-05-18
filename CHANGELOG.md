@@ -1,6 +1,13 @@
+# HEAD
+
+## Bug Fixes
+
+* **js:** MzpDetails component should be explicitly initialized (Fixes #879)
+
 # 17.0.0
 
 ## Bug Fixes
+
 * **js:** Moves the aria-expanded attribute to the mzp-c-navigation-menu-button (#860).
 * **css:** Remove default mobile padding on nospace split component (#875).
 * **css:** Removed min-width on the .mzp-c-split-container class on the split component (#843).
@@ -22,7 +29,7 @@
 * **component:** Add centering classes for Logo and Wordmark. (#718)
 * **docs:** Migrate Protocol documentation site to Fractal.
 * **node:** Create a Webpack config for compiling docs using Fractal.
-* **css:** Updated stylelint ruleset to match Bedrock's linting pattern. (#814)
+* **css:** Updated stylelint rules to match Bedrock's linting pattern. (#814)
 * **js** Updated `addListener` method, which is now deprecated, to be replaced by `addEventListener`. `addListener` will be used as a fallback for older browsers.
 * **css** Updated focus states for buttons. (#864)
 *  **docs:** Added 404 page
@@ -108,7 +115,7 @@
 
 ## Features
 
-* **css:** Add overiding rules to the card component to enable dark mode with `.mzp-t-dark` class. (#714)
+* **css:** Add overriding rules to the card component to enable dark mode with `.mzp-t-dark` class. (#714)
 * **css:** Add content width classes to Split component.
 * **css:** Add default bottom margins to Logo and Wordmark components (#712)
 * **css:** Add `.mzp-u-title-3xs` utility class.
@@ -283,7 +290,7 @@
 ## Features
 
 * **css:** Update form label styles (#430)
-* **js:** Implement sticky scrolling behaviour for navigation component as an opt-in feature (#560).
+* **js:** Implement sticky scrolling behavior for navigation component as an opt-in feature (#560).
 * **utility:** Add title size utility classes. Rename `text-display-` to `text-title-`, keep `text-display-` as an alias (#297).
 * **component:** Updates to emphasis box, with additional documentation and usage guidelines.
 * **css:** Notification bar updates; use border-box, fix image replacement bug, add focus styles, tweak spacing (#549).
@@ -419,7 +426,7 @@
 * **css:** blockquote needs mzp-t-firefox theme #303
 * **css:** Summary button text over laps icon #331
 * **css:** Make summary and details widget styles into mixins #332
-* **css:** Visited link colour in t-dark themes too dark #335
+* **css:** Visited link color in t-dark themes too dark #335
 
 # 5.0.0
 

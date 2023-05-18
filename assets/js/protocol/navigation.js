@@ -33,12 +33,12 @@ MzpNavigation.isLargeViewport = () => {
  * @returns {Boolean}
  */
 MzpNavigation.supportsSticky = () => {
-    if (typeof MzpSupports !== 'undefined') {
+    if (typeof window.MzpSupports !== 'undefined') {
         return (
-            MzpSupports.matchMedia &&
-            MzpSupports.classList &&
-            MzpSupports.requestAnimationFrame &&
-            MzpSupports.cssFeatureQueries &&
+            window.MzpSupports.matchMedia &&
+            window.MzpSupports.classList &&
+            window.MzpSupports.requestAnimationFrame &&
+            window.MzpSupports.cssFeatureQueries &&
             CSS.supports('position', 'sticky')
         );
     } else {
@@ -132,8 +132,8 @@ MzpNavigation.checkScrollPosition = () => {
         // hide the sticky nav shortly after scrolling down the viewport.
         if (window.scrollY > _stickyScrollOffset) {
             // if there's a menu currently open, close it.
-            if (typeof MzpMenu !== 'undefined') {
-                MzpMenu.close();
+            if (typeof window.MzpMenu !== 'undefined') {
+                window.MzpMenu.close();
             }
 
             _navElem.classList.add('mzp-is-hidden');
@@ -187,7 +187,7 @@ MzpNavigation.onClick = (e) => {
  */
 MzpNavigation.menuButtonVisible = (callback) => {
     // check if Intersection observer is supported
-    if (MzpSupports !== 'undefined' && MzpSupports.intersectionObserver) {
+    if (window.MzpSupports !== 'undefined' && window.MzpSupports.intersectionObserver) {
         const observer = new IntersectionObserver(
             (entries) => {
                 for (let index = 0; index < entries.length; index++) {
@@ -207,7 +207,7 @@ MzpNavigation.menuButtonVisible = (callback) => {
  * Set initial ARIA navigation states.
  */
 MzpNavigation.setAria = () => {
-    if (MzpSupports !== 'undefined' && MzpSupports.intersectionObserver) {
+    if (window.MzpSupports !== 'undefined' && window.MzpSupports.intersectionObserver) {
         MzpNavigation.menuButtonVisible((isVisible, menuButton) => {
             if (isVisible) {
                 // if the menu button is visible -  set the 'aria-expanded' role based on whether the menu is open or not

@@ -6,8 +6,8 @@ const MzpDetails = {};
 let _count = 0;
 
 MzpDetails.isSupported = () => {
-    if (typeof MzpSupports !== 'undefined' && typeof MzpUtils !== 'undefined') {
-        return MzpSupports.classList;
+    if (typeof window.MzpSupports !== 'undefined' && typeof window.MzpUtils !== 'undefined') {
+        return window.MzpSupports.classList;
     } else {
         return false;
     }
@@ -92,7 +92,7 @@ MzpDetails.initItem = (el, selector, options) => {
 
     // Expand
     // siblings of the summary, until next summary
-    const summarySiblings = MzpUtils.nextUntil(summary, selector);
+    const summarySiblings = window.MzpUtils.nextUntil(summary, selector);
 
     // look to see if all children are already in a wrapper we can use
     if (summarySiblings.length === 1) {
@@ -213,20 +213,5 @@ MzpDetails.destroy = (selector, options) => {
         MzpDetails.destroyItem(summaries[i], selector, options);
     }
 };
-
-// check if details is supported, if not, init this as a polyfill
-if (typeof MzpSupports !== 'undefined') {
-    // not supported, add support
-    if(!MzpSupports.details) {
-        MzpDetails.init('summary');
-    }
-}
-
-// init generic class indicating headings should be made into open/close component
-MzpDetails.init('.mzp-c-details > h2');
-MzpDetails.init('.mzp-c-details > h3');
-MzpDetails.init('.mzp-c-details > h4');
-MzpDetails.init('.mzp-c-details > h5');
-MzpDetails.init('.mzp-c-details > h6');
 
 module.exports = MzpDetails;

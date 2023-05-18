@@ -8,25 +8,25 @@ the [Basket example](https://github.com/mozilla/basket-example/) for more.
 
 Import using Webpack as an ES module:
 
-```
+```javascript
 import MzpNewsletter from '@mozilla-protocol/core/protocol/js/newsletter';
 ```
 
 Import using Webpack as CommonJS:
 
-```
+```javascript
 const MzpNewsletter = require('@mozilla-protocol/core/protocol/js/newsletter');
 ```
 
 Import as a global variable via a `<script>` tag:
 
-```
+```javascript
 const MzpNewsletter = window.MzpNewsletter;
 ```
 
 You can then initialize the component using `init()`.
 
-```
+```javascript
 MzpNewsletter.init();
 ```
 

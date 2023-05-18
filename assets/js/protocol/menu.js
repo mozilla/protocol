@@ -313,8 +313,8 @@ MzpMenu.enhanceJS = () => {
  * Basic feature detect for 1st class menu JS support.
  */
 MzpMenu.isSupported = () => {
-    if (typeof MzpSupports !== 'undefined') {
-        return MzpSupports.matchMedia && MzpSupports.classList;
+    if (typeof window.MzpSupports !== 'undefined') {
+        return window.MzpSupports.matchMedia && window.MzpSupports.classList;
     } else {
         return false;
     }
