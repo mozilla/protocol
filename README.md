@@ -124,7 +124,7 @@ name. To publish a release to NPM, use the following steps:
     (use [Semantic Versioning](https://semver.org/) to determine what the new version number
     should be).
 3. Update the package README [assets/package/README.md](https://github.com/mozilla/protocol/blob/main/assets/package/README.md).
-4. Run `npm install` to update the package-lock.json file.
+4. Update the package `version` number in the root [package.json](https://github.com/mozilla/protocol/blob/main/package.json) file and then run `npm install` to update the `package-lock.json` file.
 5. Submit a pull request with your changes (or commit directly to `main` if you
     have permission). Once the changes have been merged to main:
 6. Tag a new release. You can do this either using [Git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging),
