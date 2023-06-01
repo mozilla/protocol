@@ -263,7 +263,7 @@ named `_item.scss` (this is not an actual Protocol component):
 }
 ```
 
-If you don't change the namespace of the file being imported your scss would look like this:
+If you don't change the namespace of the file being imported your `.scss` file would look like this:
 
 ```scss
 @use '../includes/lib';

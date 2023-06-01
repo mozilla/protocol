@@ -31,16 +31,6 @@
     @return $string;
 }
 
-// I think these are the same
-// @function str-replace($string, $search, $replace: '') {
-//     $index: string.index($string, $search);
-//     @return if($index,
-//         string.slice($string, 1, $index - 1) + $replace +
-//         functions.str-replace(string.slice($string, $index +
-//         string.length($search)), $search, $replace),
-//         $string);
-// }
-
 // Collect multiple maps into one big map.
 // Sass' native map-merge() function only takes two maps. This function
 // gets over that limitation by looping through numerous maps and merging
@@ -58,64 +48,5 @@
     @return $collection;
 }
 
-// Get a type scale value from the scale map
-// Usage:
-//    type-scale('scale-value');
-// Size values are define in pixels. Use the font-size() mixin
-// to convert to rem with px fallback. Example:
-//    @include font-size(type-scale('title-xl-size'));
-// An alternative, condensed type scale is defined in a separate
-// map. When the $type-scale variable is set to 'condensed' this
-// function will draw its values from that alternative map.
 
-// these are themed type scales and should also live in themes
 
-// @function type-scale($scale) {
-//   // Default to Firefox brand scale
-//   $scale-map: themes.$theme-type-scale-firefox;
-
-//   // Firefox condensed
-//   @if config.$type-scale == 'condensed' {
-//     $scale-map: themes.$theme-type-scale-condensed-firefox;
-//   }
-
-//   // Switch to Mozilla brand scale
-//   @if config.$brand-theme == 'mozilla' {
-//     $scale-map: themes.$theme-type-scale-mozilla;
-//   }
-
-//   // Mozilla condensed
-//   @if config.$brand-theme == 'mozilla' and config.$type-scale == 'condensed' {
-//     $scale-map: themes.$theme-type-scale-condensed-mozilla;
-//   }
-
-//   @if not map.has-key($scale-map, $scale) {
-//     @error '`#{$scale}` is not a valid type scale variable name. '
-//       + 'Valid variable names: #{map.keys($scale-map)}';
-//   }
-
-//   @return map.get($scale-map, $scale);
-// }
-
-// Get a theme variable from the collected map.
-// This swaps the map based on the value of $brand-theme.
-// Theme maps are defined in includes/_theme.scss
-
-// I think this function should move to _themes
-
-// @function get-theme($var) {
-//   // Default to Firefox theme
-//   $theme-map: themes.$theme-firefox;
-
-//   // Switch to Mozilla theme
-//   @if config.$brand-theme == 'mozilla' {
-//     $theme-map: themes.$theme-mozilla;
-//   }
-
-//   @if not map.has-key($theme-map, $var) {
-//     @error '`#{$var}` is not a valid theme variable. '
-//       + 'Valid theme variable names: #{map.keys($theme-map)}';
-//   }
-
-//   @return map.get($theme-map, $var);
-// }
