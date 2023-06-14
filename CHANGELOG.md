@@ -3,6 +3,32 @@
 ## Features
 * **css:** Migrates the sass `@import` with `@use` and `@forward` (#755).
 
+## Migration Tips
+* This version updates how we internally import SCSS files, from the `@import` syntax to `@use` and `@forward`
+* When importing `lib` at the head of your project you will use the `with` keyword instead of
+stating variables explicitly, like this:
+
+```scss
+@use '/assets/sass/protocol/includes/lib' with ($font-path: '/protocol/fonts');
+```
+* To use the global namespace for protocol variables you will need to use the `as` keyword and assign to `*`:
+
+```scss
+@use '../includes/lib' as *;
+```
+* if you don't use `as` you would access variables and mixins from the file using the filename as a namespace:
+
+```scss
+@use '../includes/lib';
+
+.mzp-c-item {
+    @include lib.text-title-md;
+    color: lib.$color-ink-80;
+    margin: lib.$spacing-lg 0;
+}
+```
+* For more information on the `@use` and `@forward` you can visit the [offical SCSS documentation](https://sass-lang.com/documentation/at-rules) or the usage page on the [Protocol documentation website](https://protocol.mozilla.org/docs/usage/overview.html)
+
 # 17.0.1
 
 ## Bug Fixes
