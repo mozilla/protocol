@@ -2,7 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../includes/lib';
+@use '../includes/lib' as *;
+
 @warn 'Hero component is now deprecated. Please migrate to use Split: https://protocol.mozilla.org/patterns/organisms/split.html';
 
 // Page hero section - should usually appear at the top of a page

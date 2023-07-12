@@ -2,6 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+@use 'sass:meta';
+
 // Bidi / l10n
 // - The bidi mixins are used to declare both the LTR and RTL values for
 //   a property together and output appropriate declarations
@@ -42,7 +44,7 @@
 @mixin bidi($list) {
     & {
         @each $property, $ltr-value, $inverse-val-or-prop, $inverse-value in $list {
-            @if type-of($ltr-value) == 'null' or type-of($inverse-val-or-prop) == 'null' {
+            @if meta.type-of($ltr-value) == 'null' or meta.type-of($inverse-val-or-prop) == 'null' {
                 @warn $list; // I don't know why this won't output as part of the error
                 @error 'Error processing @mixin bidi(), see previous warning for stack trace';
 

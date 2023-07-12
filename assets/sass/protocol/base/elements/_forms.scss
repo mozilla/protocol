@@ -2,8 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../includes/lib';
-@import '../../includes/forms/lib';
+@use '../../includes/lib' as *;
+@use '../../includes/forms';
 
 // * -------------------------------------------------------------------------- */
 // Resets
@@ -29,12 +29,12 @@ legend {
     padding: 0; // 3
     white-space: normal; // 1
     .mzp-u-inline & {
-        @include field-label;
+        @include forms.field-label;
     }
     @include text-body-lg;
     font-family: get-theme('title-font-family');
     font-weight: bold;
-    margin-bottom: $field-v-spacing;
+    margin-bottom: forms.$field-v-spacing;
 }
 
 button,
@@ -87,14 +87,15 @@ textarea {
 [type='radio'] {
     box-sizing: border-box; // 1
     padding: 0; // 2
+    border-radius: forms.$field-border-radius;
 }
 
 // * -------------------------------------------------------------------------- */
 // Element styles
 
 fieldset {
-    margin-bottom: $field-v-spacing;
-    min-width: 0;// https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content
+    margin-bottom: forms.$field-v-spacing;
+    min-width: 0; // https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content
     width: 100%;
 
     &.mzp-u-inline {
@@ -103,17 +104,12 @@ fieldset {
 }
 
 label {
-    @include field-label;
+    @include forms.field-label;
 
     &.mzp-u-inline {
         @include bidi(((padding, 0 $spacing-sm 0 0, 0 0 0 $spacing-sm),));
         display: inline;
     }
-}
-
-[type='radio'] {
-    border-radius: $field-border-radius;
-    border-radius: 100%;
 }
 
 // * -------------------------------------------------------------------------- */
@@ -130,37 +126,37 @@ input[type='tel'],
 input[type='text'],
 input[type='time'],
 input[type='url'] {
-    @include form-input;
+    @include forms.form-input;
 
     &::placeholder {
         color: $color-marketing-gray-70;
     }
 
     &:hover {
-        border-color: $field-border-color-hover;
+        border-color: forms.$field-border-color-hover;
     }
 
     &:focus {
         outline: none;
         border-color: $color-link;
-        box-shadow: $field-focus-ring;
+        box-shadow: forms.$field-focus-ring;
 
         .mzp-t-dark & {
-            box-shadow: $field-focus-ring-dark;
+            box-shadow: forms.$field-focus-ring-dark;
         }
     }
 
     .mzp-is-error & {
-        border-color: $field-border-color-error;
+        border-color: forms.$field-border-color-error;
         box-shadow: none;
 
         &:hover {
-            border-color: $field-border-color-error-hover;
+            border-color: forms.$field-border-color-error-hover;
         }
 
         &:focus {
-            border-color: $form-red;
-            box-shadow: $field-focus-ring-error;
+            border-color: forms.$form-red;
+            box-shadow: forms.$field-focus-ring-error;
         }
     }
 
@@ -185,7 +181,7 @@ input[type='search'],
 input[type='tel'],
 input[type='text'],
 input[type='url'] {
-    min-width: $field-min-width;
+    min-width: forms.$field-min-width;
     max-width: 100%;
 }
 
@@ -196,32 +192,32 @@ input[size] {
 
 // size on HTML is not a good way to size things, this is most evident at small sizes
 input[size='2'] {
-    max-width: calc(2.5ch + #{$field-padding * 2});
+    max-width: calc(2.5ch + #{forms.$field-padding * 2});
 }
 
 input[size='3'] {
-    max-width: calc(3.5ch + #{$field-padding * 2});
+    max-width: calc(3.5ch + #{forms.$field-padding * 2});
 }
 
 input[size='4'] {
-    max-width: calc(4.5ch + #{$field-padding * 2});
+    max-width: calc(4.5ch + #{forms.$field-padding * 2});
 }
 
 input[size='5'] {
-    max-width: calc(5.5ch + #{$field-padding * 2});
+    max-width: calc(5.5ch + #{forms.$field-padding * 2});
 }
 
 input[type='search'] {
     background-image: $url-image-search-form;
     background-repeat: no-repeat;
     background-position: left 8px top 50%;
-    padding: $field-padding $field-padding $field-padding calc(1.5em + #{$field-padding * 2});
+    padding: forms.$field-padding forms.$field-padding forms.$field-padding calc(1.5em + #{forms.$field-padding * 2});
 
     &:disabled {
         background-image: $url-image-search-form;
         background-repeat: no-repeat;
         background-position: left 8px top 50%;
-        padding: $field-padding $field-padding $field-padding calc(1.5em + #{$field-padding * 2});
+        padding: forms.$field-padding forms.$field-padding forms.$field-padding calc(1.5em + #{forms.$field-padding * 2});
 
         &:hover {
             background-image: $url-image-search-form;
@@ -238,39 +234,39 @@ input[type='search'] {
 
     [dir='rtl'] & {
         background-position: right 8px top 50%;
-        padding: $field-padding calc(1.5em + #{$field-padding * 2}) $field-padding $field-padding;
+        padding: forms.$field-padding calc(1.5em + #{forms.$field-padding * 2}) forms.$field-padding forms.$field-padding;
     }
 }
 
 input[type='color'],
 input[type='file'] {
     background: $color-white;
-    border-radius: $field-border-radius;
-    border: $field-border;
+    border-radius: forms.$field-border-radius;
+    border: forms.$field-border;
     line-height: 1.25;
-    margin: 0 0 $field-v-spacing;
+    margin: 0 0 forms.$field-v-spacing;
 
     &:hover {
-        border-color: $field-border-color-hover;
+        border-color: forms.$field-border-color-hover;
     }
 
     &:focus {
         border-color: $color-link;
-        box-shadow: $field-focus-ring;
+        box-shadow: forms.$field-focus-ring;
         outline: none;
     }
 
     .mzp-is-error & {
-        border-color: $field-border-color-error;
+        border-color: forms.$field-border-color-error;
         box-shadow: none;
 
         &:hover {
-            border-color: $field-border-color-error-hover;
+            border-color: forms.$field-border-color-error-hover;
         }
 
         &:focus {
-            border-color: $form-red;
-            box-shadow: $field-focus-ring-error;
+            border-color: forms.$form-red;
+            box-shadow: forms.$field-focus-ring-error;
         }
     }
 
@@ -287,7 +283,7 @@ input[type='file'] {
 }
 
 input[type='file'] {
-    padding: $field-padding;
+    padding: forms.$field-padding;
 }
 
 // * -------------------------------------------------------------------------- */
@@ -299,16 +295,16 @@ select {
     @include border-box;
     @include bidi((
         (background-position, right 8px top 50%, left 8px top 50%),
-        (padding, $field-padding $symbol-spacing $field-padding $field-padding, $field-padding $field-padding $field-padding $symbol-spacing),
+        (padding, forms.$field-padding forms.$symbol-spacing forms.$field-padding forms.$field-padding, forms.$field-padding forms.$field-padding forms.$field-padding forms.$symbol-spacing),
     ));
-    @include form-input;
-    background-image: $url-image-arrow-down-form, $select-bg;
+    @include forms.form-input;
+    background-image: $url-image-arrow-down-form, forms.$select-bg;
     background-repeat: no-repeat, repeat;
     background-size: 1.5em auto, 100%;
     display: block;
     font-weight: normal;
     max-width: 100%;
-    min-width: $field-min-width;
+    min-width: forms.$field-min-width;
     text-overflow: ellipsis;
 
     // no down arrow on multi selects
@@ -317,7 +313,7 @@ select {
         &:hover,
         &:focus {
             background: $color-white;
-            padding: $field-padding;
+            padding: forms.$field-padding;
         }
     }
 
@@ -326,45 +322,45 @@ select {
     }
 
     &:hover {
-        border-color: $field-border-color-hover;
-        background-image: $url-image-arrow-down-link-hover, $select-bg;
+        border-color: forms.$field-border-color-hover;
+        background-image: $url-image-arrow-down-link-hover, forms.$select-bg;
     }
 
     &:focus {
         border-color: $color-link;
-        background-image: $url-image-arrow-down-link, $select-bg;
-        box-shadow: $field-focus-ring;
+        background-image: $url-image-arrow-down-link, forms.$select-bg;
+        box-shadow: forms.$field-focus-ring;
         color: #222;
         outline: none;
 
         .mzp-t-dark & {
-            box-shadow: $field-focus-ring-dark;
+            box-shadow: forms.$field-focus-ring-dark;
         }
     }
 
     .mzp-is-error & {
-        border-color: $field-border-color-error;
+        border-color: forms.$field-border-color-error;
         box-shadow: none;
 
         &:hover {
-            border-color: $field-border-color-error-hover;
+            border-color: forms.$field-border-color-error-hover;
         }
 
         &:focus {
-            border-color: $form-red;
-            box-shadow: $field-focus-ring-error;
+            border-color: forms.$form-red;
+            box-shadow: forms.$field-focus-ring-error;
         }
     }
 
     &:disabled,
     &[aria-disabled='true'] {
         /* stylelint-disable declaration-colon-newline-after */
-        background-image:
-            url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-            $select-bg-disabled;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+            forms.$select-bg-disabled;
+        /* stylelint-enable declaration-colon-newline-after */
         border-color: $color-marketing-gray-30;
         color: $color-marketing-gray-70;
-        /* stylelint-enable declaration-colon-newline-after */
+
         &:hover {
             border-color: $color-marketing-gray-30;
         }
@@ -383,10 +379,10 @@ select {
 // Basic utility classes
 
 .mzp-c-fieldnote {
-    @include form-info;
+    @include forms.form-info;
 
     .mzp-is-error & {
-        color: $form-red;
+        color: forms.$form-red;
     }
 
     .mzp-c-button + & {
@@ -399,8 +395,8 @@ select {
 
 .mzp-c-form-errors {
     @include white-links;
-    background-color: $form-red;
-    border-radius: $field-border-radius;
+    background-color: forms.$form-red;
+    border-radius: forms.$field-border-radius;
     color: $color-white;
     padding: $spacing-sm;
     margin-bottom: $spacing-xl;
@@ -414,14 +410,14 @@ select {
     }
 
     li {
-        margin-bottom: $label-v-spacing;
+        margin-bottom: forms.$label-v-spacing;
     }
 }
 
 .mzp-is-error {
     input[type='checkbox'],
     input[type='radio'] {
-        box-shadow: $field-focus-ring-error;
-        border-radius: $field-border-radius;
+        border-radius: forms.$field-border-radius;
+        box-shadow: forms.$field-focus-ring-error;
     }
 }

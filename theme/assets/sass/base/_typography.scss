@@ -1,3 +1,5 @@
+@use '/assets/sass/protocol/includes/lib' as *;
+
 body {
     @include font-base;
     color: get-theme('body-text-color');

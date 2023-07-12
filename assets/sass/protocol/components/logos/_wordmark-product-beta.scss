@@ -2,11 +2,11 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import 'logo';
+@use 'wordmark';
 
 $class: 'beta';
 $dir: 'firefox/browser/beta';
 
-@each $layout-size, $logo-size in $logo-sizes {
-    @include wordmark($class, $dir, $layout-size, $logo-size);
+@each $layout-size, $logo-size in wordmark.$logo-sizes {
+    @include wordmark.wordmark($class, $dir, $layout-size, $logo-size);
 }

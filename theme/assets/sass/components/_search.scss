@@ -1,4 +1,6 @@
-/* stylelint-disable selector-class-pattern */
+@use '/assets/sass/protocol/includes/lib' as *;
+
+/* stylelint-disable-next-line selector-class-pattern */
 .Search-input {
     color: white;
     border: none;

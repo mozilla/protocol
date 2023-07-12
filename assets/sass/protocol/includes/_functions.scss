@@ -25,7 +25,7 @@
     $index: string.index($string, $search);
 
     @if $index {
-        @return string.slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+        @return string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
     }
 
     @return $string;
@@ -48,58 +48,5 @@
     @return $collection;
 }
 
-// Get a type scale value from the scale map
-// Usage:
-//    type-scale('scale-value');
-// Size values are define in pixels. Use the font-size() mixin
-// to convert to rem with px fallback. Example:
-//    @include font-size(type-scale('title-xl-size'));
-// An alternative, condensed type scale is defined in a separate
-// map. When the $type-scale variable is set to 'condensed' this
-// function will draw its values from that alternative map.
 
-@function type-scale($scale) {
-    // Default to Firefox brand scale
-    $scale-map: $theme-type-scale-firefox;
 
-    // Firefox condensed
-    @if $type-scale == 'condensed' {
-        $scale-map: $theme-type-scale-condensed-firefox;
-    }
-
-    // Switch to Mozilla brand scale
-    @if $brand-theme == 'mozilla' {
-        $scale-map: $theme-type-scale-mozilla;
-    }
-
-    // Mozilla condensed
-    @if $brand-theme == 'mozilla' and $type-scale == 'condensed' {
-        $scale-map: $theme-type-scale-condensed-mozilla;
-    }
-
-    @if not map-has-key($scale-map, $scale) {
-        @error '`#{$scale}` is not a valid type scale variable name. ' + 'Valid variable names: #{map-keys($scale-map)}';
-    }
-
-    @return map-get($scale-map, $scale);
-}
-
-// Get a theme variable from the collected map.
-// This swaps the map based on the value of $brand-theme.
-// Theme maps are defined in includes/_theme.scss
-
-@function get-theme($var) {
-    // Default to Firefox theme
-    $theme-map: $theme-firefox;
-
-    // Switch to Mozilla theme
-    @if $brand-theme == 'mozilla' {
-        $theme-map: $theme-mozilla;
-    }
-
-    @if not map-has-key($theme-map, $var) {
-        @error '`#{$var}` is not a valid theme variable. ' + 'Valid theme variable names: #{map-keys($theme-map)}';
-    }
-
-    @return map-get($theme-map, $var);
-}

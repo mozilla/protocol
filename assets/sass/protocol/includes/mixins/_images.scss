@@ -4,6 +4,7 @@
 
 @use 'sass:math';
 @use 'sass:string';
+@use '../functions';
 
 // * -------------------------------------------------------------------------- */
 //  Function to create an optimized svg url
@@ -14,7 +15,7 @@
 @function svg-url($svg) {
     //  Add missing namespace
     @if not string.index($svg,xmlns) {
-        $svg: str-replace($svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
+        $svg: functions.str-replace($svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
     }
 
     //  Chunk up string in order to avoid
@@ -23,18 +24,17 @@
     $slice: 2000;
     $index: 0;
     $loops: math.ceil(math.div(string.length($svg), $slice));
-
     @for $i from 1 through $loops {
         $chunk: string.slice($svg, $index, $index + $slice - 1);
 
         //   Encode
-        $chunk: str-replace($chunk, '"', "\'");
-        $chunk: str-replace($chunk, '%', '%25');
-        $chunk: str-replace($chunk, '#', '%23');
-        $chunk: str-replace($chunk, '{', '%7B');
-        $chunk: str-replace($chunk, '}', '%7D');
-        $chunk: str-replace($chunk, '<', '%3C');
-        $chunk: str-replace($chunk, '>', '%3E');
+        $chunk: functions.str-replace($chunk, '"', '\'');
+        $chunk: functions.str-replace($chunk, '%', '%25');
+        $chunk: functions.str-replace($chunk, '#', '%23');
+        $chunk: functions.str-replace($chunk, '{', '%7B');
+        $chunk: functions.str-replace($chunk, '}', '%7D');
+        $chunk: functions.str-replace($chunk, '<', '%3C');
+        $chunk: functions.str-replace($chunk, '>', '%3E');
 
         //    The maybe list
         //    Keep size and compile time down
@@ -56,15 +56,6 @@
     }
 
     @return url('data:image/svg+xml,#{$encoded}');
-}
-
-//  Helper function to replace characters in a string
-@function str-replace($string, $search, $replace: '') {
-    $index: string.index($string, $search);
-
-    @return if($index,
-    string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace),
-    $string);
 }
 
 //* -------------------------------------------------------------------------- */

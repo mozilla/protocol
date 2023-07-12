@@ -254,7 +254,7 @@ named for that component. Here’s a bare-bones example that we’ll imagine is 
 named `_item.scss` (this is not an actual Protocol component):
 
 ```scss
-@import '../includes/lib';
+@use '../includes/lib' as *;
 
 .mzp-c-item {
     @include text-title-md;
@@ -262,6 +262,19 @@ named `_item.scss` (this is not an actual Protocol component):
     margin: $spacing-lg 0;
 }
 ```
+
+If you don't change the namespace of the file being imported your `.scss` file would look like this:
+
+```scss
+@use '../includes/lib';
+
+.mzp-c-item {
+    @include lib.text-title-md;
+    color: lib.$color-ink-80;
+    margin: lib.$spacing-lg 0;
+}
+```
+
 
 Even in this minimal example there’s a lot happening, and almost none of it is
 plain CSS. If you’re familiar with Sass/SCSS already this will look more familiar,
@@ -271,8 +284,9 @@ but if you’re not let’s dig a bit deeper.
 @import '../includes/lib';
 ```
 
-First, we import the Protocol library file, `includes/_lib.scss`. Since that file
-is a Sass partial we don’t need the underscore prefix or the file extension, just
+First, we import the Protocol library file with the decorator `@use`: `includes/_lib.scss`.
+To learn more about `@use` and `@forward` read [this article](https://www.oddbird.net/2019/10/02/sass-modules/).
+Since that file is a Sass partial we don’t need the underscore prefix or the file extension, just
 referencing the relative path and filename is enough. That library file in turn
 imports all of the functions, mixins, and variables Protocol needs to process the
 rest of this SCSS file. Almost every file you see in the Protocol framework will

@@ -1,4 +1,7 @@
+@use '/assets/sass/protocol/includes/lib' as *;
+
 /* stylelint-disable selector-class-pattern */
+
 .Document-title {
     @include text-title-lg;
     font-family: get-theme('title-font-family');

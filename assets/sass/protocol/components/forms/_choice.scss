@@ -2,8 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../includes/lib';
-@import '../../includes/forms/lib';
+@use '../../includes/lib' as *;
+@use '../../includes/forms';
 
 // I'm collectivly calling radio buttons and checkboxes "choices"
 
@@ -16,7 +16,7 @@
     // the maths is done with padding instead of margin so there's consistant behaviour no matter what element the class is applied to
     // so we strip the margins off
     margin-bottom: 0;
-    padding-bottom: $field-v-spacing - $label-v-spacing;
+    padding-bottom: forms.$field-v-spacing - forms.$label-v-spacing;
 }
 
 // wrapper around the label and control
@@ -24,25 +24,25 @@
     box-sizing: border-box;
     clear: left;
     margin-bottom: 0;
-    margin-top: $line-height-shim; // other labels have a bit of line height, mock that here for better vertical spacing
-    min-height: $choice-height;
-    padding-bottom: $field-v-spacing;
+    margin-top: forms.$line-height-shim; // other labels have a bit of line height, mock that here for better vertical spacing
+    min-height: forms.$choice-height;
+    padding-bottom: forms.$field-v-spacing;
     position: relative;
 
     .mzp-c-choices & {
-        padding-bottom: $label-v-spacing;
+        padding-bottom: forms.$label-v-spacing;
     }
 
     .mzp-c-choices.mzp-l-choices-inline & {
         display: inline-block;
-        padding-right: $field-h-spacing;
+        padding-right: forms.$field-h-spacing;
         vertical-align: top;
     }
 }
 
 // label
 .mzp-c-choice-label {
-    @include bidi(((padding-left, $choice-spacing, padding-right, 0),));
+    @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
     margin-bottom: 0;
     padding-top: 3px;
     padding-bottom: 0;
@@ -75,9 +75,9 @@
         // hide real controls
         &[type='checkbox'],
         &[type='radio'] {
-            height: $choice-height;
+            height: forms.$choice-height;
             opacity: 0;
-            width: $choice-height;
+            width: forms.$choice-height;
         }
 
         // recreate controls with CSS
@@ -89,15 +89,15 @@
             @include border-box;
             background: $color-white;
             border-radius: 2px;
-            border: $field-border;
+            border: forms.$field-border;
             content: '';
             cursor: pointer;
             display: block;
-            height: $choice-height;
+            height: forms.$choice-height;
             position: absolute;
             text-align: center;
             top: 0;
-            width: $choice-height;
+            width: forms.$choice-height;
         }
 
         &[type='radio'] + label::before {
@@ -107,8 +107,8 @@
         // :checked styles
 
         &[type='checkbox']:checked + label::before {
-            background-color: $choice-fill;
-            border-color: $choice-fill;
+            background-color: forms.$choice-fill;
+            border-color: forms.$choice-fill;
         }
 
         &[type='checkbox']:checked + label::after {
@@ -130,8 +130,8 @@
         }
 
         &[type='radio']:checked + label::before {
-            background-color: $choice-fill;
-            border-color: $choice-fill;
+            background-color: forms.$choice-fill;
+            border-color: forms.$choice-fill;
             box-shadow: inset 0 0 0 0.25em $color-white;
         }
 
@@ -141,20 +141,20 @@
         &[type='checkbox'] + label:hover::before,
         &[type='radio']:hover + label::before,
         &[type='radio'] + label:hover::before {
-            border-color: $field-border-color-hover;
+            border-color: forms.$field-border-color-hover;
         }
 
         // focus
 
         &[type='checkbox']:focus + label::before,
         &[type='radio']:focus + label::before {
-            border-color: $field-border-color-hover;
-            box-shadow: $field-focus-ring;
+            border-color: forms.$field-border-color-hover;
+            box-shadow: forms.$field-focus-ring;
         }
 
         &[type='radio']:checked:focus + label::before {
-            border-color: $field-border-color-hover;
-            box-shadow: inset 0 0 0 0.25em $color-white, $field-focus-ring;
+            border-color: forms.$field-border-color-hover;
+            box-shadow: inset 0 0 0 0.25em $color-white, forms.$field-focus-ring;
         }
 
         // error
@@ -162,13 +162,13 @@
         .mzp-is-error & {
             &[type='checkbox'] + label::before,
             &[type='radio'] + label::before {
-                border-color: $field-border-color-error;
+                border-color: forms.$field-border-color-error;
             }
 
             &[type='checkbox']:checked + label::before,
             &[type='radio']:checked + label::before {
-                background-color: $field-border-color-error;
-                border-color: $field-border-color-error;
+                background-color: forms.$field-border-color-error;
+                border-color: forms.$field-border-color-error;
             }
 
             // hover
@@ -176,18 +176,18 @@
             &[type='checkbox'] + label:hover::before,
             &[type='radio']:hover + label::before,
             &[type='radio'] + label:hover::before {
-                border-color: $field-border-color-error-hover;
+                border-color: forms.$field-border-color-error-hover;
             }
 
             // focus
             &[type='checkbox']:focus + label::before,
             &[type='radio']:focus + label::before {
-                border-color: $field-border-color-error-hover;
-                box-shadow: $field-focus-ring-error;
+                border-color: forms.$field-border-color-error-hover;
+                box-shadow: forms.$field-focus-ring-error;
             }
 
             &[type='radio']:checked:focus + label::before {
-                box-shadow: inset 0 0 0 0.25em $color-white, $field-focus-ring-error;
+                box-shadow: inset 0 0 0 0.25em $color-white, forms.$field-focus-ring-error;
             }
         }
 
@@ -195,22 +195,22 @@
 
         &[type='checkbox'][disabled] + label::before,
         &[type='radio'][disabled] + label::before {
-            border-color: $field-border-color-disabled;
+            border-color: forms.$field-border-color-disabled;
         }
 
         &[type='checkbox'][disabled]:checked + label::before {
             background-color: $color-marketing-gray-10;
-            border-color: $field-border-color-disabled;
+            border-color: forms.$field-border-color-disabled;
         }
 
         &[type='checkbox'][disabled]:checked + label::after {
-            border-bottom-color: $field-border-color-disabled;
-            border-right-color: $field-border-color-disabled;
+            border-bottom-color: forms.$field-border-color-disabled;
+            border-right-color: forms.$field-border-color-disabled;
         }
 
         &[type='radio'][disabled]:checked + label::before {
-            background-color: $field-border-color-disabled;
-            border-color: $field-border-color-disabled;
+            background-color: forms.$field-border-color-disabled;
+            border-color: forms.$field-border-color-disabled;
         }
 
         // disabled hover
@@ -218,18 +218,18 @@
         &[type='checkbox'][disabled] + label:hover::before,
         &[type='radio'][disabled]:hover + label::before,
         &[type='radio'][disabled] + label:hover::before {
-            border-color: $field-border-color-disabled;
+            border-color: forms.$field-border-color-disabled;
         }
 
         // disabled focus
         &[type='checkbox'][disabled]:focus + label::before,
         &[type='radio'][disabled]:focus + label::before {
-            border-color: $field-border-color-disabled;
-            box-shadow: $field-focus-ring-error;
+            border-color: forms.$field-border-color-disabled;
+            box-shadow: forms.$field-focus-ring-error;
         }
 
         &[type='radio'][disabled]:checked:focus + label::before {
-            box-shadow: inset 0 0 0 0.25em $color-white, $field-focus-ring;
+            box-shadow: inset 0 0 0 0.25em $color-white, forms.$field-focus-ring;
         }
     }
 
@@ -254,22 +254,20 @@
 
 // info
 .mzp-c-choice-info {
-    @include form-info;
+    @include forms.form-info;
 
     .mzp-c-choices + & {
-        margin-top: $field-v-spacing * -1 + $info-v-spacing;
+        margin-top: forms.$field-v-spacing * -1 + forms.$info-v-spacing;
     }
 
     .mzp-c-choice-label + & {
-        padding-top: $info-v-spacing;
-
-        @include bidi(((padding-left, $choice-spacing, padding-right, 0),));
+        padding-top: forms.$info-v-spacing;
+        @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
     }
 
     .mzp-c-choice + & {
-        margin-top: $label-v-spacing * -1;
-
-        @include bidi(((padding-left, $choice-spacing, padding-right, 0),));
+        margin-top: forms.$label-v-spacing * -1;
+        @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
     }
 
     .mzp-c-choice-msg + & {

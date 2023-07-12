@@ -2,14 +2,16 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+@use '../config';
+
 @font-face {
     font-display: swap;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     src:
-        url('#{$font-path}/Inter-Regular.woff2') format('woff2'),
-        url('#{$font-path}/Inter-Regular.woff') format('woff');
+        url('#{config.$font-path}/Inter-Regular.woff2') format('woff2'),
+        url('#{config.$font-path}/Inter-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -18,8 +20,8 @@
     font-style: normal;
     font-weight: bold;
     src:
-        url('#{$font-path}/Inter-Bold.woff2') format('woff2'),
-        url('#{$font-path}/Inter-Bold.woff') format('woff');
+        url('#{config.$font-path}/Inter-Bold.woff2') format('woff2'),
+        url('#{config.$font-path}/Inter-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -28,8 +30,8 @@
     font-style: italic;
     font-weight: normal;
     src:
-        url('#{$font-path}/Inter-Italic.woff2') format('woff2'),
-        url('#{$font-path}/Inter-Italic.woff') format('woff');
+        url('#{config.$font-path}/Inter-Italic.woff2') format('woff2'),
+        url('#{config.$font-path}/Inter-Italic.woff') format('woff');
 }
 
 @font-face {
@@ -38,6 +40,6 @@
     font-style: italic;
     font-weight: bold;
     src:
-        url('#{$font-path}/Inter-BoldItalic.woff2') format('woff2'),
-        url('#{$font-path}/Inter-BoldItalic.woff') format('woff');
+        url('#{config.$font-path}/Inter-BoldItalic.woff2') format('woff2'),
+        url('#{config.$font-path}/Inter-BoldItalic.woff') format('woff');
 }

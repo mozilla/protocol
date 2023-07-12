@@ -1,3 +1,5 @@
+@use '/assets/sass/protocol/includes/lib' as *;
+
 $font-family-monospace: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace !default;
 $font-family-sans-serif: $font-stack-base !default;
 $color-link: #66f;

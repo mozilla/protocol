@@ -1,4 +1,7 @@
+@use '/assets/sass/protocol/includes/lib' as *;
+
 /* stylelint-disable selector-class-pattern */
+
 .Pen {
     background-color: $color-marketing-gray-10;
 }
@@ -57,6 +60,8 @@
 }
 
 .Pen-bidi-controls {
+    padding: 0 $spacing-md;
+
     label {
         display: inline-block;
         padding: 0 $spacing-xs;
