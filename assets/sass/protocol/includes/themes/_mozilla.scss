@@ -3,84 +3,84 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use 'sass:meta';
-@import '../lib';
+@use '../tokens';
 
 %mozilla-theme {
     // fonts
-    --body-font-family: #{$font-stack-base};
-    --button-font-family: #{$font-stack-base};
-    --title-font-family: #{$font-stack-mozilla};
+    --body-font-family: #{tokens.$font-stack-base};
+    --button-font-family: #{tokens.$font-stack-base};
+    --title-font-family: #{tokens.$font-stack-mozilla};
 
     // colors
-    --background-color-tertiary-inverse: #{$color-dark-gray-40};
-    --background-color-tertiary: #{$color-light-gray-30};
-    --background-color-secondary-inverse: #{$color-dark-gray-60};
-    --background-color-secondary: #{$color-light-gray-10};
-    --background-color-inverse: #{$color-black};
-    --background-color: #{$color-white};
-    --body-text-color-secondary-inverse: #{$color-light-gray-30};
-    --body-text-color-secondary: #{$color-dark-gray-90};
-    --body-text-color-inverse: #{$color-white};
-    --body-text-color: #{$color-black};
-    --link-color-hover-inverse: #{$color-blue-05};
-    --link-color-hover: #{$color-link-hover};
-    --link-color-inverse: #{$color-blue-10};
-    --link-color-visited-hover-inverse: #{$color-violet-05};
-    --link-color-visited-hover: #{$color-link-hover};
-    --link-color-visited-inverse: #{$color-violet-10};
-    --link-color-visited: #{$color-link-visited};
-    --link-color: #{$color-link};
-    --title-text-color-inverse: #{$color-white};
-    --title-text-color: #{$color-black};
+    --background-color-tertiary-inverse: #{tokens.$color-dark-gray-40};
+    --background-color-tertiary: #{tokens.$color-light-gray-30};
+    --background-color-secondary-inverse: #{tokens.$color-dark-gray-60};
+    --background-color-secondary: #{tokens.$color-light-gray-10};
+    --background-color-inverse: #{tokens.$color-black};
+    --background-color: #{tokens.$color-white};
+    --body-text-color-secondary-inverse: #{tokens.$color-light-gray-30};
+    --body-text-color-secondary: #{tokens.$color-dark-gray-90};
+    --body-text-color-inverse: #{tokens.$color-white};
+    --body-text-color: #{tokens.$color-black};
+    --link-color-hover-inverse: #{tokens.$color-blue-05};
+    --link-color-hover: #{tokens.$color-link-hover};
+    --link-color-inverse: #{tokens.$color-blue-10};
+    --link-color-visited-hover-inverse: #{tokens.$color-violet-05};
+    --link-color-visited-hover: #{tokens.$color-link-hover};
+    --link-color-visited-inverse: #{tokens.$color-violet-10};
+    --link-color-visited: #{tokens.$color-link-visited};
+    --link-color: #{tokens.$color-link};
+    --title-text-color-inverse: #{tokens.$color-white};
+    --title-text-color: #{tokens.$color-black};
 }
 
 %mozilla-type-scale {
     // type scale
-    --title-2xl-size: 76px;
+    --title-2xl-size: 4.75rem;
     --title-2xl-line-height: 1;
-    --title-xl-size: 66px;
+    --title-xl-size: 4.125rem;
     --title-xl-line-height: 1;
-    --title-lg-size: 56px;
+    --title-lg-size: 3.5rem;
     --title-lg-line-height: 1;
-    --title-md-size: 48px;
+    --title-md-size: 3rem;
     --title-md-line-height: 1;
-    --title-sm-size: 38px;
+    --title-sm-size: 2.375rem;
     --title-sm-line-height: 1.05;
-    --title-xs-size: 28px;
+    --title-xs-size: 1.75rem;
     --title-xs-line-height: 1.07;
-    --title-2xs-size: 24px;
+    --title-2xs-size: 1.5rem;
     --title-2xs-line-height: 1.08;
-    --title-3xs-size: 18px;
+    --title-3xs-size: 1.125rem;
     --title-3xs-line-height: 1.11;
-    --body-xl-size: 21px;
-    --body-lg-size: 18px;
-    --body-md-size: 16px;
-    --body-sm-size: 14px;
-    --body-xs-size: 12px;
+    --body-xl-size: 1.313rem;
+    --body-lg-size: 1.125rem;
+    --body-md-size: 1rem;
+    --body-sm-size: 0.875rem;
+    --body-xs-size: 0.75rem;
     --body-line-height: 1.5;
 }
 
 %mozilla-type-scale-condensed {
-    --title-2xl-size: 34px;
+    --title-2xl-size: 2.125rem;
     --title-2xl-line-height: 1;
-    --title-xl-size: 26px;
+    --title-xl-size: 1.625rem;
     --title-xl-line-height: 1;
-    --title-lg-size: 22px;
+    --title-lg-size: 1.375rem;
     --title-lg-line-height: 1;
-    --title-md-size: 20px;
+    --title-md-size: 1.25rem;
     --title-md-line-height: 1;
-    --title-sm-size: 18px;
+    --title-sm-size: 1.125rem;
     --title-sm-line-height: 1;
-    --title-xs-size: 16px;
+    --title-xs-size: 1rem;
     --title-xs-line-height: 1;
-    --title-2xs-size: 14px;
+    --title-2xs-size: 0.875rem;
     --title-2xs-line-height: 1;
-    --title-3xs-size: 14px;
+    --title-3xs-size: 0.875rem;
     --title-3xs-line-height: 1;
-    --body-xl-size: 18px;
-    --body-lg-size: 16px;
-    --body-md-size: 14px;
-    --body-sm-size: 12px;
-    --body-xs-size: 11px;
+    --body-xl-size: 1.125rem;
+    --body-lg-size: 1rem;
+    --body-md-size: 0.875rem;
+    --body-sm-size: 0.75rem;
+    --body-xs-size: 0.688rem;
     --body-line-height: 1.5;
 }

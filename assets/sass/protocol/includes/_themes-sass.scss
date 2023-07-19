@@ -10,84 +10,46 @@
 @use 'tokens';
 @use 'config';
 @use 'functions';
-@use 'mozilla';
-@use 'firefox';
 
-:root {
-    --v-grid-xs: #{tokens.$layout-md};
-    --h-grid-xs: #{tokens.$layout-xs};
-
-    // sm is the same as xs
-    --v-grid-sm: #{tokens.$layout-md};
-    --h-grid-sm: #{tokens.$layout-xs};
-
-    // md
-    --v-grid-md: #{tokens.$layout-md};
-    --h-grid-md: #{tokens.$layout-lg};
-
-    // lg is the same as medium
-    --v-grid-lg: #{tokens.$layout-md};
-    --h-grid-lg: #{tokens.$layout-lg};
-
-    // xl
-    --v-grid-xl: #{mozilla.$layout-xl};
-    --h-grid-xl: 80px;
-
-    @if $brand-theme == 'mozilla' {
-        @extend mozilla.%mozilla-theme;
-        @extend mozilla.%mozilla-type-scale;
-
-        @if $type-scale == 'condensed' {
-            @extend mozilla.%mozilla-type-scale-condensed;
-        }
-    } @else if $brand-theme == 'firefox' {
-        @extend firefox.%firefox-theme;
-        @extend firefox.%firefox-type-scale;
-
-        @if $type-scale == 'condensed' {
-            @extend firefox.%firefox-type-scale-condensed;
-        }
-    }
-}
 
 // Default "theme" that will be served to legacy browsers -  IE 11 etc
-$v-grid-xs: $layout-md;
-$h-grid-xs: $layout-xs;
-$v-grid-sm: $layout-md;
-$h-grid-sm: $layout-xs;
-$v-grid-md: $layout-md;
-$h-grid-md: $layout-lg;
-$v-grid-lg: $layout-md;
-$h-grid-lg: $layout-lg;
-$v-grid-xl: $layout-xl;
+$v-grid-xs: tokens.$layout-md;
+$h-grid-xs: tokens.$layout-xs;
+$v-grid-sm: tokens.$layout-md;
+$h-grid-sm: tokens.$layout-xs;
+$v-grid-md: tokens.$layout-md;
+$h-grid-md: tokens.$layout-lg;
+$v-grid-lg: tokens.$layout-md;
+$h-grid-lg: tokens.$layout-lg;
+$v-grid-xl: tokens.$layout-xl;
 $h-grid-xl: 80px;
 
 // fonts
-$body-font-family: $font-stack-base;
-$button-font-family: $font-stack-base;
-$title-font-family: $font-stack-mozilla;
+$body-font-family: tokens.$font-stack-base;
+$button-font-family: tokens.$font-stack-base;
+$title-font-family: tokens.$font-stack-mozilla;
 
 // colors
-$background-color-tertiary-inverse: $color-dark-gray-40;
-$background-color-tertiary: $color-light-gray-30;
-$background-color-secondary-inverse: $color-dark-gray-60;
-$background-color-secondary: $color-light-gray-10;
-$background-color-inverse: $color-black;
-$background-color: $color-white;
-$body-text-color-secondary-inverse: $color-light-gray-30;
-$body-text-color-secondary: $color-dark-gray-90;
-$body-text-color-inverse: $color-white;
-$body-text-color: $color-black;
-$link-color-hover-inverse: $color-blue-05;
-$link-color-hover: $color-link-hover;
-$link-color-inverse: $color-blue-10;
-$link-color-visited-hover-inverse: $color-violet-05;
-$link-color-visited-hover: $color-link-hover;
-$link-color-visited-inverse: $color-violet-10;
-$link-color-visited: $color-link-visited;
-$link-color: $color-link;
-$title-text-color-inverse: $color-white;
-$title-text-color: $color-black;
+$background-color-tertiary-inverse: tokens.$color-dark-gray-40;
+$background-color-tertiary: tokens.$color-light-gray-30;
+$background-color-secondary-inverse: tokens.$color-dark-gray-60;
+$background-color-secondary: tokens.$color-light-gray-10;
+$background-color-inverse: tokens.$color-black;
+$background-color: tokens.$color-white;
+$body-text-color-secondary-inverse: tokens.$color-light-gray-30;
+$body-text-color-secondary: tokens.$color-dark-gray-90;
+$body-text-color-inverse: tokens.$color-white;
+$body-text-color: tokens.$color-black;
+$link-color-hover-inverse: tokens.$color-blue-05;
+$link-color-hover: tokens.$color-link-hover;
+$link-color-inverse: tokens.$color-blue-10;
+$link-color-visited-hover-inverse: tokens.$color-violet-05;
+$link-color-visited-hover: tokens.$color-link-hover;
+$link-color-visited-inverse: tokens.$color-violet-10;
+$link-color-visited: tokens.$color-link-visited;
+$link-color: tokens.$color-link;
+$title-text-color-inverse: tokens.$color-white;
+$title-text-color: tokens.$color-black;
 
 // type-scale
 $title-2xl-size: 64px;

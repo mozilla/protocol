@@ -6,41 +6,44 @@
 // themes. Mixins and functions can draw from these variable maps, swapping to
 // a different map based on the value of the global $brand-theme variable.
 
-@import 'mozilla';
-@import 'firefox';
+@use 'mozilla';
+@use 'firefox';
+@use '../tokens';
+@use '../config';
+@forward '../themes-sass';
 
 :root {
-    --v-grid-xs: #{$layout-md};
-    --h-grid-xs: #{$layout-xs};
+    --v-grid-xs: #{tokens.$layout-md};
+    --h-grid-xs: #{tokens.$layout-xs};
 
     // sm is the same as xs
-    --v-grid-sm: #{$layout-md};
-    --h-grid-sm: #{$layout-xs};
+    --v-grid-sm: #{tokens.$layout-md};
+    --h-grid-sm: #{tokens.$layout-xs};
 
     // md
-    --v-grid-md: #{$layout-md};
-    --h-grid-md: #{$layout-lg};
+    --v-grid-md: #{tokens.$layout-md};
+    --h-grid-md: #{tokens.$layout-lg};
 
     // lg is the same as medium
-    --v-grid-lg: #{$layout-md};
-    --h-grid-lg: #{$layout-lg};
+    --v-grid-lg: #{tokens.$layout-md};
+    --h-grid-lg: #{tokens.$layout-lg};
 
     // xl
-    --v-grid-xl: #{$layout-xl};
+    --v-grid-xl: #{tokens.$layout-xl};
     --h-grid-xl: 80px;
 
-    @if $brand-theme == 'mozilla' {
+    @if config.$brand-theme == 'mozilla' {
         @extend %mozilla-theme;
         @extend %mozilla-type-scale;
 
-        @if $type-scale == 'condensed' {
+        @if config.$type-scale == 'condensed' {
             @extend %mozilla-type-scale-condensed;
         }
-    } @else if $brand-theme == 'firefox' {
+    } @else if config.$brand-theme == 'firefox' {
         @extend %firefox-theme;
         @extend %firefox-type-scale;
 
-        @if $type-scale == 'condensed' {
+        @if config.$type-scale == 'condensed' {
             @extend %firefox-type-scale-condensed;
         }
     }

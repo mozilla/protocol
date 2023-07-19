@@ -3,8 +3,9 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use 'sass:math';
+@use 'sass:meta';
 @use '../tokens';
-@use '../themes';
+@use '../themes-sass' as themes;
 @use '../functions';
 
 // * -------------------------------------------------------------------------- */
@@ -30,6 +31,7 @@
 
 @mixin font-size($size) {
     // When unit is pixels, pass it through and convert to rem
+
     @if math.unit($size) == 'px' {
         font-size: $size;
         font-size: functions.remify($size);
@@ -53,11 +55,11 @@
 //  .intro { @include text-body-lg; }
 
 @mixin text-title-2xl {
-    font-size: themes.$title-xl-size;
+    @include font-size(themes.$title-xl-size);
     line-height: themes.$title-xl-line-height;
 
     @media #{tokens.$mq-md} {
-        font-size: themes.$title-2xl-size;
+        @include font-size(themes.$title-2xl-size);
         line-height: themes.$title-2xl-line-height;
     }
 
@@ -73,11 +75,11 @@
 }
 
 @mixin text-title-xl {
-    font-size: themes.$title-lg-size;
+    @include font-size(themes.$title-lg-size);
     line-height: themes.$title-lg-line-height;
 
     @media #{tokens.$mq-md} {
-        font-size: themes.$title-xl-size;
+        @include font-size(themes.$title-xl-size);
         line-height: themes.$title-xl-line-height;
     }
 
@@ -93,11 +95,11 @@
 }
 
 @mixin text-title-lg {
-    font-size: themes.$title-md-size;
+    @include font-size(themes.$title-md-size);
     line-height: themes.$title-md-line-height;
 
     @media #{tokens.$mq-md} {
-        font-size: themes.$title-lg-size;
+        @include font-size(themes.$title-lg-size);
         line-height: themes.$title-lg-line-height;
     }
 
@@ -113,11 +115,11 @@
 }
 
 @mixin text-title-md {
-    font-size: themes.$title-sm-size;
+    @include font-size(themes.$title-sm-size);
     line-height: themes.$title-sm-line-height;
 
     @media #{tokens.$mq-md} {
-        font-size: themes.$title-md-size;
+        @include font-size(themes.$title-md-size);
         line-height: themes.$title-md-line-height;
     }
 
@@ -133,11 +135,11 @@
 }
 
 @mixin text-title-sm {
-    font-size: themes.$title-xs-size;
+    @include font-size(themes.$title-xs-size);
     line-height: themes.$title-xs-line-height;
 
     @media #{tokens.$mq-md} {
-        font-size: themes.$title-sm-size;
+        @include font-size(themes.$title-sm-size);
         line-height: themes.$title-sm-line-height;
     }
 
@@ -153,11 +155,11 @@
 }
 
 @mixin text-title-xs {
-    font-size: themes.$title-2xs-size;
+    @include font-size(themes.$title-2xs-size);
     line-height: themes.$title-2xs-line-height;
 
     @media #{tokens.$mq-md} {
-        font-size: themes.$title-xs-size;
+        @include font-size(themes.$title-xs-size);
         line-height: themes.$title-xs-line-height;
     }
 
@@ -173,11 +175,11 @@
 }
 
 @mixin text-title-2xs {
-    font-size: themes.$title-3xs-size;
+    @include font-size(themes.$title-3xs-size);
     line-height: themes.$title-3xs-line-height;
 
     @media #{tokens.$mq-md} {
-        font-size: themes.$title-2xs-size;
+        @include font-size(themes.$title-2xs-size);
         line-height: themes.$title-2xs-line-height;
     }
 
@@ -193,7 +195,7 @@
 }
 
 @mixin text-title-3xs {
-    font-size: themes.$title-3xs-size;
+    @include font-size(themes.$title-3xs-size);
     line-height: themes.$title-3xs-line-height;
 
     @supports (--css: variables) {
@@ -204,7 +206,7 @@
 
 // body copy
 @mixin text-body-xl {
-    font-size: themes.$body-xl-size;
+    @include font-size(themes.$body-xl-size);
     line-height: themes.$body-line-height;
 
     @supports (--css: variables) {
@@ -214,7 +216,7 @@
 }
 
 @mixin text-body-lg {
-    font-size: themes.$body-lg-size;
+    @include font-size(themes.$body-lg-size);
     line-height: themes.$body-line-height;
 
     @supports (--css: variables) {
@@ -224,7 +226,7 @@
 }
 
 @mixin text-body-md {
-    font-size: themes.$body-md-size;
+    @include font-size(themes.$body-md-size);
     line-height: themes.$body-line-height;
 
     @supports (--css: variables) {
@@ -234,7 +236,7 @@
 }
 
 @mixin text-body-sm {
-    font-size: themes.$body-sm-size;
+    @include font-size(themes.$body-sm-size);
     line-height: themes.$body-line-height;
 
     @supports (--css: variables) {
@@ -244,7 +246,7 @@
 }
 
 @mixin text-body-xs {
-    font-size: themes.$body-xs-size;
+    @include font-size(themes.$body-xs-size);
     line-height: themes.$body-line-height;
 
     @supports (--css: variables) {

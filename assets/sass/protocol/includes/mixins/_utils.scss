@@ -5,7 +5,7 @@
 @use 'sass:math';
 
 @use '../tokens';
-@use '../themes';
+@use '../themes-sass' as themes;
 
 // Clear floats
 @mixin clearfix {
