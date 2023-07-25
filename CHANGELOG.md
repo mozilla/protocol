@@ -30,6 +30,36 @@ stating variables explicitly, like this:
 ```
 * For more information on the `@use` and `@forward` you can visit the [offical SCSS documentation](https://sass-lang.com/documentation/at-rules) or the usage page on the [Protocol documentation website](https://protocol.mozilla.org/docs/usage/overview.html)
 
+* This version also moves from using the `get-theme` function to using css custom properties. A future version of protocol will depreciate both the `get-theme` and `type-scale` functions.
+* To migrate from `get-theme` or `type-scale` to CSS custom properties, follow this pattern:
+* From this:
+
+```scss
+.mzp-t-dark {
+  background-color: get-theme('background-color-inverse');
+  color: get-theme('body-text-color-inverse');
+  line-height: type-scale('body-line-height');
+}
+```
+* to this:
+* (Note: if you need to support legacy browsers, place the CSS custom properties in a `@supports` flag and use sass variables as a fall back. Legacy browsers will always be served the default theme.)
+
+```scss
+.mzp-t-dark {
+  background-color: $background-color-inverse;
+  color: $body-text-color-inverse;
+  line-height: $body-line-height;
+
+  @supports (--css: variables) {
+    background-color: var(--background-color-inverse);
+    color: var(--body-text-color-inverse);
+    line-height: var(--body-line-height);
+  }
+}
+```
+
+* For more information on CSS custom properties you can visit [MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) or the framework page [Protocol's documentation website](https://protocol.mozilla.org/docs/usage/framework.html).
+
 # 17.0.1
 
 ## Bug Fixes
