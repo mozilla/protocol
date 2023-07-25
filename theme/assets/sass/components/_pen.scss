@@ -17,12 +17,17 @@
 
 .Pen-title {
     @include text-title-xs;
-    color: get-theme('title-text-color');
-    font-family: get-theme('title-font-family');
+    color: $title-text-color;
+    font-family: $title-font-family;
     margin-bottom: 0.5em;
 
     @media #{$mq-md} {
         margin-bottom: 0;
+    }
+
+    @supports (--css: variables) {
+        color: var(--title-text-color);
+        font-family: var(--title-font-family);
     }
 }
 
@@ -31,7 +36,11 @@
     &:visited,
     &:hover,
     &:active {
-        color: get-theme('title-text-color');
+        color: $title-text-color;
+
+        @supports (--css: variables) {
+            color: var(--title-text-color);
+        }
     }
 
     svg {
@@ -43,13 +52,23 @@
 .Pen-previewButton {
     @include bidi(((margin-left, $spacing-lg, margin-right, $spacing-lg),));
     @include text-body-sm;
-    color: get-theme('link-color');
-    font-family: get-theme('body-font-family');
+    color: $link-color;
+    font-family: $body-font-family;
     font-weight: bold;
 
     &:hover,
     &:active {
-        color: get-theme('link-color-hover');
+        color: $link-color-hover;
+    }
+
+    @supports (--css: variables) {
+        color: var(--link-color);
+        font-family: var(--body-font-family);
+
+        &:hover,
+        &:active {
+            color: var(--link-color-hover);
+        }
     }
 }
 

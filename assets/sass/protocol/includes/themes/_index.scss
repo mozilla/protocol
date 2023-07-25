@@ -1,0 +1,50 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+// This file contains all the theme variables for both the Firefox and Mozilla
+// themes. Mixins and functions can draw from these variable maps, swapping to
+// a different map based on the value of the global $brand-theme variable.
+
+@use 'mozilla';
+@use 'firefox';
+@use '../tokens';
+@use '../config';
+@forward '../themes-sass';
+
+:root {
+    --v-grid-xs: #{tokens.$layout-md};
+    --h-grid-xs: #{tokens.$layout-xs};
+
+    // sm is the same as xs
+    --v-grid-sm: #{tokens.$layout-md};
+    --h-grid-sm: #{tokens.$layout-xs};
+
+    // md
+    --v-grid-md: #{tokens.$layout-md};
+    --h-grid-md: #{tokens.$layout-lg};
+
+    // lg is the same as medium
+    --v-grid-lg: #{tokens.$layout-md};
+    --h-grid-lg: #{tokens.$layout-lg};
+
+    // xl
+    --v-grid-xl: #{tokens.$layout-xl};
+    --h-grid-xl: 80px;
+
+    @if config.$brand-theme == 'mozilla' {
+        @extend %mozilla-theme;
+        @extend %mozilla-type-scale;
+
+        @if config.$type-scale == 'condensed' {
+            @extend %mozilla-type-scale-condensed;
+        }
+    } @else if config.$brand-theme == 'firefox' {
+        @extend %firefox-theme;
+        @extend %firefox-type-scale;
+
+        @if config.$type-scale == 'condensed' {
+            @extend %firefox-type-scale-condensed;
+        }
+    }
+}

@@ -14,7 +14,7 @@
 
 // colors
 $form-red: #d70022;
-$form-text: get-theme('body-text-color-secondary');
+$form-text: $body-text-color-secondary;
 
 // fields
 $field-border-color: $color-marketing-gray-50;
@@ -67,6 +67,10 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
     line-height: $text-body-line-height;
     margin: 0;
     padding-bottom: $label-v-spacing;
+
+    @supports (--css: variables) {
+        line-height: var(--body-line-height);
+    }
 }
 
 @mixin form-info() {

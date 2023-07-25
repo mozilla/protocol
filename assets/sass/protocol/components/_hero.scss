@@ -31,11 +31,23 @@
     // Dark theme
     &.mzp-t-dark,
     .mzp-t-dark & {
-        background-color: get-theme('background-color-inverse');
-        color: get-theme('body-text-color-inverse');
+        background-color: $background-color-inverse;
+        color: $body-text-color-inverse;
 
         .mzp-c-hero-desc {
-            color: get-theme('body-text-color-secondary-inverse');
+            color: $body-text-color-secondary-inverse;
+        }
+    }
+
+    @supports (--css: variables) {
+        &.mzp-t-dark,
+        .mzp-t-dark & {
+            background-color: var(--background-color-inverse);
+            color: var(--body-text-color-inverse);
+
+            .mzp-c-hero-desc {
+                color: var(--body-text-color-secondary-inverse);
+            }
         }
     }
 }

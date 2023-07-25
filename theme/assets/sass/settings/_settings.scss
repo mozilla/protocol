@@ -1,7 +1,7 @@
-@use '/assets/sass/protocol/includes/lib' as *;
+@use '/assets/sass/protocol/includes/tokens';
 
 $font-family-monospace: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace !default;
-$font-family-sans-serif: $font-stack-base !default;
+$font-family-sans-serif: tokens.$font-stack-base !default;
 $color-link: #66f;
 $color-text: #000;
 $color-heading: #000;

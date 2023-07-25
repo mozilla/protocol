@@ -5,28 +5,48 @@
 @use '../../includes/lib' as *;
 
 :link {
-    color: get-theme('link-color');
+    color: $link-color;
     text-decoration: underline;
 
     &:hover,
     &:focus,
     &:active {
-        color: get-theme('link-color-hover');
+        color: $link-color-hover;
         text-decoration: none;
     }
 
     &:active {
         background-color: rgba(0, 0, 0, 0.05);
     }
+
+    @supports (--css: variables) {
+        color: var(--link-color);
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--link-color-hover);
+        }
+    }
 }
 
 :visited {
-    color: get-theme('link-color-visited');
+    color: $link-color-visited;
 
     &:hover,
     &:focus,
     &:active {
-        color: get-theme('link-color-visited-hover');
+        color: $link-color-visited-hover;
+    }
+
+    @supports (--css: variables) {
+        color: var(--link-color-visited);
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--link-color-visited-hover);
+        }
     }
 }
 
@@ -35,6 +55,10 @@
 }
 
 .mzp-c-cta-link {
-    font-family: get-theme('button-font-family');
+    font-family: $button-font-family;
     font-weight: bold;
+
+    @supports (--css: variables) {
+        font-family: var(--button-font-family);
+    }
 }

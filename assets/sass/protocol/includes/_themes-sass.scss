@@ -11,6 +11,70 @@
 @use 'config';
 @use 'functions';
 
+
+// Default "theme" that will be served to legacy browsers -  IE 11 etc
+$v-grid-xs: tokens.$layout-md;
+$h-grid-xs: tokens.$layout-xs;
+$v-grid-sm: tokens.$layout-md;
+$h-grid-sm: tokens.$layout-xs;
+$v-grid-md: tokens.$layout-md;
+$h-grid-md: tokens.$layout-lg;
+$v-grid-lg: tokens.$layout-md;
+$h-grid-lg: tokens.$layout-lg;
+$v-grid-xl: tokens.$layout-xl;
+$h-grid-xl: 80px;
+
+// fonts
+$body-font-family: tokens.$font-stack-base;
+$button-font-family: tokens.$font-stack-base;
+$title-font-family: tokens.$font-stack-mozilla;
+
+// colors
+$background-color-tertiary-inverse: tokens.$color-dark-gray-40;
+$background-color-tertiary: tokens.$color-light-gray-30;
+$background-color-secondary-inverse: tokens.$color-dark-gray-60;
+$background-color-secondary: tokens.$color-light-gray-10;
+$background-color-inverse: tokens.$color-black;
+$background-color: tokens.$color-white;
+$body-text-color-secondary-inverse: tokens.$color-light-gray-30;
+$body-text-color-secondary: tokens.$color-dark-gray-90;
+$body-text-color-inverse: tokens.$color-white;
+$body-text-color: tokens.$color-black;
+$link-color-hover-inverse: tokens.$color-blue-05;
+$link-color-hover: tokens.$color-link-hover;
+$link-color-inverse: tokens.$color-blue-10;
+$link-color-visited-hover-inverse: tokens.$color-violet-05;
+$link-color-visited-hover: tokens.$color-link-hover;
+$link-color-visited-inverse: tokens.$color-violet-10;
+$link-color-visited: tokens.$color-link-visited;
+$link-color: tokens.$color-link;
+$title-text-color-inverse: tokens.$color-white;
+$title-text-color: tokens.$color-black;
+
+// type-scale
+$title-2xl-size: 64px;
+$title-2xl-line-height: 1.125;
+$title-xl-size: 56px;
+$title-xl-line-height: 1.143;
+$title-lg-size: 48px;
+$title-lg-line-height: 1.166;
+$title-md-size: 40px;
+$title-md-line-height: 1.1;
+$title-sm-size: 32px;
+$title-sm-line-height: 1.125;
+$title-xs-size: 24px;
+$title-xs-line-height: 1.166;
+$title-2xs-size: 20px;
+$title-2xs-line-height: 1.2;
+$title-3xs-size: 16px;
+$title-3xs-line-height: 1.25;
+$body-xl-size: 21px;
+$body-lg-size: 18px;
+$body-md-size: 16px;
+$body-sm-size: 14px;
+$body-xs-size: 12px;
+$body-line-height: 1.5;
+
 // * -------------------------------------------------------------------------- */
 // Vertical and Horizontal Spacing
 

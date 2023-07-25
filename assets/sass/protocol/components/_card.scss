@@ -138,12 +138,12 @@
 
 .mzp-c-card.mzp-t-dark,
 .mzp-t-dark .mzp-c-card {
-    background-color: get-theme('background-color-inverse');
-    color: get-theme('body-text-color-inverse');
+    background-color: $background-color-inverse;
+    color: $body-text-color-inverse;
 
     .mzp-c-card-tag,
     .mzp-c-card-meta {
-        color: get-theme('body-text-color-inverse');
+        color: $body-text-color-inverse;
     }
 
     .mzp-c-card-block-link {
@@ -155,10 +155,31 @@
 
         &:link,
         &:visited {
-            color: get-theme('body-text-color-inverse');
+            color: $body-text-color-inverse;
 
             .mzp-c-card-cta-text {
-                color: get-theme('body-text-color-inverse');
+                color: $body-text-color-inverse;
+            }
+        }
+    }
+
+    @supports (--css: variables) {
+        background-color: var(--background-color-inverse);
+        color: var(--body-text-color-inverse);
+
+        .mzp-c-card-tag,
+        .mzp-c-card-meta {
+            color: var(--body-text-color-inverse);
+        }
+
+        .mzp-c-card-block-link {
+            &:link,
+            &:visited {
+                color: var(--body-text-color-inverse);
+
+                .mzp-c-card-cta-text {
+                    color: var(--body-text-color-inverse);
+                }
             }
         }
     }

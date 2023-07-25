@@ -63,10 +63,18 @@
 
     // dark theme color styling
     .mzp-t-dark & {
-        color: get-theme('body-text-color-inverse');
+        color: $body-text-color-inverse;
 
         .mzp-c-card-feature-desc {
-            color: get-theme('body-text-color-secondary-inverse');
+            color: $body-text-color-secondary-inverse;
+        }
+
+        @supports (--css: variables) {
+            color: var(--body-text-color-inverse);
+
+            .mzp-c-card-feature-desc {
+                color: var(--body-text-color-secondary-inverse);
+            }
         }
     }
 

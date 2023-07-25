@@ -10,16 +10,16 @@
 .mzp-c-section-heading {
     @include text-title-md;
     margin: 0 auto;
-    padding: get-theme('h-grid-xs') $layout-xs;
+    padding: $h-grid-xs $layout-xs;
     max-width: $content-lg;
     text-align: center;
 
     @media #{$mq-md} {
-        padding: get-theme('h-grid-md') get-theme('v-grid-md');
+        padding: $h-grid-md $v-grid-md;
     }
 
     @media #{$mq-xl} {
-        padding: get-theme('h-grid-xl') get-theme('v-grid-xl');
+        padding: $h-grid-xl $v-grid-xl;
     }
 
     // rely on l-content for padding if nested
@@ -29,6 +29,18 @@
 
         &:first-child {
             padding-top: 0;
+        }
+    }
+
+    @supports (--css: variables) {
+        padding: var(--h-grid-xs) $layout-xs;
+
+        @media #{$mq-md} {
+            padding: var(--h-grid-md) var(--v-grid-md);
+        }
+
+        @media #{$mq-xl} {
+            padding: var(--h-grid-xl) var(--v-grid-xl);
         }
     }
 }

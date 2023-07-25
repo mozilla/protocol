@@ -10,8 +10,28 @@
     margin: 0 auto;
     max-width: $content-max;
     min-width: $content-xs - ($layout-xs * 2);
-    padding: get-theme('v-grid-xs') get-theme('h-grid-xs');
+    padding: $v-grid-xs $h-grid-xs;
     position: relative;
+
+    @media #{$mq-md} {
+        padding: $v-grid-md $h-grid-md;
+    }
+
+    @media #{$mq-xl} {
+        padding: $v-grid-xl $h-grid-xl;
+    }
+
+    @supports (--css: variable) {
+        padding: var(--v-grid-xs) var(--h-grid-xs);
+
+        @media #{$mq-md} {
+            padding: var(--v-grid-md) var(--h-grid-md);
+        }
+
+        @media #{$mq-xl} {
+            padding: var(--v-grid-xl) var(--h-grid-xl);
+        }
+    }
 
     &.mzp-t-content-sm {
         max-width: $content-sm;
@@ -40,13 +60,5 @@
     // is used as a grid or flex container.
     & > :last-child {
         margin-bottom: 0;
-    }
-
-    @media #{$mq-md} {
-        padding: get-theme('v-grid-md') get-theme('h-grid-md');
-    }
-
-    @media #{$mq-xl} {
-        padding: get-theme('v-grid-xl') get-theme('h-grid-xl');
     }
 }

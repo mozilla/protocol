@@ -5,7 +5,7 @@
 @use 'sass:math';
 
 @use '../tokens';
-@use '../themes';
+@use '../themes-sass' as themes;
 
 // Clear floats
 @mixin clearfix {
@@ -225,23 +225,45 @@
 // Light color links for dark backgrounds.
 @mixin light-links {
     a:link {
-        color: themes.get-theme('link-color-inverse');
+        color: themes.$link-color-inverse;
     }
 
     a:visited {
-        color: themes.get-theme('link-color-visited-inverse');
+        color: themes.$link-color-visited-inverse;
     }
 
     a:hover,
     a:focus,
     a:active {
-        color: themes.get-theme('link-color-hover-inverse');
+        color: themes.$link-color-hover-inverse;
     }
 
     a:visited:hover,
     a:visited:focus,
     a:visited:active {
-        color: themes.get-theme('link-color-visited-hover-inverse');
+        color: themes.$link-color-visited-hover-inverse;
+    }
+
+    @supports (--css: variables) {
+        a:link {
+            color: var(--link-color-inverse);
+        }
+
+        a:visited {
+            color: var(--link-color-visited-inverse);
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: var(--link-color-hover-inverse);
+        }
+
+        a:visited:hover,
+        a:visited:focus,
+        a:visited:active {
+            color: var(--link-color-visited-hover-inverse);
+        }
     }
 }
 
