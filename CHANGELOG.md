@@ -1,5 +1,5 @@
 # HEAD
-
+* **css:** Fix incorrect value for `text-body-lg` in firefox theme.
 # 18.0.0
 
 ## Features
