@@ -180,3 +180,19 @@ output, assuming a `16px` root size (the default in graphical browsers). Because
 we use `rem` for font sizing all of our declared sizes are really just suggestions
 and the end user can resize as they see fit. Text sizes are always variable so
 design accordingly.
+
+#### Title utility classes
+
+There are also a set of CSS utility class names available to use directly on HTML
+heading elements for convenience.
+
+```html
+<h1 class="mzp-u-title-2xl">Title 2XL</h1>
+<h2 class="mzp-u-title-xl">Title XL</h2>
+<h3 class="mzp-u-title-lg">Title LG</h3>
+<h4 class="mzp-u-title-md">Title MD</h4>
+<h5 class="mzp-u-title-sm">Title SM</h5>
+<h6 class="mzp-u-title-xs">Title XS</h6>
+<h6 class="mzp-u-title-2xs">Title 2XS</h6>
+<h6 class="mzp-u-title-3xs">Title 3XS</h6>
+```

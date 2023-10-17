@@ -1,5 +1,13 @@
 # HEAD
+
+## Features
+
+* **css:** Add CSS utility class for centered text and document existing title utility classes (#897).
+
+## Bug Fixes
+
 * **css:** Fix incorrect value for `text-body-lg` in firefox theme.
+
 # 18.0.0
 
 ## Features

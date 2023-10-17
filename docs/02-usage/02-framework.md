@@ -141,3 +141,41 @@ Text sizes are also defined as theme variables, allowing different brands to hav
 slightly different type scales. Don’t use CSS Custom Properties for text
 sizing; use the text size mixins instead. The mixins already draw from the theme
 variables but come with baked-in responsive styling as well.
+
+### Utility classes
+
+Whilst Protocol tries to avoid reliance on utility classes, we do support a few well
+chosen use cases, where utility classes can allow for some very basic visual styling
+directly in HTML.
+
+These classes are purely presentational, so should only be used in situations where
+you're not already writing CSS for an element. A good example use case might be
+content delivered through a CMS, or when it would be more effort to write custom
+styles for something that requires only the most very basic layout.
+
+#### Centered text
+
+The `mzp-u-centered` utility class apply `text-align: center;` to an element's
+text content.
+
+```html
+<div class="mzp-u-centered">
+  The text content of this element is centered
+</div>
+```
+
+#### Title sizes
+
+A range of utility classes are available for title sizes. See the
+[typography page](/docs/fundamentals/typography) for more details.
+
+```html
+<h1 class="mzp-u-title-2xl">Title 2XL</h1>
+<h2 class="mzp-u-title-xl">Title XL</h2>
+<h3 class="mzp-u-title-lg">Title LG</h3>
+<h4 class="mzp-u-title-md">Title MD</h4>
+<h5 class="mzp-u-title-sm">Title SM</h5>
+<h6 class="mzp-u-title-xs">Title XS</h6>
+<h6 class="mzp-u-title-2xs">Title 2XS</h6>
+<h6 class="mzp-u-title-3xs">Title 3XS</h6>
+```
