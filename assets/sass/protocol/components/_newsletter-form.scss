@@ -20,9 +20,18 @@
         width: 100%;
     }
 
-    // Hide errors
+    .mzp-c-button + .mzp-c-fieldnote {
+        @include text-body-xs;
+    }
+
     .mzp-c-form-errors {
-        @include hidden;
+        li {
+            display: list-item;
+
+            &.hidden {
+                @include hidden;
+            }
+        }
     }
 }
 
@@ -34,11 +43,6 @@
 .mzp-c-newsletter-image {
     margin-bottom: $spacing-lg;
     text-align: center;
-}
-
-// Hide thank you message
-.mzp-c-newsletter-thanks {
-    @include hidden;
 }
 
 // hide details for JS users

@@ -2,6 +2,7 @@
 
 ## Features
 
+* **js:** Update newsletter component to include JS to post directly to Basket (#839).
 * **css:** Add CSS utility class for centered text and document existing title utility classes (#897).
 
 ## Bug Fixes

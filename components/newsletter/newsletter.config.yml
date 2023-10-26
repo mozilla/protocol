@@ -1,20 +1,18 @@
 preview: '@preview-unpadded'
 context:
   options:
-    - text: Germany
-      value: DE
-    - text: France
-      value: FR
-    - text: India
-      value: IN
-    - text: Japan
-      value: JP
-    - text: Spain
-      value: ES
     - text: United States
-      value: US
-    - text: And so on…
-      value: ''
+      value: us
+    - text: Germany
+      value: de
+    - text: France
+      value: fr
+    - text: India
+      value: in
+    - text: Japan
+      value: jp
+    - text: Spain
+      value: es
 variants:
   - name: Errors
     notes: An error summary can be shown at the top of the form.

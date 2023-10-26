@@ -3,10 +3,10 @@ context:
   name: language
   id: language
   options:
-    - text: Deutsch
-      value: de
     - text: English
       value: en
+    - text: Deutsch
+      value: de
     - text: Español
       value: es
     - text: Français
