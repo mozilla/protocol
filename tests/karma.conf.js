@@ -26,7 +26,13 @@ module.exports = function(config) {
             'tests/unit/lang-switcher.js',
             'tests/unit/menu.js',
             'tests/unit/navigation.js',
-            'tests/unit/notification-bar.js'
+            'tests/unit/newsletter.js',
+            'tests/unit/notification-bar.js',
+            {
+                pattern: 'node_modules/sinon/pkg/sinon.js',
+                watched: false,
+                included: true
+            },
         ],
 
 

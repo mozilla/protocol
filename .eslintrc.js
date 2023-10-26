@@ -3,7 +3,6 @@ module.exports = {
         'browser': true,
         'commonjs': true,
         'es2017': true,
-        'jasmine': true,
         'node': true
     },
     extends: [
@@ -74,5 +73,17 @@ module.exports = {
         // Disallow the use of `console`
         // https://eslint.org/docs/rules/no-console
         'no-console': 'error'
-    }
+    },
+    overrides: [
+        {
+            // JS Jasmine test files.
+            files: ['tests/unit/**/*.js'],
+            env: {
+                jasmine: true
+            },
+            globals: {
+                sinon: 'writable'
+            }
+        }
+    ]
 };
