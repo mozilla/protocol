@@ -27,8 +27,8 @@
   "dependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
-    "@frctl/fractal": "^1.5.14",
-    "@frctl/mandelbrot": "^1.10.2",
+    "@frctl/fractal": "^1.5.15",
+    "@frctl/mandelbrot": "^1.10.3",
     "@frctl/nunjucks": "^2.0.15",
     "@mozilla-protocol/assets": "^5.2.0",
     "@mozilla-protocol/tokens": "^5.0.5",
@@ -39,22 +39,22 @@
     "css-minimizer-webpack-plugin": "^5.0.1",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss-scss": "^4.0.9",
-    "sass": "^1.69.3",
+    "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-remove-empty-scripts": "^1.0.4"
   },
   "devDependencies": {
-    "eslint": "^8.31.0",
-    "jasmine-core": "^4.5.0",
-    "karma": "^6.4.1",
+    "eslint": "^8.52.0",
+    "jasmine-core": "^5.1.1",
+    "karma": "^6.4.2",
     "karma-firefox-launcher": "^2.1.2",
     "karma-jasmine": "^5.1.0",
     "karma-sourcemap-loader": "^0.4.0",
     "karma-webpack": "^5.0.0",
-    "stylelint": "^15.10.1",
-    "stylelint-config-standard-scss": "^9.0.0"
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^11.0.0"
   },
   "browserslist": [
     "defaults",

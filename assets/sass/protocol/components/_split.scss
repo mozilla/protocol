@@ -276,9 +276,8 @@
         }
 
         .mzp-c-split-media {
-            align-self: center;
             grid-area: media;
-            justify-self: start;
+            place-self: center start;
 
             .mzp-c-split-media-asset {
                 display: block;
