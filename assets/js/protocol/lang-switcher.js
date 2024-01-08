@@ -5,7 +5,7 @@
 const MzpLangSwitcher = {};
 
 /**
- * Returns URL pathname with preceded by a new page locale.
+ * Returns URL pathname preceded by a new page locale.
  * Assumes first path immediately after hostname is the page locale.
  * @param {Object} Location interface
  * @param {String} Newly selected language code e.g. `de`
