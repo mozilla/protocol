@@ -1,6 +1,7 @@
 # HEAD
 
 ## Features
+* **component:** Remove deprecated Hero component. (#912)
 * **component:** Refactor and rename the Callout component (previously Call-out) (#787)
 * **component:** Remove Compact Call-out as a separate component. It's now just a variant of the updated Callout.
 * **js:** Update newsletter component to include JS to post directly to Basket (#839).
