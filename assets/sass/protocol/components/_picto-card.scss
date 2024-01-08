@@ -4,6 +4,8 @@
 
 @use '../includes/lib' as *;
 
+@warn 'Picto Card component is now deprecated. Please migrate to use Picto: https://protocol.mozilla.org/components/detail/picto--default';
+
 // * -------------------------------------------------------------------------- */
 // A small card with an icon and no link.
 

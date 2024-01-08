@@ -1,16 +1,23 @@
 # HEAD
 
 ## Features
-
+* **component:** Refactor and rename the Callout component (previously Call-out) (#787)
+* **component:** Remove Compact Call-out as a separate component. It's now just a variant of the updated Callout.
 * **js:** Update newsletter component to include JS to post directly to Basket (#839).
 * **css:** Add CSS utility class for centered text and document existing title utility classes (#897).
 
 ## Bug Fixes
+* **css:** Fix incorrect value for `text-body-lg` in Firefox theme.
 
-* **css:** Fix incorrect value for `text-body-lg` in firefox theme.
+## Migration Tips
+* Rename instances of `mzp-c-call-out` to `mzp-c-callout` (note the removed dash).
+* Replace instances of Compact Call-out with the compact variant of Callout (`class="mzp-c-callout mzp-l-compact"`).
+* Update references to the `call-out` SCSS file to `callout` in any `@import` or `@use` rules.
+  ** e.g. `@use 'components/call-out';` should change to `@use 'components/callout';`
+* The rebuilt Callout doesn't feature integrated brand logos. Use Logo and Wordmark components instead.
+* The rebuilt Compact Callout lacks an integrated logo, so it no longer positions the logo at one end of the component. A Logo or Wordmark component should appear in the body instead.
 
 # 18.0.0
-
 ## Features
 * **css:** Replace `get-theme`, `type-scale` functions and theme and type-scale maps with CSS Custom Properties. Sass variables added for legacy support
 * **css:** Migrates the sass `@import` with `@use` and `@forward` (#755).

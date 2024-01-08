@@ -1,0 +1,92 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@use '../includes/lib' as *;
+
+// * -------------------------------------------------------------------------- */
+// Callout component
+
+.mzp-c-callout {
+    text-align: center;
+
+    .mzp-c-callout-desc {
+        @include text-body-lg;
+        margin-bottom: $spacing-lg;
+    }
+
+    .mzp-c-callout-cta,
+    .mzp-c-callout-media {
+        margin: $spacing-lg auto;
+    }
+
+    @media #{$mq-md} {
+        .mzp-l-content {
+            padding-bottom: $spacing-2xl;
+            padding-top: $spacing-2xl;
+        }
+    }
+}
+
+.mzp-c-callout.mzp-l-compact {
+    text-align: start;
+
+    .mzp-c-callout-title {
+        @include text-title-sm;
+    }
+
+    .mzp-c-callout-desc {
+        @include text-body-md;
+    }
+
+    .mzp-c-callout-cta {
+        margin: $spacing-sm 0 0;
+    }
+
+    @media #{$mq-md} {
+        @include clearfix;
+
+        .mzp-c-callout-title,
+        .mzp-c-callout-desc {
+            margin-bottom: 0;
+        }
+
+        .mzp-c-callout-title + .mzp-c-callout-desc {
+            margin-top: $spacing-sm;
+        }
+
+        .mzp-c-callout-content {
+            @include bidi(((float, left, right),));
+            width: calc(66.6% - #{$spacing-lg});
+        }
+
+        .mzp-c-callout-cta {
+            @include bidi(((float, right, left),));
+            margin: 0;
+            position: relative;
+            width: calc(33.3% - #{$spacing-lg});
+        }
+    }
+
+    @supports (display: grid) {
+        @media #{$mq-md} {
+            .mzp-l-content {
+                @include grid-column-gap($spacing-xl);
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .mzp-c-callout-content {
+                width: auto;
+                align-items: center;
+            }
+
+            .mzp-c-callout-cta {
+                @include flexbox;
+                align-items: center;
+                justify-content: flex-end;
+                width: auto;
+            }
+        }
+    }
+}
