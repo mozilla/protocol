@@ -119,10 +119,14 @@
   from = "/patterns/molecules/notification-bar*"
   to = "components/detail/notification-bar"
 
-# depreciated
+# deprecated
 [[redirects]]
   from = "/patterns/molecules/picto-card*"
-  to = "/components/detail/picto-card"
+  to = "/components/detail/picto"
+
+[[redirects]]
+  from = "/components/detail/picto-card*"
+  to = "/components/detail/picto"
 
 [[redirects]]
   from = "/patterns/molecules/picto*"
