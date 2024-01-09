@@ -9,6 +9,7 @@
 ## Bug Fixes
 * **css:** Fix incorrect value for `text-body-lg` in Firefox theme.
 * **js:** Fix typo at `lang-switcher.js` comment
+* **css:** Center-align button text (#826)
 
 ## Migration Tips
 * Rename instances of `mzp-c-call-out` to `mzp-c-callout` (note the removed dash).
