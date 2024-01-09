@@ -89,6 +89,7 @@ a.mzp-c-button {
     font-weight: bold;
     line-height: $body-line-height;
     padding: 6px $spacing-lg;
+    text-align: center;
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
 
     &::-moz-focus-inner {
