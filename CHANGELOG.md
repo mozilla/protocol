@@ -17,6 +17,7 @@
   ** e.g. `@use 'components/call-out';` should change to `@use 'components/callout';`
 * The rebuilt Callout doesn't feature integrated brand logos. Use Logo and Wordmark components instead.
 * The rebuilt Compact Callout lacks an integrated logo, so it no longer positions the logo at one end of the component. A Logo or Wordmark component should appear in the body instead.
+* Convert any instances of the Hero component to either Split or Callout.
 
 # 18.0.0
 ## Features
