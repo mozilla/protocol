@@ -1,4 +1,4 @@
-# HEAD
+# 19.0.0
 
 ## Features
 * **component:** Remove deprecated Picto Card component.
