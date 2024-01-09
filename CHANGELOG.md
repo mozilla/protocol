@@ -1,6 +1,7 @@
 # HEAD
 
 ## Features
+* **component:** Remove deprecated Hero component. (#912)
 * **component:** Refactor and rename the Callout component (previously Call-out) (#787)
 * **component:** Remove Compact Call-out as a separate component. It's now just a variant of the updated Callout.
 * **js:** Update newsletter component to include JS to post directly to Basket (#839).
@@ -18,6 +19,7 @@
   ** e.g. `@use 'components/call-out';` should change to `@use 'components/callout';`
 * The rebuilt Callout doesn't feature integrated brand logos. Use Logo and Wordmark components instead.
 * The rebuilt Compact Callout lacks an integrated logo, so it no longer positions the logo at one end of the component. A Logo or Wordmark component should appear in the body instead.
+* Convert any instances of the Hero component to either Split or Callout.
 
 # 18.0.0
 ## Features
