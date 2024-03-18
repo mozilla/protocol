@@ -291,3 +291,35 @@ a.mzp-c-button {
         text-decoration: underline;
     }
 }
+
+// * -------------------------------------------------------------------------- */
+// Icon
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+.mzp-c-button,
+a.mzp-c-button {
+    &.mzp-t-icon-start {
+        .mzp-c-button-icon {
+            @include bidi(((margin-right, 0.5ch, 0), (margin-left, 0, 0.5ch),));
+        }
+    }
+
+    &.mzp-t-icon-end {
+        .mzp-c-button-icon {
+            @include bidi(((margin-left, 0.5ch, 0), (margin-right, 0, 0.5ch),));
+        }
+    }
+}
+
+.mzp-c-button-icon {
+    display: inline-block;
+    height: 1em;
+    vertical-align: text-top;
+    width: 1em;
+
+    img,
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+}

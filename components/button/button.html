@@ -7,8 +7,32 @@
 # type          - type attribute value (button, submit, reset)
 # disabled      - Boolean
 #}
-{%- if href -%}
-<a class="mzp-c-button{% if class %} {{ class }}{% endif %}" href="{{ link }}">{{ label }}</a>
+{%- if link -%}
+<a class="mzp-c-button{% if class %} {{ class }}{% endif %}" href="{{ link }}">
+  {%- if icon and class and "mzp-t-icon-start" in class %}
+    <span class="mzp-c-button-icon">
+      {{ icon | safe }}
+    </span>
+  {% endif -%}
+  {{ label }}
+  {%- if icon and class and "mzp-t-icon-end" in class %}
+    <span class="mzp-c-button-icon">
+      {{ icon | safe }}
+    </span>
+  {% endif -%}
+</a>
 {%- else -%}
-<button class="mzp-c-button{% if class %} {{ class }}{% endif %}" type="{% if type %}{{ type }}{% else %}button{% endif %}"{{ " disabled" if disabled }}>{{ label }}</button>
+<button class="mzp-c-button{% if class %} {{ class }}{% endif %}" type="{% if type %}{{ type }}{% else %}button{% endif %}"{{ " disabled" if disabled }}>
+  {%- if icon and class and "mzp-t-icon-start" in class %}
+    <span class="mzp-c-button-icon">
+      {{ icon | safe }}
+    </span>
+  {% endif -%}
+  {{ label }}
+  {%- if icon and class and "mzp-t-icon-end" in class %}
+    <span class="mzp-c-button-icon">
+      {{ icon | safe }}
+    </span>
+  {% endif -%}
+</button>
 {%- endif -%}
