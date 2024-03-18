@@ -16,54 +16,54 @@ variants:
     preview: '@preview-dark'
     notes: A light variation of the secondary button for dark backgrounds, adding the class `mzp-t-dark` (the button itself is light).
     context:
-      class: mzp-t-secondary mzp-t-dark
+      class: 'mzp-t-secondary mzp-t-dark'
       label: Secondary Button
   - name: Product
     notes: Use this theme style for product-related transactions, such as downloading software or creating an account.
     context:
-      class: mzp-t-product
+      class: 'mzp-t-product'
       label: Download Firefox
   - name: Product Secondary
     notes: This secondary product button theme should be used when the CTA is a product-related transaction, but not the main action a person should take on a page.
     context:
-      class: mzp-t-product mzp-t-secondary
+      class: 'mzp-t-product mzp-t-secondary'
       label: Download Firefox
   - name: Product Secondary Dark
     preview: '@preview-dark'
     notes: A light variation of the secondary product button for use on dark backgrounds. Add the class `mzp-t-dark` (the button itself is light).
     context:
-      class: mzp-t-product mzp-t-secondary mzp-t-dark
+      class: 'mzp-t-product mzp-t-secondary mzp-t-dark'
       label: Download Firefox
   - name: Neutral
     notes: A neutral button for less important actions.
     context:
-      class: mzp-t-neutral
+      class: 'mzp-t-neutral'
       label: Neutral Button
   - name: Neutral Dark
     preview: '@preview-dark'
     notes: A light variation of the neutral button for use on dark backgrounds. Add the class `mzp-t-dark` (the button itself is light).
     context:
-      class: mzp-t-neutral mzp-t-dark
+      class: 'mzp-t-neutral mzp-t-dark'
       label: Neutral Button
   - name: Size small
     notes: A small button. Use this size with caution because small buttons are harder to read and present smaller targets for pointing devices (clicks and taps).
     context:
-      class: mzp-t-sm
+      class: 'mzp-t-sm'
       label: Small Button
   - name: Size medium
     notes: A medium button.
     context:
-      class: mzp-t-md
+      class: 'mzp-t-md'
       label: Medium Button
   - name: Size large
     notes: This is the default size if no size class is provided.
     context:
-      class: mzp-t-lg
+      class: 'mzp-t-lg'
       label: Large Button
   - name: Size Extra Large
     notes: An extra large button. Use this sparingly.
     context:
-      class: mzp-t-xl
+      class: 'mzp-t-xl'
       label: Extra Large Button
   - name: Disabled
     notes: |

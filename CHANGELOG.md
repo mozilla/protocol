@@ -3,6 +3,7 @@
 ## Features
 
 * **component** Remove the format option from Newsletter component
+* **component:** Allow an optional icon in buttons (#893)
 
 # 19.0.0
 
