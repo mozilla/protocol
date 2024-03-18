@@ -1,3 +1,8 @@
+# HEAD
+
+## Features
+* **component:** Allow an optional icon in buttons (#893)
+
 # 19.0.0
 
 ## Features
