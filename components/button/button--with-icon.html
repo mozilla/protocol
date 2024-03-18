@@ -1,0 +1,63 @@
+<p>
+{% render '@button', { label: 'Button with Icon',
+  iconEnd:
+  '<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+    <path d="m21.3 4.5-8-4c-.8-.4-1.8-.4-2.7 0l-8 4C1.6 5.1 1 6.1 1 7.2v9.5c0 1.1.6 2.2 1.7 2.7l8 4c.4.2.9.3 1.3.3s.9-.1 1.3-.3l8-4c1-.5 1.7-1.5 1.7-2.7V7.2c0-1.1-.6-2.1-1.7-2.7zm-9.7-2.2c.1-.1.3-.1.4-.1.2 0 .3 0 .4.1L19.8 6 12 9.9 4.2 6l7.4-3.7zm-8 15.4c-.4-.2-.6-.6-.6-.9V7.6l8 4v9.8l-7.4-3.7zm16.8 0L13 21.4v-9.8l8-4v9.2c0 .3-.2.7-.6.9z"/>
+  </svg>' }
+%}
+</p>
+
+<p>
+{% render '@button', { label: 'Button with Icon',
+  iconStart:
+  '<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+    <path d="m21.3 4.5-8-4c-.8-.4-1.8-.4-2.7 0l-8 4C1.6 5.1 1 6.1 1 7.2v9.5c0 1.1.6 2.2 1.7 2.7l8 4c.4.2.9.3 1.3.3s.9-.1 1.3-.3l8-4c1-.5 1.7-1.5 1.7-2.7V7.2c0-1.1-.6-2.1-1.7-2.7zm-9.7-2.2c.1-.1.3-.1.4-.1.2 0 .3 0 .4.1L19.8 6 12 9.9 4.2 6l7.4-3.7zm-8 15.4c-.4-.2-.6-.6-.6-.9V7.6l8 4v9.8l-7.4-3.7zm16.8 0L13 21.4v-9.8l8-4v9.2c0 .3-.2.7-.6.9z"/>
+  </svg>' }
+%}
+</p>
+
+<p>
+{% render '@button', { class: 'mzp-t-xl mzp-t-product', label: 'Download Firefox', link: 'https://www.mozilla.org/firefox/new/',
+  iconEnd:
+  '<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+    <path d="M8 13c.2 0 .4-.1.5-.2l4.4-4.4-1.1-1.1-3.1 3.1V1H7.2v9.4L4.1 7.3l-1 1.1 4.4 4.4c.1.1.3.2.5.2z"/>
+    <path d="M13.5 12v2c0 .3-.2.5-.5.5H3c-.3 0-.5-.2-.5-.5v-2H1v2c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-2h-1.5z"/>
+  </svg>' }
+%}
+</p>
+
+<p>
+{% render '@button', { class: 'mzp-t-product mzp-t-secondary', label: 'Try Reader Mode',
+  iconStart:
+  '<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+    <path d="M12 15H4c-1.1 0-2-.9-2-2V2c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v11c0 1.1-.9 2-2 2zM4 1.5c-.3 0-.5.2-.5.5v11c0 .3.2.5.5.5h8c.3 0 .5-.2.5-.5V2c0-.3-.2-.5-.5-.5H4z"/>
+    <path d="M5.5 3.5h5V5h-5z"/>
+    <path d="M5.5 6.5h5V8h-5z"/>
+    <path d="M5.5 9.5h3V11h-3z"/>
+  </svg>' }
+%}
+</p>
+
+<p>
+{% render '@button', { class: 'mzp-t-sm mzp-t-secondary', label: 'Previous', link: '#',
+  iconStart:
+  '<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+    <path d="m1.2 7.7 5.5-5.5 1.1 1.1-4.2 4.2H15V9H3.6l4.2 4.2-1.1 1.1-5.5-5.5c-.1-.2-.2-.4-.2-.6s.1-.3.2-.5z"/>
+  </svg>' }
+%}
+
+{% render '@button', { class: 'mzp-t-sm mzp-t-secondary', label: 'Next', link: '#',
+  iconEnd:
+  '<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+    <path d="M14.8 7.7 9.3 2.2 8.2 3.3l4.2 4.2H1V9h11.4l-4.2 4.2 1.1 1.1 5.5-5.5c.1-.2.2-.4.2-.6s-.1-.3-.2-.5z"/>
+  </svg>' }
+%}
+</p>
+
+<p>
+  {% render '@button', { label: 'Character', iconEnd: '❤︎' } %}
+</p>
+
+<p>
+  {% render '@button', { label: 'Emoji', iconEnd: '❤️' } %}
+</p>
