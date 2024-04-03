@@ -1,6 +1,13 @@
+# HEAD
+
+## Features
+
+* **component** Remove the format option from Newsletter component
+
 # 19.0.0
 
 ## Features
+
 * **component:** Remove deprecated Picto Card component.
 * **component:** Remove deprecated Hero component. (#912)
 * **component:** Refactor and rename the Callout component (previously Call-out) (#787)
@@ -9,11 +16,13 @@
 * **css:** Add CSS utility class for centered text and document existing title utility classes (#897).
 
 ## Bug Fixes
+
 * **css:** Fix incorrect value for `text-body-lg` in Firefox theme.
 * **js:** Fix typo at `lang-switcher.js` comment
 * **css:** Center-align button text (#826)
 
 ## Migration Tips
+
 * Rename instances of `mzp-c-call-out` to `mzp-c-callout` (note the removed dash).
 * Replace instances of Compact Call-out with the compact variant of Callout (`class="mzp-c-callout mzp-l-compact"`).
 * Update references to the `call-out` SCSS file to `callout` in any `@import` or `@use` rules.
@@ -24,11 +33,14 @@
 * Convert any instances of the Picto Card component to Picto.
 
 # 18.0.0
+
 ## Features
+
 * **css:** Replace `get-theme`, `type-scale` functions and theme and type-scale maps with CSS Custom Properties. Sass variables added for legacy support
 * **css:** Migrates the sass `@import` with `@use` and `@forward` (#755).
 
 ## Migration Tips
+
 * This version updates how we internally import SCSS files, from the `@import` syntax to `@use` and `@forward`
 * When importing `lib` at the head of your project you will use the `with` keyword instead of
 stating variables explicitly, like this:
@@ -36,11 +48,13 @@ stating variables explicitly, like this:
 ```scss
 @use '/assets/sass/protocol/includes/lib' with ($font-path: '/protocol/fonts');
 ```
+
 * To use the global namespace for protocol variables you will need to use the `as` keyword and assign to `*`:
 
 ```scss
 @use '../includes/lib' as *;
 ```
+
 * if you don't use `as` you would access variables and mixins from the file using the filename as a namespace:
 
 ```scss
@@ -52,6 +66,7 @@ stating variables explicitly, like this:
     margin: lib.$spacing-lg 0;
 }
 ```
+
 * For more information on the `@use` and `@forward` you can visit the [offical SCSS documentation](https://sass-lang.com/documentation/at-rules) or the usage page on the [Protocol documentation website](https://protocol.mozilla.org/docs/usage/overview.html)
 
 * This version also moves from using the `get-theme` function to using css custom properties. A future version of protocol will depreciate both the `get-theme` and `type-scale` functions.
@@ -65,6 +80,7 @@ stating variables explicitly, like this:
   line-height: type-scale('body-line-height');
 }
 ```
+
 * to this:
 * (Note: if you need to support legacy browsers, place the CSS custom properties in a `@supports` flag and use sass variables as a fall back. Legacy browsers will always be served the default theme.)
 
