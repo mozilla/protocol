@@ -71,17 +71,6 @@ describe('MzpNewsletter', function () {
                                     </label>
                                 </p>
                             </fieldset>
-                            <fieldset class="mzp-u-inline">
-                                <legend>Format</legend>
-                                <p>
-                                    <label for="format-html" class="mzp-u-inline">
-                                        <input type="radio" id="format-html" name="format" value="H" checked=""> HTML
-                                    </label>
-                                    <label for="format-text" class="mzp-u-inline">
-                                        <input type="radio" id="format-text" name="format" value="T"> Text
-                                    </label>
-                                </p>
-                            </fieldset>
                             <p>
                                 <label for="privacy" class="mzp-u-inline">
                                     <input type="checkbox" id="privacy" name="privacy"">
@@ -392,17 +381,12 @@ describe('MzpNewsletter', function () {
 
             const data1 = MzpNewsletter.serialize();
             expect(data1).toEqual(
-                'email=fox%40example.com&format=H&country=us&lang=en&source_url=https%3A%2F%2Fwww.mozilla.org%2Fen-US%2F&newsletters=mozilla-foundation%2Cmozilla-and-you'
+                'email=fox%40example.com&country=us&lang=en&source_url=https%3A%2F%2Fwww.mozilla.org%2Fen-US%2F&newsletters=mozilla-foundation%2Cmozilla-and-you'
             );
             document.getElementById('id_newsletters_0').click();
             const data2 = MzpNewsletter.serialize();
             expect(data2).toEqual(
-                'email=fox%40example.com&format=H&country=us&lang=en&source_url=https%3A%2F%2Fwww.mozilla.org%2Fen-US%2F&newsletters=mozilla-and-you'
-            );
-            document.getElementById('format-text').click();
-            const data3 = MzpNewsletter.serialize();
-            expect(data3).toEqual(
-                'email=fox%40example.com&format=T&country=us&lang=en&source_url=https%3A%2F%2Fwww.mozilla.org%2Fen-US%2F&newsletters=mozilla-and-you'
+                'email=fox%40example.com&country=us&lang=en&source_url=https%3A%2F%2Fwww.mozilla.org%2Fen-US%2F&newsletters=mozilla-and-you'
             );
         });
     });

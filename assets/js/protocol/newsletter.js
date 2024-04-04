@@ -179,9 +179,6 @@ const MzpNewsletter = {
             form.querySelector('input[type="email"]').value
         );
 
-        // Newsletter format
-        const format = form.querySelector('input[name="format"]:checked').value;
-
         // Country (optional form <select>)
         const countrySelect = form.querySelector('select[name="country"]');
         const country = countrySelect ? `&country=${countrySelect.value}` : '';
@@ -204,7 +201,7 @@ const MzpNewsletter = {
             form.querySelector('input[name="source_url"]').value
         );
 
-        return `email=${email}&format=${format}${country}&lang=${lang}&source_url=${sourceUrl}&newsletters=${newsletters}`;
+        return `email=${email}${country}&lang=${lang}&source_url=${sourceUrl}&newsletters=${newsletters}`;
     },
 
     validateFields: () => {
