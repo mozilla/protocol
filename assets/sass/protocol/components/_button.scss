@@ -291,3 +291,31 @@ a.mzp-c-button {
         text-decoration: underline;
     }
 }
+
+// * -------------------------------------------------------------------------- */
+// Icon
+
+.mzp-c-button-icon-start,
+.mzp-c-button-icon-end {
+    display: inline-block;
+    font-size: 1em;
+    height: 1em;
+    line-height: 1em;
+    vertical-align: baseline;
+    width: 1em;
+
+    img,
+    svg {
+        height: 100%;
+        margin-bottom: -0.15em;
+        width: 100%;
+    }
+}
+
+.mzp-c-button-icon-start {
+    @include bidi(((margin-right, 0.5ch, 0), (margin-left, 0, 0.5ch),));
+}
+
+.mzp-c-button-icon-end {
+    @include bidi(((margin-left, 0.5ch, 0), (margin-right, 0, 0.5ch),));
+}
