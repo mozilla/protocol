@@ -1,8 +1,13 @@
+# HEAD
+
+## Features
+* **component:** Add Firefox Klar wordmark for the Wordmark component
+
 # 19.1.0
 
 ## Features
 
-* **component** Remove the format option from Newsletter component (#926)
+* **component:** Remove the format option from Newsletter component (#926)
 * **component:** Allow an optional icon in buttons (#893)
 
 # 19.0.0
