@@ -5,6 +5,7 @@ Product classes:
 - `mzp-t-product-developer`
 - `mzp-t-product-nightly`
 - `mzp-t-product-focus`
+- `mzp-t-product-klar`
 - `mzp-t-product-lockwise`
 - `mzp-t-product-monitor`
 - `mzp-t-product-mozilla`
