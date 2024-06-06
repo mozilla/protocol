@@ -1,5 +1,7 @@
 # HEAD
 
+* **js:** Migrate ESLint to use flat config file (#906)
+
 ## Features
 * **component:** Add Firefox Klar wordmark for the Wordmark component
 

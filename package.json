@@ -17,11 +17,11 @@
     "build-docs": "npm ci && npm run lint && webpack --config webpack.docs.static.config.js --mode production && webpack --config webpack.docs.build.config.js --mode production && fractal build",
     "build-package": "npm ci && npm run lint && webpack --config webpack.package.static.config.js --mode production && webpack --config webpack.package.build.config.js --mode production",
     "lint": "npm run lint-js && npm run lint-css",
-    "lint-css": "./node_modules/.bin/stylelint \"**/*.scss\"",
-    "lint-js": "./node_modules/.bin/eslint .",
+    "lint-css": "npx stylelint \"**/*.scss\"",
+    "lint-js": "npx eslint .",
     "prepublishOnly": "npm run build-package",
     "start": "ENV=development fractal start --sync",
-    "test": "npm run lint && ./node_modules/.bin/karma start ./tests/karma.conf.js",
+    "test": "npm run lint && npx karma start ./tests/karma.conf.js",
     "webpack": "npm run lint && webpack --config webpack.docs.static.config.js --mode development && webpack --config webpack.docs.build.config.js --watch --mode development"
   },
   "dependencies": {
