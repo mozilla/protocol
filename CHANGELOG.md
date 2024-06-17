@@ -1,9 +1,8 @@
-# HEAD
-
-* **js:** Migrate ESLint to use flat config file (#906)
+# 19.2.0
 
 ## Features
-* **component:** Add Firefox Klar wordmark for the Wordmark component
+* **component:** Add Firefox Klar wordmark for the Wordmark component (#932)
+* **js:** Migrate ESLint to use flat config file (#906)
 
 # 19.1.0
 
