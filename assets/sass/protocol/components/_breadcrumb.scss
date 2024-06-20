@@ -6,10 +6,12 @@
 
 .mzp-c-breadcrumb {
     background-color: $background-color-secondary;
+    padding: $spacing-sm 0;
 
     .mzp-c-breadcrumb-list {
-        margin-bottom: 0;
-        padding: $spacing-sm $spacing-md;
+        max-width: $content-max;
+        margin: 0 auto;
+        padding: 0 $h-grid-xs;
 
         .mzp-c-breadcrumb-item {
             display: inline-block;
@@ -32,11 +34,15 @@
         }
 
         @media #{$mq-md} {
-            padding: $spacing-sm $layout-sm;
+            padding: 0 $h-grid-md;
         }
 
         @media #{$mq-lg} {
             padding: $spacing-sm $layout-xl - $spacing-md;
+        }
+
+        @media #{$mq-xl} {
+            padding: 0 $h-grid-xl;
         }
     }
 
