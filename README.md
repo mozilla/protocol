@@ -157,7 +157,7 @@ are available.
 1. Push your branch to the `demo1` or `demo2` branches e.g.
     `git push -f origin my-branch-name:demo1`
 2. Your branch will be published:
-  - https://demo1--mozilla-protocol.netlify.com/
-  - https://demo2--mozilla-protocol.netlify.com/
+  - https://demo1--mozilla-protocol.netlify.app/
+  - https://demo2--mozilla-protocol.netlify.app/
 
 A notice will be posted in #www-notify on Slack when the push has completed.
