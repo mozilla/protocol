@@ -72,7 +72,7 @@ const testingGlobals = {
 module.exports = [
     js.configs.recommended,
     {
-        ignores: ['dist/**/*.js', 'package/**/*.js', 'static/**/*.js', 'theme/static/**/*.js']
+        ignores: ['dist/**/*.js', 'package/**/*.js', 'static/**/*.js', 'theme/static/**/*.js', 'tests/dist/**/*.js'],
     },
     {
         files: ['assets/js/**/*.js'],
@@ -122,7 +122,8 @@ module.exports = [
             'webpack.docs.static.config.js',
             'webpack.entrypoints.js',
             'webpack.package.build.config.js',
-            'webpack.package.static.config.js'
+            'webpack.package.static.config.js',
+            'webpack.test.config.js'
         ],
         languageOptions: {
             ecmaVersion: 'latest',
