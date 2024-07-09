@@ -1,6 +1,6 @@
 ---
 name: Component Change Request
-about: If you would like to add or modify a component in Protocol, use this template
+about: If you would like to modify a component in Protocol, use this template
 title: "Component Change Request"
 labels: "Component Change Request"
 assignees: ''
