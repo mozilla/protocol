@@ -358,7 +358,7 @@ select {
 
     &:disabled,
     &[aria-disabled='true'] {
-        background-image: $url-image-arrow-down-disabled, forms.$select-bg-disabled;
+        background-image: $url-image-arrow-down-form, forms.$select-bg-disabled;
         border-color: forms.$field-border-color-disabled;
         color: forms.$form-inactive;
 
