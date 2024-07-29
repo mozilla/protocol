@@ -3,6 +3,9 @@
 ## Features
 * **js:** Migrate tests from Karma to Jasmine browser runner (#899)
 
+## Bug Fixes
+* **css:** Form select elements don't match styling when disabled (#885)
+
 # 19.2.0
 
 ## Features
