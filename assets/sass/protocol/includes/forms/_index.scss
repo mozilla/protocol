@@ -15,13 +15,16 @@
 // colors
 $form-red: #d70022;
 $form-text: $body-text-color-secondary;
+$form-inactive: $color-marketing-gray-70;
 
 // fields
 $field-border-color: $color-marketing-gray-50;
 $field-border-color-hover: $color-link-hover;
+$field-border-color-focus: $color-link;
 $field-border-color-error: $form-red;
 $field-border-color-error-hover: $color-red-80;
 $field-border-color-disabled: $color-marketing-gray-30;
+$field-border-color-disabled-focus: $color-marketing-gray-80;
 $field-border: 2px solid $field-border-color;
 $field-min-width: $content-xs - ($layout-xs * 2);
 $field-border-radius: $border-radius-sm;
