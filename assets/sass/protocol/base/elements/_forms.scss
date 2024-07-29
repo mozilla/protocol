@@ -133,7 +133,7 @@ input[type='url'] {
     @include forms.form-input;
 
     &::placeholder {
-        color: $color-marketing-gray-70;
+        color: forms.$form-inactive;
     }
 
     &:hover {
@@ -142,7 +142,7 @@ input[type='url'] {
 
     &:focus {
         outline: none;
-        border-color: $color-link;
+        border-color: forms.$field-border-color-focus;
         box-shadow: forms.$field-focus-ring;
 
         .mzp-t-dark & {
@@ -167,11 +167,11 @@ input[type='url'] {
     &:disabled,
     &[aria-disabled='true'] {
         background: $color-marketing-gray-10;
-        border-color: $color-marketing-gray-30;
-        color: $color-marketing-gray-70;
+        border-color: forms.$field-border-color-disabled;
+        color: forms.$form-inactive;
 
         &:focus {
-            border-color: $color-marketing-gray-80;
+            border-color: forms.$field-border-color-disabled-focus;
         }
     }
 }
@@ -255,7 +255,7 @@ input[type='file'] {
     }
 
     &:focus {
-        border-color: $color-link;
+        border-color: forms.$field-border-color-focus;
         box-shadow: forms.$field-focus-ring;
         outline: none;
     }
@@ -276,12 +276,12 @@ input[type='file'] {
 
     &:disabled,
     &[aria-disabled='true'] {
-        background: $color-marketing-gray-30;
-        border-color: $color-marketing-gray-30;
-        color: $color-marketing-gray-70;
+        background: forms.$field-border-color-disabled;
+        border-color: forms.$field-border-color-disabled;
+        color: forms.$form-inactive;
 
         &:focus {
-            border-color: $color-marketing-gray-80;
+            border-color: forms.$field-border-color-disabled-focus;
         }
     }
 }
@@ -331,7 +331,7 @@ select {
     }
 
     &:focus {
-        border-color: $color-link;
+        border-color: forms.$field-border-color-focus;
         background-image: $url-image-arrow-down-link, forms.$select-bg;
         box-shadow: forms.$field-focus-ring;
         color: #222;
@@ -359,15 +359,15 @@ select {
     &:disabled,
     &[aria-disabled='true'] {
         background-image: $url-image-arrow-down-disabled, forms.$select-bg-disabled;
-        border-color: $color-marketing-gray-30;
-        color: $color-marketing-gray-70;
+        border-color: forms.$field-border-color-disabled;
+        color: forms.$form-inactive;
 
         &:hover {
-            border-color: $color-marketing-gray-30;
+            border-color: forms.$field-border-color-disabled;
         }
 
         &:focus {
-            border-color: $color-marketing-gray-80;
+            border-color: forms.$field-border-color-disabled-focus;
         }
     }
 
