@@ -87,12 +87,12 @@
   to = "/components/detail/details"
 
 [[redirects]]
-  from = "patterns/molecules/download-button*"
+  from = "/patterns/molecules/download-button*"
   to = "/components/detail/download-button"
 
 [[redirects]]
   from = "/patterns/molecules/emphasis-box*"
-  to = "components/detail/emphasis-box"
+  to = "/components/detail/emphasis-box"
 
 [[redirects]]
   from = "/patterns/molecules/feature-card*"
@@ -112,11 +112,11 @@
 
 [[redirects]]
   from = "/patterns/molecules/menu*"
-  to = "components/detail/menu"
+  to = "/components/detail/menu"
 
 [[redirects]]
   from = "/patterns/molecules/notification-bar*"
-  to = "components/detail/notification-bar"
+  to = "/components/detail/notification-bar"
 
 [[redirects]]
   from = "/patterns/molecules/picto-card*"
@@ -145,7 +145,7 @@
 
 [[redirects]]
   from = "/patterns/organisms/call-out*"
-  to = "components/detail/callout"
+  to = "/components/detail/callout"
 
 [[redirects]]
   from = "/components/detail/compact-call-out*"
@@ -157,7 +157,7 @@
 
 [[redirects]]
   from = "/patterns/organisms/footer*"
-  to = "components/detail/footer"
+  to = "/components/detail/footer"
 
 [[redirects]]
   from = "/patterns/organisms/modal*"
