@@ -50,7 +50,7 @@
   "devDependencies": {
     "eslint": "^9.6.0",
     "jasmine-browser-runner": "^2.5.0",
-    "jasmine-core": "^5.1.2",
+    "jasmine-core": "^5.2.0",
     "sinon": "^18.0.0",
     "stylelint": "^15.11.0",
     "stylelint-config-standard-scss": "^11.0.0"
