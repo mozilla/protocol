@@ -39,7 +39,7 @@
 # Components - Atoms
 [[redirects]]
   from = "/patterns/atoms/typographic*"
-  to = "/"
+  to = "/docs/fundamentals/typography#type-scale"
 
 [[redirects]]
   from = "/patterns/atoms/buttons*"
@@ -87,21 +87,20 @@
   to = "/components/detail/details"
 
 [[redirects]]
-  from = "patterns/molecules/download-button*"
+  from = "/patterns/molecules/download-button*"
   to = "/components/detail/download-button"
 
 [[redirects]]
   from = "/patterns/molecules/emphasis-box*"
-  to = "components/detail/emphasis-box"
+  to = "/components/detail/emphasis-box"
 
 [[redirects]]
   from = "/patterns/molecules/feature-card*"
   to = "/components/detail/feature-card"
 
-# not sure where this should go to?
 [[redirects]]
   from = "/patterns/molecules/forms*"
-  to = "/components/detail/input"
+  to = "/components/detail/example-form"
 
 [[redirects]]
   from = "/patterns/molecules/language-switcher*"
@@ -113,13 +112,12 @@
 
 [[redirects]]
   from = "/patterns/molecules/menu*"
-  to = "components/detail/menu"
+  to = "/components/detail/menu"
 
 [[redirects]]
   from = "/patterns/molecules/notification-bar*"
-  to = "components/detail/notification-bar"
+  to = "/components/detail/notification-bar"
 
-# deprecated
 [[redirects]]
   from = "/patterns/molecules/picto-card*"
   to = "/components/detail/picto"
@@ -147,20 +145,19 @@
 
 [[redirects]]
   from = "/patterns/organisms/call-out*"
-  to = "components/detail/callout"
+  to = "/components/detail/callout"
 
 [[redirects]]
   from = "/components/detail/compact-call-out*"
   to = "/components/detail/callout--compact"
 
 [[redirects]]
-  from = "/patterns/organisms/footer*"
-  to = "components/detail/footer"
-
-# depreciated
-[[redirects]]
   from = "/patterns/organisms/hero*"
-  to = "/components/detail/hero"
+  to = "/components/detail/callout"
+
+[[redirects]]
+  from = "/patterns/organisms/footer*"
+  to = "/components/detail/footer"
 
 [[redirects]]
   from = "/patterns/organisms/modal*"
@@ -196,12 +193,12 @@
   to = "/components/detail/content-container"
 
 [[redirects]]
-  from = "/patterns/templates/forms*"
-  to = "/components/detail/input"
-
-[[redirects]]
   from = "/patterns/templates/main-with-sidebar*"
   to = "/components/detail/main-with-sidebar"
+
+[[redirects]]
+  from = "/patterns/templates/forms*"
+  to = "/components/detail/example-form"
 
 # Other stuff
 [[redirects]]
