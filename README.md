@@ -17,14 +17,15 @@ Mozillians) or in #protocol-design-system on [Matrix](https://chat.mozilla.org/)
 (open to the public). Also feel free to
 [file an issue on GitHub](https://github.com/mozilla/protocol/issues).
 
-![Current npm package version.](https://img.shields.io/npm/v/@mozilla-protocol/core)
-![Total downloads on npm.](https://img.shields.io/npm/dt/@mozilla-protocol/core)
-![Pull requests welcome!](https://img.shields.io/badge/PRs-welcome-brightgreen)
+[![Current npm package version.](https://img.shields.io/npm/v/@mozilla-protocol/core)](https://www.npmjs.com/package/@mozilla-protocol/core)
+[![Total downloads on npm.](https://img.shields.io/npm/dt/@mozilla-protocol/core)](https://github.com/mozilla/protocol/releases)
+[![Pull requests welcome!](https://img.shields.io/badge/PRs-welcome-93c?logo=github
+)](https://protocol.mozilla.org/docs/contributing/overview)
 
 ## Getting Started
 
 Protocol is built on the [Node.js](https://nodejs.org/) platform and published
-to [NPM](https://www.npmjs.com/), so be sure to have both installed before
+to [NPM](https://www.npmjs.com/package/@mozilla-protocol/core), so be sure to have both installed before
 proceeding.
 
 ## Installation
