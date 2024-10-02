@@ -133,7 +133,7 @@ input[type='url'] {
     @include forms.form-input;
 
     &::placeholder {
-        color: $color-marketing-gray-70;
+        color: forms.$form-inactive;
     }
 
     &:hover {
@@ -142,7 +142,7 @@ input[type='url'] {
 
     &:focus {
         outline: none;
-        border-color: $color-link;
+        border-color: forms.$field-border-color-focus;
         box-shadow: forms.$field-focus-ring;
 
         .mzp-t-dark & {
@@ -167,11 +167,11 @@ input[type='url'] {
     &:disabled,
     &[aria-disabled='true'] {
         background: $color-marketing-gray-10;
-        border-color: $color-marketing-gray-30;
-        color: $color-marketing-gray-70;
+        border-color: forms.$field-border-color-disabled;
+        color: forms.$form-inactive;
 
         &:focus {
-            border-color: $color-marketing-gray-80;
+            border-color: forms.$field-border-color-disabled-focus;
         }
     }
 }
@@ -255,7 +255,7 @@ input[type='file'] {
     }
 
     &:focus {
-        border-color: $color-link;
+        border-color: forms.$field-border-color-focus;
         box-shadow: forms.$field-focus-ring;
         outline: none;
     }
@@ -276,12 +276,12 @@ input[type='file'] {
 
     &:disabled,
     &[aria-disabled='true'] {
-        background: $color-marketing-gray-30;
-        border-color: $color-marketing-gray-30;
-        color: $color-marketing-gray-70;
+        background: forms.$field-border-color-disabled;
+        border-color: forms.$field-border-color-disabled;
+        color: forms.$form-inactive;
 
         &:focus {
-            border-color: $color-marketing-gray-80;
+            border-color: forms.$field-border-color-disabled-focus;
         }
     }
 }
@@ -331,7 +331,7 @@ select {
     }
 
     &:focus {
-        border-color: $color-link;
+        border-color: forms.$field-border-color-focus;
         background-image: $url-image-arrow-down-link, forms.$select-bg;
         box-shadow: forms.$field-focus-ring;
         color: #222;
@@ -358,19 +358,16 @@ select {
 
     &:disabled,
     &[aria-disabled='true'] {
-        /* stylelint-disable declaration-colon-newline-after */
-        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-            forms.$select-bg-disabled;
-        /* stylelint-enable declaration-colon-newline-after */
-        border-color: $color-marketing-gray-30;
-        color: $color-marketing-gray-70;
+        background-image: $url-image-arrow-down-form, forms.$select-bg-disabled;
+        border-color: forms.$field-border-color-disabled;
+        color: forms.$form-inactive;
 
         &:hover {
-            border-color: $color-marketing-gray-30;
+            border-color: forms.$field-border-color-disabled;
         }
 
         &:focus {
-            border-color: $color-marketing-gray-80;
+            border-color: forms.$field-border-color-disabled-focus;
         }
     }
 
