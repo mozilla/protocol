@@ -27,7 +27,7 @@
     "webpack": "npm run lint && webpack --config webpack.docs.static.config.js --mode development && webpack --config webpack.docs.build.config.js --watch --mode development"
   },
   "dependencies": {
-    "@babel/core": "^7.25.2",
+    "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.24.7",
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
