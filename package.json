@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-env": "^7.26.0",
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
     "@frctl/nunjucks": "^2.0.15",
