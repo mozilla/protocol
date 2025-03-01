@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "eslint": "^9.19.0",
-    "jasmine-browser-runner": "^2.5.0",
+    "jasmine-browser-runner": "^3.0.0",
     "jasmine-core": "^5.5.0",
     "sinon": "^19.0.2",
     "stylelint": "^15.11.0",
