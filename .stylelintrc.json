@@ -16,7 +16,6 @@
                 "ignoreFunctions": ["local"]
             }
         ],
-        "max-line-length": null,
         "declaration-block-no-redundant-longhand-properties": [
             true,
             {
