@@ -1,6 +1,11 @@
 # HEAD
 
 ## Features
+* **assets:** upgrade font Inter to version 4.1, add new Inter variable font (bedrock #15999)
+
+# 19.2.1
+
+## Features
 * **js:** Migrate tests from Karma to Jasmine browser runner (#899)
 
 # 19.2.0
