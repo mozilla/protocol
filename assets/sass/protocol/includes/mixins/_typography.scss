@@ -14,8 +14,12 @@
     font-family: tokens.$font-stack-base;
 }
 
-@mixin font-mozilla {
-    font-family: tokens.$font-stack-mozilla;
+@mixin font-mozilla-text {
+    font-family: tokens.$font-stack-mozilla-text;
+}
+
+@mixin font-mozilla-headline {
+    font-family: tokens.$font-stack-mozilla-headline;
 }
 
 @mixin font-firefox {
