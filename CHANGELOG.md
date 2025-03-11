@@ -1,6 +1,7 @@
 # HEAD
 
 ## Features
+* **assets:** Upgrade Inter font to version 4.1 (bedrock #15999)
 
 ## Bug Fixes
 
@@ -14,6 +15,7 @@
 
 ## Features
 * **js:** Migrate tests from Karma to Jasmine browser runner (#899)
+
 
 ## Bug Fixes
 * **css:** Form select elements don't match styling when disabled (#885)
