@@ -3,10 +3,10 @@ title: Typography
 ---
 
 ## Typefaces
-Protocol comes with three fonts: Zilla Slab, Metropolis, and Inter.
+Protocol comes with four fonts: Mozilla Headline, Mozilla Text, Metropolis, and Inter.
 
-Mozilla branded websites use Zilla Slab for titles and Inter for body text. Don’t
-use Zilla Slab for body text.
+Mozilla branded websites use Mozilla Headline for titles and Mozilla Text for body text. Don’t
+use Mozilla Headline for body text.
 
 Firefox branded websites use Metropolis for titles and Inter for body text. Don’t
 use Metropolis for body text.
@@ -14,7 +14,7 @@ use Metropolis for body text.
 ### Inter
 
 Inter is an open source, sans-serif font designed by [Rasmus Andersson](https://rsms.me/inter/).
-This is our standard type face for body copy in both Firefox and Mozilla brands.
+This is our standard type face for body copy in Firefox and is used as fallback font in Mozilla brands.
 If you need to declare it specifically (such as to override some other inherited
 font) you can use the mixin `@include font-base;`.
 
@@ -30,28 +30,29 @@ font) you can use the mixin `@include font-base;`.
   {{ specimens.math }}
 </figure>
 
-### Zilla Slab</h3>
+### Mozilla
 
-Zilla Slab is our custom typeface for the Mozilla brand. We use it for our wordmark
-and as a display font for headlines on Mozilla branded sites. It’s a contemporary
-slab serif based on Typotheque’s Tesla. Zilla Slab is a free, open source font
-available for download.
+Mozilla Headline and Mozilla Text are our custom typefaces for the Mozilla brand. This typeface font family features a unique uniwidth design. It maintains standardized spacing and kerning across all weights and styles, eliminating risk of text reflow to preserve the integrity of the layout and enhance the user's experience. [Read more about Mozilla's rebrand here](https://blog.mozilla.org/en/mozilla/mozilla-brand-next-era-of-tech/)
 
-Zilla Slab is primarily a display font and should only be used on large text like
-headings. As a general rule, type set in Zilla Slab should stand out. Avoid
-stacking two sizes of Zilla Slab one on top of the other. Pair headings in Zilla
-Slab with subheadings in Inter.
+You can declare Mozilla Headline explicitly with the mixin `@include font-mozilla-headline;`.
 
-You can declare Zilla Slab explicitly with the mixin `@include font-mozilla;`.
+You can declare Mozilla Text explicitly with the mixin `@include font-mozilla-headline;`.
 
-Don’t italicize Zilla Slab. Protocol only includes regular and bold versions of
-this font.
+#### Mozilla Headline
 
-* [Download from Github](https://github.com/mozilla/zilla-slab/releases/latest)
-* [Use on Google Fonts](https://fonts.google.com/specimen/Zilla+Slab)
+<figure id="specimen-mozilla-headline" class="docs-specimen docs-specimen-font">
+  <strong>{{ specimens.alphabet }}</strong>
+  {{ specimens.alphabet }}
+  {{ specimens.characters }}
+  {{ specimens.digits }}
+  {{ specimens.punctuation }}
+  {{ specimens.special }}
+  {{ specimens.math }}
+</figure>
 
+#### Mozilla Text
 
-<figure id="specimen-zilla-slab" class="docs-specimen docs-specimen-font">
+<figure id="specimen-mozilla-text" class="docs-specimen docs-specimen-font">
   <strong>{{ specimens.alphabet }}</strong>
   {{ specimens.alphabet }}
   {{ specimens.characters }}
@@ -124,9 +125,9 @@ for main body copy.
 ### Themes
 
 Protocol includes different branded themes for Mozilla and Firefox, and each theme
-uses different fonts with a slightly altered scale. Titles set in Zilla Slab for
+uses different fonts with a slightly altered scale. Titles set in Mozilla Headline for
 the Mozilla brand are slightly larger than their Firefox equivalents, adjusting
-for Zilla Slab being overall a smaller display font.
+for Mozilla Headline being overall a smaller display font.
 
 ### Condensed Type Scale
 
