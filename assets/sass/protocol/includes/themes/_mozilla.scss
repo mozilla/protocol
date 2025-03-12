@@ -10,6 +10,10 @@
     --body-font-family: #{tokens.$font-stack-mozilla-text};
     --button-font-family: #{tokens.$font-stack-mozilla-text};
     --title-font-family: #{tokens.$font-stack-mozilla-headline};
+    --title-font-ligatures: none;
+    --body-font-ligatures: none;
+    --title-font-weight: 600;
+    --title-letter-spacing: -0.01em;
 
     // colors
     --background-color-tertiary-inverse: #{tokens.$color-dark-gray-40};
@@ -37,27 +41,27 @@
 %mozilla-type-scale {
     // type scale
     --title-2xl-size: 4.75rem;
-    --title-2xl-line-height: 1;
+    --title-2xl-line-height: 1.1;
     --title-xl-size: 4.125rem;
-    --title-xl-line-height: 1;
+    --title-xl-line-height: 1.1;
     --title-lg-size: 3.5rem;
-    --title-lg-line-height: 1;
+    --title-lg-line-height: 1.1;
     --title-md-size: 3rem;
-    --title-md-line-height: 1;
+    --title-md-line-height: 1.1;
     --title-sm-size: 2.375rem;
-    --title-sm-line-height: 1.05;
+    --title-sm-line-height: 1.1;
     --title-xs-size: 1.75rem;
-    --title-xs-line-height: 1.07;
+    --title-xs-line-height: 1.1;
     --title-2xs-size: 1.5rem;
-    --title-2xs-line-height: 1.08;
+    --title-2xs-line-height: 1.1;
     --title-3xs-size: 1.125rem;
-    --title-3xs-line-height: 1.11;
+    --title-3xs-line-height: 1.1;
     --body-xl-size: 1.313rem;
     --body-lg-size: 1.125rem;
     --body-md-size: 1rem;
     --body-sm-size: 0.875rem;
     --body-xs-size: 0.75rem;
-    --body-line-height: 1.5;
+    --body-line-height: 1.2;
 }
 
 %mozilla-type-scale-condensed {
@@ -82,5 +86,5 @@
     --body-md-size: 0.875rem;
     --body-sm-size: 0.75rem;
     --body-xs-size: 0.688rem;
-    --body-line-height: 1.5;
+    --body-line-height: 1.2;
 }

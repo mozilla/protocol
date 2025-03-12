@@ -23,6 +23,9 @@ h6 {
 
     @supports (--css: variables) {
         font-family: var(--title-font-family);
+        font-variant-ligatures: var(--title-font-ligatures);
+        font-weight: var(--title-font-weight);
+        letter-spacing: var(--title-letter-spacing);
         color: var(--title-text-color);
 
         .mzp-t-dark & {
