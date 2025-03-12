@@ -1,13 +1,14 @@
 # HEAD
 
 ## Features
+* **fonts:** (breaking) Adds rebrand fonts, Mozilla Headline and Mozilla Text. Removes outdated Mozilla Brand font, Zilla Slab.
+* **js:** Migrate tests from Karma to Jasmine browser runner (#899)
 
 ## Bug Fixes
-
 * **assets:** Update @mozilla-protocol/assets to 5.4.0
 
 ## Migration Tips
-
+* **fonts:** Any use of `font-mozilla` mixin should be replaced with `font-mozilla-headline`
 * See notes for [Protocol Assets 5.4.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#540)
 
 # 19.3.0
