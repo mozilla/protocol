@@ -23,3 +23,12 @@
         url('#{config.$font-path}/mozilla-headline/MozillaHeadline-SemiBold.woff2') format('woff2'),
         url('#{config.$font-path}/mozilla-headline/MozillaHeadline-SemiBold.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'Headline-adjusted Inter';
+    src: local("Inter");
+    ascent-override: 90%;
+    descent-override: 30%;
+    line-gap-override: 0%;
+    size-adjust: 115.96%;
+  }
