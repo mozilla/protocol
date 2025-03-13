@@ -1,4 +1,4 @@
-# HEAD
+# 19.3.0
 
 ## Features
 * **js:** Migrate tests from Karma to Jasmine browser runner (#899)
