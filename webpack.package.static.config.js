@@ -34,7 +34,7 @@ module.exports = {
                         // This is required so that _lib.scss can load the tokens package
                         // using a relative @import, as opposed to the main Protocol package
                         // needing to distribute its own set of node_modules dependencies.
-                        return content.toString().replace('./node_modules/@mozilla-protocol/', '');
+                        return content.toString().replace('~@mozilla-protocol/', '');
                     }
                 },
                 {

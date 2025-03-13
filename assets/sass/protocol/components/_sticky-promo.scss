@@ -86,7 +86,7 @@ $logos: (
             @include background-size(auto 40px);
             background-position: top left;
             background-repeat: no-repeat;
-            padding: (40px + $spacing-lg) 0 0 0;
+            padding: (40px + $spacing-lg) 0 0;
         }
     }
 }

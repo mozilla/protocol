@@ -1,0 +1,22 @@
+name: Publish docs
+
+on:
+  release:
+    types:
+      - published
+
+permissions:
+  contents: write
+
+jobs:
+  publish-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Push prod
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git push origin ${GITHUB_SHA}:prod
