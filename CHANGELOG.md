@@ -4,6 +4,7 @@
 * **js:** Migrate tests from Karma to Jasmine browser runner (#899)
 
 ## Bug Fixes
+* **css:** Form select elements don't match styling when disabled (#885)
 * **css:** Modal close button pointer overridden by defaults (#955)
 
 # 19.2.0
