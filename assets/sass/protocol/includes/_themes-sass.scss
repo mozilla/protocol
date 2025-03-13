@@ -25,9 +25,9 @@ $v-grid-xl: tokens.$layout-xl;
 $h-grid-xl: 80px;
 
 // fonts
-$body-font-family: tokens.$font-stack-base;
-$button-font-family: tokens.$font-stack-base;
-$title-font-family: tokens.$font-stack-mozilla;
+$body-font-family: tokens.$font-stack-mozilla-text;
+$button-font-family: tokens.$font-stack-mozilla-text;
+$title-font-family: tokens.$font-stack-mozilla-headline;
 
 // colors
 $background-color-tertiary-inverse: tokens.$color-dark-gray-40;
@@ -105,9 +105,9 @@ $theme-fonts-firefox: (
     title-font-family: tokens.$font-stack-firefox,
 );
 $theme-fonts-mozilla: (
-    body-font-family: tokens.$font-stack-base,
-    button-font-family: tokens.$font-stack-base,
-    title-font-family: tokens.$font-stack-mozilla,
+    body-font-family: tokens.$font-stack-mozilla-text,
+    button-font-family: tokens.$font-stack-mozilla-text,
+    title-font-family: tokens.$font-stack-mozilla-headline,
 );
 
 // * -------------------------------------------------------------------------- */
