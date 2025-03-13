@@ -73,7 +73,6 @@ html.mzp-is-noscroll {
 
 .mzp-c-modal-close {
     @include bidi(((right, $spacing-sm, left, auto),));
-    cursor: pointer;
     position: absolute;
     top: 9px;
     z-index: 99;
@@ -88,6 +87,7 @@ html.mzp-is-noscroll {
         min-width: 0;
         padding: 0;
         width: 42px;
+        cursor: pointer;
 
         &:hover,
         &:focus {

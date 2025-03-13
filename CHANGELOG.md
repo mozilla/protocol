@@ -3,6 +3,9 @@
 ## Features
 * **js:** Migrate tests from Karma to Jasmine browser runner (#899)
 
+## Bug Fixes
+* **css:** Modal close button pointer overridden by defaults (#955)
+
 # 19.2.0
 
 ## Features
