@@ -9,9 +9,7 @@
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    src:
-        url('#{config.$font-path}/Inter-Regular.woff2') format('woff2'),
-        url('#{config.$font-path}/Inter-Regular.woff') format('woff');
+    src: url('#{config.$font-path}/Inter-Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -19,9 +17,7 @@
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
-    src:
-        url('#{config.$font-path}/Inter-Bold.woff2') format('woff2'),
-        url('#{config.$font-path}/Inter-Bold.woff') format('woff');
+    src: url('#{config.$font-path}/Inter-Bold.woff2') format('woff2');
 }
 
 @font-face {
@@ -29,9 +25,7 @@
     font-family: Inter;
     font-style: italic;
     font-weight: normal;
-    src:
-        url('#{config.$font-path}/Inter-Italic.woff2') format('woff2'),
-        url('#{config.$font-path}/Inter-Italic.woff') format('woff');
+    src: url('#{config.$font-path}/Inter-Italic.woff2') format('woff2');
 }
 
 @font-face {
@@ -39,7 +33,5 @@
     font-family: Inter;
     font-style: italic;
     font-weight: bold;
-    src:
-        url('#{config.$font-path}/Inter-BoldItalic.woff2') format('woff2'),
-        url('#{config.$font-path}/Inter-BoldItalic.woff') format('woff');
+    src: url('#{config.$font-path}/Inter-BoldItalic.woff2') format('woff2');
 }
