@@ -3,7 +3,7 @@ title: Contributing to Protocol
 label: Overview
 ---
 
-Protocol, like everything else Mozilla makes, is [open source](https://developer.mozilla.org/docs/Mozilla/Developer_guide/Introduction).
+Protocol, like everything else Mozilla makes, is [open source](https://wiki.mozilla.org/Contribute).
 We welcome contributions from people like you. Yes, you, dear reader, can help us
 make Protocol better and more useful, no matter your skill level or area of interest.
 
@@ -125,7 +125,6 @@ reach the really good stuff but the top-level root folder looks something like:
 ```text
 protocol
 ├── assets (Sass, JavaScript, and font files; this is what gets published with the package)
-├── bin (scripts that deploy the site to the server)
 ├── components (the HTML components)
 ├── docs (documentation pages [including this one])
 ├── static (media assets for display on the Protocol website, but not part of Protocol itself)
@@ -146,10 +145,10 @@ CSS and JavaScript is in `assets` (we’ll do a deeper dive into that folder sho
 ## Component patterns
 
 The Protocol documentation uses [Fractal](https://fractal.build) and component
-templates are build with with [Nunjucks](https://mozilla.github.io/nunjucks/), a
+templates are built with [Nunjucks](https://mozilla.github.io/nunjucks/), a
 templating language that is mostly plain HTML with some added enhancements. Each
 component resides in its own Nunjucks template file (using the extension `.html`)
-along with a `readme.md` file (written in [Markown](https://daringfireball.net/projects/markdown/)
+along with a `readme.md` file (written in [Markdown](https://daringfireball.net/projects/markdown/)
 format) with notes and documentation for that component. Many have an accompanying
 configuration file written in [YAML](https://yaml.org/) providing
 [contextual data](https://fractal.build/guide/core-concepts/context-data.html)
@@ -217,10 +216,9 @@ sass/protocol
 │   ├── fonts
 │   ├── forms
 │   ├── mixins
+│   ├── themes
 │   ├── _functions.scss
-|   ├── _lib.scss
-|   ├── _mixins.scss
-│   └── _themes.scss
+│   └── _lib.scss
 ├── templates
 ├── protocol-components.scss
 └── protocol.scss
@@ -284,7 +282,7 @@ but if you’re not let’s dig a bit deeper.
 @import '../includes/lib';
 ```
 
-First, we import the Protocol library file with the decorator `@use`: `includes/_lib.scss`.
+First, we import the Protocol library file with `@use` directive: `includes/_lib.scss`.
 To learn more about `@use` and `@forward` read [this article](https://www.oddbird.net/2019/10/02/sass-modules/).
 Since that file is a Sass partial we don’t need the underscore prefix or the file extension, just
 referencing the relative path and filename is enough. That library file in turn
