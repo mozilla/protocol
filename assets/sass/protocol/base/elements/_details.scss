@@ -30,6 +30,10 @@ details .is-summary button[aria-expanded='true']::before,
     @include summary-open;
 }
 
+summary  {
+    cursor: pointer;
+}
+
 summary::-webkit-details-marker {
     display: none;
 }
