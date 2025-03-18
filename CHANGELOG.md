@@ -1,3 +1,15 @@
+# HEAD
+
+## Features
+
+## Bug Fixes
+
+* **assets:** Update @mozilla-protocol/assets to 5.4.0
+
+## Migration Tips
+
+* See notes for [Protocol Assets 5.4.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#540)
+
 # 19.3.0
 
 ## Features
