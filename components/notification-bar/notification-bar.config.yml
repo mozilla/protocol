@@ -19,7 +19,7 @@ variants:
     context:
       class: mzp-t-warning
       close_button: True
-      content: Warning! It's dangerous to go alone.
+      content: Warning! It’s <a href="#">dangerous</a> to go alone.
   - name: Error
     notes: Use the class `mzp-t-error` for a negative notification, to indicate
       an unsuccessful action. This example also features an action link.
