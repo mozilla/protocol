@@ -42,6 +42,10 @@
             color: inherit;
             text-decoration: none;
         }
+
+        &.mzp-c-notification-bar-cta {
+            margin: 0 $spacing-sm;
+        }
     }
 
     &.mzp-is-sticky {
