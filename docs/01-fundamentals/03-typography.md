@@ -5,8 +5,7 @@ title: Typography
 ## Typefaces
 Protocol comes with four fonts: Mozilla Headline, Mozilla Text, Metropolis, and Inter.
 
-Mozilla branded websites use Mozilla Headline for titles and Mozilla Text for body text. Don’t
-use Mozilla Headline for body text.
+Mozilla branded websites use Mozilla Headline for titles and Mozilla Text for body text. We recommend Mozilla Headline only for text over 24px (below should be Mozilla Text).
 
 Firefox branded websites use Metropolis for titles and Inter for body text. Don’t
 use Metropolis for body text.
