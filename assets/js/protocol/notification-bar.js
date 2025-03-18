@@ -32,7 +32,7 @@ MzpNotification.init = (origin, opts) => {
     }
 
     // Create new notification
-    const title = document.createTextNode(options.title);
+    const title = document.createTextNode(options.title + ' ');
     const className = (options && options.className) ? options.className : '';
     const closeText = (options && options.closeText) ? options.closeText : '';
     const isSticky = (options && options.isSticky) ? 'mzp-is-sticky' : '';
