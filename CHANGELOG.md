@@ -2,6 +2,8 @@
 
 ## Features
 
+* **css:** Apply hover cursor from Details component to Details element (#948)
+
 ## Bug Fixes
 
 * **assets:** Update @mozilla-protocol/assets to 5.4.0
