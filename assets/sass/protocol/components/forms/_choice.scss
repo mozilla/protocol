@@ -86,7 +86,7 @@
         &[type='checkbox'] + label::before,
         &[type='radio'] + label::before {
             @include bidi(((left, 0, right, auto),));
-            @include border-box;
+            box-sizing: border-box;
             background: $color-white;
             border-radius: 2px;
             border: forms.$field-border;
@@ -234,7 +234,7 @@
     }
 
     // high contrast mode
-    @media screen and (-ms-high-contrast: active) {
+     @media (forced-colors: active) {
         // use the built in form controls
         &[type='checkbox'],
         &[type='radio'] {

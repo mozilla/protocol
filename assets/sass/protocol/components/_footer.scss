@@ -37,8 +37,8 @@
 // Footer primary section, contains logo and sections with links
 
 .mzp-c-footer-primary {
+    box-sizing: border-box;
     margin: 0 auto $layout-sm;
-    @include border-box;
     @include clearfix;
     @include text-body-md;
 
@@ -59,7 +59,7 @@
 
     a {
         background: url('#{$image-path}/logos/mozilla/logo-lockup-hor-white.svg') no-repeat;
-        @include background-size(134px, 32px);
+        background-size: 134px, 32px;
         @include image-replaced;
         display: inline-block;
         height: 32px;
@@ -176,10 +176,9 @@
 
         button::before {
             background: $url-image-expand-white top left no-repeat;
-
-            @include background-size(24px, 24px);
+            background-size: 24px, 24px;
             @include bidi(((right, 8px, left, auto),));
-            @include transition(transform 100ms ease-in-out);
+            transition: transform 100ms ease-in-out;
             content: '';
             height: 24px;
             margin-top: -12px;
@@ -189,7 +188,7 @@
         }
 
         button[aria-expanded='true']::before {
-            @include transform(rotate(45deg));
+            transform: rotate(45deg);
         }
     }
 

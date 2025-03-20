@@ -8,7 +8,7 @@
 // Base card class
 
 .mzp-c-card {
-    @include border-box;
+    box-sizing: border-box;
     background: $color-white;
     margin-bottom: $spacing-lg;
 
@@ -40,7 +40,7 @@
     }
 
     .mzp-c-card-content {
-        @include border-box;
+        box-sizing: border-box;
         padding: $spacing-sm;
     }
 
@@ -103,12 +103,12 @@
         &:hover,
         &:active,
         &:focus {
-            @include transition(box-shadow 0.1s ease-in-out);
+            transition: box-shadow 0.1s ease-in-out;
             box-shadow: 0 0 0 4px $color-marketing-gray-20;
 
             .mzp-c-card-title,
             .mzp-c-card-cta-text {
-                @include transition(border-bottom-color 100ms ease-in-out);
+                transition: border-bottom-color 100ms ease-in-out;
                 border-bottom: 2px solid;
             }
         }

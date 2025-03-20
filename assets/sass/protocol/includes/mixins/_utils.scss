@@ -20,110 +20,6 @@
     }
 }
 
-// Mixins for CSS3 properties that still need prefixes in some browsers.
-@mixin transition($transition...) {
-    -webkit-transition: $transition;
-    transition: $transition;
-}
-
-@mixin transform($transform...) {
-    -webkit-transform: $transform;
-    transform: $transform;
-}
-
-@mixin transform-origin($transform-origin...) {
-    -webkit-transform-origin: $transform-origin;
-    transform-origin: $transform-origin;
-}
-
-@mixin transform-style($transform-style...) {
-    -webkit-transform-style: $transform-style;
-    transform-style: $transform-style;
-}
-
-// Extra mixins for fine-tuned transitions
-@mixin transition-property($transition-property...) {
-    -webkit-transition-property: $transition-property;
-    transition-property: $transition-property;
-}
-
-@mixin transition-duration($transition-duration...) {
-    -webkit-transition-duration: $transition-duration;
-    transition-duration: $transition-duration;
-}
-
-@mixin transition-timing-function($transition-timing-function...) {
-    -webkit-transition-timing-function: $transition-timing-function;
-    transition-timing-function: $transition-timing-function;
-}
-
-@mixin transition-delay($transition-delay...) {
-    -webkit-transition-delay: $transition-delay;
-    transition-delay: $transition-delay;
-}
-
-@mixin animation($parameters...) {
-    -webkit-animation: $parameters;
-    animation: $parameters;
-}
-
-@mixin border-box {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-@mixin flexbox {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-}
-
-@mixin flex($values: auto) {
-    -webkit-box-flex: $values;
-    -moz-box-flex: $values;
-    -webkit-flex: $values;
-    flex: $values;
-}
-
-@mixin flex-direction($value: column) {
-    -webkit-box-direction: $value;
-    flex-direction: $value;
-}
-
-@mixin flex-wrap($value: wrap) {
-    -ms-flex-wrap: $value;
-    flex-wrap: $value;
-}
-
-@mixin align-items($align: stretch) {
-    -webkit-box-align: $align;
-    align-items: $align;
-}
-
-@mixin justify-content($justify: flex-start) {
-    -webkit-box-pack: $justify;
-    justify-content: $justify;
-}
-
-@mixin background-size($sizes...) {
-    -webkit-background-size: $sizes;
-    background-size: $sizes;
-}
-
-@mixin box-decoration-break($value: slice) {
-    -webkit-box-decoration-break: $value;
-    box-decoration-break: $value;
-}
-
-@mixin appearance($value) {
-    -webkit-appearance: $value;
-    -moz-appearance: $value;
-    appearance: $value;
-}
-
 // Hide an element visually, but not from screen readers
 @mixin visually-hidden {
     border: 0;
@@ -143,13 +39,6 @@
     display: none;
 }
 
-// Inline block hack for pages that still need to support old IE.
-@mixin inline-block {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-}
-
 // not the most up to date method, but works in IE7
 @mixin image-replaced {
     direction: ltr;
@@ -162,7 +51,7 @@
 // Flip an element horizontally for RTL locales such as Arabic and Hebrew.
 // Usually applied to pseudo-elements with a background-image, not for text.
 @mixin flip-horizontally {
-    @include transform(scale(-1, 1));
+    transform: scale(-1, 1);
 }
 
 // Adds a right-pointing arrow after
@@ -178,29 +67,8 @@
     &::before {
         content: '\25B8\00A0'; // triangle+space
         white-space: nowrap;
-        @include transform(rotate(180deg));
+        transform: rotate(180deg);
     }
-}
-
-// Multiple columns
-@mixin multi-column($width: auto, $count: auto, $gap: normal) {
-    -webkit-columns: $width $count;
-    -moz-columns: $width $count;
-    columns: $width $count;
-    -webkit-column-gap: $gap;
-    -moz-column-gap: $gap;
-    column-gap: $gap;
-}
-
-@mixin multi-column-clear {
-    @include multi-column(auto, auto, normal);
-}
-
-@mixin multi-column-avoid-break {
-    page-break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-    -moz-column-break-inside: avoid;
-    break-inside: avoid;
 }
 
 // Preserve aspect ratio to prevent content jumping when media loads.
@@ -265,21 +133,4 @@
             color: tokens.$color-white;
         }
     }
-}
-
-// Mixins for CSS grid legacy prefixed properties
-// https://bugzilla.mozilla.org/show_bug.cgi?id=1398482
-@mixin grid-gap($value: inherit) {
-    grid-gap: $value;
-    gap: $value;
-}
-
-@mixin grid-row-gap($value: inherit) {
-    grid-row-gap: $value;
-    row-gap: $value;
-}
-
-@mixin grid-column-gap($value: inherit) {
-    grid-column-gap: $value;
-    column-gap: $value;
 }

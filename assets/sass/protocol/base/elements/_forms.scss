@@ -298,8 +298,8 @@ input[type='file'] {
 // with thanks to https://www.filamentgroup.com/lab/select-css.html
 
 select {
-    @include appearance(none);
-    @include border-box;
+    appearance: none;
+    box-sizing: border-box;
     @include bidi((
         (background-position, right 8px top 50%, left 8px top 50%),
         (padding, forms.$field-padding forms.$symbol-spacing forms.$field-padding forms.$field-padding, forms.$field-padding forms.$field-padding forms.$field-padding forms.$symbol-spacing),
