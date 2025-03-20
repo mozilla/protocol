@@ -84,7 +84,7 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
 }
 
 @mixin form-input() {
-    @include border-box;
+    box-sizing: border-box;
     @include text-body-md;
     background-color: $color-white;
     border-radius: $field-border-radius;
@@ -96,7 +96,7 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
 
 @mixin form-msg() {
     @include text-body-xs;
-    @include border-box;
+    box-sizing: border-box;
     background-color: $field-border-color-error-hover;
     border-radius: $border-radius-sm;
     box-shadow: $box-shadow-sm;

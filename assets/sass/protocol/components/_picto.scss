@@ -8,7 +8,7 @@
 // A small content block with a small image, usually an icon or spot illustration.
 
 .mzp-c-picto {
-    @include border-box;
+    box-sizing: border-box;
     margin: 0 auto $layout-md;
     max-width: $content-md;
 }

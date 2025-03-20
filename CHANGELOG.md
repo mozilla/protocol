@@ -2,6 +2,7 @@
 
 ## Features
 
+* **css:** (breaking) Remove support for vendor prefixing (#957)
 * **css:** Apply hover cursor from Details component to Details element (#948)
 
 ## Bug Fixes
@@ -10,6 +11,21 @@
 
 ## Migration Tips
 
+* This version removes mixins which added vendor-prefixes. Browser support for these is now excellent.
+  - One migration path is to edit your code to use the unprefixed versions.
+  - Another option is to move these utility mixins into your own code base (though, be aware they are
+    no longer used in Protocol and this will not give you backwards compatible Protocol components).
+  - If you need that level of vendor prefix support consider adding a tool such as
+    [autoprefixer](https://github.com/postcss/autoprefixer) to your code base.
+  - Affected mixins are:
+    - `animation`
+    - `appearance`
+    - `background-size`
+    - `box-decoration-break`
+    - `box-sizing`
+    - `flexbox`, `flex`, `flex-direction`, `flex-wrap`, `align-itmes`, `justify-content,`
+    - `transform`, `transform-origin`, `transform-style`
+    - `transition`, `transition-property`, `transition-duration`, `transition-delay`
 * See notes for [Protocol Assets 5.4.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#540)
 
 # 19.3.0
@@ -58,7 +74,7 @@
 * Update references to the `call-out` SCSS file to `callout` in any `@import` or `@use` rules.
   ** e.g. `@use 'components/call-out';` should change to `@use 'components/callout';`
 * The rebuilt Callout doesn't feature integrated brand logos. Use Logo and Wordmark components instead.
-* The rebuilt Compact Callout lacks an integrated logo, so it no longer positions the logo at one end of the component. A Logo or Wordmark component should appear in the body instead.
+* The rebuilt Compact Callout lacks an integrated logo`, `so it no longer positions the logo at one end of the component. A Logo or Wordmark component should appear in the body instead.
 * Convert any instances of the Hero component to either Split or Callout.
 * Convert any instances of the Picto Card component to Picto.
 

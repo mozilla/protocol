@@ -78,9 +78,9 @@
 
 .mzp-c-button, /* stylelint-disable-line no-duplicate-selectors */
 a.mzp-c-button {
-    @include border-box;
+    box-sizing: border-box;
     @include font-size(16px);
-    @include transition(background-color 100ms, box-shadow 100ms, color 100ms);
+    transition: background-color 100ms, box-shadow 100ms, color 100ms;
     border-radius: $border-radius-sm;
     border: 2px solid transparent;
     cursor: pointer;

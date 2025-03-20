@@ -5,7 +5,7 @@
 @use '../includes/lib' as *;
 
 .mzp-c-notification-bar {
-    @include border-box;
+    box-sizing: border-box;
     @include clearfix;
     @include text-body-sm;
     background-color: $color-marketing-gray-20;
