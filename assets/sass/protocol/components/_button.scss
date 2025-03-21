@@ -16,7 +16,7 @@
     border: 2px solid transparent;
     cursor: pointer;
     display: inline-block;
-    font-family: $button-font-family;
+    font-family: var(--button-font-family);
     font-weight: bold;
     line-height: $body-line-height;
     padding: $spacing-sm $spacing-md;
@@ -44,7 +44,7 @@
 
     @supports (--css: variables) {
         font-family: var(--button-font-family);
-        line-height: var(--body-line-height);
+        line-height: var(--token-body-line-height);
     }
 }
 

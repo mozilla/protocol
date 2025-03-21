@@ -18,7 +18,7 @@
 
     h4 {
         @include text-body-lg;
-        font-family: var(--body-font-family);
+        font-family: var(--token-body-font-family);
         margin-bottom: $layout-xs;
         margin-top: $layout-xs;
     }

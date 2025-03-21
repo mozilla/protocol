@@ -47,4 +47,38 @@
             @extend %firefox-type-scale-condensed;
         }
     }
+
+    --theme-title-font-family: var(--token-title-font-family);
+    --theme-title-line-height-2xl: var(--token-title-2xl-line-height);
+    --theme-title-line-height-xl: var(--token-title-xl-line-height);
+    --theme-title-line-height-lg: var(--token-title-lg-line-height);
+    --theme-title-line-height-md: var(--token-title-md-line-height);
+    --theme-title-line-height-sm: var(--token-title-sm-line-height);
+    --theme-title-line-height-xs: var(--token-title-xs-line-height);
+    --theme-title-line-height-2xs: var(--token-title-2xs-line-height);
+    --theme-title-line-height-3xs: var(--token-title-3xs-line-height);
+    --theme-title-font-size-2xl: var(--token-title-2xl-size);
+    --theme-title-font-size-xl: var(--token-title-xl-size);
+    --theme-title-font-size-lg: var(--token-title-lg-size);
+    --theme-title-font-size-md: var(--token-title-md-size);
+    --theme-title-font-size-sm: var(--token-title-sm-size);
+    --theme-title-font-size-xs: var(--token-title-xs-size);
+    --theme-title-font-size-2xs: var(--token-title-2xs-size);
+    --theme-title-font-size-3xs: var(--token-title-3xs-size);
+
+    --theme-body-font-family: var(--token-body-font-family);
+    --theme-body-line-height-2xl: var(--token-body-2xl-line-height);
+    --theme-body-line-height-xl: var(--token-body-xl-line-height);
+    --theme-body-line-height-lg: var(--token-body-lg-line-height);
+    --theme-body-line-height-md: var(--token-body-md-line-height);
+    --theme-body-line-height-sm: var(--token-body-sm-line-height);
+    --theme-body-line-height-xs: var(--token-body-xs-line-height);
+    --theme-body-line-height-2xs: var(--token-body-2xs-line-height);
+    --theme-body-font-size-2xl: var(--token-body-2xl-size);
+    --theme-body-font-size-xl: var(--token-body-xl-size);
+    --theme-body-font-size-lg: var(--token-body-lg-size);
+    --theme-body-font-size-md: var(--token-body-md-size);
+    --theme-body-font-size-sm: var(--token-body-sm-size);
+    --theme-body-font-size-xs: var(--token-body-xs-size);
+    --theme-body-font-size-2xs: var(--token-body-2xs-size);
 }

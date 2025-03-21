@@ -92,16 +92,16 @@ while using the Sass variable as a fall back.
 
     .mzp-c-my-component-title {
         color: $title-text-color;
-        font-family: $title-font-family;
+        font-family: var(--token-title-font-family);
     }
 
     @supports (--css: variables) {
         background-color: var(--background-color);
-        color: var(--body-text-color);
+        color: var(--token-body-text-color);
 
         .mzp-c-my-component-title {
-            color: var(--title-text-color);
-            font-family: var(--title-font-family);
+            color: var(--token-title-text-color);
+            font-family: var(--token-title-font-family);
         }
     }
 }

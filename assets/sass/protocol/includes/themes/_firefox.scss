@@ -6,9 +6,9 @@
 
 %firefox-theme {
     // fonts
-    --body-font-family: #{tokens.$font-stack-base};
+    --token-body-font-family: #{tokens.$font-stack-base};
     --button-font-family: #{tokens.$font-stack-firefox};
-    --title-font-family: #{tokens.$font-stack-firefox};
+    --token-title-font-family: #{tokens.$font-stack-firefox};
 
     // colors
     --background-color-tertiary-inverse: #{tokens.$color-ink-20};
@@ -17,67 +17,67 @@
     --background-color-secondary: #{tokens.$color-light-gray-10};
     --background-color-inverse: #{tokens.$color-ink-80};
     --background-color: #{tokens.$color-white};
-    --body-text-color-secondary-inverse: #{tokens.$color-marketing-gray-30};
-    --body-text-color-secondary: #{tokens.$color-marketing-gray-70};
-    --body-text-color-inverse: #{tokens.$color-white};
-    --body-text-color: #{tokens.$color-marketing-gray-80};
+    --token-body-text-color-secondary-inverse: #{tokens.$color-marketing-gray-30};
+    --token-body-text-color-secondary: #{tokens.$color-marketing-gray-70};
+    --token-body-text-color-inverse: #{tokens.$color-white};
+    --token-body-text-color: #{tokens.$color-marketing-gray-80};
     --link-color-hover-inverse: #{tokens.$color-blue-05};
     --link-color-hover: #{tokens.$color-link-hover};
     --link-color-inverse: #{tokens.$color-blue-10};
     --link-color-visited-inverse: #{tokens.$color-violet-10};
     --link-color-visited: #{tokens.$color-link-visited};
     --link-color: #{tokens.$color-link};
-    --title-text-color-inverse: #{tokens.$color-white};
-    --title-text-color: #{tokens.$color-marketing-gray-99};
+    --token-title-text-color-inverse: #{tokens.$color-white};
+    --token-title-text-color: #{tokens.$color-marketing-gray-99};
 }
 
 %firefox-type-scale {
     // typescale
-    --title-2xl-size: 4rem;
-    --title-2xl-line-height: 1.125;
-    --title-xl-size: 3.5rem;
-    --title-xl-line-height: 1.143;
-    --title-lg-size: 3rem;
-    --title-lg-line-height: 1.166;
-    --title-md-size: 2.5rem;
-    --title-md-line-height: 1.1;
-    --title-sm-size: 2rem;
-    --title-sm-line-height: 1.125;
-    --title-xs-size: 1.5rem;
-    --title-xs-line-height: 1.166;
-    --title-2xs-size: 1.25rem;
-    --title-2xs-line-height: 1.2;
-    --title-3xs-size: 1rem;
-    --title-3xs-line-height: 1.25;
-    --body-xl-size: 1.313rem;
-    --body-lg-size: 1.125rem;
-    --body-md-size: 1rem;
-    --body-sm-size: 0.875rem;
-    --body-xs-size: 0.75rem;
-    --body-line-height: 1.5;
+    --token-title-2xl-size: 4rem;
+    --token-title-2xl-line-height: 1.125;
+    --token-title-xl-size: 3.5rem;
+    --token-title-xl-line-height: 1.143;
+    --token-title-lg-size: 3rem;
+    --token-title-lg-line-height: 1.166;
+    --token-title-md-size: 2.5rem;
+    --token-title-md-line-height: 1.1;
+    --token-title-sm-size: 2rem;
+    --token-title-sm-line-height: 1.125;
+    --token-title-xs-size: 1.5rem;
+    --token-title-xs-line-height: 1.166;
+    --token-title-2xs-size: 1.25rem;
+    --token-title-2xs-line-height: 1.2;
+    --token-title-3xs-size: 1rem;
+    --token-title-3xs-line-height: 1.25;
+    --token-body-xl-size: 1.313rem;
+    --token-body-lg-size: 1.125rem;
+    --token-body-md-size: 1rem;
+    --token-body-sm-size: 0.875rem;
+    --token-body-xs-size: 0.75rem;
+    --token-body-line-height: 1.5;
 }
 
 %firefox-type-scale-condensed {
-    --title-2xl-size: 2rem;
-    --title-2xl-line-height: 1.125;
-    --title-xl-size: 1.5rem;
-    --title-xl-line-height: 1.166;
-    --title-lg-size: 1.313rem;
-    --title-lg-line-height: 1.2;
-    --title-md-size: 1.125rem;
-    --title-md-line-height: 1.2;
-    --title-sm-size: 1rem;
-    --title-sm-line-height: 1.25;
-    --title-xs-size: 0.875rem;
-    --title-xs-line-height: 1.25;
-    --title-2xs-size: 0.875rem;
-    --title-2xs-line-height: 1.25;
-    --title-3xs-size: 0.875rem;
-    --title-3xs-line-height: 1.25;
-    --body-xl-size: 1.125rem;
-    --body-lg-size: 1rem;
-    --body-md-size: 0.875rem;
-    --body-sm-size: 0.8rem;
-    --body-xs-size: 0.688rem;
-    --body-line-height: 1.5;
+    --token-title-2xl-size: 2rem;
+    --token-title-2xl-line-height: 1.125;
+    --token-title-xl-size: 1.5rem;
+    --token-title-xl-line-height: 1.166;
+    --token-title-lg-size: 1.313rem;
+    --token-title-lg-line-height: 1.2;
+    --token-title-md-size: 1.125rem;
+    --token-title-md-line-height: 1.2;
+    --token-title-sm-size: 1rem;
+    --token-title-sm-line-height: 1.25;
+    --token-title-xs-size: 0.875rem;
+    --token-title-xs-line-height: 1.25;
+    --token-title-2xs-size: 0.875rem;
+    --token-title-2xs-line-height: 1.25;
+    --token-title-3xs-size: 0.875rem;
+    --token-title-3xs-line-height: 1.25;
+    --token-body-xl-size: 1.125rem;
+    --token-body-lg-size: 1rem;
+    --token-body-md-size: 0.875rem;
+    --token-body-sm-size: 0.8rem;
+    --token-body-xs-size: 0.688rem;
+    --token-body-line-height: 1.5;
 }

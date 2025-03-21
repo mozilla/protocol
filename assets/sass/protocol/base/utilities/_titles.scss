@@ -9,74 +9,34 @@
 
 .mzp-u-title-2xl {
     @include text-title-2xl;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
 .mzp-u-title-xl {
     @include text-title-xl;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
 .mzp-u-title-lg {
     @include text-title-lg;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
 .mzp-u-title-md {
     @include text-title-md;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
 .mzp-u-title-sm {
     @include text-title-sm;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
 .mzp-u-title-xs {
     @include text-title-xs;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
 .mzp-u-title-2xs {
     @include text-title-2xs;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
 .mzp-u-title-3xs {
     @include text-title-3xs;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
 // Utility class for centered text.

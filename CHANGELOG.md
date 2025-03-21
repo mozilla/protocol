@@ -1,3 +1,8 @@
+# HEAD
+
+* Dropped support for font-sizes in pixels, all font-sizes are in rem now.
+* Removed `text-display-*` mixins. See migration notes for version 11.0.2.
+
 # 22.0.0
 
 ## Features
@@ -199,8 +204,8 @@ stating variables explicitly, like this:
 
   @supports (--css: variables) {
     background-color: var(--background-color-inverse);
-    color: var(--body-text-color-inverse);
-    line-height: var(--body-line-height);
+    color: var(--token-body-text-color-inverse);
+    line-height: var(--token-body-line-height);
   }
 }
 ```

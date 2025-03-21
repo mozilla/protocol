@@ -32,13 +32,9 @@ legend {
         @include forms.field-label;
     }
     @include text-body-lg;
-    font-family: $body-font-family;
+    font-family: var(--token-body-font-family);
     font-weight: bold;
     margin-bottom: forms.$field-v-spacing;
-
-    @supports (--css: variables) {
-        font-family: var(--body-font-family);
-    }
 }
 
 button,

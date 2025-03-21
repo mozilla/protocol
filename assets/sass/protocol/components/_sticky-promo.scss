@@ -72,7 +72,7 @@ $logos: (
 
         @supports (--css: variables) {
             background-color: var(--background-color-inverse);
-            color: var(--body-text-color-inverse);
+            color: var(--token-body-text-color-inverse);
         }
     }
 
@@ -92,7 +92,7 @@ $logos: (
 }
 
 .mzp-c-sticky-promo-title {
-    @include text-display-xs;
+    @include text-title-xs;
     margin-bottom: $spacing-xl;
 }
 

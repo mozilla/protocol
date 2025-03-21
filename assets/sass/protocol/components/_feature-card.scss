@@ -70,10 +70,10 @@
         }
 
         @supports (--css: variables) {
-            color: var(--body-text-color-inverse);
+            color: var(--token-body-text-color-inverse);
 
             .mzp-c-card-feature-desc {
-                color: var(--body-text-color-secondary-inverse);
+                color: var(--token-body-text-color-secondary-inverse);
             }
         }
     }

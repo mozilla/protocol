@@ -10,7 +10,6 @@ blockquote {
     border-color: $color-marketing-gray-20;
     border-style: solid;
     color: $title-text-color;
-    font-family: $title-font-family;
     font-weight: bold;
     margin: $spacing-lg auto;
     padding: $spacing-sm $spacing-lg;
@@ -29,11 +28,10 @@ blockquote {
     }
 
     @supports (--css: variables) {
-        color: var(--title-text-color);
-        font-family: var(--title-font-family);
+        color: var(--token-title-text-color);
 
         cite {
-            color: var(--body-text-color-secondary);
+            color: var(--token-body-text-color-secondary);
         }
     }
 }

@@ -23,11 +23,11 @@
     }
 
     @supports (--css: variables) {
-        color: var(--body-text-color-secondary);
+        color: var(--token-body-text-color-secondary);
 
         &.mzp-t-dark,
         .mzp-t-dark & {
-            color: var(--body-text-color-secondary-inverse);
+            color: var(--token-body-text-color-secondary-inverse);
         }
     }
 
@@ -68,8 +68,6 @@
 legend.mzp-c-form-title {
     @include text-title-xs;
     color: $title-text-color;
-    font-family: $title-font-family;
-    font-weight: bold;
     margin: 0 0 $spacing-lg;
 
     .mzp-c-form-header > & {
@@ -81,11 +79,10 @@ legend.mzp-c-form-title {
     }
 
     @supports (--css: variables) {
-        color: var(--title-text-color);
-        font-family: var(--title-font-family);
+        color: var(--token-title-text-color);
 
         .mzp-t-dark & {
-            color: var(--title-text-color-inverse);
+            color: var(--token-title-text-color-inverse);
         }
     }
 }
