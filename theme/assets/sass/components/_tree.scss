@@ -10,9 +10,9 @@
 }
 
 .Tree-title {
-    @include text-body-md;
     color: $color-white;
     letter-spacing: normal;
+    @include text-body-md;
 }
 
 .Tree-collectionLabel {

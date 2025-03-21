@@ -7,10 +7,10 @@
 // Sidebar menu
 
 .mzp-c-sidemenu {
-    @include text-body-md;
     background-color: $color-marketing-gray-20;
     padding: $spacing-sm $spacing-lg;
     margin: 0 -#{$spacing-lg} $layout-sm;
+    @include text-body-md;
 }
 
 .mzp-c-sidemenu-summary {
@@ -78,12 +78,12 @@
 }
 
 .mzp-c-sidemenu-label {
-    @include font-base;
-    @include text-body-sm;
+    position: relative;
     @include bidi((
         (padding-right, $spacing-lg, padding-left, 0),
     ));
-    position: relative;
+    @include text-body-sm;
+    @include font-base;
 
     &::after {
         @include bidi((
@@ -99,10 +99,10 @@
 }
 
 .mzp-c-sidemenu-title {
-    @include font-base;
-    @include text-body-lg;
     line-height: 1.5;
     margin-bottom: 0.25em;
+    @include text-body-lg;
+    @include font-base;
 
     a {
         padding: 0.35em $spacing-md;
@@ -130,9 +130,9 @@
         }
 
         .mzp-c-sidemenu-main {
-            @include text-body-md;
             display: block;
             margin: $spacing-md -#{$spacing-md} 0;
+            @include text-body-md;
         }
     }
 }
@@ -152,10 +152,10 @@
         }
 
         .mzp-c-sidemenu {
-            @include text-body-md;
             background-color: transparent;
             padding: 0;
             margin: 0;
+            @include text-body-md;
         }
     }
 }

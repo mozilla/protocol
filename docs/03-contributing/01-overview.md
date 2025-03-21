@@ -255,7 +255,7 @@ named `_item.scss` (this is not an actual Protocol component):
 @use '../includes/lib' as *;
 
 .mzp-c-item {
-    @include text-title-md;
+    @include text-heading-md;
     color: $color-ink-80;
     margin: $spacing-lg 0;
 }
@@ -267,7 +267,7 @@ If you don't change the namespace of the file being imported your `.scss` file w
 @use '../includes/lib';
 
 .mzp-c-item {
-    @include lib.text-title-md;
+    @include lib.text-heading-md;
     color: lib.$color-ink-80;
     margin: lib.$spacing-lg 0;
 }
@@ -301,7 +301,7 @@ with which they may need to coexist, followed by a `c` prefix indicating that
 this is a component.
 
 ```scss
-    @include text-title-md;
+    @include text-heading-md;
 ```
 
 The first style declaration is a Sass mixin that sets the font-size for the

@@ -6,17 +6,16 @@
 
 blockquote {
     @include bidi(((border-width, 0 0 0 5px, 0 5px 0 0),));
-    @include text-title-sm;
+    @include text-heading-sm;
     border-color: $color-marketing-gray-20;
     border-style: solid;
     color: $title-text-color;
-    font-family: $title-font-family;
     font-weight: bold;
     margin: $spacing-lg auto;
     padding: $spacing-sm $spacing-lg;
 
     cite {
-        @include text-title-xs;
+        @include text-heading-xs;
         color: $body-text-color-secondary;
 
         &::before {
@@ -29,8 +28,7 @@ blockquote {
     }
 
     @supports (--css: variables) {
-        color: var(--title-text-color);
-        font-family: var(--title-font-family);
+        color: var(--heading-text-color);
 
         cite {
             color: var(--body-text-color-secondary);

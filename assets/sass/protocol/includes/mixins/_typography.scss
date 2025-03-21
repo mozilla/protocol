@@ -4,9 +4,8 @@
 
 @use 'sass:math';
 @use 'sass:meta';
-@use '../tokens';
-@use '../themes-sass' as themes;
-@use '../functions';
+@use '../functions' as functions;
+@use '../tokens' as tokens;
 
 // * -------------------------------------------------------------------------- */
 // Font families
@@ -27,9 +26,9 @@
 }
 
 // * -------------------------------------------------------------------------- */
-// A mixin to output font-size in rems with a px fallback for old browsers.
+// A mixin to output font-size in rems.
 // Declare sizes in pixels for ease and clarity, the mixin does the math.
-// Requires: remify(), pixify() - defined in includes/themes.scss.
+// Requires: remify() - defined in includes/functions.scss.
 // Usage:
 //  .foo { @include font-size(24px); }
 
@@ -37,7 +36,6 @@
     // When unit is pixels, pass it through and convert to rem
 
     @if math.unit($size) == 'px' {
-        font-size: $size;
         font-size: functions.remify($size);
     }
 
@@ -54,228 +52,98 @@
 // getting too tiny.
 
 // Example usage:
-//  .title { @include text-title-xl; }
-//  .subtitle { @include text-title-lg; }
+//  .title { @include text-heading-xl; }
+//  .subtitle { @include text-heading-lg; }
 //  .intro { @include text-body-lg; }
 
-@mixin text-title-2xl {
-    @include font-size(themes.$title-xl-size);
-    line-height: themes.$title-xl-line-height;
-
-    @media #{tokens.$mq-md} {
-        @include font-size(themes.$title-2xl-size);
-        line-height: themes.$title-2xl-line-height;
-    }
-
-    @supports (--css: variables) {
-        font-size: var(--title-xl-size);
-        line-height: var(--title-xl-line-height);
-
-        @media #{tokens.$mq-md} {
-            font-size: var(--title-2xl-size);
-            line-height: var(--title-2xl-line-height);
-        }
-    }
+@mixin text-heading-2xl {
+    font-family: var(--theme-heading-font-family);
+    font-size: var(--theme-heading-font-size-2xl);
+    font-weight: var(--theme-heading-font-weight);
+    line-height: var(--theme-heading-line-height-2xl);
+    letter-spacing: var(--theme-heading-letter-spacing);
 }
 
-@mixin text-title-xl {
-    @include font-size(themes.$title-lg-size);
-    line-height: themes.$title-lg-line-height;
-
-    @media #{tokens.$mq-md} {
-        @include font-size(themes.$title-xl-size);
-        line-height: themes.$title-xl-line-height;
-    }
-
-    @supports (--css: variables) {
-        font-size: var(--title-lg-size);
-        line-height: var(--title-lg-line-height);
-
-        @media #{tokens.$mq-md} {
-            font-size: var(--title-xl-size);
-            line-height: var(--title-xl-line-height);
-        }
-    }
+@mixin text-heading-xl {
+    font-family: var(--theme-heading-font-family);
+    font-size: var(--theme-heading-font-size-xl);
+    font-weight: var(--theme-heading-font-weight);
+    line-height: var(--theme-heading-line-height-xl);
+    letter-spacing: var(--theme-heading-letter-spacing);
 }
 
-@mixin text-title-lg {
-    @include font-size(themes.$title-md-size);
-    line-height: themes.$title-md-line-height;
-
-    @media #{tokens.$mq-md} {
-        @include font-size(themes.$title-lg-size);
-        line-height: themes.$title-lg-line-height;
-    }
-
-    @supports (--css: variables) {
-        font-size: var(--title-md-size);
-        line-height: var(--title-md-line-height);
-
-        @media #{tokens.$mq-md} {
-            font-size: var(--title-lg-size);
-            line-height: var(--title-lg-line-height);
-        }
-    }
+@mixin text-heading-lg {
+    font-family: var(--theme-heading-font-family);
+    font-size: var(--theme-heading-font-size-lg);
+    font-weight: var(--theme-heading-font-weight);
+    line-height: var(--theme-heading-line-height-lg);
+    letter-spacing: var(--theme-heading-letter-spacing);
 }
 
-@mixin text-title-md {
-    @include font-size(themes.$title-sm-size);
-    line-height: themes.$title-sm-line-height;
-
-    @media #{tokens.$mq-md} {
-        @include font-size(themes.$title-md-size);
-        line-height: themes.$title-md-line-height;
-    }
-
-    @supports (--css: variables) {
-        font-size: var(--title-sm-size);
-        line-height: var(--title-sm-line-height);
-
-        @media #{tokens.$mq-md} {
-            font-size: var(--title-md-size);
-            line-height: var(--title-md-line-height);
-        }
-    }
+@mixin text-heading-md {
+    font-family: var(--theme-heading-font-family);
+    font-size: var(--theme-heading-font-size-md);
+    font-weight: var(--theme-heading-font-weight);
+    line-height: var(--theme-heading-line-height-md);
+    letter-spacing: var(--theme-heading-letter-spacing);
 }
 
-@mixin text-title-sm {
-    @include font-size(themes.$title-xs-size);
-    line-height: themes.$title-xs-line-height;
-
-    @media #{tokens.$mq-md} {
-        @include font-size(themes.$title-sm-size);
-        line-height: themes.$title-sm-line-height;
-    }
-
-    @supports (--css: variables) {
-        font-size: var(--title-xs-size);
-        line-height: var(--title-xs-line-height);
-
-        @media #{tokens.$mq-md} {
-            font-size: var(--title-sm-size);
-            line-height: var(--title-sm-line-height);
-        }
-    }
+@mixin text-heading-sm {
+    font-family: var(--theme-heading-font-family);
+    font-size: var(--theme-heading-font-size-sm);
+    font-weight: var(--theme-heading-font-weight);
+    line-height: var(--theme-heading-line-height-sm);
 }
 
-@mixin text-title-xs {
-    @include font-size(themes.$title-2xs-size);
-    line-height: themes.$title-2xs-line-height;
-
-    @media #{tokens.$mq-md} {
-        @include font-size(themes.$title-xs-size);
-        line-height: themes.$title-xs-line-height;
-    }
-
-    @supports (--css: variables) {
-        font-size: var(--title-2xs-size);
-        line-height: var(--title-2xs-line-height);
-
-        @media #{tokens.$mq-md} {
-            font-size: var(--title-xs-size);
-            line-height: var(--title-xs-line-height);
-        }
-    }
+@mixin text-heading-xs {
+    font-family: var(--theme-heading-font-family);
+    font-size: var(--theme-heading-font-size-xs);
+    font-weight: var(--theme-heading-font-weight);
+    line-height: var(--theme-heading-line-height-xs);
 }
 
-@mixin text-title-2xs {
-    @include font-size(themes.$title-3xs-size);
-    line-height: themes.$title-3xs-line-height;
-
-    @media #{tokens.$mq-md} {
-        @include font-size(themes.$title-2xs-size);
-        line-height: themes.$title-2xs-line-height;
-    }
-
-    @supports (--css: variables) {
-        font-size: var(--title-3xs-size);
-        line-height: var(--title-3xs-line-height);
-
-        @media #{tokens.$mq-md} {
-            font-size: var(--title-2xs-size);
-            line-height: var(--title-2xs-line-height);
-        }
-    }
+@mixin text-heading-2xs {
+    font-family: var(--theme-heading-font-family);
+    font-size: var(--theme-heading-font-size-2xs);
+    font-weight: var(--theme-heading-font-weight);
+    line-height: var(--theme-heading-line-height-2xs);
 }
 
-@mixin text-title-3xs {
-    @include font-size(themes.$title-3xs-size);
-    line-height: themes.$title-3xs-line-height;
-
-    @supports (--css: variables) {
-        font-size: var(--title-3xs-size);
-        line-height: var(--title-3xs-line-height);
-    }
+@mixin text-heading-3xs {
+    font-family: var(--theme-heading-font-family);
+    font-size: var(--theme-heading-font-size-3xs);
+    font-weight: var(--theme-heading-font-weight);
+    line-height: var(--theme-heading-line-height-3xs);
 }
 
 // body copy
 @mixin text-body-xl {
-    @include font-size(themes.$body-xl-size);
-    line-height: themes.$body-line-height;
-
-    @supports (--css: variables) {
-        font-size: var(--body-xl-size);
-        line-height: var(--body-line-height);
-    }
+    font-family: var(--theme-body-font-family);
+    font-size: var(--theme-body-font-size-xl);
+    line-height: var(--theme-body-line-height);
 }
 
 @mixin text-body-lg {
-    @include font-size(themes.$body-lg-size);
-    line-height: themes.$body-line-height;
-
-    @supports (--css: variables) {
-        font-size: var(--body-lg-size);
-        line-height: var(--body-line-height);
-    }
+    font-family: var(--theme-body-font-family);
+    font-size: var(--theme-body-font-size-lg);
+    line-height: var(--theme-body-line-height);
 }
 
 @mixin text-body-md {
-    @include font-size(themes.$body-md-size);
-    line-height: themes.$body-line-height;
-
-    @supports (--css: variables) {
-        font-size: var(--body-md-size);
-        line-height: var(--body-line-height);
-    }
+    font-family: var(--theme-body-font-family);
+    font-size: var(--theme-body-font-size-md);
+    line-height: var(--theme-body-line-height);
 }
 
 @mixin text-body-sm {
-    @include font-size(themes.$body-sm-size);
-    line-height: themes.$body-line-height;
-
-    @supports (--css: variables) {
-        font-size: var(--body-sm-size);
-        line-height: var(--body-line-height);
-    }
+    font-family: var(--theme-body-font-family);
+    font-size: var(--theme-body-font-size-sm);
+    line-height: var(--theme-body-line-height);
 }
 
 @mixin text-body-xs {
-    @include font-size(themes.$body-xs-size);
-    line-height: themes.$body-line-height;
-
-    @supports (--css: variables) {
-        font-size: var(--body-xs-size);
-        line-height: var(--body-line-height);
-    }
+    font-family: var(--theme-body-font-family);
+    font-size: var(--theme-body-font-size-xs);
+    line-height: var(--theme-body-line-height);
 }
 
-// Aliases for backwards compatibility
-$text-body-line-height: themes.$body-line-height;
-$text-title-line-height: themes.$title-md-line-height;
-$text-display-line-height: $text-title-line-height;
-
-@mixin text-display-xxl { @include text-title-2xl; }
-
-@mixin text-display-xl { @include text-title-xl; }
-
-@mixin text-display-lg { @include text-title-lg; }
-
-@mixin text-display-md { @include text-title-md; }
-
-@mixin text-display-sm { @include text-title-sm; }
-
-@mixin text-display-xs { @include text-title-xs; }
-
-@mixin text-display-xxs { @include text-title-2xs; }
-
-@mixin text-body-cta { @include text-body-md; }

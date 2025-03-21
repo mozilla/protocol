@@ -48,12 +48,8 @@ a {
 }
 
 .mzp-c-cta-link {
-    font-family: $button-font-family;
+    font-family: var(--theme-button-font-family);
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--button-font-family);
-    }
 
     &.mzp-t-xs {
         @include text-body-sm;
@@ -68,30 +64,15 @@ a {
     }
 
     &.mzp-t-lg {
-        @include text-title-xs;
-        font-family: $title-font-family;
-
-        @supports (--css: variables) {
-            font-family: var(--title-font-family);
-        }
+        @include text-heading-xs;
     }
 
     &.mzp-t-xl {
-        @include text-title-sm;
-        font-family: $title-font-family;
-
-        @supports (--css: variables) {
-            font-family: var(--title-font-family);
-        }
+        @include text-heading-sm;
     }
 
     &.mzp-t-2xl {
-        @include text-title-lg;
-        font-family: $title-font-family;
-
-        @supports (--css: variables) {
-            font-family: var(--title-font-family);
-        }
+        @include text-heading-lg;
     }
 
     // Icon support

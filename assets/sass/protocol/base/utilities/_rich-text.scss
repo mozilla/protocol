@@ -3,7 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use '../../includes/lib' as *;
-@import '../../base/elements/tables';
+@use '../../base/elements/tables' as *;
 
 .mzp-u-rich-text {
     h2 {
@@ -17,10 +17,9 @@
     }
 
     h4 {
-        @include text-body-lg;
-        font-family: var(--body-font-family);
         margin-bottom: $layout-xs;
         margin-top: $layout-xs;
+        @include text-body-lg;
     }
 
     @media #{$mq-md} {

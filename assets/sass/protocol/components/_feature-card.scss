@@ -44,13 +44,13 @@
     }
 
     .mzp-c-card-feature-title {
-        @include text-title-sm;
+        @include text-heading-sm;
     }
 
     .mzp-c-card-feature-desc {
-        @include text-body-md;
         color: $color-marketing-gray-90;
         margin: $spacing-xs 0;
+        @include text-body-md;
     }
 
     .mzp-c-card-feature-list li {

@@ -10,7 +10,11 @@
 @use 'firefox';
 @use '../tokens';
 @use '../config';
+@use '../lib';
 @forward '../themes-sass';
+
+
+// naming pattern for theme variables --theme-<component/role>-<property>-<scale>
 
 :root {
     --v-grid-xs: #{tokens.$layout-md};
@@ -46,5 +50,63 @@
         @if config.$type-scale == 'condensed' {
             @extend %firefox-type-scale-condensed;
         }
+    }
+
+    // headings
+    --theme-heading-font-family: var(--token-heading-font-family);
+    --theme-heading-font-ligatures: var(--token-heading-font-ligatures);
+    --theme-heading-font-size-2xl: var(--token-heading-font-size-plus-2);
+    --theme-heading-font-size-xl: var(--token-heading-font-size-plus-1);
+    --theme-heading-font-size-lg: var(--token-heading-font-size);
+    --theme-heading-font-size-md: var(--token-heading-font-size-minus-1);
+    --theme-heading-font-size-sm: var(--token-heading-font-size-minus-2);
+    --theme-heading-font-size-xs: var(--token-heading-font-size-minus-3);
+    --theme-heading-font-size-2xs: var(--token-heading-font-size-minus-4);
+    --theme-heading-font-size-3xs: var(--token-heading-font-size-minus-4);
+    --theme-heading-font-weight: var(--token-heading-font-weight);
+    --theme-heading-letter-spacing: var(--token-heading-letter-spacing);
+    --theme-heading-line-height-2xl: var(--token-heading-line-height-plus-2);
+    --theme-heading-line-height-xl: var(--token-heading-line-height-plus-1);
+    --theme-heading-line-height-lg: var(--token-heading-line-height);
+    --theme-heading-line-height-md: var(--token-heading-line-height-minus-1);
+    --theme-heading-line-height-sm: var(--token-heading-line-height-minus-2);
+    --theme-heading-line-height-xs: var(--token-heading-line-height-minus-3);
+    --theme-heading-line-height-2xs: var(--token-heading-line-height-minus-4);
+    --theme-heading-line-height-3xs: var(--token-heading-line-height-minus-4);
+
+    // body
+    --theme-body-font-family: var(--token-body-font-family);
+    --theme-body-font-ligatures: var(--token-body-font-ligatures);
+    --theme-body-font-size-xl: var(--token-body-font-size-plus-2);
+    --theme-body-font-size-lg: var(--token-body-font-size-plus-1);
+    --theme-body-font-size-md: var(--token-body-font-size);
+    --theme-body-font-size-sm: var(--token-body-font-size-minus-1);
+    --theme-body-font-size-xs: var(--token-body-font-size-minus-2);
+    --theme-body-line-height: var(--token-body-line-height);
+
+    // buttons
+    --theme-button-font-family: var(--token-button-font-family);
+    --theme-button-line-height: var(--token-button-line-height);
+}
+
+@media #{lib.$mq-md} {
+    :root {
+        // headings
+        --theme-heading-font-size-2xl: var(--token-heading-font-size-plus-3);
+        --theme-heading-font-size-xl: var(--token-heading-font-size-plus-2);
+        --theme-heading-font-size-lg: var(--token-heading-font-size-plus-1);
+        --theme-heading-font-size-md: var(--token-heading-font-size);
+        --theme-heading-font-size-sm: var(--token-heading-font-size-minus-1);
+        --theme-heading-font-size-xs: var(--token-heading-font-size-minus-2);
+        --theme-heading-font-size-2xs: var(--token-heading-font-size-minus-3);
+        --theme-heading-font-size-3xs: var(--token-heading-font-size-minus-4);
+        --theme-heading-line-height-2xl: var(--token-heading-line-height-plus-3);
+        --theme-heading-line-height-xl: var(--token-heading-line-height-plus-2);
+        --theme-heading-line-height-lg: var(--token-heading-line-height-plus-1);
+        --theme-heading-line-height-md: var(--token-heading-line-height);
+        --theme-heading-line-height-sm: var(--token-heading-line-height-minus-1);
+        --theme-heading-line-height-xs: var(--token-heading-line-height-minus-2);
+        --theme-heading-line-height-2xs: var(--token-heading-line-height-minus-3);
+        --theme-heading-line-height-3xs: var(--token-heading-line-height-minus-4);
     }
 }

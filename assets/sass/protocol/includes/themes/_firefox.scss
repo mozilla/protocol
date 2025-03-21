@@ -6,9 +6,13 @@
 
 %firefox-theme {
     // fonts
-    --body-font-family: #{tokens.$font-stack-base};
-    --button-font-family: #{tokens.$font-stack-firefox};
-    --title-font-family: #{tokens.$font-stack-firefox};
+    --token-body-font-family: #{tokens.$font-stack-base};
+    --token-body-font-ligatures: none;
+    --token-button-font-family: #{tokens.$font-stack-firefox};
+    --token-heading-font-family: #{tokens.$font-stack-firefox};
+    --token-heading-font-ligatures: none;
+    --token-heading-font-weight: 600;
+    --token-heading-letter-spacing: 0;
 
     // colors
     --background-color-tertiary-inverse: #{tokens.$color-ink-20};
@@ -27,57 +31,59 @@
     --link-color-visited-inverse: #{tokens.$color-violet-10};
     --link-color-visited: #{tokens.$color-link-visited};
     --link-color: #{tokens.$color-link};
-    --title-text-color-inverse: #{tokens.$color-white};
-    --title-text-color: #{tokens.$color-marketing-gray-99};
+    --heading-text-color-inverse: #{tokens.$color-white};
+    --heading-text-color: #{tokens.$color-marketing-gray-99};
 }
 
 %firefox-type-scale {
     // typescale
-    --title-2xl-size: 4rem;
-    --title-2xl-line-height: 1.125;
-    --title-xl-size: 3.5rem;
-    --title-xl-line-height: 1.143;
-    --title-lg-size: 3rem;
-    --title-lg-line-height: 1.166;
-    --title-md-size: 2.5rem;
-    --title-md-line-height: 1.1;
-    --title-sm-size: 2rem;
-    --title-sm-line-height: 1.125;
-    --title-xs-size: 1.5rem;
-    --title-xs-line-height: 1.166;
-    --title-2xs-size: 1.25rem;
-    --title-2xs-line-height: 1.2;
-    --title-3xs-size: 1rem;
-    --title-3xs-line-height: 1.25;
-    --body-xl-size: 1.313rem;
-    --body-lg-size: 1.125rem;
-    --body-md-size: 1rem;
-    --body-sm-size: 0.875rem;
-    --body-xs-size: 0.75rem;
-    --body-line-height: 1.5;
+    --token-heading-font-size-plus-3: 4rem;
+    --token-heading-line-height-plus-3: 1.125;
+    --token-heading-font-size-plus-2: 3.5rem;
+    --token-heading-line-height-plus-2: 1.143;
+    --token-heading-font-size-plus-1: 3rem;
+    --token-heading-line-height-plus-1: 1.166;
+    --token-heading-font-size: 2.5rem;
+    --token-heading-line-height: 1.1;
+    --token-heading-font-size-minus-1: 2rem;
+    --token-heading-line-height-minus-1: 1.125;
+    --token-heading-font-size-minus-2: 1.5rem;
+    --token-heading-line-height-minus-2: 1.166;
+    --token-heading-font-size-minus-3: 1.25rem;
+    --token-heading-line-height-minus-3: 1.2;
+    --token-heading-font-size-minus-4: 1rem;
+    --token-heading-line-height-minus-4: 1.25;
+    --token-body-font-size-plus-2: 1.313rem;
+    --token-body-font-size-plus-1: 1.125rem;
+    --token-body-font-size: 1rem;
+    --token-body-font-size-minus-1: 0.875rem;
+    --token-body-font-size-minus-2: 0.75rem;
+    --token-body-line-height: 1.5;
+    --token-button-line-height: 1.25;
 }
 
 %firefox-type-scale-condensed {
-    --title-2xl-size: 2rem;
-    --title-2xl-line-height: 1.125;
-    --title-xl-size: 1.5rem;
-    --title-xl-line-height: 1.166;
-    --title-lg-size: 1.313rem;
-    --title-lg-line-height: 1.2;
-    --title-md-size: 1.125rem;
-    --title-md-line-height: 1.2;
-    --title-sm-size: 1rem;
-    --title-sm-line-height: 1.25;
-    --title-xs-size: 0.875rem;
-    --title-xs-line-height: 1.25;
-    --title-2xs-size: 0.875rem;
-    --title-2xs-line-height: 1.25;
-    --title-3xs-size: 0.875rem;
-    --title-3xs-line-height: 1.25;
-    --body-xl-size: 1.125rem;
-    --body-lg-size: 1rem;
-    --body-md-size: 0.875rem;
-    --body-sm-size: 0.8rem;
-    --body-xs-size: 0.688rem;
-    --body-line-height: 1.5;
+    --token-heading-font-size-plus-3: 2rem;
+    --token-heading-line-height-plus-3: 1.125;
+    --token-heading-font-size-plus-2: 1.5rem;
+    --token-heading-line-height-plus-2: 1.166;
+    --token-heading-font-size-plus-1: 1.313rem;
+    --token-heading-line-height-plus-1: 1.2;
+    --token-heading-font-size: 1.125rem;
+    --token-heading-line-height: 1.2;
+    --token-heading-font-size-minus-1: 1rem;
+    --token-heading-line-height-minus-1: 1.25;
+    --token-heading-font-size-minus-2: 0.875rem;
+    --token-heading-line-height-minus-2: 1.25;
+    --token-heading-font-size-minus-3: 0.875rem;
+    --token-heading-line-height-minus-3: 1.25;
+    --token-heading-font-size-minus-4: 0.875rem;
+    --token-heading-line-height-minus-4: 1.25;
+    --token-body-font-size-plus-2: 1.125rem;
+    --token-body-font-size-plus-1: 1rem;
+    --token-body-font-size: 0.875rem;
+    --token-body-font-size-minus-1: 0.8rem;
+    --token-body-font-size-minus-2: 0.688rem;
+    --token-body-line-height: 1.5;
+    --token-button-line-height: 1.25;
 }

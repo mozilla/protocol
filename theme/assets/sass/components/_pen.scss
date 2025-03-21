@@ -16,9 +16,8 @@
 }
 
 .Pen-title {
-    @include text-title-xs;
+    @include text-heading-xs;
     color: $title-text-color;
-    font-family: $title-font-family;
     margin-bottom: 0.5em;
 
     @media #{$mq-md} {
@@ -26,8 +25,7 @@
     }
 
     @supports (--css: variables) {
-        color: var(--title-text-color);
-        font-family: var(--title-font-family);
+        color: var(--heading-text-color);
     }
 }
 
@@ -39,7 +37,7 @@
         color: $title-text-color;
 
         @supports (--css: variables) {
-            color: var(--title-text-color);
+            color: var(--heading-text-color);
         }
     }
 
@@ -50,11 +48,10 @@
 }
 
 .Pen-previewButton {
+    color: $link-color;
+    font-weight: bold;
     @include bidi(((margin-left, $spacing-lg, margin-right, $spacing-lg),));
     @include text-body-sm;
-    color: $link-color;
-    font-family: $body-font-family;
-    font-weight: bold;
 
     &:hover,
     &:active {
@@ -63,7 +60,6 @@
 
     @supports (--css: variables) {
         color: var(--link-color);
-        font-family: var(--body-font-family);
 
         &:hover,
         &:active {

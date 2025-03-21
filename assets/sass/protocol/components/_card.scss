@@ -45,11 +45,11 @@
     }
 
     .mzp-c-card-tag {
-        @include font-base;
-        @include text-body-sm;
         color: $color-marketing-gray-80;
         font-weight: normal;
         margin-bottom: $spacing-xs;
+        @include text-body-sm;
+        @include font-base;
     }
 
     &.mzp-has-video .mzp-c-card-tag,
@@ -72,7 +72,7 @@
     }
 
     .mzp-c-card-title {
-        @include text-title-xs;
+        @include text-heading-xs;
         display: inline;
     }
 
@@ -115,9 +115,9 @@
     }
 
     .mzp-c-card-meta {
-        @include text-body-xs;
         color: $color-marketing-gray-80;
         margin: $spacing-lg 0 0;
+        @include text-body-xs;
     }
 
     @media #{$mq-sm} {
@@ -189,7 +189,7 @@
 
 .mzp-c-card.mzp-c-card-large {
     .mzp-c-card-title {
-        @include text-title-md;
+        @include text-heading-md;
     }
 
     .mzp-c-card-desc {
@@ -211,7 +211,7 @@
     }
 
     .mzp-c-card-title {
-        @include text-title-2xs;
+        @include text-heading-2xs;
     }
 
     .mzp-c-card-desc {

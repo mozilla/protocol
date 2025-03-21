@@ -1,3 +1,71 @@
+# HEAD
+
+This version introduces some major modernization changes around CSS and drops browser support for XXXX ( to be defined before V23 is published).
+
+The good news is we don't expect any visible changes in modern browsers and you should be able to do some automated visual regression testing to help with the migration.
+
+Introducing theme variables! CSS variables beginning with `--theme-` will adjust based on media queries.
+
+
+## Typography
+
+* Modernization:
+  *  Default to CSS vars for font family, size, and line-height (#982)
+    * Removed `@supports` declarations if they only had font declarations
+    * `@include text-body-*` and `@include text-heading-*` mixins use CSS vars now
+  * Edited `@mixin font-size()` to stop outputting a pixel fallback
+* Reorganization:
+  * Renamed `-title-` to `-heading-` in mixins and CSS vars
+    * and `mzp-u-heading-*` utility classes
+    * component HTML/CSS classes will follow in a separate PR
+  * Added font-family declaration to `@include text-body-*` mixins
+  * Added `--theme-` prefix to variables expected to morph
+  * Added `--token-` prefix to unchanging variables
+    * Re-name font-size tokens to use a scale instead of tshirt sizes for names
+  * Added `--theme-button-line-height` var
+* Bug fixes:
+  * Moved `@include text-*` to end of declarations
+
+## Color
+
+* To come in follow up PR.
+
+## Migration Tips
+
+See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for automated scripts (VS Code find/replace and terminal commands) to help with these changes.
+
+* Browser support
+  * If you require support for older browsers we recommend adding some post-processing to your workflow for CSS variables and font sizes in pixels.
+* Rename typography mixins `text-title-(2xs|3xs|xs|sm|md|lg|xl|2xl)` → `text-heading-$1`
+* Rename utility classes `mzp-u-title-(2xs|3xs|xs|sm|md|lg|xl|2xl)` → `mzp-u-heading-$1`
+* Replace any remaining `text-display-*` usage with the equivalent `text-heading-*` mixin:
+  * `text-display-xx([sl])` → `text-heading-2x$1`
+  * `text-display-(xs|sm|md|lg|xl)` → `text-heading-$1`
+* Rename CSS variables to use pattern `--theme-<component>-<property>-<scale>`:
+  * `--body-font-family` → `--theme-body-font-family`
+  * `--title-font-family` → `--theme-heading-font-family`
+  * `--body-line-height` → `--theme-body-line-height`
+  * `--title-(2xs|3xs|xs|sm|md|lg|xl|2xl)-size` → `--theme-heading-font-size-$1`
+  * `--body-(xs|sm|md|lg|xl)-size` → `--theme-body-font-size-$1`
+  * `--title-(2xs|3xs|xs|sm|md|lg|xl|2xl)-line-height` → `--theme-heading-line-height-$1`
+* Removed Sass variables (use CSS variables instead):
+  * `$title-(2xs|3xs|xs|sm|md|lg|xl|2xl)-size` → `var(--theme-heading-font-size-$1)`
+  * `$title-(2xs|3xs|xs|sm|md|lg|xl|2xl)-line-height` → `var(--theme-heading-line-height-$1)`
+  * `$body-line-height` → `var(--theme-body-line-height)`
+  * `$body-(xs|sm|md|lg|xl)-size` → `var(--theme-body-font-size-$1)`
+  * `$body-font-family` → `var(--theme-body-font-family)`
+  * `$title-font-family` → `var(--theme-heading-font-family)`
+  * `$button-font-family` → `var(--theme-button-font-family)`
+  * `$text-body-line-height` → `var(--theme-body-line-height)`
+  * `$text-title-line-height` → `var(--theme-heading-line-height)`
+  * `$text-display-line-height`→ `var(--theme-body-line-height)`
+* `text-body-*` mixins now declare `font-family`.
+  * You can remove any `font-family` declarations from places which use these mixins (unless you don't want the default font).
+* Removed mixins and functions:
+  * `type-scale()` function and associated lookup tables
+  * `text-body-cta` mixin (use `text-body-md` instead)
+* You can remove `@supports (--css: variables)` blocks that only contain font declarations, as CSS custom properties are now required.
+
 # 22.0.0
 
 ## Features
@@ -200,7 +268,7 @@ stating variables explicitly, like this:
   @supports (--css: variables) {
     background-color: var(--background-color-inverse);
     color: var(--body-text-color-inverse);
-    line-height: var(--body-line-height);
+    line-height: var(--token-body-line-height);
   }
 }
 ```

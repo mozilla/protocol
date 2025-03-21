@@ -95,14 +95,14 @@ We limit the number of text sizes to a predetermined set, to maintain consistenc
 and avoid sizing text willy nilly in designs.
 
 <div id="specimen-type-scale" class="docs-specimen">
-  <span class="docs-scale-sample docs-scale-sample-title-2xl">Title 2XL</span>
-  <span class="docs-scale-sample docs-scale-sample-title-xl">Title XL</span>
-  <span class="docs-scale-sample docs-scale-sample-title-lg">Title LG</span>
-  <span class="docs-scale-sample docs-scale-sample-title-md">Title MD</span>
-  <span class="docs-scale-sample docs-scale-sample-title-sm">Title SM</span>
-  <span class="docs-scale-sample docs-scale-sample-title-xs">Title XS</span>
-  <span class="docs-scale-sample docs-scale-sample-title-2xs">Title 2XS</span>
-  <span class="docs-scale-sample docs-scale-sample-title-3xs">Title 3XS</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-2xl">Heading 2XL</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-xl">Heading XL</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-lg">Heading LG</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-md">Heading MD</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-sm">Heading SM</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-xs">Heading XS</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-2xs">Heading 2XS</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-3xs">Heading 3XS</span>
   <span class="docs-scale-sample docs-scale-sample-body-xl">Body XL</span>
   <span class="docs-scale-sample docs-scale-sample-body-lg">Body LG</span>
   <span class="docs-scale-sample docs-scale-sample-body-md">Body MD</span>
@@ -136,14 +136,14 @@ blogs, etc). Protocol also includes an alternative, condensed scale with smaller
 sizes more suitable for web applications.
 
 <div id="specimen-type-scale-condensed" class="docs-specimen">
-  <span class="docs-scale-sample docs-scale-sample-title-2xl">Title 2XL</span>
-  <span class="docs-scale-sample docs-scale-sample-title-xl">Title XL</span>
-  <span class="docs-scale-sample docs-scale-sample-title-lg">Title LG</span>
-  <span class="docs-scale-sample docs-scale-sample-title-md">Title MD</span>
-  <span class="docs-scale-sample docs-scale-sample-title-sm">Title SM</span>
-  <span class="docs-scale-sample docs-scale-sample-title-xs">Title XS</span>
-  <span class="docs-scale-sample docs-scale-sample-title-2xs">Title 2XS</span>
-  <span class="docs-scale-sample docs-scale-sample-title-3xs">Title 3XS</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-2xl">Title 2XL</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-xl">Title XL</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-lg">Title LG</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-md">Title MD</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-sm">Title SM</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-xs">Title XS</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-2xs">Title 2XS</span>
+  <span class="docs-scale-sample docs-scale-sample-heading-3xs">Title 3XS</span>
   <span class="docs-scale-sample docs-scale-sample-body-xl">Body XL</span>
   <span class="docs-scale-sample docs-scale-sample-body-lg">Body LG</span>
   <span class="docs-scale-sample docs-scale-sample-body-md">Body MD</span>
@@ -156,14 +156,14 @@ sizes more suitable for web applications.
 We use Sass mixins to declare these font sizes:
 
 ```scss
-@include text-title-2xl;
-@include text-title-xl;
-@include text-title-lg;
-@include text-title-md;
-@include text-title-sm;
-@include text-title-xs;
-@include text-title-2xs;
-@include text-title-3xs;
+@include text-heading-2xl;
+@include text-heading-xl;
+@include text-heading-lg;
+@include text-heading-md;
+@include text-heading-sm;
+@include text-heading-xs;
+@include text-heading-2xs;
+@include text-heading-3xs;
 @include text-body-xl;
 @include text-body-lg;
 @include text-body-md;
@@ -187,12 +187,12 @@ There are also a set of CSS utility class names available to use directly on HTM
 heading elements for convenience.
 
 ```html
-<h1 class="mzp-u-title-2xl">Title 2XL</h1>
-<h2 class="mzp-u-title-xl">Title XL</h2>
-<h3 class="mzp-u-title-lg">Title LG</h3>
-<h4 class="mzp-u-title-md">Title MD</h4>
-<h5 class="mzp-u-title-sm">Title SM</h5>
-<h6 class="mzp-u-title-xs">Title XS</h6>
-<h6 class="mzp-u-title-2xs">Title 2XS</h6>
-<h6 class="mzp-u-title-3xs">Title 3XS</h6>
+<h1 class="mzp-u-heading-2xl">Title 2XL</h1>
+<h2 class="mzp-u-heading-xl">Title XL</h2>
+<h3 class="mzp-u-heading-lg">Title LG</h3>
+<h4 class="mzp-u-heading-md">Title MD</h4>
+<h5 class="mzp-u-heading-sm">Title SM</h5>
+<h6 class="mzp-u-heading-xs">Title XS</h6>
+<h6 class="mzp-u-heading-2xs">Title 2XS</h6>
+<h6 class="mzp-u-heading-3xs">Title 3XS</h6>
 ```

@@ -7,13 +7,13 @@
 
 %mozilla-theme {
     // fonts
-    --body-font-family: #{tokens.$font-stack-mozilla-text};
-    --button-font-family: #{tokens.$font-stack-mozilla-text};
-    --title-font-family: #{tokens.$font-stack-mozilla-headline};
-    --title-font-ligatures: none;
-    --body-font-ligatures: none;
-    --title-font-weight: 600;
-    --title-letter-spacing: -0.01em;
+    --token-body-font-family: #{tokens.$font-stack-mozilla-text};
+    --token-body-font-ligatures: none;
+    --token-button-font-family: #{tokens.$font-stack-mozilla-text};
+    --token-heading-font-family: #{tokens.$font-stack-mozilla-headline};
+    --token-heading-font-ligatures: none;
+    --token-heading-font-weight: 600;
+    --token-heading-letter-spacing: -0.01em;
 
     // colors
     --background-color-tertiary-inverse: #{tokens.$color-dark-gray-40};
@@ -32,57 +32,59 @@
     --link-color-visited-inverse: #{tokens.$color-violet-10};
     --link-color-visited: #{tokens.$color-link-visited};
     --link-color: #{tokens.$color-link};
-    --title-text-color-inverse: #{tokens.$color-white};
-    --title-text-color: #{tokens.$color-black};
+    --heading-text-color-inverse: #{tokens.$color-white};
+    --heading-text-color: #{tokens.$color-black};
 }
 
 %mozilla-type-scale {
     // type scale
-    --title-2xl-size: 4.75rem;
-    --title-2xl-line-height: 0.9;
-    --title-xl-size: 4.125rem;
-    --title-xl-line-height: 0.9;
-    --title-lg-size: 3.5rem;
-    --title-lg-line-height: 1.1;
-    --title-md-size: 3rem;
-    --title-md-line-height: 1.1;
-    --title-sm-size: 2.375rem;
-    --title-sm-line-height: 1.1;
-    --title-xs-size: 1.75rem;
-    --title-xs-line-height: 1.1;
-    --title-2xs-size: 1.5rem;
-    --title-2xs-line-height: 1.25;
-    --title-3xs-size: 1.125rem;
-    --title-3xs-line-height: 1.25;
-    --body-xl-size: 1.313rem;
-    --body-lg-size: 1.125rem;
-    --body-md-size: 1rem;
-    --body-sm-size: 0.875rem;
-    --body-xs-size: 0.75rem;
-    --body-line-height: 1.25;
+    --token-heading-font-size-plus-3: 4.75rem;
+    --token-heading-line-height-plus-3: 0.9;
+    --token-heading-font-size-plus-2: 4.125rem;
+    --token-heading-line-height-plus-2: 0.9;
+    --token-heading-font-size-plus-1: 3.5rem;
+    --token-heading-line-height-plus-1: 1.1;
+    --token-heading-font-size: 3rem;
+    --token-heading-line-height: 1.1;
+    --token-heading-font-size-minus-1: 2.375rem;
+    --token-heading-line-height-minus-1: 1.1;
+    --token-heading-font-size-minus-2: 1.75rem;
+    --token-heading-line-height-minus-2: 1.1;
+    --token-heading-font-size-minus-3: 1.5rem;
+    --token-heading-line-height-minus-3: 1.25;
+    --token-heading-font-size-minus-4: 1.125rem;
+    --token-heading-line-height-minus-4: 1.25;
+    --token-body-font-size-plus-2: 1.313rem;
+    --token-body-font-size-plus-1: 1.125rem;
+    --token-body-font-size: 1rem;
+    --token-body-font-size-minus-1: 0.875rem;
+    --token-body-font-size-minus-2: 0.75rem;
+    --token-body-line-height: 1.25;
+    --token-button-line-height: 1.25;
 }
 
 %mozilla-type-scale-condensed {
-    --title-2xl-size: 2.125rem;
-    --title-2xl-line-height: 1.1;
-    --title-xl-size: 1.625rem;
-    --title-xl-line-height: 1.1;
-    --title-lg-size: 1.375rem;
-    --title-lg-line-height: 1.1;
-    --title-md-size: 1.25rem;
-    --title-md-line-height: 1.1;
-    --title-sm-size: 1.125rem;
-    --title-sm-line-height: 1.25;
-    --title-xs-size: 1rem;
-    --title-xs-line-height: 1.25;
-    --title-2xs-size: 0.875rem;
-    --title-2xs-line-height: 1.25;
-    --title-3xs-size: 0.875rem;
-    --title-3xs-line-height: 1.25;
-    --body-xl-size: 1.125rem;
-    --body-lg-size: 1rem;
-    --body-md-size: 0.875rem;
-    --body-sm-size: 0.75rem;
-    --body-xs-size: 0.688rem;
-    --body-line-height: 1.25;
+    --token-heading-font-size-plus-3: 2.125rem;
+    --token-heading-line-height-plus-3: 1.1;
+    --token-heading-font-size-plus-2: 1.625rem;
+    --token-heading-line-height-plus-2: 1.1;
+    --token-heading-font-size-plus-1: 1.375rem;
+    --token-heading-line-height-plus-1: 1.1;
+    --token-heading-font-size: 1.25rem;
+    --token-heading-line-height: 1.1;
+    --token-heading-font-size-minus-1: 1.125rem;
+    --token-heading-line-height-minus-1: 1.25;
+    --token-heading-font-size-minus-2: 1rem;
+    --token-heading-line-height-minus-2: 1.25;
+    --token-heading-font-size-minus-3: 0.875rem;
+    --token-heading-line-height-minus-3: 1.25;
+    --token-heading-font-size-minus-4: 0.875rem;
+    --token-heading-line-height-minus-4: 1.25;
+    --token-body-font-size-plus-2: 1.125rem;
+    --token-body-font-size-plus-1: 1rem;
+    --token-body-font-size: 0.875rem;
+    --token-body-font-size-minus-1: 0.75rem;
+    --token-body-font-size-minus-2: 0.688rem;
+    --token-body-line-height: 1.25;
+    --token-button-line-height: 1.25;
 }

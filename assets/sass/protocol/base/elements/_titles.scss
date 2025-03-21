@@ -12,10 +12,10 @@ h3,
 h4,
 h5,
 h6 {
-    $default-font-weight: bold;
-    font-family: $title-font-family;
     color: $title-text-color;
-    font-weight: $default-font-weight;
+    font-family: var(--theme-heading-font-family);
+    font-variant-ligatures: var(--theme-heading-font-ligatures);
+    letter-spacing: var(--theme-heading-letter-spacing);
     text-wrap: balance;
     margin: 0 0 0.5em;
 
@@ -24,14 +24,10 @@ h6 {
     }
 
     @supports (--css: variables) {
-        font-family: var(--title-font-family);
-        font-variant-ligatures: var(--title-font-ligatures);
-        font-weight: var(--title-font-weight, #{$default-font-weight});
-        letter-spacing: var(--title-letter-spacing);
-        color: var(--title-text-color);
+        color: var(--heading-text-color);
 
         .mzp-t-dark & {
-            color: var(--title-text-color-inverse);
+            color: var(--heading-text-color-inverse);
         }
     }
 }
@@ -39,25 +35,25 @@ h6 {
 // Type scale mixins can be found in includes/mixins/_typography.scss
 // Sizes are defined in includes/_themes.scss
 h1 {
-    @include text-title-lg;
+    @include text-heading-lg;
 }
 
 h2 {
-    @include text-title-md;
+    @include text-heading-md;
 }
 
 h3 {
-    @include text-title-sm;
+    @include text-heading-sm;
 }
 
 h4 {
-    @include text-title-xs;
+    @include text-heading-xs;
 }
 
 h5 {
-    @include text-title-2xs;
+    @include text-heading-2xs;
 }
 
 h6 {
-    @include text-title-3xs;
+    @include text-heading-3xs;
 }

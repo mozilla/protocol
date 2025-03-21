@@ -8,7 +8,7 @@
 // section heading
 
 .mzp-c-section-heading {
-    @include text-title-md;
+    @include text-heading-md;
     margin: 0 auto;
     padding: $h-grid-xs $layout-xs;
     max-width: $content-lg;
