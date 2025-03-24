@@ -1,7 +1,7 @@
 # HEAD
 
 ## Features
-* **assets:** Upgrade Inter font to version 4.1 (bedrock #15999)
+* **assets:** Upgrade Inter font to version 4.1, drop support for Inter `woff` (bedrock #15999)
 
 ## Bug Fixes
 
