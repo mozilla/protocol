@@ -11,6 +11,7 @@
 ## Migration Tips
 
 * Dropped support for font-sizes in pixels, all font-sizes are in rem now.
+* Removed `text-display-*` mixins. See migration notes for version 11.0.2.
 * See notes for [Protocol Assets 5.4.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#540)
 
 # 19.3.0
