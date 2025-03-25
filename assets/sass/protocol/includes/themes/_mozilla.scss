@@ -47,21 +47,21 @@
     --title-lg-size: 3rem;
     --title-lg-line-height: 1.1;
     --title-md-size: 2.375rem;
-    --title-md-line-height: 1.05;
+    --title-md-line-height: 1.1;
     --title-sm-size: 1.75rem;
-    --title-sm-line-height: 1.07;
+    --title-sm-line-height: 1.1;
     --title-xs-size: 1.5rem;
-    --title-xs-line-height: 1.08;
+    --title-xs-line-height: 1.1;
     --title-2xs-size: 1.125rem;
-    --title-2xs-line-height: 1.11;
+    --title-2xs-line-height: 1.1;
     --title-3xs-size: 1.125rem;
-    --title-3xs-line-height: 1.11;
+    --title-3xs-line-height: 1.1;
     --body-xl-size: 1.125rem;
     --body-lg-size: 1rem;
     --body-md-size: 0.875rem;
     --body-sm-size: 0.75rem;
     --body-xs-size: 0.75rem;
-    --body-line-height: 1.5;
+    --body-line-height: 1.2;
 
     @media #{tokens.$mq-md} {
         --title-2xl-size: 4.75rem;
@@ -85,7 +85,7 @@
         --body-md-size: 1rem;
         --body-sm-size: 0.875rem;
         --body-xs-size: 0.75rem;
-        --body-line-height: 1.2;
+        // --body-line-height: 1.2; doesn't change, no need to update
     }
 }
 
@@ -136,6 +136,6 @@
         --body-md-size: 0.875rem;
         --body-sm-size: 0.75rem;
         --body-xs-size: 0.688rem;
-        --body-line-height: 1.5;
+        // --body-line-height: 1.5; doesn't change, no need to update
     }
 }
