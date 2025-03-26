@@ -10,8 +10,7 @@
     font-style: normal;
     font-weight: normal;
     src:
-        url('#{config.$font-path}/mozilla-text/MozillaText-Regular.woff2') format('woff2'),
-        url('#{config.$font-path}/mozilla-text/MozillaText-Regular.woff') format('woff');
+        url('#{config.$font-path}/mozilla-text/MozillaText-Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -20,8 +19,7 @@
     font-style: normal;
     font-weight: 600;
     src:
-        url('#{config.$font-path}/mozilla-text/MozillaText-SemiBold.woff2') format('woff2'),
-        url('#{config.$font-path}/mozilla-text/MozillaText-SemiBold.woff') format('woff');
+        url('#{config.$font-path}/mozilla-text/MozillaText-SemiBold.woff2') format('woff2');
 }
 
 @font-face {
@@ -30,8 +28,7 @@
     font-style: italic;
     font-weight: 600;
     src:
-        url('#{config.$font-path}/mozilla-text/MozillaText-SemiBoldItalic.woff2') format('woff2'),
-        url('#{config.$font-path}/mozilla-text/MozillaText-SemiBoldItalic.woff') format('woff');
+        url('#{config.$font-path}/mozilla-text/MozillaText-SemiBoldItalic.woff2') format('woff2');
 }
 
 @font-face {
@@ -40,8 +37,7 @@
     font-style: normal;
     font-weight: bold;
     src:
-        url('#{config.$font-path}/mozilla-text/MozillaText-Bold.woff2') format('woff2'),
-        url('#{config.$font-path}/mozilla-text/MozillaText-Bold.woff') format('woff');
+        url('#{config.$font-path}/mozilla-text/MozillaText-Bold.woff2') format('woff2');
 }
 
 @font-face {
@@ -50,8 +46,7 @@
     font-style: italic;
     font-weight: normal;
     src:
-        url('#{config.$font-path}/mozilla-text/MozillaText-Italic.woff2') format('woff2'),
-        url('#{config.$font-path}/mozilla-text/MozillaText-Italic.woff') format('woff');
+        url('#{config.$font-path}/mozilla-text/MozillaText-Italic.woff2') format('woff2');
 }
 
 @font-face {
@@ -60,8 +55,7 @@
     font-style: italic;
     font-weight: bold;
     src:
-        url('#{config.$font-path}/mozilla-text/MozillaText-BoldItalic.woff2') format('woff2'),
-        url('#{config.$font-path}/mozilla-text/MozillaText-BoldItalic.woff') format('woff');
+        url('#{config.$font-path}/mozilla-text/MozillaText-BoldItalic.woff2') format('woff2');
 }
 
 @font-face {

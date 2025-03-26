@@ -10,8 +10,7 @@
     font-style: normal;
     font-weight: normal;
     src:
-        url('#{config.$font-path}/mozilla-headline/MozillaHeadline-Regular.woff2') format('woff2'),
-        url('#{config.$font-path}/mozilla-headline/MozillaHeadline-Regular.woff') format('woff');
+        url('#{config.$font-path}/mozilla-headline/MozillaHeadline-Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -20,8 +19,16 @@
     font-style: normal;
     font-weight: 600;
     src:
-        url('#{config.$font-path}/mozilla-headline/MozillaHeadline-SemiBold.woff2') format('woff2'),
-        url('#{config.$font-path}/mozilla-headline/MozillaHeadline-SemiBold.woff') format('woff');
+        url('#{config.$font-path}/mozilla-headline/MozillaHeadline-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mozilla Headline';
+    font-style: normal;
+    font-weight: bold;
+    src:
+        url('#{config.$font-path}/mozilla-headline/MozillaHeadline-Bold.woff2') format('woff2');
 }
 
 @font-face {

@@ -1,7 +1,7 @@
 # HEAD
 
 ## Features
-* **fonts:** (breaking) Adds rebrand fonts, Mozilla Headline and Mozilla Text. Removes outdated Mozilla Brand font, Zilla Slab.
+* **fonts:** (breaking) Adds rebrand fonts, Mozilla Headline and Mozilla Text. Removes outdated Mozilla Brand font, Zilla Slab. New fonts will only support `woff2` format to simplify maintenance.
 * **assets:** Upgrade Inter font to version 4.1, drop support for Inter `woff` (bedrock #15999)
 * **css:** Apply hover cursor from Details component to Details element (#948)
 
