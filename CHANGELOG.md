@@ -2,6 +2,8 @@
 
 ## Features
 * **fonts:** (breaking) Adds rebrand fonts, Mozilla Headline and Mozilla Text. Removes outdated Mozilla Brand font, Zilla Slab.
+* **assets:** Upgrade Inter font to version 4.1, drop support for Inter `woff` (bedrock #15999)
+* **css:** Apply hover cursor from Details component to Details element (#948)
 
 ## Bug Fixes
 * **assets:** Update @mozilla-protocol/assets to 5.4.0
@@ -14,6 +16,7 @@
 
 ## Features
 * **js:** Migrate tests from Karma to Jasmine browser runner (#899)
+
 
 ## Bug Fixes
 * **css:** Form select elements don't match styling when disabled (#885)
