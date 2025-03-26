@@ -59,10 +59,10 @@
 }
 
 @font-face {
-    font-family: 'Text-adjusted Inter';
-    src: local("Inter");
-    ascent-override: 94.4%;
-    descent-override: 25.6%;
+    font-family: text-fallback;
+    src: local("Helvetica Neue");
+    ascent-override: 84%;
+    descent-override: 36%;
     line-gap-override: 0%;
-    size-adjust: 120.76%;
+    size-adjust: 98%;
   }
