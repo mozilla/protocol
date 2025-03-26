@@ -174,7 +174,7 @@
 
 @media #{$mq-md} {
     .mzp-c-split-body {
-        @include border-box;
+        box-sizing: border-box;
         @include bidi(((float, left, right),));
         padding: 0 calc($h-grid-lg * 0.5);
         width: 50%;
@@ -185,7 +185,7 @@
     }
 
     .mzp-c-split-media {
-        @include border-box;
+        box-sizing: border-box;
         @include bidi(((float, right, left),));
         padding: 0 ($h-grid-lg * 0.5);
         width: 50%;
