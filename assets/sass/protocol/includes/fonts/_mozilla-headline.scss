@@ -23,15 +23,6 @@
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Mozilla Headline';
-    font-style: normal;
-    font-weight: bold;
-    src:
-        url('#{config.$font-path}/mozilla-headline/MozillaHeadline-Bold.woff2') format('woff2');
-}
-
-@font-face {
     font-family: headline-fallback;
     src: local("Helvetica Neue");
     ascent-override: 84%;
