@@ -8,6 +8,8 @@
 
 ## Bug Fixes
 
+* **css:** Notification bar padding of links only working for complete sentences (#1000)
+* **css:** Missing `mzp-c-notification-bar-cta` explicit distinguishing (#1041)
 * **assets:** Update @mozilla-protocol/assets to 5.4.0
 
 ## Migration Tips

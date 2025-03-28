@@ -36,20 +36,17 @@ MzpNotification.init = (origin, opts) => {
     const className = (options && options.className) ? options.className : '';
     const closeText = (options && options.closeText) ? options.closeText : '';
     const isSticky = (options && options.isSticky) ? 'mzp-is-sticky' : '';
-    const ctaOptions = options && options.cta ? options.cta : {};
+    const ctaOptions = (options && options.cta) ? options.cta : {};
 
     const notification = document.createElement('aside');
     notification.className = 'mzp-c-notification-bar ' + className + ' ' + isSticky;
 
+    const notificationContent = document.createElement('p');
+    notification.appendChild(notificationContent);
+
     // Notification Title
-
-    if (options && options.title){
-
-        const notificationTitle = document.createElement('p');
-        notificationTitle.appendChild(title);
-
-        // add title to notification
-        notification.appendChild(notificationTitle);
+    if (options && options.title) {
+        notificationContent.appendChild(title);
     }
 
     // Notification CTA link
@@ -67,7 +64,7 @@ MzpNotification.init = (origin, opts) => {
         for (key in ctaAttrs){
             ctaAnchor.setAttribute(key, ctaAttrs[key]);
         }
-        notification.appendChild(ctaAnchor);
+        notificationContent.appendChild(ctaAnchor);
     }
 
     // Notification Fragment
