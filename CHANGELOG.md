@@ -1,8 +1,9 @@
 # HEAD
 
 ## Features
-* **assets:** Upgrade Inter font to version 4.1, drop support for Inter `woff` (bedrock #15999)
 
+* **fonts:** Upgrade Inter font to version 4.1, drop WOFF 1.0 format (#1026)
+* **css:** Add `text-wrap: balance` to all headings (#910)
 * **css:** Apply hover cursor from Details component to Details element (#948)
 
 ## Bug Fixes
@@ -11,21 +12,24 @@
 
 ## Migration Tips
 
+* Headings are now [balanced](https://developer.mozilla.org/docs/Web/CSS/text-wrap-style#balanced_text), which can impact other wrapping rules. Make sure any changes to `h1`–`h6` rendering end up styled as expected, especially if you apply any `white-space`, `word-break` or `hyphens` customizations.
 * See notes for [Protocol Assets 5.4.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#540)
 
 # 19.3.0
 
 ## Features
+
 * **js:** Migrate tests from Karma to Jasmine browser runner (#899)
 
-
 ## Bug Fixes
+
 * **css:** Form select elements don't match styling when disabled (#885)
 * **css:** Modal close button pointer overridden by defaults (#955)
 
 # 19.2.0
 
 ## Features
+
 * **component:** Add Firefox Klar wordmark for the Wordmark component (#932)
 * **js:** Migrate ESLint to use flat config file (#906)
 
