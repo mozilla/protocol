@@ -69,10 +69,6 @@
     }
 }
 
-@mixin product-states-dark {
-    @include product-states;
-}
-
 // * -------------------------------------------------------------------------- */
 // Button shape and size
 
@@ -184,7 +180,8 @@ a.mzp-c-button {
 // Product Buttons
 
 .mzp-c-button.mzp-t-product,
-a.mzp-c-button.mzp-t-product {
+a.mzp-c-button.mzp-t-product:link,
+a.mzp-c-button.mzp-t-product:visited {
     background-color: $color-blue-50;
     border-color: transparent;
     color: $color-white;
