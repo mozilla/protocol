@@ -16,6 +16,7 @@ h6 {
     font-family: $title-font-family;
     color: $title-text-color;
     font-weight: $default-font-weight;
+    text-wrap: balance;
     margin: 0 0 0.5em;
 
     .mzp-t-dark & {
