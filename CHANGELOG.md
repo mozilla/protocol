@@ -8,6 +8,7 @@
 
 ## Bug Fixes
 
+* **css:** Button link focus styling doesn't override inherited visited link styling (#842)
 * **assets:** Update @mozilla-protocol/assets to 5.4.0
 
 ## Migration Tips
