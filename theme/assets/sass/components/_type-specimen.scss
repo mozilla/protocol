@@ -13,8 +13,12 @@
     @include text-title-md;
 }
 
-#specimen-zilla-slab {
-    @include font-mozilla;
+#specimen-mozilla-headline {
+    @include font-mozilla-headline;
+}
+
+#specimen-mozilla-text {
+    @include font-mozilla-text;
 }
 
 #specimen-metropolis {

@@ -8,13 +8,14 @@
 // the fonts, includes, and global components you actually need.
 // Individual style sheets can import additional components as needed.
 
-// Inter is our general-purpose font for body text in both Firefox and
-// Mozilla brands.
+// Inter is our general-purpose fallback font for body text in Mozilla brand
+// It is also general-purpose font for body text in Firefox
 @use 'includes/fonts/inter';
 
-// Zilla Slab is used with the Mozilla brand. Remove this import if
+// Fonts exclusive to Mozilla brand. Remove these imports if
 // your site uses the Firefox brand exclusively.
-@use 'includes/fonts/zilla-slab';
+@use 'includes/fonts/mozilla-text';
+@use 'includes/fonts/mozilla-headline';
 
 // Base elements - general HTML elements
 @use 'base/elements';
