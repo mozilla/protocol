@@ -59,42 +59,58 @@
 //  .intro { @include text-body-lg; }
 
 @mixin text-title-2xl {
+    font-family: $title-font-family;
     font-size: var(--title-2xl-size);
+    font-weight: bold;
     line-height: var(--title-2xl-line-height);
 }
 
 @mixin text-title-xl {
+    font-family: $title-font-family;
     font-size: var(--title-xl-size);
+    font-weight: bold;
     line-height: var(--title-xl-line-height);
 }
 
 @mixin text-title-lg {
+    font-family: $title-font-family;
     font-size: var(--title-lg-size);
+    font-weight: bold;
     line-height: var(--title-lg-line-height);
 }
 
 @mixin text-title-md {
+    font-family: $title-font-family;
     font-size: var(--title-md-size);
+    font-weight: bold;
     line-height: var(--title-md-line-height);
 }
 
 @mixin text-title-sm {
+    font-family: $title-font-family;
     font-size: var(--title-sm-size);
+    font-weight: bold;
     line-height: var(--title-sm-line-height);
 }
 
 @mixin text-title-xs {
+    font-family: $title-font-family;
     font-size: var(--title-xs-size);
+    font-weight: bold;
     line-height: var(--title-xs-line-height);
 }
 
 @mixin text-title-2xs {
+    font-family: $title-font-family;
     font-size: var(--title-2xs-size);
+    font-weight: bold;
     line-height: var(--title-2xs-line-height);
 }
 
 @mixin text-title-3xs {
+    font-family: $title-font-family;
     font-size: var(--title-3xs-size);
+    font-weight: bold;
     line-height: var(--title-3xs-line-height);
 }
 
