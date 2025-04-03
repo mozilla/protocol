@@ -41,6 +41,7 @@ context:
     $mq-md: '(min-width: $screen-md)'
     $mq-lg: '(min-width: $screen-lg)'
     $mq-xl: '(min-width: $screen-xl)'
+    $mq-max: '(min-width: $content-max)'
     $mq-short: '(max-height: 599px)'
     $mq-tall: '(min-height: 600px)'
     $mq-high-res: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)'
