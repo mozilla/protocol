@@ -48,5 +48,5 @@ context:
     $font-stack-base: "Inter, X-LocaleSpecific, sans-serif"
     $font-stack-firefox: "Metropolis, Inter, X-LocaleSpecific, sans-serif"
     $font-stack-mono: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace"
-    $font-stack-mozilla-text: "'Mozilla Text', Inter, 'Helvetica Neue', Arial, X-LocaleSpecific, sans-serif"
-    $font-stack-mozilla-headline: "'Mozilla Headline', Inter, 'Helvetica Neue', Arial, X-LocaleSpecific, sans-serif"
+    $font-stack-mozilla-text: "'Mozilla Text', 'Helvetica Neue', Arial, X-LocaleSpecific, sans-serif"
+    $font-stack-mozilla-headline: "'Mozilla Headline', 'Helvetica Neue', Arial, X-LocaleSpecific, sans-serif"
