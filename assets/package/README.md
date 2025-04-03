@@ -30,4 +30,4 @@ Install package with NPM and add it to your dependencies:
 
 ## Contributing
 
-If you'd like to contribute, check out [documentation](https://github.com/mozilla/protocol/blob/master/README.md) and our list of open [issues](https://github.com/mozilla/protocol/issues).
+If you'd like to contribute, check out [documentation](https://github.com/mozilla/protocol#readme) and our list of open [issues](https://github.com/mozilla/protocol/issues).
