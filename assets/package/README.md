@@ -20,7 +20,7 @@ Install package with NPM and add it to your dependencies:
 </tr>
 <tr>
 <td>Version</td>
-<td><a href="https://github.com/mozilla/protocol/blob/master/CHANGELOG.md">19.3.0</a></td>
+<td><a href="https://github.com/mozilla/protocol/blob/main/CHANGELOG.md">20.0.0</a></td>
 </tr>
 <tr>
 <td>Releases</td>
@@ -30,4 +30,4 @@ Install package with NPM and add it to your dependencies:
 
 ## Contributing
 
-If you'd like to contribute, check out [documentation](https://github.com/mozilla/protocol/blob/master/README.md) and our list of open [issues](https://github.com/mozilla/protocol/issues).
+If you'd like to contribute, check out [documentation](https://github.com/mozilla/protocol#readme) and our list of open [issues](https://github.com/mozilla/protocol/issues).
