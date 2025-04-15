@@ -2,6 +2,7 @@
 
 ## Bug Fixes
 
+* **css:** Button link focus styling doesn't override inherited visited link styling (#842)
 * **css:** Notification bar padding of links only working for complete sentences (#1000)
 * **css:** Missing explicit `mzp-c-notification-bar-cta` distinction (#1041)
 
