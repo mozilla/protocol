@@ -5,7 +5,7 @@ name: Brand Themes
 
 Protocol supports two distinct brands: Mozilla and Firefox.
 
-The Mozilla brand is distinguished by the Zilla Slab typeface and a limited color
+The Mozilla brand is distinguished by the Mozilla Headline and Mozilla Text typefaces and a limited color
 palette, mostly black and white. The Firefox brand uses the Metropolis typeface
 and is generally more colorful overall.
 

@@ -1,0 +1,68 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@use '../config';
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mozilla Text';
+    font-style: normal;
+    font-weight: normal;
+    src:
+        url('#{config.$font-path}/mozilla-text/MozillaText-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mozilla Text';
+    font-style: normal;
+    font-weight: 600;
+    src:
+        url('#{config.$font-path}/mozilla-text/MozillaText-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mozilla Text';
+    font-style: italic;
+    font-weight: 600;
+    src:
+        url('#{config.$font-path}/mozilla-text/MozillaText-SemiBoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mozilla Text';
+    font-style: normal;
+    font-weight: bold;
+    src:
+        url('#{config.$font-path}/mozilla-text/MozillaText-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mozilla Text';
+    font-style: italic;
+    font-weight: normal;
+    src:
+        url('#{config.$font-path}/mozilla-text/MozillaText-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mozilla Text';
+    font-style: italic;
+    font-weight: bold;
+    src:
+        url('#{config.$font-path}/mozilla-text/MozillaText-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: text-fallback;
+    src: local("Helvetica Neue");
+    ascent-override: 84%;
+    descent-override: 36%;
+    line-gap-override: 0%;
+    size-adjust: 98%;
+  }
