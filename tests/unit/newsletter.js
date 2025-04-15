@@ -98,18 +98,33 @@ describe('MzpNewsletter', function () {
     });
 
     describe('form submission', function () {
-        let xhr;
         let xhrRequests = [];
 
         beforeEach(function () {
-            xhr = sinon.useFakeXMLHttpRequest();
-            xhr.onCreate = (req) => {
-                xhrRequests.push(req);
+            xhrRequests = [];
+
+            function FakeXHR() {
+                this.headers = {};
+                this.readyState = 0;
+                this.status = 0;
+                this.responseText = '';
+                this.onload = null;
+
+                xhrRequests.push(this);
+            }
+
+            FakeXHR.prototype.open = jasmine.createSpy('open');
+            FakeXHR.prototype.setRequestHeader = function (header, value) {
+                this.headers[header] = value;
             };
+            FakeXHR.prototype.send = jasmine.createSpy('send');
+
+            spyOn(window, 'XMLHttpRequest').and.callFake(function () {
+                return new FakeXHR();
+            });
         });
 
         afterEach(function () {
-            xhr.restore();
             xhrRequests = [];
         });
 
@@ -121,11 +136,12 @@ describe('MzpNewsletter', function () {
             document.getElementById('id_lang').value = 'en';
             document.getElementById('privacy').click();
             document.getElementById('newsletter-submit').click();
-            xhrRequests[0].respond(
-                200,
-                { 'Content-Type': 'application/json' },
-                '{"status": "ok"}'
-            );
+
+            const req = xhrRequests[0];
+            req.status = 200;
+            req.readyState = 4;
+            req.responseText = '{"status": "ok"}';
+            req.onload({ target: req });
 
             expect(MzpNewsletter.handleFormSuccess).toHaveBeenCalled();
             expect(
@@ -148,11 +164,12 @@ describe('MzpNewsletter', function () {
             document.getElementById('id_lang').value = 'en';
             document.getElementById('privacy').click();
             document.getElementById('newsletter-submit').click();
-            xhrRequests[0].respond(
-                400,
-                { 'Content-Type': 'application/json' },
-                '{"status": "error", "desc": "Invalid email address"}'
-            );
+
+            const req = xhrRequests[0];
+            req.status = 400;
+            req.readyState = 4;
+            req.responseText = '{"status": "error", "desc": "Invalid email address"}';
+            req.onload({ target: req });
 
             expect(MzpNewsletter.handleFormError).toHaveBeenCalledWith(
                 'Invalid email address'
@@ -271,11 +288,12 @@ describe('MzpNewsletter', function () {
             document.getElementById('id_lang').value = 'en';
             document.getElementById('privacy').click();
             document.getElementById('newsletter-submit').click();
-            xhrRequests[0].respond(
-                400,
-                { 'Content-Type': 'application/json' },
-                '{"status": "error", "desc": "Unknown non-helpful error"}'
-            );
+
+            const req = xhrRequests[0];
+            req.status = 400;
+            req.readyState = 4;
+            req.responseText = '{"status": "error", "desc": "Unknown non-helpful error"}';
+            req.onload({ target: req });
 
             expect(MzpNewsletter.handleFormError).toHaveBeenCalled();
             expect(
@@ -298,11 +316,12 @@ describe('MzpNewsletter', function () {
             document.getElementById('id_lang').value = 'en';
             document.getElementById('privacy').click();
             document.getElementById('newsletter-submit').click();
-            xhrRequests[0].respond(
-                500,
-                { 'Content-Type': 'application/json' },
-                null
-            );
+
+            const req = xhrRequests[0];
+            req.status = 500;
+            req.readyState = 4;
+            req.responseText = null;
+            req.onload({ target: req });
 
             expect(MzpNewsletter.handleFormError).toHaveBeenCalled();
             expect(
@@ -334,11 +353,12 @@ describe('MzpNewsletter', function () {
             document.getElementById('id_lang').value = 'en';
             document.getElementById('privacy').click();
             document.getElementById('newsletter-submit').click();
-            xhrRequests[0].respond(
-                200,
-                { 'Content-Type': 'application/json' },
-                '{"status": "ok"}'
-            );
+
+            const req = xhrRequests[0];
+            req.status = 200;
+            req.readyState = 4;
+            req.responseText = '{"status": "ok"}';
+            req.onload({ target: req });
 
             expect(MzpNewsletter.handleFormSuccess).toHaveBeenCalled();
             expect(testObj.successCallback).toHaveBeenCalled();
@@ -361,11 +381,12 @@ describe('MzpNewsletter', function () {
             document.getElementById('id_lang').value = 'en';
             document.getElementById('privacy').click();
             document.getElementById('newsletter-submit').click();
-            xhrRequests[0].respond(
-                500,
-                { 'Content-Type': 'application/json' },
-                null
-            );
+
+            const req = xhrRequests[0];
+            req.status = 500;
+            req.readyState = 4;
+            req.responseText = null;
+            req.onload({ target: req });
 
             expect(MzpNewsletter.handleFormError).toHaveBeenCalled();
             expect(testObj.errorCallback).toHaveBeenCalled();
