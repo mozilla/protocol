@@ -4,61 +4,42 @@
 
 @use '../../includes/lib' as *;
 
-:link {
-    color: $link-color;
+a {
+    color: var(--link-color);
     text-decoration: underline;
 
     &:hover,
     &:focus,
     &:active {
-        color: $link-color-hover;
+        color: var(--link-color-hover);
         text-decoration: none;
     }
 
     &:active {
         background-color: rgba(0, 0, 0, 0.05);
     }
-
-    @supports (--css: variables) {
-        color: var(--link-color);
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: var(--link-color-hover);
-        }
-    }
 }
 
 :visited {
-    color: $link-color-visited;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $link-color-visited-hover;
-    }
-
-    @supports (--css: variables) {
-        color: var(--link-color-visited);
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: var(--link-color-visited-hover);
-        }
-    }
+    --link-color: var(--link-color-visited);
+    --link-color-hover: var(--link-color-visited-hover);
 }
 
 .mzp-t-dark {
-    @include light-links;
+    --link-color: var(--link-color-inverse);
+    --link-color-hover: var(--link-color-hover-inverse);
+    --link-color-visited: var(--link-color-visited-inverse);
+    --link-color-visited-hover:var(--link-color-visited-hover-inverse);
+}
+
+.mzp-t-white-links {
+    --link-color: $color-white;
+    --link-color-hover: $color-white;
+    --link-color-visited: $color-white;
+    --link-color-visited-hover: $color-white;
 }
 
 .mzp-c-cta-link {
-    font-family: $button-font-family;
+    font-family: var(--button-font-family);
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--button-font-family);
-    }
 }
