@@ -17,12 +17,15 @@ a {
         background-color: rgba(0, 0, 0, 0.05);
     }
 
+    // check support and fallback of :where
     &:where(:visited) {
         --link-color: var(--link-color-visited);
         --link-color-hover: var(--link-color-visited-hover);
     }
 }
 
+// any descendant link will inherit dark theming (replace light-links mixin)
+// this might belong in root file? site-wide dark theme class
 .mzp-t-dark {
     --link-color: var(--link-color-inverse);
     --link-color-hover: var(--link-color-hover-inverse);
@@ -30,6 +33,8 @@ a {
     --link-color-visited-hover:var(--link-color-visited-hover-inverse);
 }
 
+// any descendant link will inherit white theming (replace white-links mixin)
+// link-specific theme class
 .mzp-t-white-links {
     --link-color: $color-white;
     --link-color-hover: $color-white;
@@ -37,6 +42,9 @@ a {
     --link-color-visited-hover: $color-white;
 }
 
+// this might belong in a different CTA file?
+// it's not meant to apply to `a` elements unless they have the class added directly
+// the other classes in this file are theme containers that select `a` elements inside them
 .mzp-c-cta-link {
     font-family: var(--button-font-family);
     font-weight: bold;
