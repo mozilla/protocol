@@ -4,6 +4,12 @@
 
 @use '../../includes/lib' as *;
 
+// check support and fallback of :where
+a:where(:visited) {
+    --link-color: var(--link-color-visited);
+    --link-color-hover: var(--link-color-visited-hover);
+}
+
 a {
     color: var(--link-color);
     text-decoration: underline;
@@ -15,12 +21,6 @@ a {
 
     &:where(:active) {
         background-color: rgba(0, 0, 0, 0.05);
-    }
-
-    // check support and fallback of :where
-    &:where(:visited) {
-        --link-color: var(--link-color-visited);
-        --link-color-hover: var(--link-color-visited-hover);
     }
 }
 
@@ -36,10 +36,10 @@ a {
 // any descendant link will inherit white theming (replace white-links mixin)
 // link-specific theme class
 .mzp-t-white-links {
-    --link-color: $color-white;
-    --link-color-hover: $color-white;
-    --link-color-visited: $color-white;
-    --link-color-visited-hover: $color-white;
+    --link-color: #{$color-white};
+    --link-color-hover: #{$color-white};
+    --link-color-visited: #{$color-white};
+    --link-color-visited-hover: #{$color-white};
 }
 
 // this might belong in a different CTA file?
