@@ -4,12 +4,6 @@
 
 @use '../../includes/lib' as *;
 
-// check support and fallback of :where
-a:where(:visited) {
-    --link-color: var(--link-color-visited);
-    --link-color-hover: var(--link-color-visited-hover);
-}
-
 a {
     color: var(--link-color);
     text-decoration: underline;
@@ -21,6 +15,14 @@ a {
 
     &:where(:active) {
         background-color: rgba(0, 0, 0, 0.05);
+    }
+}
+
+a:where(:visited) {
+    color: var(--link-color-visited);
+
+    &:where(:hover, :focus, :active) {
+        color: var(--link-color-visited-hover);
     }
 }
 
