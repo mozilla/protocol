@@ -8,21 +8,19 @@ a {
     color: var(--link-color);
     text-decoration: underline;
 
-    &:hover,
-    &:focus,
-    &:active {
+    &:where(:hover, :focus, :active) {
         color: var(--link-color-hover);
         text-decoration: none;
     }
 
-    &:active {
+    &:where(:active) {
         background-color: rgba(0, 0, 0, 0.05);
     }
-}
 
-:visited {
-    --link-color: var(--link-color-visited);
-    --link-color-hover: var(--link-color-visited-hover);
+    &:where(:visited) {
+        --link-color: var(--link-color-visited);
+        --link-color-hover: var(--link-color-visited-hover);
+    }
 }
 
 .mzp-t-dark {
