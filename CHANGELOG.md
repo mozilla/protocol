@@ -1,9 +1,20 @@
-# HEAD
+# 21.0.0
+
+## Features
+
+* **assets:** (breaking) Update @mozilla-protocol/assets to 6.0.1
+* **css:** Update navigation and footer with Mozilla logo lockup.
 
 ## Bug Fixes
 
 * **css:** Notification bar padding of links only working for complete sentences (#1000)
 * **css:** Missing explicit `mzp-c-notification-bar-cta` distinction (#1041)
+* **css:** Fix logo size in navigation in Firefox variant on large screen
+
+## Migration Tips
+
+* The new Mozilla wordmark files are the same height but longer. If you are explicitly declaring a width for them, you should update it (Tip: check your CSS background images too.)
+* The logo files are no longer square, so check their dimensions too (social files remain square)
 
 # 20.0.0
 
