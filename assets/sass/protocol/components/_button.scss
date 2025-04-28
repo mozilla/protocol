@@ -158,23 +158,20 @@
 // * -------------------------------------------------------------------------- */
 // Secondary
 
-/* stylelint-disable-next-line no-duplicate-selectors */
-.mzp-c-button {
-    &.mzp-t-secondary {
+.mzp-c-button.mzp-t-secondary {
+    background-color: transparent;
+    border-color: $color-black;
+    color: $color-black;
+
+    @include default-states;
+
+    // dark
+    &.mzp-t-dark {
         background-color: transparent;
-        border-color: $color-black;
-        color: $color-black;
+        border-color: $color-white;
+        color: $color-white;
 
-        @include default-states;
-
-        // dark
-        &.mzp-t-dark {
-            background-color: transparent;
-            border-color: $color-white;
-            color: $color-white;
-
-            @include default-states-dark;
-        }
+        @include default-states-dark;
     }
 }
 
@@ -212,50 +209,47 @@
 // * -------------------------------------------------------------------------- */
 // Neutral Buttons
 
-/* stylelint-disable-next-line no-duplicate-selectors */
-.mzp-c-button {
-    &.mzp-t-neutral {
-        background-color: transparent;
-        border-color: $color-marketing-gray-30;
+.mzp-c-button.mzp-t-neutral {
+    background-color: transparent;
+    border-color: $color-marketing-gray-30;
+    color: $color-marketing-gray-70;
+
+    &:focus {
+        border-color: forms.$button-border-color-focus;
+    }
+
+    &:hover {
+        background-color: $color-marketing-gray-20;
+        border-color: $color-marketing-gray-40;
         color: $color-marketing-gray-70;
+    }
+
+    &:active {
+        background-color: $color-marketing-gray-20;
+        border-color: $color-marketing-gray-50;
+        color: $color-marketing-gray-70;
+    }
+
+    // dark
+    &.mzp-t-dark {
+        background-color: rgba($color-white, 0.1);
+        border-color: rgba($color-white, 0.6);
+        color: $color-white;
 
         &:focus {
             border-color: forms.$button-border-color-focus;
         }
 
         &:hover {
-            background-color: $color-marketing-gray-20;
-            border-color: $color-marketing-gray-40;
-            color: $color-marketing-gray-70;
+            background-color: rgba($color-white, 0.2);
+            border-color: rgba($color-white, 0.6);
+            color: $color-white;
         }
 
         &:active {
-            background-color: $color-marketing-gray-20;
-            border-color: $color-marketing-gray-50;
-            color: $color-marketing-gray-70;
-        }
-
-        // dark
-        &.mzp-t-dark {
-            background-color: rgba($color-white, 0.1);
-            border-color: rgba($color-white, 0.6);
+            background-color: rgba($color-white, 0.2);
+            border-color: rgba($color-white, 0.4);
             color: $color-white;
-
-            &:focus {
-                border-color: forms.$button-border-color-focus;
-            }
-
-            &:hover {
-                background-color: rgba($color-white, 0.2);
-                border-color: rgba($color-white, 0.6);
-                color: $color-white;
-            }
-
-            &:active {
-                background-color: rgba($color-white, 0.2);
-                border-color: rgba($color-white, 0.4);
-                color: $color-white;
-            }
         }
     }
 }
