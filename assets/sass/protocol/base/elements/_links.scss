@@ -32,7 +32,7 @@ a:where(:visited) {
     --link-color: var(--link-color-inverse);
     --link-color-hover: var(--link-color-hover-inverse);
     --link-color-visited: var(--link-color-visited-inverse);
-    --link-color-visited-hover:var(--link-color-visited-hover-inverse);
+    --link-color-visited-hover: var(--link-color-visited-hover-inverse);
 }
 
 // any descendant link will inherit white theming (replace white-links mixin)
@@ -44,9 +44,7 @@ a:where(:visited) {
     --link-color-visited-hover: #{$color-white};
 }
 
-// this might belong in a different CTA file?
-// it's not meant to apply to `a` elements unless they have the class added directly
-// the other classes in this file are theme containers that select `a` elements inside them
+// apply directly to link
 .mzp-c-cta-link {
     font-family: var(--button-font-family);
     font-weight: bold;

@@ -76,7 +76,7 @@
 // * -------------------------------------------------------------------------- */
 // Button shape and size
 
-.mzp-c-button /* stylelint-disable-line no-duplicate-selectors */ {
+.mzp-c-button {
     @include border-box;
     @include font-size(16px);
     @include transition(background-color 100ms, box-shadow 100ms, color 100ms);
