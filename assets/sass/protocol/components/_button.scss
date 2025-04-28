@@ -76,8 +76,7 @@
 // * -------------------------------------------------------------------------- */
 // Button shape and size
 
-.mzp-c-button, /* stylelint-disable-line no-duplicate-selectors */
-a.mzp-c-button {
+.mzp-c-button /* stylelint-disable-line no-duplicate-selectors */ {
     @include border-box;
     @include font-size(16px);
     @include transition(background-color 100ms, box-shadow 100ms, color 100ms);
@@ -139,8 +138,7 @@ a.mzp-c-button {
 // Primary
 
 /* stylelint-disable-next-line no-duplicate-selectors */
-.mzp-c-button,
-a.mzp-c-button {
+.mzp-c-button {
     background-color: $color-black;
     border: 2px solid $color-black;
     color: $color-white;
@@ -161,8 +159,7 @@ a.mzp-c-button {
 // Secondary
 
 /* stylelint-disable-next-line no-duplicate-selectors */
-.mzp-c-button,
-a.mzp-c-button {
+.mzp-c-button {
     &.mzp-t-secondary {
         background-color: transparent;
         border-color: $color-black;
@@ -184,8 +181,7 @@ a.mzp-c-button {
 // * -------------------------------------------------------------------------- */
 // Product Buttons
 
-.mzp-c-button.mzp-t-product,
-a.mzp-c-button.mzp-t-product {
+.mzp-c-button.mzp-t-product {
     background-color: $color-blue-50;
     border-color: transparent;
     color: $color-white;
@@ -217,8 +213,7 @@ a.mzp-c-button.mzp-t-product {
 // Neutral Buttons
 
 /* stylelint-disable-next-line no-duplicate-selectors */
-.mzp-c-button,
-a.mzp-c-button {
+.mzp-c-button {
     &.mzp-t-neutral {
         background-color: transparent;
         border-color: $color-marketing-gray-30;
