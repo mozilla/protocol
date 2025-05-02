@@ -14,7 +14,7 @@
 ## Migration Tips
 
 * The new Mozilla wordmark files are the same height but longer. If you are explicitly declaring a width for them, you should update it (Tip: check your CSS background images too.)
-* The logo files are no longer square, so check their dimensions too (social files remain square)
+* The flat logo files are no longer square, so check their dimensions too (social files remain square)
 
 # 20.0.0
 
