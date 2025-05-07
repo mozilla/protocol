@@ -1,3 +1,7 @@
+# HEAD
+
+* **assets:** Update @mozilla-protocol/assets to 6.1.1
+
 # 21.0.0
 
 ## Features
