@@ -52,13 +52,12 @@
     margin-bottom: $spacing-xl;
 
     a {
-        background: url('#{$image-path}/logos/mozilla/logo-word-hor-white.svg') no-repeat;
-
-        @include background-size(100px, 32px);
+        background: url('#{$image-path}/logos/mozilla/logo-lockup-hor-white.svg') no-repeat;
+        @include background-size(134px, 32px);
         @include image-replaced;
         display: inline-block;
         height: 32px;
-        width: 100px;
+        width: 134px;
     }
 }
 

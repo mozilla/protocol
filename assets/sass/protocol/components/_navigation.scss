@@ -78,14 +78,14 @@
     @include bidi(((float, left, right),));
 
     a {
-        @include background-size(84px, 24px);
+        @include background-size(101px, 24px);
         @include image-replaced;
-        background-image: url('#{$image-path}/logos/mozilla/logo-word-hor.svg');
+        background-image: url('#{$image-path}/logos/mozilla/logo-lockup-hor.svg');
         background-repeat: no-repeat;
         display: block;
         height: 24px;
         margin: 0 auto;
-        width: 84px;
+        width: 101px;
     }
 
     @media #{$mq-md} {
@@ -98,13 +98,6 @@
 
     @media #{$mq-lg} {
         @include bidi(((margin, $spacing-lg ($spacing-md * 2) $spacing-lg 0, $spacing-lg 0 $spacing-lg ($spacing-md * 2)),));
-
-        a {
-            @include background-size(112px, 32px);
-            height: 32px;
-            margin-top: $spacing-xs;
-            width: 112px;
-        }
     }
 
     @media #{$mq-xl} {
@@ -127,6 +120,7 @@
 
         @media #{$mq-lg} {
             a {
+                @include background-size(109px, 36px);
                 background-image: url('#{$image-path}/logos/firefox/logo-word-hor.svg');
                 height: 36px;
                 margin-top: 1px;
