@@ -32,7 +32,7 @@
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
     "@frctl/nunjucks": "^2.0.15",
-    "@mozilla-protocol/assets": "^6.0.1",
+    "@mozilla-protocol/assets": "^6.1.1",
     "@mozilla-protocol/tokens": "^6.0.0",
     "babel-loader": "^10.0.0",
     "clean-webpack-plugin": "^4.0.0",
