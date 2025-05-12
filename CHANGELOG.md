@@ -2,6 +2,10 @@
 
 * **assets:** Update @mozilla-protocol/assets to 6.1.1
 
+## Bug Fixes
+
+* **css:** Footer bottom border and spacing changes tweaks (#1061)
+
 # 21.0.0
 
 ## Features

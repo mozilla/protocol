@@ -66,13 +66,14 @@
 
 .mzp-c-footer-sections {
     @include clearfix;
+    border-bottom: 1px solid $color-marketing-gray-80;
+    padding-bottom: $layout-lg;
 
-    @media #{$mq-md} {
-        border-bottom: 1px solid $color-marketing-gray-80;
-        padding-bottom: $layout-lg;
+    @media #{$mq-sm} {
+        padding-bottom: $layout-sm;
     }
 
-    @media #{$mq-lg} {
+    @media #{$mq-xl} {
         padding-bottom: $layout-md;
     }
 }
