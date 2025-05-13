@@ -4,25 +4,28 @@
 
 @use '../../includes/lib' as *;
 
+// Rely on source order for the stateful style overrides
+// 1. Visited
+// 2. Hover
+// 3. Active
+// 4. Focus
+
+
 a {
     color: var(--link-color);
     text-decoration: underline;
 
-    &:where(:hover, :focus, :active) {
+    &:visited {
+        color: var(--link-color-visited);
+    }
+
+    &:hover, &:active, &:focus {
         color: var(--link-color-hover);
         text-decoration: none;
     }
 
-    &:where(:active) {
+    &:active {
         background-color: rgba(0, 0, 0, 0.05);
-    }
-}
-
-a:where(:visited) {
-    color: var(--link-color-visited);
-
-    &:where(:hover, :focus, :active) {
-        color: var(--link-color-visited-hover);
     }
 }
 
