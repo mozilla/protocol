@@ -20,7 +20,8 @@ a {
     }
 
     &:hover, &:active, &:focus {
-        color: var(--link-color-hover);
+        /* stylelint-disable-next-line color-function-notation */
+        color: var(--link-color-with-state, hsl(from var(--link-color) h s calc(l - 10)));
         text-decoration: none;
     }
 
@@ -33,18 +34,17 @@ a {
 // this might belong in root file? site-wide dark theme class
 .mzp-t-dark {
     --link-color: var(--link-color-inverse);
-    --link-color-hover: var(--link-color-hover-inverse);
     --link-color-visited: var(--link-color-visited-inverse);
-    --link-color-visited-hover: var(--link-color-visited-hover-inverse);
+    /* stylelint-disable-next-line color-function-notation */
+    --link-color-with-state: hsl(from var(--link-color-inverse) h s calc(l + 10));
 }
 
 // any descendant link will inherit white theming (replace white-links mixin)
 // link-specific theme class
 .mzp-t-white-links {
     --link-color: #{$color-white};
-    --link-color-hover: #{$color-white};
     --link-color-visited: #{$color-white};
-    --link-color-visited-hover: #{$color-white};
+    --link-color-with-state: #{$color-white};
 }
 
 // apply directly to link
