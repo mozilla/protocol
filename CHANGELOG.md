@@ -2,6 +2,14 @@
 
 * **assets:** Update @mozilla-protocol/assets to 6.1.1
 
+## Features
+
+* **css:** Footer changes: spacing, colour, font size. (#1063)
+
+## Migration Tips
+
+* Un-customized implementations of the footer will not break. If you have made customizations review it at all breakpoints.
+
 # 21.0.0
 
 ## Features
