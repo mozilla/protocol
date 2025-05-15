@@ -71,7 +71,7 @@
     @supports (display: grid) {
         @media #{$mq-md} {
             .mzp-l-content {
-                @include grid-column-gap($spacing-xl);
+                grid-column-gap: $spacing-xl;
                 display: grid;
                 grid-template-columns: 2fr 1fr;
             }
@@ -82,7 +82,7 @@
             }
 
             .mzp-c-callout-cta {
-                @include flexbox;
+                display: flex;
                 align-items: center;
                 justify-content: flex-end;
                 width: auto;

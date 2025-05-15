@@ -1,6 +1,27 @@
 # HEAD
 
-* **assets:** Update @mozilla-protocol/assets to 6.1.1
+* **css:** (breaking) Remove support for vendor prefixing (#957)
+
+## Migration Tips
+
+* This version removes mixins which added vendor-prefixes. Browser support for these is now excellent.
+  - One migration path is to edit your code to use the unprefixed versions.
+  - Another option is to move these utility mixins into your own code base (though, be aware they are
+    no longer used in Protocol and this will not give you backwards compatible Protocol components).
+  - If you need that level of vendor prefix support consider adding a tool such as
+    [autoprefixer](https://github.com/postcss/autoprefixer) to your code base.
+  - Affected mixins are:
+    - `animation`
+    - `appearance`
+    - `background-size`
+    - `box-decoration-break`
+    - `box-sizing`
+    - `flexbox`, `flex`, `flex-direction`, `flex-wrap`, `align-items`, `justify-content`
+    - `grid*-gap`
+    - `inline-block`
+    - `multi-column*`
+    - `transform`, `transform-origin`, `transform-style`
+    - `transition`, `transition-property`, `transition-duration`, `transition-delay`
 
 ## Features
 
@@ -16,6 +37,7 @@
 
 * **assets:** (breaking) Update @mozilla-protocol/assets to 6.0.1
 * **css:** Update navigation and footer with Mozilla logo lockup.
+* **css:** Apply hover cursor from Details component to Details element (#948)
 
 ## Bug Fixes
 
@@ -42,6 +64,7 @@
 
 * **fonts:** Any use of `font-mozilla` mixin should be replaced with `font-mozilla-headline`. NOTE: we recommend `font-mozilla-headline` only for text over 24px (below should be `font-mozilla-text`)
 * Headings are now [balanced](https://developer.mozilla.org/docs/Web/CSS/text-wrap-style#balanced_text), which can impact other wrapping rules. Make sure any changes to `h1`–`h6` rendering end up styled as expected, especially if you apply any `white-space`, `word-break` or `hyphens` customizations.
+
 * See notes for [Protocol Assets 5.4.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#540)
 
 # 19.3.0

@@ -53,7 +53,7 @@ $logos: (
     }
 
     &.mzp-a-fade-out {
-        @include animation(mzp-a-fade-out 100ms ease 5ms both);
+        animation: mzp-a-fade-out 100ms ease 5ms both; /* stylelint-disable-line no-unknown-animations */
     }
 
     @media #{$mq-sm} {
@@ -83,7 +83,7 @@ $logos: (
     &.mzp-t-product-nightly {
         .mzp-c-sticky-promo-title {
             @include bidi(((background-position, top left, top right),));
-            @include background-size(auto 40px);
+            background-size: auto 40px;
             background-position: top left;
             background-repeat: no-repeat;
             padding: (40px + $spacing-lg) 0 0;
