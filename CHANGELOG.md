@@ -1,3 +1,7 @@
+* Dropped support for font-sizes in pixels, all font-sizes are in rem now.
+* Removed `text-display-*` mixins. See migration notes for version 11.0.2.
+
+
 # HEAD
 
 * **assets:** Update @mozilla-protocol/assets to 6.1.1
@@ -9,6 +13,7 @@
 ## Migration Tips
 
 * Un-customized implementations of the footer will not break. If you have made customizations review it at all breakpoints.
+
 
 # 21.0.0
 
@@ -42,8 +47,6 @@
 
 * **fonts:** Any use of `font-mozilla` mixin should be replaced with `font-mozilla-headline`. NOTE: we recommend `font-mozilla-headline` only for text over 24px (below should be `font-mozilla-text`)
 * Headings are now [balanced](https://developer.mozilla.org/docs/Web/CSS/text-wrap-style#balanced_text), which can impact other wrapping rules. Make sure any changes to `h1`–`h6` rendering end up styled as expected, especially if you apply any `white-space`, `word-break` or `hyphens` customizations.
-* Dropped support for font-sizes in pixels, all font-sizes are in rem now.
-* Removed `text-display-*` mixins. See migration notes for version 11.0.2.
 * See notes for [Protocol Assets 5.4.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#540)
 
 # 19.3.0

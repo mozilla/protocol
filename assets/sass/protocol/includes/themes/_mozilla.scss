@@ -39,7 +39,7 @@
 }
 
 %mozilla-type-scale {
-    // type scale
+    // title
     --title-2xl-size: 4.125rem;
     --title-2xl-line-height: 1.1;
     --title-xl-size: 3.5rem;
@@ -56,6 +56,8 @@
     --title-2xs-line-height: 1.1;
     --title-3xs-size: 1.125rem;
     --title-3xs-line-height: 1.1;
+
+    // body
     --body-xl-size: 1.125rem;
     --body-lg-size: 1rem;
     --body-md-size: 0.875rem;
@@ -64,32 +66,27 @@
     --body-line-height: 1.2;
 
     @media #{tokens.$mq-md} {
+        // title
         --title-2xl-size: 4.75rem;
-        --title-2xl-line-height: 1.1;
         --title-xl-size: 4.125rem;
-        --title-xl-line-height: 1.1;
         --title-lg-size: 3.5rem;
-        --title-lg-line-height: 1.1;
         --title-md-size: 3rem;
-        --title-md-line-height: 1.1;
         --title-sm-size: 2.375rem;
-        --title-sm-line-height: 1.1;
         --title-xs-size: 1.75rem;
-        --title-xs-line-height: 1.1;
         --title-2xs-size: 1.5rem;
-        --title-2xs-line-height: 1.1;
         --title-3xs-size: 1.125rem;
-        --title-3xs-line-height: 1.1;
+
+        // body
         --body-xl-size: 1.313rem;
         --body-lg-size: 1.125rem;
         --body-md-size: 1rem;
         --body-sm-size: 0.875rem;
         --body-xs-size: 0.75rem;
-        // --body-line-height: 1.2; doesn't change, no need to update
     }
 }
 
 %mozilla-type-scale-condensed {
+    // title
     --title-2xl-size: 1.625rem;
     --title-2xl-line-height: 1;
     --title-xl-size: 1.375rem;
@@ -107,6 +104,7 @@
     --title-3xs-size: 0.875rem;
     --title-3xs-line-height: 1;
 
+    // body
     --body-xl-size: 1rem;
     --body-lg-size: 0.875rem;
     --body-md-size: 0.75rem;
@@ -115,27 +113,21 @@
     --body-line-height: 1.2;
 
     @media #{tokens.$mq-md} {
+        // title
         --title-2xl-size: 2.125rem;
-        --title-2xl-line-height: 1;
         --title-xl-size: 1.625rem;
-        --title-xl-line-height: 1;
         --title-lg-size: 1.375rem;
-        --title-lg-line-height: 1;
         --title-md-size: 1.25rem;
-        --title-md-line-height: 1;
         --title-sm-size: 1.125rem;
-        --title-sm-line-height: 1;
         --title-xs-size: 1rem;
-        --title-xs-line-height: 1;
         --title-2xs-size: 0.875rem;
-        --title-2xs-line-height: 1;
         --title-3xs-size: 0.875rem;
-        --title-3xs-line-height: 1;
+
+        // body
         --body-xl-size: 1.125rem;
         --body-lg-size: 1rem;
         --body-md-size: 0.875rem;
         --body-sm-size: 0.75rem;
         --body-xs-size: 0.688rem;
-        // --body-line-height: 1.5; doesn't change, no need to update
     }
 }
