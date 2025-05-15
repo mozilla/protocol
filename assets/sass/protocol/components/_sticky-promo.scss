@@ -53,7 +53,7 @@ $logos: (
     }
 
     &.mzp-a-fade-out {
-        animation: mzp-a-fade-out 100ms ease 5ms both;
+        animation: mzp-a-fade-out 100ms ease 5ms both; /* stylelint-disable-line no-unknown-animations */
     }
 
     @media #{$mq-sm} {

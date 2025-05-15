@@ -179,7 +179,7 @@
         &.mzp-is-animated {
             .mzp-c-menu-panel,
             .mzp-c-menu-title::after {
-                animation: mzp-a-fade-in 80ms ease-in 0ms 1 normal both;
+                animation: mzp-a-fade-in 80ms ease-in 0ms 1 normal both; /* stylelint-disable-line no-unknown-animations */
             }
         }
 
