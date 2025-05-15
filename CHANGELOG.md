@@ -1,3 +1,7 @@
+* Dropped support for font-sizes in pixels, all font-sizes are in rem now.
+* Removed `text-display-*` mixins. See migration notes for version 11.0.2.
+
+
 # HEAD
 
 * **assets:** Update @mozilla-protocol/assets to 6.1.1
@@ -9,6 +13,7 @@
 ## Migration Tips
 
 * Un-customized implementations of the footer will not break. If you have made customizations review it at all breakpoints.
+
 
 # 21.0.0
 
