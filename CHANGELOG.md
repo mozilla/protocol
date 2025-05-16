@@ -2,17 +2,48 @@
 
 ## Features
 
-* **fonts:** Upgrade Inter font to version 4.1, drop WOFF 1.0 format (#1026)
-* **css:** Add `text-wrap: balance` to all headings (#910)
-* **css:** Apply hover cursor from Details component to Details element (#948)
+* **assets:** Update @mozilla-protocol/assets to 6.1.1
+* **css:** Footer changes: spacing, colour, font size. (#1063)
 
 ## Bug Fixes
 
 * **css:** Button link focus styling doesn't override inherited visited link styling (#842)
+
+## Migration Tips
+
+* Un-customized implementations of the footer will not break. If you have made customizations review it at all breakpoints.
+
+# 21.0.0
+
+## Features
+
+* **assets:** (breaking) Update @mozilla-protocol/assets to 6.0.1
+* **css:** Update navigation and footer with Mozilla logo lockup.
+
+## Bug Fixes
+
+* **css:** Notification bar padding of links only working for complete sentences (#1000)
+* **css:** Missing explicit `mzp-c-notification-bar-cta` distinction (#1041)
+* **css:** Fix logo size in navigation in Firefox variant on large screen
+
+## Migration Tips
+
+* The new Mozilla wordmark files are the same height but longer. If you are explicitly declaring a width for them, you should update it (Tip: check your CSS background images too.)
+* The flat logo files are no longer square, so check their dimensions too (social files remain square)
+
+# 20.0.0
+
+## Features
+
+* **fonts:** (breaking) Adds rebrand fonts, Mozilla Headline and Mozilla Text. Removes outdated Mozilla Brand font, Zilla Slab. New fonts will only support `woff2` format to simplify maintenance.
+* **fonts:** Upgrade Inter font to version 4.1, drop WOFF 1.0 format (#1026)
+* **css:** Add `text-wrap: balance` to all headings (#910)
+* **css:** Apply hover cursor from Details component to Details element (#948)
 * **assets:** Update @mozilla-protocol/assets to 5.4.0
 
 ## Migration Tips
 
+* **fonts:** Any use of `font-mozilla` mixin should be replaced with `font-mozilla-headline`. NOTE: we recommend `font-mozilla-headline` only for text over 24px (below should be `font-mozilla-text`)
 * Headings are now [balanced](https://developer.mozilla.org/docs/Web/CSS/text-wrap-style#balanced_text), which can impact other wrapping rules. Make sure any changes to `h1`–`h6` rendering end up styled as expected, especially if you apply any `white-space`, `word-break` or `hyphens` customizations.
 * See notes for [Protocol Assets 5.4.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#540)
 

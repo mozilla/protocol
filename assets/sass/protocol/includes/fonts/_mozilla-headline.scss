@@ -1,0 +1,32 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@use '../config';
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mozilla Headline';
+    font-style: normal;
+    font-weight: normal;
+    src:
+        url('#{config.$font-path}/mozilla-headline/MozillaHeadline-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Mozilla Headline';
+    font-style: normal;
+    font-weight: 600;
+    src:
+        url('#{config.$font-path}/mozilla-headline/MozillaHeadline-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: headline-fallback;
+    src: local("Helvetica Neue");
+    ascent-override: 84%;
+    descent-override: 36%;
+    line-gap-override: 0%;
+    size-adjust: 98%;
+  }
