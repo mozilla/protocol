@@ -69,10 +69,6 @@
     }
 }
 
-@mixin product-states-dark {
-    @include product-states;
-}
-
 // * -------------------------------------------------------------------------- */
 // Button shape and size
 
@@ -138,9 +134,9 @@ a.mzp-c-button {
 // * -------------------------------------------------------------------------- */
 // Primary
 
-/* stylelint-disable-next-line no-duplicate-selectors */
 .mzp-c-button,
-a.mzp-c-button {
+a.mzp-c-button:link,
+a.mzp-c-button:visited {
     background-color: $color-black;
     border: 2px solid $color-black;
     color: $color-white;
@@ -160,8 +156,7 @@ a.mzp-c-button {
 // * -------------------------------------------------------------------------- */
 // Secondary
 
-/* stylelint-disable-next-line no-duplicate-selectors */
-.mzp-c-button,
+.mzp-c-button, /* stylelint-disable-line no-duplicate-selectors */
 a.mzp-c-button {
     &.mzp-t-secondary {
         background-color: transparent;
@@ -185,7 +180,8 @@ a.mzp-c-button {
 // Product Buttons
 
 .mzp-c-button.mzp-t-product,
-a.mzp-c-button.mzp-t-product {
+a.mzp-c-button.mzp-t-product:link,
+a.mzp-c-button.mzp-t-product:visited {
     background-color: $color-blue-50;
     border-color: transparent;
     color: $color-white;
@@ -216,8 +212,7 @@ a.mzp-c-button.mzp-t-product {
 // * -------------------------------------------------------------------------- */
 // Neutral Buttons
 
-/* stylelint-disable-next-line no-duplicate-selectors */
-.mzp-c-button,
+.mzp-c-button, /* stylelint-disable-line no-duplicate-selectors */
 a.mzp-c-button {
     &.mzp-t-neutral {
         background-color: transparent;
@@ -266,7 +261,7 @@ a.mzp-c-button {
 }
 
 // * -------------------------------------------------------------------------- */
-// Download Button Molecule
+// Download Button
 
 .mzp-c-button-download-container {
     text-align: center;
