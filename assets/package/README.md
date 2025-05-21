@@ -20,7 +20,7 @@ Install package with NPM and add it to your dependencies:
 </tr>
 <tr>
 <td>Version</td>
-<td><a href="https://github.com/mozilla/protocol/blob/main/CHANGELOG.md">21.0.0</a></td>
+<td><a href="https://github.com/mozilla/protocol/blob/main/CHANGELOG.md">21.1.0</a></td>
 </tr>
 <tr>
 <td>Releases</td>
