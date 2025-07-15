@@ -215,6 +215,15 @@ const MzpNewsletter = {
         const countrySelect = form.querySelector('select[name="country"]');
         const lang = form.querySelector('#id_lang').value;
         const terms = form.querySelector('input[name="terms"]');
+        // Note: 'office_fax' is the honeypot field name used by Bedrock/Springfield
+        // See: https://github.com/mozilla/bedrock/issues/16231
+        const honeypotField = form.querySelector('input[name="office_fax"]');
+        if (honeypotField && honeypotField.value.trim()) {
+            MzpNewsletter.handleFormError(
+                ERROR_LIST.NOT_FOUND
+            );
+            return false;
+        }
 
         // Really basic client side email validity check.
         if (!MzpNewsletter.checkEmailValidity(email)) {
