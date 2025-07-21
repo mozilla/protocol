@@ -61,12 +61,14 @@
 //* -------------------------------------------------------------------------- */
 // images
 
-// SVGs - xmlns attribute must be first
-// https://github.com/mozilla/protocol-assets/blob/master/icons/expand-white.svg
-$svg-expand-white: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M12 3.515v16.97M3.515 12h16.97"/></g></svg>';
+// SVGs
+// - xmlns attribute must be first
+// - fill value is adjusted to match variable, in file it is currentColor
+// https://github.com/mozilla/protocol-assets/blob/main/icons/plus.svg
+$svg-expand-white: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="#fff" d="M2 8.75h5.25V14h1.5V8.75H14v-1.5H8.75V2h-1.5v5.25H2z"/></svg>';
 
-// https://github.com/mozilla/protocol-assets/blob/master/icons/expand.svg
-$svg-expand-black: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M12 3.515v16.97M3.515 12h16.97"/></g></svg>';
+// https://github.com/mozilla/protocol-assets/blob/main/icons/plus.svg
+$svg-expand-black: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="#000" d="M2 8.75h5.25V14h1.5V8.75H14v-1.5H8.75V2h-1.5v5.25H2z"/></svg>';
 
 // https://github.com/mozilla/protocol-assets/blob/master/icons/arrow-down.svg
 $svg-arrow-down-form: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><polyline stroke="#9595a2" stroke-width="2" points="5 9 12 16 19 9"></polyline></g></svg>';
