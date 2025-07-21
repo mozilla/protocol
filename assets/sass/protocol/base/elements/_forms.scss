@@ -304,7 +304,7 @@ select {
     @include forms.form-input;
     background-image: $url-image-arrow-down-form, forms.$select-bg;
     background-repeat: no-repeat, repeat;
-    background-size: 1.5em auto, 100%;
+    background-size: 1em auto, 100%;
     display: block;
     font-weight: normal;
     max-width: 100%;
