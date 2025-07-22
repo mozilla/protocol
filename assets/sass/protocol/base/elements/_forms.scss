@@ -215,12 +215,14 @@ input[type='search'] {
     background-image: $url-image-search-form;
     background-repeat: no-repeat;
     background-position: left 8px top 50%;
+    background-size: 1.25em;
     padding: forms.$field-padding forms.$field-padding forms.$field-padding calc(1.5em + #{forms.$field-padding * 2});
 
     &:disabled {
         background-image: $url-image-search-form;
         background-repeat: no-repeat;
         background-position: left 8px top 50%;
+        background-size: 1.25em;
         padding: forms.$field-padding forms.$field-padding forms.$field-padding calc(1.5em + #{forms.$field-padding * 2});
 
         &:hover {
