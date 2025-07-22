@@ -1,3 +1,18 @@
+# HEAD
+
+## Features
+
+* **component:** Update breadcrumb styles (#1036)
+
+## Bug Fixes
+
+* **css:** Breadcrumbs are wider than other site content (#933)
+
+## Migration Tips
+
+* Breadcrumb updates do not require any changes, however if you have local customizations double check them.
+
+
 # 21.1.0
 
 ## Features
