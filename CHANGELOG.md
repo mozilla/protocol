@@ -1,3 +1,9 @@
+# HEAD
+
+## Bug Fixes
+
+* **css:** newsletter and section heading components padding now matches other components
+
 # 21.1.0
 
 ## Features
