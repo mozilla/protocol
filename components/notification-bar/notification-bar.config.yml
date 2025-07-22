@@ -32,5 +32,5 @@ variants:
       user should take.
     context:
       class: mzp-t-click
-      close_button: False
+      close_button: True
       content: <a href="#" class="mzp-c-notification-bar-cta">Click this thing</a>
