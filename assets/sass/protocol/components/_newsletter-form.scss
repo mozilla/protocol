@@ -69,7 +69,7 @@
 
     @media #{$mq-md} {
         @include clearfix;
-        padding: $h-grid-md $v-grid-lg;
+        padding: $v-grid-md $h-grid-lg;
         max-width: none;
 
         .mzp-c-newsletter-image {
@@ -120,20 +120,20 @@
     }
 
     @media #{$mq-xl} {
-        padding: $h-grid-xl $layout-2xl;
+        padding: $v-grid-xl $layout-2xl;
     }
 
     @supports (--css: variables) {
         @media #{$mq-md} {
-            padding: var(--h-grid-md) var(--v-grid-lg);
+            padding: var(--v-grid-md) var(--h-grid-md);
         }
 
         @media #{$mq-lg} {
-            padding: var(--h-grid-lg) $layout-2xl;
+            padding: var(--v-grid-lg) $layout-2xl;
         }
 
         @media #{$mq-xl} {
-            padding: var(--h-grid-xl) $layout-2xl;
+            padding: var(--v-grid-xl) $layout-2xl;
         }
     }
 }

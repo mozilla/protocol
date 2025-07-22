@@ -10,16 +10,16 @@
 .mzp-c-section-heading {
     @include text-title-md;
     margin: 0 auto;
-    padding: $h-grid-xs $layout-xs;
+    padding: $v-grid-xs $layout-xs;
     max-width: $content-lg;
     text-align: center;
 
     @media #{$mq-md} {
-        padding: $h-grid-md $v-grid-md;
+        padding: $v-grid-md $h-grid-md;
     }
 
     @media #{$mq-xl} {
-        padding: $h-grid-xl $v-grid-xl;
+        padding: $v-grid-xl $h-grid-xl;
     }
 
     // rely on l-content for padding if nested
