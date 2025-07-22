@@ -214,16 +214,16 @@
     .mzp-c-menu-button-close {
         @include image-replaced;
         @include transition(transform 100ms ease-in-out);
-        background: transparent url('#{$image-path}/icons/close.svg') center center no-repeat;
+        background: transparent url('#{$image-path}/icons/close.svg') center center / 100% no-repeat;
         border: none;
         cursor: pointer;
         display: none;
-        height: 16px;
+        height: 24px;
         padding: 0;
         position: absolute;
         right: 0;
         top: -$spacing-sm;
-        width: 16px;
+        width: 24px;
 
         &:hover,
         &:focus {
