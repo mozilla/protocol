@@ -4,12 +4,21 @@
 
 @use '../../includes/lib' as *;
 
-:link {
+// Rely on source order for the stateful style overrides
+// 1. Visited
+// 2. Hover
+// 3. Active
+// 4. Focus
+
+a {
     color: $link-color;
     text-decoration: underline;
 
+    &:visited {
+        color: $link-color-visited;
+    }
+
     &:hover,
-    &:focus,
     &:active {
         color: $link-color-hover;
         text-decoration: none;
@@ -22,30 +31,13 @@
     @supports (--css: variables) {
         color: var(--link-color);
 
+        &:visited {
+            color: var(--link-color-visited);
+        }
+
         &:hover,
-        &:focus,
         &:active {
             color: var(--link-color-hover);
-        }
-    }
-}
-
-:visited {
-    color: $link-color-visited;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $link-color-visited-hover;
-    }
-
-    @supports (--css: variables) {
-        color: var(--link-color-visited);
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: var(--link-color-visited-hover);
         }
     }
 }

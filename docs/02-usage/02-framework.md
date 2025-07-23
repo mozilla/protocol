@@ -129,8 +129,6 @@ link-color-hover
 link-color-hover-inverse
 link-color-inverse
 link-color-visited
-link-color-visited-hover
-link-color-visited-hover-inverse
 link-color-visited-inverse
 title-font-family
 title-text-color

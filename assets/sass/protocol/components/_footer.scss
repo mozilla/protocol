@@ -21,8 +21,7 @@
     margin: 0;
     width: 100%;
 
-    a:link,
-    a:visited {
+    a {
         font-weight: normal;
         text-decoration: underline;
 
@@ -89,8 +88,7 @@
         margin-bottom: 0;
     }
 
-    a:link,
-    a:visited {
+    a {
         text-decoration: none;
 
         &:hover,
@@ -190,8 +188,7 @@
         }
     }
 
-    a:link,
-    a:visited {
+    a {
         font-weight: bold;
     }
 
@@ -234,8 +231,7 @@
     position: relative;
     color: $color-light-gray-50;
 
-    a:link,
-    a:visited {
+    a {
         color: $color-light-gray-50;
 
         &:hover,

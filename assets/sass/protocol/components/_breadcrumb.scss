@@ -39,10 +39,7 @@
         }
 
         a {
-            &:link,
-            &:visited {
-                text-decoration: underline;
-            }
+            text-decoration: underline;
 
             &:hover,
             &:active,
