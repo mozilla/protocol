@@ -27,8 +27,8 @@
     "webpack": "npm run lint && webpack --config webpack.docs.static.config.js --mode development && webpack --config webpack.docs.build.config.js --watch --mode development"
   },
   "dependencies": {
-    "@babel/core": "^7.27.1",
-    "@babel/preset-env": "^7.27.1",
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
     "@frctl/fractal": "^1.5.15",
     "@frctl/mandelbrot": "^1.10.3",
     "@frctl/nunjucks": "^2.0.15",
@@ -41,11 +41,11 @@
     "css-minimizer-webpack-plugin": "^7.0.2",
     "mini-css-extract-plugin": "^2.9.2",
     "postcss-scss": "^4.0.9",
-    "sass": "^1.87.0",
+    "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
-    "webpack": "^5.99.7",
+    "webpack": "^5.100.2",
     "webpack-cli": "^6.0.1",
-    "webpack-remove-empty-scripts": "^1.0.4"
+    "webpack-remove-empty-scripts": "^1.1.1"
   },
   "devDependencies": {
     "eslint": "^9.30.0",
