@@ -118,6 +118,6 @@ $logos: (
     }
 
     .mzp-t-dark & {
-        background: transparent url('#{$image-path}/icons/close-white.svg') center center no-repeat;
+        background-image: url('#{$image-path}/icons/close-white.svg');
     }
 }

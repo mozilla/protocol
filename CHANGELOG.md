@@ -3,6 +3,7 @@
 ## Features
 
 * **component:** Update breadcrumb styles (#1036)
+* **assets:** (breaking) Update @mozilla-protocol/assets to 7.0.1
 
 ## Bug Fixes
 
@@ -12,6 +13,15 @@
 
 * Breadcrumb updates do not require any changes, however if you have local customizations double check them.
 
+* Icons used internally with Protocol components have been updated but any icons used in consumer projects will have to consider the following:
+
+* New and updated icons have intrinsic width of 16x16 instead of 24x24. If you were relying on SVG width and height attributes for sizing, you may need to update by CSS sizing.
+
+* Updated icons are still square but do not have padding around the icon. This is particularly noticeable with menu and arrows. If you were relying on the icon for spacing, you may need to update to re-add that spacing through CSS.
+
+* Icons formerly known as "arrow" are now known as "caret" and there are new icon designs for "arrow" name. You will need to update naming to keep the "caret" design.
+
+* Find and replace `$url-image-arrow-down-` with `$url-image-caret-down-`
 
 # 21.1.0
 

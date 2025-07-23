@@ -214,7 +214,7 @@
     .mzp-c-menu-button-close {
         @include image-replaced;
         @include transition(transform 100ms ease-in-out);
-        background: transparent url('#{$image-path}/icons/close.svg') center center no-repeat;
+        background: transparent url('#{$image-path}/icons/close.svg') center center / 125% no-repeat;
         border: none;
         cursor: pointer;
         display: none;

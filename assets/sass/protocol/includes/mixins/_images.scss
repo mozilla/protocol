@@ -61,32 +61,34 @@
 // * -------------------------------------------------------------------------- */
 // images
 
-// SVGs - xmlns attribute must be first
-// https://github.com/mozilla/protocol-assets/blob/master/icons/expand-white.svg
-$svg-expand-white: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M12 3.515v16.97M3.515 12h16.97"/></g></svg>';
+// SVGs
+// - xmlns attribute must be first
+// - fill value is adjusted to match variable, in file it is currentColor
+// https://github.com/mozilla/protocol-assets/blob/main/icons/plus.svg
+$svg-expand-white: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="#fff" d="M2 8.75h5.25V14h1.5V8.75H14v-1.5H8.75V2h-1.5v5.25H2z"/></svg>';
 
-// https://github.com/mozilla/protocol-assets/blob/master/icons/expand.svg
-$svg-expand-black: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M12 3.515v16.97M3.515 12h16.97"/></g></svg>';
+// https://github.com/mozilla/protocol-assets/blob/main/icons/plus.svg
+$svg-expand-black: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="#000" d="M2 8.75h5.25V14h1.5V8.75H14v-1.5H8.75V2h-1.5v5.25H2z"/></svg>';
 
-// https://github.com/mozilla/protocol-assets/blob/master/icons/arrow-down.svg
-$svg-arrow-down-form: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><polyline stroke="#9595a2" stroke-width="2" points="5 9 12 16 19 9"></polyline></g></svg>';
-$svg-arrow-down-link: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><polyline stroke="#0060df" stroke-width="2" points="5 9 12 16 19 9"></polyline></g></svg>';
-$svg-arrow-down-link-hover: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><polyline stroke="#0250bb" stroke-width="2" points="5 9 12 16 19 9"></polyline></g></svg>';
+// https://github.com/mozilla/protocol-assets/blob/main/icons/caret-down.svg
+$svg-caret-down-form: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#9595a2" d="M14.64 5.3 8 11.94 1.36 5.3.3 6.36l7.7 7.7 7.7-7.7z"/></svg>';
+$svg-caret-down-link: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#0060df" d="M14.64 5.3 8 11.94 1.36 5.3.3 6.36l7.7 7.7 7.7-7.7z"/></svg>';
+$svg-caret-down-link-hover: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#0250bb" d="M14.64 5.3 8 11.94 1.36 5.3.3 6.36l7.7 7.7 7.7-7.7z"/></svg>';
 
-// https://github.com/mozilla/protocol-assets/blob/master/icons/download.svg
-$svg-download-link-hover: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"><g transform="translate(6.000000, 3.000000)" stroke="#0250bb" stroke-width="2"><path d="M0,18 L12,18"></path><polyline stroke-linejoin="round" points="0 8 6 14 12 8"></polyline><path d="M6,0 L6,14"></path></g></g></svg>';
+// https://github.com/mozilla/protocol-assets/blob/main/icons/download.svg
+$svg-download-link-hover: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><clipPath id="a"><path d="M0 0h16v16H0z"/></clipPath><g fill="#0250bb" clip-path="url(#a)"><path d="M7.25 0v10.21L3.53 6.49 2.47 7.55 8 13.08l5.53-5.53-1.06-1.06-3.72 3.72V0zM16 14.5H0V16h16z"/></g></svg>';
 
-// https://github.com/mozilla/protocol-assets/blob/master/icons/search.svg
-$svg-search-form: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(3.000000, 3.000000)" stroke="#9595a3" stroke-width="2"><circle cx="7" cy="7" r="7"></circle><path d="M12,12 L18,18" stroke-linecap="round"></path></g></g></svg>';
-$svg-search-link: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(3.000000, 3.000000)" stroke="#0060df" stroke-width="2"><circle cx="7" cy="7" r="7"></circle><path d="M12,12 L18,18" stroke-linecap="round"></path></g></g></svg>';
-$svg-search-link-hover: '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(3.000000, 3.000000)" stroke="#0250bb" stroke-width="2"><circle cx="7" cy="7" r="7"></circle><path d="M12,12 L18,18" stroke-linecap="round"></path></g></g></svg>';
+// https://github.com/mozilla/protocol-assets/blob/main/icons/search.svg
+$svg-search-form: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#9595a2" d="M12 6c0-3.31-2.69-6-6-6S0 2.69 0 6s2.69 6 6 6c1.39 0 2.66-.47 3.68-1.26l5.29 5.29 1.06-1.06-5.29-5.29A5.98 5.98 0 0 0 12 6m-6 4.5c-2.48 0-4.5-2.02-4.5-4.5S3.52 1.5 6 1.5s4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5"/></svg>';
+$svg-search-link: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#0060df" d="M12 6c0-3.31-2.69-6-6-6S0 2.69 0 6s2.69 6 6 6c1.39 0 2.66-.47 3.68-1.26l5.29 5.29 1.06-1.06-5.29-5.29A5.98 5.98 0 0 0 12 6m-6 4.5c-2.48 0-4.5-2.02-4.5-4.5S3.52 1.5 6 1.5s4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5"/></svg>';
+$svg-search-link-hover: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#0250bb" d="M12 6c0-3.31-2.69-6-6-6S0 2.69 0 6s2.69 6 6 6c1.39 0 2.66-.47 3.68-1.26l5.29 5.29 1.06-1.06-5.29-5.29A5.98 5.98 0 0 0 12 6m-6 4.5c-2.48 0-4.5-2.02-4.5-4.5S3.52 1.5 6 1.5s4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5"/></svg>';
 
 // converted to url(svg) value
 $url-image-expand-white: svg-url($svg-expand-white);
 $url-image-expand-black: svg-url($svg-expand-black);
-$url-image-arrow-down-form: svg-url($svg-arrow-down-form);
-$url-image-arrow-down-link: svg-url($svg-arrow-down-link);
-$url-image-arrow-down-link-hover: svg-url($svg-arrow-down-link-hover);
+$url-image-caret-down-form: svg-url($svg-caret-down-form);
+$url-image-caret-down-link: svg-url($svg-caret-down-link);
+$url-image-caret-down-link-hover: svg-url($svg-caret-down-link-hover);
 $url-image-download-link-hover: svg-url($svg-download-link-hover);
 $url-image-search-form: svg-url($svg-search-form);
 $url-image-search-link: svg-url($svg-search-link);
