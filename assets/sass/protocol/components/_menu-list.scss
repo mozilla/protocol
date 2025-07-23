@@ -89,7 +89,7 @@
             &::after {
                 @include background-size(20px, 20px);
                 @include bidi(((right, 0, left, auto),));
-                background: $url-image-arrow-down-link center bottom no-repeat;
+                background: $url-image-caret-down-link center bottom no-repeat;
                 bottom: 1px;
                 content: '';
                 display: inline-block;
@@ -110,7 +110,7 @@
                 text-decoration: none;
 
                 &::after {
-                    background-image: $url-image-arrow-down-link-hover;
+                    background-image: $url-image-caret-down-link-hover;
                 }
             }
         }

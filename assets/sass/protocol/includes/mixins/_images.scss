@@ -71,9 +71,9 @@ $svg-expand-white: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="1
 $svg-expand-black: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="#000" d="M2 8.75h5.25V14h1.5V8.75H14v-1.5H8.75V2h-1.5v5.25H2z"/></svg>';
 
 // https://github.com/mozilla/protocol-assets/blob/main/icons/caret-down.svg
-$svg-arrow-down-form: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#9595a2" d="M14.64 5.3 8 11.94 1.36 5.3.3 6.36l7.7 7.7 7.7-7.7z"/></svg>';
-$svg-arrow-down-link: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#0060df" d="M14.64 5.3 8 11.94 1.36 5.3.3 6.36l7.7 7.7 7.7-7.7z"/></svg>';
-$svg-arrow-down-link-hover: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#0250bb" d="M14.64 5.3 8 11.94 1.36 5.3.3 6.36l7.7 7.7 7.7-7.7z"/></svg>';
+$svg-caret-down-form: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#9595a2" d="M14.64 5.3 8 11.94 1.36 5.3.3 6.36l7.7 7.7 7.7-7.7z"/></svg>';
+$svg-caret-down-link: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#0060df" d="M14.64 5.3 8 11.94 1.36 5.3.3 6.36l7.7 7.7 7.7-7.7z"/></svg>';
+$svg-caret-down-link-hover: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#0250bb" d="M14.64 5.3 8 11.94 1.36 5.3.3 6.36l7.7 7.7 7.7-7.7z"/></svg>';
 
 // https://github.com/mozilla/protocol-assets/blob/main/icons/download.svg
 $svg-download-link-hover: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><clipPath id="a"><path d="M0 0h16v16H0z"/></clipPath><g fill="#0250bb" clip-path="url(#a)"><path d="M7.25 0v10.21L3.53 6.49 2.47 7.55 8 13.08l5.53-5.53-1.06-1.06-3.72 3.72V0zM16 14.5H0V16h16z"/></g></svg>';
@@ -86,9 +86,9 @@ $svg-search-link-hover: '<svg xmlns="http://www.w3.org/2000/svg" width="16" heig
 // converted to url(svg) value
 $url-image-expand-white: svg-url($svg-expand-white);
 $url-image-expand-black: svg-url($svg-expand-black);
-$url-image-arrow-down-form: svg-url($svg-arrow-down-form);
-$url-image-arrow-down-link: svg-url($svg-arrow-down-link);
-$url-image-arrow-down-link-hover: svg-url($svg-arrow-down-link-hover);
+$url-image-caret-down-form: svg-url($svg-caret-down-form);
+$url-image-caret-down-link: svg-url($svg-caret-down-link);
+$url-image-caret-down-link-hover: svg-url($svg-caret-down-link-hover);
 $url-image-download-link-hover: svg-url($svg-download-link-hover);
 $url-image-search-form: svg-url($svg-search-form);
 $url-image-search-link: svg-url($svg-search-link);
