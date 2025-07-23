@@ -21,6 +21,8 @@
 
 * Icons formerly known as "arrow" are now known as "caret" and there are new icon designs for "arrow" name. You will need to update naming to keep the "caret" design.
 
+* Find and replace `$url-image-arrow-down-` with `$url-image-caret-down-`
+
 # 21.1.0
 
 ## Features
