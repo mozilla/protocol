@@ -4,6 +4,7 @@
 
 * **component:** Update breadcrumb styles (#1036)
 * **assets:** (breaking) Update @mozilla-protocol/assets to 7.0.1
+* * **css:** SASS variable fallbacks have been removed for grid sizing tokens, font families, and colors. (#982)
 
 ## Bug Fixes
 
