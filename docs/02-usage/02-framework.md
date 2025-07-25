@@ -82,31 +82,6 @@ the Mozilla and Firefox brands. Themes work by declaring a set of CSS Custom Pro
 on the document's root element (`:root`) in `/includes/_themes.scss` and are retrieved
 using the `var()` function. The custom properties will be updated depending on what theme is declared.
 
-If you need to support legacy browsers, it is recommended to use the `@supports` feature query
-while using the Sass variable as a fall back.
-
-```scss
-.mzp-c-my-component {
-    background-color: $background-color;
-    color: $body-text-color;
-
-    .mzp-c-my-component-title {
-        color: $title-text-color;
-        font-family: $title-font-family;
-    }
-
-    @supports (--css: variables) {
-        background-color: var(--background-color);
-        color: var(--body-text-color);
-
-        .mzp-c-my-component-title {
-            color: var(--title-text-color);
-            font-family: var(--title-font-family);
-        }
-    }
-}
-```
-
 Use CSS Custom Properties for any themeable properties, especially basic
 colors for foreground (text) and backgrounds. Note that most colors have an
 “inverse” counterpart to use in dark style variants. Refer to `/includes/_themes.scss`

@@ -10,48 +10,28 @@
     }
 
     :link {
-        color: $link-color;
+        color: var(--link-color);
         text-decoration: underline;
 
         &:hover,
         &:focus,
         &:active {
-            color: $link-color-hover;
+            color: var(--link-color-hover);
             text-decoration: none;
         }
 
         &:active {
             background-color: rgb(0, 0, 0, 0.05);
         }
-
-        @supports (--css: variables) {
-            color: var(--link-color);
-
-            &:hover,
-            &:focus,
-            &:active {
-                color: var(--link-color-hover);
-            }
-        }
     }
 
     :visited {
-        color: $link-color-visited;
+        color: var(--link-color-visited);
 
         &:hover,
         &:focus,
         &:active {
-            color: $link-color-visited-hover;
-        }
-
-        @supports (--css: variables) {
-            color: var(--link-color-visited);
-
-            &:hover,
-            &:focus,
-            &:active {
-                color: var(--link-color-visited-hover);
-            }
+            color: var(--link-color-visited-hover);
         }
     }
 
@@ -61,16 +41,11 @@
     h4,
     h5,
     h6 {
-        font-family: $title-font-family;
-        color: $title-text-color;
+        font-family: var(--title-font-family);
+        color: var(--title-text-color);
         font-weight: bold;
         margin: 1em 0 0.5em;
         opacity: 1;
-
-        @supports (--css: variables) {
-            color: var(--title-text-color);
-            font-family: var(--title-font-family);
-        }
     }
 
     h1 {

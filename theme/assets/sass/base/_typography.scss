@@ -2,11 +2,7 @@
 
 body {
     @include font-base;
-    color: $body-text-color;
-
-    @supports (--css:variables) {
-        color: var(--body-text-color);
-    }
+    color: var(--body-text-color);
 }
 
 mark {

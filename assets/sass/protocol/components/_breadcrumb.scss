@@ -5,20 +5,20 @@
 @use '../includes/lib' as *;
 
 .mzp-c-breadcrumb {
-    background-color: $background-color-secondary;
+    background-color: var(--background-color-secondary);
     padding: $spacing-md 0;
 
     .mzp-c-breadcrumb-list {
         margin: 0 auto;
         max-width: $content-max;
-        padding: 0 $h-grid-xs;
+        padding: 0 var(--h-gris-xs);
 
         @media #{$mq-md} {
-            padding: 0 $h-grid-md;
+            padding: 0 var(--h-grid-md);
         }
 
         @media #{$mq-xl} {
-            padding: 0 $h-grid-xl;
+            padding: 0 var(--h-grid-xl);
         }
     }
 
@@ -53,14 +53,6 @@
     }
 
     &.mzp-t-dark {
-        background-color: $background-color-secondary-inverse;
-    }
-
-    @supports (--css: variables) {
-        background-color: var(--background-color-secondary);
-
-        &.mzp-t-dark {
-            background-color: var(--background-color-secondary-inverse);
-        }
+        background-color: var(--background-color-secondary-inverse);
     }
 }

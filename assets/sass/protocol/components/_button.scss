@@ -75,15 +75,15 @@
 .mzp-c-button, /* stylelint-disable-line no-duplicate-selectors */
 a.mzp-c-button {
     @include border-box;
-    @include font-size(16px);
+    font-size: 1rem; // 16px
     @include transition(background-color 100ms, box-shadow 100ms, color 100ms);
     border-radius: $border-radius-sm;
     border: 2px solid transparent;
     cursor: pointer;
     display: inline-block;
-    font-family: $button-font-family;
+    font-family: var(--button-font-family);
     font-weight: bold;
-    line-height: $body-line-height;
+    line-height: var(--body-line-height);
     padding: 6px $spacing-lg;
     text-align: center;
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
@@ -100,34 +100,29 @@ a.mzp-c-button {
         opacity: 0.6;
         pointer-events: none;
     }
-
-    @supports (--css: variables) {
-        font-family: var(--button-font-family);
-        line-height: var(--body-line-height);
-    }
 }
 
 // Sizes
 
 .mzp-c-button.mzp-t-sm {
-    @include font-size(12px);
+    font-size: 0.75rem; // 12px
     border-radius: $border-radius-xs;
     padding: 1px $spacing-md;
 }
 
 .mzp-c-button.mzp-t-small, // backwards compatability
 .mzp-c-button.mzp-t-md {
-    @include font-size(14px);
+    font-size: 0.875rem; // 14px
     padding: $spacing-xs $spacing-lg;
 }
 
 .mzp-c-button.mzp-t-lg {
-    @include font-size(16px);
+    font-size: 1rem; // 16px
     padding: 6px $spacing-lg;
 }
 
 .mzp-c-button.mzp-t-xl {
-    @include font-size(16px);
+    font-size: 1rem; // 16px
     padding: 10px $spacing-lg;
 }
 

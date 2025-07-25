@@ -13,26 +13,16 @@ h4,
 h5,
 h6 {
     $default-font-weight: bold;
-    font-family: $title-font-family;
-    color: $title-text-color;
-    font-weight: $default-font-weight;
+    font-family: var(--title-font-family);
+    font-variant-ligatures: var(--title-font-ligatures);
+    font-weight: var(--title-font-weight, #{$default-font-weight});
+    letter-spacing: var(--title-letter-spacing);
+    color: var(--title-text-color);
     text-wrap: balance;
     margin: 0 0 0.5em;
 
     .mzp-t-dark & {
-        color: $title-text-color-inverse;
-    }
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-        font-variant-ligatures: var(--title-font-ligatures);
-        font-weight: var(--title-font-weight, #{$default-font-weight});
-        letter-spacing: var(--title-letter-spacing);
-        color: var(--title-text-color);
-
-        .mzp-t-dark & {
-            color: var(--title-text-color-inverse);
-        }
+        color: var(--title-text-color-inverse);
     }
 }
 
