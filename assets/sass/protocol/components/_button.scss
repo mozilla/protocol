@@ -81,9 +81,9 @@ a.mzp-c-button {
     border: 2px solid transparent;
     cursor: pointer;
     display: inline-block;
-    font-family: $button-font-family;
+    font-family: var(--button-font-family);
     font-weight: bold;
-    line-height: $body-line-height;
+    line-height: var(--body-line-height);
     padding: 6px $spacing-lg;
     text-align: center;
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
@@ -99,11 +99,6 @@ a.mzp-c-button {
     &:disabled {
         opacity: 0.6;
         pointer-events: none;
-    }
-
-    @supports (--css: variables) {
-        font-family: var(--button-font-family);
-        line-height: var(--body-line-height);
     }
 }
 

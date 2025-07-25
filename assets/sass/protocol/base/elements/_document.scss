@@ -11,19 +11,12 @@ html {
 
 body {
     @include text-body-md;
-    background: $background-color;
-    color: $body-text-color;
-    font-family: $body-font-family;
-    line-height: $body-line-height;
+    background: var(--background-color);
+    color: var(--body-text-color);
+    font-family: var(--body-font-family);
+    line-height: var(--body-line-height);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-
-    @supports (--css: variable) {
-        background: var(--background-color);
-        color: var(--body-text-color);
-        font-family: var(--body-font-family);
-        line-height: var(--body-line-height);
-    }
 }
 
 // A few places use a class to hide elements. We should try to avoid that.

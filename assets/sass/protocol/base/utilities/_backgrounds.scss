@@ -7,45 +7,24 @@
 // Theme classes for background colors
 
 .mzp-t-background-secondary {
-    background-color: $background-color-secondary;
-
-    @supports (--css: variables) {
-        background-color: var(--background-color-secondary);
-    }
+    background-color: var(--background-color-secondary);
 }
 
 .mzp-t-background-tertiary {
-    background-color: $background-color-tertiary;
-
-    @supports (--css: variables) {
-        background-color: var(--background-color-tertiary);
-    }
+    background-color: var(--background-color-tertiary);
 }
 
 .mzp-t-dark {
-    background-color: $background-color-inverse;
-    color: $body-text-color-inverse;
-
-    @supports (--css: variables) {
-        background-color: var(--background-color-inverse);
-        color: var(--body-text-color-inverse);
-    }
+    background-color: var(--background-color-inverse);
+    color: var(--body-text-color-inverse);
 }
 
 .mzp-t-dark.mzp-t-background-secondary,
 .mzp-t-dark .mzp-t-background-secondary {
-    background-color: $background-color-secondary-inverse;
-
-    @supports (--css: variables) {
-        background-color: var(--background-color-secondary-inverse);
-    }
+    background-color: var(--background-color-secondary-inverse);
 }
 
 .mzp-t-dark.mzp-t-background-tertiary,
 .mzp-t-dark .mzp-t-background-tertiary {
-    background-color: $background-color-tertiary-inverse;
-
-    @supports (--css: variables) {
-        background-color: var(--background-color-tertiary-inverse);
-    }
+    background-color: var(--background-color-tertiary-inverse);
 }

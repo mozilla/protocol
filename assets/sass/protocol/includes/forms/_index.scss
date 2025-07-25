@@ -14,7 +14,7 @@
 
 // colors
 $form-red: #d70022;
-$form-text: $body-text-color-secondary;
+$form-text: var(--body-text-color-secondary);
 $form-inactive: $color-marketing-gray-70;
 
 // fields
@@ -67,13 +67,9 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
     @include text-body-sm;
     display: block;
     font-weight: bold;
-    line-height: $text-body-line-height;
+    line-height: var(--body-line-height);
     margin: 0;
     padding-bottom: $label-v-spacing;
-
-    @supports (--css: variables) {
-        line-height: var(--body-line-height);
-    }
 }
 
 @mixin form-info() {

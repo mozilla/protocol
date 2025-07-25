@@ -9,13 +9,9 @@
 }
 
 .mzp-c-menu-list-title {
-    font-family: $button-font-family;
+    font-family: var(--button-font-family);
     font-size: inherit;
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--button-font-family);
-    }
 }
 
 .mzp-c-menu-list-list {

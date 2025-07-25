@@ -9,15 +9,15 @@ blockquote {
     @include text-title-sm;
     border-color: $color-marketing-gray-20;
     border-style: solid;
-    color: $title-text-color;
-    font-family: $title-font-family;
+    color: var(--title-text-color);
+    font-family: var(--title-font-family);
     font-weight: bold;
     margin: $spacing-lg auto;
     padding: $spacing-sm $spacing-lg;
 
     cite {
         @include text-title-xs;
-        color: $body-text-color-secondary;
+        color: var(--body-text-color-secondary);
 
         &::before {
             content: '— ';
@@ -26,14 +26,5 @@ blockquote {
 
     & > :last-child {
         margin-bottom: 0;
-    }
-
-    @supports (--css: variables) {
-        color: var(--title-text-color);
-        font-family: var(--title-font-family);
-
-        cite {
-            color: var(--body-text-color-secondary);
-        }
     }
 }

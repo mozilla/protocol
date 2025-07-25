@@ -4,11 +4,6 @@
 
 .Document-title {
     @include text-title-lg;
-    font-family: $title-font-family;
-    color: $title-text-color;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-        color: var(--title-text-color);
-    }
+    font-family: var(--title-font-family);
+    color: var(--title-text-color);
 }

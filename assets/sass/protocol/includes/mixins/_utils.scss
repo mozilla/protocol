@@ -225,45 +225,23 @@
 // Light color links for dark backgrounds.
 @mixin light-links {
     a:link {
-        color: themes.$link-color-inverse;
+        color: var(--link-color-inverse);
     }
 
     a:visited {
-        color: themes.$link-color-visited-inverse;
+        color: var(--link-color-visited-inverse);
     }
 
     a:hover,
     a:focus,
     a:active {
-        color: themes.$link-color-hover-inverse;
+        color: var(--link-color-hover-inverse);
     }
 
     a:visited:hover,
     a:visited:focus,
     a:visited:active {
-        color: themes.$link-color-visited-hover-inverse;
-    }
-
-    @supports (--css: variables) {
-        a:link {
-            color: var(--link-color-inverse);
-        }
-
-        a:visited {
-            color: var(--link-color-visited-inverse);
-        }
-
-        a:hover,
-        a:focus,
-        a:active {
-            color: var(--link-color-hover-inverse);
-        }
-
-        a:visited:hover,
-        a:visited:focus,
-        a:visited:active {
-            color: var(--link-color-visited-hover-inverse);
-        }
+        color: var(--link-color-visited-hover-inverse);
     }
 }
 
