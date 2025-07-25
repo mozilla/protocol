@@ -29,8 +29,7 @@
         margin: 0 auto;
     }
 
-    a:link,
-    a:visited {
+    a {
         color: inherit;
         display: inline-block;
         font-size: inherit;
@@ -47,6 +46,7 @@
             margin: 0 $spacing-sm;
         }
     }
+
 
     &.mzp-is-sticky {
         left: $spacing-md;

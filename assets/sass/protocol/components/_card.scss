@@ -93,15 +93,11 @@
     .mzp-c-card-block-link {
         border-radius: $border-radius-xs;
         display: block;
+        color: $color-black;
+        text-decoration: none;
 
-        &:link,
-        &:visited {
-            color: $color-black;
-            text-decoration: none;
-
-            .mzp-c-card-cta-text {
-                color: $color-link;
-            }
+        .mzp-c-card-cta-text {
+            color: $color-link;
         }
 
         &:hover,
@@ -147,19 +143,16 @@
     }
 
     .mzp-c-card-block-link {
+        color: $body-text-color-inverse;
+
         &:hover,
         &:active,
         &:focus {
             box-shadow: 0 0 0 4px $color-marketing-gray-80;
         }
 
-        &:link,
-        &:visited {
+        .mzp-c-card-cta-text {
             color: $body-text-color-inverse;
-
-            .mzp-c-card-cta-text {
-                color: $body-text-color-inverse;
-            }
         }
     }
 
@@ -173,13 +166,10 @@
         }
 
         .mzp-c-card-block-link {
-            &:link,
-            &:visited {
-                color: var(--body-text-color-inverse);
+            color: var(--body-text-color-inverse);
 
-                .mzp-c-card-cta-text {
-                    color: var(--body-text-color-inverse);
-                }
+            .mzp-c-card-cta-text {
+                color: var(--body-text-color-inverse);
             }
         }
     }

@@ -12,16 +12,8 @@ $icon-size: 24px;
 
     .mzp-c-menu-item-link {
         display: block;
-
-        &:link,
-        &:visited {
-            color: $color-black;
-            text-decoration: none;
-
-            .mzp-c-menu-item-title {
-                border-bottom: 2px solid transparent;
-            }
-        }
+        color: $color-black;
+        text-decoration: none;
 
         &:hover,
         &:active,
@@ -31,6 +23,10 @@ $icon-size: 24px;
                 border-bottom: 2px solid $color-black;
                 color: $color-black;
             }
+        }
+
+        .mzp-c-menu-item-title {
+            border-bottom: 2px solid transparent;
         }
     }
 
@@ -80,18 +76,18 @@ $icon-size: 24px;
             word-wrap: break-word;
         }
 
-        a:link,
-        a:visited {
+        a {
             color: $color-black;
             text-decoration: none;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $color-black;
+                text-decoration: underline;
+            }
         }
 
-        a:hover,
-        a:active,
-        a:focus {
-            color: $color-black;
-            text-decoration: underline;
-        }
 
         @media #{$mq-sm} {
             li {
