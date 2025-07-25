@@ -75,7 +75,7 @@
 .mzp-c-button, /* stylelint-disable-line no-duplicate-selectors */
 a.mzp-c-button {
     @include border-box;
-    @include font-size(16px);
+    font-size: 1rem; // 16px
     @include transition(background-color 100ms, box-shadow 100ms, color 100ms);
     border-radius: $border-radius-sm;
     border: 2px solid transparent;
@@ -105,24 +105,24 @@ a.mzp-c-button {
 // Sizes
 
 .mzp-c-button.mzp-t-sm {
-    @include font-size(12px);
+    font-size: 0.75rem; // 12px
     border-radius: $border-radius-xs;
     padding: 1px $spacing-md;
 }
 
 .mzp-c-button.mzp-t-small, // backwards compatability
 .mzp-c-button.mzp-t-md {
-    @include font-size(14px);
+    font-size: 0.875rem; // 14px
     padding: $spacing-xs $spacing-lg;
 }
 
 .mzp-c-button.mzp-t-lg {
-    @include font-size(16px);
+    font-size: 1rem; // 16px
     padding: 6px $spacing-lg;
 }
 
 .mzp-c-button.mzp-t-xl {
-    @include font-size(16px);
+    font-size: 1rem; // 16px
     padding: 10px $spacing-lg;
 }
 

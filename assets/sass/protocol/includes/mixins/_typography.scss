@@ -27,27 +27,6 @@
 }
 
 // * -------------------------------------------------------------------------- */
-// A mixin to output font-size in rems with a px fallback for old browsers.
-// Declare sizes in pixels for ease and clarity, the mixin does the math.
-// Requires: remify(), pixify() - defined in includes/themes.scss.
-// Usage:
-//  .foo { @include font-size(24px); }
-
-@mixin font-size($size) {
-    // When unit is pixels, pass it through and convert to rem
-
-    @if math.unit($size) == 'px' {
-        font-size: $size;
-        font-size: functions.remify($size);
-    }
-
-    // When unit is not pixels, show an error
-    @else {
-        @error 'This mixin only accepts sizes in pixels. You declared `font-size(#{$size})`.';
-    }
-}
-
-// * -------------------------------------------------------------------------- */
 // Consistent font sizes. Avoid sizing text arbitrarily and use this
 // set of predefined sizes. Sizes adapt at common breakpoints, and
 // there's some redundancy at smaller sizes because we don't want things
