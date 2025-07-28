@@ -14,7 +14,7 @@ a {
     color: $link-color;
     text-decoration: underline;
 
-    &:visited {
+    &:where(:visited) {
         color: $link-color-visited;
     }
 
@@ -31,7 +31,7 @@ a {
     @supports (--css: variables) {
         color: var(--link-color);
 
-        &:visited {
+        &:where(:visited) {
             color: var(--link-color-visited);
         }
 

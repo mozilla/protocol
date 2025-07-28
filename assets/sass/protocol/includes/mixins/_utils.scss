@@ -227,7 +227,7 @@
     a {
         color: themes.$link-color-inverse;
 
-        &:visited {
+        &:where(:visited) {
             color: themes.$link-color-visited-inverse;
         }
 
@@ -242,7 +242,7 @@
         a {
             color: var(--link-color-inverse);
 
-            &:visited {
+            &:where(:visited) {
                 color: var(--link-color-visited-inverse);
             }
 
