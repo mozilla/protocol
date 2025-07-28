@@ -24,7 +24,7 @@
   * This will decrease the specificity of Protocol's link and button components, hopefully making local overrides easier, no need to change anything you already have in place.
   * Removal of `:link` pseudo classes in some places will mean that `<a>` elements which do not have a `href` value could now have link styles when previously they would not have. But, like, maybe don't do that?
   * Removed `:visted` styles for `.mzp-c-button` they should match unvisited styles, if you have `:visited` styles defined check they are still legible without the expected inherited styles.
-  * Removed the text colour change from `:link:focus` styles. Rely on the focus ring for a focus indicator instead.
+  * Removed the text colour change from `:focus` styles. Rely on the focus ring for a focus indicator instead.
 
 # 21.1.0
 

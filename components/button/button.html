@@ -9,33 +9,6 @@
 # iconStart     - markup
 # iconEnd       - markup
 #}
-
-<p><a href="https://www.mozilla.org">Visited</a></p>
-<p><a href="https://www.example.com/test">Unvisited</a></p>
-<p><button>button</button></p>
-
-<p><a href="https://www.mozilla.org" class="mzp-c-button">Visited</a></p>
-<p><a href="https://www.example.com/test" class="mzp-c-button">Unvisited</a></p>
-<p><button class="mzp-c-button">button</button></p>
-
-<p><a href="https://www.mozilla.org" class="mzp-c-button mzp-t-product">Visited</a></p>
-<p><a href="https://www.example.com/test" class="mzp-c-button mzp-t-product">Unvisited</a></p>
-<p><button class="mzp-c-button mzp-t-product">button</button></p>
-
-<div style="background-color: #000;">
-
- <p><a href="https://www.mozilla.org" class="mzp-c-button mzp-t-dark">Visited</a></p>
-<p><a href="https://www.example.com/test" class="mzp-c-button mzp-t-dark">Unvisited</a></p>
-<p><button class="mzp-c-button mzp-t-dark">button</button></p>
-
-<p><a href="https://www.mozilla.org" class="mzp-c-button mzp-t-product mzp-t-secondary mzp-t-dark">Visited</a></p>
-<p><a href="https://www.example.com/test" class="mzp-c-button mzp-t-product mzp-t-secondary mzp-t-dark">Unvisited</a></p>
-<p><button class="mzp-c-button mzp-t-product mzp-t-secondary mzp-t-dark">button</button></p>
-
-
-</div>
-
-
 {%- if link -%}
 <a class="mzp-c-button{% if class %} {{ class }}{% endif %}" href="{{ link }}">
   {%- if iconStart %}

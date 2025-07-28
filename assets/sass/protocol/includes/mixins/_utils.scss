@@ -232,7 +232,6 @@
         }
 
         &:hover,
-        &:focus,
         &:active {
             color: themes.$link-color-hover-inverse;
         }
@@ -247,7 +246,6 @@
             }
 
             &:hover,
-            &:focus,
             &:active {
                 color: var(--link-color-hover-inverse);
             }
@@ -261,7 +259,6 @@
         color: tokens.$color-white;
 
         &:hover,
-        &:focus,
         &:active {
             color: tokens.$color-white;
         }
