@@ -41,9 +41,9 @@
 %mozilla-type-scale {
     // type scale
     --title-2xl-size: 4.75rem;
-    --title-2xl-line-height: 1.1;
+    --title-2xl-line-height: 0.9;
     --title-xl-size: 4.125rem;
-    --title-xl-line-height: 1.1;
+    --title-xl-line-height: 0.9;
     --title-lg-size: 3.5rem;
     --title-lg-line-height: 1.1;
     --title-md-size: 3rem;
@@ -53,38 +53,38 @@
     --title-xs-size: 1.75rem;
     --title-xs-line-height: 1.1;
     --title-2xs-size: 1.5rem;
-    --title-2xs-line-height: 1.1;
+    --title-2xs-line-height: 1.25;
     --title-3xs-size: 1.125rem;
-    --title-3xs-line-height: 1.1;
+    --title-3xs-line-height: 1.25;
     --body-xl-size: 1.313rem;
     --body-lg-size: 1.125rem;
     --body-md-size: 1rem;
     --body-sm-size: 0.875rem;
     --body-xs-size: 0.75rem;
-    --body-line-height: 1.2;
+    --body-line-height: 1.25;
 }
 
 %mozilla-type-scale-condensed {
     --title-2xl-size: 2.125rem;
-    --title-2xl-line-height: 1;
+    --title-2xl-line-height: 1.1;
     --title-xl-size: 1.625rem;
-    --title-xl-line-height: 1;
+    --title-xl-line-height: 1.1;
     --title-lg-size: 1.375rem;
-    --title-lg-line-height: 1;
+    --title-lg-line-height: 1.1;
     --title-md-size: 1.25rem;
-    --title-md-line-height: 1;
+    --title-md-line-height: 1.1;
     --title-sm-size: 1.125rem;
-    --title-sm-line-height: 1;
+    --title-sm-line-height: 1.25;
     --title-xs-size: 1rem;
-    --title-xs-line-height: 1;
+    --title-xs-line-height: 1.25;
     --title-2xs-size: 0.875rem;
-    --title-2xs-line-height: 1;
+    --title-2xs-line-height: 1.15;
     --title-3xs-size: 0.875rem;
-    --title-3xs-line-height: 1;
+    --title-3xs-line-height: 1.25;
     --body-xl-size: 1.125rem;
     --body-lg-size: 1rem;
     --body-md-size: 0.875rem;
     --body-sm-size: 0.75rem;
     --body-xs-size: 0.688rem;
-    --body-line-height: 1.2;
+    --body-line-height: 1.25;
 }

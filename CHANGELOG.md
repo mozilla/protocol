@@ -4,6 +4,7 @@
 
 * **component:** Update breadcrumb styles (#1036)
 * **assets:** (breaking) Update @mozilla-protocol/assets to 7.0.1
+* **css:** Updated line height variables for Mozilla theme to reflect guidance published in the brand portal.
 
 ## Bug Fixes
 
