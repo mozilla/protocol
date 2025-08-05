@@ -2,9 +2,11 @@
 
 ## Features
 
+* **component:** Added `mzp-u-rich-text` component to add back list and table styles (#1079)
 * **component:** Update breadcrumb styles (#1036)
 * **assets:** (breaking) Update @mozilla-protocol/assets to 7.0.1
 * **css:** Updated line height variables for Mozilla theme to reflect guidance published in the brand portal.
+* **css:** * Remove `:hover:visited` styles & decrease base link specificity (#1071)
 
 ## Bug Fixes
 
@@ -12,6 +14,10 @@
 * **js:** `MzpNavigation` doesn't check for `MzpSupports` availability correctly (#1085)
 
 ## Migration Tips
+
+* Rich text
+  * If you have previously created a class to add back list and table styling to rich text fields you may be able to swap it out for the new component.
+  * This component currently styles h2-h4, ul, ol, dl, table, and pre. If you need more elements please create an issue.
 
 * Breadcrumb updates do not require any changes unless you have local customizations.
 
