@@ -14,6 +14,7 @@ a {
     color: $link-color;
     text-decoration: underline;
 
+    // where is used to decrease specificity to avoid conflicts with button styles
     &:where(:visited) {
         color: $link-color-visited;
     }

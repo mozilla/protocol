@@ -227,6 +227,7 @@
     a {
         color: themes.$link-color-inverse;
 
+        // where is used to decrease specificity to avoid conflicts with button styles
         &:where(:visited) {
             color: themes.$link-color-visited-inverse;
         }
@@ -241,6 +242,7 @@
         a {
             color: var(--link-color-inverse);
 
+            // where is used to decrease specificity to avoid conflicts with button styles
             &:where(:visited) {
                 color: var(--link-color-visited-inverse);
             }
