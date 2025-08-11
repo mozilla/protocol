@@ -11,17 +11,20 @@
 
 ## Migration Tips
 
-* Breadcrumb updates do not require any changes, however if you have local customizations double check them.
+* Breadcrumb updates do not require any changes unless you have local customizations.
 
-* Icons used internally with Protocol components have been updated but any icons used in consumer projects will have to consider the following:
+* Icon updates
+  * Icons used internally with Protocol components have been updated but any icons used in consumer projects will have to consider the following:
+  * New and updated icons have intrinsic width of 16x16 instead of 24x24. If you were relying on SVG width and height attributes for sizing, you may need to update by CSS sizing.
+  * Updated icons are still square but do not have padding around the icon. This is particularly noticeable with menu and arrows. If you were relying on the icon for spacing, you may need to update to re-add that spacing through CSS.
+  * Icons formerly known as "arrow" are now known as "caret" and there are new icon designs for "arrow" name. You will need to update naming to keep the "caret" design.
+  * Find and replace `$url-image-arrow-down-` with `$url-image-caret-down-`
 
-* New and updated icons have intrinsic width of 16x16 instead of 24x24. If you were relying on SVG width and height attributes for sizing, you may need to update by CSS sizing.
-
-* Updated icons are still square but do not have padding around the icon. This is particularly noticeable with menu and arrows. If you were relying on the icon for spacing, you may need to update to re-add that spacing through CSS.
-
-* Icons formerly known as "arrow" are now known as "caret" and there are new icon designs for "arrow" name. You will need to update naming to keep the "caret" design.
-
-* Find and replace `$url-image-arrow-down-` with `$url-image-caret-down-`
+* Remove `:hover:visited` styles & decrease base link specificity (#1071)
+  * This will decrease the specificity of Protocol's link and button components, hopefully making local overrides easier, no need to change anything you already have in place.
+  * Removal of `:link` pseudo classes in some places will mean that `<a>` elements which do not have a `href` value could now have link styles when previously they would not have. But, like, maybe don't do that?
+  * Removed `:visited` styles for `.mzp-c-button` they should match unvisited styles, if you have `:visited` styles defined check they are still legible without the expected inherited styles.
+  * Removed the text colour change from `:focus` styles. Rely on the focus ring for a focus indicator instead.
 
 # 21.1.0
 

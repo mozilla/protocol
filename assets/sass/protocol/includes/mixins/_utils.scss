@@ -224,57 +224,43 @@
 
 // Light color links for dark backgrounds.
 @mixin light-links {
-    a:link {
+    a {
         color: themes.$link-color-inverse;
-    }
 
-    a:visited {
-        color: themes.$link-color-visited-inverse;
-    }
+        // where is used to decrease specificity to avoid conflicts with button styles
+        &:where(:visited) {
+            color: themes.$link-color-visited-inverse;
+        }
 
-    a:hover,
-    a:focus,
-    a:active {
-        color: themes.$link-color-hover-inverse;
-    }
-
-    a:visited:hover,
-    a:visited:focus,
-    a:visited:active {
-        color: themes.$link-color-visited-hover-inverse;
+        &:hover,
+        &:active {
+            color: themes.$link-color-hover-inverse;
+        }
     }
 
     @supports (--css: variables) {
-        a:link {
+        a {
             color: var(--link-color-inverse);
-        }
 
-        a:visited {
-            color: var(--link-color-visited-inverse);
-        }
+            // where is used to decrease specificity to avoid conflicts with button styles
+            &:where(:visited) {
+                color: var(--link-color-visited-inverse);
+            }
 
-        a:hover,
-        a:focus,
-        a:active {
-            color: var(--link-color-hover-inverse);
-        }
-
-        a:visited:hover,
-        a:visited:focus,
-        a:visited:active {
-            color: var(--link-color-visited-hover-inverse);
+            &:hover,
+            &:active {
+                color: var(--link-color-hover-inverse);
+            }
         }
     }
 }
 
 // White color links for dark backgrounds, when link colors are undesirable.
 @mixin white-links {
-    a:link,
-    a:visited {
+    a {
         color: tokens.$color-white;
 
         &:hover,
-        &:focus,
         &:active {
             color: tokens.$color-white;
         }

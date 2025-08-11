@@ -13,6 +13,10 @@
         color: $link-color;
         text-decoration: underline;
 
+        &:visited {
+            color: $link-color-visited;
+        }
+
         &:hover,
         &:focus,
         &:active {
@@ -31,26 +35,6 @@
             &:focus,
             &:active {
                 color: var(--link-color-hover);
-            }
-        }
-    }
-
-    :visited {
-        color: $link-color-visited;
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: $link-color-visited-hover;
-        }
-
-        @supports (--css: variables) {
-            color: var(--link-color-visited);
-
-            &:hover,
-            &:focus,
-            &:active {
-                color: var(--link-color-visited-hover);
             }
         }
     }
