@@ -2,7 +2,8 @@
 
 ## Features
 
-* **component:** Added `mzp-u-rich-text` component to add back list and table styles (#1079)
+* **component:** Added `mzp-u-rich-text` utility class to add back list and table styles (#1079)
+* **docs:** Added a new utility class section to docs.
 * **component:** Update breadcrumb styles (#1036)
 * **assets:** (breaking) Update @mozilla-protocol/assets to 7.0.1
 * **css:** Updated line height variables for Mozilla theme to reflect guidance published in the brand portal.

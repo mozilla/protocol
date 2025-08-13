@@ -11,10 +11,6 @@ this base size can be overridden with more context-specific styling.
   immediately following an `<h1>`. If you need a subheading or tagline
   immediately after a title, chances are it should be a paragraph rather than
   a second heading.
-- There are presentational utility classes available that you can apply to any
-  heading, e.g. `mzp-u-title-sm`, but don't abuse them if they aren't necessary.
-  You can often use the equivalent mixins in Sass/SCSS without a presentational
-  class.
 
 ### Links
 
