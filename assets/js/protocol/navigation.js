@@ -187,7 +187,10 @@ MzpNavigation.onClick = (e) => {
  */
 MzpNavigation.menuButtonVisible = (callback) => {
     // check if Intersection observer is supported
-    if (window.MzpSupports !== 'undefined' && window.MzpSupports.intersectionObserver) {
+    if (
+        typeof window.MzpSupports !== 'undefined' &&
+        window.MzpSupports.intersectionObserver
+    ) {
         const observer = new IntersectionObserver(
             (entries) => {
                 for (let index = 0; index < entries.length; index++) {
@@ -207,7 +210,10 @@ MzpNavigation.menuButtonVisible = (callback) => {
  * Set initial ARIA navigation states.
  */
 MzpNavigation.setAria = () => {
-    if (window.MzpSupports !== 'undefined' && window.MzpSupports.intersectionObserver) {
+    if (
+        typeof window.MzpSupports !== 'undefined' &&
+        window.MzpSupports.intersectionObserver
+    ) {
         MzpNavigation.menuButtonVisible((isVisible, menuButton) => {
             if (isVisible) {
                 // if the menu button is visible -  set the 'aria-expanded' role based on whether the menu is open or not
