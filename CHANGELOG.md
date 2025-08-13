@@ -8,6 +8,7 @@
 ## Bug Fixes
 
 * **css:** Breadcrumbs are wider than other site content (#933)
+* **js:** `MzpNavigation` doesn't check for `MzpSupports` availability correctly (#1085)
 
 ## Migration Tips
 
