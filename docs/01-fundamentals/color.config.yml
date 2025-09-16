@@ -401,35 +401,119 @@ context:
         Link:Visited:
           token: '$color-link-visited'
           value: '#b833e1'
-        Link:Visited:Hover:
-          token: '$color-link-visited-hover'
-          value: '#952bb9'
-    Mozilla Brand Colors:
+    Mozilla Black:
       colors:
-        Mozilla Neon Blue:
-          token: '$color-moz-neon-blue'
-          value: '#00ffff'
-        Mozilla Lemon Yellow:
-          token: '$color-moz-lemon-yellow'
-          value: '#fff44f'
-        Mozilla Warm Red:
-          token: '$color-moz-warm-red'
-          value: '#ff4f5e'
-        Mozilla Neon Green:
-          token: '$color-moz-neon-green'
-          value: '#54ffbd'
-        Mozilla Dark Purple:
-          token: '$color-moz-dark-purple'
-          value: '#6e008b'
-        Mozilla Dark Green:
-          token: '$color-moz-dark-green'
-          value: '#005e5e'
-        Mozilla Dark Blue:
-          token: '$color-moz-dark-blue'
-          value: '#00458b'
-        Mozilla Dark Gray:
-          token: '$color-moz-dark-gray'
-          value: '#959595'
-        Mozilla Light Gray:
-          token: '$color-moz-light-gray'
-          value: '#e7e5e2'
+        Mozilla Black:
+          token: '$color-moz-black'
+          value: '#161616'
+        Mozilla Black Strong:
+          token: '$color-moz-black-strong'
+          value: '#000000'
+    Mozilla White:
+      colors:
+        Mozilla White:
+          token: '$color-moz-white'
+          value: '#fafafa'
+        Mozilla White Strong:
+          token: '$color-moz-white-strong'
+          value: '#ffffff'
+    Mozilla Green:
+      colors:
+        Mozilla Green:
+          token: '$color-moz-green'
+          value: '#00d230'
+        Mozilla Green Light:
+          token: '$color-moz-green-light'
+          value: '#d6ffcd'
+        Mozilla Green Mid:
+          token: '$color-moz-green-mid'
+          value: '#28733f'
+        Mozilla Green Dark:
+          token: '$color-moz-green-dark'
+          value: '#022611'
+    Mozilla Orange:
+      colors:
+        Mozilla Orange:
+          token: '$color-moz-orange'
+          value: '#ff9456'
+        Mozilla Orange Light:
+          token: '$color-moz-orange-light'
+          value: '#faf0e6'
+        Mozilla Orange Mid:
+          token: '$color-moz-orange-mid'
+          value: '#ff453f'
+        Mozilla Orange Dark:
+          token: '$color-moz-orange-dark'
+          value: '#330505'
+    Mozilla Pink:
+      colors:
+        Mozilla Pink:
+          token: '$color-moz-pink'
+          value: '#ff97e2'
+        Mozilla Pink Light:
+          token: '$color-moz-pink-light'
+          value: '#fff1f8'
+        Mozilla Pink Mid:
+          token: '$color-moz-pink-mid'
+          value: '#ae49ec'
+        Mozilla Pink Dark:
+          token: '$color-moz-pink-dark'
+          value: '#210340'
+    Mozilla Gray:
+      colors:
+        Mozilla Gray:
+          token: '$color-moz-gray'
+          value: '#B3B3B3'
+        Mozilla Gray Light:
+          token: '$color-moz-gray-light'
+          value: '#e8e8e8'
+        Mozilla Gray Mid:
+          token: '$color-moz-gray-mid'
+          value: '#6d6d6d'
+        Mozilla Gray Dark:
+          token: '$color-moz-gray-dark'
+          value: '#414141'
+    Mozilla Aqua:
+      colors:
+        Mozilla Aqua:
+          token: '$color-moz-aqua'
+          value: '#87e3cd'
+        Mozilla Aqua Light:
+          token: '$color-moz-aqua-light'
+          value: '#cef5eb'
+        Mozilla Aqua Mid:
+          token: '$color-moz-aqua-mid'
+          value: '#41bfae'
+        Mozilla Aqua Dark:
+          token: '$color-moz-aqua-dark'
+          value: '#0a5656'
+    Mozilla Seed:
+      colors:
+        Mozilla Seed:
+          token: '$color-moz-seed'
+          value: '#ddef30'
+        Mozilla Seed Light:
+          token: '$color-moz-seed-light'
+          value: '#eef797'
+        Mozilla Seed Mid:
+          token: '$color-moz-seed-mid'
+          value: '#a99c23'
+        Mozilla Seed Dark:
+          token: '$color-moz-seed-dark'
+          value: '#423412'
+    Mozilla Clay:
+      colors:
+        Mozilla Clay:
+          token: '$color-moz-clay'
+          value: '#dadeb2'
+        Mozilla Clay Light:
+          token: '$color-moz-clay-light'
+          value: '#eaecd0'
+        Mozilla Clay Mid:
+          token: '$color-moz-clay-mid'
+          value: '#b2b895'
+        Mozilla Clay Dark:
+          token: '$color-moz-clay-dark'
+          value: '#697961'
+
+
