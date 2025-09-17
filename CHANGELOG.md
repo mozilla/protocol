@@ -5,7 +5,8 @@
 * **component:** Added `mzp-u-rich-text` utility class to add back list and table styles (#1079)
 * **docs:** Added a new utility class section to docs.
 * **component:** Update breadcrumb styles (#1036)
-* **assets:** (breaking) Update @mozilla-protocol/assets to 7.0.1
+* **assets:** (breaking) Update @mozilla-protocol/assets to 7.0.2
+* **tokens:** (breaking) Update @mozilla-protocol/tokens to 7.0.0
 * **css:** Updated line height variables for Mozilla theme to reflect guidance published in the brand portal.
 * **css:** * Remove `:hover:visited` styles & decrease base link specificity (#1071)
 
@@ -28,6 +29,9 @@
   * Updated icons are still square but do not have padding around the icon. This is particularly noticeable with menu and arrows. If you were relying on the icon for spacing, you may need to update to re-add that spacing through CSS.
   * Icons formerly known as "arrow" are now known as "caret" and there are new icon designs for "arrow" name. You will need to update naming to keep the "caret" design.
   * Find and replace `$url-image-arrow-down-` with `$url-image-caret-down-`
+
+* Mozilla brand color updates
+  * consumer projects will have to update any use of deprecated Mozilla brand colors to the new palettes
 
 * Remove `:hover:visited` styles & decrease base link specificity (#1071)
   * This will decrease the specificity of Protocol's link and button components, hopefully making local overrides easier, no need to change anything you already have in place.
