@@ -2,6 +2,7 @@
 
 ## Features
 
+* **component:** Added sizing and icon support to CTA link component (#1083)
 * **component:** Added `mzp-u-rich-text` utility class to add back list and table styles (#1079)
 * **docs:** Added a new utility class section to docs.
 * **component:** Update breadcrumb styles (#1036)
