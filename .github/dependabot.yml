@@ -7,6 +7,9 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    ignore:
+      # Pin sass at 1.91.0 until mozilla/protocol#982
+      - dependency-name: 'sass'
     schedule:
       interval: "monthly"
     open-pull-requests-limit: 10
