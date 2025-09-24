@@ -54,4 +54,73 @@ a {
     @supports (--css: variables) {
         font-family: var(--button-font-family);
     }
+
+    &.mzp-t-xs {
+        @include text-body-sm;
+    }
+
+    &.mzp-t-sm {
+        @include text-body-md;
+    }
+
+    &.mzp-t-md {
+        @include text-body-lg;
+    }
+
+    &.mzp-t-lg {
+        @include text-title-xs;
+        font-family: $title-font-family;
+
+        @supports (--css: variables) {
+            font-family: var(--title-font-family);
+        }
+    }
+
+    &.mzp-t-xl {
+        @include text-title-sm;
+        font-family: $title-font-family;
+
+        @supports (--css: variables) {
+            font-family: var(--title-font-family);
+        }
+    }
+
+    &.mzp-t-2xl {
+        @include text-title-lg;
+        font-family: $title-font-family;
+
+        @supports (--css: variables) {
+            font-family: var(--title-font-family);
+        }
+    }
+
+    // Icon support
+    &-icon-start,
+    &-icon-end {
+        align-items: center;
+        display: inline-flex;
+        font-size: 1em;
+        line-height: 1;
+        height: 1em;
+        justify-content: center;
+        width: auto;
+        vertical-align: text-top;
+        border-top: 0.15em solid transparent;
+        box-sizing: border-box;
+
+        img,
+        svg {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &-icon-start {
+        @include bidi(((margin-right, 0.5ch, 0), (margin-left, 0, 0.5ch),));
+    }
+
+    &-icon-end {
+        @include bidi(((margin-left, 0.5ch, 0), (margin-right, 0, 0.5ch),));
+    }
+
 }

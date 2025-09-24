@@ -1,1 +1,17 @@
-<a class="mzp-c-cta-link" href="https://example.com">Learn more about us</a>
+{# @cta-link
+#
+# parameters:
+# class         - string
+# label         - string
+# iconStart     - markup
+# iconEnd       - markup
+#}
+<a class="mzp-c-cta-link{% if class %} {{ class }}{% endif %}" href="https://www.example.com">
+  {%- if iconStart %}
+    <span class="mzp-c-cta-link-icon-start">
+      {{ iconStart | safe }}
+    </span>{% endif -%}{{ label }}{%- if iconEnd %}<span class="mzp-c-cta-link-icon-end">
+      {{ iconEnd | safe }}
+    </span>
+  {% endif -%}
+</a>

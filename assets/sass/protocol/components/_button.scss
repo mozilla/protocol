@@ -5,69 +5,6 @@
 @use '../includes/lib' as *;
 @use '../includes/forms';
 
-@mixin default-states {
-    &:focus {
-        border-color: forms.$button-border-color-focus;
-        box-shadow: forms.$field-focus-ring;
-        outline-offset: 1px;
-    }
-
-    &:hover {
-        background-color: $color-marketing-gray-20;
-        border-color: $color-black;
-        box-shadow: none;
-        color: $color-black;
-    }
-
-    &:active {
-        background-color: $color-marketing-gray-20;
-        border-color: $color-marketing-gray-70;
-        color: $color-black;
-    }
-}
-
-@mixin default-states-dark {
-    &:focus {
-        outline-offset: 1px;
-        border-color: forms.$button-border-color-focus;
-        box-shadow: forms.$field-focus-ring-dark;
-        outline: forms.$field-focus-ring-outline;
-    }
-
-    &:hover {
-        background-color: $color-dark-gray-60;
-        border-color: $color-white;
-        box-shadow: none;
-        color: $color-white;
-    }
-
-    &:active {
-        background-color: $color-dark-gray-60;
-        border-color: $color-light-gray-50;
-        color: $color-white;
-    }
-}
-
-@mixin product-states {
-    &:focus {
-        border-color: forms.$button-border-color-focus;
-        box-shadow: forms.$field-focus-ring;
-        outline-offset: 1px;
-    }
-
-    &:hover {
-        background-color: $color-blue-60;
-        border-color: transparent;
-        box-shadow: none;
-        color: $color-white;
-    }
-
-    &:active {
-        background-color: $color-blue-80;
-        border-color: transparent;
-        color: $color-white;
-    }
-}
 
 // * -------------------------------------------------------------------------- */
 // Button shape and size
@@ -75,15 +12,14 @@
 .mzp-c-button {
     @include border-box;
     @include font-size(16px);
-    @include transition(background-color 100ms, box-shadow 100ms, color 100ms);
-    border-radius: $border-radius-sm;
+    @include transition(background-color 100ms, border-color 100ms, color 100ms);
     border: 2px solid transparent;
     cursor: pointer;
     display: inline-block;
     font-family: $button-font-family;
     font-weight: bold;
     line-height: $body-line-height;
-    padding: 6px $spacing-lg;
+    padding: $spacing-sm $spacing-md;
     text-align: center;
     text-decoration: none !important;  /* stylelint-disable-line declaration-no-important */
 
@@ -93,6 +29,12 @@
 
     &:hover {
         box-shadow: none;
+    }
+
+    &:focus {
+        border-color: forms.$button-border-color-focus;
+        box-shadow: forms.$field-focus-ring;
+        outline-offset: 1px;
     }
 
     &:disabled {
@@ -110,19 +52,18 @@
 
 .mzp-c-button.mzp-t-sm {
     @include font-size(12px);
-    border-radius: $border-radius-xs;
-    padding: 1px $spacing-md;
+    padding: 1px $spacing-sm;
 }
 
 .mzp-c-button.mzp-t-small, // backwards compatability
 .mzp-c-button.mzp-t-md {
     @include font-size(14px);
-    padding: $spacing-xs $spacing-lg;
+    padding: $spacing-xs $spacing-sm;
 }
 
 .mzp-c-button.mzp-t-lg {
     @include font-size(16px);
-    padding: 6px $spacing-lg;
+    padding: $spacing-sm $spacing-md;
 }
 
 .mzp-c-button.mzp-t-xl {
@@ -136,11 +77,16 @@
 .mzp-c-button { /* stylelint-disable-line no-duplicate-selectors */
     // * ---------------------------------------------------------------------- */
     // Primary
-    background-color: $color-black;
+    background-color: $color-moz-black;
     border: 2px solid $color-black;
     color: $color-white;
 
-    @include default-states;
+    &:hover,
+    &:active {
+        background-color: $color-white;
+        border-color: $color-black;
+        color: $color-black;
+    }
 
     // dark
     &.mzp-t-dark {
@@ -148,10 +94,13 @@
         border-color: $color-white;
         color: $color-black;
 
-        @include default-states-dark;
+        &:hover,
+        &:active {
+            background-color: $color-moz-black;
+            border-color: $color-white;
+            color: $color-white;
+        }
     }
-
-
 
     // * ---------------------------------------------------------------------- */
     // Secondary
@@ -161,7 +110,12 @@
         border-color: $color-black;
         color: $color-black;
 
-        @include default-states;
+        &:hover,
+        &:active {
+            background-color: $color-moz-black;
+            border-color: $color-black;
+            color: $color-white;
+        }
 
         // dark
         &.mzp-t-dark {
@@ -169,7 +123,12 @@
             border-color: $color-white;
             color: $color-white;
 
-            @include default-states-dark;
+            &:hover,
+            &:active {
+                background-color: $color-white;
+                border-color: $color-white;
+                color: $color-black;
+            }
         }
     }
 
@@ -177,82 +136,67 @@
     // Product
 
     &.mzp-t-product {
-        background-color: $color-blue-50;
-        border-color: transparent;
-        color: $color-white;
+        &,
+        &.mzp-t-dark {
+            background-color: $color-blue-50;
+            border-color: $color-blue-50;
+            color: $color-white;
 
-        @include product-states;
-
-        // dark is the same as light
+            &:hover,
+            &:active {
+                background-color: $color-white;
+                border-color: $color-blue-50;
+                color: $color-blue-50;
+            }
+        }
 
         // secondary
         &.mzp-t-secondary {
-            background-color: transparent;
-            border-color: $color-blue-50;
-            color: $color-blue-50;
-
-            @include product-states;
-
-            // dark
+            &,
             &.mzp-t-dark {
-                background-color: rgba($color-white, 0.3);
-                border-color: transparent;
-                color: $color-white;
+                background-color: $color-white;
+                border-color: $color-blue-50;
+                color: $color-blue-50;
 
-                @include product-states;
+                &:hover,
+                &:active {
+                    background-color: $color-blue-50;
+                    color: $color-white;
+                }
             }
         }
+    }
 
+    // * -------------------------------------------------------------------------- */
+    // Neutral Buttons
+    &.mzp-t-neutral {
+        background-color: transparent;
+        border-color: $color-marketing-gray-30;
+        color: $color-marketing-gray-70;
 
-        // * -------------------------------------------------------------------------- */
-        // Neutral Buttons
-        &.mzp-t-neutral {
-            background-color: transparent;
-            border-color: $color-marketing-gray-30;
+        &:hover,
+        &:active {
+            background-color: $color-marketing-gray-20;
+            border-color: $color-marketing-gray-40;
             color: $color-marketing-gray-70;
+        }
 
-            &:focus {
-                border-color: forms.$button-border-color-focus;
-            }
+        // dark
+        &.mzp-t-dark {
+            background-color: rgba($color-white, 0.1);
+            border-color: rgba($color-white, 0.6);
+            color: $color-white;
 
-            &:hover {
-                background-color: $color-marketing-gray-20;
-                border-color: $color-marketing-gray-40;
-                color: $color-marketing-gray-70;
-            }
-
+            &:hover,
             &:active {
-                background-color: $color-marketing-gray-20;
-                border-color: $color-marketing-gray-50;
-                color: $color-marketing-gray-70;
-            }
-
-            // dark
-            &.mzp-t-dark {
-                background-color: rgba($color-white, 0.1);
+                background-color: rgba($color-white, 0.2);
                 border-color: rgba($color-white, 0.6);
                 color: $color-white;
-
-                &:focus {
-                    border-color: forms.$button-border-color-focus;
-                }
-
-                &:hover {
-                    background-color: rgba($color-white, 0.2);
-                    border-color: rgba($color-white, 0.6);
-                    color: $color-white;
-                }
-
-                &:active {
-                    background-color: rgba($color-white, 0.2);
-                    border-color: rgba($color-white, 0.4);
-                    color: $color-white;
-                }
             }
-
         }
     }
 }
+
 
 // * -------------------------------------------------------------------------- */
 // Download Button
