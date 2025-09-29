@@ -57,26 +57,6 @@ variants:
       class: 'mzp-t-neutral mzp-t-dark'
       label: Neutral Button
       link: './button--neutral-dark'
-  - name: Size small
-    notes: A small button. Use this size with caution because small buttons are harder to read and present smaller targets for pointing devices (clicks and taps).
-    context:
-      class: 'mzp-t-sm'
-      label: Small Button
-  - name: Size medium
-    notes: A medium button.
-    context:
-      class: 'mzp-t-md'
-      label: Medium Button
-  - name: Size large
-    notes: This is the default size if no size class is provided.
-    context:
-      class: 'mzp-t-lg'
-      label: Large Button
-  - name: Size Extra Large
-    notes: An extra large button. Use this sparingly.
-    context:
-      class: 'mzp-t-xl'
-      label: Extra Large Button
   - name: Disabled
     notes: |
       This is an example of a disabled button. The `disabled` property is added on submit to
