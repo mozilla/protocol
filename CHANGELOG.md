@@ -1,16 +1,16 @@
-# HEAD
+# 22.0.0
 
 ## Features
 
-* **css:** Update button styles to match Mozilla brand refresh (#1046)
+* **assets:** (breaking) Updated @mozilla-protocol/assets to 7.0.2
+* **tokens:** (breaking) Updated @mozilla-protocol/tokens to 7.0.0
+* **css:** Updated button styles to match Mozilla brand refresh (#1046)
 * **component:** Added sizing and icon support to CTA link component (#1083)
 * **component:** Added `mzp-u-rich-text` utility class to add back list and table styles (#1079)
 * **docs:** Added a new utility class section to docs.
-* **component:** Update breadcrumb styles (#1036)
-* **assets:** (breaking) Update @mozilla-protocol/assets to 7.0.2
-* **tokens:** (breaking) Update @mozilla-protocol/tokens to 7.0.0
+* **component:** Updated breadcrumb styles (#1036)
 * **css:** Updated line height variables for Mozilla theme to reflect guidance published in the brand portal.
-* **css:** * Remove `:hover:visited` styles & decrease base link specificity (#1071)
+* **css:** Removed `:hover:visited` styles & decreased base link specificity (#1071)
 
 ## Bug Fixes
 
@@ -19,22 +19,18 @@
 
 ## Migration Tips
 
-* Rich text
+* Rich text utility
   * If you have previously created a class to add back list and table styling to rich text fields you may be able to swap it out for the new component.
   * This component currently styles h2-h4, ul, ol, dl, table, and pre. If you need more elements please create an issue.
-
 * Breadcrumb updates do not require any changes unless you have local customizations.
-
 * Icon updates
   * Icons used internally with Protocol components have been updated but any icons used in consumer projects will have to consider the following:
   * New and updated icons have intrinsic width of 16x16 instead of 24x24. If you were relying on SVG width and height attributes for sizing, you may need to update by CSS sizing.
   * Updated icons are still square but do not have padding around the icon. This is particularly noticeable with menu and arrows. If you were relying on the icon for spacing, you may need to update to re-add that spacing through CSS.
   * Icons formerly known as "arrow" are now known as "caret" and there are new icon designs for "arrow" name. You will need to update naming to keep the "caret" design.
   * Find and replace `$url-image-arrow-down-` with `$url-image-caret-down-`
-
 * Mozilla brand color updates
   * consumer projects will have to update any use of deprecated Mozilla brand colors to the new palettes
-
 * Remove `:hover:visited` styles & decrease base link specificity (#1071)
   * This will decrease the specificity of Protocol's link and button components, hopefully making local overrides easier, no need to change anything you already have in place.
   * Removal of `:link` pseudo classes in some places will mean that `<a>` elements which do not have a `href` value could now have link styles when previously they would not have. But, like, maybe don't do that?
