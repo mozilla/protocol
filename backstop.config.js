@@ -9,6 +9,14 @@
  *   npm run visual:approve    - Accept current screenshots as new baseline
  *   npm run visual:open       - Open the HTML report
  *
+ * Filtering (run a subset of tests):
+ *   Use --filter with a regex pattern to test specific components:
+ *
+ *   npx backstop test --config=backstop.config.js --filter="Button"
+ *   npx backstop test --config=backstop.config.js --filter="Card"
+ *   npx backstop test --config=backstop.config.js --filter="Split - Default"
+ *   npx backstop reference --config=backstop.config.js --filter="Newsletter"
+ *
  * Prerequisites:
  *   The Fractal dev server must be running on localhost:3000
  *   Start it with: npm start
