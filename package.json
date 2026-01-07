@@ -24,7 +24,11 @@
     "pretest": "npm run lint && npm run test-build",
     "test-build": "webpack --config webpack.test.config.js --mode=development",
     "test": "npx jasmine-browser-runner runSpecs --config=tests/jasmine-browser.json && npx jasmine-browser-runner runSpecs --browser=chrome --config=tests/jasmine-browser.json",
-    "webpack": "npm run lint && webpack --config webpack.docs.static.config.js --mode development && webpack --config webpack.docs.build.config.js --watch --mode development"
+    "webpack": "npm run lint && webpack --config webpack.docs.static.config.js --mode development && webpack --config webpack.docs.build.config.js --watch --mode development",
+    "visual:reference": "backstop reference --config=backstop.config.js",
+    "visual:test": "backstop test --config=backstop.config.js",
+    "visual:approve": "backstop approve --config=backstop.config.js",
+    "visual:open": "backstop openReport --config=backstop.config.js"
   },
   "dependencies": {
     "@babel/core": "^7.28.0",
@@ -48,6 +52,7 @@
     "webpack-remove-empty-scripts": "^1.1.1"
   },
   "devDependencies": {
+    "backstopjs": "^6.3.25",
     "eslint": "^9.30.0",
     "jasmine-browser-runner": "^3.0.0",
     "jasmine-core": "^5.8.0",
