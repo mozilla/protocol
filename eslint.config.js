@@ -72,7 +72,7 @@ const testingGlobals = {
 module.exports = [
     js.configs.recommended,
     {
-        ignores: ['dist/**/*.js', 'package/**/*.js', 'static/**/*.js', 'theme/static/**/*.js', 'tests/dist/**/*.js'],
+        ignores: ['dist/**/*.js', 'package/**/*.js', 'static/**/*.js', 'theme/static/**/*.js', 'tests/dist/**/*.js', 'backstop_data/**/*.js'],
     },
     {
         files: ['assets/js/**/*.js'],
@@ -133,5 +133,20 @@ module.exports = [
             }
         },
         rules: rules
+    },
+    {
+        // BackstopJS config files use snake_case properties required by the tool
+        files: ['backstop.config.js', 'backstop-scenarios.js'],
+        languageOptions: {
+            ecmaVersion: 'latest',
+            globals: {
+                ...globals.node,
+                ...globals.commonjs
+            }
+        },
+        rules: {
+            ...rules,
+            'camelcase': 'off'
+        }
     }
 ];
