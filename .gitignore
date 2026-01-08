@@ -7,3 +7,7 @@ theme/static
 .netlify
 .DS_Store
 .node-version
+AGENTS.md
+CLAUDE.md
+.claude
+.vscode/*
