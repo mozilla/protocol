@@ -11,35 +11,22 @@
 // 4. Focus
 
 a {
-    color: $link-color;
+    color: var(--theme-link-color);
     text-decoration: underline;
 
     // where is used to decrease specificity to avoid conflicts with button styles
     &:where(:visited) {
-        color: $link-color-visited;
+        color: var(--theme-link-color-visited);
     }
 
     &:hover,
     &:active {
-        color: $link-color-hover;
+        color: var(--theme-link-color-hover);
         text-decoration: none;
     }
 
     &:active {
         background-color: rgb(0, 0, 0, 0.05);
-    }
-
-    @supports (--css: variables) {
-        color: var(--link-color);
-
-        &:where(:visited) {
-            color: var(--link-color-visited);
-        }
-
-        &:hover,
-        &:active {
-            color: var(--link-color-hover);
-        }
     }
 }
 

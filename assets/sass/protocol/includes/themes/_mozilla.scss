@@ -16,24 +16,42 @@
     --token-heading-letter-spacing: -0.01em;
 
     // colors
-    --background-color-tertiary-inverse: #{tokens.$color-dark-gray-40};
-    --background-color-tertiary: #{tokens.$color-light-gray-30};
-    --background-color-secondary-inverse: #{tokens.$color-dark-gray-60};
-    --background-color-secondary: #{tokens.$color-light-gray-10};
-    --background-color-inverse: #{tokens.$color-black};
-    --background-color: #{tokens.$color-white};
-    --body-text-color-secondary-inverse: #{tokens.$color-light-gray-30};
-    --body-text-color-secondary: #{tokens.$color-dark-gray-90};
-    --body-text-color-inverse: #{tokens.$color-white};
-    --body-text-color: #{tokens.$color-black};
-    --link-color-hover-inverse: #{tokens.$color-blue-05};
-    --link-color-hover: #{tokens.$color-link-hover};
-    --link-color-inverse: #{tokens.$color-blue-10};
-    --link-color-visited-inverse: #{tokens.$color-violet-10};
-    --link-color-visited: #{tokens.$color-link-visited};
-    --link-color: #{tokens.$color-link};
-    --heading-text-color-inverse: #{tokens.$color-white};
-    --heading-text-color: #{tokens.$color-black};
+    --token-background-color-tertiary-inverse: #{tokens.$color-dark-gray-40};
+    --token-background-color-tertiary: #{tokens.$color-light-gray-30};
+    --token-background-color-secondary-inverse: #{tokens.$color-dark-gray-60};
+    --token-background-color-secondary: #{tokens.$color-light-gray-10};
+    --token-background-color-inverse: #{tokens.$color-black};
+    --token-background-color: #{tokens.$color-white};
+    --token-body-text-color-secondary-inverse: #{tokens.$color-light-gray-30};
+    --token-body-text-color-secondary: #{tokens.$color-dark-gray-90};
+    --token-body-text-color-inverse: #{tokens.$color-white};
+    --token-body-text-color: #{tokens.$color-black};
+    --token-link-color-hover-inverse: #{tokens.$color-blue-05};
+    --token-link-color-hover: #{tokens.$color-link-hover};
+    --token-link-color-inverse: #{tokens.$color-blue-10};
+    --token-link-color-visited-inverse: #{tokens.$color-violet-10};
+    --token-link-color-visited: #{tokens.$color-link-visited};
+    --token-link-color: #{tokens.$color-link};
+    --token-heading-text-color-inverse: #{tokens.$color-white};
+    --token-heading-text-color: #{tokens.$color-black};
+
+    // status colors
+    --token-color-success: #{tokens.$color-green-50};
+    --token-color-success-bg: #{tokens.$color-green-30};
+    --token-color-success-hover: #{tokens.$color-green-60};
+    --token-color-success-active: #{tokens.$color-green-70};
+    --token-color-error: #{tokens.$color-red-50};
+    --token-color-error-bg: #{tokens.$color-red-30};
+    --token-color-error-hover: #{tokens.$color-red-60};
+    --token-color-error-active: #{tokens.$color-red-70};
+    --token-color-warning: #{tokens.$color-yellow-30};
+    --token-color-warning-bg: #{tokens.$color-yellow-20};
+    --token-color-warning-hover: #{tokens.$color-yellow-40};
+    --token-color-warning-active: #{tokens.$color-yellow-50};
+    --token-color-info: #{tokens.$color-blue-50};
+    --token-color-info-bg: #{tokens.$color-blue-10};
+    --token-color-info-hover: #{tokens.$color-blue-70};
+    --token-color-info-active: #{tokens.$color-blue-80};
 }
 
 %mozilla-type-scale {

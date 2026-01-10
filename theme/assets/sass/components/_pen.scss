@@ -3,7 +3,7 @@
 /* stylelint-disable selector-class-pattern */
 
 .Pen {
-    background-color: $color-marketing-gray-10;
+    background-color: var(--fractal-color-background-offset);
 }
 
 .Pen-header {
@@ -17,15 +17,11 @@
 
 .Pen-title {
     @include text-heading-xs;
-    color: $title-text-color;
+    color: var(--theme-heading-text-color);
     margin-bottom: 0.5em;
 
     @media #{$mq-md} {
         margin-bottom: 0;
-    }
-
-    @supports (--css: variables) {
-        color: var(--heading-text-color);
     }
 }
 
@@ -34,11 +30,7 @@
     &:visited,
     &:hover,
     &:active {
-        color: $title-text-color;
-
-        @supports (--css: variables) {
-            color: var(--heading-text-color);
-        }
+        color: var(--theme-heading-text-color);
     }
 
     svg {
@@ -48,23 +40,14 @@
 }
 
 .Pen-previewButton {
-    color: $link-color;
+    color: var(--theme-link-color);
     font-weight: bold;
     @include bidi(((margin-left, $spacing-lg, margin-right, $spacing-lg),));
     @include text-body-sm;
 
     &:hover,
     &:active {
-        color: $link-color-hover;
-    }
-
-    @supports (--css: variables) {
-        color: var(--link-color);
-
-        &:hover,
-        &:active {
-            color: var(--link-color-hover);
-        }
+        color: var(--theme-link-color-hover);
     }
 }
 

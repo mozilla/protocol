@@ -2,6 +2,26 @@
 
 $font-family-monospace: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace !default;
 $font-family-sans-serif: tokens.$font-stack-base !default;
+
+// Fractal theme CSS custom properties
+:root {
+    --fractal-color-link: #66f;
+    --fractal-color-text: #000;
+    --fractal-color-heading: #000;
+    --fractal-color-background: #fff;
+    --fractal-color-background-offset: #f7f7f7;
+    --fractal-color-ui-hover: rgb(0, 0, 0, 0.05);
+    --fractal-color-ui-active: rgb(0, 0, 0, 0.075);
+    --fractal-color-header-background: #000;
+    --fractal-color-header-content: #fff;
+    --fractal-color-frame-border: rgb(0, 0, 0, 0.25);
+    --fractal-color-sidebar-heading: white;
+    --fractal-color-nav-item-hover: #42455a;
+    --fractal-color-nav-item-active: #52566d;
+    --fractal-color-border-light: #cdcdd4;
+}
+
+// Legacy Sass variables for backwards compatibility
 $color-link: #66f;
 $color-text: #000;
 $color-heading: #000;

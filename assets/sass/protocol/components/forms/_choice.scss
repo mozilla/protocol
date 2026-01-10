@@ -87,9 +87,9 @@
         &[type='radio'] + label::before {
             @include bidi(((left, 0, right, auto),));
             box-sizing: border-box;
-            background: $color-white;
+            background: var(--theme-background-color);
             border-radius: 2px;
-            border: forms.$field-border;
+            border: var(--theme-field-border);
             content: '';
             cursor: pointer;
             display: block;
@@ -117,8 +117,8 @@
                 (left, 0.03rem, auto),
                 (right, auto, 0.83rem),
             ));
-            border-bottom: remify(3px) solid $color-white;
-            border-right: remify(3px) solid $color-white;
+            border-bottom: remify(3px) solid var(--theme-background-color);
+            border-right: remify(3px) solid var(--theme-background-color);
             content: '';
             display: block;
             height: 0.75rem;
@@ -132,7 +132,7 @@
         &[type='radio']:checked + label::before {
             background-color: forms.$choice-fill;
             border-color: forms.$choice-fill;
-            box-shadow: inset 0 0 0 0.25em $color-white;
+            box-shadow: inset 0 0 0 0.25em var(--theme-background-color);
         }
 
         // hover
@@ -141,20 +141,20 @@
         &[type='checkbox'] + label:hover::before,
         &[type='radio']:hover + label::before,
         &[type='radio'] + label:hover::before {
-            border-color: forms.$field-border-color-hover;
+            border-color: var(--theme-field-border-color-hover);
         }
 
         // focus
 
         &[type='checkbox']:focus + label::before,
         &[type='radio']:focus + label::before {
-            border-color: forms.$field-border-color-hover;
-            box-shadow: forms.$field-focus-ring;
+            border-color: var(--theme-field-border-color-hover);
+            box-shadow: var(--theme-field-focus-ring);
         }
 
         &[type='radio']:checked:focus + label::before {
-            border-color: forms.$field-border-color-hover;
-            box-shadow: inset 0 0 0 0.25em $color-white, forms.$field-focus-ring;
+            border-color: var(--theme-field-border-color-hover);
+            box-shadow: inset 0 0 0 0.25em var(--theme-background-color), var(--theme-field-focus-ring);
         }
 
         // error
@@ -162,13 +162,13 @@
         .mzp-is-error & {
             &[type='checkbox'] + label::before,
             &[type='radio'] + label::before {
-                border-color: forms.$field-border-color-error;
+                border-color: var(--theme-field-border-color-error);
             }
 
             &[type='checkbox']:checked + label::before,
             &[type='radio']:checked + label::before {
-                background-color: forms.$field-border-color-error;
-                border-color: forms.$field-border-color-error;
+                background-color: var(--theme-field-border-color-error);
+                border-color: var(--theme-field-border-color-error);
             }
 
             // hover
@@ -176,18 +176,18 @@
             &[type='checkbox'] + label:hover::before,
             &[type='radio']:hover + label::before,
             &[type='radio'] + label:hover::before {
-                border-color: forms.$field-border-color-error-hover;
+                border-color: var(--theme-field-border-color-error-hover);
             }
 
             // focus
             &[type='checkbox']:focus + label::before,
             &[type='radio']:focus + label::before {
-                border-color: forms.$field-border-color-error-hover;
-                box-shadow: forms.$field-focus-ring-error;
+                border-color: var(--theme-field-border-color-error-hover);
+                box-shadow: var(--theme-field-focus-ring-error);
             }
 
             &[type='radio']:checked:focus + label::before {
-                box-shadow: inset 0 0 0 0.25em $color-white, forms.$field-focus-ring-error;
+                box-shadow: inset 0 0 0 0.25em var(--theme-background-color), var(--theme-field-focus-ring-error);
             }
         }
 
@@ -195,22 +195,22 @@
 
         &[type='checkbox'][disabled] + label::before,
         &[type='radio'][disabled] + label::before {
-            border-color: forms.$field-border-color-disabled;
+            border-color: var(--theme-field-border-color-disabled);
         }
 
         &[type='checkbox'][disabled]:checked + label::before {
             background-color: $color-marketing-gray-10;
-            border-color: forms.$field-border-color-disabled;
+            border-color: var(--theme-field-border-color-disabled);
         }
 
         &[type='checkbox'][disabled]:checked + label::after {
-            border-bottom-color: forms.$field-border-color-disabled;
-            border-right-color: forms.$field-border-color-disabled;
+            border-bottom-color: var(--theme-field-border-color-disabled);
+            border-right-color: var(--theme-field-border-color-disabled);
         }
 
         &[type='radio'][disabled]:checked + label::before {
-            background-color: forms.$field-border-color-disabled;
-            border-color: forms.$field-border-color-disabled;
+            background-color: var(--theme-field-border-color-disabled);
+            border-color: var(--theme-field-border-color-disabled);
         }
 
         // disabled hover
@@ -218,18 +218,18 @@
         &[type='checkbox'][disabled] + label:hover::before,
         &[type='radio'][disabled]:hover + label::before,
         &[type='radio'][disabled] + label:hover::before {
-            border-color: forms.$field-border-color-disabled;
+            border-color: var(--theme-field-border-color-disabled);
         }
 
         // disabled focus
         &[type='checkbox'][disabled]:focus + label::before,
         &[type='radio'][disabled]:focus + label::before {
-            border-color: forms.$field-border-color-disabled;
-            box-shadow: forms.$field-focus-ring-error;
+            border-color: var(--theme-field-border-color-disabled);
+            box-shadow: var(--theme-field-focus-ring-error);
         }
 
         &[type='radio'][disabled]:checked:focus + label::before {
-            box-shadow: inset 0 0 0 0.25em $color-white, forms.$field-focus-ring;
+            box-shadow: inset 0 0 0 0.25em var(--theme-background-color), var(--theme-field-focus-ring);
         }
     }
 
@@ -257,7 +257,7 @@
     @include forms.form-info;
 
     .mzp-c-choices + & {
-        margin-top: forms.$field-v-spacing * -1 + forms.$info-v-spacing;
+        margin-top: calc(forms.$field-v-spacing * -1 + forms.$info-v-spacing);
     }
 
     .mzp-c-choice-label + & {

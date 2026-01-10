@@ -3,6 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use '../../includes/lib' as *;
+@use '../../includes/tokens' as tokens;
 @use '../../base/elements/tables' as *;
 
 .mzp-u-rich-text {
@@ -89,7 +90,7 @@
     }
 
     pre {
-        background-color: $color-light-gray-20;
+        background-color: tokens.$color-light-gray-20;
         margin-bottom: 1.25em;
         overflow-x: auto;
         padding: $spacing-md;

@@ -14,21 +14,12 @@
 //     - form-footer
 
 .mzp-c-form {
-    color: forms.$form-text;
+    color: var(--theme-form-text-color);
     margin-bottom: forms.$field-v-spacing;
 
     &.mzp-t-dark,
     .mzp-t-dark & {
-        color: $body-text-color-secondary-inverse;
-    }
-
-    @supports (--css: variables) {
-        color: var(--body-text-color-secondary);
-
-        &.mzp-t-dark,
-        .mzp-t-dark & {
-            color: var(--body-text-color-secondary-inverse);
-        }
+        color: var(--theme-body-text-color-secondary-inverse);
     }
 
     // if we're using the form component bottom spacing comes from `field` and `choice` components
@@ -67,7 +58,7 @@
 .mzp-c-form-title,
 legend.mzp-c-form-title {
     @include text-heading-xs;
-    color: $title-text-color;
+    color: var(--theme-heading-text-color);
     margin: 0 0 $spacing-lg;
 
     .mzp-c-form-header > & {
@@ -75,15 +66,7 @@ legend.mzp-c-form-title {
     }
 
     .mzp-t-dark & {
-        color: $title-text-color-inverse;
-    }
-
-    @supports (--css: variables) {
-        color: var(--heading-text-color);
-
-        .mzp-t-dark & {
-            color: var(--heading-text-color-inverse);
-        }
+        color: var(--theme-heading-text-color-inverse);
     }
 }
 

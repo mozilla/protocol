@@ -12,7 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: $title-text-color;
+    color: var(--theme-heading-text-color);
     font-family: var(--theme-heading-font-family);
     font-variant-ligatures: var(--theme-heading-font-ligatures);
     letter-spacing: var(--theme-heading-letter-spacing);
@@ -20,15 +20,7 @@ h6 {
     margin: 0 0 0.5em;
 
     .mzp-t-dark & {
-        color: $title-text-color-inverse;
-    }
-
-    @supports (--css: variables) {
-        color: var(--heading-text-color);
-
-        .mzp-t-dark & {
-            color: var(--heading-text-color-inverse);
-        }
+        color: var(--theme-heading-text-color-inverse);
     }
 }
 

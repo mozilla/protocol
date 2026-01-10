@@ -94,7 +94,7 @@ html.mzp-is-noscroll {
         }
 
         &:focus {
-            outline: 1px dotted $color-white;
+            outline: 1px dotted var(--theme-body-text-color-inverse);
         }
     }
 }
@@ -103,7 +103,7 @@ html.mzp-is-noscroll {
     background: transparent;
     margin: 0 auto;
     padding-top: $spacing-lg;
-    color: $color-white;
+    color: var(--theme-body-text-color-inverse);
     @include text-body-lg;
     @include light-links;
 }

@@ -6,20 +6,15 @@
 
 html {
     font-size: 100%;
-    background: $color-white;
+    background: var(--theme-background-color);
 }
 
 body {
-    background: $background-color;
-    color: $body-text-color;
+    background: var(--theme-background-color);
+    color: var(--theme-body-text-color);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     @include text-body-md;
-
-    @supports (--css: variable) {
-        background: var(--background-color);
-        color: var(--body-text-color);
-    }
 }
 
 // A few places use a class to hide elements. We should try to avoid that.

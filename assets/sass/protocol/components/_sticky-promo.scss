@@ -31,7 +31,7 @@ $logos: (
         (right, $spacing-md, auto),
         (left, auto, $spacing-md),
     ));
-    background-color: $color-white;
+    background-color: var(--theme-background-color);
     border-radius: $border-radius-sm;
     bottom: 0;
     box-shadow: $box-shadow-sm;
@@ -67,13 +67,8 @@ $logos: (
 
     // Dark theme
     &.mzp-t-dark {
-        background-color: $background-color-inverse;
-        color: $body-text-color-inverse;
-
-        @supports (--css: variables) {
-            background-color: var(--background-color-inverse);
-            color: var(--body-text-color-inverse);
-        }
+        background-color: var(--theme-background-color-inverse);
+        color: var(--theme-body-text-color-inverse);
     }
 
     // Product logos

@@ -17,6 +17,9 @@
 @use 'includes/fonts/mozilla-text';
 @use 'includes/fonts/mozilla-headline';
 
+// Root - CSS variables
+@use 'root';
+
 // Base elements - general HTML elements
 @use 'base/elements';
 

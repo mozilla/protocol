@@ -3,7 +3,7 @@
 
 .docs-specimen {
     border-radius: $border-radius-sm;
-    border: 1px solid $color-light-gray-60;
+    border: 1px solid var(--fractal-color-border-light);
     padding: $spacing-md;
     margin: $spacing-lg 0;
     overflow-x: auto;

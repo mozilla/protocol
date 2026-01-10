@@ -4,18 +4,19 @@
 
 @use 'sass:math';
 @use '../includes/lib' as *;
+@use '../includes/tokens' as tokens;
 
 @mixin footer-line {
-    border-bottom: 1px solid $color-light-gray-50;
+    border-bottom: 1px solid tokens.$color-light-gray-50;
 }
 
 // * -------------------------------------------------------------------------- */
 // Footer section styles
 
 .mzp-c-footer {
-    background: $color-black;
+    background: var(--theme-background-color-inverse);
     clear: both;
-    color: $color-white;
+    color: var(--theme-body-text-color-inverse);
     margin: 0;
     width: 100%;
     @include font-mozilla-text;
@@ -144,7 +145,7 @@
     &,
     & button {
         background-color: transparent;
-        color: $color-light-gray-50;
+        color: tokens.$color-light-gray-50;
         font-weight: bold;
         margin-bottom: 0;
         padding: $spacing-md 0;
@@ -157,13 +158,13 @@
 
         /* stylelint-disable-next-line no-duplicate-selectors */
         & {
-            // needs to come after @includes to over-ride value
+            // needs to come after @include footer-line to over-ride value
             border: 0;
         }
     }
 
     & button {
-        color: $color-white;
+        color: var(--theme-body-text-color-inverse);
     }
 
     &.is-summary {
@@ -233,10 +234,10 @@
 
 .mzp-c-footer-secondary {
     position: relative;
-    color: $color-light-gray-50;
+    color: tokens.$color-light-gray-50;
 
     a {
-        color: $color-light-gray-50;
+        color: tokens.$color-light-gray-50;
 
         &:hover,
         &:focus,
@@ -291,7 +292,7 @@
 
             &:hover,
             &:focus {
-                border-bottom-color: $color-white;
+                border-bottom-color: var(--theme-body-text-color-inverse);
             }
         }
     }

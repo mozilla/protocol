@@ -6,7 +6,7 @@
 
 @mixin highlighted {
     &::after {
-        background: $color-black;
+        background: var(--theme-body-text-color);
         bottom: -1px;
         content: '';
         height: 1px;
@@ -47,7 +47,7 @@
 .mzp-c-menu-category {
     .mzp-c-menu-title {
         border-bottom: 1px solid $color-marketing-gray-30;
-        color: $color-black;
+        color: var(--theme-body-text-color);
         display: block;
         font-weight: bold;
         margin-bottom: 0;
@@ -204,7 +204,7 @@
 
 .mzp-c-menu-panel {
     box-sizing: border-box;
-    background: $color-white;
+    background: var(--theme-background-color);
     display: none;
     padding-top: $spacing-lg;
     width: 100%;

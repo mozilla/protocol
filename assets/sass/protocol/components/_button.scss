@@ -32,8 +32,8 @@
     }
 
     &:focus {
-        border-color: forms.$button-border-color-focus;
-        box-shadow: forms.$field-focus-ring;
+        border-color: var(--theme-button-border-color-focus);
+        box-shadow: var(--theme-field-focus-ring);
         outline-offset: 1px;
     }
 
@@ -72,28 +72,28 @@
 .mzp-c-button { /* stylelint-disable-line no-duplicate-selectors */
     // * ---------------------------------------------------------------------- */
     // Primary
-    background-color: $color-moz-black;
-    border: 2px solid $color-black;
-    color: $color-white;
+    background-color: var(--theme-body-text-color);
+    border: 2px solid var(--theme-body-text-color);
+    color: var(--theme-background-color);
 
     &:hover,
     &:active {
-        background-color: $color-white;
-        border-color: $color-black;
-        color: $color-black;
+        background-color: var(--theme-background-color);
+        border-color: var(--theme-body-text-color);
+        color: var(--theme-body-text-color);
     }
 
     // dark
     &.mzp-t-dark {
-        background-color: $color-white;
-        border-color: $color-white;
-        color: $color-black;
+        background-color: var(--theme-body-text-color-inverse);
+        border-color: var(--theme-body-text-color-inverse);
+        color: var(--theme-background-color-inverse);
 
         &:hover,
         &:active {
-            background-color: $color-moz-black;
-            border-color: $color-white;
-            color: $color-white;
+            background-color: var(--theme-background-color-inverse);
+            border-color: var(--theme-body-text-color-inverse);
+            color: var(--theme-body-text-color-inverse);
         }
     }
 
@@ -102,27 +102,27 @@
 
     &.mzp-t-secondary {
         background-color: transparent;
-        border-color: $color-black;
-        color: $color-black;
+        border-color: var(--theme-body-text-color);
+        color: var(--theme-body-text-color);
 
         &:hover,
         &:active {
-            background-color: $color-moz-black;
-            border-color: $color-black;
-            color: $color-white;
+            background-color: var(--theme-body-text-color);
+            border-color: var(--theme-body-text-color);
+            color: var(--theme-background-color);
         }
 
         // dark
         &.mzp-t-dark {
             background-color: transparent;
-            border-color: $color-white;
-            color: $color-white;
+            border-color: var(--theme-body-text-color-inverse);
+            color: var(--theme-body-text-color-inverse);
 
             &:hover,
             &:active {
-                background-color: $color-white;
-                border-color: $color-white;
-                color: $color-black;
+                background-color: var(--theme-body-text-color-inverse);
+                border-color: var(--theme-body-text-color-inverse);
+                color: var(--theme-background-color-inverse);
             }
         }
     }
@@ -133,15 +133,15 @@
     &.mzp-t-product {
         &,
         &.mzp-t-dark {
-            background-color: $color-blue-50;
-            border-color: $color-blue-50;
-            color: $color-white;
+            background-color: var(--theme-link-color);
+            border-color: var(--theme-link-color);
+            color: var(--theme-background-color);
 
             &:hover,
             &:active {
-                background-color: $color-white;
-                border-color: $color-blue-50;
-                color: $color-blue-50;
+                background-color: var(--theme-background-color);
+                border-color: var(--theme-link-color);
+                color: var(--theme-link-color);
             }
         }
 
@@ -149,14 +149,14 @@
         &.mzp-t-secondary {
             &,
             &.mzp-t-dark {
-                background-color: $color-white;
-                border-color: $color-blue-50;
-                color: $color-blue-50;
+                background-color: var(--theme-background-color);
+                border-color: var(--theme-link-color);
+                color: var(--theme-link-color);
 
                 &:hover,
                 &:active {
-                    background-color: $color-blue-50;
-                    color: $color-white;
+                    background-color: var(--theme-link-color);
+                    color: var(--theme-background-color);
                 }
             }
         }
@@ -180,13 +180,13 @@
         &.mzp-t-dark {
             background-color: rgba($color-white, 0.1);
             border-color: rgba($color-white, 0.6);
-            color: $color-white;
+            color: var(--theme-body-text-color-inverse);
 
             &:hover,
             &:active {
                 background-color: rgba($color-white, 0.2);
                 border-color: rgba($color-white, 0.6);
-                color: $color-white;
+                color: var(--theme-body-text-color-inverse);
             }
         }
     }

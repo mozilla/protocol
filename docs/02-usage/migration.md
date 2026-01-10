@@ -142,13 +142,71 @@ Replace: var(--theme-heading-line-height)
 
 ### Remove @supports Blocks (SCSS files)
 
-If you have `@supports` blocks that only contain font declarations, you can remove them. Search for these manually:
+If you have `@supports` blocks that only contain font or color declarations, you can remove them. Search for these manually:
 
 ```text
 Find:    @supports \(--css: variables\)
 ```
 
-Review each match and remove the block if it only contains font-family, font-size, or line-height declarations.
+Review each match and remove the block if it only contains font-family, font-size, line-height, color, or background-color declarations.
+
+---
+
+## Color Migration
+
+### CSS Variable Renames (SCSS files)
+
+Add `--theme-` prefix to color variables:
+
+```text
+Find:    --(background-color|body-text-color|link-color|heading-text-color)(-[a-z-]*)?
+Replace: --theme-$1$2
+```
+
+### Sass Color Variable Replacements (SCSS files)
+
+Replace Sass variables with CSS custom properties. Run the `$title-text-color` replacement first (it renames to `heading`):
+
+```text
+Find:    \$title-text-color(-inverse)?
+Replace: var(--theme-heading-text-color$1)
+```
+
+```text
+Find:    \$(background-color|body-text-color|link-color)(-[a-z-]*)?
+Replace: var(--theme-$1$2)
+```
+
+### Form Sass Variable Replacements (SCSS files)
+
+Form color variables (note: `form-text` and `form-inactive` have different target names):
+
+```text
+Find:    forms\.\$form-red
+Replace: var(--theme-form-red)
+```
+
+```text
+Find:    forms\.\$form-text
+Replace: var(--theme-form-text-color)
+```
+
+```text
+Find:    forms\.\$form-inactive
+Replace: var(--theme-form-text-color-inactive)
+```
+
+Field and button variables:
+
+```text
+Find:    forms\.\$(field-border-color|field-border|field-focus-ring)(-[a-z-]*)?
+Replace: var(--theme-$1$2)
+```
+
+```text
+Find:    forms\.\$button-border-color-focus
+Replace: var(--theme-button-border-color-focus)
+```
 
 ## Terminal Commands (macOS/Linux)
 
@@ -210,6 +268,38 @@ find . -name "*.scss" -exec sed -i '' -E 's/\$body-(xs|sm|md|lg|xl)-size/var(--t
 find . -name "*.scss" -exec sed -i '' 's/\$text-body-line-height/var(--theme-body-line-height)/g' {} +
 find . -name "*.scss" -exec sed -i '' 's/\$text-title-line-height/var(--theme-heading-line-height)/g' {} +
 find . -name "*.scss" -exec sed -i '' 's/\$text-display-line-height/var(--theme-heading-line-height)/g' {} +
+```
+
+### Color CSS Variable Renames
+
+```bash
+# Add --theme- prefix to color variables
+find . -name "*.scss" -exec sed -i '' -E 's/--(background-color|body-text-color|link-color|heading-text-color)(-[a-z-]*)?/--theme-\1\2/g' {} +
+```
+
+### Color Sass Variable Replacements
+
+```bash
+# Title text color (renames to heading) - run this first
+find . -name "*.scss" -exec sed -i '' -E 's/\$title-text-color(-inverse)?/var(--theme-heading-text-color\1)/g' {} +
+
+# Other color variables
+find . -name "*.scss" -exec sed -i '' -E 's/\$(background-color|body-text-color|link-color)(-[a-z-]*)?/var(--theme-\1\2)/g' {} +
+```
+
+### Form Sass Variable Replacements
+
+```bash
+# Form colors (these have different target names, so do individually)
+find . -name "*.scss" -exec sed -i '' 's/forms\.\$form-red/var(--theme-form-red)/g' {} +
+find . -name "*.scss" -exec sed -i '' 's/forms\.\$form-text/var(--theme-form-text-color)/g' {} +
+find . -name "*.scss" -exec sed -i '' 's/forms\.\$form-inactive/var(--theme-form-text-color-inactive)/g' {} +
+
+# Field and focus ring variables
+find . -name "*.scss" -exec sed -i '' -E 's/forms\.\$(field-border-color|field-border|field-focus-ring)(-[a-z-]*)?/var(--theme-\1\2)/g' {} +
+
+# Button border
+find . -name "*.scss" -exec sed -i '' 's/forms\.\$button-border-color-focus/var(--theme-button-border-color-focus)/g' {} +
 ```
 
 ## Linux Users
@@ -276,4 +366,5 @@ grep -r "mzp-l-split-media-overflow\|mzp-l-split-media-constrain-height" --inclu
 1. Run your build to check for any Sass compilation errors
 2. Run visual regression tests if available
 3. Manually review any remaining uses of removed variables or mixins
-4. Test in a browser to verify typography appears correct
+4. Test in a browser to verify typography and colors appear correct
+5. Test dark mode / `.mzp-t-dark` themed components to verify color variables are working

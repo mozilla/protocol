@@ -10,32 +10,22 @@
     }
 
     :link {
-        color: $link-color;
+        color: var(--theme-link-color);
         text-decoration: underline;
 
         &:visited {
-            color: $link-color-visited;
+            color: var(--theme-link-color-visited);
         }
 
         &:hover,
         &:focus,
         &:active {
-            color: $link-color-hover;
+            color: var(--theme-link-color-hover);
             text-decoration: none;
         }
 
         &:active {
             background-color: rgb(0, 0, 0, 0.05);
-        }
-
-        @supports (--css: variables) {
-            color: var(--link-color);
-
-            &:hover,
-            &:focus,
-            &:active {
-                color: var(--link-color-hover);
-            }
         }
     }
 
@@ -46,14 +36,10 @@
     h5,
     h6 {
         font-family: var(--theme-heading-font-family);
-        color: $title-text-color;
+        color: var(--theme-heading-text-color);
         font-weight: bold;
         margin: 1em 0 0.5em;
         opacity: 1;
-
-        @supports (--css: variables) {
-            color: var(--heading-text-color);
-        }
     }
 
     h1 {

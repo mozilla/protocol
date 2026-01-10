@@ -36,7 +36,15 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 ## Color
 
-* To come in follow up PR.
+* Modernization:
+  * Default to CSS vars for all color values
+  * Removed `@supports` declarations if they only had color declarations
+* Reorganization:
+  * Added `--theme-` prefix to color variables expected to morph between light/dark modes
+  * Renamed `-title-` to `-heading-` in (to match typography naming)
+  * Added new form color variables (`--theme-form-*`, `--theme-field-*`)
+  * Added status color variables (`--theme-color-success-*`, `--theme-color-error-*`, `--theme-color-warning-*`, `--theme-color-info-*`)
+* Removed Sass color variables from `_themes-sass.scss` (use CSS variables instead)
 
 ## Migration Tips
 
@@ -91,6 +99,18 @@ See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for
     - `multi-column*`
     - `transform`, `transform-origin`, `transform-style`
     - `transition`, `transition-property`, `transition-duration`, `transition-delay`
+* Rename CSS color variables to use `--theme-` prefix:
+  * `--(background-color|body-text-color|link-color|heading-text-color)(-*)` → `--theme-$1$2`
+* Removed Sass color variables (use CSS variables instead):
+  * `$(background-color|body-text-color|link-color)(-*)` → `var(--theme-$1$2)`
+  * `$title-text-color(-inverse)?` → `var(--theme-heading-text-color$1)` (note: renamed to `heading`)
+* Removed form Sass variables (use CSS variables instead):
+  * `forms.$form-red` → `var(--theme-form-red)`
+  * `forms.$form-text` → `var(--theme-form-text-color)`
+  * `forms.$form-inactive` → `var(--theme-form-text-color-inactive)`
+  * `forms.$(field-border-color|field-border|field-focus-ring)(-*)` → `var(--theme-$1$2)`
+  * `forms.$button-border-color-focus` → `var(--theme-button-border-color-focus)`
+* You can remove `@supports (--css: variables)` blocks that only contain color declarations, as CSS custom properties are now required.
 
 # 22.0.0
 

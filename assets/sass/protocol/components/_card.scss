@@ -9,7 +9,7 @@
 
 .mzp-c-card {
     box-sizing: border-box;
-    background: $color-white;
+    background: var(--theme-background-color);
     margin-bottom: $spacing-lg;
 
     // Preserve aspect ratio of images and avoid content jump when loading.
@@ -93,11 +93,11 @@
     .mzp-c-card-block-link {
         border-radius: $border-radius-xs;
         display: block;
-        color: $color-black;
+        color: var(--theme-body-text-color);
         text-decoration: none;
 
         .mzp-c-card-cta-text {
-            color: $color-link;
+            color: var(--theme-link-color);
         }
 
         &:hover,
@@ -134,16 +134,16 @@
 
 .mzp-c-card.mzp-t-dark,
 .mzp-t-dark .mzp-c-card {
-    background-color: $background-color-inverse;
-    color: $body-text-color-inverse;
+    background-color: var(--theme-background-color-inverse);
+    color: var(--theme-body-text-color-inverse);
 
     .mzp-c-card-tag,
     .mzp-c-card-meta {
-        color: $body-text-color-inverse;
+        color: var(--theme-body-text-color-inverse);
     }
 
     .mzp-c-card-block-link {
-        color: $body-text-color-inverse;
+        color: var(--theme-body-text-color-inverse);
 
         &:hover,
         &:active,
@@ -152,25 +152,7 @@
         }
 
         .mzp-c-card-cta-text {
-            color: $body-text-color-inverse;
-        }
-    }
-
-    @supports (--css: variables) {
-        background-color: var(--background-color-inverse);
-        color: var(--body-text-color-inverse);
-
-        .mzp-c-card-tag,
-        .mzp-c-card-meta {
-            color: var(--body-text-color-inverse);
-        }
-
-        .mzp-c-card-block-link {
-            color: var(--body-text-color-inverse);
-
-            .mzp-c-card-cta-text {
-                color: var(--body-text-color-inverse);
-            }
+            color: var(--theme-body-text-color-inverse);
         }
     }
 }

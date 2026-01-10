@@ -3,6 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use '../../includes/lib' as *;
+@use '../../includes/tokens' as tokens;
 @use '../../includes/forms';
 
 // * -------------------------------------------------------------------------- */
@@ -47,7 +48,7 @@ textarea {
 
     /* stylelint-disable-next-line no-duplicate-selectors */
     & {
-        // needs to come after @includes to over-ride value
+        // needs to come after @include text-body-md to over-ride value
         line-height: var(--theme-button-line-height);
     }
 }
@@ -134,45 +135,45 @@ input[type='url'] {
     @include forms.form-input;
 
     &::placeholder {
-        color: forms.$form-inactive;
+        color: var(--theme-form-text-color-inactive);
     }
 
     &:hover {
-        border-color: forms.$field-border-color-hover;
+        border-color: var(--theme-field-border-color-hover);
     }
 
     &:focus {
         outline: none;
-        border-color: forms.$field-border-color-focus;
-        box-shadow: forms.$field-focus-ring;
+        border-color: var(--theme-field-border-color-focus);
+        box-shadow: var(--theme-field-focus-ring);
 
         .mzp-t-dark & {
-            box-shadow: forms.$field-focus-ring-dark;
+            box-shadow: var(--theme-field-focus-ring-dark);
         }
     }
 
     .mzp-is-error & {
-        border-color: forms.$field-border-color-error;
+        border-color: var(--theme-field-border-color-error);
         box-shadow: none;
 
         &:hover {
-            border-color: forms.$field-border-color-error-hover;
+            border-color: var(--theme-field-border-color-error-hover);
         }
 
         &:focus {
-            border-color: forms.$form-red;
-            box-shadow: forms.$field-focus-ring-error;
+            border-color: var(--theme-form-red);
+            box-shadow: var(--theme-field-focus-ring-error);
         }
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-        background: $color-marketing-gray-10;
-        border-color: forms.$field-border-color-disabled;
-        color: forms.$form-inactive;
+        background: var(--theme-background-color-secondary);
+        border-color: var(--theme-field-border-color-disabled);
+        color: var(--theme-form-text-color-inactive);
 
         &:focus {
-            border-color: forms.$field-border-color-disabled-focus;
+            border-color: var(--theme-field-border-color-disabled-focus);
         }
     }
 }
@@ -247,44 +248,44 @@ input[type='search'] {
 
 input[type='color'],
 input[type='file'] {
-    background: $color-white;
+    background: var(--theme-background-color);
     border-radius: forms.$field-border-radius;
-    border: forms.$field-border;
+    border: var(--theme-field-border);
     line-height: var(--theme-button-line-height);
     margin: 0 0 forms.$field-v-spacing;
 
     &:hover {
-        border-color: forms.$field-border-color-hover;
+        border-color: var(--theme-field-border-color-hover);
     }
 
     &:focus {
-        border-color: forms.$field-border-color-focus;
-        box-shadow: forms.$field-focus-ring;
+        border-color: var(--theme-field-border-color-focus);
+        box-shadow: var(--theme-field-focus-ring);
         outline: none;
     }
 
     .mzp-is-error & {
-        border-color: forms.$field-border-color-error;
+        border-color: var(--theme-field-border-color-error);
         box-shadow: none;
 
         &:hover {
-            border-color: forms.$field-border-color-error-hover;
+            border-color: var(--theme-field-border-color-error-hover);
         }
 
         &:focus {
-            border-color: forms.$form-red;
-            box-shadow: forms.$field-focus-ring-error;
+            border-color: var(--theme-form-red);
+            box-shadow: var(--theme-field-focus-ring-error);
         }
     }
 
     &:disabled,
     &[aria-disabled='true'] {
-        background: forms.$field-border-color-disabled;
-        border-color: forms.$field-border-color-disabled;
-        color: forms.$form-inactive;
+        background: var(--theme-field-border-color-disabled);
+        border-color: var(--theme-field-border-color-disabled);
+        color: var(--theme-form-text-color-inactive);
 
         &:focus {
-            border-color: forms.$field-border-color-disabled-focus;
+            border-color: var(--theme-field-border-color-disabled-focus);
         }
     }
 }
@@ -319,7 +320,7 @@ select {
         &,
         &:hover,
         &:focus {
-            background: $color-white;
+            background: var(--theme-background-color);
             padding: forms.$field-padding;
         }
     }
@@ -329,48 +330,48 @@ select {
     }
 
     &:hover {
-        border-color: forms.$field-border-color-hover;
+        border-color: var(--theme-field-border-color-hover);
         background-image: $url-image-caret-down-link-hover, forms.$select-bg;
     }
 
     &:focus {
-        border-color: forms.$field-border-color-focus;
+        border-color: var(--theme-field-border-color-focus);
         background-image: $url-image-caret-down-link, forms.$select-bg;
-        box-shadow: forms.$field-focus-ring;
-        color: #222;
+        box-shadow: var(--theme-field-focus-ring);
+        color: var(--theme-body-text-color);
         outline: none;
 
         .mzp-t-dark & {
-            box-shadow: forms.$field-focus-ring-dark;
+            box-shadow: var(--theme-field-focus-ring-dark);
         }
     }
 
     .mzp-is-error & {
-        border-color: forms.$field-border-color-error;
+        border-color: var(--theme-field-border-color-error);
         box-shadow: none;
 
         &:hover {
-            border-color: forms.$field-border-color-error-hover;
+            border-color: var(--theme-field-border-color-error-hover);
         }
 
         &:focus {
-            border-color: forms.$form-red;
-            box-shadow: forms.$field-focus-ring-error;
+            border-color: var(--theme-form-red);
+            box-shadow: var(--theme-field-focus-ring-error);
         }
     }
 
     &:disabled,
     &[aria-disabled='true'] {
         background-image: $url-image-caret-down-form, forms.$select-bg-disabled;
-        border-color: forms.$field-border-color-disabled;
-        color: forms.$form-inactive;
+        border-color: var(--theme-field-border-color-disabled);
+        color: var(--theme-form-text-color-inactive);
 
         &:hover {
-            border-color: forms.$field-border-color-disabled;
+            border-color: var(--theme-field-border-color-disabled);
         }
 
         &:focus {
-            border-color: forms.$field-border-color-disabled-focus;
+            border-color: var(--theme-field-border-color-disabled-focus);
         }
     }
 
@@ -386,7 +387,7 @@ select {
     @include forms.form-info;
 
     .mzp-is-error & {
-        color: forms.$form-red;
+        color: var(--theme-form-red);
     }
 }
 
@@ -395,9 +396,9 @@ select {
 
 .mzp-c-form-errors {
     @include white-links;
-    background-color: forms.$form-red;
+    background-color: var(--theme-form-red);
     border-radius: forms.$field-border-radius;
-    color: $color-white;
+    color: var(--theme-body-text-color-inverse);
     padding: $spacing-sm;
     margin-bottom: $spacing-xl;
 
@@ -418,6 +419,6 @@ select {
     input[type='checkbox'],
     input[type='radio'] {
         border-radius: forms.$field-border-radius;
-        box-shadow: forms.$field-focus-ring-error;
+        box-shadow: var(--theme-field-focus-ring-error);
     }
 }
