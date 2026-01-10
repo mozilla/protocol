@@ -10,13 +10,13 @@
 }
 
 .Tree-title {
-    color: $color-white;
+    color: var(--fractal-color-header-content);
     letter-spacing: normal;
     @include text-body-md;
 }
 
 .Tree-collectionLabel {
-    color: $color-white;
+    color: var(--fractal-color-header-content);
     padding-top: 0.15em;
     padding-bottom: 0.15em;
 
@@ -26,8 +26,8 @@
     }
 
     &:hover {
-        color: $color-white;
-        background-color: $color-dark-gray-50;
+        color: var(--fractal-color-header-content);
+        background-color: var(--fractal-color-nav-item-hover);
     }
 
     &::before {
@@ -79,25 +79,25 @@
     @include text-body-sm;
 
     .Tree-entityLink {
-        color: $color-white;
+        color: var(--fractal-color-header-content);
         padding-top: 0.25em;
         padding-bottom: 0.25em;
 
         &:hover {
-            color: $color-white;
-            background-color: $color-dark-gray-50;
+            color: var(--fractal-color-header-content);
+            background-color: var(--fractal-color-nav-item-hover);
         }
     }
 
     &.is-current {
-        background-color: $color-dark-gray-60;
+        background-color: var(--fractal-color-nav-item-active);
     }
 }
 
 .Tree-aside {
-    color: $color-white;
+    color: var(--fractal-color-header-content);
 }
 
 .Tree-collapse {
-    color: $color-white;
+    color: var(--fractal-color-header-content);
 }

@@ -1,0 +1,43 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+:root {
+    // colors
+    --theme-background-color-tertiary-inverse: var(--token-background-color-tertiary-inverse);
+    --theme-background-color-tertiary: var(--token-background-color-tertiary);
+    --theme-background-color-secondary-inverse: var(--token-background-color-secondary-inverse);
+    --theme-background-color-secondary: var(--token-background-color-secondary);
+    --theme-background-color-inverse: var(--token-background-color-inverse);
+    --theme-background-color: var(--token-background-color);
+    --theme-body-text-color-secondary-inverse: var(--token-body-text-color-secondary-inverse);
+    --theme-body-text-color-secondary: var(--token-body-text-color-secondary);
+    --theme-body-text-color-inverse: var(--token-body-text-color-inverse);
+    --theme-body-text-color: var(--token-body-text-color);
+    --theme-link-color-hover-inverse: var(--token-link-color-hover-inverse);
+    --theme-link-color-hover: var(--token-link-color-hover);
+    --theme-link-color-inverse: var(--token-link-color-inverse);
+    --theme-link-color-visited-inverse: var(--token-link-color-visited-inverse);
+    --theme-link-color-visited: var(--token-link-color-visited);
+    --theme-link-color: var(--token-link-color);
+    --theme-heading-text-color-inverse: var(--token-heading-text-color-inverse);
+    --theme-heading-text-color: var(--token-heading-text-color);
+
+    // status colors
+    --theme-color-success: var(--token-color-success);
+    --theme-color-success-bg: var(--token-color-success-bg);
+    --theme-color-success-hover: var(--token-color-success-hover);
+    --theme-color-success-active: var(--token-color-success-active);
+    --theme-color-error: var(--token-color-error);
+    --theme-color-error-bg: var(--token-color-error-bg);
+    --theme-color-error-hover: var(--token-color-error-hover);
+    --theme-color-error-active: var(--token-color-error-active);
+    --theme-color-warning: var(--token-color-warning);
+    --theme-color-warning-bg: var(--token-color-warning-bg);
+    --theme-color-warning-hover: var(--token-color-warning-hover);
+    --theme-color-warning-active: var(--token-color-warning-active);
+    --theme-color-info: var(--token-color-info);
+    --theme-color-info-bg: var(--token-color-info-bg);
+    --theme-color-info-hover: var(--token-color-info-hover);
+    --theme-color-info-active: var(--token-color-info-active);
+}

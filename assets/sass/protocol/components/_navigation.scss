@@ -8,8 +8,8 @@
 // Navigation styles
 
 .mzp-c-navigation {
-    background: $color-white;
-    color: $color-black;
+    background: var(--theme-background-color);
+    color: var(--theme-body-text-color);
 
     .mzp-c-navigation-l-content {
         @include clearfix;

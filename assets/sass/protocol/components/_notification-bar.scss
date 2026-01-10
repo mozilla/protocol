@@ -8,9 +8,9 @@
     background-color: $color-marketing-gray-20;
     border-radius: $border-radius-sm;
     border: 1px;
-    box-shadow: $box-shadow-md;
     box-sizing: border-box;
-    color: $color-black;
+    box-shadow: $box-shadow-md;
+    color: var(--theme-body-text-color);
     font-weight: normal;
     margin: $layout-xs $spacing-md 0;
     padding: $spacing-md $spacing-2xl;
@@ -104,64 +104,64 @@
     }
 
     &.mzp-t-success {
-        background-color: $color-green-30;
+        background-color: var(--theme-color-success-bg);
 
         @media #{$mq-sm} {
             .mzp-c-notification-bar-button {
-                background-color: $color-green-60;
+                background-color: var(--theme-color-success-hover);
 
                 &:hover,
                 &:focus {
-                    background-color: $color-green-70;
+                    background-color: var(--theme-color-success-active);
                 }
             }
         }
     }
 
     &.mzp-t-error {
-        background-color: $color-red-30;
+        background-color: var(--theme-color-error-bg);
 
         @media #{$mq-sm} {
             .mzp-c-notification-bar-button {
-                background-color: $color-red-60;
+                background-color: var(--theme-color-error-hover);
 
                 &:hover,
                 &:focus {
-                    background-color: $color-red-70;
+                    background-color: var(--theme-color-error-active);
                 }
             }
         }
     }
 
     &.mzp-t-warning {
-        background-color: $color-yellow-20;
+        background-color: var(--theme-color-warning-bg);
 
         @media #{$mq-sm} {
             .mzp-c-notification-bar-button {
-                background-color: $color-yellow-40;
+                background-color: var(--theme-color-warning-hover);
 
                 &:hover,
                 &:focus {
-                    background-color: $color-yellow-50;
+                    background-color: var(--theme-color-warning-active);
                 }
             }
         }
     }
 
     &.mzp-t-click {
-        background-color: $color-blue-50;
-        color: $color-white;
+        background-color: var(--theme-color-info);
+        color: var(--theme-body-text-color-inverse);
         font-weight: 600;
 
         .mzp-c-notification-bar-button {
             background-image: url('#{$image-path}/icons/close-white.svg');
 
             @media #{$mq-sm} {
-                background-color: $color-blue-70;
+                background-color: var(--theme-color-info-hover);
 
                 &:hover,
                 &:focus {
-                    background-color: $color-blue-80;
+                    background-color: var(--theme-color-info-active);
                 }
             }
         }

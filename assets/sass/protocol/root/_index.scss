@@ -2,18 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-// Styles for the component preview frame
-@use '/assets/sass/protocol/root';
-
-html,
-body {
-    height: 100%;
-}
-
-.site-preview {
-    padding: 1rem;
-}
-
-.site-preview-unpadded {
-    padding: 0;
-}
+@use 'color';
+@use 'theme';
+@use 'spacing';
+@use 'typography';

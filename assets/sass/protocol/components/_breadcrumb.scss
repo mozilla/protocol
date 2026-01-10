@@ -5,7 +5,7 @@
 @use '../includes/lib' as *;
 
 .mzp-c-breadcrumb {
-    background-color: $background-color-secondary;
+    background-color: var(--theme-background-color-secondary);
     padding: $spacing-md 0;
 
     .mzp-c-breadcrumb-list {
@@ -50,14 +50,6 @@
     }
 
     &.mzp-t-dark {
-        background-color: $background-color-secondary-inverse;
-    }
-
-    @supports (--css: variables) {
-        background-color: var(--background-color-secondary);
-
-        &.mzp-t-dark {
-            background-color: var(--background-color-secondary-inverse);
-        }
+        background-color: var(--theme-background-color-secondary-inverse);
     }
 }

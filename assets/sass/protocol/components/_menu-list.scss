@@ -15,7 +15,7 @@
 }
 
 .mzp-c-menu-list-list {
-    background-color: $color-white;
+    background-color: var(--theme-background-color);
     box-shadow: 0 0 6px 0 rgb(0, 0, 0, 0.3);
     border-radius: $border-radius-sm;
 }
@@ -24,7 +24,7 @@
     display: inline-block;
 
     a {
-        color: $color-link;
+        color: var(--theme-link-color);
         display: inline-block;
         padding: $spacing-sm;
         position: relative;
@@ -48,7 +48,7 @@
         &:hover,
         &:focus {
             background: $color-marketing-gray-20;
-            color: $color-link-hover;
+            color: var(--theme-link-color-hover);
 
             &::after {
                 background: $url-image-download-link-hover center center no-repeat;
@@ -72,7 +72,7 @@
             @include bidi(((padding, 0 (16px + $spacing-sm) 0 0, 0 0 0 (16px + $spacing-sm)),));
             background: transparent;
             border: 0;
-            color: $color-link;
+            color: var(--theme-link-color);
             cursor: pointer;
             font-family: inherit;
             font-size: inherit;
@@ -100,7 +100,7 @@
 
             &:hover,
             &:focus {
-                color: $color-link-hover;
+                color: var(--theme-link-color-hover);
                 text-decoration: none;
 
                 &::after {

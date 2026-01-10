@@ -5,9 +5,5 @@
 .Document-title {
     @include text-heading-lg;
     font-family: var(--theme-heading-font-family);
-    color: $title-text-color;
-
-    @supports (--css: variables) {
-        color: var(--heading-text-color);
-    }
+    color: var(--theme-heading-text-color);
 }

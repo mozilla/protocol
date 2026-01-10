@@ -2,7 +2,7 @@
 
 /* stylelint-disable-next-line selector-class-pattern */
 .Search-input {
-    color: white;
+    color: var(--fractal-color-header-content);
     border: none;
-    background-color: $color-dark-gray-50;
+    background-color: var(--fractal-color-ui-active);
 }

@@ -12,7 +12,7 @@ $icon-size: 24px;
 
     .mzp-c-menu-item-link {
         display: block;
-        color: $color-black;
+        color: var(--theme-body-text-color);
         text-decoration: none;
 
         &:hover,
@@ -20,8 +20,8 @@ $icon-size: 24px;
         &:focus {
             .mzp-c-menu-item-title {
                 transition: border-bottom-color 100ms ease-in-out;
-                border-bottom: 2px solid $color-black;
-                color: $color-black;
+                border-bottom: 2px solid var(--theme-body-text-color);
+                color: var(--theme-body-text-color);
             }
         }
 
@@ -77,13 +77,13 @@ $icon-size: 24px;
         }
 
         a {
-            color: $color-black;
+            color: var(--theme-body-text-color);
             text-decoration: none;
 
             &:hover,
             &:active,
             &:focus {
-                color: $color-black;
+                color: var(--theme-body-text-color);
                 text-decoration: underline;
             }
         }

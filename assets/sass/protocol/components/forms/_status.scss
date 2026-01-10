@@ -20,20 +20,20 @@ input[type='url'],
 select,
 textarea {
     .mzp-is-error & {
-        border-color: forms.$field-border-color-error;
+        border-color: var(--theme-field-border-color-error);
         box-shadow: none;
 
         &:hover {
-            border-color: forms.$field-border-color-error-hover;
+            border-color: var(--theme-field-border-color-error-hover);
         }
 
         &:focus {
-            border-color: forms.$field-border-color-error;
-            box-shadow: forms.$field-focus-ring-error;
+            border-color: var(--theme-field-border-color-error);
+            box-shadow: var(--theme-field-focus-ring-error);
         }
 
         &:focus:hover {
-            border-color: forms.$field-border-color-error-hover;
+            border-color: var(--theme-field-border-color-error-hover);
         }
     }
 }

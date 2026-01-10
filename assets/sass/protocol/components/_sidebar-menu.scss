@@ -42,7 +42,7 @@
         }
 
         &.mzp-is-current {
-            color: $color-black;
+            color: var(--theme-body-text-color);
         }
     }
 }

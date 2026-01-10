@@ -16,7 +16,7 @@
 
 .mzp-c-field-msg {
     .mzp-c-field + & {
-        margin-top: forms.$field-v-spacing * -1 + forms.$label-v-spacing;
+        margin-top: calc(forms.$field-v-spacing * -1 + forms.$label-v-spacing);
     }
 }
 

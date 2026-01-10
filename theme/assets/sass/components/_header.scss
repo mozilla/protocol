@@ -3,11 +3,7 @@
 /* stylelint-disable selector-class-pattern */
 
 .Header {
-    background-color: $background-color-inverse;
-
-    @supports (--css: variables) {
-        background-color: var(--background-color-inverse);
-    }
+    background-color: var(--theme-background-color-inverse);
 }
 
 .Header-button {
