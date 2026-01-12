@@ -50,7 +50,7 @@ variants:
     context:
       background_class: mzp-t-dark mzp-t-background-secondary
       content: |
-        <h1 class="mzp-u-title-md">Lorem ipsum dolor sit amet</h1>
+        <h1 class="mzp-u-heading-md">Lorem ipsum dolor sit amet</h1>
         <p>Lorem ipsum dolor sit amet, amet dolores tincidunt te sea. His aliquid
           epicuri detraxit in, cum tantas populo periculis te. Ei vix idque noster.</p>
         <p><a class="mzp-c-button mzp-t-dark">Call to Action</a></p>

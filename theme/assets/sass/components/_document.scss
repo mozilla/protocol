@@ -3,12 +3,11 @@
 /* stylelint-disable selector-class-pattern */
 
 .Document-title {
-    @include text-title-lg;
-    font-family: $title-font-family;
+    @include text-heading-lg;
+    font-family: var(--theme-heading-font-family);
     color: $title-text-color;
 
     @supports (--css: variables) {
-        font-family: var(--title-font-family);
-        color: var(--title-text-color);
+        color: var(--heading-text-color);
     }
 }

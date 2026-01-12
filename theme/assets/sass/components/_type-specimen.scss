@@ -10,7 +10,7 @@
 }
 
 .docs-specimen-font {
-    @include text-title-md;
+    @include text-heading-md;
 }
 
 #specimen-mozilla-headline {
@@ -34,84 +34,52 @@
     margin: 0 0 0.25em;
 }
 
-.docs-scale-sample-title-2xl {
-    @include text-title-2xl;
-    font-family: $title-font-family;
+.docs-scale-sample-heading-2xl {
+    @include text-heading-2xl;
+    font-family: var(--theme-heading-font-family);
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
-.docs-scale-sample-title-xl {
-    @include text-title-xl;
-    font-family: $title-font-family;
+.docs-scale-sample-heading-xl {
+    @include text-heading-xl;
+    font-family: var(--theme-heading-font-family);
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
-.docs-scale-sample-title-lg {
-    @include text-title-lg;
-    font-family: $title-font-family;
+.docs-scale-sample-heading-lg {
+    @include text-heading-lg;
+    font-family: var(--theme-heading-font-family);
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
-.docs-scale-sample-title-md {
-    @include text-title-md;
-    font-family: $title-font-family;
+.docs-scale-sample-heading-md {
+    @include text-heading-md;
+    font-family: var(--theme-heading-font-family);
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
-.docs-scale-sample-title-sm {
-    @include text-title-sm;
-    font-family: $title-font-family;
+.docs-scale-sample-heading-sm {
+    @include text-heading-sm;
+    font-family: var(--theme-heading-font-family);
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
-.docs-scale-sample-title-xs {
-    @include text-title-xs;
-    font-family: $title-font-family;
+.docs-scale-sample-heading-xs {
+    @include text-heading-xs;
+    font-family: var(--theme-heading-font-family);
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
-.docs-scale-sample-title-2xs {
-    @include text-title-2xs;
-    font-family: $title-font-family;
+.docs-scale-sample-heading-2xs {
+    @include text-heading-2xs;
+    font-family: var(--theme-heading-font-family);
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
-.docs-scale-sample-title-3xs {
-    @include text-title-3xs;
-    font-family: $title-font-family;
+.docs-scale-sample-heading-3xs {
+    @include text-heading-3xs;
+    font-family: var(--theme-heading-font-family);
     font-weight: bold;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
 }
 
 .docs-scale-sample-body-xl {
@@ -135,7 +103,7 @@
 }
 
 #specimen-type-scale-condensed {
-    .docs-scale-sample-title-2xl {
+    .docs-scale-sample-heading-2xl {
         font-size: 24px;
         line-height: 1.166;
 
@@ -145,7 +113,7 @@
         }
     }
 
-    .docs-scale-sample-title-xl {
+    .docs-scale-sample-heading-xl {
         font-size: 21px;
         line-height: 1.2;
 
@@ -155,7 +123,7 @@
         }
     }
 
-    .docs-scale-sample-title-lg {
+    .docs-scale-sample-heading-lg {
         font-size: 18px;
         line-height: 1.2;
 
@@ -164,7 +132,7 @@
         }
     }
 
-    .docs-scale-sample-title-md {
+    .docs-scale-sample-heading-md {
         font-size: 16px;
         line-height: 1.25;
 
@@ -174,7 +142,7 @@
         }
     }
 
-    .docs-scale-sample-title-sm {
+    .docs-scale-sample-heading-sm {
         font-size: 14px;
         line-height: 1.25;
 
@@ -183,17 +151,17 @@
         }
     }
 
-    .docs-scale-sample-title-xs {
+    .docs-scale-sample-heading-xs {
         font-size: 14px;
         line-height: 1.25;
     }
 
-    .docs-scale-sample-title-2xs {
+    .docs-scale-sample-heading-2xs {
         font-size: 14px;
         line-height: 1.25;
     }
 
-    .docs-scale-sample-title-3xs {
+    .docs-scale-sample-heading-3xs {
         font-size: 14px;
         line-height: 1.25;
     }

@@ -11,8 +11,8 @@
     text-align: center;
 
     .mzp-c-callout-desc {
-        @include text-body-lg;
         margin-bottom: $spacing-lg;
+        @include text-body-lg;
     }
 
     .mzp-c-callout-cta,
@@ -32,7 +32,7 @@
     text-align: start;
 
     .mzp-c-callout-title {
-        @include text-title-sm;
+        @include text-heading-sm;
     }
 
     .mzp-c-callout-desc {

@@ -68,8 +68,8 @@
 }
 
 .mzp-c-button-info {
-    @include forms.form-info;
-    @include text-body-xs;
     padding-top: forms.$info-v-spacing;
     width: 100%;
+    @include forms.form-info;
+    @include text-body-xs;
 }

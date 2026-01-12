@@ -60,7 +60,7 @@ html.mzp-is-noscroll {
         @include bidi(((padding-right, $spacing-xl * 2, padding-left, 0),));
 
         h2 {
-            @include text-title-xs;
+            @include text-heading-xs;
             @include font-base;
             color: #fff;
         }
@@ -102,12 +102,12 @@ html.mzp-is-noscroll {
 }
 
 .mzp-c-modal-overlay-contents {
-    @include text-body-lg;
-    @include light-links;
     background: transparent;
     margin: 0 auto;
     padding-top: $spacing-lg;
     color: $color-white;
+    @include text-body-lg;
+    @include light-links;
 }
 
 // Modifier for showing full content width media, such as images or video.

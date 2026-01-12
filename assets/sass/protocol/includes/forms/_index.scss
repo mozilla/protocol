@@ -64,39 +64,36 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
 // use padding as much as possible, margins don't collapse on form elements
 
 @mixin field-label() {
-    @include text-body-sm;
     display: block;
     font-weight: bold;
-    line-height: $text-body-line-height;
     margin: 0;
     padding-bottom: $label-v-spacing;
-
-    @supports (--css: variables) {
-        line-height: var(--body-line-height);
-    }
+    @include text-body-sm;
 }
 
 @mixin form-info() {
-    @include text-body-sm;
     display: block;
     font-weight: normal;
     margin-bottom: 0;
+    @include text-body-sm;
 }
 
 @mixin form-input() {
-    @include border-box;
-    @include text-body-md;
     background-color: $color-white;
     border-radius: $field-border-radius;
     border: $field-border;
-    line-height: 1.25;
     margin: 0 0 $field-v-spacing;
     padding: $field-padding;
+    @include border-box;
+    @include text-body-md;
+    @include font-base;
+
+    & { // needs to come after @includes to over-ride value
+        line-height: var(--theme-button-line-height);
+    }
 }
 
 @mixin form-msg() {
-    @include text-body-xs;
-    @include border-box;
     background-color: $field-border-color-error-hover;
     border-radius: $border-radius-sm;
     box-shadow: $box-shadow-sm;
@@ -106,6 +103,8 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
     max-width: 100%;
     padding: $spacing-xs #{$spacing-sm + 2px};
     position: relative;
+    @include text-body-xs;
+    @include border-box;
 }
 
 @mixin form-msg-pointer() {

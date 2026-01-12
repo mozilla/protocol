@@ -13,13 +13,13 @@
 // Footer section styles
 
 .mzp-c-footer {
-    @include font-mozilla-text;
-    @include white-links;
     background: $color-black;
     clear: both;
     color: $color-white;
     margin: 0;
     width: 100%;
+    @include font-mozilla-text;
+    @include white-links;
 
     a {
         font-weight: normal;
@@ -37,10 +37,10 @@
 // Footer primary section, contains logo and sections with links
 
 .mzp-c-footer-primary {
-    @include text-body-md;
+    margin: 0 auto $layout-sm;
     @include border-box;
     @include clearfix;
-    margin: 0 auto $layout-sm;
+    @include text-body-md;
 
     @media #{$mq-lg} {
         margin-bottom: $layout-xs;
@@ -143,18 +143,23 @@
 .mzp-c-footer-heading {
     &,
     & button {
-        @include font-mozilla-text;
-        @include text-body-md;
-        @include bidi(((text-align, left, right),));
-        @include footer-line;
         background-color: transparent;
-        border: 0;
         color: $color-light-gray-50;
         font-weight: bold;
         margin-bottom: 0;
         padding: $spacing-md 0;
         position: relative;
         width: 100%;
+        @include bidi(((text-align, left, right),));
+        @include footer-line;
+        @include text-body-md;
+        @include font-mozilla-text;
+
+        /* stylelint-disable-next-line no-duplicate-selectors */
+        & {
+            // needs to come after @includes to over-ride value
+            border: 0;
+        }
     }
 
     & button {

@@ -24,7 +24,7 @@ sizing. See [our page on typography](/docs/fundamentals/typography) for more inf
 and examples.
 
 ```scss
-@include text-title-lg;
+@include text-heading-lg;
 ```
 
 Different themes have slightly different type scales so this mixin draws its
@@ -82,27 +82,15 @@ the Mozilla and Firefox brands. Themes work by declaring a set of CSS Custom Pro
 on the document's root element (`:root`) in `/includes/_themes.scss` and are retrieved
 using the `var()` function. The custom properties will be updated depending on what theme is declared.
 
-If you need to support legacy browsers, it is recommended to use the `@supports` feature query
-while using the Sass variable as a fall back.
 
 ```scss
 .mzp-c-my-component {
-    background-color: $background-color;
-    color: $body-text-color;
+    background-color: var(--background-color);
+    color: var(--theme-body-text-color);
 
-    .mzp-c-my-component-title {
-        color: $title-text-color;
-        font-family: $title-font-family;
-    }
-
-    @supports (--css: variables) {
-        background-color: var(--background-color);
-        color: var(--body-text-color);
-
-        .mzp-c-my-component-title {
-            color: var(--title-text-color);
-            font-family: var(--title-font-family);
-        }
+    .mzp-c-my-component-heading {
+        color: var(--theme-heading-text-color);
+        font-family: var(--theme-heading-font-family);
     }
 }
 ```
@@ -130,9 +118,9 @@ link-color-hover-inverse
 link-color-inverse
 link-color-visited
 link-color-visited-inverse
-title-font-family
-title-text-color
-title-text-color-inverse
+heading-font-family
+heading-text-color
+heading-text-color-inverse
 ```
 
 Text sizes are also defined as theme variables, allowing different brands to have
@@ -162,18 +150,18 @@ text content.
 </div>
 ```
 
-#### Title sizes
+#### Heading sizes
 
-A range of utility classes are available for title sizes. See the
+A range of utility classes are available for heading sizes. See the
 [typography page](/docs/fundamentals/typography) for more details.
 
 ```html
-<h1 class="mzp-u-title-2xl">Title 2XL</h1>
-<h2 class="mzp-u-title-xl">Title XL</h2>
-<h3 class="mzp-u-title-lg">Title LG</h3>
-<h4 class="mzp-u-title-md">Title MD</h4>
-<h5 class="mzp-u-title-sm">Title SM</h5>
-<h6 class="mzp-u-title-xs">Title XS</h6>
-<h6 class="mzp-u-title-2xs">Title 2XS</h6>
-<h6 class="mzp-u-title-3xs">Title 3XS</h6>
+<h1 class="mzp-u-heading-2xl">Heading 2XL</h1>
+<h2 class="mzp-u-heading-xl">Heading XL</h2>
+<h3 class="mzp-u-heading-lg">Heading LG</h3>
+<h4 class="mzp-u-heading-md">Heading MD</h4>
+<h5 class="mzp-u-heading-sm">Heading SM</h5>
+<h6 class="mzp-u-heading-xs">Heading XS</h6>
+<h6 class="mzp-u-heading-2xs">Heading 2XS</h6>
+<h6 class="mzp-u-heading-3xs">Heading 3XS</h6>
 ```

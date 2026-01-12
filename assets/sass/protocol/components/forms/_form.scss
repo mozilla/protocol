@@ -66,10 +66,8 @@
 // Title
 .mzp-c-form-title,
 legend.mzp-c-form-title {
-    @include text-title-xs;
+    @include text-heading-xs;
     color: $title-text-color;
-    font-family: $title-font-family;
-    font-weight: bold;
     margin: 0 0 $spacing-lg;
 
     .mzp-c-form-header > & {
@@ -81,11 +79,10 @@ legend.mzp-c-form-title {
     }
 
     @supports (--css: variables) {
-        color: var(--title-text-color);
-        font-family: var(--title-font-family);
+        color: var(--heading-text-color);
 
         .mzp-t-dark & {
-            color: var(--title-text-color-inverse);
+            color: var(--heading-text-color-inverse);
         }
     }
 }
@@ -93,9 +90,9 @@ legend.mzp-c-form-title {
 // Subtitle
 .mzp-c-form-subtitle,
 legend.mzp-c-form-subtitle {
-    @include text-body-lg;
     font-weight: bold;
     margin-bottom: forms.$field-v-spacing;
+    @include text-body-lg;
 }
 
 legend.mzp-c-form-title,

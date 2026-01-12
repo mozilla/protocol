@@ -56,20 +56,20 @@ $icon-size: 24px;
     }
 
     .mzp-c-menu-item-title {
-        @include text-title-2xs;
+        @include text-heading-2xs;
         display: inline;
     }
 
     .mzp-c-menu-item-desc {
-        @include text-body-sm;
         margin: $spacing-sm 0 0;
+        @include text-body-sm;
     }
 
     .mzp-c-menu-item-list {
         @include clearfix;
-        @include text-body-sm;
         margin: $spacing-md 0 0;
         position: relative;
+        @include text-body-sm;
 
         li {
             margin-bottom: $spacing-md;

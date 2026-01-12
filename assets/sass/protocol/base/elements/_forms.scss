@@ -28,16 +28,12 @@ legend {
     max-width: 100%; // 1
     padding: 0; // 3
     white-space: normal; // 1
+    margin-bottom: forms.$field-v-spacing;
+    font-weight: bold;
+    @include text-body-lg;
+
     .mzp-u-inline & {
         @include forms.field-label;
-    }
-    @include text-body-lg;
-    font-family: $body-font-family;
-    font-weight: bold;
-    margin-bottom: forms.$field-v-spacing;
-
-    @supports (--css: variables) {
-        font-family: var(--body-font-family);
     }
 }
 
@@ -46,9 +42,14 @@ input,
 select,
 optgroup,
 textarea {
-    @include font-base;
     @include text-body-md;
-    line-height: 1.25;
+    @include font-base;
+
+    /* stylelint-disable-next-line no-duplicate-selectors */
+    & {
+        // needs to come after @includes to over-ride value
+        line-height: var(--theme-button-line-height);
+    }
 }
 
 button,
@@ -249,7 +250,7 @@ input[type='file'] {
     background: $color-white;
     border-radius: forms.$field-border-radius;
     border: forms.$field-border;
-    line-height: 1.25;
+    line-height: var(--theme-button-line-height);
     margin: 0 0 forms.$field-v-spacing;
 
     &:hover {

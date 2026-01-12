@@ -18,7 +18,7 @@ categories:
 * `l-` for layout-related styles, e.g. `.mzp-l-content`, `.mzp-l-grid-third`.
   These are essentially presentational names, mostly used for container elements.
 * `u-` for utility styles, which have a broad scope and can be powerful overrides,
-  e.g. `.mzp-u-inline`, `.mzp-u-title-md`. These are presentational so should be
+  e.g. `.mzp-u-inline`, `.mzp-u-heading-md`. These are presentational so should be
   rare. Prefer mixins in a style sheet over classes in HTML.
 * `qa-` used as selector hooks for tests (unit tests, integration tests, etc.).
   These classes are not meant as styling hooks; no CSS should be applied to any
@@ -33,7 +33,7 @@ categories:
 * `a-` for CSS animation names, e.g. `mzp-a-fade-in`, `mzp-a-slide-from-right`.
 
 Our names are all lowercase and hyphen-separated or “kebab-case,” e.g.
-`.mzp-c-card`, `.mzp-c-card-title`. This brings with it the potential for
+`.mzp-c-card`, `.mzp-c-card-heading`. This brings with it the potential for
 long kebabs of multipart, hyphenated names. Names should be as short as
 possible and as long as necessary. Clarity is key. If we find our names
 getting obscenely long and confusing we may need to revise our convention
@@ -44,7 +44,7 @@ Example:
 ```html
 <div class="mzp-c-card mzp-has-image">
   <img class="mzp-c-card-image" src="/static/img/card-image.jpg" alt="">
-  <h3 class="mzp-c-card-title">Card Title</h3>
+  <h3 class="mzp-c-card-heading">Card Heading</h3>
 
   <div class="mzp-c-card-desc">
     <p>Lorem ipsum dolor sit amet, pri illum munere mollis at, amet senserit te vix, sint porro mei eu.</p>

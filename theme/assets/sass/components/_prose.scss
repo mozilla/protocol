@@ -45,34 +45,33 @@
     h4,
     h5,
     h6 {
-        font-family: $title-font-family;
+        font-family: var(--theme-heading-font-family);
         color: $title-text-color;
         font-weight: bold;
         margin: 1em 0 0.5em;
         opacity: 1;
 
         @supports (--css: variables) {
-            color: var(--title-text-color);
-            font-family: var(--title-font-family);
+            color: var(--heading-text-color);
         }
     }
 
     h1 {
-        @include text-title-sm;
+        @include text-heading-sm;
     }
 
     h2 {
-        @include text-title-xs;
+        @include text-heading-xs;
     }
 
     h3 {
-        @include text-title-2xs;
+        @include text-heading-2xs;
     }
 
     h4,
     h5,
     h6 {
-        @include text-title-3xs;
+        @include text-heading-3xs;
     }
 
     & :not(hr) + h2 {

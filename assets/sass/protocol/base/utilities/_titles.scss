@@ -7,76 +7,36 @@
 // Utility classes for title styles.
 // These classes are purely presentational. Don't use them if you don't have to.
 
-.mzp-u-title-2xl {
-    @include text-title-2xl;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
+.mzp-u-heading-2xl {
+    @include text-heading-2xl;
 }
 
-.mzp-u-title-xl {
-    @include text-title-xl;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
+.mzp-u-heading-xl {
+    @include text-heading-xl;
 }
 
-.mzp-u-title-lg {
-    @include text-title-lg;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
+.mzp-u-heading-lg {
+    @include text-heading-lg;
 }
 
-.mzp-u-title-md {
-    @include text-title-md;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
+.mzp-u-heading-md {
+    @include text-heading-md;
 }
 
-.mzp-u-title-sm {
-    @include text-title-sm;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
+.mzp-u-heading-sm {
+    @include text-heading-sm;
 }
 
-.mzp-u-title-xs {
-    @include text-title-xs;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
+.mzp-u-heading-xs {
+    @include text-heading-xs;
 }
 
-.mzp-u-title-2xs {
-    @include text-title-2xs;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
+.mzp-u-heading-2xs {
+    @include text-heading-2xs;
 }
 
-.mzp-u-title-3xs {
-    @include text-title-3xs;
-    font-family: $title-font-family;
-
-    @supports (--css: variables) {
-        font-family: var(--title-font-family);
-    }
+.mzp-u-heading-3xs {
+    @include text-heading-3xs;
 }
 
 // Utility class for centered text.
