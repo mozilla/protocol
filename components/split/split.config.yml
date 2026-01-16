@@ -29,8 +29,7 @@ variants:
     notes: |
       The Split component can include an extra inner wrapper element to carry a
       background (it needs this inner container to allow the media to overflow
-      beyond the background area while preserving vertical spacing. See the
-      [Pop-out Media variation](split--pop-out-media)).
+      beyond the background area while preserving vertical spacing).
 
       The wrapper element has the class `mzp-c-split-bg` and you can add any of
       the standard background classes or apply your own CSS:
@@ -44,9 +43,7 @@ variants:
       without additional vertical spacing, add the class `mzp-t-split-nospace`
       to the outer container (`mzp-c-split`). This is especially useful when
       using Split as a hero section at the very top of a page, or if you have a
-      stack of splits with alternating background colors. Note that images can’t
-      “pop out” of a Split without that additional space, so the nospace and pop
-      variations are incompatible.
+      stack of splits with alternating background colors.
     context:
       background_class: mzp-t-dark mzp-t-background-secondary
       content: |
@@ -54,58 +51,6 @@ variants:
         <p>Lorem ipsum dolor sit amet, amet dolores tincidunt te sea. His aliquid
           epicuri detraxit in, cum tantas populo periculis te. Ei vix idque noster.</p>
         <p><a class="mzp-c-button mzp-t-dark">Call to Action</a></p>
-  - name: Media Overflow
-    notes: |
-      Add the class `mzp-l-split-media-overflow` to the media container
-      (`mzp-c-split-media`) to allow a large image to “bleed” horizontally past
-      the edge of the component (and the viewport). This means some of the image
-      will be hidden so choose your images wisely.
-
-      ### No-nos:
-
-      Don’t use this option with videos. Not only will part of the video be hidden,
-      some of the controls would be hidden as well.
-    context:
-      background_class: mzp-t-background-tertiary
-      media_class: mzp-l-split-media-overflow
-  - name: Constrained Media
-    notes: |
-      The class `mzp-l-split-media-constrain-height` added to the `mzp-c-split-media`
-      wrapper will make the media scale to fit the height of the container,
-      determined by the amount of content in the body. It will shrink to fit a
-      short container or expand to fit a tall one (but won’t be upscaled beyond
-      the image’s native dimensions).
-
-      As with the [media overflow option](split--media-overflow), height-constrained
-      media can overflow if the container is tall, causing part of the image to
-      be hidden, so choose wisely.
-    context:
-      image: '/img/image-1-1.jpg'
-      media_class: mzp-l-split-media-constrain-height
-  - name: Pop-out Media
-    notes: |
-      Ordinarily the top and bottom edges of the media align with the body text.
-      Alternatively, the media can “pop” out of its container in larger viewports,
-      protruding a fixed distance beyond the top and/or bottom edges of the body.
-      The protrusion corresponds to the vertical padding of the outer container
-      so the media won’t overlap adjacent content. Note that images can’t “pop out”
-      of a Split without that additional space so this is incompatible with the
-      `mzp-t-split-nospace` class.
-
-      Apply these classes to the outer container (`mzp-c-split`):
-      - `mzp-l-split-pop-top` - protrude past the top.
-      - `mzp-l-split-pop-bottom` - protrude past the bottom.
-      - `mzp-l-split-pop` - both.
-
-      ### Tips:
-
-      - The media only protrudes if it exceeds the height of the body.
-      - This only takes effect in larger viewports. The media will fit within
-        the container in medium viewports and will stack in smaller viewports.
-    context:
-      block_class: mzp-l-split-pop
-      background_class: mzp-t-background-tertiary
-      image: '/img/image-1-1.jpg'
   - name: Body Alignment
     notes: |
       Align the body in different positions, horizontally and vertically (it’s
@@ -139,10 +84,7 @@ variants:
 
       ### Tips:
 
-      - The media can only be positioned horizontally if it is _not_ allowed to
-        overflow by an `mzp-l-split-media-overflow` or `mzp-l-split-media-constrain-height`
-        class.
-      - The vertical position is only effective if the media’s height is less
+      - The vertical position is only effective if the media's height is less
         than the body height. Taller images will scale to fit.
     context:
       media_class: mzp-l-split-h-end mzp-l-split-v-end
