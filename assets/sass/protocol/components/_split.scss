@@ -320,261 +320,18 @@
     }
 }
 
-// * -------------------------------------------------------------------------- */
-// constraints on height or width of media
-
-@supports (display:grid) {
-    @media #{$mq-md} {
-        .mzp-c-split-media {
-            &.mzp-l-split-media-overflow {
-                .mzp-c-split-media-asset {
-                    max-width: none;
-
-                    .mzp-l-split-reversed & {
-                        @include bidi((
-                            (float, right, left),
-                        ));
-                    }
-                }
-            }
-
-            &.mzp-l-split-media-constrain-height {
-                height: 100%;
-                justify-self: auto !important; /* stylelint-disable-line declaration-no-important */
-
-                .mzp-c-split-media-asset {
-                    @include bidi(((left, 0, right, auto),));
-                    bottom: 0;
-                    max-height: 100%;
-                    max-width: none;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: auto;
-
-                    .mzp-l-split-reversed & {
-                        @include bidi((
-                            (left, auto, right, 0),
-                            (right, 0, left, auto),
-                        ));
-                    }
-                }
-            }
-        }
-    }
-}
-
 // * --------------------------------------------------------------------------- */
-// vertical spacing for body or media
-
-@supports (display:grid) {
-    @media #{$mq-md} {
-        .mzp-l-split-pop-top,
-        .mzp-l-split-pop {
-            &.mzp-c-split {
-                padding-top: $v-grid-lg * 2;
-
-                @supports (--css: variables) {
-                    padding-top: calc(var(--v-grid-lg) * 2);
-                }
-            }
-
-            .mzp-c-split-media {
-                margin-top: $v-grid-lg * -1;
-
-                @supports (--css: variables) {
-                    margin-top: calc(var(--v-grid-lg) * -1);
-                }
-            }
-
-            .mzp-c-split-bg & {
-                .mzp-c-split-media {
-                    margin-top: $v-grid-lg * -2;
-
-                    @supports (--css: variables) {
-                        margin-top: calc(var(--v-grid-lg) * -2);
-                    }
-                }
-            }
-        }
-
-        .mzp-l-split-pop-bottom,
-        .mzp-l-split-pop {
-            &.mzp-c-split {
-                padding-bottom: $v-grid-lg * 2;
-
-                @supports (--css: variables) {
-                    padding-bottom: calc(var(--v-grid-lg) * 2);
-                }
-            }
-
-            .mzp-c-split-media {
-                margin-bottom: $v-grid-lg * -1;
-
-                @supports (--css: variables) {
-                    margin-bottom: calc(var(--v-grid-lg) * -1);
-                }
-            }
-
-            .mzp-c-split-bg & {
-                .mzp-c-split-media {
-                    margin-bottom: $v-grid-lg * -2;
-
-                    @supports (--css: variables) {
-                        margin-bottom: calc(var(--v-grid-lg) * -2);
-                    }
-                }
-            }
-        }
-
-        .mzp-l-split-media-constrain-height {
-            .mzp-l-split-pop-top &,
-            .mzp-l-split-pop-bottom & {
-                height: calc(100% + #{$v-grid-lg});
-
-                @supports (--css: variables) {
-                    height: calc(100% + var(--v-grid-lg));
-                }
-            }
-
-            .mzp-l-split-pop & {
-                height: calc(100% + #{$v-grid-lg * 2});
-
-                @supports (--css: variables) {
-                    height: calc(100% + var(--v-grid-lg) * 2);
-                }
-            }
-
-            .mzp-l-split-pop-top .mzp-c-split-bg &,
-            .mzp-l-split-pop-bottom .mzp-c-split-bg & {
-                height: calc(100% + #{$v-grid-lg * 2});
-
-                @supports (--css: variables) {
-                    height: calc(100% + var(--v-grid-lg) * 2);
-                }
-            }
-
-            .mzp-l-split-pop .mzp-c-split-bg & {
-                height: calc(100% + #{$v-grid-lg * 4});
-
-                @supports (--css: variables) {
-                    height: calc(100% + var(--v-grid-lg) * 4);
-                }
-            }
-        }
-    }
-
-    @media #{$mq-xl} {
-        .mzp-l-split-pop-top,
-        .mzp-l-split-pop {
-            &.mzp-c-split {
-                padding-top: $v-grid-xl * 2;
-
-                @supports (--css: variables) {
-                    padding-top: calc(var(--v-grid-xl) * 2);
-                }
-            }
-
-            .mzp-c-split-media {
-                margin-top: $v-grid-xl * -1;
-
-                @supports (--css: variables) {
-                    margin-top: calc(var(--v-grid-xl) * -1);
-                }
-            }
-
-            & .mzp-c-split-bg {
-                .mzp-c-split-media {
-                    margin-top: $v-grid-xl * -2;
-
-                    @supports (--css: variables) {
-                        margin-top: calc(var(--v-grid-xl) * -2);
-                    }
-                }
-            }
-        }
-
-        .mzp-l-split-pop-bottom,
-        .mzp-l-split-pop {
-            &.mzp-c-split {
-                padding-bottom: $v-grid-xl * 2;
-
-                @supports (--css: variables) {
-                    padding-bottom: calc(var(--v-grid-xl) * 2);
-                }
-            }
-
-            .mzp-c-split-media {
-                margin-bottom: $v-grid-xl * -1;
-
-                @supports (--css: variables) {
-                    margin-bottom: calc(var(--v-grid-xl) * -1);
-                }
-            }
-
-            & .mzp-c-split-bg {
-                .mzp-c-split-media {
-                    margin-bottom: $v-grid-xl * -2;
-
-                    @supports (--css: variables) {
-                        margin-bottom: calc(var(--v-grid-xl) * -2);
-                    }
-                }
-            }
-        }
-
-        .mzp-l-split-media-constrain-height {
-            .mzp-l-split-pop-top &,
-            .mzp-l-split-pop-bottom & {
-                height: calc(100% + #{$v-grid-xl});
-
-                @supports (--css: variables) {
-                    height: calc(100% + var(--v-grid-xl));
-                }
-            }
-
-            .mzp-l-split-pop & {
-                height: calc(100% + #{$v-grid-xl * 2});
-
-                @supports (--css: variables) {
-                    height: calc(100% + calc(var(--v-grid-xl) * 2));
-                }
-            }
-
-            .mzp-l-split-pop-top .mzp-c-split-bg &,
-            .mzp-l-split-pop-bottom .mzp-c-split-bg & {
-                height: calc(100% + #{$v-grid-xl * 2});
-
-                @supports (--css: variables) {
-                    height: calc(100% + calc(var(--v-grid-xl) * 2));
-                }
-            }
-
-            .mzp-l-split-pop .mzp-c-split-bg & {
-                height: calc(100% + #{$v-grid-xl * 4});
-
-                @supports (--css: variables) {
-                    height: calc(100% + calc(var(--v-grid-xl) * 4));
-                }
-            }
-        }
-    }
-}
-
-// * --------------------------------------------------------------------------- */
-// vertical and horizontal aligment for body or media
+// vertical and horizontal alignment for body or media
 
 @media #{$mq-md} {
     .mzp-c-split {
         // horizontal alignment works with float fallbacks.
-        // horizontal alignment does not apply to constrain-height or overflow because it could expand and obscure the text
-        // there's an !important in the contrain-height definitions to enforce this
         .mzp-l-split-h-start {
             @include bidi(((text-align, left, right),));
             justify-self: start;
         }
 
-        .mzp-l-split-h-center:not([class*='mzp-l-split-media-']) {
+        .mzp-l-split-h-center {
             justify-self: center;
             text-align: center;
 
@@ -583,7 +340,7 @@
             }
         }
 
-        .mzp-l-split-h-end:not([class*='mzp-l-split-media-']) {
+        .mzp-l-split-h-end {
             @include bidi(((text-align, right, left),));
             justify-self: end;
 
@@ -598,12 +355,6 @@
         // vertical alignment relies on grid so don't work for float fallbacks
         .mzp-l-split-v-start {
             align-self: start;
-
-            &.mzp-l-split-media-constrain-height .mzp-c-split-media-asset {
-                bottom: 0;
-                top: 0;
-                transform: none;
-            }
         }
 
         .mzp-l-split-v-center {
@@ -612,11 +363,6 @@
 
         .mzp-l-split-v-end {
             align-self: end;
-
-            &.mzp-l-split-media-constrain-height .mzp-c-split-media-asset {
-                top: auto;
-                transform: none;
-            }
         }
     }
 }

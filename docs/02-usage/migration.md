@@ -224,6 +224,53 @@ sed -i '' 's/old/new/g' file
 sed -i 's/old/new/g' file
 ```
 
+## Split Component
+
+### Removed Pop Classes
+
+The following classes have been removed from the Split component:
+- `mzp-l-split-pop-top`
+- `mzp-l-split-pop-bottom`
+- `mzp-l-split-pop`
+
+**Migration steps:**
+1. Remove these classes from your HTML/templates
+2. If you need similar visual effects, implement custom CSS using negative margins
+
+**Find usages in your codebase:**
+
+VS Code Find:
+```text
+Find: mzp-l-split-pop(-top|-bottom)?
+```
+
+Terminal:
+```bash
+grep -r "mzp-l-split-pop" --include="*.html" --include="*.njk" .
+```
+
+### Removed Media Sizing Classes
+
+The following classes have been removed from the Split component:
+- `mzp-l-split-media-overflow`
+- `mzp-l-split-media-constrain-height`
+
+**Migration steps:**
+1. Remove these classes from your HTML/templates
+2. If you need similar visual effects, implement custom CSS for media sizing
+
+**Find usages in your codebase:**
+
+VS Code Find:
+```text
+Find: mzp-l-split-media-(overflow|constrain-height)
+```
+
+Terminal:
+```bash
+grep -r "mzp-l-split-media-overflow\|mzp-l-split-media-constrain-height" --include="*.html" --include="*.njk" .
+```
+
 ## After Migration
 
 1. Run your build to check for any Sass compilation errors

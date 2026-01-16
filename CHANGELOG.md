@@ -6,6 +6,10 @@ The good news is we don't expect any visible changes in modern browsers and you 
 
 Introducing theme variables! CSS variables beginning with `--theme-` will adjust based on media queries.
 
+## Split Component
+
+* **component:** (breaking) Removed `mzp-l-split-pop-top`, `mzp-l-split-pop-bottom`, and `mzp-l-split-pop` layout classes from Split component
+* **component:** (breaking) Removed `mzp-l-split-media-overflow` and `mzp-l-split-media-constrain-height` layout classes from Split component
 
 ## Typography
 
