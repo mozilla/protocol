@@ -19,7 +19,7 @@ $icon-size: 24px;
         &:active,
         &:focus {
             .mzp-c-menu-item-title {
-                @include transition(border-bottom-color 100ms ease-in-out);
+                transition: border-bottom-color 100ms ease-in-out;
                 border-bottom: 2px solid $color-black;
                 color: $color-black;
             }
@@ -114,7 +114,7 @@ $icon-size: 24px;
 
     @media #{$mq-md} {
         &:hover {
-            @include transition(box-shadow 0.1s ease-in-out);
+            transition: box-shadow 0.1s ease-in-out;
             box-shadow: 0 0 0 4px $color-marketing-gray-20;
         }
 

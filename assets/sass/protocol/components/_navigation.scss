@@ -48,7 +48,7 @@
 @supports (position: sticky) {
     html.mzp-has-sticky-navigation {
         .mzp-c-navigation.mzp-is-sticky {
-            @include transition(transform 300ms ease-in-out);
+            transition: transform 300ms ease-in-out;
             left: 0;
             position: sticky;
             top: 0;
@@ -60,7 +60,7 @@
             }
 
             &.mzp-is-hidden {
-                @include transform(translate(0, -110%));
+                transform: translate(0, -110%);
             }
         }
 
@@ -78,7 +78,7 @@
     @include bidi(((float, left, right),));
 
     a {
-        @include background-size(101px, 24px);
+        background-size: 101px, 24px;
         @include image-replaced;
         background-image: url('#{$image-path}/logos/mozilla/logo-lockup-hor.svg');
         background-repeat: no-repeat;
@@ -106,7 +106,7 @@
 
     .mzp-t-firefox & {
         a {
-            @include background-size(81px, 27px);
+            background-size: 81px, 27px;
             background-image: url('#{$image-path}/logos/firefox/logo-word-hor.svg');
             height: 27px;
             width: 81px;
@@ -120,7 +120,7 @@
 
         @media #{$mq-lg} {
             a {
-                @include background-size(109px, 36px);
+                background-size: 109px, 36px;
                 background-image: url('#{$image-path}/logos/firefox/logo-word-hor.svg');
                 height: 36px;
                 margin-top: 1px;

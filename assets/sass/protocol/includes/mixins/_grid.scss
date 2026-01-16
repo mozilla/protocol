@@ -3,7 +3,6 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use '../tokens';
-@use 'utils';
 
 // Grid columns
 $column-width: 8.333%; // 100% / 12 columns
@@ -13,7 +12,7 @@ $gutter-width: tokens.$layout-sm;
 // Usage:
 //  .foo { @include colspan(4); }
 @mixin colspan($columns) {
-    @include utils.border-box;
+    box-sizing: border-box;
     width: $column-width * $columns;
     padding-left: $gutter-width * 0.5;
     padding-right: $gutter-width * 0.5;
@@ -25,26 +24,26 @@ $gutter-width: tokens.$layout-sm;
 }
 
 @mixin grid-quarter {
-    @include utils.border-box;
+    box-sizing: border-box;
     width: 25%;
 }
 
 @mixin grid-third {
-    @include utils.border-box;
+    box-sizing: border-box;
     width: 33.333%;
 }
 
 @mixin grid-half {
-    @include utils.border-box;
+    box-sizing: border-box;
     width: 50%;
 }
 
 @mixin grid-two-thirds {
-    @include utils.border-box;
+    box-sizing: border-box;
     width: 66.666%;
 }
 
 @mixin grid-three-quarters {
-    @include utils.border-box;
+    box-sizing: border-box;
     width: 75%;
 }

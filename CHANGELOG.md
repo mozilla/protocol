@@ -6,6 +6,10 @@ The good news is we don't expect any visible changes in modern browsers and you 
 
 Introducing theme variables! CSS variables beginning with `--theme-` will adjust based on media queries.
 
+## Browser Support
+
+* **css:** (breaking) Remove support for vendor prefixing (#957)
+
 ## Split Component
 
 * **component:** (breaking) Removed `mzp-l-split-pop-top`, `mzp-l-split-pop-bottom`, and `mzp-l-split-pop` layout classes from Split component
@@ -69,6 +73,24 @@ See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for
   * `type-scale()` function and associated lookup tables
   * `text-body-cta` mixin (use `text-body-md` instead)
 * You can remove `@supports (--css: variables)` blocks that only contain font declarations, as CSS custom properties are now required.
+* This version removes mixins which added vendor-prefixes. Browser support for these is now excellent.
+  - One migration path is to edit your code to use the unprefixed versions.
+  - Another option is to move these utility mixins into your own code base (though, be aware they are
+    no longer used in Protocol and this will not give you backwards compatible Protocol components).
+  - If you need that level of vendor prefix support consider adding a tool such as
+    [autoprefixer](https://github.com/postcss/autoprefixer) to your code base.
+  - Affected mixins are:
+    - `animation`
+    - `appearance`
+    - `background-size`
+    - `box-decoration-break`
+    - `box-sizing`
+    - `flexbox`, `flex`, `flex-direction`, `flex-wrap`, `align-items`, `justify-content`
+    - `grid*-gap`
+    - `inline-block`
+    - `multi-column*`
+    - `transform`, `transform-origin`, `transform-style`
+    - `transition`, `transition-property`, `transition-duration`, `transition-delay`
 
 # 22.0.0
 
@@ -156,6 +178,7 @@ See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for
 
 * **fonts:** Any use of `font-mozilla` mixin should be replaced with `font-mozilla-headline`. NOTE: we recommend `font-mozilla-headline` only for text over 24px (below should be `font-mozilla-text`)
 * Headings are now [balanced](https://developer.mozilla.org/docs/Web/CSS/text-wrap-style#balanced_text), which can impact other wrapping rules. Make sure any changes to `h1`–`h6` rendering end up styled as expected, especially if you apply any `white-space`, `word-break` or `hyphens` customizations.
+
 * See notes for [Protocol Assets 5.4.0](https://github.com/mozilla/protocol-assets/blob/main/CHANGELOG.md#540)
 
 # 19.3.0

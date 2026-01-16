@@ -13,7 +13,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
     position: relative;
 
     .mzp-c-billboard-content {
-        @include border-box;
+        box-sizing: border-box;
         margin: 0 auto;
         max-width: 346px;
         text-align: center;
@@ -51,9 +51,9 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         }
 
         .mzp-c-billboard-content-container {
-            @include align-items(center);
-            @include flexbox;
-            @include justify-content(center);
+            align-items: center;
+            display: flex;
+            justify-content: center;
         }
 
         .mzp-c-billboard-image-container {
@@ -98,7 +98,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         margin: $layout-xl 0;
 
         .mzp-c-billboard-content {
-            @include border-box;
+            box-sizing: border-box;
             max-width: 374px;
         }
 

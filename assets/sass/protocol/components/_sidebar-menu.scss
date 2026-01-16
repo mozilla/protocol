@@ -89,7 +89,7 @@
         @include bidi((
             (right, 0, left, auto),
         ));
-        @include transform(rotate(90deg));
+        transform: rotate(90deg);
         color: $color-marketing-gray-80;
         content: none;
         font-size: 1.5em;

@@ -31,7 +31,7 @@ html.mzp-is-noscroll {
 }
 
 .mzp-c-modal {
-    @include animation(mzp-a-fade-in 300ms ease-in 0ms 1 normal both);
+    animation: mzp-a-fade-in 300ms ease-in 0ms 1 normal both; /* stylelint-disable-line no-unknown-animations */
     background: $color-black;
     background: rgb(0, 0, 0, 0.85);
     bottom: 0;
@@ -79,9 +79,7 @@ html.mzp-is-noscroll {
 
     .mzp-c-modal-button-close {
         @include image-replaced;
-        background: transparent url('#{$image-path}/icons/close-white.svg') center center no-repeat;
-
-        @include background-size(20px 20px);
+        background: transparent url('#{$image-path}/icons/close-white.svg') center center / 20px 20px no-repeat;
         border: none;
         height: 42px;
         min-width: 0;
@@ -91,8 +89,8 @@ html.mzp-is-noscroll {
 
         &:hover,
         &:focus {
-            @include transition(transform 0.1s ease-in-out);
-            @include transform(scale(1.1));
+            transition: transform 0.1s ease-in-out;
+            transform: scale(1.1);
         }
 
         &:focus {

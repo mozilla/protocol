@@ -9,13 +9,13 @@
     border-radius: $border-radius-sm;
     border: 1px;
     box-shadow: $box-shadow-md;
+    box-sizing: border-box;
     color: $color-black;
     font-weight: normal;
     margin: $layout-xs $spacing-md 0;
     padding: $spacing-md $spacing-2xl;
     position: relative;
     text-align: center;
-    @include border-box;
     @include clearfix;
     @include text-body-sm;
 
