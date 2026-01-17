@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22, 24, 25]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        id: node
+        with:
+          node-version: ${{ matrix.node }}
+      - name: "Install, lint and test production build (Node ${{ steps.node.outputs.node-version }})"
+        run: npm run build-package
+      - name: "Run (Xvfb) JS tests in Firefox & Chrome"
+        run: xvfb-run npm test
