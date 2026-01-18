@@ -38,6 +38,10 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 * To come in follow up PR.
 
+## Bug Fixes
+
+* **css:** at2x mixin doesn't support single keyword values (#751)
+
 ## Migration Tips
 
 See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for automated scripts (VS Code find/replace and terminal commands) to help with these changes.
