@@ -10,6 +10,10 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 * **css:** (breaking) Remove support for vendor prefixing (#957)
 
+## Feature Card Component
+
+* **component:** (breaking) Removed the deprecated Feature Card component. Use the [Split](https://protocol.mozilla.org/components/detail/split) component instead.
+
 ## Split Component
 
 * **component:** (breaking) Removed `mzp-l-split-pop-top`, `mzp-l-split-pop-bottom`, and `mzp-l-split-pop` layout classes from Split component
