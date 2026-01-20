@@ -3,11 +3,13 @@
 ## Features
 * **fonts:** (breaking) Adds rebrand fonts, Mozilla Headline and Mozilla Text. Removes outdated Mozilla Brand font, Zilla Slab. New fonts will only support `woff2` format to simplify maintenance.
 * **fonts:** Upgrade Inter font to version 4.1, drop WOFF 1.0 format (#1026)
+* **css:** Add support for `$mq-max` to match viewports wider than maximum content width (#1039)
 * **css:** Add `text-wrap: balance` to all headings (#910)
 * **css:** Apply hover cursor from Details component to Details element (#948)
 
 ## Bug Fixes
 * **assets:** Update @mozilla-protocol/assets to 5.4.0
+* **tokens:** Update @mozilla-protocol/tokens to 6.0.0
 
 ## Migration Tips
 * **fonts:** Any use of `font-mozilla` mixin should be replaced with `font-mozilla-headline`. NOTE: we recommend `font-mozilla-headline` only for text over 24px (below should be `font-mozilla-text`)
