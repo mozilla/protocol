@@ -44,7 +44,25 @@
     }
 
     @media #{$mq-md} {
-        @include clearfix;
+        .mzp-l-content {
+            display: grid;
+            column-gap: var(--theme-spacing-between-inline);
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .mzp-c-callout-content {
+            width: auto;
+            align-items: center;
+        }
+
+        .mzp-c-callout-cta {
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            position: relative;
+            width: auto;
+        }
 
         .mzp-c-callout-title,
         .mzp-c-callout-desc {
@@ -53,40 +71,6 @@
 
         .mzp-c-callout-title + .mzp-c-callout-desc {
             margin-top: $spacing-sm;
-        }
-
-        .mzp-c-callout-content {
-            @include bidi(((float, left, right),));
-            width: calc(66.6% - #{$spacing-lg});
-        }
-
-        .mzp-c-callout-cta {
-            @include bidi(((float, right, left),));
-            margin: 0;
-            position: relative;
-            width: calc(33.3% - #{$spacing-lg});
-        }
-    }
-
-    @supports (display: grid) {
-        @media #{$mq-md} {
-            .mzp-l-content {
-                grid-column-gap: $spacing-xl;
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-            }
-
-            .mzp-c-callout-content {
-                width: auto;
-                align-items: center;
-            }
-
-            .mzp-c-callout-cta {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                width: auto;
-            }
         }
     }
 }

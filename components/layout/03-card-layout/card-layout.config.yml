@@ -3,9 +3,9 @@ default: Overview
 variants:
   - name: Half
     notes: |
-      The class `mzp-l-card-half` sets up a two-column layout so it’s best for
-      even numbers of cards. Use medium sized cards if the container is
-      wide, or small or extra-small cards in narrower containers.
+      The class `mzp-l-card-half` sets up a two-column layout so it's best for
+      even numbers of cards. Use large sized cards if the container is
+      wide, or small or medium cards in narrower containers.
   - name: Third
     notes: |
       The class `mzp-l-card-third` sets up a three-column layout so cards should
@@ -15,7 +15,7 @@ variants:
       gaps at all widths (two rows of three or three rows of two).
 
       ### Tips
-      - Use small sized cards.
+      - Use medium sized cards.
       - Avoid using a three-column layout in narrow containers.
   - name: Quarter
     notes: |
@@ -23,7 +23,7 @@ variants:
       come in multiples of four to avoid empty spaces when cards wrap to new rows.
 
       ### Tips
-      - Use extra-small sized cards.
+      - Use small sized cards.
       - Avoid using a four-column layout in narrow containers.
   - name: Hero
     notes: |
@@ -36,4 +36,4 @@ variants:
         one third.
 
       The first card in this arrangement should be large sized with a 16:9 aspect ratio image.
-      The other cards should all be small sized.
+      The other cards should all be medium sized.

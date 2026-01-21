@@ -68,72 +68,20 @@
     }
 
     @media #{$mq-md} {
-        @include clearfix;
-        padding: $h-grid-md $v-grid-lg;
-        max-width: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--theme-spacing-between-inline);
+        max-width: $content-xl;
+        padding: $layout-md;
 
         .mzp-c-newsletter-image {
-            @include grid-half;
-            float: left;
+            grid-column: 1;
         }
 
         .mzp-c-newsletter-form,
         .mzp-c-newsletter-thanks {
-            @include grid-half;
-            float: right;
+            grid-column: 2;
             padding-top: $layout-md;
-        }
-
-        @supports (display: grid) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-
-            &::after { // Remove the clearfix
-                display: none;
-            }
-
-            .mzp-c-newsletter-image,
-            .mzp-c-newsletter-form,
-            .mzp-c-newsletter-thanks {
-                width: auto;
-                float: none;
-            }
-
-            .mzp-c-newsletter-image {
-                grid-column: 1;
-            }
-
-            .mzp-c-newsletter-form,
-            .mzp-c-newsletter-thanks {
-                grid-column: 2;
-            }
-        }
-    }
-
-    @media #{$mq-lg} {
-        padding: $h-grid-lg $layout-2xl;
-
-        .mzp-c-newsletter-form,
-        .mzp-c-newsletter-thanks {
-            padding-top: $layout-lg;
-        }
-    }
-
-    @media #{$mq-xl} {
-        padding: $h-grid-xl $layout-2xl;
-    }
-
-    @supports (--css: variables) {
-        @media #{$mq-md} {
-            padding: var(--h-grid-md) var(--v-grid-lg);
-        }
-
-        @media #{$mq-lg} {
-            padding: var(--h-grid-lg) $layout-2xl;
-        }
-
-        @media #{$mq-xl} {
-            padding: var(--h-grid-xl) $layout-2xl;
         }
     }
 }

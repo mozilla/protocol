@@ -10,32 +10,12 @@
 .mzp-c-split {
     overflow-x: hidden;
     position: relative;
-
-    // vertical spacing should match mzp-l-content's vertical spacing
-    padding: $v-grid-xs 0;
+    padding: var(--theme-spacing-between-block) 0;
 
     @media #{$mq-md} {
-        padding: $v-grid-md 0;
-
         &.mzp-t-split-nospace {
             padding-top: 0;
             padding-bottom: 0;
-        }
-    }
-
-    @media #{$mq-xl} {
-        padding: var(--v-grid-xl) 0;
-    }
-
-    @supports (--css: variables) {
-        padding: var(--v-grid-xs) 0;
-
-        @media #{$mq-md} {
-            padding: var(--v-grid-md) 0;
-        }
-
-        @media #{$mq-xl} {
-            padding: var(--v-grid-xl) 0;
         }
     }
 }
@@ -44,29 +24,7 @@
     @include clearfix;
     margin: 0 auto;
     max-width: $content-max;
-
-    // horizontal spacing should match mzp-l-content's horizontal spacing
-    padding: 0 $h-grid-xs;
-
-    @media #{$mq-md} {
-        padding: 0 $h-grid-md;
-    }
-
-    @media #{$mq-xl} {
-        padding: 0 $h-grid-xl;
-    }
-
-    @supports (--css: variables) {
-        padding: 0 var(--h-grid-xs);
-
-        @media #{$mq-md} {
-            padding: 0 var(--h-grid-md);
-        }
-
-        @media #{$mq-xl} {
-            padding: 0 var(--h-grid-xl);
-        }
-    }
+    padding: 0 var(--theme-spacing-between-inline);
 
     .mzp-t-content-md & {
         max-width: $content-md;
@@ -103,28 +61,7 @@
 }
 
 .mzp-c-split-bg {
-    // vertical spacing should match mzp-l-content's vertical spacing
-    padding: $v-grid-xs 0;
-
-    @media #{$mq-md} {
-        padding: $v-grid-md 0;
-    }
-
-    @media #{$mq-xl} {
-        padding: $v-grid-xl 0;
-    }
-
-    @supports (--css: variables) {
-        padding: var(--v-grid-xs) 0;
-
-        @media #{$mq-md} {
-            padding: var(--v-grid-md) 0;
-        }
-
-        @media #{$mq-xl} {
-            padding: var(--v-grid-xl) 0;
-        }
-    }
+    padding: var(--theme-spacing-between-block) 0;
 }
 
 // * -------------------------------------------------------------------------- */
@@ -133,11 +70,7 @@
 @media all and (max-width: #{$screen-md - 1}) {
     .mzp-c-split-body + .mzp-c-split-media,
     .mzp-c-split-media + .mzp-c-split-body {
-        margin-top: $v-grid-xs;
-
-        @supports (--css: variables) {
-            margin-top: var(--v-grid-xs);
-        }
+        margin-top: var(--theme-spacing-between-block);
     }
 
     .mzp-l-split-center-on-sm-md {
@@ -170,152 +103,64 @@
 }
 
 // * -------------------------------------------------------------------------- */
-// side by side layout, float based fall back
+// side by side layout
 
 @media #{$mq-md} {
-    .mzp-c-split-body {
-        box-sizing: border-box;
-        @include bidi(((float, left, right),));
-        padding: 0 calc($h-grid-lg * 0.5);
-        width: 50%;
+    .mzp-c-split-container {
+        // grid is all start/end based we don't need bidi declarations for RTL support \o/
+        align-items: center;
+        display: grid;
+        column-gap: var(--theme-spacing-between-inline);
+        grid-template-areas: 'body media';
+        grid-template-columns: 1fr 1fr;
 
         .mzp-l-split-reversed & {
-            @include bidi(((float, right, left),));
+            grid-template-areas: 'media body';
         }
+    }
+
+    .mzp-c-split-body,
+    .mzp-c-split-media {
+        .mzp-c-split-container & { // extra specificitly to over-ride the styles that make the float fall-back work
+            float: none;
+            min-width: 0; // because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+        }
+    }
+
+    .mzp-c-split-body {
+        grid-area: body;
     }
 
     .mzp-c-split-media {
-        box-sizing: border-box;
-        @include bidi(((float, right, left),));
-        padding: 0 ($h-grid-lg * 0.5);
-        width: 50%;
+        grid-area: media;
+        place-self: center start;
+
+        .mzp-c-split-media-asset {
+            display: block;
+        }
 
         .mzp-l-split-reversed & {
-            @include bidi(((float, left, right),));
-        }
-    }
-
-    @supports (--css: variables) {
-        .mzp-c-split-body {
-            padding: 0 calc(var(--h-grid-lg) * 0.5);
-        }
-
-        .mzp-c-split-media {
-            padding: 0 calc(var(--h-grid-lg) * 0.5);
+            justify-self: end;
         }
     }
 }
 
 @media #{$mq-lg} {
-    .mzp-c-split-body {
+    .mzp-c-split-container {
         .mzp-l-split-body-narrow & {
-            width: 33.33%;
+            grid-template-columns: 1fr 2fr;
         }
 
         .mzp-l-split-body-wide & {
-            width: 66.66%;
-        }
-    }
-
-    .mzp-c-split-media {
-        .mzp-l-split-body-narrow & {
-            width: 66.66%;
+            grid-template-columns: 2fr 1fr;
         }
 
-        .mzp-l-split-body-wide & {
-            width: 33.33%;
-        }
-    }
-}
-
-@media #{$mq-xl} {
-    .mzp-c-split-body,
-    .mzp-c-split-media {
-        padding: 0 ($h-grid-xl * 0.5);
-
-        @supports (--css: variables) {
-            padding: 0 calc(var(--h-grid-lg) * 0.5);
-        }
-    }
-}
-
-// * -------------------------------------------------------------------------- */
-// side by side layout, grid based
-
-@supports (display:grid) {
-    @media #{$mq-md} {
-        .mzp-c-split-container {
-            // grid is all start/end based we don't need bidi declarations for RTL support \o/
-            align-items: center;
-            display: grid;
-            grid-column-gap: $h-grid-lg;
-            grid-template-areas: 'body media';
-            grid-template-columns: 1fr 1fr;
-
-            .mzp-l-split-reversed & {
-                grid-template-areas: 'media body';
-            }
-
-            @supports (--css: variables) {
-                grid-column-gap: var(--h-grid-lg);
-            }
+        .mzp-l-split-body-narrow.mzp-l-split-reversed & {
+            grid-template-columns: 2fr 1fr;
         }
 
-        .mzp-c-split-body,
-        .mzp-c-split-media {
-            .mzp-c-split-container & { // extra specificitly to over-ride the styles that make the float fall-back work
-                float: none;
-                min-width: 0; // because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
-                padding: 0;
-                width: 100%;
-            }
-        }
-
-        .mzp-c-split-body {
-            grid-area: body;
-        }
-
-        .mzp-c-split-media {
-            grid-area: media;
-            place-self: center start;
-
-            .mzp-c-split-media-asset {
-                display: block;
-            }
-
-            .mzp-l-split-reversed & {
-                justify-self: end;
-            }
-        }
-    }
-
-    @media #{$mq-lg} {
-        .mzp-c-split-container {
-            .mzp-l-split-body-narrow & {
-                grid-template-columns: 1fr 2fr;
-            }
-
-            .mzp-l-split-body-wide & {
-                grid-template-columns: 2fr 1fr;
-            }
-
-            .mzp-l-split-body-narrow.mzp-l-split-reversed & {
-                grid-template-columns: 2fr 1fr;
-            }
-
-            .mzp-l-split-body-wide.mzp-l-split-reversed & {
-                grid-template-columns: 1fr 2fr;
-            }
-        }
-    }
-
-    @media #{$mq-xl} {
-        .mzp-c-split-container {
-            grid-column-gap: $h-grid-xl;
-
-            @supports (--css: variables) {
-                grid-column-gap: var(--h-grid-xl);
-            }
+        .mzp-l-split-body-wide.mzp-l-split-reversed & {
+            grid-template-columns: 1fr 2fr;
         }
     }
 }
@@ -327,8 +172,8 @@
     .mzp-c-split {
         // horizontal alignment works with float fallbacks.
         .mzp-l-split-h-start {
-            @include bidi(((text-align, left, right),));
             justify-self: start;
+            text-align: start;
         }
 
         .mzp-l-split-h-center {
@@ -341,15 +186,8 @@
         }
 
         .mzp-l-split-h-end {
-            @include bidi(((text-align, right, left),));
             justify-self: end;
-
-            .mzp-c-split-media-asset {
-                @include bidi((
-                    (margin-left, auto, margin-right, 0),
-                    (margin-right, 0, margin-left, 0),
-                ));
-            }
+            text-align: end;
         }
 
         // vertical alignment relies on grid so don't work for float fallbacks

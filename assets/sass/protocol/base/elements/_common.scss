@@ -21,9 +21,5 @@ code {
 hr {
     border: 0 solid $color-marketing-gray-20;
     border-top-width: 4px;
-    margin: $layout-md 0;
-
-    @media #{$mq-lg} {
-        margin: $layout-lg 0;
-    }
+    margin: var(--theme-spacing-between-block) 0;
 }
