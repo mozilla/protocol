@@ -35,7 +35,7 @@ card container:
 - `mzp-has-video`
 - `mzp-has-audio`
 
-The default Card size with no other modifier classes is small:
+The default Card size with no other modifier classes is medium:
 - Small sized cards can contain images with 16:9, 3:2 or 1:1 aspect ratios.
 - The card in this example displays an icon next to the card tag name, to indicate
   the media type that may be played on click.

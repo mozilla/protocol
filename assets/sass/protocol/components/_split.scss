@@ -107,7 +107,6 @@
 
 @media #{$mq-md} {
     .mzp-c-split-container {
-        // grid is all start/end based we don't need bidi declarations for RTL support \o/
         align-items: center;
         display: grid;
         column-gap: var(--theme-spacing-between-inline);
@@ -121,8 +120,7 @@
 
     .mzp-c-split-body,
     .mzp-c-split-media {
-        .mzp-c-split-container & { // extra specificitly to over-ride the styles that make the float fall-back work
-            float: none;
+        .mzp-c-split-container & {
             min-width: 0; // because of https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
         }
     }
@@ -170,7 +168,6 @@
 
 @media #{$mq-md} {
     .mzp-c-split {
-        // horizontal alignment works with float fallbacks.
         .mzp-l-split-h-start {
             justify-self: start;
             text-align: start;
@@ -190,7 +187,6 @@
             text-align: end;
         }
 
-        // vertical alignment relies on grid so don't work for float fallbacks
         .mzp-l-split-v-start {
             align-self: start;
         }
