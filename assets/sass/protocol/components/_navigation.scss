@@ -71,7 +71,7 @@
 // Mozilla Logo
 
 .mzp-c-navigation-logo {
-    @include bidi(((float, left, right),));
+    float: inline-start;
 
     a {
         background-size: 101px, 24px;
@@ -133,9 +133,9 @@
     vertical-align: bottom;
 
     @media #{$mq-md} {
-        @include bidi(((margin-left, -$spacing-sm, margin-right, 0),));
         display: inline-block;
         width: auto;
+        @include bidi(((margin-left, -$spacing-sm, margin-right, 0),));
     }
 
     @media #{$mq-lg} {
@@ -164,12 +164,12 @@
     }
 
     @media #{$mq-md} {
+        display: block;
+        float: inline-end;
+        margin: $spacing-lg 0;
         @include bidi((
-            (float, right, left),
             (margin, $spacing-lg 0 $spacing-lg $spacing-sm, $spacing-lg $spacing-sm $spacing-lg 0)
         ));
-        display: block;
-        margin: $spacing-lg 0;
     }
 
     @media #{$mq-lg} {
@@ -185,9 +185,6 @@
 // Mobile Navigation Icon
 
 .mzp-c-navigation-menu-button {
-    @include bidi(((background-position, right 6px center, left 6px center ),));
-    @include bidi(((float, right, left),));
-    @include bidi(((padding, 0 32px 0 6px, 0 6px 0 32px),));
     background-color: transparent;
     background-image: url('#{$image-path}/icons/menu.svg');
     background-repeat: no-repeat;
@@ -195,6 +192,11 @@
     border: none;
     display: none;
     height: 32px;
+    float: inline-end;
+    @include bidi((
+        (background-position, right 6px center, left 6px center ),
+        (padding, 0 32px 0 6px, 0 6px 0 32px)
+    ));
 
     &:hover,
     &:active,
@@ -205,11 +207,13 @@
 }
 
 .mzp-c-navigation-menu-button:not(.has-label) {
-    @include bidi(((background-position, center center, center center ),));
-    @include bidi(((padding, 0, 0),));
-    @include image-replaced;
     cursor: pointer;
     width: 32px;
+    @include image-replaced;
+    @include bidi((
+        (background-position, center center, center center ),
+        (padding, 0, 0),
+    ));
 }
 
 .js .mzp-c-navigation-menu-button {

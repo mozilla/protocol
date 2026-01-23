@@ -36,23 +36,23 @@
 @media #{$mq-sm} {
     .mzp-t-picto-side {
         .mzp-c-picto {
+            position: relative;
             @include bidi((
                 (padding-left, $layout-xl, 0),
                 (padding-right, 0, $layout-xl),
             ));
-            position: relative;
         }
 
         .mzp-c-picto-image {
-            @include bidi((
-                (left, 0, auto),
-                (right, auto, 0),
-            ));
             display: block;
             margin: 0 auto;
             position: absolute;
             text-align: center;
             width: $layout-lg;
+            @include bidi((
+                (left, 0, auto),
+                (right, auto, 0),
+            ));
         }
     }
 }

@@ -29,8 +29,8 @@
 
 .mzp-c-field-control + .mzp-c-field-msg::after,
 .mzp-c-choice-label + .mzp-c-choice-msg::after {
-    @include forms.form-msg-pointer;
     margin-top: forms.$field-v-spacing * -1 + forms.$label-v-spacing;
+    @include forms.form-msg-pointer;
 }
 
 .mzp-c-field-set > .mzp-c-form-msg:last-child {

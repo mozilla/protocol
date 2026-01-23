@@ -17,12 +17,12 @@
         @include clearfix;
 
         .mzp-c-card {
+            float: inline-start;
+            width: calc(50% - (var(--theme-spacing-between-inline) * 0.5));
             @include bidi((
-                (float, left, right),
                 (margin-left, 0, var(--theme-spacing-between-inline)),
                 (margin-right, var(--theme-spacing-between-inline), 0),
             ));
-            width: calc(50% - (var(--theme-spacing-between-inline) * 0.5));
 
             &:nth-child(odd) {
                 margin-left: 0;
@@ -72,12 +72,12 @@
         @include clearfix;
 
         .mzp-c-card {
+            float: inline-start;
+            width: calc(50% - (var(--theme-spacing-between-inline) * 0.5));
             @include bidi((
-                (float, left, right),
                 (margin-left, 0, var(--theme-spacing-between-inline)),
                 (margin-right, var(--theme-spacing-between-inline), 0),
             ));
-            width: calc(50% - (var(--theme-spacing-between-inline) * 0.5));
 
             &:nth-child(even) {
                 margin-left: 0;
@@ -88,11 +88,11 @@
 
     @media #{$mq-lg} {
         .mzp-c-card {
+            width: calc(25% - (var(--theme-spacing-between-inline) - var(--theme-spacing-between-inline) * 0.25));
             @include bidi((
                 (margin-left, 0, var(--theme-spacing-between-inline)),
                 (margin-right, var(--theme-spacing-between-inline), 0),
             ));
-            width: calc(25% - (var(--theme-spacing-between-inline) - var(--theme-spacing-between-inline) * 0.25));
 
             &:nth-child(even) {
                 @include bidi((

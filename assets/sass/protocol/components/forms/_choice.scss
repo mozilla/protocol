@@ -42,11 +42,11 @@
 
 // label
 .mzp-c-choice-label {
-    @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
     margin-bottom: 0;
     padding-top: 3px;
     padding-bottom: 0;
     vertical-align: top;
+    @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
 
     .mzp-c-choices & {
         font-weight: normal;
@@ -62,11 +62,11 @@
     // position real controls
     &[type='checkbox'],
     &[type='radio'] {
-        @include bidi(((left, 0, right, auto),));
         box-sizing: border-box;
         position: absolute;
         top: 0;
         z-index: 1;
+        @include bidi(((left, 0, right, auto),));
     }
 
     // IE8 and lower don't support some of this, but they also don't support media queries
@@ -85,7 +85,6 @@
 
         &[type='checkbox'] + label::before,
         &[type='radio'] + label::before {
-            @include bidi(((left, 0, right, auto),));
             box-sizing: border-box;
             background: var(--theme-background-color);
             border-radius: 2px;
@@ -98,6 +97,7 @@
             text-align: center;
             top: 0;
             width: forms.$choice-height;
+            @include bidi(((left, 0, right, auto),));
         }
 
         &[type='radio'] + label::before {
@@ -113,10 +113,6 @@
 
         &[type='checkbox']:checked + label::after {
             // checkmark is defined with rems so it scales on zoom
-            @include bidi((
-                (left, 0.03rem, auto),
-                (right, auto, 0.83rem),
-            ));
             border-bottom: remify(3px) solid var(--theme-background-color);
             border-right: remify(3px) solid var(--theme-background-color);
             content: '';
@@ -127,6 +123,10 @@
             transform: rotate(45deg);
             transform-origin: bottom right;
             width: 0.35rem;
+            @include bidi((
+                (left, 0.03rem, auto),
+                (right, auto, 0.83rem),
+            ));
         }
 
         &[type='radio']:checked + label::before {

@@ -5,7 +5,6 @@
 @use '../../includes/lib' as *;
 
 blockquote {
-    @include bidi(((border-width, 0 0 0 5px, 0 5px 0 0),));
     @include text-heading-sm;
     border-color: $color-marketing-gray-20;
     border-style: solid;
@@ -13,6 +12,7 @@ blockquote {
     font-weight: bold;
     margin: $spacing-lg auto;
     padding: $spacing-sm $spacing-lg;
+    @include bidi(((border-width, 0 0 0 5px, 0 5px 0 0),));
 
     cite {
         @include text-heading-xs;

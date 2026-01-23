@@ -41,7 +41,7 @@ bidi mixin to reverse that direction for other languages. Refer to
 `/includes/mixins/_bidi.scss` for more documentation and usage.
 
 ```scss
-@include bidi(((float, left, right),));
+@include bidi(((content, '\2192', '\2190'),));
 ```
 
 ### at2x

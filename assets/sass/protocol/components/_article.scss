@@ -11,12 +11,12 @@
     @media #{$mq-md} {
         // Float left when sidebar is on the left
         .mzp-l-sidebar-left .mzp-l-main & {
-            @include bidi(((float, left, right),));
+            float: inline-start;
         }
 
         // Float right when sidebar is on the right
         .mzp-l-sidebar-right .mzp-l-main & {
-            @include bidi(((float, right, left),));
+            float: inline-end;
         }
     }
 }

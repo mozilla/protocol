@@ -12,17 +12,17 @@
     border-spacing: 0;
 
     caption {
-        @include bidi(((text-align, left, right),));
         margin-bottom: 0.25em;
         width: 100%;
+        text-align: start;
     }
 
     th,
     td {
-        @include bidi(((text-align, left, right),));
         border-top: 1px solid rgb(0, 0, 0, 0.2);
         padding: 0.5em 10px;
         text-align: left;
+        text-align: start;
     }
 
     thead th,

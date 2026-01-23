@@ -27,10 +27,6 @@ $logos: (
 }
 
 .mzp-c-sticky-promo {
-    @include bidi((
-        (right, $spacing-md, auto),
-        (left, auto, $spacing-md),
-    ));
     background-color: var(--theme-background-color);
     border-radius: $border-radius-sm;
     bottom: 0;
@@ -43,6 +39,10 @@ $logos: (
     z-index: 10;
     animation: 600ms ease 300ms both;
     opacity: 0;
+    @include bidi((
+        (right, $spacing-md, auto),
+        (left, auto, $spacing-md),
+    ));
 
     &.mzp-js-show-on-load {
         animation-delay: 1000ms;
@@ -77,11 +77,11 @@ $logos: (
     &.mzp-t-product-developer,
     &.mzp-t-product-nightly {
         .mzp-c-sticky-promo-title {
-            @include bidi(((background-position, top left, top right),));
             background-size: auto 40px;
             background-position: top left;
             background-repeat: no-repeat;
             padding: (40px + $spacing-lg) 0 0;
+            @include bidi(((background-position, top left, top right),));
         }
     }
 }
@@ -92,10 +92,6 @@ $logos: (
 }
 
 .mzp-c-sticky-promo-close {
-    @include bidi((
-        (right, 0, auto),
-        (left, auto, 0),
-    ));
     @include image-replaced;
     background: transparent url('#{$image-path}/icons/close.svg') center center no-repeat;
     background-size: 20px 20px;
@@ -106,6 +102,10 @@ $logos: (
     right: 0;
     top: 0;
     width: 20px;
+    @include bidi((
+        (right, 0, auto),
+        (left, auto, 0),
+    ));
 
     &:hover,
     &:focus {

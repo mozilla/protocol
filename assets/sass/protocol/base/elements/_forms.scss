@@ -113,8 +113,8 @@ label {
     @include forms.field-label;
 
     &.mzp-u-inline {
-        @include bidi(((padding, 0 $spacing-sm 0 0, 0 0 0 $spacing-sm),));
         display: inline;
+        @include bidi(((padding, 0 $spacing-sm 0 0, 0 0 0 $spacing-sm),));
     }
 }
 
@@ -301,11 +301,6 @@ input[type='file'] {
 select {
     appearance: none;
     box-sizing: border-box;
-    @include bidi((
-        (background-position, right 8px top 50%, left 8px top 50%),
-        (padding, forms.$field-padding forms.$symbol-spacing forms.$field-padding forms.$field-padding, forms.$field-padding forms.$field-padding forms.$field-padding forms.$symbol-spacing),
-    ));
-    @include forms.form-input;
     background-image: $url-image-caret-down-form, forms.$select-bg;
     background-repeat: no-repeat, repeat;
     background-size: 1em auto, 100%;
@@ -314,6 +309,11 @@ select {
     max-width: 100%;
     min-width: forms.$field-min-width;
     text-overflow: ellipsis;
+    @include forms.form-input;
+    @include bidi((
+        (background-position, right 8px top 50%, left 8px top 50%),
+        (padding, forms.$field-padding forms.$symbol-spacing forms.$field-padding forms.$field-padding, forms.$field-padding forms.$field-padding forms.$field-padding forms.$symbol-spacing),
+    ));
 
     // no down arrow on multi selects
     &[multiple] {

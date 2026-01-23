@@ -51,7 +51,7 @@
                 // Trouble shooting:
                 // - Check that you have the right number of nested (((parentheses)))
                 // - Check that there is a trailing comma:
-                //   @include bidi(((float, left, right),));
+                //   @include bidi(((content, '\2192', '\2190'),));
             }
             #{$property}: $ltr-value;
         }
