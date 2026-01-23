@@ -73,7 +73,7 @@ variants:
       image: '/img/image-portrait.jpg'
   - name: Media Alignment
     notes: |
-      Align the media in different positions, horizontally and vertically (it’s
+      Align the media in different positions, horizontally and vertically (it's
       aligned left by default in LTR languages, and vertically centered).
 
       Apply these classes to the media container (`mzp-c-split-media`):
@@ -89,3 +89,17 @@ variants:
     context:
       media_class: mzp-l-split-h-end mzp-l-split-v-end
       image: '/img/image-1-1-sm.jpg'
+  - name: Nested
+    notes: |
+      If you need to nest Split inside another container (e.g. `mzp-l-content`),
+      add the `mzp-l-split-nested` class to the outermost element (`mzp-c-split`).
+      This removes the inner container's max-width and horizontal padding so it
+      fills the parent container without doubling up on spacing.
+  - name: No Space
+    notes: |
+      Add the class `mzp-t-split-nospace` to the outer container (`mzp-c-split`)
+      to remove the vertical spacing above and below. This is useful when stacking
+      multiple Splits together or when placing a Split at the very top of a page
+      as a hero section.
+    context:
+      block_class: mzp-t-split-nospace

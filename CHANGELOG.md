@@ -51,6 +51,8 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 ### Split
 
+* Split can now be nested inside content containers with the `mzp-l-split-nested` class
+* (breaking) Removed `overflow-x: hidden` from component (#1089)
 * (breaking) Removed `mzp-l-split-pop-top`, `mzp-l-split-pop-bottom`, and `mzp-l-split-pop` layout classes from Split component
 * (breaking) Removed `mzp-l-split-media-overflow` and `mzp-l-split-media-constrain-height` layout classes from Split component
 
