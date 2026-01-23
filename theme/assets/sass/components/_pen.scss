@@ -42,8 +42,8 @@
 .Pen-previewButton {
     color: var(--theme-link-color);
     font-weight: bold;
-    @include bidi(((margin-left, $spacing-lg, margin-right, $spacing-lg),));
     @include text-body-sm;
+    @include bidi(((margin-left, $spacing-lg, margin-right, $spacing-lg),));
 
     &:hover,
     &:active {

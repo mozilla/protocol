@@ -17,13 +17,13 @@ $logo-sizes: (
 );
 
 .mzp-c-logo {
-    @include bidi(((background-position, top left, top right),));
     @include image-replaced;
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
     margin-bottom: $layout-sm;
     margin-top: 0;
+    @include bidi(((background-position, top left, top right),));
 
     &.mzp-t-logo-xs {
         height: $layout-xs;
@@ -65,9 +65,9 @@ $logo-sizes: (
         margin-right: auto;
 
         @media #{$mq-md} {
-            @include bidi(((background-position, top left, top right),));
             margin-left: 0;
             margin-right: 0;
+            @include bidi(((background-position, top left, top right),));
         }
     }
 }

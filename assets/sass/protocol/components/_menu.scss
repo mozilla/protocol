@@ -76,7 +76,6 @@
         &::before {
             background: $url-image-expand-black top left no-repeat;
             background-size: 20px 20px;
-            @include bidi(((right, 8px, left, auto),));
             transition: transform 100ms ease-in-out;
             content: '';
             height: 20px;
@@ -84,6 +83,7 @@
             position: absolute;
             top: 50%;
             width: 20px;
+            @include bidi(((right, 8px, left, auto),));
         }
     }
 
@@ -95,8 +95,8 @@
     }
 
     @media #{$mq-md} {
-        @include bidi(((float, left, right),));
         display: inline-block;
+        float: inline-start;
 
         .mzp-c-menu-title {
             border-bottom: none;
@@ -285,9 +285,9 @@
             position: relative;
 
             & > ul {
-                @include bidi(((float, left, right),));
                 margin-bottom: 0;
                 width: calc(50% - (#{$spacing-lg} * 0.5));
+                float: inline-start;
 
                 &:first-child {
                     @include bidi(((margin-right, $spacing-lg * 0.5, margin-left, 0),));
@@ -307,13 +307,13 @@
     @media #{$mq-lg} {
         &.mzp-has-card {
             .mzp-c-menu-panel-content {
-                @include bidi(((float, left, right),));
                 width: calc(100% - (300px + #{$spacing-lg}));
+                float: inline-start;
             }
 
             .mzp-c-menu-panel-card {
-                @include bidi(((float, right, left),));
                 display: block;
+                float: inline-end;
             }
         }
     }

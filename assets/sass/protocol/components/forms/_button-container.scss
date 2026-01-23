@@ -38,23 +38,23 @@
     }
 
     @media #{$mq-sm} {
-        @include bidi(((text-align, left, right),));
         align-items: start;
         justify-content: start;
+        text-align: start;
 
         .mzp-c-button {
             width: auto;
         }
 
         .mzp-c-button + .mzp-c-button {
-            @include bidi(((margin-left, forms.$field-h-spacing, margin-right, 0),));
             margin-top: 0;
+            @include bidi(((margin-left, forms.$field-h-spacing, margin-right, 0),));
         }
 
         // align end
         &.mzp-l-align-end {
-            @include bidi(((text-align, right, left),));
             justify-content: flex-end;
+            text-align: end;
         }
 
         &.mzp-l-stretch {

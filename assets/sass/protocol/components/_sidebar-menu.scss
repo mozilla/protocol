@@ -21,19 +21,19 @@
     }
 
     li {
+        color: $color-marketing-gray-80;
+        display: inline-block;
         @include bidi((
             (margin-right, $spacing-xs, margin-left, 0),
         ));
-        color: $color-marketing-gray-80;
-        display: inline-block;
 
         &::after {
+            content: '\25B8'; // right pointing triangle
+            display: inline-block;
             @include bidi((
                 (margin-left, $spacing-xs, margin-right, 0),
                 (transform, none, translateY(3px) rotate(180deg)),
             ));
-            content: '\25B8'; // right pointing triangle
-            display: inline-block;
         }
 
         &:last-child::after {
@@ -79,22 +79,22 @@
 
 .mzp-c-sidemenu-label {
     position: relative;
+    @include text-body-sm;
+    @include font-base;
     @include bidi((
         (padding-right, $spacing-lg, padding-left, 0),
     ));
-    @include text-body-sm;
-    @include font-base;
 
     &::after {
-        @include bidi((
-            (right, 0, left, auto),
-        ));
         transform: rotate(90deg);
         color: $color-marketing-gray-80;
         content: none;
         font-size: 1.5em;
         position: absolute;
         top: 0;
+        @include bidi((
+            (right, 0, left, auto),
+        ));
     }
 }
 
