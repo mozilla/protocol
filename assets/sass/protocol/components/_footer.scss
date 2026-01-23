@@ -72,9 +72,9 @@
 // Footer section containing list and heading
 
 .mzp-c-footer-sections {
-    @include clearfix;
-    @include footer-line;
     padding-bottom: $layout-sm;
+    @include footer-line;
+    @include clearfix;
 
     @media #{$mq-sm} {
         padding-bottom: 0;
@@ -100,11 +100,11 @@
     }
 
     @media (min-width: #{$screen-sm}) and (max-width: #{$screen-lg - 1px}) {
-        @include bidi(((float, left, right),));
         @include grid-half;
+        float: inline-start;
 
         &:nth-child(odd) {
-            @include bidi(((clear, left, right),));
+            clear: inline-start;
             @include bidi(((padding, 0 ($layout-md * 0.5) 0 0, 0 0 0 ($layout-md * 0.5)),));
         }
 
@@ -116,8 +116,8 @@
 
 @media #{$mq-lg} {
     .mzp-c-footer-section {
-        @include bidi(((float, left, right),));
         padding: 0 ($layout-md * 0.5);
+        float: inline-start;
 
         &:first-child {
             @include bidi(((padding, 0 ($layout-md * 0.5) 0 0, 0 0 0 ($layout-md * 0.5)),));
@@ -151,10 +151,10 @@
         padding: $spacing-md 0;
         position: relative;
         width: 100%;
-        @include bidi(((text-align, left, right),));
         @include footer-line;
         @include text-body-md;
         @include font-mozilla-text;
+        text-align: start;
 
         /* stylelint-disable-next-line no-duplicate-selectors */
         & {
@@ -178,7 +178,6 @@
         button::before {
             background: $url-image-expand-white top left no-repeat;
             background-size: 24px, 24px;
-            @include bidi(((right, 8px, left, auto),));
             transition: transform 100ms ease-in-out;
             content: '';
             height: 24px;
@@ -186,6 +185,7 @@
             position: absolute;
             top: 50%;
             width: 24px;
+            @include bidi(((right, 8px, left, auto),));
         }
 
         button[aria-expanded='true']::before {
@@ -255,7 +255,7 @@
     margin-bottom: $layout-sm;
 
     @media #{$mq-md} {
-        @include bidi(((float, right, left),));
+        float: inline-end;
     }
 }
 
@@ -266,9 +266,9 @@
     margin-bottom: $layout-sm;
 
     li {
-        @include bidi(((margin, 0 $spacing-md 0 0, 0 0 0 $spacing-md),));
         display: inline-block;
         vertical-align: bottom;
+        @include bidi(((margin, 0 $spacing-md 0 0, 0 0 0 $spacing-md),));
 
         a {
             @include image-replaced;
@@ -298,12 +298,12 @@
     }
 
     @media #{$mq-md} {
-        @include bidi(((right, 0, left, auto),));
-        @include bidi(((text-align, right, left),));
         bottom: 0;
         margin-bottom: 0;
         max-width: 33%; // don't over lap with legal links
         position: absolute;
+        @include bidi(((right, 0, left, auto),));
+        text-align: end;
 
         li {
             @include bidi((
@@ -329,8 +329,8 @@
 
     @media #{$mq-md} {
         li {
-            @include bidi(((padding, 0 $spacing-lg 0 0, 0 0 0 $spacing-lg),));
             display: inline-block;
+            @include bidi(((padding, 0 $spacing-lg 0 0, 0 0 0 $spacing-lg),));
 
             &:last-child {
                 @include bidi(((padding-right, 0, padding-left, 0),));

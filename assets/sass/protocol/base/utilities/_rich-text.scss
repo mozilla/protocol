@@ -54,8 +54,8 @@
     }
 
     ul {
-        @include bidi(((margin-left, $layout-sm, margin-right, 0),));
         list-style-type: disc;
+        @include bidi(((margin-left, $layout-sm, margin-right, 0),));
 
         ul {
             list-style-type: circle;
@@ -63,8 +63,8 @@
     }
 
     ol {
-        @include bidi(((margin-left, $layout-sm, margin-right, 0),));
         list-style-type: decimal;
+        @include bidi(((margin-left, $layout-sm, margin-right, 0),));
 
         ol {
             list-style-type: lower-roman;
@@ -85,8 +85,8 @@
     }
 
     dd {
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         margin-bottom: 0.25em;
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
     }
 
     pre {

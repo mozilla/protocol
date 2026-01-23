@@ -13,44 +13,44 @@ ol {
 }
 
 ul.mzp-u-list-styled {
-    @include bidi(((margin-left, $layout-sm, margin-right, 0),));
     list-style: disc;
+    @include bidi(((margin-left, $layout-sm, margin-right, 0),));
 
     li {
         margin-bottom: 0.25em;
     }
 
     ul {
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         list-style: circle;
         margin-bottom: 0;
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
     }
 
     ol {
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         list-style: decimal;
         margin-bottom: 0;
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
     }
 }
 
 ol.mzp-u-list-styled {
-    @include bidi(((margin-left, $layout-sm, margin-right, 0),));
     list-style: decimal;
+    @include bidi(((margin-left, $layout-sm, margin-right, 0),));
 
     li {
         margin-bottom: 0.25em;
     }
 
     ol {
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         list-style: lower-alpha;
         margin-bottom: 0;
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
     }
 
     ul {
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         list-style: disc;
         margin-bottom: 0;
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
     }
 }
 
@@ -61,14 +61,14 @@ dl.mzp-u-list-styled {
     }
 
     dd {
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         margin-bottom: 0.25em;
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
     }
 
     ul,
     ol {
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
         margin-bottom: 0;
+        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
     }
 
     ul {

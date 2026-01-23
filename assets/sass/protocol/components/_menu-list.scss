@@ -35,13 +35,13 @@
 
             &::after {
                 background-size: 20px, 20px;
-                @include bidi(((right, $spacing-sm, left, auto),));
                 bottom: $spacing-sm;
                 content: '';
                 display: block;
                 position: absolute;
                 top: $spacing-sm;
                 width: 14px;
+                @include bidi(((right, $spacing-sm, left, auto),));
             }
         }
 
@@ -69,7 +69,6 @@
 
     .mzp-c-menu-list-title {
         button {
-            @include bidi(((padding, 0 (16px + $spacing-sm) 0 0, 0 0 0 (16px + $spacing-sm)),));
             background: transparent;
             border: 0;
             color: var(--theme-link-color);
@@ -81,9 +80,9 @@
             text-align: inherit;
             text-decoration: underline;
             width: 100%;
+            @include bidi(((padding, 0 (16px + $spacing-sm) 0 0, 0 0 0 (16px + $spacing-sm)),));
 
             &::after {
-                @include bidi(((right, 0, left, auto),));
                 background: $url-image-caret-down-link center bottom no-repeat;
                 bottom: 1px;
                 content: '';
@@ -92,6 +91,7 @@
                 top: 0;
                 width: 16px;
                 transition: transform 200ms ease-in-out;
+                @include bidi(((right, 0, left, auto),));
             }
 
             &[aria-expanded='true']::after {

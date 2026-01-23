@@ -14,7 +14,6 @@ $logo-sizes: (
 );
 
 .mzp-c-wordmark {
-    @include bidi(((background-position, top left, top right),));
     @include image-replaced;
     background-size: contain;
     background-repeat: no-repeat;
@@ -22,6 +21,7 @@ $logo-sizes: (
     margin-bottom: $layout-sm;
     margin-top: 0;
     max-width: 100%;
+    @include bidi(((background-position, top left, top right),));
 
     &.mzp-t-wordmark-xs {
         height: $layout-xs;
@@ -63,9 +63,9 @@ $logo-sizes: (
         margin-right: auto;
 
         @media #{$mq-md} {
-            @include bidi(((background-position, top left, top right),));
             margin-left: 0;
             margin-right: 0;
+            @include bidi(((background-position, top left, top right),));
         }
     }
 }

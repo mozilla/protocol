@@ -28,9 +28,9 @@
 
         + .mzp-c-breadcrumb-item {
             &::before {
-                @include bidi(((content, '\2192', '\2190'),));
                 font-weight: normal;
                 margin: 0 0.25em;
+                @include bidi(((content, '\2192', '\2190'),));
             }
         }
 

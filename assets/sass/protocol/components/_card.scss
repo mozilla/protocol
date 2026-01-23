@@ -54,13 +54,13 @@
 
     &.mzp-has-video .mzp-c-card-tag,
     &.mzp-has-audio .mzp-c-card-tag {
+        background-repeat: no-repeat;
+        line-height: 1.8;
+        min-height: 25px;
         @include bidi((
             (background-position, center left, center right),
             (padding-left, $spacing-xl, padding-right, 0),
         ));
-        background-repeat: no-repeat;
-        line-height: 1.8;
-        min-height: 25px;
     }
 
     &.mzp-has-video .mzp-c-card-tag {
