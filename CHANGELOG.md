@@ -2,24 +2,17 @@
 
 This version introduces some major modernization changes around CSS and drops browser support for XXXX ( to be defined before V23 is published).
 
-The good news is we don't expect any visible changes in modern browsers and you should be able to do some automated visual regression testing to help with the migration.
+The good news is we don't expect many visible changes in modern browsers and you should be able to do some automated visual regression testing to help with the migration.
 
-Introducing theme variables! CSS variables beginning with `--theme-` will adjust based on media queries.
+Introducing theme variables! CSS variables beginning with `--theme-` will adjust based on media queries. Check them out in assets/sass/protocol/root
 
-## Browser Support
+## Architecture changes
 
-* **css:** (breaking) Remove support for vendor prefixing (#957)
+### Browser Support
 
-## Feature Card Component
+* (breaking) Remove support for vendor prefixing (#957)
 
-* **component:** (breaking) Removed the deprecated Feature Card component. Use the [Split](https://protocol.mozilla.org/components/detail/split) component instead.
-
-## Split Component
-
-* **component:** (breaking) Removed `mzp-l-split-pop-top`, `mzp-l-split-pop-bottom`, and `mzp-l-split-pop` layout classes from Split component
-* **component:** (breaking) Removed `mzp-l-split-media-overflow` and `mzp-l-split-media-constrain-height` layout classes from Split component
-
-## Typography
+### Typography
 
 * Modernization:
   *  Default to CSS vars for font family, size, and line-height (#982)
@@ -27,54 +20,76 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
     * `@include text-body-*` and `@include text-heading-*` mixins use CSS vars now
   * Edited `@mixin font-size()` to stop outputting a pixel fallback
 * Reorganization:
-  * Renamed `-title-` to `-heading-` in mixins and CSS vars
+  * (breaking) Renamed `-title-` to `-heading-` in mixins and CSS vars
     * and `mzp-u-heading-*` utility classes
     * component HTML/CSS classes will follow in a separate PR
   * Added font-family declaration to `@include text-body-*` mixins
   * Added `--theme-` prefix to variables expected to morph
   * Added `--token-` prefix to unchanging variables
-    * Re-name font-size tokens to use a scale instead of tshirt sizes for names
+    * Re-named font-size tokens to use a scale instead of tshirt sizes for names
   * Added `--theme-button-line-height` var
 * Bug fixes:
   * Moved `@include text-*` to end of declarations
 
-## Color
+### Color
 
 * Modernization:
   * Default to CSS vars for all color values
-  * Removed `@supports` declarations if they only had color declarations
+  * Unwrapped `@supports` declarations if they only contained color declarations
 * Reorganization:
   * Added `--theme-` prefix to color variables expected to morph between light/dark modes
-  * Renamed `-title-` to `-heading-` in (to match typography naming)
+  * (breaking) Renamed `-title-` to `-heading-` in CSS mixins (to match typography naming)
   * Added new form color variables (`--theme-form-*`, `--theme-field-*`)
   * Added status color variables (`--theme-color-success-*`, `--theme-color-error-*`, `--theme-color-warning-*`, `--theme-color-info-*`)
 * Removed Sass color variables from `_themes-sass.scss` (use CSS variables instead)
 
-## Section Heading Component
+## Component changes
 
-* **component:** (breaking) Updated spacing around Section Heading component. Review your usage to ensure the new spacing works with your layout.
-* **component:** Added `mzp-t-section-heading-nospace` theme class to remove padding from Section Heading.
+### Feature Card
 
-## Card Component
+* (breaking) Removed the deprecated Feature Card component. Use the [Split](https://protocol.mozilla.org/components/detail/split) component instead.
 
-* **component:** (breaking) Renamed `mzp-c-card-extra-small` to `mzp-c-card-small`
-* **component:** (breaking) Removed `mzp-c-card-medium` class (medium is now the default)
-* Card size modifiers now only affect typography, not card width
+### Split
+
+* (breaking) Removed `mzp-l-split-pop-top`, `mzp-l-split-pop-bottom`, and `mzp-l-split-pop` layout classes from Split component
+* (breaking) Removed `mzp-l-split-media-overflow` and `mzp-l-split-media-constrain-height` layout classes from Split component
+
+### Section Heading
+
+* (breaking) Updated spacing around Section Heading component. Review your usage to ensure the new spacing works with your layout.
+* Added `mzp-t-section-heading-nospace` theme class to remove padding from Section Heading.
+
+### Card
+
+* (breaking) Renamed `mzp-c-card-extra-small` to `mzp-c-card-small`
+* (breaking) Removed `mzp-c-card-medium` class (medium is now the default)
+* Card size modifiers now only affect typography, not card width - use layouts instead
 * Card sizes are now:
   * Small: `mzp-c-card-small` (smaller text)
   * Medium: The default, no modifier class
   * Large: `mzp-c-card-large` (larger text)
-* Image size recommendations are now based on column layout rather than card size:
-  * 4-column layout: 450px (low-res), 900px (high-res)
-  * 3-column layout: 600px (low-res), 1200px (high-res)
-  * 2-column layout: 930px (low-res), 1860px (high-res)
+
 
 ## Migration Tips
 
 See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for automated scripts (VS Code find/replace and terminal commands) to help with these changes.
 
-* Browser support
-  * If you require support for older browsers we recommend adding some post-processing to your workflow for CSS variables and font sizes in pixels.
+* CSS variables are in `assets/sass/protocol/root` you will need to include this in your site bundle.
+* This version removes mixins which added vendor-prefixes.
+  - If you need that level of vendor prefix support consider adding a tool such as
+    [autoprefixer](https://github.com/postcss/autoprefixer) to your code base.
+  - Affected mixins are:
+    - `animation`
+    - `appearance`
+    - `background-size`
+    - `box-decoration-break`
+    - `box-sizing`
+    - `flexbox`, `flex`, `flex-direction`, `flex-wrap`, `align-items`, `justify-content`
+    - `grid*-gap`
+    - `inline-block`
+    - `multi-column*`
+    - `transform`, `transform-origin`, `transform-style`
+    - `transition`, `transition-property`, `transition-duration`, `transition-delay`
 * Rename typography mixins `text-title-(2xs|3xs|xs|sm|md|lg|xl|2xl)` → `text-heading-$1`
 * Rename utility classes `mzp-u-title-(2xs|3xs|xs|sm|md|lg|xl|2xl)` → `mzp-u-heading-$1`
 * Replace any remaining `text-display-*` usage with the equivalent `text-heading-*` mixin:
@@ -101,27 +116,9 @@ See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for
 * `text-body-*` mixins now declare `font-family`.
   * You can remove any `font-family` declarations from places which use these mixins (unless you don't want the default font).
 * Removed mixins and functions:
-  * `type-scale()` function and associated lookup tables
-  * `text-body-cta` mixin (use `text-body-md` instead)
-* You can remove `@supports (--css: variables)` blocks that only contain font declarations, as CSS custom properties are now required.
-* This version removes mixins which added vendor-prefixes. Browser support for these is now excellent.
-  - One migration path is to edit your code to use the unprefixed versions.
-  - Another option is to move these utility mixins into your own code base (though, be aware they are
-    no longer used in Protocol and this will not give you backwards compatible Protocol components).
-  - If you need that level of vendor prefix support consider adding a tool such as
-    [autoprefixer](https://github.com/postcss/autoprefixer) to your code base.
-  - Affected mixins are:
-    - `animation`
-    - `appearance`
-    - `background-size`
-    - `box-decoration-break`
-    - `box-sizing`
-    - `flexbox`, `flex`, `flex-direction`, `flex-wrap`, `align-items`, `justify-content`
-    - `grid*-gap`
-    - `inline-block`
-    - `multi-column*`
-    - `transform`, `transform-origin`, `transform-style`
-    - `transition`, `transition-property`, `transition-duration`, `transition-delay`
+  * Remove `type-scale()`
+  * Remove `text-body-cta` mixin (use `text-body-md` instead)
+* You can unwrap color declarations from `@supports (--css: variables)` blocks, as CSS custom properties are now required.
 * Rename CSS color variables to use `--theme-` prefix:
   * `--(background-color|body-text-color|link-color|heading-text-color)(-*)` → `--theme-$1$2`
 * Removed Sass color variables (use CSS variables instead):
@@ -133,7 +130,6 @@ See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for
   * `forms.$form-inactive` → `var(--theme-form-text-color-inactive)`
   * `forms.$(field-border-color|field-border|field-focus-ring)(-*)` → `var(--theme-$1$2)`
   * `forms.$button-border-color-focus` → `var(--theme-button-border-color-focus)`
-* You can remove `@supports (--css: variables)` blocks that only contain color declarations, as CSS custom properties are now required.
 * Card component class renames:
   * `mzp-c-card-extra-small` → `mzp-c-card-small`
   * `mzp-c-card-medium` → remove (medium is now the default, no class needed)
