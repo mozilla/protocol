@@ -2,7 +2,7 @@
 .grid-list {
     display: grid;
     grid-template-columns: repeat(5, 20%);
-    grid-gap: 2px;
+    gap: 2px;
 }
 
 .grid-list__item {

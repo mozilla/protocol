@@ -22,7 +22,6 @@
                 "ignoreShorthands": [
                     "grid-area",
                     "grid-column",
-                    "grid-gap",
                     "grid-row",
                     "grid-template",
                     "inset"

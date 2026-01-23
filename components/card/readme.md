@@ -2,9 +2,8 @@ A Card is a unit of content featuring an image along with a title and descriptio
 wrapped in a block-level link.
 
 Cards come in a variety of sizes, activated by adding a modifier class:
-- Extra-small : `mzp-c-card-extra-small`
-- Small : The default, no modifier class
-- Medium : `mzp-c-card-medium`
+- Small : `mzp-c-card-small`
+- Medium : The default, no modifier class
 - Large : `mzp-c-card-large`
 
 Cards support images in three different aspect ratios, also indicated by a class:
@@ -13,11 +12,11 @@ Cards support images in three different aspect ratios, also indicated by a class
 - 16:9 : `mzp-has-aspect-16-9`
 
 Because cards are responsive and may change size in different viewports, you
-should take some care in sizing images appropriately:
-- Extra-small : `450px` wide (low-res), `900px` wide (high-res)
-- Small : `450px` wide (low-res), `900px` wide (high-res)
-- Medium : `600px` wide (low-res), `1200px` wide (high-res)
-- Large : `930px` wide (low-res), `1860px` wide (high-res)
+should take some care in sizing images appropriately. The recommended image
+size depends on the card layout:
+- 4-column layout: `450px` wide (low-res), `900px` wide (high-res)
+- 3-column layout: `600px` wide (low-res), `1200px` wide (high-res)
+- 2-column layout: `930px` wide (low-res), `1860px` wide (high-res)
 
 In addition to the image, title, and description, cards may hold a few other
 distinct pieces of content:
@@ -36,12 +35,9 @@ card container:
 - `mzp-has-video`
 - `mzp-has-audio`
 
-The default Card size with no other modifier classes is small:
+The default Card size with no other modifier classes is medium:
 - Small sized cards can contain images with 16:9, 3:2 or 1:1 aspect ratios.
 - The card in this example displays an icon next to the card tag name, to indicate
   the media type that may be played on click.
-- Recommended image width is `450px` (low-res), `900px` (high-res).
-    - high-res examples: 16:9 = `900px` x `506px`, 3:2 = `900px` x `600px`,
-    1:1 = `900px` x `900px`
 - Headlines should be a maximum of 50 characters, and descriptions a maximum of
   150 characters.

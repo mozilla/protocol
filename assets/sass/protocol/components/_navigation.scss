@@ -17,11 +17,7 @@
         position: relative;
 
         @media #{$mq-md} {
-            padding: 0 $layout-lg;
-        }
-
-        @media #{$mq-lg} {
-            padding: 0 $layout-xl;
+            padding: 0 var(--theme-spacing-between-inline);
         }
     }
 

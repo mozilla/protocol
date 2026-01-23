@@ -11,14 +11,10 @@
     .mzp-c-breadcrumb-list {
         margin: 0 auto;
         max-width: $content-max;
-        padding: 0 $h-grid-xs;
+        padding: 0 $layout-xs;
 
         @media #{$mq-md} {
-            padding: 0 $h-grid-md;
-        }
-
-        @media #{$mq-xl} {
-            padding: 0 $h-grid-xl;
+            padding: 0 var(--theme-spacing-between-inline);
         }
     }
 

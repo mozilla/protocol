@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html dir="ltr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <script src="{{ '/protocol/js/base.js' | path }}"></script>
+  <script>window.MzpBase.init();</script>
+  <script src="{{ '/protocol/js/utils.js' | path }}"></script>
+  <script src="{{ '/protocol/js/supports.js' | path }}"></script>
+  <link media="all" rel="stylesheet" href="{{ '/theme/css/preview.css' | path }}">
+  <link media="all" rel="stylesheet" href="{{ '/protocol/css/protocol.css' | path }}">
+  <link media="all" rel="stylesheet" href="{{ '/protocol/css/protocol-components.css' | path }}">
+  <link rel="shortcut icon" href="{{ '/theme/favicon.png' | path }}" type="image/ico">
+  <title>{% if _target.title %}{{ _target.title }} | {% endif %}Mozilla Protocol</title>
+</head>
+<body class="site-preview-unpadded">
+
+  <div class="mzp-l-content mzp-l-card-third">
+    {{ yield | safe }}
+  </div>
+
+</body>
+</html>

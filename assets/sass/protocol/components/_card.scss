@@ -120,10 +120,6 @@
         @include text-body-xs;
     }
 
-    @media #{$mq-sm} {
-        max-width: $content-sm;
-    }
-
     @media #{$mq-md} {
         margin-bottom: $spacing-xl;
     }
@@ -158,15 +154,6 @@
 }
 
 // * -------------------------------------------------------------------------- */
-// Medium sized card
-
-.mzp-c-card.mzp-c-card-medium {
-    @media #{$mq-sm} {
-        max-width: $content-md;
-    }
-}
-
-// * -------------------------------------------------------------------------- */
 // Card with larger title
 
 .mzp-c-card.mzp-c-card-large {
@@ -177,16 +164,12 @@
     .mzp-c-card-desc {
         @include text-body-lg;
     }
-
-    @media #{$mq-sm} {
-        max-width: $content-lg;
-    }
 }
 
 // * -------------------------------------------------------------------------- */
-// Card with extra small title and text
+// Card with small title and text
 
-.mzp-c-card.mzp-c-card-extra-small {
+.mzp-c-card.mzp-c-card-small {
     .mzp-c-card-tag,
     .mzp-c-card-cta {
         @include text-body-xs;
@@ -203,9 +186,5 @@
     .mzp-c-card-block-link {
         border-radius: $border-radius-xs;
         height: 100%;
-    }
-
-    @media #{$mq-lg} {
-        max-width: $content-xs;
     }
 }

@@ -19,17 +19,10 @@
         .mzp-c-card {
             @include bidi((
                 (float, left, right),
-                (margin-left, 0, $spacing-xl),
-                (margin-right, $spacing-xl, 0),
+                (margin-left, 0, var(--theme-spacing-between-inline)),
+                (margin-right, var(--theme-spacing-between-inline), 0),
             ));
-            width: calc(50% - (#{$spacing-xl} * 0.5));
-
-            &.mzp-c-card-extra-small,
-            &,
-            &.mzp-c-card-medium,
-            &.mzp-c-card-large {
-                max-width: 100%;
-            }
+            width: calc(50% - (var(--theme-spacing-between-inline) * 0.5));
 
             &:nth-child(odd) {
                 margin-left: 0;
@@ -44,12 +37,12 @@
 
     @media #{$mq-lg} {
         .mzp-c-card {
-            width: calc(33.3% - (#{$spacing-xl} - (#{$spacing-xl} * 0.33)));
+            width: calc(33.3% - (var(--theme-spacing-between-inline) - (var(--theme-spacing-between-inline) * 0.33)));
 
             &:nth-child(odd) {
                 @include bidi((
-                    (margin-left, 0, $spacing-xl),
-                    (margin-right, $spacing-xl, 0),
+                    (margin-left, 0, var(--theme-spacing-between-inline)),
+                    (margin-right, var(--theme-spacing-between-inline), 0),
                 ));
             }
 
@@ -64,7 +57,7 @@
         }
 
         .mzp-c-card.mzp-c-card-large {
-            width: calc(66.6% - (#{$spacing-xl} * 0.33));
+            width: calc(66.6% - var(--theme-spacing-between-inline) * 0.33);
         }
     }
 }
@@ -81,17 +74,10 @@
         .mzp-c-card {
             @include bidi((
                 (float, left, right),
-                (margin-left, 0, $spacing-xl),
-                (margin-right, $spacing-xl, 0),
+                (margin-left, 0, var(--theme-spacing-between-inline)),
+                (margin-right, var(--theme-spacing-between-inline), 0),
             ));
-            width: calc(50% - (#{$spacing-xl} * 0.5));
-
-            &.mzp-c-card-extra-small,
-            &,
-            &.mzp-c-card-medium,
-            &.mzp-c-card-large {
-                max-width: 100%;
-            }
+            width: calc(50% - (var(--theme-spacing-between-inline) * 0.5));
 
             &:nth-child(even) {
                 margin-left: 0;
@@ -103,15 +89,15 @@
     @media #{$mq-lg} {
         .mzp-c-card {
             @include bidi((
-                (margin-left, 0, $spacing-xl),
-                (margin-right, $spacing-xl, 0),
+                (margin-left, 0, var(--theme-spacing-between-inline)),
+                (margin-right, var(--theme-spacing-between-inline), 0),
             ));
-            width: calc(25% - (#{$spacing-xl} - (#{$spacing-xl} * 0.25)));
+            width: calc(25% - (var(--theme-spacing-between-inline) - var(--theme-spacing-between-inline) * 0.25));
 
             &:nth-child(even) {
                 @include bidi((
-                    (margin-left, 0, $spacing-xl),
-                    (margin-right, $spacing-xl, 0),
+                    (margin-left, 0, var(--theme-spacing-between-inline)),
+                    (margin-right, var(--theme-spacing-between-inline), 0),
                 ));
             }
 
@@ -136,20 +122,13 @@
         @include clearfix;
 
         .mzp-c-card {
-            width: calc(50% - (#{$spacing-xl} * 0.5));
+            width: calc(50% - var(--theme-spacing-between-inline) * 0.5);
 
             @include bidi((
                 (float, left, right),
-                (margin-left, 0, $spacing-xl),
-                (margin-right, $spacing-xl, 0),
+                (margin-left, 0, var(--theme-spacing-between-inline)),
+                (margin-right, var(--theme-spacing-between-inline), 0),
             ));
-
-            &.mzp-c-card-extra-small,
-            &,
-            &.mzp-c-card-medium,
-            &.mzp-c-card-large {
-                max-width: 100%;
-            }
 
             &:nth-child(even) {
                 margin-left: 0;
@@ -160,12 +139,12 @@
 
     @media #{$mq-lg} {
         .mzp-c-card {
-            width: calc(33.3% - (#{$spacing-xl} - (#{$spacing-xl} * 0.33)));
+            width: calc(33.3% - (var(--theme-spacing-between-inline) - var(--theme-spacing-between-inline) * 0.33));
 
             &:nth-child(even) {
                 @include bidi((
-                    (margin-left, 0, $spacing-xl),
-                    (margin-right, $spacing-xl, 0),
+                    (margin-left, 0, var(--theme-spacing-between-inline)),
+                    (margin-right, var(--theme-spacing-between-inline), 0),
                 ));
             }
 
@@ -191,16 +170,9 @@
         .mzp-c-card {
             @include bidi((
                 (float, left, right),
-                (margin-left, 0, $spacing-xl),
-                (margin-right, $spacing-xl, 0),
+                (margin-left, 0, var(--theme-spacing-between-inline)),
+                (margin-right, var(--theme-spacing-between-inline), 0),
             ));
-
-            &.mzp-c-card-extra-small,
-            &,
-            &.mzp-c-card-medium,
-            &.mzp-c-card-large {
-                max-width: 100%;
-            }
 
             &:nth-child(2n) {
                 margin-left: 0;
@@ -214,6 +186,6 @@
     }
 
     .mzp-l-card-half .mzp-c-card { /* stylelint-disable-line no-duplicate-selectors */
-        width: calc(50% - (#{$spacing-xl} - (#{$spacing-xl} * 0.5)));
+        width: calc(50% - (var(--theme-spacing-between-inline) - var(--theme-spacing-between-inline) * 0.5));
     }
 }

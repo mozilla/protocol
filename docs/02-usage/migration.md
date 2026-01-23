@@ -361,6 +361,71 @@ Terminal:
 grep -r "mzp-l-split-media-overflow\|mzp-l-split-media-constrain-height" --include="*.html" --include="*.njk" .
 ```
 
+## Card Component
+
+### Renamed Extra-Small to Small
+
+The `mzp-c-card-extra-small` class has been renamed to `mzp-c-card-small`.
+
+**VS Code Find & Replace:**
+
+```text
+Find:    mzp-c-card-extra-small
+Replace: mzp-c-card-small
+```
+
+**Terminal:**
+
+```bash
+# Rename in HTML files
+find . -name "*.html" -exec sed -i '' 's/mzp-c-card-extra-small/mzp-c-card-small/g' {} +
+
+# Rename in Nunjucks templates
+find . -name "*.njk" -exec sed -i '' 's/mzp-c-card-extra-small/mzp-c-card-small/g' {} +
+
+# Rename in SCSS files
+find . -name "*.scss" -exec sed -i '' 's/mzp-c-card-extra-small/mzp-c-card-small/g' {} +
+```
+
+### Removed Medium Class
+
+The `mzp-c-card-medium` class has been removed. Medium is now the default card size with no modifier class needed.
+
+**Migration steps:**
+1. Remove `mzp-c-card-medium` from your HTML/templates
+2. The card will now use the default (medium) styling automatically
+
+**Find usages in your codebase:**
+
+VS Code Find:
+```text
+Find: mzp-c-card-medium
+```
+
+Terminal:
+```bash
+grep -r "mzp-c-card-medium" --include="*.html" --include="*.njk" --include="*.scss" .
+```
+
+### Updated Card Size Names
+
+Card sizes are now:
+- **Small:** `mzp-c-card-small` (smaller text)
+- **Medium:** No modifier class (default)
+- **Large:** `mzp-c-card-large` (larger text)
+
+Note: Card size modifiers now only affect typography, not card width. Card width is determined by the card layout container (`mzp-l-card-quarter`, `mzp-l-card-third`, `mzp-l-card-half`).
+
+### Image Size Recommendations
+
+Image size recommendations are now based on column layout rather than card size:
+
+| Layout | Low-res | High-res |
+|--------|---------|----------|
+| 4-column (`mzp-l-card-quarter`) | 450px | 900px |
+| 3-column (`mzp-l-card-third`) | 600px | 1200px |
+| 2-column (`mzp-l-card-half`) | 930px | 1860px |
+
 ## After Migration
 
 1. Run your build to check for any Sass compilation errors

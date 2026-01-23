@@ -50,6 +50,25 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
   * Added status color variables (`--theme-color-success-*`, `--theme-color-error-*`, `--theme-color-warning-*`, `--theme-color-info-*`)
 * Removed Sass color variables from `_themes-sass.scss` (use CSS variables instead)
 
+## Section Heading Component
+
+* **component:** (breaking) Updated spacing around Section Heading component. Review your usage to ensure the new spacing works with your layout.
+* **component:** Added `mzp-t-section-heading-nospace` theme class to remove padding from Section Heading.
+
+## Card Component
+
+* **component:** (breaking) Renamed `mzp-c-card-extra-small` to `mzp-c-card-small`
+* **component:** (breaking) Removed `mzp-c-card-medium` class (medium is now the default)
+* Card size modifiers now only affect typography, not card width
+* Card sizes are now:
+  * Small: `mzp-c-card-small` (smaller text)
+  * Medium: The default, no modifier class
+  * Large: `mzp-c-card-large` (larger text)
+* Image size recommendations are now based on column layout rather than card size:
+  * 4-column layout: 450px (low-res), 900px (high-res)
+  * 3-column layout: 600px (low-res), 1200px (high-res)
+  * 2-column layout: 930px (low-res), 1860px (high-res)
+
 ## Migration Tips
 
 See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for automated scripts (VS Code find/replace and terminal commands) to help with these changes.
@@ -115,6 +134,9 @@ See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for
   * `forms.$(field-border-color|field-border|field-focus-ring)(-*)` → `var(--theme-$1$2)`
   * `forms.$button-border-color-focus` → `var(--theme-button-border-color-focus)`
 * You can remove `@supports (--css: variables)` blocks that only contain color declarations, as CSS custom properties are now required.
+* Card component class renames:
+  * `mzp-c-card-extra-small` → `mzp-c-card-small`
+  * `mzp-c-card-medium` → remove (medium is now the default, no class needed)
 
 # 22.0.0
 
