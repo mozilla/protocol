@@ -41,6 +41,7 @@ context:
     $mq-md: '(min-width: $screen-md)'
     $mq-lg: '(min-width: $screen-lg)'
     $mq-xl: '(min-width: $screen-xl)'
+    $mq-max: '(min-width: $content-max)'
     $mq-short: '(max-height: 599px)'
     $mq-tall: '(min-height: 600px)'
     $mq-high-res: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi)'
@@ -48,5 +49,5 @@ context:
     $font-stack-base: "Inter, X-LocaleSpecific, sans-serif"
     $font-stack-firefox: "Metropolis, Inter, X-LocaleSpecific, sans-serif"
     $font-stack-mono: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace"
-    $font-stack-mozilla-text: "'Mozilla Text', Inter, 'Helvetica Neue', Arial, X-LocaleSpecific, sans-serif"
-    $font-stack-mozilla-headline: "'Mozilla Headline', Inter, 'Helvetica Neue', Arial, X-LocaleSpecific, sans-serif"
+    $font-stack-mozilla-text: "'Mozilla Text', 'Helvetica Neue', Arial, X-LocaleSpecific, sans-serif"
+    $font-stack-mozilla-headline: "'Mozilla Headline', 'Helvetica Neue', Arial, X-LocaleSpecific, sans-serif"
