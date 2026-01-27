@@ -148,6 +148,11 @@ should also be updated so the documentation site matches the NPM package feature
 2. Make sure your local `main` branch is up to date.
 3. Push the `main` branch to the `prod` branch: `git push origin main:prod`.
 
+_(The same is triggered by submitting a new GitHub Release, so the steps above can be
+skipped if you plan to publish a GitHub Release for the version tag — which you should.
+In such case the site deployment will be taken care of by automation, publishing the
+reference the release tag actually points to.)_
+
 A notice will be posted in #www-notify on Slack when the push has completed.
 
 ### Pushing to demo
