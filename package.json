@@ -48,7 +48,7 @@
     "webpack-remove-empty-scripts": "^1.1.1"
   },
   "devDependencies": {
-    "eslint": "^9.30.0",
+    "eslint": "^9.39.2",
     "jasmine-browser-runner": "^3.0.0",
     "jasmine-core": "^5.8.0",
     "sinon": "^20.0.0",
