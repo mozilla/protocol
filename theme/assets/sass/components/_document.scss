@@ -1,9 +1,0 @@
-@use '/assets/sass/protocol/includes/lib' as *;
-
-/* stylelint-disable selector-class-pattern */
-
-.Document-title {
-    @include text-heading-lg;
-    font-family: var(--theme-heading-font-family);
-    color: var(--theme-heading-text-color);
-}

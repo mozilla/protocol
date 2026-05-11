@@ -14,7 +14,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "build-docs": "npm ci && npm run lint && webpack --config webpack.docs.static.config.js --mode production && webpack --config webpack.docs.build.config.js --mode production && fractal build",
+    "build-docs": "npm ci && npm run lint && webpack --config webpack.docs.static.config.js --mode production && webpack --config webpack.docs.build.config.js --mode production",
     "build-package": "npm ci && npm run lint && webpack --config webpack.package.static.config.js --mode production && webpack --config webpack.package.build.config.js --mode production",
     "lint": "npm run lint-js && npm run lint-css",
     "lint-css": "npx stylelint \"**/*.scss\"",
