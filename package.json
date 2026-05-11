@@ -29,9 +29,6 @@
   "dependencies": {
     "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
-    "@frctl/fractal": "^1.5.15",
-    "@frctl/mandelbrot": "^1.10.3",
-    "@frctl/nunjucks": "^2.0.15",
     "@mozilla-protocol/assets": "^7.0.2",
     "@mozilla-protocol/tokens": "^7.0.0",
     "babel-loader": "^10.0.0",
