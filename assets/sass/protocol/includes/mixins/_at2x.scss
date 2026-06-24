@@ -10,13 +10,16 @@
 //  example.png
 //  example-high-res.png
 // Usage:
-//  @include at2x('/media/img/foo.png', 100px, 100px);
+//  @include at2x('/media/img/example.png', 100px, 100px);
+//  @include at2x('/media/img/example.jpg', auto, 200px);
+//  @include at2x('/media/img/example.avif', 25%);
+//  @include at2x('/media/img/example.webp', contain);
 
 @mixin at2x($path, $w: auto, $h: auto) {
     $hr-suffix: '-high-res';
 
-    // Do not set height to auto if width is contain
-    @if $w == 'contain' {
+    // Do not set height if `contain` or `cover` is passed as the first param
+    @if $w == 'contain' or $w == 'cover' {
         $h: #{''};
     }
 
@@ -28,7 +31,7 @@
     // Loop through the image path and find the position of
     // the dot to determine the file extension.
     // Subtract from string length to make an end point that
-    // is always lower than the start point s the loop always
+    // is always lower than the start point so the loop always
     // increments (10 is an arbitrary number).
     @for $i from $length through $length - 10 {
         @if $position == -1 {
