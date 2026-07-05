@@ -1,8 +1,0 @@
-@use '/assets/sass/protocol/includes/lib' as *;
-
-/* stylelint-disable-next-line selector-class-pattern */
-.Search-input {
-    color: var(--fractal-color-header-content);
-    border: none;
-    background-color: var(--fractal-color-ui-active);
-}

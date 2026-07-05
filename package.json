@@ -14,13 +14,15 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "build-docs": "npm ci && npm run lint && webpack --config webpack.docs.static.config.js --mode production && webpack --config webpack.docs.build.config.js --mode production && fractal build",
+    "build-docs": "npm ci && npm run lint && webpack --config webpack.docs.static.config.js --mode production && webpack --config webpack.docs.build.config.js --mode production",
     "build-package": "npm ci && npm run lint && webpack --config webpack.package.static.config.js --mode production && webpack --config webpack.package.build.config.js --mode production",
     "lint": "npm run lint-js && npm run lint-css",
     "lint-css": "npx stylelint \"**/*.scss\"",
     "lint-js": "npx eslint .",
     "prepublishOnly": "npm run build-package",
-    "start": "ENV=development fractal start --sync",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "start": "npm run storybook",
     "pretest": "npm run lint && npm run test-build",
     "test-build": "webpack --config webpack.test.config.js --mode=development",
     "test": "npx jasmine-browser-runner runSpecs --config=tests/jasmine-browser.json && npx jasmine-browser-runner runSpecs --browser=chrome --config=tests/jasmine-browser.json",
@@ -29,9 +31,6 @@
   "dependencies": {
     "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
-    "@frctl/fractal": "^1.5.15",
-    "@frctl/mandelbrot": "^1.10.3",
-    "@frctl/nunjucks": "^2.0.15",
     "@mozilla-protocol/assets": "^7.0.2",
     "@mozilla-protocol/tokens": "^7.0.0",
     "babel-loader": "^10.0.0",
@@ -48,12 +47,15 @@
     "webpack-remove-empty-scripts": "^1.1.1"
   },
   "devDependencies": {
+    "@storybook/html-vite": "^10.3.6",
     "eslint": "^9.30.0",
     "jasmine-browser-runner": "^3.0.0",
     "jasmine-core": "^5.8.0",
     "sinon": "^20.0.0",
+    "storybook": "^10.3.6",
     "stylelint": "^16.21.0",
-    "stylelint-config-standard-scss": "^15.0.1"
+    "stylelint-config-standard-scss": "^15.0.1",
+    "vite": "^8.0.12"
   },
   "browserslist": [
     "defaults",
