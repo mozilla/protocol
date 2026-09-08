@@ -34,8 +34,8 @@
     }
 
     .mzp-c-choices.mzp-l-choices-inline & {
+        @include bidi(((padding-right, forms.$field-h-spacing, padding-left, 0),));
         display: inline-block;
-        padding-right: forms.$field-h-spacing;
         vertical-align: top;
     }
 }
