@@ -3,9 +3,9 @@
 # parameters:
 # class           - string
 # content_class   - string
-# title           - string
-# title_el        - HTML heading element (h1, h2, h3, h4, h5, h6)
-# title_class     - string
+# heading           - string
+# heading_el        - HTML heading element (h1, h2, h3, h4, h5, h6)
+# heading_class     - string
 # desc            - string
 # cta             - string
 # cta_link        - url
@@ -14,7 +14,7 @@
 <section class="mzp-c-callout{% if class %} {{ class }}{% endif %}">
   <div class="mzp-l-content{% if content_class %} {{ content_class }}{% endif %}">
     <div class="mzp-c-callout-content">
-      <{{ title_el | default('h2') }} class="mzp-c-callout-heading{% if title_class %} {{ title_class }}{% endif %}">{{ title }}</{{ title_el | default('h2') }}>
+      <{{ heading_el | default('h2') }} class="mzp-c-callout-heading{% if heading_class %} {{ heading_class }}{% endif %}">{{ heading }}</{{ heading_el | default('h2') }}>
     {%- if desc %}
       <div class="mzp-c-callout-desc">
         <p>{{ desc }}</p>

@@ -1,7 +1,7 @@
 preview: '@preview-unpadded'
 context:
-  title: A Headline With 30 Characters
-  title_el: h1
+  heading: A Headline With 30 Characters
+  heading_el: h1
   desc: A description of about 150 characters, give or take. Because this text is centered it works best with a tagline or brief intro, just a sentence or two.
   cta: False
   image: False

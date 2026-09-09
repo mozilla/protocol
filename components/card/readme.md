@@ -1,4 +1,4 @@
-A Card is a unit of content featuring an image along with a title and description,
+A Card is a unit of content featuring an image along with a heading and description,
 wrapped in a block-level link.
 
 Cards come in a variety of sizes, activated by adding a modifier class:
@@ -18,14 +18,14 @@ size depends on the card layout:
 - 3-column layout: `600px` wide (low-res), `1200px` wide (high-res)
 - 2-column layout: `930px` wide (low-res), `1860px` wide (high-res)
 
-In addition to the image, title, and description, cards may hold a few other
+In addition to the image, heading, and description, cards may hold a few other
 distinct pieces of content:
-- A tag, sometimes with an icon, above the title.
+- A tag, sometimes with an icon, above the heading.
 - A Call To Action
 - A small meta label
 
-A card must contain at minimum an image and either a title or a description (or
-both). All other content is optional. Try to keep card titles to one or two lines
+A card must contain at minimum an image and either a heading or a description (or
+both). All other content is optional. Try to keep card headings to one or two lines
 (about 50 characters max) and descriptions to two or three lines (about 150
 characters max). Tags should be short, just one or two words. Calls to Action and
 meta labels should fit on one line, about 30-40 characters max.
