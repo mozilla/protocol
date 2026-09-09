@@ -18,8 +18,8 @@ legend {
     padding: 0;
 }
 
-//  1. Correct the text wrapping in Edge and IE.
-//  2. Correct the color inheritance from `fieldset` elements in IE.
+//  1. Correct the text wrapping.
+//  2. Correct the color inheritance from `fieldset` elements.
 //  3. Remove the padding so developers are not caught out when they zero out
 //    `fieldset` elements in all browsers.
 legend {
@@ -60,7 +60,7 @@ button,
     appearance: auto;
 }
 
-// Remove the default vertical scrollbar in IE 10+.
+// Remove the default vertical scrollbar.
 textarea {
     overflow: auto;
     height: auto;
@@ -74,21 +74,19 @@ textarea {
 }
 
 // Remove the inner padding in Chrome and Safari on macOS.
-/* stylelint-disable-line value-no-vendor-prefix */
 [type='search']::-webkit-search-decoration {
-    -webkit-appearance: none;
+    appearance: none;
 }
 
 // 1. Correct the inability to style clickable types in iOS and Safari.
 // 2. Change font properties to `inherit` in Safari.
-/* stylelint-disable-next-line value-no-vendor-prefix */
 ::-webkit-file-upload-button {
-    -webkit-appearance: button; // 1
+    appearance: auto; // 1
     font: inherit; // 2
 }
 
-// 1. Add the correct box sizing in IE 10.
-// 2. Remove the padding in IE 10.
+// 1. Add the correct box sizing.
+// 2. Remove the padding.
 [type='checkbox'],
 [type='radio'] {
     box-sizing: border-box; // 1
@@ -323,10 +321,6 @@ select {
             background: var(--theme-background-color);
             padding: forms.$field-padding;
         }
-    }
-
-    &::-ms-expand {
-        display: none;
     }
 
     &:hover {
