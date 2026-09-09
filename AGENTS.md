@@ -23,7 +23,7 @@ A single component is spread across **three parallel trees**, by file type, that
 
 **Theming:** Two brands — **Mozilla** (default) and **Firefox**. Themes are CSS Custom Properties declared on `:root` in `includes/themes/` (`_mozilla.scss`, `_firefox.scss`). For any themeable property (foreground/background/link colors, heading & body font families) use `var(--...)` (e.g. `var(--background-color)`, `var(--theme-heading-text-color)`). **Exception: text sizing** — use the type-scale mixins (`@include text-heading-lg;`), never custom properties, because the mixins bake in responsive media queries.
 
-**JavaScript:** Plain ES (target IE10 via Babel in tests), `module.exports`, no framework. Each module is an object named `Mzp<Thing>` (e.g. `MzpDetails`, `MzpModal`) exposing `init()`/`destroy()` and exported as a **UMD global** named in `webpack.entrypoints.js`. Modules feature-detect via `MzpSupports` and lean on `MzpUtils` helpers.
+**JavaScript:** Plain ES (targets the `browserslist` matrix in `package.json` — Firefox ESR, Safari 15.6+, evergreen — via Babel), `module.exports`, no framework. Each module is an object named `Mzp<Thing>` (e.g. `MzpDetails`, `MzpModal`) exposing `init()`/`destroy()` and exported as a **UMD global** named in `webpack.entrypoints.js`. Modules feature-detect via `MzpSupports` and lean on `MzpUtils` helpers.
 
 ## Build, Test, and Development Commands
 

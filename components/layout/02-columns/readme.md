@@ -15,10 +15,7 @@ two columns in one-third/two-thirds proportions. If you need that kind of layout
 you’ll need to use an alternative method.
 
 This uses [CSS grid](https://developer.mozilla.org/docs/Web/CSS/CSS_Grid_Layout),
-which is [well supported in modern browsers](https://caniuse.com/css-grid) but
-not supported in any browsers release prior to 2018. Older browsers will ignore
-the column layout and content will be linearized by default. If you need a
-multi-column layout in older browsers you’ll need to use an alternative method.
+which is well supported across Protocol's supported browsers.
 
 The contents of each column should be in its own container element that must be
 a _direct child_ of the multi-column container, as shown in the examples. The
