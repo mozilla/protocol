@@ -32,14 +32,7 @@ const protocolJSConfig = {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            [
-                                '@babel/preset-env',
-                                {
-                                    targets: {
-                                        ie: '10'
-                                    }
-                                }
-                            ]
+                            '@babel/preset-env'
                         ]
                     }
                 }
@@ -168,14 +161,7 @@ const fractalJSConfig = {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            [
-                                '@babel/preset-env',
-                                {
-                                    targets: {
-                                        ie: '10'
-                                    }
-                                }
-                            ]
+                            '@babel/preset-env'
                         ]
                     }
                 }

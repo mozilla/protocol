@@ -56,7 +56,14 @@
     "stylelint-config-standard-scss": "^15.0.1"
   },
   "browserslist": [
-    "defaults",
-    "IE 8"
+    "last 2 chrome versions",
+    "last 2 edge versions",
+    "last 2 firefox versions",
+    "last 2 opera versions",
+    "last 2 samsung versions",
+    "Firefox ESR",
+    "Safari >= 15.6",
+    "iOS >= 15.6",
+    "not dead"
   ]
 }
