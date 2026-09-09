@@ -46,6 +46,20 @@ Find:    mzp-u-title-(2xs|3xs|xs|sm|md|lg|xl|2xl)
 Replace: mzp-u-heading-$1
 ```
 
+### Component Class Renames (HTML/template and SCSS files)
+
+Rename the remaining `-title`/`-subtitle` component classes to `-heading`/`-subheading`. Affects Article, Billboard, Callout, Card, Form, Menu, Menu Item, Menu List, Newsletter, Sidebar Menu, and Sticky Promo.
+
+```text
+Find:    mzp-c-form-subtitle
+Replace: mzp-c-form-subheading
+```
+
+```text
+Find:    mzp-c-(menu|menu-item|menu-list|card|callout|sticky-promo|newsletter|sidemenu|billboard|article|form)-title
+Replace: mzp-c-$1-heading
+```
+
 ### CSS Variable Renames (SCSS files)
 
 Font family and line-height variables:
@@ -232,6 +246,20 @@ find . -name "*.html" -exec sed -i '' 's/mzp-u-title-/mzp-u-heading-/g' {} +
 
 # Also check Nunjucks templates
 find . -name "*.njk" -exec sed -i '' 's/mzp-u-title-/mzp-u-heading-/g' {} +
+```
+
+### Component Class Renames
+
+```bash
+# Rename mzp-c-form-subtitle to mzp-c-form-subheading first (do this before the -title rename below)
+find . -name "*.html" -exec sed -i '' 's/mzp-c-form-subtitle/mzp-c-form-subheading/g' {} +
+find . -name "*.njk" -exec sed -i '' 's/mzp-c-form-subtitle/mzp-c-form-subheading/g' {} +
+find . -name "*.scss" -exec sed -i '' 's/mzp-c-form-subtitle/mzp-c-form-subheading/g' {} +
+
+# Rename the remaining -title component classes to -heading
+find . -name "*.html" -exec sed -i '' -E 's/mzp-c-(menu|menu-item|menu-list|card|callout|sticky-promo|newsletter|sidemenu|billboard|article|form)-title/mzp-c-\1-heading/g' {} +
+find . -name "*.njk" -exec sed -i '' -E 's/mzp-c-(menu|menu-item|menu-list|card|callout|sticky-promo|newsletter|sidemenu|billboard|article|form)-title/mzp-c-\1-heading/g' {} +
+find . -name "*.scss" -exec sed -i '' -E 's/mzp-c-(menu|menu-item|menu-list|card|callout|sticky-promo|newsletter|sidemenu|billboard|article|form)-title/mzp-c-\1-heading/g' {} +
 ```
 
 ### CSS Variable Renames

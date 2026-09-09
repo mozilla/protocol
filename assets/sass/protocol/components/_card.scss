@@ -71,12 +71,12 @@
         background-image: url('#{$image-path}/icons/audio-card.svg');
     }
 
-    .mzp-c-card-title {
+    .mzp-c-card-heading {
         @include text-heading-xs;
         display: inline;
     }
 
-    .mzp-c-card-title,
+    .mzp-c-card-heading,
     .mzp-c-card-cta-text {
         border-bottom: 2px solid transparent;
     }
@@ -106,7 +106,7 @@
             transition: box-shadow 0.1s ease-in-out;
             box-shadow: 0 0 0 4px $color-marketing-gray-20;
 
-            .mzp-c-card-title,
+            .mzp-c-card-heading,
             .mzp-c-card-cta-text {
                 transition: border-bottom-color 100ms ease-in-out;
                 border-bottom: 2px solid;
@@ -157,7 +157,7 @@
 // Card with larger title
 
 .mzp-c-card.mzp-c-card-large {
-    .mzp-c-card-title {
+    .mzp-c-card-heading {
         @include text-heading-md;
     }
 
@@ -175,7 +175,7 @@
         @include text-body-xs;
     }
 
-    .mzp-c-card-title {
+    .mzp-c-card-heading {
         @include text-heading-2xs;
     }
 
