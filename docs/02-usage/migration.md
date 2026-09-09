@@ -60,6 +60,13 @@ Find:    mzp-c-(menu|menu-item|menu-list|card|callout|sticky-promo|newsletter|si
 Replace: mzp-c-$1-heading
 ```
 
+Rename the remaining `-desc` component classes to `-body`. Affects Billboard, Callout, Card, and Menu Item.
+
+```text
+Find:    mzp-c-(callout|card|menu-item|billboard)-desc
+Replace: mzp-c-$1-body
+```
+
 ### CSS Variable Renames (SCSS files)
 
 Font family and line-height variables:
@@ -260,6 +267,11 @@ find . -name "*.scss" -exec sed -i '' 's/mzp-c-form-subtitle/mzp-c-form-subheadi
 find . -name "*.html" -exec sed -i '' -E 's/mzp-c-(menu|menu-item|menu-list|card|callout|sticky-promo|newsletter|sidemenu|billboard|article|form)-title/mzp-c-\1-heading/g' {} +
 find . -name "*.njk" -exec sed -i '' -E 's/mzp-c-(menu|menu-item|menu-list|card|callout|sticky-promo|newsletter|sidemenu|billboard|article|form)-title/mzp-c-\1-heading/g' {} +
 find . -name "*.scss" -exec sed -i '' -E 's/mzp-c-(menu|menu-item|menu-list|card|callout|sticky-promo|newsletter|sidemenu|billboard|article|form)-title/mzp-c-\1-heading/g' {} +
+
+# Rename the remaining -desc component classes to -body
+find . -name "*.html" -exec sed -i '' -E 's/mzp-c-(callout|card|menu-item|billboard)-desc/mzp-c-\1-body/g' {} +
+find . -name "*.njk" -exec sed -i '' -E 's/mzp-c-(callout|card|menu-item|billboard)-desc/mzp-c-\1-body/g' {} +
+find . -name "*.scss" -exec sed -i '' -E 's/mzp-c-(callout|card|menu-item|billboard)-desc/mzp-c-\1-body/g' {} +
 ```
 
 ### CSS Variable Renames

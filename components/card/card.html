@@ -7,7 +7,7 @@
 # tag           - string
 # heading         - string
 # heading_el      - HTML heading element (h1, h2, h3, h4, h5, h6)
-# desc          - string
+# body          - string
 # cta           - string
 # meta          - string
 #}
@@ -19,7 +19,7 @@
     <div class="mzp-c-card-content">
       {% if tag %}<div class="mzp-c-card-tag">{{ tag }}</div>{% endif %}
       {% if heading %}<{{ heading_el | default('h2') }} class="mzp-c-card-heading">{{ heading }}</{{ heading_el | default('h2') }}>{% endif %}
-      {% if desc %}<p class="mzp-c-card-desc">{{ desc }}</p>{% endif %}
+      {% if body %}<p class="mzp-c-card-body">{{ body }}</p>{% endif %}
       {% if cta %}<p class="mzp-c-card-cta"><span class="mzp-c-card-cta-text">{{ cta }}</span></p>{% endif %}
       {% if meta %}<p class="mzp-c-card-meta">{{ meta }}</p>{% endif %}
     </div>

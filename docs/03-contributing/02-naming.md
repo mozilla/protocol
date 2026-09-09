@@ -46,7 +46,7 @@ Example:
   <img class="mzp-c-card-image" src="/static/img/card-image.jpg" alt="">
   <h3 class="mzp-c-card-heading">Card Heading</h3>
 
-  <div class="mzp-c-card-desc">
+  <div class="mzp-c-card-body">
     <p>Lorem ipsum dolor sit amet, pri illum munere mollis at, amet senserit te vix, sint porro mei eu.</p>
   </div>
 
