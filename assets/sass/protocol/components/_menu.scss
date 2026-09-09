@@ -45,7 +45,7 @@
 }
 
 .mzp-c-menu-category {
-    .mzp-c-menu-title {
+    .mzp-c-menu-heading {
         border-bottom: 1px solid $color-marketing-gray-30;
         color: var(--theme-body-text-color);
         display: block;
@@ -70,7 +70,7 @@
         }
     }
 
-    &.mzp-has-drop-down .mzp-c-menu-title {
+    &.mzp-has-drop-down .mzp-c-menu-heading {
         text-decoration: none;
 
         &::before {
@@ -88,7 +88,7 @@
     }
 
     @supports (display: flex) {
-        .mzp-c-menu-title {
+        .mzp-c-menu-heading {
             align-items: center;
             display: flex;
         }
@@ -98,7 +98,7 @@
         @include bidi(((float, left, right),));
         display: inline-block;
 
-        .mzp-c-menu-title {
+        .mzp-c-menu-heading {
             border-bottom: none;
             padding: 0 $spacing-sm $spacing-lg;
 
@@ -107,19 +107,19 @@
             }
         }
 
-        &.mzp-has-drop-down .mzp-c-menu-title::before {
+        &.mzp-has-drop-down .mzp-c-menu-heading::before {
             display: none;
         }
     }
 
     @media #{$mq-lg} {
-        .mzp-c-menu-title {
+        .mzp-c-menu-heading {
             padding: 0 $spacing-md $spacing-lg;
         }
     }
 
     @media #{$mq-xl} {
-        .mzp-c-menu-title {
+        .mzp-c-menu-heading {
             padding: 0 $spacing-lg $spacing-lg;
         }
     }
@@ -127,18 +127,18 @@
 
 // Basic hover interactions with JavaScript disabled or not supported..
 .mzp-c-menu.mzp-is-basic .mzp-c-menu-category {
-    .mzp-c-menu-title::before {
+    .mzp-c-menu-heading::before {
         display: none;
     }
 
     @media #{$mq-md} {
-        .mzp-c-menu-title::before {
+        .mzp-c-menu-heading::before {
             display: none;
         }
 
         &.mzp-has-drop-down:hover,
         &.mzp-has-drop-down:focus {
-            .mzp-c-menu-title {
+            .mzp-c-menu-heading {
                 @include highlighted;
                 z-index: 1001;
             }
@@ -150,7 +150,7 @@
         }
 
         &.mzp-has-drop-down:focus-within {
-            .mzp-c-menu-title {
+            .mzp-c-menu-heading {
                 @include highlighted;
                 z-index: 1001;
             }
@@ -166,7 +166,7 @@
 // Enhanced hover interactions with JavaScript enabled.
 .mzp-c-menu.mzp-is-enhanced .mzp-c-menu-category {
     &.mzp-is-selected {
-        .mzp-c-menu-title::before {
+        .mzp-c-menu-heading::before {
             transform: rotate(45deg);
         }
 
@@ -179,13 +179,13 @@
     @media #{$mq-md} {
         &.mzp-is-animated {
             .mzp-c-menu-panel,
-            .mzp-c-menu-title::after {
+            .mzp-c-menu-heading::after {
                 animation: mzp-a-fade-in 80ms ease-in 0ms 1 normal both; /* stylelint-disable-line no-unknown-animations */
             }
         }
 
         &.mzp-is-selected {
-            .mzp-c-menu-title {
+            .mzp-c-menu-heading {
                 @include highlighted;
                 z-index: 101;
             }

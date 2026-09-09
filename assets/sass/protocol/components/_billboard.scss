@@ -28,7 +28,7 @@ $billboard-content-width-lg: 374px + $spacing-md; // content width + spacing med
         width: 100%;
     }
 
-    .mzp-c-billboard-title {
+    .mzp-c-billboard-heading {
         @include text-heading-md;
     }
 
