@@ -13,6 +13,11 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 * (breaking) Remove support for vendor prefixing (#957)
 * (breaking) Replace deprecated CSS properties with their standard equivalents: `clip` → `clip-path` in the `visually-hidden` mixin, `word-wrap` → `overflow-wrap` in Menu Item. Drops functional support in legacy IE.
 
+### Sass
+
+* Fixed the remaining `mixed-decls` warnings raised by newer Sass versions (Fix #998)
+* Un-pinned the `sass` dependency (was pinned to `1.91.0`, now `^1.91.0`)
+
 ### Typography
 
 * Modernization:
