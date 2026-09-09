@@ -9,7 +9,7 @@ const MzpSupports = {};
 * @return {Boolean} boolean value for if the browser supports matchMedia
 */
 MzpSupports.matchMedia = (function() {
-    return typeof window.matchMedia !== 'undefined' && window.matchMedia('all').addListener;
+    return typeof window.matchMedia !== 'undefined';
 }());
 
 /**
