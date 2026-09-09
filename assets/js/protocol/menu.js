@@ -29,7 +29,7 @@ MzpMenu.open = (el, animate) => {
 
     _menuOpen = true; // For checking menu state on keyup.
 
-    el.querySelector('.mzp-c-menu-title').setAttribute('aria-expanded', true);
+    el.querySelector('.mzp-c-menu-heading').setAttribute('aria-expanded', true);
 
     if (typeof _options.onMenuOpen === 'function') {
         _options.onMenuOpen(el);
@@ -50,7 +50,7 @@ MzpMenu.close = () => {
         current[i].classList.remove('mzp-is-selected');
         current[i].classList.remove('mzp-is-animated');
 
-        current[i].querySelector('.mzp-c-menu-title').setAttribute('aria-expanded', false);
+        current[i].querySelector('.mzp-c-menu-heading').setAttribute('aria-expanded', false);
     }
 
     _menuOpen = false; // For checking menu state on keyup.
@@ -97,7 +97,7 @@ MzpMenu.toggle = (el) => {
         // https://github.com/mozilla/bedrock/issues/6221 :/
         el.classList.remove('mzp-is-selected');
         el.classList.remove('mzp-is-animated');
-        el.querySelector('.mzp-c-menu-title').setAttribute('aria-expanded', false);
+        el.querySelector('.mzp-c-menu-heading').setAttribute('aria-expanded', false);
 
         if (typeof _options.onMenuClose === 'function') {
             _options.onMenuClose();
@@ -230,7 +230,7 @@ MzpMenu.bindEventsWide = () => {
         items[i].addEventListener('mouseenter', MzpMenu.onMouseEnter, false);
         items[i].addEventListener('mouseleave', MzpMenu.onMouseLeave, false);
         items[i].addEventListener('focusout', MzpMenu.onFocusOut, false);
-        link = items[i].querySelector('.mzp-c-menu-title');
+        link = items[i].querySelector('.mzp-c-menu-heading');
         link.addEventListener('click', MzpMenu.onClickWide, false);
 
         close = items[i].querySelector('.mzp-c-menu-button-close');
@@ -254,7 +254,7 @@ MzpMenu.unbindEventsWide = () => {
         items[i].removeEventListener('mouseleave', MzpMenu.onMouseLeave, false);
         items[i].removeEventListener('focusout', MzpMenu.onFocusOut, false);
 
-        link = items[i].querySelector('.mzp-c-menu-title');
+        link = items[i].querySelector('.mzp-c-menu-heading');
         link.removeEventListener('click', MzpMenu.onClickWide, false);
 
         close = items[i].querySelector('.mzp-c-menu-button-close');
@@ -268,7 +268,7 @@ MzpMenu.unbindEventsWide = () => {
  * Bind events for small viewports.
  */
 MzpMenu.bindEventsSmall = () => {
-    const items = document.querySelectorAll('.mzp-c-menu-category.mzp-js-expandable .mzp-c-menu-title');
+    const items = document.querySelectorAll('.mzp-c-menu-category.mzp-js-expandable .mzp-c-menu-heading');
 
     for (let i = 0; i < items.length; i++) {
         items[i].addEventListener('click', MzpMenu.onClickSmall, false);
@@ -279,7 +279,7 @@ MzpMenu.bindEventsSmall = () => {
  * Unbind events for small viewports.
  */
 MzpMenu.unbindEventsSmall = () => {
-    const items = document.querySelectorAll('.mzp-c-menu-category.mzp-js-expandable .mzp-c-menu-title');
+    const items = document.querySelectorAll('.mzp-c-menu-category.mzp-js-expandable .mzp-c-menu-heading');
 
     for (let i = 0; i < items.length; i++) {
         items[i].removeEventListener('click', MzpMenu.onClickSmall, false);
@@ -290,7 +290,7 @@ MzpMenu.unbindEventsSmall = () => {
  * Set initial ARIA menu panel states.
  */
 MzpMenu.setAria = () => {
-    const items = document.querySelectorAll('.mzp-c-menu-category.mzp-js-expandable .mzp-c-menu-title');
+    const items = document.querySelectorAll('.mzp-c-menu-category.mzp-js-expandable .mzp-c-menu-heading');
 
     for (let i = 0; i < items.length; i++) {
         items[i].setAttribute('aria-expanded', false);

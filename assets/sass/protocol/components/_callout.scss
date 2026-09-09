@@ -31,7 +31,7 @@
 .mzp-c-callout.mzp-l-compact {
     text-align: start;
 
-    .mzp-c-callout-title {
+    .mzp-c-callout-heading {
         @include text-heading-sm;
     }
 
@@ -64,12 +64,12 @@
             width: auto;
         }
 
-        .mzp-c-callout-title,
+        .mzp-c-callout-heading,
         .mzp-c-callout-desc {
             margin-bottom: 0;
         }
 
-        .mzp-c-callout-title + .mzp-c-callout-desc {
+        .mzp-c-callout-heading + .mzp-c-callout-desc {
             margin-top: $spacing-sm;
         }
     }
