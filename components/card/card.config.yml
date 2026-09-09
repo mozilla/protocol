@@ -6,7 +6,7 @@ context:
   image: '/img/image-3-2.jpg'
   tag: Card tag
   heading: Card heading with about 30-40 characters
-  desc: A description of about 150 characters, give or take. That means we usually only have room for one or two sentences. Here is what that looks like.
+  body: A description of about 150 characters, give or take. That means we usually only have room for one or two sentences. Here is what that looks like.
   cta: Call to action
   meta: Card meta info
 variants:
@@ -17,7 +17,7 @@ variants:
       image: '/img/image-1-1.jpg'
       tag: Audio
       heading: Card heading with about 30-40 characters
-      desc: A description of about 150 characters, give or take. That means we usually only have room for one or two sentences. Here is what that looks like.
+      body: A description of about 150 characters, give or take. That means we usually only have room for one or two sentences. Here is what that looks like.
       cta: This call to action is 37 characters
       meta: false
     notes: |
