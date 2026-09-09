@@ -1,5 +1,5 @@
 context:
-  title_el: h1
+  heading_el: h1
   zap_number: 1
-  title: A headline with an <strong>example</strong> zap.
+  heading: A headline with an <strong>example</strong> zap.
 
