@@ -73,7 +73,7 @@ $icon-size: 24px;
 
         li {
             margin-bottom: $spacing-md;
-            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         a {

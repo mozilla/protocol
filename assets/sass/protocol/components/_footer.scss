@@ -156,7 +156,7 @@
         @include text-body-md;
         @include font-mozilla-text;
 
-        /* stylelint-disable-next-line no-duplicate-selectors */
+        /* stylelint-disable-next-line no-duplicate-selectors, block-no-redundant-nested-style-rules */
         & {
             // needs to come after @include footer-line to over-ride value
             border: 0;

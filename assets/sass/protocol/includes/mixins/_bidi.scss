@@ -42,19 +42,17 @@
 //     }
 
 @mixin bidi($list) {
-    & {
-        @each $property, $ltr-value, $inverse-val-or-prop, $inverse-value in $list {
-            @if meta.type-of($ltr-value) == 'null' or meta.type-of($inverse-val-or-prop) == 'null' {
-                @warn $list; // I don't know why this won't output as part of the error
-                @error 'Error processing @mixin bidi(), see previous warning for stack trace';
+    @each $property, $ltr-value, $inverse-val-or-prop, $inverse-value in $list {
+        @if meta.type-of($ltr-value) == 'null' or meta.type-of($inverse-val-or-prop) == 'null' {
+            @warn $list; // I don't know why this won't output as part of the error
+            @error 'Error processing @mixin bidi(), see previous warning for stack trace';
 
-                // Trouble shooting:
-                // - Check that you have the right number of nested (((parentheses)))
-                // - Check that there is a trailing comma:
-                //   @include bidi(((float, left, right),));
-            }
-            #{$property}: $ltr-value;
+            // Trouble shooting:
+            // - Check that you have the right number of nested (((parentheses)))
+            // - Check that there is a trailing comma:
+            //   @include bidi(((float, left, right),));
         }
+        #{$property}: $ltr-value;
     }
 
     [dir='rtl'] & {

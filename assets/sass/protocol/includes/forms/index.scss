@@ -91,7 +91,7 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
     @include text-body-md;
     @include font-base;
 
-    /* stylelint-disable-next-line no-duplicate-selectors */
+    /* stylelint-disable-next-line no-duplicate-selectors, block-no-redundant-nested-style-rules */
     & { // needs to come after @include text-body-md to over-ride value
         line-height: var(--theme-button-line-height);
     }

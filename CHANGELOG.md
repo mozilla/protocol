@@ -11,6 +11,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 ### Browser Support
 
 * (breaking) Remove support for vendor prefixing (#957)
+* (breaking) Replace deprecated CSS properties with their standard equivalents: `clip` → `clip-path` in the `visually-hidden` mixin, `word-wrap` → `overflow-wrap` in Menu Item. Drops functional support in legacy IE.
 
 ### Typography
 
