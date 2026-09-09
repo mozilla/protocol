@@ -1,12 +1,12 @@
 <div class="mzp-l-content">
   <form class="mzp-c-form">
     <div class="mzp-c-form-header">
-      <h2 class="mzp-c-form-title">Speaker request form</h2>
+      <h2 class="mzp-c-form-heading">Speaker request form</h2>
       <p>Please complete and submit the form below to request a speaker from Mozilla for your upcoming event.</p>
     </div>
 
     <fieldset class="mzp-c-field-set">
-      <legend class="mzp-c-form-subtitle">Event Information</legend>
+      <legend class="mzp-c-form-subheading">Event Information</legend>
       {% render '@input-field', { type: 'text', id: 'event_name', name: 'event_name', required: true, note: 'Required', note: 'Required', label: 'Event Name' } %}
       {% render '@input-field', { type: 'url', id: 'event_url', name: 'event_url', required: true, note: 'Required', label: 'Event URL', placeholder: 'https://' } %}
       {% render '@input-field', { type: 'date', id: 'event_date', name: 'event_date', required: true, note: 'Required', label: 'Event Date', info: 'If the event is sooner than 20 business days we are unlikely to be able to provide a speaker' } %}
@@ -14,7 +14,7 @@
     </fieldset>
 
     <fieldset class="mzp-c-field-set">
-      <legend class="mzp-c-form-subtitle">Your Contact Information</legend>
+      <legend class="mzp-c-form-subheading">Your Contact Information</legend>
       {% render '@input-field', { type: 'text', id: 'contact_company', name: 'contact_company', required: true, note: 'Required', label: 'Company' } %}
       {% render '@input-field', { type: 'text', id: 'contact_name', name: 'contact_name', required: true, note: 'Required', label: 'Name' } %}
       {% render '@input-field', { type: 'email', id: 'contact_email', name: 'contact_email', required: true, note: 'Required', label: 'E-mail' } %}
@@ -22,12 +22,12 @@
     </fieldset>
 
     <fieldset class="mzp-c-field-set">
-      <legend class="mzp-c-form-subtitle">Event Details</legend>
+      <legend class="mzp-c-form-subheading">Event Details</legend>
       {% render '@textarea-field', { id: 'event_details', name: 'event_details', rows: 5, cols: 60,  note: 'Theme, venue, audience demographics, confirmed speakers…', label: 'Tell us about your event' } %}
     </fieldset>
 
     <fieldset class="mzp-c-field-set">
-      <legend class="mzp-c-form-subtitle">Speaker Request</legend>
+      <legend class="mzp-c-form-subheading">Speaker Request</legend>
       {% render '@input-field', { type: 'text', id: 'guest_1', name: 'guest_1', label: 'Guest Speaker Choice #1' } %}
       {% render '@input-field', { type: 'text', id: 'guest_2', name: 'guest_2', label: 'Guest Speaker Choice #2' } %}
       {% render '@input-field', { type: 'text', id: 'guest_topic', name: 'guest_topic', label: 'Topic of Presentation' } %}

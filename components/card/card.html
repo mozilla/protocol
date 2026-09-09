@@ -18,7 +18,7 @@
     </div>
     <div class="mzp-c-card-content">
       {% if tag %}<div class="mzp-c-card-tag">{{ tag }}</div>{% endif %}
-      {% if title %}<{{ title_el | default('h2') }} class="mzp-c-card-title">{{ title }}</{{ title_el | default('h2') }}>{% endif %}
+      {% if title %}<{{ title_el | default('h2') }} class="mzp-c-card-heading">{{ title }}</{{ title_el | default('h2') }}>{% endif %}
       {% if desc %}<p class="mzp-c-card-desc">{{ desc }}</p>{% endif %}
       {% if cta %}<p class="mzp-c-card-cta"><span class="mzp-c-card-cta-text">{{ cta }}</span></p>{% endif %}
       {% if meta %}<p class="mzp-c-card-meta">{{ meta }}</p>{% endif %}

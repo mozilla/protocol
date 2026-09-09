@@ -14,7 +14,7 @@ $logos: (
 );
 
 @each $name, $value in $logos {
-    .mzp-c-sticky-promo-title {
+    .mzp-c-sticky-promo-heading {
         .mzp-t-dark.mzp-t-product-#{$name} & {
             background-image: url('#{$value}-white.svg');
             background-size: auto, 40px;
@@ -76,7 +76,7 @@ $logos: (
     &.mzp-t-product-beta,
     &.mzp-t-product-developer,
     &.mzp-t-product-nightly {
-        .mzp-c-sticky-promo-title {
+        .mzp-c-sticky-promo-heading {
             @include bidi(((background-position, top left, top right),));
             background-size: auto 40px;
             background-position: top left;
@@ -86,7 +86,7 @@ $logos: (
     }
 }
 
-.mzp-c-sticky-promo-title {
+.mzp-c-sticky-promo-heading {
     @include text-heading-xs;
     margin-bottom: $spacing-xl;
 }

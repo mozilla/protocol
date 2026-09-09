@@ -18,14 +18,14 @@ $icon-size: 24px;
         &:hover,
         &:active,
         &:focus {
-            .mzp-c-menu-item-title {
+            .mzp-c-menu-item-heading {
                 transition: border-bottom-color 100ms ease-in-out;
                 border-bottom: 2px solid var(--theme-body-text-color);
                 color: var(--theme-body-text-color);
             }
         }
 
-        .mzp-c-menu-item-title {
+        .mzp-c-menu-item-heading {
             border-bottom: 2px solid transparent;
         }
     }
@@ -33,7 +33,7 @@ $icon-size: 24px;
     .mzp-c-menu-item-head {
         display: block;
 
-        .mzp-c-menu-item-title {
+        .mzp-c-menu-item-heading {
             border-bottom: 2px solid transparent;
         }
     }
@@ -55,7 +55,7 @@ $icon-size: 24px;
         }
     }
 
-    .mzp-c-menu-item-title {
+    .mzp-c-menu-item-heading {
         @include text-heading-2xs;
         display: inline;
     }
