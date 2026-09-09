@@ -5,8 +5,6 @@
         "declaration-no-important": true,
         "color-function-notation": "legacy",
         "alpha-value-notation": "number",
-        "property-no-vendor-prefix": null,
-        "value-no-vendor-prefix": null,
         "at-rule-empty-line-before": null,
         "no-descending-specificity": null,
         "value-keyword-case": [
