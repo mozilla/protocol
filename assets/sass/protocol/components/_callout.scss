@@ -10,7 +10,7 @@
 .mzp-c-callout {
     text-align: center;
 
-    .mzp-c-callout-desc {
+    .mzp-c-callout-body {
         margin-bottom: $spacing-lg;
         @include text-body-lg;
     }
@@ -35,7 +35,7 @@
         @include text-heading-sm;
     }
 
-    .mzp-c-callout-desc {
+    .mzp-c-callout-body {
         @include text-body-md;
     }
 
@@ -65,11 +65,11 @@
         }
 
         .mzp-c-callout-heading,
-        .mzp-c-callout-desc {
+        .mzp-c-callout-body {
             margin-bottom: 0;
         }
 
-        .mzp-c-callout-heading + .mzp-c-callout-desc {
+        .mzp-c-callout-heading + .mzp-c-callout-body {
             margin-top: $spacing-sm;
         }
     }

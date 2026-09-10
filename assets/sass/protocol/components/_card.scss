@@ -81,7 +81,7 @@
         border-bottom: 2px solid transparent;
     }
 
-    .mzp-c-card-desc {
+    .mzp-c-card-body {
         margin: $spacing-xs 0 0;
     }
 
@@ -161,7 +161,7 @@
         @include text-heading-md;
     }
 
-    .mzp-c-card-desc {
+    .mzp-c-card-body {
         @include text-body-lg;
     }
 }
@@ -179,7 +179,7 @@
         @include text-heading-2xs;
     }
 
-    .mzp-c-card-desc {
+    .mzp-c-card-body {
         @include text-body-sm;
     }
 
