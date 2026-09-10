@@ -64,16 +64,13 @@
         @include image-replaced;
         background: url('#{$image-path}/icons/close.svg') center center/18px 18px no-repeat;
         border: 0;
-        float: inline-end;
         height: 20px;
+        inset-inline-end: 0;
         margin: $spacing-sm;
         padding: 0;
         position: absolute;
         top: 0;
         width: 20px;
-        @include bidi((
-            (left, auto, 0),
-        ));
 
         &:hover {
             cursor: pointer;
@@ -89,7 +86,6 @@
             margin: 0;
             height: 100%;
             width: 40px;
-            float: inline-end;
             @include bidi((
                 (border-radius, 0 $border-radius-sm $border-radius-sm 0, $border-radius-sm 0 0 $border-radius-sm),
             ));
