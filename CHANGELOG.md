@@ -16,6 +16,8 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 * Removed dead CSS for browsers outside the new matrix: unwrapped the two remaining `@supports` feature-query blocks (`position: sticky` in Navigation, `display: flex` in Menu), removed the `&::-ms-expand` selector in form Select styles, and removed the HTML5-elements-to-`display: block` reset in `_reset.scss` (every element it covered has had correct default display in every supported browser for years)
 * Replaced `-webkit-appearance` with the standard unprefixed `appearance` property in two form resets, and re-enabled the `property-no-vendor-prefix`/`value-no-vendor-prefix` stylelint rules
 * Removed stale "in IE"/"in Edge and IE" references from comments in `_forms.scss` (the resets they document are left in place)
+* Removed the IE8 `Element.matches()` polyfill from `utils.js`, and the `addListener`-else-`addEventListener` `MediaQueryList` fallbacks in `navigation.js`, `menu.js`, and `footer.js`
+* Fixed a bug in `MzpSupports.matchMedia`: it required `window.matchMedia('all').addListener`, the deprecated legacy `MediaQueryList` API, so it would incorrectly report `matchMedia` as unsupported (silently disabling sticky navigation and other features gated on it) in any browser that removes the deprecated method while keeping standard `matchMedia`
 
 ### Typography
 
