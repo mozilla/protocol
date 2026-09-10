@@ -84,11 +84,11 @@ a {
     }
 
     &-icon-start {
-        @include bidi(((margin-right, 0.5ch, 0), (margin-left, 0, 0.5ch),));
+        margin-inline: 0 0.5ch;
     }
 
     &-icon-end {
-        @include bidi(((margin-left, 0.5ch, 0), (margin-right, 0, 0.5ch),));
+        margin-inline: 0.5ch 0;
     }
 
 }

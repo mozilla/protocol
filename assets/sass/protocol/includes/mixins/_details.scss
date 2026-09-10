@@ -3,7 +3,6 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 @use '../tokens';
-@use 'bidi';
 @use 'images';
 
 @mixin details {
@@ -28,12 +27,13 @@
 }
 
 @mixin summary {
+    padding-inline-end: tokens.$layout-md;
     position: relative;
-    @include bidi.bidi(((padding-right, tokens.$layout-md, padding-left, 0),));
 
     &::before {
         background: images.$url-image-expand-black top left no-repeat;
         background-size: 20px, 20px;
+        inset-inline-end: 8px;
         transition: transform 100ms ease-in-out;
         content: '';
         height: 20px;
@@ -41,7 +41,6 @@
         position: absolute;
         top: 50%;
         width: 20px;
-        @include bidi.bidi(((right, 8px, left, auto),));
     }
 }
 

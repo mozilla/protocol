@@ -49,6 +49,11 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
   * Added status color variables (`--theme-color-success-*`, `--theme-color-error-*`, `--theme-color-warning-*`, `--theme-color-info-*`)
 * Removed Sass color variables from `_themes-sass.scss` (use CSS variables instead)
 
+### CSS Logical Properties
+
+* Started migrating physical directional properties (`margin-left`, `padding-right`, `text-align: left`, etc.) to their logical equivalents (`margin-inline-start`, `padding-inline-end`, `text-align: start`, etc.), which adapt to RTL languages automatically instead of needing a `[dir='rtl']` override or the internal `bidi()` Sass mixin. First pass covers `includes/mixins/_utils.scss`, `includes/mixins/_details.scss`, `includes/forms/index.scss`, and `base/elements/_forms.scss`, `_lists.scss`, `_links.scss`, `_tables.scss`, `_quotes.scss`, `_details.scss`, and `base/utilities/_rich-text.scss`. Components follow in subsequent PRs, ending with the removal of `bidi()` itself.
+* Where a property has no logical equivalent that's safe across the supported browser matrix (e.g. `background-position` for a decorative icon), kept the physical value with an explicit `[dir='rtl']` override rather than forcing an incomplete conversion.
+
 ## Component changes
 
 ### Feature Card
