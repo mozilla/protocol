@@ -49,6 +49,9 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
   * Added status color variables (`--theme-color-success-*`, `--theme-color-error-*`, `--theme-color-warning-*`, `--theme-color-info-*`)
 * Removed Sass color variables from `_themes-sass.scss` (use CSS variables instead)
 
+### Accessibility
+
+* (breaking) Standardized interactive component states on `:focus-visible` instead of `:focus`, so the focus ring only shows for keyboard/assistive-tech focus rather than every mouse click. Affects Breadcrumb, Button, Card, Footer, Menu, Menu Item, Menu List, Modal, Navigation, Notification Bar, Sidebar Menu, and Sticky Promo. Text inputs keep `:focus` -- see the next entry.
 ## Component changes
 
 ### Feature Card

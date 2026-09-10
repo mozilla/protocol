@@ -17,7 +17,7 @@ $icon-size: 24px;
 
         &:hover,
         &:active,
-        &:focus {
+        &:focus-visible {
             .mzp-c-menu-item-title {
                 transition: border-bottom-color 100ms ease-in-out;
                 border-bottom: 2px solid var(--theme-body-text-color);
@@ -82,7 +82,7 @@ $icon-size: 24px;
 
             &:hover,
             &:active,
-            &:focus {
+            &:focus-visible {
                 color: var(--theme-body-text-color);
                 text-decoration: underline;
             }
