@@ -43,7 +43,7 @@ MzpStickyPromo.open();
 - Make initialize the component *after* the DOM has loaded.
 - The Sticky Promo is positioned in the lower right corner in LTR languages
   and in the lower left corner in RTL languages.
-- Add one of these product theme classes to include a logo above the title:
+- Add one of these product theme classes to include a logo above the heading:
   - `mzp-t-product-firefox`
   - `mzp-t-product-beta`
   - `mzp-t-product-developer`
