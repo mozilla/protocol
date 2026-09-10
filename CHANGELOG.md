@@ -13,6 +13,9 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 * (breaking) Updated the supported browser matrix to Firefox ESR, Safari 15.6+, and evergreen browsers (`browserslist` in `package.json`).
 * (breaking) Removed the Babel `targets: { ie: '10' }` override in every webpack config (docs site, npm package, and test bundle). The compiled JS now targets the `browserslist` matrix above instead of IE10.
 * (breaking) Remove support for vendor prefixing (#957)
+* Removed dead CSS for browsers outside the new matrix: unwrapped the two remaining `@supports` feature-query blocks (`position: sticky` in Navigation, `display: flex` in Menu), removed the `&::-ms-expand` selector in form Select styles, and removed the HTML5-elements-to-`display: block` reset in `_reset.scss` (every element it covered has had correct default display in every supported browser for years)
+* Replaced `-webkit-appearance` with the standard unprefixed `appearance` property in two form resets, and re-enabled the `property-no-vendor-prefix`/`value-no-vendor-prefix` stylelint rules
+* Removed stale "in IE"/"in Edge and IE" references from comments in `_forms.scss` (the resets they document are left in place)
 
 ### Typography
 
