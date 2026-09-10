@@ -46,7 +46,7 @@
         }
 
         &:hover,
-        &:focus {
+        &:focus-visible {
             background: $color-marketing-gray-20;
             color: var(--theme-link-color-hover);
 
@@ -99,7 +99,7 @@
             }
 
             &:hover,
-            &:focus {
+            &:focus-visible {
                 color: var(--theme-link-color-hover);
                 text-decoration: none;
 

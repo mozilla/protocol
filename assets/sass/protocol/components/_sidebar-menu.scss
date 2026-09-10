@@ -64,7 +64,7 @@
         transition: background-color 100ms ease-in;
 
         &:hover,
-        &:focus,
+        &:focus-visible,
         &:active {
             background-color: rgb(0, 0, 0, 0.05);
             text-decoration: underline;

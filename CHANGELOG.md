@@ -49,6 +49,9 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
   * Added status color variables (`--theme-color-success-*`, `--theme-color-error-*`, `--theme-color-warning-*`, `--theme-color-info-*`)
 * Removed Sass color variables from `_themes-sass.scss` (use CSS variables instead)
 
+### Accessibility
+
+* (breaking) Standardized interactive component states on `:focus-visible` instead of `:focus`.
 ## Component changes
 
 ### Feature Card

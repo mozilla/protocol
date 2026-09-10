@@ -102,7 +102,7 @@
 
         &:hover,
         &:active,
-        &:focus {
+        &:focus-visible {
             transition: box-shadow 0.1s ease-in-out;
             box-shadow: 0 0 0 4px $color-marketing-gray-20;
 
@@ -143,7 +143,7 @@
 
         &:hover,
         &:active,
-        &:focus {
+        &:focus-visible {
             box-shadow: 0 0 0 4px $color-marketing-gray-80;
         }
 
