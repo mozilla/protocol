@@ -26,14 +26,6 @@ const MzpDetails = window.MzpDetails;
 Then initialize the component:
 
 ```javascript
-// check if details is supported, if not, init this as a polyfill
-if (typeof window.MzpSupports !== 'undefined') {
-    // not supported, add support
-    if(!window.MzpSupports.details) {
-        window.MzpDetails.init('summary');
-    }
-}
-
 // init generic class indicating headings should be made into open/close component
 window.MzpDetails.init('.mzp-c-details > h2');
 window.MzpDetails.init('.mzp-c-details > h3');
