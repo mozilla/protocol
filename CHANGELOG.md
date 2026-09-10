@@ -63,7 +63,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 ### CSS Logical Properties
 
-* Started migrating physical directional properties to their logical equivalents 
+* Migrate physical directional properties to their logical equivalents 
 
 ## Component changes
 
