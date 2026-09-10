@@ -1,6 +1,6 @@
 # HEAD
 
-This version introduces some major modernization changes around CSS and updates the supported browser matrix to Firefox ESR, Safari 15.6+, and evergreen browsers (Chrome, Edge, Opera, Samsung Internet). See [Browser Support](https://protocol.mozilla.org/docs/usage/browser-support) for the full matrix.
+This version introduces some major modernization changes around CSS and updates the supported browser matrix to Firefox ESR, Safari 15.6+, and evergreen browsers.
 
 The good news is we don't expect many visible changes in modern browsers and you should be able to do some automated visual regression testing to help with the migration.
 
@@ -10,7 +10,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 ### Browser Support
 
-* (breaking) Updated the supported browser matrix to Firefox ESR, Safari 15.6+, and evergreen browsers (`browserslist` in `package.json`). Drops the previous `IE 8` target.
+* (breaking) Updated the supported browser matrix to Firefox ESR, Safari 15.6+, and evergreen browsers (`browserslist` in `package.json`).
 * (breaking) Removed the Babel `targets: { ie: '10' }` override in every webpack config (docs site, npm package, and test bundle). The compiled JS now targets the `browserslist` matrix above instead of IE10.
 * (breaking) Remove support for vendor prefixing (#957)
 
