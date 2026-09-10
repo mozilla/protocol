@@ -14,7 +14,7 @@ ol {
 
 ul.mzp-u-list-styled {
     list-style: disc;
-    @include bidi(((margin-left, $layout-sm, margin-right, 0),));
+    margin-inline-start: $layout-sm;
 
     li {
         margin-bottom: 0.25em;
@@ -23,19 +23,19 @@ ul.mzp-u-list-styled {
     ul {
         list-style: circle;
         margin-bottom: 0;
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
+        margin-inline-start: $layout-xs;
     }
 
     ol {
         list-style: decimal;
         margin-bottom: 0;
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
+        margin-inline-start: $layout-xs;
     }
 }
 
 ol.mzp-u-list-styled {
     list-style: decimal;
-    @include bidi(((margin-left, $layout-sm, margin-right, 0),));
+    margin-inline-start: $layout-sm;
 
     li {
         margin-bottom: 0.25em;
@@ -44,13 +44,13 @@ ol.mzp-u-list-styled {
     ol {
         list-style: lower-alpha;
         margin-bottom: 0;
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
+        margin-inline-start: $layout-xs;
     }
 
     ul {
         list-style: disc;
         margin-bottom: 0;
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
+        margin-inline-start: $layout-xs;
     }
 }
 
@@ -62,13 +62,13 @@ dl.mzp-u-list-styled {
 
     dd {
         margin-bottom: 0.25em;
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
+        margin-inline-start: $layout-xs;
     }
 
     ul,
     ol {
         margin-bottom: 0;
-        @include bidi(((margin-left, $layout-xs, margin-right, 0),));
+        margin-inline-start: $layout-xs;
     }
 
     ul {
@@ -79,13 +79,11 @@ dl.mzp-u-list-styled {
 /* !important required to trump specificity and print stylesheet overrides */
 .mzp-u-list-unstyled {
     list-style: none !important; /* stylelint-disable-line declaration-no-important */
-    margin-left: 0 !important; /* stylelint-disable-line declaration-no-important */
-    margin-right: 0 !important; /* stylelint-disable-line declaration-no-important */
+    margin-inline: 0 !important; /* stylelint-disable-line declaration-no-important */
 
     ul,
     ol {
         list-style: none !important; /* stylelint-disable-line declaration-no-important */
-        margin-left: 0 !important; /* stylelint-disable-line declaration-no-important */
-        margin-right: 0 !important; /* stylelint-disable-line declaration-no-important */
+        margin-inline: 0 !important; /* stylelint-disable-line declaration-no-important */
     }
 }

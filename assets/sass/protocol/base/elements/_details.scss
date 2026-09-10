@@ -17,7 +17,7 @@ details .is-summary button,
 
 // Override styling the native element when the polyfill is applied (issue #658)
 summary.is-summary {
-    @include bidi(((padding-right, 0, padding-left, 0),));
+    padding-inline: 0;
 
     &::before {
         display: none;
