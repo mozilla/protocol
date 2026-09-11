@@ -52,6 +52,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 ### Accessibility
 
 * (breaking) Standardized interactive component states on `:focus-visible` instead of `:focus`, so the focus ring only shows for keyboard/assistive-tech focus rather than every mouse click. Affects Breadcrumb, Button, Card, Footer, Menu, Menu Item, Menu List, Modal, Navigation, Notification Bar, Sidebar Menu, and Sticky Promo. Text inputs keep `:focus` -- see the next entry.
+* (breaking) Did the same in form styles for checkboxes, radio buttons, `<select>`, and the `color`/`file` input types (click/pick-driven controls, not text entry). Text-like inputs and `<textarea>` keep `:focus` -- `:focus-visible` doesn't reliably match mouse-focused text fields across engines, and losing the ring on click there would be a real accessibility regression, not an improvement.
 ## Component changes
 
 ### Feature Card
