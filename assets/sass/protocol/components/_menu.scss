@@ -79,11 +79,11 @@
             transition: transform 100ms ease-in-out;
             content: '';
             height: 20px;
+            inset-inline-end: 8px;
             margin-top: -8px;
             position: absolute;
             top: 50%;
             width: 20px;
-            @include bidi(((right, 8px, left, auto),));
         }
     }
 
@@ -230,11 +230,11 @@
         }
 
         @media #{$mq-md} {
-            @include bidi(((right, $layout-lg, left, auto),));
+            inset-inline-end: $layout-lg;
         }
 
         @media #{$mq-lg} {
-            @include bidi(((right, $layout-xl, left, auto),));
+            inset-inline-end: $layout-xl;
         }
     }
 
@@ -290,11 +290,11 @@
                 float: inline-start;
 
                 &:first-child {
-                    @include bidi(((margin-right, $spacing-lg * 0.5, margin-left, 0),));
+                    margin-inline-end: $spacing-lg * 0.5;
                 }
 
                 &:last-child {
-                    @include bidi(((margin-left, $spacing-lg * 0.5, margin-right, 0),));
+                    margin-inline-start: $spacing-lg * 0.5;
                 }
 
                 & > li:last-child .mzp-c-menu-item {

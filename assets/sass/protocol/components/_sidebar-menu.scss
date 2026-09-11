@@ -23,17 +23,16 @@
     li {
         color: $color-marketing-gray-80;
         display: inline-block;
-        @include bidi((
-            (margin-right, $spacing-xs, margin-left, 0),
-        ));
+        margin-inline-end: $spacing-xs;
 
         &::after {
             content: '\25B8'; // right pointing triangle
             display: inline-block;
-            @include bidi((
-                (margin-left, $spacing-xs, margin-right, 0),
-                (transform, none, translateY(3px) rotate(180deg)),
-            ));
+            margin-inline-start: $spacing-xs;
+
+            [dir='rtl'] & {
+                transform: translateY(3px) rotate(180deg);
+            }
         }
 
         &:last-child::after {
@@ -78,23 +77,19 @@
 }
 
 .mzp-c-sidemenu-label {
+    padding-inline-end: $spacing-lg;
     position: relative;
     @include text-body-sm;
     @include font-base;
-    @include bidi((
-        (padding-right, $spacing-lg, padding-left, 0),
-    ));
 
     &::after {
         transform: rotate(90deg);
         color: $color-marketing-gray-80;
         content: none;
         font-size: 1.5em;
+        inset-inline-end: 0;
         position: absolute;
         top: 0;
-        @include bidi((
-            (right, 0, left, auto),
-        ));
     }
 }
 
