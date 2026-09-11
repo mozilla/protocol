@@ -105,11 +105,11 @@
 
         &:nth-child(odd) {
             clear: inline-start;
-            @include bidi(((padding, 0 ($layout-md * 0.5) 0 0, 0 0 0 ($layout-md * 0.5)),));
+            padding-inline-end: $layout-md * 0.5;
         }
 
         &:nth-child(even) {
-            @include bidi(((padding, 0 0 0 ($layout-md * 0.5), 0 ($layout-md * 0.5) 0 0),));
+            padding-inline-start: $layout-md * 0.5;
         }
     }
 }
@@ -120,11 +120,11 @@
         float: inline-start;
 
         &:first-child {
-            @include bidi(((padding, 0 ($layout-md * 0.5) 0 0, 0 0 0 ($layout-md * 0.5)),));
+            padding-inline-start: 0;
         }
 
         &:last-child {
-            @include bidi(((padding, 0 0 0 ($layout-md * 0.5), 0 ($layout-md * 0.5) 0 0),));
+            padding-inline-end: 0;
         }
     }
 
@@ -181,11 +181,11 @@
             transition: transform 100ms ease-in-out;
             content: '';
             height: 24px;
+            inset-inline-end: 8px;
             margin-top: -12px;
             position: absolute;
             top: 50%;
             width: 24px;
-            @include bidi(((right, 8px, left, auto),));
         }
 
         button[aria-expanded='true']::before {
@@ -267,8 +267,8 @@
 
     li {
         display: inline-block;
+        margin-inline-end: $spacing-md;
         vertical-align: bottom;
-        @include bidi(((margin, 0 $spacing-md 0 0, 0 0 0 $spacing-md),));
 
         a {
             @include image-replaced;
@@ -299,17 +299,16 @@
 
     @media #{$mq-md} {
         bottom: 0;
+        inset-inline-end: 0;
         margin-bottom: 0;
         max-width: 33%; // don't over lap with legal links
         position: absolute;
-        @include bidi(((right, 0, left, auto),));
         text-align: end;
 
         li {
-            @include bidi((
-                (padding, 0 0 $spacing-md $spacing-lg, 0 $spacing-lg $spacing-md 0),
-                (margin, 0 , 0),
-            ));
+            margin: 0;
+            padding-block-end: $spacing-md;
+            padding-inline-start: $spacing-lg;
         }
     }
 }
@@ -330,10 +329,10 @@
     @media #{$mq-md} {
         li {
             display: inline-block;
-            @include bidi(((padding, 0 $spacing-lg 0 0, 0 0 0 $spacing-lg),));
+            padding-inline-end: $spacing-lg;
 
             &:last-child {
-                @include bidi(((padding-right, 0, padding-left, 0),));
+                padding-inline: 0;
             }
         }
     }
