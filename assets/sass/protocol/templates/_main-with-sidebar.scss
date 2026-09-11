@@ -17,37 +17,25 @@
 
         &.mzp-l-sidebar-left {
             .mzp-l-main {
-                @include bidi((
-                    (float, right, left),
-                    (padding-left, $spacing-md, 0),
-                    (padding-right, 0, $spacing-md)
-                ));
+                float: inline-end;
+                padding-inline-start: $spacing-md;
             }
 
             .mzp-l-sidebar {
-                @include bidi((
-                    (float, left, right),
-                    (padding-right, $spacing-md, 0),
-                    (padding-left, 0, $spacing-md)
-                ));
+                float: inline-start;
+                padding-inline-end: $spacing-md;
             }
         }
 
         &.mzp-l-sidebar-right {
             .mzp-l-main {
-                @include bidi((
-                    (float, left, right),
-                    (padding-right, $spacing-md, 0),
-                    (padding-left, 0, $spacing-md)
-                ));
+                float: inline-start;
+                padding-inline-end: $spacing-md;
             }
 
             .mzp-l-sidebar {
-                @include bidi((
-                    (float, right, left),
-                    (padding-left, $spacing-md, 0),
-                    (padding-right, 0, $spacing-md)
-                ));
+                float: inline-end;
+                padding-inline-start: $spacing-md;
             }
         }
     }
