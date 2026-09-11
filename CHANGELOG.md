@@ -8,6 +8,11 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 ## Architecture changes
 
+### CSS Logical Properties
+
+* Continued migrating physical directional properties to their logical equivalents (see #1084) -- `templates/_card-layout.scss`, `templates/_main-with-sidebar.scss`, `_footer.scss`, `_navigation.scss`, `_menu.scss`, `_menu-item.scss`, `_menu-list.scss`, and `_sidebar-menu.scss`. 59 `bidi()` calls removed.
+* Where a property has no logical equivalent safe across the supported matrix (`background-position`, and a CSS `transform` that visually flips a directional glyph), kept the physical value with an explicit `[dir='rtl']` override instead.
+
 ### Browser Support
 
 * (breaking) Updated the supported browser matrix to Firefox ESR, Safari 15.6+, and evergreen browsers (`browserslist` in `package.json`).

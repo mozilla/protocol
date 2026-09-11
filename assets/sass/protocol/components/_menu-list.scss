@@ -31,17 +31,17 @@
         text-decoration: none;
 
         .mzp-t-download & {
-            @include bidi(((padding-right, $spacing-sm * 2 + 14px, padding-left, $spacing-sm),));
+            padding-inline-end: $spacing-sm * 2 + 14px;
 
             &::after {
                 background-size: 20px, 20px;
                 bottom: $spacing-sm;
                 content: '';
                 display: block;
+                inset-inline-end: $spacing-sm;
                 position: absolute;
                 top: $spacing-sm;
                 width: 14px;
-                @include bidi(((right, $spacing-sm, left, auto),));
             }
         }
 
@@ -76,22 +76,23 @@
             font-family: inherit;
             font-size: inherit;
             font-weight: inherit;
+            padding-block: 0;
+            padding-inline: 0 (16px + $spacing-sm);
             position: relative;
             text-align: inherit;
             text-decoration: underline;
             width: 100%;
-            @include bidi(((padding, 0 (16px + $spacing-sm) 0 0, 0 0 0 (16px + $spacing-sm)),));
 
             &::after {
                 background: $url-image-caret-down-link center bottom no-repeat;
                 bottom: 1px;
                 content: '';
                 display: inline-block;
+                inset-inline-end: 0;
                 position: absolute;
                 top: 0;
                 width: 16px;
                 transition: transform 200ms ease-in-out;
-                @include bidi(((right, 0, left, auto),));
             }
 
             &[aria-expanded='true']::after {
