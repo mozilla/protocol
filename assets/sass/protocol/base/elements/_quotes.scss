@@ -6,13 +6,15 @@
 
 blockquote {
     @include text-heading-sm;
+    border-block-width: 0;
     border-color: $color-marketing-gray-20;
+    border-inline-end-width: 0;
+    border-inline-start-width: 5px;
     border-style: solid;
     color: var(--theme-heading-text-color);
     font-weight: bold;
     margin: $spacing-lg auto;
     padding: $spacing-sm $spacing-lg;
-    @include bidi(((border-width, 0 0 0 5px, 0 5px 0 0),));
 
     cite {
         @include text-heading-xs;

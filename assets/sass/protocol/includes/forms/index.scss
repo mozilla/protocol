@@ -117,8 +117,8 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
     bottom: 100%;
     content: '';
     height: 0;
+    inset-inline-start: 6px;
     position: absolute;
     width: 0;
     z-index: 1;
-    @include bidi(((left, 6px, right, auto),));
 }
