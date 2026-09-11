@@ -112,7 +112,6 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
 }
 
 @mixin form-msg-pointer() {
-    @include bidi(((left, 6px, right, auto),));
     border: 7px solid transparent;
     border-bottom: 8px solid var(--theme-field-border-color-error-hover);
     bottom: 100%;
@@ -121,4 +120,5 @@ $line-height-shim: 0.15em; // two elements with text appear to have more space b
     position: absolute;
     width: 0;
     z-index: 1;
+    @include bidi(((left, 6px, right, auto),));
 }

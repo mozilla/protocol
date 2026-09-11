@@ -61,14 +61,11 @@
     }
 
     .mzp-c-notification-bar-button {
-        @include bidi((
-            (right, 0, auto),
-            (left, auto, 0),
-        ));
         @include image-replaced;
         background: url('#{$image-path}/icons/close.svg') center center/18px 18px no-repeat;
         border: 0;
         height: 20px;
+        inset-inline-end: 0;
         margin: $spacing-sm;
         padding: 0;
         position: absolute;
@@ -84,16 +81,14 @@
         }
 
         @media #{$mq-sm} {
-            @include bidi((
-                (float, right, left),
-                (border-radius, 0 $border-radius-sm $border-radius-sm 0, $border-radius-sm 0 0 $border-radius-sm),
-            ));
             background-color: $color-marketing-gray-40;
             padding: 0;
             margin: 0;
             height: 100%;
             width: 40px;
-            float: right;
+            @include bidi((
+                (border-radius, 0 $border-radius-sm $border-radius-sm 0, $border-radius-sm 0 0 $border-radius-sm),
+            ));
 
             &:hover,
             &:focus {

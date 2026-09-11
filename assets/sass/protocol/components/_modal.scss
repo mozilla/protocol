@@ -72,10 +72,10 @@ html.mzp-is-noscroll {
 }
 
 .mzp-c-modal-close {
-    @include bidi(((right, $spacing-sm, left, auto),));
     position: absolute;
     top: 9px;
     z-index: 99;
+    @include bidi(((right, $spacing-sm, left, auto),));
 
     .mzp-c-modal-button-close {
         @include image-replaced;
