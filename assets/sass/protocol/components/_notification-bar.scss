@@ -37,7 +37,7 @@
 
         &:hover,
         &:active,
-        &:focus {
+        &:focus-visible {
             color: inherit;
             text-decoration: none;
         }
@@ -76,7 +76,7 @@
             cursor: pointer;
         }
 
-        &:focus {
+        &:focus-visible {
             border: 1px solid;
         }
 
@@ -91,7 +91,7 @@
             ));
 
             &:hover,
-            &:focus {
+            &:focus-visible {
                 background-color: $color-marketing-gray-50;
                 border: 0;
             }
@@ -106,7 +106,7 @@
                 background-color: var(--theme-color-success-hover);
 
                 &:hover,
-                &:focus {
+                &:focus-visible {
                     background-color: var(--theme-color-success-active);
                 }
             }
@@ -121,7 +121,7 @@
                 background-color: var(--theme-color-error-hover);
 
                 &:hover,
-                &:focus {
+                &:focus-visible {
                     background-color: var(--theme-color-error-active);
                 }
             }
@@ -136,7 +136,7 @@
                 background-color: var(--theme-color-warning-hover);
 
                 &:hover,
-                &:focus {
+                &:focus-visible {
                     background-color: var(--theme-color-warning-active);
                 }
             }
@@ -155,7 +155,7 @@
                 background-color: var(--theme-color-info-hover);
 
                 &:hover,
-                &:focus {
+                &:focus-visible {
                     background-color: var(--theme-color-info-active);
                 }
             }

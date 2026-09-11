@@ -88,12 +88,12 @@ html.mzp-is-noscroll {
         cursor: pointer;
 
         &:hover,
-        &:focus {
+        &:focus-visible {
             transition: transform 0.1s ease-in-out;
             transform: scale(1.1);
         }
 
-        &:focus {
+        &:focus-visible {
             outline: 1px dotted var(--theme-body-text-color-inverse);
         }
     }

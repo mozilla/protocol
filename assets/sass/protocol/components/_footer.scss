@@ -27,7 +27,7 @@
         text-decoration: underline;
 
         &:hover,
-        &:focus,
+        &:focus-visible,
         &:active {
             text-decoration: none;
         }
@@ -93,7 +93,7 @@
         text-decoration: none;
 
         &:hover,
-        &:focus,
+        &:focus-visible,
         &:active {
             text-decoration: underline;
         }
@@ -171,7 +171,7 @@
         padding: 0;
         border-bottom: 0;
 
-        button:focus {
+        button:focus-visible {
             outline: 1px dotted #fff;
         }
 
@@ -240,7 +240,7 @@
         color: tokens.$color-light-gray-50;
 
         &:hover,
-        &:focus,
+        &:focus-visible,
         &:active {
             text-decoration: none;
         }
@@ -291,7 +291,7 @@
             }
 
             &:hover,
-            &:focus {
+            &:focus-visible {
                 border-bottom-color: var(--theme-body-text-color-inverse);
             }
         }
