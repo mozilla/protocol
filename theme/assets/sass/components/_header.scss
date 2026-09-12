@@ -31,11 +31,10 @@
 .Header-menu {
     display: flex;
     align-items: center;
-    margin-left: auto;
-    margin-right: 1rem;
+    margin-inline: auto 1rem;
     list-style: none;
 
     li + li {
-        margin-left: 1rem;
+        margin-inline-start: 1rem;
     }
 }

@@ -28,9 +28,13 @@
 
         + .mzp-c-breadcrumb-item {
             &::before {
+                content: '\2192';
                 font-weight: normal;
                 margin: 0 0.25em;
-                @include bidi(((content, '\2192', '\2190'),));
+
+                [dir='rtl'] & {
+                    content: '\2190';
+                }
             }
         }
 

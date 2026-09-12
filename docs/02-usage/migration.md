@@ -466,6 +466,29 @@ Image size recommendations are now based on column layout rather than card size:
 | 3-column (`mzp-l-card-third`) | 600px | 1200px |
 | 2-column (`mzp-l-card-half`) | 930px | 1860px |
 
+## Bidi Mixin Deprecation
+
+Protocol's own components no longer use the `@include bidi(...)` Sass mixin –
+it's been replaced internally by [CSS logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values). The mixin itself is **not removed** and 
+remains available if your own Sass still calls it, but we recommend migrating when convenient.
+
+**Migration steps:**
+1. Find each `@include bidi(...)` call in your Sass.
+2. Replace directional properties with their logical equivalent, e.g. `margin-left`/`margin-right` → `margin-inline-start`/`margin-inline-end`, `left`/`right` → `inset-inline-start`/`inset-inline-end`, `float: left`/`right` → `float: inline-start`/`inline-end`.
+3. Properties with no logical equivalent (`background-position`, `content`, `animation-name`, etc.) still need an explicit `[dir='rtl'] &` override with the physical property.
+
+**Find usages in your codebase:**
+
+VS Code Find (with **Use Regular Expression** enabled):
+```text
+Find: @include bidi\(
+```
+
+Terminal:
+```bash
+grep -rn "@include bidi(" --include="*.scss" .
+```
+
 ## After Migration
 
 1. Run your build to check for any Sass compilation errors

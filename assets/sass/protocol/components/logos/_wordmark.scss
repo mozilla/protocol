@@ -15,13 +15,17 @@ $logo-sizes: (
 
 .mzp-c-wordmark {
     @include image-replaced;
+    background-position: top left;
     background-size: contain;
     background-repeat: no-repeat;
     display: block;
     margin-bottom: $layout-sm;
     margin-top: 0;
     max-width: 100%;
-    @include bidi(((background-position, top left, top right),));
+
+    [dir='rtl'] & {
+        background-position: top right;
+    }
 
     &.mzp-t-wordmark-xs {
         height: $layout-xs;
@@ -53,19 +57,20 @@ $logo-sizes: (
 
     &.mzp-l-wordmark-center {
         background-position: center top;
-        margin-left: auto;
-        margin-right: auto;
+        margin-inline: auto;
     }
 
     &.mzp-l-wordmark-center-on-sm-md {
         background-position: center top;
-        margin-left: auto;
-        margin-right: auto;
+        margin-inline: auto;
 
         @media #{$mq-md} {
-            margin-left: 0;
-            margin-right: 0;
-            @include bidi(((background-position, top left, top right),));
+            background-position: top left;
+            margin-inline: 0;
+
+            [dir='rtl'] & {
+                background-position: top right;
+            }
         }
     }
 }

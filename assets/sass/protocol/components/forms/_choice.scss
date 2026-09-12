@@ -34,7 +34,7 @@
     }
 
     .mzp-c-choices.mzp-l-choices-inline & {
-        @include bidi(((padding-right, forms.$field-h-spacing, padding-left, 0),));
+        padding-inline-end: forms.$field-h-spacing;
         display: inline-block;
         vertical-align: top;
     }
@@ -46,7 +46,7 @@
     padding-top: 3px;
     padding-bottom: 0;
     vertical-align: top;
-    @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
+    padding-inline-start: forms.$choice-spacing;
 
     .mzp-c-choices & {
         font-weight: normal;
@@ -66,7 +66,7 @@
         position: absolute;
         top: 0;
         z-index: 1;
-        @include bidi(((left, 0, right, auto),));
+        inset-inline-start: 0;
     }
 
     // IE8 and lower don't support some of this, but they also don't support media queries
@@ -97,7 +97,7 @@
             text-align: center;
             top: 0;
             width: forms.$choice-height;
-            @include bidi(((left, 0, right, auto),));
+            inset-inline-start: 0;
         }
 
         &[type='radio'] + label::before {
@@ -123,10 +123,12 @@
             transform: rotate(45deg);
             transform-origin: bottom right;
             width: 0.35rem;
-            @include bidi((
-                (left, 0.03rem, auto),
-                (right, auto, 0.83rem),
-            ));
+            inset-inline-start: 0.03rem;
+
+            // checkmark does not get mirrored for RTL languages, so unexpected value here
+            [dir='rtl'] & {
+                inset-inline-start: 0.83rem;
+            }
         }
 
         &[type='radio']:checked + label::before {
@@ -262,12 +264,12 @@
 
     .mzp-c-choice-label + & {
         padding-top: forms.$info-v-spacing;
-        @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
+        padding-inline-start: forms.$choice-spacing;
     }
 
     .mzp-c-choice + & {
         margin-top: forms.$label-v-spacing * -1;
-        @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
+        padding-inline-start: forms.$choice-spacing;
     }
 
     .mzp-c-choice-msg + & {

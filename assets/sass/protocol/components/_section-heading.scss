@@ -16,8 +16,7 @@
 
     // rely on l-content for padding if nested
     .mzp-l-content & {
-        padding-left: 0;
-        padding-right: 0;
+        padding-inline: 0;
 
         &:first-child {
             padding-top: 0;
@@ -25,7 +24,6 @@
     }
 
     &.mzp-t-section-heading-nospace {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-block: 0;
     }
 }
