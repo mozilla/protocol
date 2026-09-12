@@ -87,11 +87,11 @@
 
         @media #{$mq-sm} {
             background-color: $color-marketing-gray-40;
+            border-radius: 0 $border-radius-sm $border-radius-sm 0;
             padding: 0;
             margin: 0;
             height: 100%;
             width: 40px;
-            border-radius: 0 $border-radius-sm $border-radius-sm 0;
 
             &:hover,
             &:focus-visible {

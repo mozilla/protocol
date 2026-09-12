@@ -14,8 +14,7 @@ $gutter-width: tokens.$layout-sm;
 @mixin colspan($columns) {
     box-sizing: border-box;
     width: $column-width * $columns;
-    padding-left: $gutter-width * 0.5;
-    padding-right: $gutter-width * 0.5;
+    padding-inline: $gutter-width * 0.5;
 }
 
 @mixin span-all {
