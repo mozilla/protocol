@@ -31,19 +31,6 @@ Different themes have slightly different type scales so this mixin draws its
 output from the defined brand theme. See [our page on themes](/docs/fundamentals/brand-themes)
 for more info and examples.
 
-### bidi
-The bidi mixin (short for “bi-directional”) is used to declare both left-to-right
-and right-to-left values for a CSS property together, and output appropriate
-declarations for each. This makes it easier to support right-to-left languages –
-such as Hebrew and Arabic – while keeping both styles in the same place. Whenever
-you’re floating or aligning something to one side, you might prefer to use the
-bidi mixin to reverse that direction for other languages. Refer to
-`/includes/mixins/_bidi.scss` for more documentation and usage.
-
-```scss
-@include bidi(((content, '\2192', '\2190'),));
-```
-
 ### at2x
 at2x is a helpful mixin for applying a high-resolution background image, for
 display on high definition screens (a.k.a. “retina”). It automatically outputs

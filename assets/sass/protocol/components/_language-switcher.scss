@@ -12,7 +12,8 @@
     .mzp-c-language-switcher-link {
         display: inline-block;
         font-size: var(--theme-body-font-size-sm); // just want smaller text size, so don't use full mixin
-        @include bidi(((margin, 0 $spacing-lg $spacing-sm 0, 0 0 $spacing-sm $spacing-lg),));
+        margin-block: 0 $spacing-sm;
+        margin-inline-end: $spacing-lg;
     }
 
     // hide the <label> visually should a language link be shown instead.

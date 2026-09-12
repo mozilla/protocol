@@ -11,7 +11,9 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 ### CSS Logical Properties
 
 * Continued migrating physical directional properties to their logical equivalents (see #1084) -- `templates/_card-layout.scss`, `templates/_main-with-sidebar.scss`, `_footer.scss`, `_navigation.scss`, `_menu.scss`, `_menu-item.scss`, `_menu-list.scss`, and `_sidebar-menu.scss`. 59 `bidi()` calls removed.
-* Where a property has no logical equivalent safe across the supported matrix (`background-position`, and a CSS `transform` that visually flips a directional glyph), kept the physical value with an explicit `[dir='rtl']` override instead.
+* Finished converting the remaining components -- `_button.scss`, `_language-switcher.scss`, `_breadcrumb.scss`, `_card.scss`, `_notification-bar.scss`, `_modal.scss`, `_sticky-promo.scss`, `_picto.scss`, `forms/_button-container.scss`, `forms/_choice.scss`, `logos/_wordmark.scss`, `logos/_logo.scss`, and `_inline-list.scss`.
+* (breaking) Removed the `@mixin bidi()` Sass mixin (`includes/mixins/_bidi.scss`) now that every internal use has been converted to logical properties or an explicit `[dir='rtl']` override. If your own Sass calls `@include bidi(...)`, see the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for how to convert it.
+* Where a property has no logical equivalent safe across the supported matrix (`background-position`, `content`, `animation-name`, and a CSS `transform` that visually flips a directional glyph), kept the physical value with an explicit `[dir='rtl']` override instead.
 
 ### Browser Support
 

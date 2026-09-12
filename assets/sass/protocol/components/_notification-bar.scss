@@ -65,12 +65,17 @@
         background: url('#{$image-path}/icons/close.svg') center center/18px 18px no-repeat;
         border: 0;
         height: 20px;
-        inset-inline-end: 0;
         margin: $spacing-sm;
         padding: 0;
         position: absolute;
+        right: 0;
         top: 0;
         width: 20px;
+
+        [dir='rtl'] & {
+            right: auto;
+            left: 0;
+        }
 
         &:hover {
             cursor: pointer;
@@ -82,13 +87,15 @@
 
         @media #{$mq-sm} {
             background-color: $color-marketing-gray-40;
+            border-radius: 0 $border-radius-sm $border-radius-sm 0;
             padding: 0;
             margin: 0;
             height: 100%;
             width: 40px;
-            @include bidi((
-                (border-radius, 0 $border-radius-sm $border-radius-sm 0, $border-radius-sm 0 0 $border-radius-sm),
-            ));
+
+            [dir='rtl'] & {
+                border-radius: $border-radius-sm 0 0 $border-radius-sm;
+            }
 
             &:hover,
             &:focus {

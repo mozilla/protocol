@@ -22,7 +22,7 @@
 // wrapper around the label and control
 .mzp-c-choice {
     box-sizing: border-box;
-    clear: left;
+    clear: inline-start;
     margin-bottom: 0;
     margin-top: forms.$line-height-shim; // other labels have a bit of line height, mock that here for better vertical spacing
     min-height: forms.$choice-height;
@@ -34,8 +34,8 @@
     }
 
     .mzp-c-choices.mzp-l-choices-inline & {
-        @include bidi(((padding-right, forms.$field-h-spacing, padding-left, 0),));
         display: inline-block;
+        padding-inline-end: forms.$field-h-spacing;
         vertical-align: top;
     }
 }
@@ -45,8 +45,8 @@
     margin-bottom: 0;
     padding-top: 3px;
     padding-bottom: 0;
+    padding-inline-start: forms.$choice-spacing;
     vertical-align: top;
-    @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
 
     .mzp-c-choices & {
         font-weight: normal;
@@ -63,10 +63,10 @@
     &[type='checkbox'],
     &[type='radio'] {
         box-sizing: border-box;
+        inset-inline-start: 0;
         position: absolute;
         top: 0;
         z-index: 1;
-        @include bidi(((left, 0, right, auto),));
     }
 
     // IE8 and lower don't support some of this, but they also don't support media queries
@@ -93,11 +93,11 @@
             cursor: pointer;
             display: block;
             height: forms.$choice-height;
+            inset-inline-start: 0;
             position: absolute;
             text-align: center;
             top: 0;
             width: forms.$choice-height;
-            @include bidi(((left, 0, right, auto),));
         }
 
         &[type='radio'] + label::before {
@@ -118,15 +118,17 @@
             content: '';
             display: block;
             height: 0.75rem;
+            left: 0.03rem;
             position: absolute;
             top: 0.19rem;
             transform: rotate(45deg);
             transform-origin: bottom right;
             width: 0.35rem;
-            @include bidi((
-                (left, 0.03rem, auto),
-                (right, auto, 0.83rem),
-            ));
+
+            [dir='rtl'] & {
+                left: auto;
+                right: 0.83rem;
+            }
         }
 
         &[type='radio']:checked + label::before {
@@ -261,13 +263,13 @@
     }
 
     .mzp-c-choice-label + & {
+        padding-inline-start: forms.$choice-spacing;
         padding-top: forms.$info-v-spacing;
-        @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
     }
 
     .mzp-c-choice + & {
         margin-top: forms.$label-v-spacing * -1;
-        @include bidi(((padding-left, forms.$choice-spacing, padding-right, 0),));
+        padding-inline-start: forms.$choice-spacing;
     }
 
     .mzp-c-choice-msg + & {

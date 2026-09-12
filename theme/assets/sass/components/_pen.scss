@@ -42,8 +42,12 @@
 .Pen-previewButton {
     color: var(--theme-link-color);
     font-weight: bold;
+    margin-left: $spacing-lg;
     @include text-body-sm;
-    @include bidi(((margin-left, $spacing-lg, margin-right, $spacing-lg),));
+
+    [dir='rtl'] & {
+        margin-right: $spacing-lg;
+    }
 
     &:hover,
     &:active {
