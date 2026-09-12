@@ -39,17 +39,18 @@ $logos: (
     z-index: 10;
     animation: 600ms ease 300ms both;
     opacity: 0;
-    @include bidi((
-        (right, $spacing-md, auto),
-        (left, auto, $spacing-md),
-    ));
+    inset-inline-end: $spacing-md;
 
     &.mzp-js-show-on-load {
         animation-delay: 1000ms;
     }
 
     &.mzp-a-slide-in {
-        @include bidi(((animation-name, mzp-a-slide-in-right, mzp-a-slide-in-left),));
+        animation-name: mzp-a-slide-in-right; /* stylelint-disable-line no-unknown-animations */
+
+        [dir='rtl'] & {
+            animation-name: mzp-a-slide-in-left; /* stylelint-disable-line no-unknown-animations */
+        }
     }
 
     &.mzp-a-fade-out {
@@ -81,7 +82,10 @@ $logos: (
             background-position: top left;
             background-repeat: no-repeat;
             padding: (40px + $spacing-lg) 0 0;
-            @include bidi(((background-position, top left, top right),));
+
+            [dir='rtl'] & {
+                background-position: top right;
+            }
         }
     }
 }
@@ -97,15 +101,16 @@ $logos: (
     background-size: 20px 20px;
     border: none;
     height: 20px;
+    inset-inline-end: 0;
     margin: $spacing-sm;
     position: absolute;
-    right: 0;
     top: 0;
     width: 20px;
-    @include bidi((
-        (right, 0, auto),
-        (left, auto, 0),
-    ));
+
+    // need to do this manually because @include image-replaced; declares a direction
+    [dir='rtl'] & {
+        inset-inline: 0 auto;
+    }
 
     &:hover,
     &:focus-visible {
