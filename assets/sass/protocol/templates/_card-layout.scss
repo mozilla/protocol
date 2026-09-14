@@ -18,15 +18,11 @@
 
         .mzp-c-card {
             float: inline-start;
+            margin-inline: 0 var(--theme-spacing-between-inline);
             width: calc(50% - (var(--theme-spacing-between-inline) * 0.5));
-            @include bidi((
-                (margin-left, 0, var(--theme-spacing-between-inline)),
-                (margin-right, var(--theme-spacing-between-inline), 0),
-            ));
 
             &:nth-child(odd) {
-                margin-left: 0;
-                margin-right: 0;
+                margin-inline: 0;
             }
 
             &.mzp-c-card-large {
@@ -40,19 +36,16 @@
             width: calc(33.3% - (var(--theme-spacing-between-inline) - (var(--theme-spacing-between-inline) * 0.33)));
 
             &:nth-child(odd) {
-                @include bidi((
-                    (margin-left, 0, var(--theme-spacing-between-inline)),
-                    (margin-right, var(--theme-spacing-between-inline), 0),
-                ));
+                margin-inline: 0 var(--theme-spacing-between-inline);
             }
 
             &:nth-child(2),
             &:last-child {
-                @include bidi(((margin-right, 0, margin-left, 0),));
+                margin-inline-end: 0;
             }
 
             &:nth-child(3n) {
-                @include bidi(((clear, left, right),));
+                clear: inline-start;
             }
         }
 
@@ -73,40 +66,30 @@
 
         .mzp-c-card {
             float: inline-start;
+            margin-inline: 0 var(--theme-spacing-between-inline);
             width: calc(50% - (var(--theme-spacing-between-inline) * 0.5));
-            @include bidi((
-                (margin-left, 0, var(--theme-spacing-between-inline)),
-                (margin-right, var(--theme-spacing-between-inline), 0),
-            ));
 
             &:nth-child(even) {
-                margin-left: 0;
-                margin-right: 0;
+                margin-inline: 0;
             }
         }
     }
 
     @media #{$mq-lg} {
         .mzp-c-card {
+            margin-inline: 0 var(--theme-spacing-between-inline);
             width: calc(25% - (var(--theme-spacing-between-inline) - var(--theme-spacing-between-inline) * 0.25));
-            @include bidi((
-                (margin-left, 0, var(--theme-spacing-between-inline)),
-                (margin-right, var(--theme-spacing-between-inline), 0),
-            ));
 
             &:nth-child(even) {
-                @include bidi((
-                    (margin-left, 0, var(--theme-spacing-between-inline)),
-                    (margin-right, var(--theme-spacing-between-inline), 0),
-                ));
+                margin-inline: 0 var(--theme-spacing-between-inline);
             }
 
             &:nth-child(4n) {
-                @include bidi(((margin-right, 0, margin-left, 0),));
+                margin-inline-end: 0;
             }
 
             &:nth-child(4n+1) {
-                @include bidi(((clear, left, right),));
+                clear: inline-start;
             }
         }
     }
@@ -122,17 +105,12 @@
         @include clearfix;
 
         .mzp-c-card {
+            float: inline-start;
+            margin-inline: 0 var(--theme-spacing-between-inline);
             width: calc(50% - var(--theme-spacing-between-inline) * 0.5);
 
-            @include bidi((
-                (float, left, right),
-                (margin-left, 0, var(--theme-spacing-between-inline)),
-                (margin-right, var(--theme-spacing-between-inline), 0),
-            ));
-
             &:nth-child(even) {
-                margin-left: 0;
-                margin-right: 0;
+                margin-inline: 0;
             }
         }
     }
@@ -142,18 +120,15 @@
             width: calc(33.3% - (var(--theme-spacing-between-inline) - var(--theme-spacing-between-inline) * 0.33));
 
             &:nth-child(even) {
-                @include bidi((
-                    (margin-left, 0, var(--theme-spacing-between-inline)),
-                    (margin-right, var(--theme-spacing-between-inline), 0),
-                ));
+                margin-inline: 0 var(--theme-spacing-between-inline);
             }
 
             &:nth-child(3n) {
-                @include bidi(((margin-right, 0, margin-left, 0),));
+                margin-inline-end: 0;
             }
 
             &:nth-child(3n+1) {
-                @include bidi(((clear, left, right),));
+                clear: inline-start;
             }
         }
     }
@@ -168,19 +143,15 @@
         @include clearfix;
 
         .mzp-c-card {
-            @include bidi((
-                (float, left, right),
-                (margin-left, 0, var(--theme-spacing-between-inline)),
-                (margin-right, var(--theme-spacing-between-inline), 0),
-            ));
+            float: inline-start;
+            margin-inline: 0 var(--theme-spacing-between-inline);
 
             &:nth-child(2n) {
-                margin-left: 0;
-                margin-right: 0;
+                margin-inline: 0;
             }
 
             &:nth-child(2n+1) {
-                @include bidi(((clear, left, right),));
+                clear: inline-start;
             }
         }
     }

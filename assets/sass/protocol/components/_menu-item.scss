@@ -41,16 +41,16 @@ $icon-size: 24px;
     &.mzp-has-icon {
         .mzp-c-menu-item-head,
         .mzp-c-menu-item-link {
+            padding-inline-start: $icon-size + $spacing-lg;
             position: relative;
-            @include bidi(((padding-left, $icon-size + $spacing-lg, padding-right, 0),));
 
             .mzp-c-menu-item-icon {
                 height: $icon-size;
+                inset-inline-start: $spacing-sm;
                 margin: 0;
                 position: absolute;
                 top: $spacing-sm;
                 width: $icon-size;
-                @include bidi(((left, $spacing-sm, right, auto),));
             }
         }
     }
@@ -95,21 +95,19 @@ $icon-size: 24px;
                 float: inline-start;
 
                 &:nth-child(odd) {
-                    @include bidi((
-                        (clear, left, right),
-                        (padding-right, $spacing-sm, padding-left, 0),
-                    ));
+                    clear: inline-start;
+                    padding-inline-end: $spacing-sm;
                 }
 
                 &:nth-child(even) {
-                    @include bidi(((padding-left, $spacing-sm, padding-right, 0),));
+                    padding-inline-start: $spacing-sm;
                 }
             }
         }
     }
 
     &.mzp-has-icon .mzp-c-menu-item-list {
-        @include bidi(((margin-left, $icon-size + $spacing-lg, margin-right, 0),));
+        margin-inline-start: $icon-size + $spacing-lg;
     }
 
     @media #{$mq-md} {
@@ -124,7 +122,8 @@ $icon-size: 24px;
         }
 
         .mzp-c-menu-item-list {
-            @include bidi(((margin, $spacing-md 0 0 $spacing-sm, $spacing-md $spacing-sm 0 0),));
+            margin-block-start: $spacing-md;
+            margin-inline-start: $spacing-sm;
         }
     }
 }
