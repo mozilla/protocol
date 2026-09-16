@@ -101,7 +101,7 @@ describe('menu.js', function() {
 
         it('should open on click', function() {
             const item = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down');
-            const title = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down .mzp-c-menu-heading');
+            const heading = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down .mzp-c-menu-heading');
 
             spyOn(MzpMenu, 'isSupported').and.returnValue(true);
             spyOn(MzpMenu, 'isWideViewport').and.returnValue(true);
@@ -111,7 +111,7 @@ describe('menu.js', function() {
                 onMenuClose: options.close
             });
 
-            title.click();
+            heading.click();
 
             expect(item.classList.contains('mzp-is-selected')).toBeTruthy();
             expect(options.open).toHaveBeenCalled();
@@ -161,7 +161,7 @@ describe('menu.js', function() {
 
         it('should expand and collapse on click', function() {
             const item = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down');
-            const title = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down .mzp-c-menu-heading');
+            const heading = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down .mzp-c-menu-heading');
 
             spyOn(MzpMenu, 'isSupported').and.returnValue(true);
             spyOn(MzpMenu, 'isWideViewport').and.returnValue(false);
@@ -171,11 +171,11 @@ describe('menu.js', function() {
                 onMenuClose: options.close
             });
 
-            title.click();
+            heading.click();
             expect(item.classList.contains('mzp-is-selected')).toBeTruthy();
             expect(options.open).toHaveBeenCalled();
 
-            title.click();
+            heading.click();
             expect(item.classList.contains('mzp-is-selected')).toBeFalsy();
             expect(options.close).toHaveBeenCalled();
         });
