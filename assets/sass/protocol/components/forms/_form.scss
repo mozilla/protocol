@@ -10,7 +10,7 @@
 // - form
 //     - form
 //     - form-header
-//     - form-title
+//     - form-heading
 //     - form-footer
 
 .mzp-c-form {
@@ -54,7 +54,7 @@
     }
 }
 
-// Title
+// Heading
 .mzp-c-form-heading,
 legend.mzp-c-form-heading {
     @include text-heading-xs;
@@ -70,7 +70,7 @@ legend.mzp-c-form-heading {
     }
 }
 
-// Subtitle
+// Subheading
 .mzp-c-form-subheading,
 legend.mzp-c-form-subheading {
     font-weight: bold;
