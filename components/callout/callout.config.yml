@@ -2,7 +2,7 @@ preview: '@preview-unpadded'
 context:
   heading: A Headline With 30 Characters
   heading_el: h1
-  desc: A description of about 150 characters, give or take. Because this text is centered it works best with a tagline or brief intro, just a sentence or two.
+  body: A description of about 150 characters, give or take. Because this text is centered it works best with a tagline or brief intro, just a sentence or two.
   cta: False
   image: False
 variants:
@@ -10,7 +10,7 @@ variants:
     notes: A dark theme is available with the `mzp-t-dark` theme class. This example omits a description and includes a CTA button.
     context:
       class: mzp-t-dark
-      desc: False
+      body: False
       cta: Call to Action
       cta_link: '#'
       cta_class: mzp-t-dark
@@ -29,7 +29,7 @@ variants:
     context:
       class: mzp-t-background-tertiary
       content_class: mzp-t-content-sm
-      desc: A description of about 150 characters, give or take. Because this text is centered it works best with a tagline or brief intro, just a sentence or two.
+      body: A description of about 150 characters, give or take. Because this text is centered it works best with a tagline or brief intro, just a sentence or two.
       cta: False
       image: '/img/image-3-2.jpg'
   - name: Compact
@@ -56,5 +56,5 @@ variants:
       content_class: mzp-t-content-lg
       cta: Call to Action
       cta_class: mzp-t-product mzp-t-secondary
-      desc: A description of about 150 characters, give or take. This text is left- or right-aligned but should still be short, only a sentence or two.
+      body: A description of about 150 characters, give or take. This text is left- or right-aligned but should still be short, only a sentence or two.
 
