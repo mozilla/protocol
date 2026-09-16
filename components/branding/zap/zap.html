@@ -5,4 +5,4 @@
 # zap_number    - Zap class suffix (1—18)
 # heading         - string
 #}
-<{{ heading_el | default('h1') }} class="mzp-has-zap-{{ zap_number | default('1') }}">{{ heading | safe }}</{{ heading_el }}>
+<{{ heading_el | default('h1') }} class="mzp-has-zap-{{ zap_number | default('1') }}">{{ heading | safe }}</{{ heading_el | default('h1') }}>
