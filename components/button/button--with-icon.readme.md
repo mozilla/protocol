@@ -16,7 +16,7 @@ consistency and reliability, use an image.
 
 - Prefer embedded SVG over an external `img` (whether SVG or other format). An
   inline SVG icon can more easily change color for the different button states
-  and style variants. Be aware that very old browsers don’t support SVG.
+  and style variants.
 
 - Consider the text direction of the page language. Arrows in particular indicate
   a specific orientation that may be confusing in text that flows the opposite
