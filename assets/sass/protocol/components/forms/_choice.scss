@@ -146,13 +146,13 @@
 
         // focus
 
-        &[type='checkbox']:focus + label::before,
-        &[type='radio']:focus + label::before {
+        &[type='checkbox']:focus-visible + label::before,
+        &[type='radio']:focus-visible + label::before {
             border-color: var(--theme-field-border-color-hover);
             box-shadow: var(--theme-field-focus-ring);
         }
 
-        &[type='radio']:checked:focus + label::before {
+        &[type='radio']:checked:focus-visible + label::before {
             border-color: var(--theme-field-border-color-hover);
             box-shadow: inset 0 0 0 0.25em var(--theme-background-color), var(--theme-field-focus-ring);
         }
@@ -180,13 +180,13 @@
             }
 
             // focus
-            &[type='checkbox']:focus + label::before,
-            &[type='radio']:focus + label::before {
+            &[type='checkbox']:focus-visible + label::before,
+            &[type='radio']:focus-visible + label::before {
                 border-color: var(--theme-field-border-color-error-hover);
                 box-shadow: var(--theme-field-focus-ring-error);
             }
 
-            &[type='radio']:checked:focus + label::before {
+            &[type='radio']:checked:focus-visible + label::before {
                 box-shadow: inset 0 0 0 0.25em var(--theme-background-color), var(--theme-field-focus-ring-error);
             }
         }
@@ -222,13 +222,13 @@
         }
 
         // disabled focus
-        &[type='checkbox'][disabled]:focus + label::before,
-        &[type='radio'][disabled]:focus + label::before {
+        &[type='checkbox'][disabled]:focus-visible + label::before,
+        &[type='radio'][disabled]:focus-visible + label::before {
             border-color: var(--theme-field-border-color-disabled);
             box-shadow: var(--theme-field-focus-ring-error);
         }
 
-        &[type='radio'][disabled]:checked:focus + label::before {
+        &[type='radio'][disabled]:checked:focus-visible + label::before {
             box-shadow: inset 0 0 0 0.25em var(--theme-background-color), var(--theme-field-focus-ring);
         }
     }
