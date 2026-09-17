@@ -31,7 +31,7 @@
         box-shadow: none;
     }
 
-    &:focus {
+    &:focus-visible {
         border-color: var(--theme-button-border-color-focus);
         box-shadow: var(--theme-field-focus-ring);
         outline-offset: 1px;
@@ -213,7 +213,7 @@
 
         &:hover,
         &:active,
-        &:focus {
+        &:focus-visible {
             text-decoration: underline;
         }
     }
