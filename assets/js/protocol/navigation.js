@@ -104,11 +104,7 @@ MzpNavigation.initSticky = () => {
         }
     }
 
-    if (window.matchMedia('all').addEventListener) {
-        _mqLargeNav.addEventListener('change', makeStickyNav, false);
-    } else if (window.matchMedia('all').addListener) {
-        _mqLargeNav.addListener(makeStickyNav);
-    }
+    _mqLargeNav.addEventListener('change', makeStickyNav, false);
 
     if (MzpNavigation.isLargeViewport()) {
         MzpNavigation.createSticky();
