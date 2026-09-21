@@ -1,7 +1,9 @@
 The `<details>` element was introduced in HTML5 to provide a native collapsible
-“accordion” widget that previously required JavaScript. However, older browsers
-don’t support the newer elements, so Protocol includes a JavaScript polyfill to
-improve backwards compatibility.
+“accordion” widget that previously required JavaScript. It's natively supported
+across Protocol's [supported browsers](/docs/usage/browser-support.html), so no
+polyfill is needed. If you need more control over the open/close behavior than
+the native element provides, use the JS-driven Protocol
+[Details component](details-component) instead.
 
 The `<details>` element requires a `<summary>`, which you can combine with
 headings to convey hierarchy, if appropriate.
