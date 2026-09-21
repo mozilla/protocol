@@ -6,10 +6,8 @@
 @use '../../includes/forms';
 
 input[list],
-input[type='color'],
 input[type='date'],
 input[type='email'],
-input[type='file'],
 input[type='number'],
 input[type='password'],
 input[type='search'],
@@ -17,7 +15,6 @@ input[type='tel'],
 input[type='text'],
 input[type='time'],
 input[type='url'],
-select,
 textarea {
     .mzp-is-error & {
         border-color: var(--theme-field-border-color-error);
@@ -33,6 +30,28 @@ textarea {
         }
 
         &:focus:hover {
+            border-color: var(--theme-field-border-color-error-hover);
+        }
+    }
+}
+
+input[type='color'],
+input[type='file'],
+select {
+    .mzp-is-error & {
+        border-color: var(--theme-field-border-color-error);
+        box-shadow: none;
+
+        &:hover {
+            border-color: var(--theme-field-border-color-error-hover);
+        }
+
+        &:focus-visible {
+            border-color: var(--theme-field-border-color-error);
+            box-shadow: var(--theme-field-focus-ring-error);
+        }
+
+        &:focus-visible:hover {
             border-color: var(--theme-field-border-color-error-hover);
         }
     }
