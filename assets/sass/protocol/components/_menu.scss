@@ -60,7 +60,7 @@
 
         &:hover,
         &:active,
-        &:focus {
+        &:focus-visible {
             color: inherit;
             text-decoration: underline;
         }
@@ -137,7 +137,7 @@
         }
 
         &.mzp-has-drop-down:hover,
-        &.mzp-has-drop-down:focus {
+        &.mzp-has-drop-down:focus-visible {
             .mzp-c-menu-title {
                 @include highlighted;
                 z-index: 1001;
@@ -225,7 +225,7 @@
         width: 16px;
 
         &:hover,
-        &:focus {
+        &:focus-visible {
             transform: scale(1.2);
         }
 
