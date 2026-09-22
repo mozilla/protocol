@@ -2,22 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-// Set new HTML5 elements to block or inline-block for older browsers
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-    display: block;
-}
+// legacy CSS reset, kept because it's expected behaviour in the system now
+summary { display: block; }
 
+// legacy CSS reset, kept because it's expected behaviour in the system now
 audio,
 video,
 canvas {
