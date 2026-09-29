@@ -7,7 +7,7 @@ describe('menu.js', function() {
             <nav class="mzp-c-menu mzp-is-basic">
                 <ul class="mzp-c-menu-category-list">
                 <li class="mzp-c-menu-category mzp-has-drop-down mzp-js-expandable">
-                    <a class="mzp-c-menu-title" href="#" aria-haspopup="true" aria-controls="mzp-c-menu-panel-example">Firefox</a>
+                    <a class="mzp-c-menu-heading" href="#" aria-haspopup="true" aria-controls="mzp-c-menu-panel-example">Firefox</a>
                     <div class="mzp-c-menu-panel mzp-has-card" id="mzp-c-menu-panel-example">
                     <div class="mzp-c-menu-panel-container">
                         <button class="mzp-c-menu-button-close" type="button" aria-controls="mzp-c-menu-panel-example">Close</button>
@@ -101,7 +101,7 @@ describe('menu.js', function() {
 
         it('should open on click', function() {
             const item = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down');
-            const title = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down .mzp-c-menu-title');
+            const heading = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down .mzp-c-menu-heading');
 
             spyOn(MzpMenu, 'isSupported').and.returnValue(true);
             spyOn(MzpMenu, 'isWideViewport').and.returnValue(true);
@@ -111,7 +111,7 @@ describe('menu.js', function() {
                 onMenuClose: options.close
             });
 
-            title.click();
+            heading.click();
 
             expect(item.classList.contains('mzp-is-selected')).toBeTruthy();
             expect(options.open).toHaveBeenCalled();
@@ -161,7 +161,7 @@ describe('menu.js', function() {
 
         it('should expand and collapse on click', function() {
             const item = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down');
-            const title = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down .mzp-c-menu-title');
+            const heading = document.querySelector('.mzp-c-menu-category.mzp-has-drop-down .mzp-c-menu-heading');
 
             spyOn(MzpMenu, 'isSupported').and.returnValue(true);
             spyOn(MzpMenu, 'isWideViewport').and.returnValue(false);
@@ -171,11 +171,11 @@ describe('menu.js', function() {
                 onMenuClose: options.close
             });
 
-            title.click();
+            heading.click();
             expect(item.classList.contains('mzp-is-selected')).toBeTruthy();
             expect(options.open).toHaveBeenCalled();
 
-            title.click();
+            heading.click();
             expect(item.classList.contains('mzp-is-selected')).toBeFalsy();
             expect(options.close).toHaveBeenCalled();
         });

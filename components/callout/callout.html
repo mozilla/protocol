@@ -14,7 +14,7 @@
 <section class="mzp-c-callout{% if class %} {{ class }}{% endif %}">
   <div class="mzp-l-content{% if content_class %} {{ content_class }}{% endif %}">
     <div class="mzp-c-callout-content">
-      <{{ title_el | default('h2') }} class="mzp-c-callout-title{% if title_class %} {{ title_class }}{% endif %}">{{ title }}</{{ title_el | default('h2') }}>
+      <{{ title_el | default('h2') }} class="mzp-c-callout-heading{% if title_class %} {{ title_class }}{% endif %}">{{ title }}</{{ title_el | default('h2') }}>
     {%- if desc %}
       <div class="mzp-c-callout-desc">
         <p>{{ desc }}</p>
