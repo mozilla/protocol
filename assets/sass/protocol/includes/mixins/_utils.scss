@@ -38,7 +38,7 @@
     display: none;
 }
 
-// not the most up to date method, but works in IE7
+// stuck with this method because we started with it for IE
 @mixin image-replaced {
     direction: ltr;
     overflow: hidden;
