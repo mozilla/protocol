@@ -80,20 +80,28 @@
             border: 1px solid;
         }
 
+        // need to do this manually because @include image-replaced; declares a direction
+        [dir='rtl'] & {
+            inset-inline: 0 auto;
+        }
+
         @media #{$mq-sm} {
             background-color: $color-marketing-gray-40;
             padding: 0;
             margin: 0;
             height: 100%;
             width: 40px;
-            @include bidi((
-                (border-radius, 0 $border-radius-sm $border-radius-sm 0, $border-radius-sm 0 0 $border-radius-sm),
-            ));
+            border-radius: 0 $border-radius-sm $border-radius-sm 0;
 
             &:hover,
             &:focus-visible {
                 background-color: $color-marketing-gray-50;
                 border: 0;
+            }
+
+            // need to do this manually because @include image-replaced; declares a direction
+            [dir='rtl'] & {
+                border-radius: $border-radius-sm 0 0 $border-radius-sm;
             }
         }
     }
