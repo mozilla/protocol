@@ -30,7 +30,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 * Reorganization:
   * (breaking) Renamed `-title-` to `-heading-` in mixins and CSS vars
     * and `mzp-u-heading-*` utility classes
-    * component HTML/CSS classes will follow in a separate PR
+    * component HTML/CSS classes: see Component Naming below
   * Added font-family declaration to `@include text-body-*` mixins
   * Added `--theme-` prefix to variables expected to morph
   * Added `--token-` prefix to unchanging variables
@@ -55,6 +55,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 * (breaking) Standardized interactive component states on `:focus-visible` instead of `:focus`.
 * (breaking) Click/pick form elements now use :focus-visible but input/typing fields keep :focus.
+
 
 ## Component changes
 
@@ -81,6 +82,21 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
   * Small: `mzp-c-card-small` (smaller text)
   * Medium: The default, no modifier class
   * Large: `mzp-c-card-large` (larger text)
+
+
+### Component Naming
+
+* (breaking) Renamed the remaining `-title`/`-subtitle` component classes to `-heading`/`-subheading`, finishing the rename the Typography section above started for mixins/utility classes/CSS vars. Affects Article, Billboard, Callout, Card, Form, Menu, Menu Item, Menu List, Newsletter, Sidebar Menu, and Sticky Promo (#668):
+  * `mzp-c-menu-title` → `mzp-c-menu-heading`
+  * `mzp-c-form-title` → `mzp-c-form-heading`, `mzp-c-form-subtitle` → `mzp-c-form-subheading`
+  * `mzp-c-card-title` → `mzp-c-card-heading`
+  * `mzp-c-menu-item-title`, `mzp-c-callout-title`, `mzp-c-sticky-promo-title`, `mzp-c-newsletter-title`, `mzp-c-menu-list-title`, `mzp-c-sidemenu-title`, `mzp-c-billboard-title`, `mzp-c-article-title` → the equivalent `-heading`
+* (breaking) Renamed the remaining `-desc` component classes to `-body`, matching the `desc`/`body` naming already used by Picto. Affects Billboard, Callout, Card, and Menu Item:
+  * `mzp-c-callout-desc` → `mzp-c-callout-body`
+  * `mzp-c-card-desc` → `mzp-c-card-body`
+  * `mzp-c-menu-item-desc` → `mzp-c-menu-item-body`
+  * `mzp-c-billboard-desc` → `mzp-c-billboard-body`
+* Clean break, no aliases -- see the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for find/replace scripts
 
 
 ## Bug Fixes

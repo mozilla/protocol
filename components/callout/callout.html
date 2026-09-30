@@ -6,7 +6,7 @@
 # heading           - string
 # heading_el        - HTML heading element (h1, h2, h3, h4, h5, h6)
 # heading_class     - string
-# desc            - string
+# body            - string
 # cta             - string
 # cta_link        - url
 # cta_class       - string
@@ -15,9 +15,9 @@
   <div class="mzp-l-content{% if content_class %} {{ content_class }}{% endif %}">
     <div class="mzp-c-callout-content">
       <{{ heading_el | default('h2') }} class="mzp-c-callout-heading{% if heading_class %} {{ heading_class }}{% endif %}">{{ heading }}</{{ heading_el | default('h2') }}>
-    {%- if desc %}
-      <div class="mzp-c-callout-desc">
-        <p>{{ desc }}</p>
+    {%- if body %}
+      <div class="mzp-c-callout-body">
+        <p>{{ body }}</p>
       </div>
     {% endif -%}
     {%- if image %}
