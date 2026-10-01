@@ -41,9 +41,9 @@
     "css-minimizer-webpack-plugin": "^8.0.0",
     "mini-css-extract-plugin": "^2.9.2",
     "postcss-scss": "^4.0.9",
-    "sass": "^1.91.0",
+    "sass": "^1.104.1",
     "sass-loader": "^16.0.5",
-    "webpack": "^5.100.2",
+    "webpack": "^5.111.1",
     "webpack-cli": "^7.2.3",
     "webpack-remove-empty-scripts": "^1.1.1"
   },
