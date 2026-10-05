@@ -56,6 +56,9 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 * (breaking) Standardized interactive component states on `:focus-visible` instead of `:focus`.
 * (breaking) Click/pick form elements now use :focus-visible but input/typing fields keep :focus.
 
+### CSS Logical Properties
+
+* Started migrating physical directional properties to their logical equivalents 
 
 ## Component changes
 
