@@ -44,6 +44,13 @@ bidi mixin to reverse that direction for other languages. Refer to
 @include bidi(((content, '\2192', '\2190'),));
 ```
 
+Protocol's own components no longer use this mixin internally – we've moved to
+[CSS logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+instead, which handle direction natively without a `[dir='rtl']` override. The
+mixin remains available for consumers who already depend on it; see the
+[Migration Guide](/docs/usage/migration) if you'd like to move your own Sass
+to logical properties too.
+
 ### at2x
 at2x is a helpful mixin for applying a high-resolution background image, for
 display on high definition screens (a.k.a. “retina”). It automatically outputs

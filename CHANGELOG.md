@@ -10,8 +10,9 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 ### CSS Logical Properties
 
-* Continued migrating physical directional properties to their logical equivalents (see #1084) -- `templates/_card-layout.scss`, `templates/_main-with-sidebar.scss`, `_footer.scss`, `_navigation.scss`, `_menu.scss`, `_menu-item.scss`, `_menu-list.scss`, and `_sidebar-menu.scss`. 59 `bidi()` calls removed.
-* Where a property has no logical equivalent safe across the supported matrix (`background-position`, and a CSS `transform` that visually flips a directional glyph), kept the physical value with an explicit `[dir='rtl']` override instead.
+* RTL support now relies on CSS logical properties.
+* Where a property has no supported logical equivalent (e.g. `background-position`), RTL support is with an explicit `[dir='rtl']` override instead.
+* **Deprecated** `@mixin bidi()` The mixin is still exported and available for your use, but you are encouraged to phase it out.
 
 ### Browser Support
 
@@ -60,10 +61,6 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 * (breaking) Standardized interactive component states on `:focus-visible` instead of `:focus`.
 * (breaking) Click/pick form elements now use :focus-visible but input/typing fields keep :focus.
-
-### CSS Logical Properties
-
-* Started migrating physical directional properties to their logical equivalents 
 
 ## Component changes
 

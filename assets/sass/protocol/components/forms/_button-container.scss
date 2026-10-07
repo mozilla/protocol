@@ -47,8 +47,8 @@
         }
 
         .mzp-c-button + .mzp-c-button {
+            margin-inline-start: forms.$field-h-spacing;
             margin-top: 0;
-            @include bidi(((margin-left, forms.$field-h-spacing, margin-right, 0),));
         }
 
         // align end

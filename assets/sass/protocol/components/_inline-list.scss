@@ -5,12 +5,14 @@
 @use '../includes/lib' as *;
 
 .mzp-c-inline-list {
-    margin: $layout-md 0 0 ($layout-md * -1);
+    margin-top: $layout-md;
+    margin-bottom: 0;
+    margin-inline: ($layout-md * -1) 0;
 
     li {
         display: inline-block;
         margin-bottom: $layout-xs;
-        margin-left: $layout-md; // this technique works for RTL without needing bidi styles
+        margin-inline-start: $layout-md;
         white-space: nowrap;
 
         &:last-child {

@@ -57,7 +57,7 @@ html.mzp-is-noscroll {
     position: relative;
 
     & > header {
-        @include bidi(((padding-right, $spacing-xl * 2, padding-left, 0),));
+        padding-inline-end: $spacing-xl * 2;
 
         h2 {
             @include text-heading-xs;
@@ -75,7 +75,7 @@ html.mzp-is-noscroll {
     position: absolute;
     top: 9px;
     z-index: 99;
-    @include bidi(((right, $spacing-sm, left, auto),));
+    inset-inline-end: $spacing-sm;
 
     .mzp-c-modal-button-close {
         @include image-replaced;
