@@ -50,34 +50,12 @@
     }
 }
 
+// Keyframes can't read text direction, so these are written for LTR. Swap
+// slide-in-right for slide-in-left under [dir='rtl'] (see sticky promo).
 @keyframes mzp-a-slide-in-right {
     0% {
         opacity: 0;
         transform: translateX(60px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes mzp-a-slide-in-right {
-    0% {
-        opacity: 0;
-        transform: translateX(60px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes mzp-a-slide-in-left {
-    0% {
-        opacity: 0;
-        transform: translateX(-60px);
     }
 
     100% {

@@ -1,5 +1,5 @@
-A block with a main column and one sidebar on either the left or right (this
-example uses `mzp-l-sidebar-left`). A single page should only have one main
+A block with a main column and one sidebar on either the start or end side (this
+example uses `mzp-l-sidebar-start`). A single page should only have one main
 section and one sidebar.
 
 The columns will stack in small viewports, form a 1/3-2/3 split in medium sized
@@ -15,9 +15,9 @@ styles.
 
 ### Tips
 
-- Layout class `mzp-l-sidebar-left` or `mzp-l-sidebar-right` is required.
-- The layout is reversed in right to left (RTL) languages; e.g., a left sidebar
-  will appear on the right.
+- Layout class `mzp-l-sidebar-start` or `mzp-l-sidebar-end` is required.
+- Start and end follow the text direction: a start sidebar appears on the left
+  in left to right (LTR) languages and on the right in right to left (RTL) languages.
 - The main content can be wrapped in any valid HTML element. We’re using `main`
   in this example but it could also be an `article`, `section`, `div`, etc.
 - The sidebar should usually be an `aside` element but you could use other elements.
