@@ -1,11 +1,11 @@
 preview: '@preview-unpadded'
 context:
-  layout: left
+  layout: start
 variants:
-  - name: Sidebar Right
+  - name: Sidebar End
     context:
-      layout: right
+      layout: end
     notes: |
-      This example uses `mzp-l-sidebar-right` layout class.  The sidebar will appear on the left for right-to-left (RTL) languages.
+      This example uses `mzp-l-sidebar-end` layout class. The sidebar will appear on the right in left-to-right (LTR) languages and on the left in right-to-left (RTL) languages.
 
       Colored borders are for demonstration only. They are not part of the component styles.
