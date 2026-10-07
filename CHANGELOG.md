@@ -1,8 +1,8 @@
 # HEAD
 
-This version introduces some major modernization changes around CSS and updates the supported browser matrix to Firefox ESR, Safari 15.6+, and evergreen browsers.
+This version introduces some major modernization changes and updates the supported browser matrix to Firefox ESR, Safari 15.6+, and evergreen browsers.
 
-The good news is we don't expect many visible changes in modern browsers and you should be able to do some automated visual regression testing to help with the migration.
+We don't expect many visible changes in modern browsers and you should be able to do some automated visual regression testing to help with the migration. Changes which drop legacy browser support but are not expected to impact the supported browsers will not be marked as "breaking" in the change log.
 
 Introducing theme variables! CSS variables beginning with `--theme-` will adjust based on media queries. Check them out in assets/sass/protocol/root
 
@@ -11,15 +11,16 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 ### CSS Logical Properties
 
 * RTL support now relies on CSS logical properties.
-* Where a property has no supported logical equivalent (e.g. `background-position`), RTL support is with an explicit `[dir='rtl']` override instead.
-* **Deprecated** `@mixin bidi()` The mixin is still exported and available for your use, but you are encouraged to phase it out.
+  * Where a property has no supported logical equivalent (e.g. `background-position`), RTL support is with an explicit `[dir='rtl']` override instead.
+* `@mixin bidi()` is still exported and available for your use, but you are encouraged to phase it out.
 
 ### Browser Support
 
-* (breaking) Updated the supported browser matrix to Firefox ESR, Safari 15.6+, and evergreen browsers (`browserslist` in `package.json`).
-* (breaking) Removed the Babel `targets: { ie: '10' }` override in every webpack config (docs site, npm package, and test bundle). The compiled JS now targets the `browserslist` matrix above instead of IE10.
-* (breaking) Remove support for vendor prefixing (#957)
-* (breaking) Replace deprecated CSS properties with their standard equivalents: `clip` → `clip-path` in the `visually-hidden` mixin, `word-wrap` → `overflow-wrap` in Menu Item. Drops functional support in legacy IE.
+* Updated the supported browser matrix to Firefox ESR, Safari 15.6+, and evergreen browsers (`browserslist` in `package.json`).
+* Removed the Babel `targets: { ie: '10' }` override in every webpack config. The compiled JS now targets the `browserslist` matrix above.
+* Removed vendor prefixing (#957)
+* Replaced deprecated CSS properties with their standard equivalents.
+* Removed @supports() wrappers.
 
 ### Sass
 
@@ -30,37 +31,35 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 * Modernization:
   *  Default to CSS vars for font family, size, and line-height (#982)
-    * Removed `@supports` declarations if they only had font declarations
     * `@include text-body-*` and `@include text-heading-*` mixins use CSS vars now
-  * Edited `@mixin font-size()` to stop outputting a pixel fallback
-* Reorganization:
-  * (breaking) Renamed `-title-` to `-heading-` in mixins and CSS vars
-    * and `mzp-u-heading-*` utility classes
-    * component HTML/CSS classes: see Component Naming below
+    * CSS variables are in `assets/sass/protocol/root` you will need to include this in your site bundle.
+  * `@mixin font-size()` stopped outputting a pixel fallback
+* (breaking) Reorganization:
+  * Renamed `-title-` to `-heading-` in mixins and CSS vars and utility classes
   * Added font-family declaration to `@include text-body-*` mixins
   * Added `--theme-` prefix to variables expected to morph
   * Added `--token-` prefix to unchanging variables
-    * Re-named font-size tokens to use a scale instead of tshirt sizes for names
+  * Re-named font-size tokens to use a scale instead of tshirt sizes for names
   * Added `--theme-button-line-height` var
 * Bug fixes:
-  * Moved `@include text-*` to end of declarations
+  * Moved `@include text-*` to end of declarations to avoid `mixed-decls` warnings
 
 ### Color
 
 * Modernization:
-  * Default to CSS vars for all color values
-  * Unwrapped `@supports` declarations if they only contained color declarations
-* Reorganization:
+  * Defaulted to CSS vars for all color values
+* (breaking) Reorganization:
   * Added `--theme-` prefix to color variables expected to morph between light/dark modes
-  * (breaking) Renamed `-title-` to `-heading-` in CSS mixins (to match typography naming)
+  * Renamed `-title-` to `-heading-` in CSS mixins (to match typography naming)
   * Added new form color variables (`--theme-form-*`, `--theme-field-*`)
   * Added status color variables (`--theme-color-success-*`, `--theme-color-error-*`, `--theme-color-warning-*`, `--theme-color-info-*`)
-* Removed Sass color variables from `_themes-sass.scss` (use CSS variables instead)
+  * Removed Sass color variables from `_themes-sass.scss` (use CSS variables instead)
+    * CSS variables are in `assets/sass/protocol/root` you will need to include this in your site bundle.
 
 ### Accessibility
 
-* (breaking) Standardized interactive component states on `:focus-visible` instead of `:focus`.
-* (breaking) Click/pick form elements now use :focus-visible but input/typing fields keep :focus.
+* Standardized interactive component states on `:focus-visible` instead of `:focus`.
+* Click/pick form elements now use :focus-visible but input/typing fields keep :focus.
 
 ## Component changes
 
@@ -82,26 +81,25 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 * (breaking) Renamed `mzp-c-card-extra-small` to `mzp-c-card-small`
 * (breaking) Removed `mzp-c-card-medium` class (medium is now the default)
-* Card size modifiers now only affect typography, not card width - use layouts instead
+* (breaking) Card size modifiers now only affect typography, not card width - use layouts instead
 * Card sizes are now:
   * Small: `mzp-c-card-small` (smaller text)
   * Medium: The default, no modifier class
   * Large: `mzp-c-card-large` (larger text)
 
-
 ### Component Naming
 
-* (breaking) Renamed the remaining `-title`/`-subtitle` component classes to `-heading`/`-subheading`, finishing the rename the Typography section above started for mixins/utility classes/CSS vars. Affects Article, Billboard, Callout, Card, Form, Menu, Menu Item, Menu List, Newsletter, Sidebar Menu, and Sticky Promo (#668):
+* (breaking) Renamed `-title`/`-subtitle` component classes to `-heading`/`-subheading`:
   * `mzp-c-menu-title` → `mzp-c-menu-heading`
   * `mzp-c-form-title` → `mzp-c-form-heading`, `mzp-c-form-subtitle` → `mzp-c-form-subheading`
   * `mzp-c-card-title` → `mzp-c-card-heading`
   * `mzp-c-menu-item-title`, `mzp-c-callout-title`, `mzp-c-sticky-promo-title`, `mzp-c-newsletter-title`, `mzp-c-menu-list-title`, `mzp-c-sidemenu-title`, `mzp-c-billboard-title`, `mzp-c-article-title` → the equivalent `-heading`
-* (breaking) Renamed the remaining `-desc` component classes to `-body`, matching the `desc`/`body` naming already used by Picto. Affects Billboard, Callout, Card, and Menu Item:
+* (breaking) Renamed `-desc` component classes to `-body`:
   * `mzp-c-callout-desc` → `mzp-c-callout-body`
   * `mzp-c-card-desc` → `mzp-c-card-body`
   * `mzp-c-menu-item-desc` → `mzp-c-menu-item-body`
   * `mzp-c-billboard-desc` → `mzp-c-billboard-body`
-* (breaking) Renamed directional layout classes to use `start`/`end` instead of `left`/`right`, matching CSS logical properties. Affects Main with Sidebar and Article (#448):
+* (breaking) Renamed directional layout classes to use `start`/`end` instead of `left`/`right`, matching CSS logical properties.(#448):
   * `mzp-l-sidebar-left` → `mzp-l-sidebar-start`
   * `mzp-l-sidebar-right` → `mzp-l-sidebar-end`
 * Clean break, no aliases -- see the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for find/replace scripts
@@ -110,14 +108,14 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 ## Bug Fixes
 
 * **css:** at2x mixin doesn't support single keyword values (#751)
-* **css:** Removed duplicate `mzp-a-slide-in-left` and `mzp-a-slide-in-right` `@keyframes` definitions (#448)
+* **css:** Removed duplicate `mzp-a-slide-in-left` and `mzp-a-slide-in-right` `@keyframes` definitions
 
 ## Migration Tips
 
 See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for automated scripts (VS Code find/replace and terminal commands) to help with these changes.
 
 * CSS variables are in `assets/sass/protocol/root` you will need to include this in your site bundle.
-* This version removes mixins which added vendor-prefixes.
+* Remove mixins which add vendor-prefixes.
   - If you need that level of vendor prefix support consider adding a tool such as
     [autoprefixer](https://github.com/postcss/autoprefixer) to your code base.
   - Affected mixins are:
@@ -144,7 +142,7 @@ See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for
   * `--title-(2xs|3xs|xs|sm|md|lg|xl|2xl)-size` → `--theme-heading-font-size-$1`
   * `--body-(xs|sm|md|lg|xl)-size` → `--theme-body-font-size-$1`
   * `--title-(2xs|3xs|xs|sm|md|lg|xl|2xl)-line-height` → `--theme-heading-line-height-$1`
-* Removed Sass variables (use CSS variables instead):
+* Remove Sass variables (use CSS variables instead):
   * `$title-(2xs|3xs|xs|sm|md|lg|xl|2xl)-size` → `var(--theme-heading-font-size-$1)`
   * `$title-(2xs|3xs|xs|sm|md|lg|xl|2xl)-line-height` → `var(--theme-heading-line-height-$1)`
   * `$body-line-height` → `var(--theme-body-line-height)`
@@ -156,23 +154,23 @@ See the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for
   * `$text-title-line-height` → `var(--theme-heading-line-height)`
   * `$text-display-line-height`→ `var(--theme-body-line-height)`
 * `text-body-*` mixins now declare `font-family`.
-  * You can remove any `font-family` declarations from places which use these mixins (unless you don't want the default font).
-* Removed mixins and functions:
+  * Remove any `font-family` declarations from places which use these mixins (optional).
+* Remove mixins and functions:
   * Remove `type-scale()`
   * Remove `text-body-cta` mixin (use `text-body-md` instead)
-* You can unwrap color declarations from `@supports (--css: variables)` blocks, as CSS custom properties are now required.
+* Unwrap color declarations from `@supports (--css: variables)` blocks, as CSS custom properties are now required. (optional)
 * Rename CSS color variables to use `--theme-` prefix:
   * `--(background-color|body-text-color|link-color|heading-text-color)(-*)` → `--theme-$1$2`
-* Removed Sass color variables (use CSS variables instead):
+* Remove Sass color variables (use CSS variables instead):
   * `$(background-color|body-text-color|link-color)(-*)` → `var(--theme-$1$2)`
   * `$title-text-color(-inverse)?` → `var(--theme-heading-text-color$1)` (note: renamed to `heading`)
-* Removed form Sass variables (use CSS variables instead):
+* Remove form Sass variables (use CSS variables instead):
   * `forms.$form-red` → `var(--theme-form-red)`
   * `forms.$form-text` → `var(--theme-form-text-color)`
   * `forms.$form-inactive` → `var(--theme-form-text-color-inactive)`
   * `forms.$(field-border-color|field-border|field-focus-ring)(-*)` → `var(--theme-$1$2)`
   * `forms.$button-border-color-focus` → `var(--theme-button-border-color-focus)`
-* Card component class renames:
+* Rename card component classes:
   * `mzp-c-card-extra-small` → `mzp-c-card-small`
   * `mzp-c-card-medium` → remove (medium is now the default, no class needed)
 
