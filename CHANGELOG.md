@@ -101,12 +101,16 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
   * `mzp-c-card-desc` → `mzp-c-card-body`
   * `mzp-c-menu-item-desc` → `mzp-c-menu-item-body`
   * `mzp-c-billboard-desc` → `mzp-c-billboard-body`
+* (breaking) Renamed directional layout classes to use `start`/`end` instead of `left`/`right`, matching CSS logical properties. Affects Main with Sidebar and Article (#448):
+  * `mzp-l-sidebar-left` → `mzp-l-sidebar-start`
+  * `mzp-l-sidebar-right` → `mzp-l-sidebar-end`
 * Clean break, no aliases -- see the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for find/replace scripts
 
 
 ## Bug Fixes
 
 * **css:** at2x mixin doesn't support single keyword values (#751)
+* **css:** Removed duplicate `mzp-a-slide-in-left` and `mzp-a-slide-in-right` `@keyframes` definitions (#448)
 
 ## Migration Tips
 

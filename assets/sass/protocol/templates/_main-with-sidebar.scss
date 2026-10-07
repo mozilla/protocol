@@ -15,7 +15,7 @@
             @include grid-third;
         }
 
-        &.mzp-l-sidebar-left {
+        &.mzp-l-sidebar-start {
             .mzp-l-main {
                 float: inline-end;
                 padding-inline-start: $spacing-md;
@@ -27,7 +27,7 @@
             }
         }
 
-        &.mzp-l-sidebar-right {
+        &.mzp-l-sidebar-end {
             .mzp-l-main {
                 float: inline-start;
                 padding-inline-end: $spacing-md;
