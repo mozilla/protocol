@@ -72,6 +72,30 @@ by `l-` and `u-`) which you should only use when necessary and practical.
 In most cases there will be an equivalent SCSS mixin that may be preferable to
 adding presentational classes in your markup.
 
+### Direction and Alignment
+
+Use `start` and `end` (and `reverse`) rather than `left` and `right` when naming
+direction or alignment, matching CSS logical properties. Start and end follow
+the text direction, so a `start` sidebar is on the left in left-to-right
+languages and on the right in right-to-left languages.
+
+Billboard is an exception: its `mzp-l-billboard-left` and `mzp-l-billboard-right`
+layouts intentionally don't reverse in right-to-left languages, so they keep
+physical names.
+
+Animation names are also an exception: `@keyframes` can't read text direction,
+so slide-in animations like `mzp-a-slide-in-left` keep physical names and are
+swapped under `[dir='rtl']` instead.
+
+```scss
+// NO - Physical
+.mzp-l-sidebar-left { ... }
+
+// YES - Logical
+.mzp-l-sidebar-start { ... }
+.mzp-l-split-reversed { ... }
+```
+
 ### Sizes
 
 We use a “T-shirt” convention when we need to describe sizes, e.g. “lg” for large

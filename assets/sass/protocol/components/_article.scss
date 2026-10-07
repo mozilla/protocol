@@ -9,13 +9,13 @@
     max-width: 100%;
 
     @media #{$mq-md} {
-        // Float left when sidebar is on the left
-        .mzp-l-sidebar-left .mzp-l-main & {
+        // Float start when sidebar is on the start side
+        .mzp-l-sidebar-start .mzp-l-main & {
             float: inline-start;
         }
 
-        // Float right when sidebar is on the right
-        .mzp-l-sidebar-right .mzp-l-main & {
+        // Float end when sidebar is on the end side
+        .mzp-l-sidebar-end .mzp-l-main & {
             float: inline-end;
         }
     }

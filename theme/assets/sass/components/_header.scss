@@ -31,8 +31,7 @@
 .Header-menu {
     display: flex;
     align-items: center;
-    margin-inline-start: auto;
-    margin-inline-end: 1rem;
+    margin-inline: auto 1rem;
     list-style: none;
 
     li + li {

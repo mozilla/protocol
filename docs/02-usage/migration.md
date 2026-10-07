@@ -67,6 +67,18 @@ Find:    mzp-c-(callout|card|menu-item|billboard)-desc
 Replace: mzp-c-$1-body
 ```
 
+Rename directional layout names from `left`/`right` to `start`/`end`. Affects Main with Sidebar and Article.
+
+```text
+Find:    mzp-l-sidebar-left
+Replace: mzp-l-sidebar-start
+```
+
+```text
+Find:    mzp-l-sidebar-right
+Replace: mzp-l-sidebar-end
+```
+
 ### CSS Variable Renames (SCSS files)
 
 Font family and line-height variables:
@@ -272,6 +284,11 @@ find . -name "*.scss" -exec sed -i '' -E 's/mzp-c-(menu|menu-item|menu-list|card
 find . -name "*.html" -exec sed -i '' -E 's/mzp-c-(callout|card|menu-item|billboard)-desc/mzp-c-\1-body/g' {} +
 find . -name "*.njk" -exec sed -i '' -E 's/mzp-c-(callout|card|menu-item|billboard)-desc/mzp-c-\1-body/g' {} +
 find . -name "*.scss" -exec sed -i '' -E 's/mzp-c-(callout|card|menu-item|billboard)-desc/mzp-c-\1-body/g' {} +
+
+# Rename directional layout names to start/end
+find . -name "*.html" -exec sed -i '' -e 's/mzp-l-sidebar-left/mzp-l-sidebar-start/g' -e 's/mzp-l-sidebar-right/mzp-l-sidebar-end/g' {} +
+find . -name "*.njk" -exec sed -i '' -e 's/mzp-l-sidebar-left/mzp-l-sidebar-start/g' -e 's/mzp-l-sidebar-right/mzp-l-sidebar-end/g' {} +
+find . -name "*.scss" -exec sed -i '' -e 's/mzp-l-sidebar-left/mzp-l-sidebar-start/g' -e 's/mzp-l-sidebar-right/mzp-l-sidebar-end/g' {} +
 ```
 
 ### CSS Variable Renames
