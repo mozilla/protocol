@@ -30,9 +30,9 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 ### Typography
 
 * Modernization:
-  *  Default to CSS vars for font family, size, and line-height (#982)
+  *  (breaking) Default to CSS vars for font family, size, and line-height (#982)
     * `@include text-body-*` and `@include text-heading-*` mixins use CSS vars now
-    * CSS variables are in `assets/sass/protocol/root` you will need to include this in your site bundle.
+    * (breaking) CSS variables are in `assets/sass/protocol/root` you will need to include this in your site bundle.
   * `@mixin font-size()` stopped outputting a pixel fallback
 * (breaking) Reorganization:
   * Renamed `-title-` to `-heading-` in mixins and CSS vars and utility classes
@@ -54,7 +54,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
   * Added new form color variables (`--theme-form-*`, `--theme-field-*`)
   * Added status color variables (`--theme-color-success-*`, `--theme-color-error-*`, `--theme-color-warning-*`, `--theme-color-info-*`)
   * Removed Sass color variables from `_themes-sass.scss` (use CSS variables instead)
-    * CSS variables are in `assets/sass/protocol/root` you will need to include this in your site bundle.
+    * (breaking) CSS variables are in `assets/sass/protocol/root` you will need to include this in your site bundle.
 
 ### Accessibility
 
