@@ -156,11 +156,8 @@
         @include font-mozilla-text;
         text-align: start;
 
-        /* stylelint-disable-next-line no-duplicate-selectors, block-no-redundant-nested-style-rules */
-        & {
-            // needs to come after @include footer-line to over-ride value
-            border: 0;
-        }
+        // needs to come after @include footer-line to over-ride value
+        border: 0;
     }
 
     & button {
