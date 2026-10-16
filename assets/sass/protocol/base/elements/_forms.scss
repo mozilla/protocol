@@ -46,11 +46,8 @@ textarea {
     @include text-body-md;
     @include font-base;
 
-    /* stylelint-disable-next-line no-duplicate-selectors, block-no-redundant-nested-style-rules */
-    & {
-        // needs to come after @include text-body-md to over-ride value
-        line-height: var(--theme-button-line-height);
-    }
+    // needs to come after @include text-body-md to over-ride value
+    line-height: var(--theme-button-line-height);
 }
 
 button,
@@ -300,23 +297,20 @@ input[type='file'] {
 select {
     @include forms.form-input;
 
-    /* stylelint-disable-next-line no-duplicate-selectors, block-no-redundant-nested-style-rules */
-    & {
-        // needs to come after @include forms.form-input to over-ride its padding
-        appearance: none;
-        box-sizing: border-box;
-        background-image: $url-image-caret-down-form, forms.$select-bg;
-        background-position: right 8px top 50%;
-        background-repeat: no-repeat, repeat;
-        background-size: 1em auto, 100%;
-        display: block;
-        font-weight: normal;
-        max-width: 100%;
-        min-width: forms.$field-min-width;
-        padding-block: forms.$field-padding;
-        padding-inline: forms.$field-padding forms.$symbol-spacing;
-        text-overflow: ellipsis;
-    }
+    // needs to come after @include forms.form-input to over-ride its padding
+    appearance: none;
+    box-sizing: border-box;
+    background-image: $url-image-caret-down-form, forms.$select-bg;
+    background-position: right 8px top 50%;
+    background-repeat: no-repeat, repeat;
+    background-size: 1em auto, 100%;
+    display: block;
+    font-weight: normal;
+    max-width: 100%;
+    min-width: forms.$field-min-width;
+    padding-block: forms.$field-padding;
+    padding-inline: forms.$field-padding forms.$symbol-spacing;
+    text-overflow: ellipsis;
 
     [dir='rtl'] & {
         background-position: left 8px top 50%;
