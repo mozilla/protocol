@@ -5,10 +5,30 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    groups:
+      actions:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+  - package-ecosystem: "npm"
+    directory: "/"
+    ignore:
+      # Owned NPM packages that require manual testing.
+      - dependency-name: "@mozilla-protocol/assets"
+      - dependency-name: "@mozilla-protocol/tokens"
+    schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
     open-pull-requests-limit: 10
     groups:
       frontend:
@@ -18,6 +38,14 @@ updates:
           - "patch"
       dev-dependencies:
         dependency-type: development
+        update-types:
+          - "minor"
+          - "patch"
+      # Security updates ignore the groups above (they default to version-updates).
+      npm-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
         update-types:
           - "minor"
           - "patch"
