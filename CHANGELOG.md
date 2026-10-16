@@ -25,7 +25,8 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 ### Sass
 
 * Fixed the remaining `mixed-decls` warnings raised by newer Sass versions (Fix #998)
-* Un-pinned the `sass` dependency (was pinned to `1.91.0`, now `^1.91.0`)
+* Un-pinned the `sass` dependency (was pinned to `1.91.0`, now `^1.105.2`)
+* Removed the `& {}` wrappers around declarations that follow an `@include`; Sass now emits declarations in source order, so they're no longer needed
 
 ### Typography
 
