@@ -60,6 +60,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 * Standardized interactive component states on `:focus-visible` instead of `:focus`.
 * Click/pick form elements now use :focus-visible but input/typing fields keep :focus.
+* Native `<details>` guidance and demo no longer put headings inside `<summary>`; use the Details component for collapsible content with headings (#1160)
 
 ## Component changes
 
