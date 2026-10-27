@@ -105,6 +105,10 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
   * `mzp-l-sidebar-right` → `mzp-l-sidebar-end`
 * Clean break, no aliases -- see the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for find/replace scripts
 
+### Details
+
+* Native `<summary>` is now bold by default. Native `<details>` has a `1.25em` bottom margin, and the `<summary>` of an open `<details>` has a `0.5em` bottom margin (#1160)
+
 
 ## Bug Fixes
 
