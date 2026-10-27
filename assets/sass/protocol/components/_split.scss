@@ -8,7 +8,6 @@
 // Basic vertical alignment
 
 .mzp-c-split {
-    overflow-x: hidden;
     position: relative;
     padding: var(--theme-spacing-between-block) 0;
 
@@ -36,6 +35,13 @@
 
     .mzp-t-content-xl & {
         max-width: $content-xl;
+    }
+
+    // Allow split to be nested inside another container (e.g. mzp-l-content)
+    .mzp-l-split-nested & {
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
