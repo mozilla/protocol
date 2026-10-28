@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-Protocol is Mozilla's design system, published to npm as `@mozilla-protocol/core`. It is **not an application** — it is a CSS framework + a library of HTML component patterns + a small amount of JavaScript, plus a Fractal-powered documentation site that doubles as the development environment. Most work is authoring Sass and Nunjucks templates, not application logic. Node 24 (`.nvmrc`); `engines` requires >=24.
+Protocol is Mozilla's design system, published to npm as `@mozilla-protocol/core`. It is **not an application** — it is a CSS framework + a library of HTML component patterns + a small amount of JavaScript, plus a Fractality-powered (maintained Fractal fork) documentation site that doubles as the development environment. Most work is authoring Sass and Nunjucks templates, not application logic. Node 24 (`.nvmrc`); `engines` requires >=24.
 
 A single component is spread across **three parallel trees**, by file type, that you edit together:
 
@@ -32,7 +32,7 @@ npm install              # install dependencies (Node 24)
 
 # Local development (two terminals):
 npm run webpack          # terminal 1: compile Sass + assets, then watch & recompile
-npm start                # terminal 2: Fractal dev server at http://localhost:3000
+npm start                # terminal 2: Fractality dev server at http://localhost:3000
 
 npm run lint             # both linters (runs in CI / before build & test)
 npm run lint-css         # stylelint on **/*.scss
@@ -45,7 +45,7 @@ npm run build-docs       # build the documentation site -> dist/ (Netlify deploy
 npm run build-package    # build the publishable npm package -> package/
 ```
 
-**Markdown docs caveat:** Sass and component `.html` files hot-reload, but `docs/*.md` pages are only processed at Fractal startup — restart `npm start` to see doc changes.
+**Markdown docs caveat:** Sass and component `.html` files hot-reload, but `docs/*.md` pages are only processed at Fractality startup — restart `npm start` to see doc changes.
 
 ## Coding Style & Naming Conventions
 

@@ -97,7 +97,7 @@ development environment.
 
 Sass and component files will reload automatically as you change them, but
 documentation pages written in Markdown are only processed at startup, so they
-require restarting the Fractal server to see the changes.
+require restarting the Fractality server to see the changes.
 
 1. Make whatever edits you need to make, ideally in a fresh branch.
     * https://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging
@@ -144,7 +144,8 @@ CSS and JavaScript is in `assets` (we’ll do a deeper dive into that folder sho
 
 ## Component patterns
 
-The Protocol documentation uses [Fractal](https://fractal.build) and component
+The Protocol documentation uses [Fractality](https://github.com/sitepark/fractality),
+a maintained fork of [Fractal](https://fractal.build), and component
 templates are built with [Nunjucks](https://mozilla.github.io/nunjucks/), a
 templating language that is mostly plain HTML with some added enhancements. Each
 component resides in its own Nunjucks template file (using the extension `.html`)
@@ -165,7 +166,7 @@ Here’s a minimal example of a Protocol component:
 
 Beyond providing a single example of a component, by using a templating language
 like Nunjucks, these can be embedded in other component templates (and documents)
-using `{% include %}` or Fractal’s `{% render %}` helper. Each component can be
+using `{% include %}` or Fractality’s `{% render %}` helper. Each component can be
 addressed by its unique “handle” (based on the file name or defined in a
 configuration file):
 
