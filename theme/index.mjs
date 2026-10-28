@@ -1,6 +1,8 @@
-'use strict';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import mandelbrot from '@fractality/mandelbrot';
 
-const mandelbrot = require('@frctl/mandelbrot');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Show these panels in production:
 const panels = ['notes', 'html', 'resources'];
@@ -45,4 +47,4 @@ subTheme.addLoadPath(`${__dirname}/views`);
 subTheme.addStatic(`${__dirname}/static`, '/theme');
 
 // Export the customised theme instance so it can be used in Fractal projects
-module.exports = subTheme;
+export default subTheme;
