@@ -110,6 +110,10 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 * Native `<summary>` is now bold by default. Native `<details>` has a `1.25em` bottom margin, and the `<summary>` of an open `<details>` has a `0.5em` bottom margin (#1160)
 
 
+## Documentation
+
+* **docs:** Migrate Protocol documentation site from Fractal to [Fractality](https://github.com/sitepark/fractality), a maintained fork. Thanks to [Schleuse](https://github.com/Schleuse) and [Sitepark](https://github.com/sitepark) for keeping it going!
+
 ## Bug Fixes
 
 * **css:** at2x mixin doesn't support single keyword values (#751)
