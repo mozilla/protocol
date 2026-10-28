@@ -1,0 +1,57 @@
+{% import "macros/status.nunj" as status %}
+
+{% macro tree(root, current, request) %}
+<div class="Tree" data-behaviour="tree" id="tree-{{ root.name }}">
+    <div class="Tree-header">
+        <h3 class="Tree-title">{{ root.label }}</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="{{ frctl.theme.get('labels.tree.collapse') }}" aria-label="{{ frctl.theme.get('labels.tree.collapse') }}" hidden>
+            {% include 'icons/collapse.svg' %}
+        </button>
+    </div>
+    <ul class="Tree-items Tree-depth-1">
+        {{ leaves(root.filter('isHidden', false).items(), root, current, 2, request) }}
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro leaves(items, root, current, depth, request) %}
+    {% for item in items %}
+        {% set isNotCollated = (item.isComponent and not item.isCollated and item.variants().filter('isHidden', false).size > 1) %}
+        {% if item.isCollection or (frctl.theme.get('navigation') != 'split' and isNotCollated) %}
+            {# skip root collections because they are pulled out of the tree #}
+            {% if not (item.isCollection and item.isRoot) %}
+            <li class="Tree-item Tree-collection Tree-depth-{{ depth }}" data-behaviour="collection" id="tree-{{ root.name }}-collection-{{ item.handle }}">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-{{ root.name }}-collection-{{ item.handle }}-items">
+                    {{ item.label }}
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-{{ root.name }}-collection-{{ item.handle }}-items">
+                {% if item.isComponent and not item.isCollated %}
+                {% set items = item.variants().filter('isHidden', false).items() %}
+                {% else %}
+                {% set items = item.filter('isHidden', false).items() %}
+                {% endif %}
+                {{ leaves(items, root, current, (depth + 1), request) }}
+                </ul>
+            </li>
+            {% endif %}
+        {% elif not item.context.hideFromNav %}
+        {% set urlItem = item.variants().filter('isHidden', false).first() if (isNotCollated and frctl.theme.get('navigation') == 'split') else item %}
+        {% set isCurrent = true if (current and (current.id == item.id) or (current.parent.id == item.id and frctl.theme.get('navigation') == 'split')) else false %}
+        <li class="Tree-item Tree-entity{% if isCurrent %} is-current{% endif %}"{% if isCurrent %} data-state="current"{% endif %} data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="{{ path( (urlItem | url), request) }}"
+                data-role="tree-link"
+                {% if item.tags and item.tags.length > 1 %} data-tags="{{ item.tags | dump | replace("null,", "") | escape  }}"{% endif %}
+                data-pjax
+                data-test="{{ item.handle }}"
+                data-handle="{{ item.handle if (item.isComponent or frctl.theme.get('navigation') != 'split') else item.parent.handle }}"
+            >
+                <span>{{ item.label }}</span>
+                {% if item.status %}{{ status.unlabelled(item.status) }}{% endif %}
+            </a>
+        </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

@@ -39,6 +39,3 @@
 @use 'components/color';
 @use 'components/icon';
 @use 'components/tokens';
-
-// change namespace to avoid numeric-only namespace, which isn't allowed
-@use 'components/404' as styles-404;

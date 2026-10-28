@@ -1,7 +1,8 @@
 ---
 title: Migration Guide for v23
 label: Migration v23
-hidden: true
+context:
+    hideFromNav: true
 ---
 
 This guide provides automated scripts to help migrate your codebase to Protocol v23. See [CHANGELOG](https://github.com/mozilla/protocol/blob/main/CHANGELOG.md) for full details on what changed.
