@@ -1,15 +1,16 @@
-'use strict';
+import path from 'node:path';
+import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
+import { create } from '@fractality/fractality';
+import nunjucks from '@fractality/nunjucks';
+import theme from './theme/index.mjs';
+import './theme/heading-ids.mjs';
 
-// Require the path module
-const path = require('path');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const require = createRequire(import.meta.url);
+const pkg = require('./package.json');
 
-// Require the Fractal module
-const fractal = module.exports = require('@frctl/fractal').create();
-
-// Require Nunjucks
-const nunjucks = require('@frctl/nunjucks');
-
-const pkg = require(path.join(__dirname, 'package.json'));
+const fractal = create();
 
 // Set the title
 fractal.set('project.title', 'Mozilla Protocol');
@@ -63,5 +64,6 @@ fractal.web.set('static.path', path.join(__dirname, 'static'));
 fractal.web.set('builder.dest', path.join(__dirname, 'dist'));
 
 // Custom theme
-const theme = require('./theme');
 fractal.web.theme(theme);
+
+export default fractal;
