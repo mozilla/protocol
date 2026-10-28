@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-Protocol is Mozilla's design system, published to npm as `@mozilla-protocol/core`. It is **not an application** — it is a CSS framework + a library of HTML component patterns + a small amount of JavaScript, plus a Fractal-powered documentation site that doubles as the development environment. Most work is authoring Sass and Nunjucks templates, not application logic. Node 20 (`.nvmrc`); `engines` requires >=16.
+Protocol is Mozilla's design system, published to npm as `@mozilla-protocol/core`. It is **not an application** — it is a CSS framework + a library of HTML component patterns + a small amount of JavaScript, plus a Fractal-powered documentation site that doubles as the development environment. Most work is authoring Sass and Nunjucks templates, not application logic. Node 24 (`.nvmrc`); `engines` requires >=24.
 
 A single component is spread across **three parallel trees**, by file type, that you edit together:
 
@@ -28,7 +28,7 @@ A single component is spread across **three parallel trees**, by file type, that
 ## Build, Test, and Development Commands
 
 ```bash
-npm install              # install dependencies (Node 20)
+npm install              # install dependencies (Node 24)
 
 # Local development (two terminals):
 npm run webpack          # terminal 1: compile Sass + assets, then watch & recompile
