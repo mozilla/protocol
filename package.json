@@ -11,16 +11,16 @@
     "url": "https://github.com/mozilla/protocol.git"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=24.0.0"
   },
   "scripts": {
-    "build-docs": "npm ci && npm run lint && webpack --config webpack.docs.static.config.js --mode production && webpack --config webpack.docs.build.config.js --mode production && fractal build",
+    "build-docs": "npm ci && npm run lint && webpack --config webpack.docs.static.config.js --mode production && webpack --config webpack.docs.build.config.js --mode production && NODE_OPTIONS='--disable-warning=DEP0060 --disable-warning=DEP0176' fractal build",
     "build-package": "npm ci && npm run lint && webpack --config webpack.package.static.config.js --mode production && webpack --config webpack.package.build.config.js --mode production",
     "lint": "npm run lint-js && npm run lint-css",
     "lint-css": "npx stylelint \"**/*.scss\"",
     "lint-js": "npx eslint .",
     "prepublishOnly": "npm run build-package",
-    "start": "ENV=development fractal start --sync",
+    "start": "ENV=development NODE_OPTIONS='--disable-warning=DEP0060 --disable-warning=DEP0176' fractal start --sync",
     "pretest": "npm run lint && npm run test-build",
     "test-build": "webpack --config webpack.test.config.js --mode=development",
     "test": "npx jasmine-browser-runner runSpecs --config=tests/jasmine-browser.json && npx jasmine-browser-runner runSpecs --browser=chrome --config=tests/jasmine-browser.json",
