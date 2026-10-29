@@ -105,6 +105,10 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 * Clean break, no aliases -- see the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for find/replace scripts
 
 
+## Documentation
+
+* **docs:** Migrate Protocol documentation site from Fractal to [Fractality](https://github.com/sitepark/fractality), a maintained fork. Thanks to [Schleuse](https://github.com/Schleuse) and [Sitepark](https://github.com/sitepark) for keeping it going!
+
 ## Bug Fixes
 
 * **css:** at2x mixin doesn't support single keyword values (#751)
