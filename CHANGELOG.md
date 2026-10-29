@@ -60,6 +60,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 * Standardized interactive component states on `:focus-visible` instead of `:focus`.
 * Click/pick form elements now use :focus-visible but input/typing fields keep :focus.
+* Native `<details>` guidance and demo no longer put headings inside `<summary>`; use the Details component for collapsible content with headings (#1160)
 
 ## Component changes
 
@@ -103,6 +104,10 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
   * `mzp-l-sidebar-left` → `mzp-l-sidebar-start`
   * `mzp-l-sidebar-right` → `mzp-l-sidebar-end`
 * Clean break, no aliases -- see the [Migration Guide](https://protocol.mozilla.org/docs/usage/migration) for find/replace scripts
+
+### Details
+
+* Native `<summary>` is now bold by default. Native `<details>` has a `1.25em` bottom margin, and the `<summary>` of an open `<details>` has a `0.5em` bottom margin (#1160)
 
 
 ## Bug Fixes

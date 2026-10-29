@@ -30,8 +30,19 @@ details .is-summary button[aria-expanded='true']::before,
     @include summary-open;
 }
 
+details {
+    margin: 0 0 1.25em;
+}
+
 summary  {
     cursor: pointer;
+    font-weight: bold;
+}
+
+// A closed details doesn't collapse the summary's margin into its own,
+// so the summary only gets its margin while the details are open.
+details[open] > summary {
+    margin-bottom: 0.5em;
 }
 
 summary::-webkit-details-marker {
