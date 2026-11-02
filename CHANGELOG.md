@@ -109,6 +109,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 
 * **css:** at2x mixin doesn't support single keyword values (#751)
 * **css:** Removed duplicate `mzp-a-slide-in-left` and `mzp-a-slide-in-right` `@keyframes` definitions
+* **js:** Side Menu declared `aria-expanded` on `.mzp-c-sidemenu-main` instead of on the `.mzp-js-toggle` that controls it (#999)
 
 ## Migration Tips
 
