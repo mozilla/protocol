@@ -49,10 +49,13 @@ variations.
   - `mzp-l-split-center-on-sm-md` - content is centered on small to medium screens.
   - `mzp-l-split-hide-media-on-sm-md` - media is hidden on small to medium screens.
 
-### No-nos:
+### Nesting inside a container
 
-**Note:** This component is intended to be a full-width section of a page, with
-an outer container that spans the width of the viewport and generous spacing
-above and below. Split has an inner container to define its content width, so
-don't place Split inside another `mzp-l-content` [container](content-container).
-The nested spacing will get weird.
+By default, Split is intended to be a full-width section of a page, with an
+outer container that spans the width of the viewport. Split has its own inner
+container to define its content width.
+
+If you need to nest Split inside another container (e.g. `mzp-l-content`), add
+the `mzp-l-split-nested` class to the outermost element (`mzp-c-split`). This
+removes the inner container's max-width and padding so it fills the parent
+container without doubling up on spacing.
