@@ -4,7 +4,6 @@ import { fileURLToPath } from 'node:url';
 import { create } from '@fractality/fractality';
 import nunjucks from '@fractality/nunjucks';
 import theme from './theme/index.mjs';
-import './theme/heading-ids.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
