@@ -119,7 +119,6 @@ module.exports = [
             'eslint.config.js',
             'fractality.config.mjs',
             'theme/index.mjs',
-            'theme/heading-ids.mjs',
             'webpack.docs.build.config.js',
             'webpack.docs.static.config.js',
             'webpack.entrypoints.js',
