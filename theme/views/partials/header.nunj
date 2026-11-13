@@ -13,6 +13,15 @@
   </a>
 
   <ul class="Header-menu">
+    <li>
+      <form class="Header-brand-controls">
+        <fieldset>
+          <legend>Brand</legend>
+          <label><input type="radio" name="brand" value="mozilla" checked> Mozilla</label>
+          <label><input type="radio" name="brand" value="firefox"> Firefox</label>
+        </fieldset>
+      </form>
+    </li>
   {% if frctl.get('project.version') %}
     <li class="Header-version">
       {{ frctl.get('project.version') }}

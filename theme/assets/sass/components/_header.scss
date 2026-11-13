@@ -38,3 +38,30 @@
         margin-inline-start: 1rem;
     }
 }
+
+.Header-brand-controls {
+    color: var(--theme-body-text-color-inverse);
+
+    fieldset {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    legend {
+        float: inline-start;
+        padding: 0;
+        font-weight: bold;
+
+        @media all and (max-width: #{$screen-md - 1px}) {
+            @include visually-hidden;
+        }
+    }
+
+    label {
+        white-space: nowrap;
+    }
+}

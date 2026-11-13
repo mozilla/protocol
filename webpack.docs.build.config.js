@@ -92,6 +92,7 @@ const fractalCSSConfig = {
     entry: {
         'theme': path.resolve(__dirname, 'theme/assets/sass/theme.scss'),
         'preview': path.resolve(__dirname, 'theme/assets/sass/preview.scss'),
+        'brand-firefox': path.resolve(__dirname, 'theme/assets/sass/brand-firefox.scss'),
     },
     output: {
         filename: 'temp/[name].js',
@@ -140,7 +141,9 @@ const fractalCSSConfig = {
 const fractalJSConfig = {
     devtool: false,
     entry: {
-        'bidi': path.resolve(__dirname, 'theme/assets/js/bidi.js')
+        'bidi': path.resolve(__dirname, 'theme/assets/js/bidi.js'),
+        'brand': path.resolve(__dirname, 'theme/assets/js/brand.js'),
+        'brand-preview': path.resolve(__dirname, 'theme/assets/js/brand-preview.js')
     },
     output: {
         path: path.resolve(__dirname, 'theme/static/js'),
