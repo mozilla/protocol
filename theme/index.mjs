@@ -1,8 +1,5 @@
-import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import mandelbrot from '@fractality/mandelbrot';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Show these panels in production:
 const panels = ['notes', 'html', 'resources'];
@@ -41,10 +38,10 @@ const subTheme = mandelbrot({
 });
 
 // Specify a template directory to override any view templates
-subTheme.addLoadPath(`${__dirname}/views`);
+subTheme.addLoadPath(fileURLToPath(import.meta.resolve('./views')));
 
 // Specify the static assets directory that contains the custom stylesheet
-subTheme.addStatic(`${__dirname}/static`, '/theme');
+subTheme.addStatic(fileURLToPath(import.meta.resolve('./static')), '/theme');
 
 // Export the customised theme instance so it can be used in Fractal projects
 export default subTheme;
