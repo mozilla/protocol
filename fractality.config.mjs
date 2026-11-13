@@ -1,13 +1,8 @@
-import path from 'node:path';
-import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import { create } from '@fractality/fractality';
 import nunjucks from '@fractality/nunjucks';
 import theme from './theme/index.mjs';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const require = createRequire(import.meta.url);
-const pkg = require('./package.json');
+import pkg from './package.json' with { type: 'json' };
 
 const fractal = create();
 
@@ -25,7 +20,7 @@ fractal.web.set('debug', true);
 // Configure components
 fractal.components.engine(nunjucks);
 fractal.components.set('ext', '.html');
-fractal.components.set('path', path.join(__dirname, 'components'));
+fractal.components.set('path', fileURLToPath(import.meta.resolve('./components')));
 fractal.components.set('default.status', null);
 fractal.components.set('statuses', {
     deprecated: {
@@ -42,7 +37,7 @@ fractal.components.set('statuses', {
 
 // Configure documentation pages
 fractal.docs.set('ext', '.md');
-fractal.docs.set('path', path.join(__dirname, 'docs'));
+fractal.docs.set('path', fileURLToPath(import.meta.resolve('./docs')));
 fractal.docs.set('statuses', {
     outdated: {
         label: 'Outdated',
@@ -57,10 +52,10 @@ fractal.docs.set('statuses', {
 });
 
 // Tell Fractal where to look for static assets.
-fractal.web.set('static.path', path.join(__dirname, 'static'));
+fractal.web.set('static.path', fileURLToPath(import.meta.resolve('./static')));
 
 // Tell Fractal where to build the site.
-fractal.web.set('builder.dest', path.join(__dirname, 'dist'));
+fractal.web.set('builder.dest', fileURLToPath(import.meta.resolve('./dist')));
 
 // Custom theme
 fractal.web.theme(theme);
