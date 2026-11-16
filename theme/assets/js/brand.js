@@ -50,22 +50,44 @@ function syncUrl(brand) {
     }
 }
 
-if (controls) {
+function getUrlBrand() {
     const param = new URLSearchParams(window.location.search).get('brand');
-    let brand = getSavedBrand();
+    return brands.includes(param) ? param : null;
+}
 
-    if (brands.includes(param)) {
-        brand = param;
+if (controls) {
+    let current = getUrlBrand() || getSavedBrand();
+
+    const setCurrent = (brand) => {
+        current = brand;
         saveBrand(brand);
-    }
+        applyBrand(brand);
+        controls.querySelector(`input[value="${brand}"]`).checked = true;
+    };
 
-    applyBrand(brand);
-    controls.querySelector(`input[value="${brand}"]`).checked = true;
+    // pjax and Back/Forward change the URL without rerunning this script, so
+    // pick up a ?brand= in the new URL when they do.
+    const syncFromUrl = () => {
+        const brand = getUrlBrand();
+        if (brand && brand !== current) {
+            setCurrent(brand);
+        }
+    };
+
+    if (getUrlBrand()) {
+        saveBrand(current);
+    }
+    applyBrand(current);
+    controls.querySelector(`input[value="${current}"]`).checked = true;
 
     controls.addEventListener('change', (e) => {
-        const selected = e.target.value;
-        saveBrand(selected);
-        applyBrand(selected);
-        syncUrl(selected);
+        setCurrent(e.target.value);
+        syncUrl(current);
     });
+
+    window.addEventListener('popstate', syncFromUrl);
+    // jquery-pjax only fires jQuery events, which native listeners don't see.
+    if (window.jQuery) {
+        window.jQuery(document).on('pjax:end', syncFromUrl);
+    }
 }
