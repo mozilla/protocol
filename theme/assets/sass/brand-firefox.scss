@@ -1,0 +1,17 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+// Re-themes component previews as Firefox when brand-preview.js sets
+// data-brand="firefox". protocol.css is compiled as Mozilla, and the brand
+// only changes :root custom properties, so overriding them here is enough.
+
+// Served from /theme/css/, but the fonts are copied to /protocol/fonts/.
+@use '/assets/sass/protocol/includes/config' with ($font-path: '../../protocol/fonts');
+@use '/assets/sass/protocol/includes/fonts/metropolis';
+@use '/assets/sass/protocol/includes/themes/firefox';
+
+:root[data-brand='firefox'] {
+    @extend %firefox-theme;
+    @extend %firefox-type-scale;
+}

@@ -89,7 +89,7 @@ module.exports = [
     {
         files: ['theme/**/*.js'],
         languageOptions: {
-            ecmaVersion: 2017,
+            ecmaVersion: 2019,
             globals: {
                 Mozilla: true,
                 ...globals.browser,

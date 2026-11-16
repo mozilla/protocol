@@ -99,6 +99,11 @@ Sass and component files will reload automatically as you change them, but
 documentation pages written in Markdown are only processed at startup, so they
 require restarting the Fractality server to see the changes.
 
+Component previews follow the **Brand** switch in the site header, so you can
+check your work in both the Mozilla and Firefox themes. Adding `?brand=firefox`
+(or `?brand=mozilla`) to the URL of any page on the site selects that brand, which
+is handy for sharing a link to a specific view.
+
 1. Make whatever edits you need to make, ideally in a fresh branch.
     * https://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging
     * https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/

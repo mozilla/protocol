@@ -24,4 +24,12 @@
       </a>
     </li>
   </ul>
+
+  <form class="Header-brand-controls">
+    <fieldset>
+      <legend>Brand</legend>
+      <label><input type="radio" name="brand" value="mozilla" checked> Mozilla</label>
+      <label><input type="radio" name="brand" value="firefox"> Firefox</label>
+    </fieldset>
+  </form>
 </div>

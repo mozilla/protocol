@@ -1,4 +1,5 @@
 @use '/assets/sass/protocol/includes/lib' as *;
+@use '../settings/settings';
 
 /* stylelint-disable selector-class-pattern */
 
@@ -30,11 +31,69 @@
 
 .Header-menu {
     display: flex;
+    order: 2;
     align-items: center;
     margin-inline: auto 1rem;
     list-style: none;
 
     li + li {
         margin-inline-start: 1rem;
+    }
+}
+
+.Header-brand-controls {
+    order: 1;
+    color: var(--theme-body-text-color-inverse);
+
+    .no-js & {
+        display: none;
+    }
+
+    fieldset {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    legend {
+        float: inline-start;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    label {
+        white-space: nowrap;
+    }
+}
+
+@media #{$mq-md} {
+    // The switch sits just before the menu, so it takes over the menu's auto margin.
+    .has-js {
+        .Header-brand-controls {
+            margin-inline-start: auto;
+        }
+
+        .Header-menu {
+            margin-inline-start: 1rem;
+        }
+    }
+}
+
+@media all and (max-width: #{$screen-md - 1px}) {
+    .Header {
+        flex-wrap: wrap;
+    }
+
+    .Header-brand-controls {
+        display: flex;
+        order: 3;
+        flex-basis: 100%;
+        align-items: center;
+        height: settings.$header-brand-row-height;
+        padding-inline: 1rem;
+        border-top: 1px solid rgb(255, 255, 255, 0.25);
     }
 }

@@ -29,6 +29,13 @@ Protocol Sass and change the `$brand-theme` variable:
 $brand-theme: 'firefox';
 ```
 
+To see how components look in each brand, use the **Brand** switch in the
+header of this site. Your choice applies to every component preview and is
+remembered as you browse.
+
+The Firefox theme reflects older Firefox brand guidelines and will be updated in
+a future release.
+
 ## Type scales
 
 Protocol uses a modular type scale with a range of predefined font sizes to maintain
