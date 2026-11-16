@@ -3,19 +3,32 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // Runs in the <head> of each component preview so the brand applies before
-// first paint. A ?brand= query param wins over the choice saved by brand.js.
+// first paint. Order: a ?brand= query param, then the docs page's current
+// switch (data-preview-brand, set by brand.js), then the saved choice.
 const brands = ['mozilla', 'firefox'];
-const param = new URLSearchParams(window.location.search).get('brand');
-let brand = brands.includes(param) ? param : null;
 
-if (!brand) {
+function fromParent() {
     try {
-        brand = window.localStorage.getItem('protocol-brand');
+        if (window.parent !== window) {
+            return window.parent.document.documentElement.getAttribute('data-preview-brand');
+        }
     } catch {
-        brand = null;
+        // Cross-origin embed; fall through to the saved choice.
+    }
+    return null;
+}
+
+function fromStorage() {
+    try {
+        return window.localStorage.getItem('protocol-brand');
+    } catch {
+        return null;
     }
 }
 
-if (brands.includes(brand)) {
+const brand = [new URLSearchParams(window.location.search).get('brand'), fromParent(), fromStorage()]
+    .find((value) => brands.includes(value));
+
+if (brand) {
     document.documentElement.setAttribute('data-brand', brand);
 }
