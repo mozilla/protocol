@@ -3,6 +3,10 @@
 $font-family-monospace: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace !default;
 $font-family-sans-serif: tokens.$font-stack-base !default;
 
+// Height of the header row the brand switch moves to on small screens.
+// _frame.scss subtracts it so the page below isn't cut off.
+$header-brand-row-height: 2.5rem;
+
 // Fractal theme CSS custom properties
 :root {
     --fractal-color-link: #66f;

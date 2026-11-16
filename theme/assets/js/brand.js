@@ -4,18 +4,27 @@
 
 // Site-wide Mozilla/Firefox brand switch for component previews. Previews
 // loaded later read the saved choice themselves (see brand-preview.js).
+// A ?brand= query param on any docs page switches and saves the brand, so
+// links can be shared.
 const storageKey = 'protocol-brand';
+const brands = ['mozilla', 'firefox'];
 const controls = document.querySelector('.Header-brand-controls');
 
-function getBrand() {
+function getSavedBrand() {
     try {
-        return window.localStorage.getItem(storageKey) || 'mozilla';
+        const saved = window.localStorage.getItem(storageKey);
+        return brands.includes(saved) ? saved : 'mozilla';
     } catch {
         return 'mozilla';
     }
 }
 
-function applyToPreviews(brand) {
+function setBrand(brand) {
+    try {
+        window.localStorage.setItem(storageKey, brand);
+    } catch {
+        // Storage can be unavailable (e.g. blocked); still re-theme the open previews.
+    }
     document.querySelectorAll('.Preview-iframe').forEach((iframe) => {
         const preview = iframe.contentDocument;
         if (preview) {
@@ -25,18 +34,17 @@ function applyToPreviews(brand) {
 }
 
 if (controls) {
-    const current = controls.querySelector(`input[value="${getBrand()}"]`);
-    if (current) {
-        current.checked = true;
+    const param = new URLSearchParams(window.location.search).get('brand');
+    let brand = getSavedBrand();
+
+    if (brands.includes(param)) {
+        brand = param;
+        setBrand(brand);
     }
 
+    controls.querySelector(`input[value="${brand}"]`).checked = true;
+
     controls.addEventListener('change', (e) => {
-        const brand = e.target.value;
-        try {
-            window.localStorage.setItem(storageKey, brand);
-        } catch {
-            // Storage can be unavailable (e.g. blocked); still re-theme the open previews.
-        }
-        applyToPreviews(brand);
+        setBrand(e.target.value);
     });
 }

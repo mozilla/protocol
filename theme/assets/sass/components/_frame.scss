@@ -1,3 +1,6 @@
+@use '/assets/sass/protocol/includes/lib' as *;
+@use '../settings/settings';
+
 /* stylelint-disable selector-class-pattern */
 .Frame-panel--sidebar {
     background-color: #000;
@@ -5,4 +8,11 @@
 
 .Frame-body {
     height: calc(100% - 64px);
+
+    // Leave room for the brand switch's extra header row on small screens.
+    @media all and (max-width: #{$screen-md - 1px}) {
+        .has-js & {
+            height: calc(100% - 64px - #{settings.$header-brand-row-height});
+        }
+    }
 }

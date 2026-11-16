@@ -113,6 +113,7 @@ Introducing theme variables! CSS variables beginning with `--theme-` will adjust
 ## Documentation
 
 * **docs:** Migrate Protocol documentation site from Fractal to [Fractality](https://github.com/sitepark/fractality), a maintained fork. Thanks to [Schleuse](https://github.com/Schleuse) and [Sitepark](https://github.com/sitepark) for keeping it going!
+* **docs:** Add a Mozilla/Firefox brand switch to preview components in either theme (#416)
 
 ## Bug Fixes
 
