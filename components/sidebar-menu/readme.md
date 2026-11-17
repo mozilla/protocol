@@ -36,3 +36,6 @@ MzpSideMenu.init();
 
 - Make sure to initialize the component *after* the DOM has loaded.
 - Indicate the current page with the `mzp-is-current` class.
+- Keep the `aria-controls` attribute on the `mzp-js-toggle` element pointing at the
+  `id` of `mzp-c-sidemenu-main`. `sidemenu.js` maintains `aria-expanded` on that
+  toggle, so assistive tech is told whether the menu content is shown.

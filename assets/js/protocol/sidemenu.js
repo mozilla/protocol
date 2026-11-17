@@ -10,19 +10,25 @@ MzpSideMenu.init = () => {
     const menuToggle = document.querySelector('.mzp-js-toggle');
 
     if (menu && menuMain && menuToggle) {
+        // `aria-expanded` belongs on the controlling element, which the template
+        // already links to the content with `aria-controls`, not on the content
+        // itself. Declaring it on `.mzp-c-sidemenu-main` announced visible content
+        // as collapsed, including on desktop where the toggle is hidden.
+        const setExpandedState = () => {
+            menuToggle.setAttribute('aria-expanded', menu.classList.contains('mzp-is-active'));
+        };
 
         // Make the menu more accessible
         menuToggle.setAttribute('tabindex', '0');
         menuToggle.setAttribute('role', 'button');
-        menuMain.setAttribute('aria-expanded', 'false');
+        setExpandedState();
 
         // Toggle the sidebar menu
         menuToggle.addEventListener('click', (e) => {
             e.preventDefault();
             menu.classList.toggle('mzp-is-active');
 
-            const menuExpanded = menuMain.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
-            menuMain.setAttribute('aria-expanded', menuExpanded);
+            setExpandedState();
         }, false);
     }
 };
